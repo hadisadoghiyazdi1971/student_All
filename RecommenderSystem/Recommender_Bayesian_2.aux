@@ -100,74 +100,71 @@
 \abx@aux@segm{0}{0}{jakomin2020simultaneous}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Proposed Method}{4}{}\protected@file@percent }
 \newlabel{sec:proposed_method}{{3}{4}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Overview: A Latent Recommendation Perspective}{4}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Overview: Bayesian Latent Filtering for Recommendation}{4}{}\protected@file@percent }
 \newlabel{subsec:overview}{{3.1}{4}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Latent Filtering Formulation}{4}{}\protected@file@percent }
 \newlabel{subsec:latent_filtering}{{3.2}{4}{}{}{}}
-\newlabel{rem:phi_choice}{{1}{5}{}{}{}}
-\newlabel{eq:posterior_component}{{1}{5}{}{}{}}
-\newlabel{eq:likelihood_prototype}{{2}{5}{}{}{}}
-\newlabel{eq:posterior_set}{{3}{5}{}{}{}}
-\newlabel{eq:relevance_score}{{4}{5}{}{}{}}
-\newlabel{eq:estimated_set}{{5}{5}{}{}{}}
-\@writefile{toc}{\contentsline {paragraph}{Why a latent layer at all.}{5}{}\protected@file@percent }
-\abx@aux@cite{0}{devroye1996probabilistic}
-\abx@aux@segm{0}{0}{devroye1996probabilistic}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Bayesian latent filtering view of the proposed recommender. The structure is encoder-like because $x$ is first mapped to a latent representation and then filtered through hidden components. It is \emph  {not} a classical autoencoder, since the objective is not reconstruction of $x$, but inference of the most relevant recommendation set $\setbox \z@ \hbox {\mathsurround \z@ $\textstyle \mathcal  {S}$}\mathaccent "0362{\mathcal  {S}}(x)$.}}{6}{}\protected@file@percent }
+\newlabel{eq:latent_likelihood}{{1}{5}{}{}{}}
+\newlabel{eq:posterior_component}{{2}{5}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Set-Level Bayesian Decoder}{5}{}\protected@file@percent }
+\newlabel{subsec:set_decoder}{{3.3}{5}{}{}{}}
+\newlabel{eq:prototype_likelihood}{{3}{5}{}{}{}}
+\newlabel{eq:prototype_likelihood_expanded}{{4}{5}{}{}{}}
+\newlabel{eq:posterior_set}{{5}{5}{}{}{}}
+\newlabel{eq:relevance_score}{{6}{5}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Bayesian latent filtering view of the proposed recommender. The structure is encoder-like because the input \(x\) is first mapped into a latent representation and then filtered through hidden components. It is not a classical autoencoder, because the objective is not to reconstruct \(x\), but to infer the most relevant recommendation set \(\setbox \z@ \hbox {\mathsurround \z@ $\textstyle \mathcal  S$}\mathaccent "0362{\mathcal  S}(x)\).}}{6}{}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:bayesian_latent_filtering}{{1}{6}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Statistical Justification of the Latent Marginalization}{6}{}\protected@file@percent }
-\newlabel{subsec:theory_general}{{3.3}{6}{}{}{}}
-\newlabel{ass:sufficiency}{{1}{6}{}{}{}}
-\newlabel{prop:bayes_optimal}{{1}{6}{}{}{}}
-\abx@aux@cite{0}{bartlett2002rademacher}
-\abx@aux@segm{0}{0}{bartlett2002rademacher}
-\newlabel{prop:sample_efficiency}{{2}{7}{}{}{}}
-\newlabel{prop:map_ml}{{3}{7}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}From General Relevance Scoring to a Tractable Streaming Instantiation}{7}{}\protected@file@percent }
-\newlabel{subsec:bridge}{{3.4}{7}{}{}{}}
-\newlabel{eq:collapsed_relevance}{{6}{7}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}A Concrete Instantiation of the Item-Side Filter}{8}{}\protected@file@percent }
-\newlabel{subsec:item_clustering}{{3.5}{8}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Streaming Bayesian Realization of the Set Descriptors}{8}{}\protected@file@percent }
-\newlabel{subsec:user_clustering}{{3.6}{8}{}{}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.1}Objective Function}{8}{}\protected@file@percent }
-\newlabel{eq:first}{{8}{8}{}{}{}}
-\newlabel{eq:bayes}{{9}{8}{}{}{}}
-\newlabel{eq:f_likelihood}{{10}{9}{}{}{}}
-\newlabel{eq:f_theta_prior}{{11}{9}{}{}{}}
-\newlabel{eq:obj_function}{{12}{9}{}{}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.2}Update Equations}{9}{}\protected@file@percent }
-\newlabel{eq:aux_f}{{13}{9}{}{}{}}
-\newlabel{eq:aux_S}{{14}{9}{}{}{}}
-\newlabel{eq:update_mean}{{15}{9}{}{}{}}
-\newlabel{eq:update_cov}{{16}{9}{}{}{}}
-\newlabel{eq:update_u}{{17}{9}{}{}{}}
-\newlabel{eq:update_prior}{{18}{9}{}{}{}}
-\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Streaming Realization of the Latent Filter via Bayesian User Clustering}}{10}{}\protected@file@percent }
-\newlabel{alg:algo}{{1}{10}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces An example of the neighborhood graph representation among set-descriptor centroids.}}{10}{}\protected@file@percent }
-\newlabel{fig:graph}{{2}{10}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Graph-Regularized Prototype Propagation}{10}{}\protected@file@percent }
-\newlabel{subsec:distributed_clustering}{{3.7}{10}{}{}{}}
-\newlabel{eq:cluster_centroid}{{19}{10}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.8}Latent-Filtered Rating Prediction and Top-\textit  {N} Recommendation}{10}{}\protected@file@percent }
-\newlabel{subsec:rating_prediction}{{3.8}{10}{}{}{}}
-\abx@aux@cite{0}{hathaway1986local}
-\abx@aux@segm{0}{0}{hathaway1986local}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Streaming latent-filtering recommendation pipeline. Item-side prototypes are discovered once, offline (left), while user-side set descriptors $\theta _j$ are realized online through an alternating Bayesian loop: incoming users update fuzzy memberships $u_{ij}$ and descriptors $\theta _j$, which are graph-regularized and fed back as priors for the next arrival (dashed feedback arrows). The resulting descriptors instantiate the general relevance score $R_j(x)$ of Eq.~\eqref  {eq:collapsed_relevance}, used both for set selection and for rating-based top-$N$ recommendation.}}{11}{}\protected@file@percent }
-\newlabel{fig:recommender_flow}{{3}{11}{}{}{}}
-\newlabel{eq:avgrating}{{20}{11}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.9}Theoretical Analysis of the Streaming Estimator}{11}{}\protected@file@percent }
-\newlabel{subsec:theory}{{3.9}{11}{}{}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.9.1}Convergence of the Streaming Estimator}{11}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Comparison of empirical convergence rates of the proposed clustering method and FCM. Both follow the geometric decay predicted by Eq.~\eqref  {eq:error_recursion}; the proposed method attains a smaller effective contraction rate $S$, yielding faster convergence.}}{12}{}\protected@file@percent }
-\newlabel{fig:cn-rate}{{4}{12}{}{}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.9.2}Convergence Rate}{12}{}\protected@file@percent }
-\newlabel{eq:mu_recursion}{{21}{12}{}{}{}}
-\newlabel{eq:mu_k}{{22}{12}{}{}{}}
-\newlabel{eq:error_recursion}{{23}{12}{}{}{}}
+\newlabel{eq:estimated_set}{{7}{6}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Encoder--Latent Filter--Set Decoder Structure}{6}{}\protected@file@percent }
+\newlabel{subsec:tikz_structure}{{3.4}{6}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Statistical Justification}{6}{}\protected@file@percent }
+\newlabel{subsec:statistical_justification}{{3.5}{6}{}{}{}}
+\newlabel{eq:total_probability}{{8}{6}{}{}{}}
+\newlabel{eq:product_rule}{{9}{6}{}{}{}}
+\newlabel{eq:conditional_sufficiency}{{10}{6}{}{}{}}
+\newlabel{eq:marginal_relevance}{{11}{6}{}{}{}}
+\newlabel{prop:bayesian_optimality}{{1}{7}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Learning the Latent Components and Set Descriptors}{7}{}\protected@file@percent }
+\newlabel{subsec:learning_parameters}{{3.6}{7}{}{}{}}
+\newlabel{eq:responsibility_stream}{{12}{7}{}{}{}}
+\newlabel{eq:effective_mass}{{13}{7}{}{}{}}
+\newlabel{eq:streaming_mass}{{14}{7}{}{}{}}
+\newlabel{eq:rho_update}{{15}{7}{}{}{}}
+\newlabel{eq:prototype_update}{{16}{7}{}{}{}}
+\newlabel{eq:covariance_update}{{17}{8}{}{}{}}
+\newlabel{eq:set_mean_update}{{18}{8}{}{}{}}
+\newlabel{eq:set_covariance_update}{{19}{8}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Latent-Filtered Rating Prediction}{8}{}\protected@file@percent }
+\newlabel{subsec:rating_prediction}{{3.7}{8}{}{}{}}
+\newlabel{eq:normalized_relevance}{{20}{8}{}{}{}}
+\newlabel{eq:set_confidence}{{21}{8}{}{}{}}
+\newlabel{eq:uncertainty_gate}{{22}{8}{}{}{}}
+\newlabel{eq:local_prediction}{{23}{8}{}{}{}}
+\newlabel{eq:latent_similarity}{{24}{8}{}{}{}}
+\newlabel{eq:bayesian_rating_prediction}{{25}{9}{}{}{}}
+\newlabel{eq:topn_rule}{{26}{9}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.8}Streaming Algorithm}{9}{}\protected@file@percent }
+\newlabel{subsec:streaming_algorithm}{{3.8}{9}{}{}{}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Bayesian Latent Filtering for Streaming Recommendation}}{10}{}\protected@file@percent }
+\newlabel{alg:bayesian_latent_filtering}{{1}{10}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.9}Objective Function and Convergence}{10}{}\protected@file@percent }
+\newlabel{subsec:objective_convergence}{{3.9}{10}{}{}{}}
+\newlabel{eq:nll_objective}{{27}{10}{}{}{}}
+\newlabel{thm:monotone_likelihood}{{1}{10}{}{}{}}
+\newlabel{cor:inner_convergence}{{1}{11}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.10}Discussion: Why the Method Is Not Ordinary Clustering}{11}{}\protected@file@percent }
+\newlabel{subsec:not_ordinary_clustering}{{3.10}{11}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Experiments}{12}{}\protected@file@percent }
+\newlabel{sec:experiments}{{4}{12}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Datasets}{12}{}\protected@file@percent }
+\newlabel{subsec:datasets}{{4.1}{12}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Streaming Evaluation Protocol}{12}{}\protected@file@percent }
+\newlabel{subsec:streaming_protocol}{{4.2}{12}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Evaluation Metrics}{12}{}\protected@file@percent }
+\newlabel{subsec:evaluation_metrics}{{4.3}{12}{}{}{}}
+\newlabel{eq:mae}{{28}{12}{}{}{}}
+\newlabel{eq:rmse}{{29}{12}{}{}{}}
 \abx@aux@cite{0}{liji2018improved}
 \abx@aux@segm{0}{0}{liji2018improved}
 \abx@aux@cite{0}{kant2017leaderrank}
@@ -184,24 +181,33 @@
 \abx@aux@segm{0}{0}{mohammadpour2019efficient}
 \abx@aux@cite{0}{wasid2018clustering}
 \abx@aux@segm{0}{0}{wasid2018clustering}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Data sets}{13}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Evaluation criteria}{13}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Evaluation of the Proposed Recommender System}{13}{}\protected@file@percent }
 \abx@aux@cite{0}{kant2017leaderrank}
 \abx@aux@segm{0}{0}{kant2017leaderrank}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Comparison of the Proposed Method with others}}{14}{}\protected@file@percent }
-\newlabel{tab:comparison_results}{{1}{14}{}{}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Computational Time Comparison (in milliseconds)}}{14}{}\protected@file@percent }
+\abx@aux@cite{0}{kant2017leaderrank}
+\abx@aux@segm{0}{0}{kant2017leaderrank}
+\abx@aux@cite{0}{kant2017leaderrank}
+\abx@aux@segm{0}{0}{kant2017leaderrank}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Comparison with Clustering-Aware Recommendation Baselines}{13}{}\protected@file@percent }
+\newlabel{subsec:baseline_comparison}{{4.4}{13}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Comparison of the proposed Bayesian latent-filtering recommender with clustering-aware recommendation baselines.}}{13}{}\protected@file@percent }
+\newlabel{tab:comparison_results}{{1}{13}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Computational Overhead in Streaming Prediction}{13}{}\protected@file@percent }
+\newlabel{subsec:computation_time}{{4.5}{13}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Maximum computational time per prediction in milliseconds.}}{14}{}\protected@file@percent }
 \newlabel{tab:computation_time}{{2}{14}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}comparision with standard FCM}{14}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Comparison of the convergence rate and speed of the proposed method and the FCM method on the different datasets. Blue and yellow line denotes the FCM and proposed method respectively}}{15}{}\protected@file@percent }
-\newlabel{fig:combined}{{5}{15}{}{}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Comparison of the proposed method with FCM}}{15}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Latent Filtering Stability and FCM Diagnostic}{14}{}\protected@file@percent }
+\newlabel{subsec:fcm_diagnostic}{{4.6}{14}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Diagnostic comparison of convergence behavior between standard FCM and the proposed Bayesian latent-filtering update. The comparison is used to evaluate update stability, not to define the proposed method as an FCM variant.}}{14}{}\protected@file@percent }
+\newlabel{fig:combined}{{2}{14}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Parameter Sensitivity}{14}{}\protected@file@percent }
+\newlabel{subsec:parameter_sensitivity}{{4.7}{14}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Diagnostic convergence comparison between standard FCM and the proposed Bayesian latent-filtering update.}}{15}{}\protected@file@percent }
 \newlabel{tab:cmpFCM}{{3}{15}{}{}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Parameter Discussion}{15}{}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Accuracy of the proposed method across different parameter settings}}{16}{}\protected@file@percent }
-\newlabel{tab:parameter_discussion}{{4}{16}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{16}{}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Prediction accuracy of the proposed method under different initialization ratios and numbers of latent components.}}{15}{}\protected@file@percent }
+\newlabel{tab:parameter_discussion}{{4}{15}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Experimental Summary}{15}{}\protected@file@percent }
+\newlabel{subsec:experimental_summary}{{4.8}{15}{}{}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{15}{}\protected@file@percent }
 \abx@aux@read@bbl@mdfivesum{D41D8CD98F00B204E9800998ECF8427E}
 \abx@aux@read@bblrerun
 \gdef \@abspage@last{16}

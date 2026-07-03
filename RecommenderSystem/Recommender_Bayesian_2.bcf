@@ -2413,18 +2413,17 @@
     <bcf:citekey order="35" intorder="1">baruah2012evolving</bcf:citekey>
     <bcf:citekey order="36" intorder="1">das2007google</bcf:citekey>
     <bcf:citekey order="37" intorder="1">jakomin2020simultaneous</bcf:citekey>
-    <bcf:citekey order="38" intorder="1">devroye1996probabilistic</bcf:citekey>
-    <bcf:citekey order="39" intorder="1">bartlett2002rademacher</bcf:citekey>
-    <bcf:citekey order="40" intorder="1">hathaway1986local</bcf:citekey>
-    <bcf:citekey order="41" intorder="1">liji2018improved</bcf:citekey>
-    <bcf:citekey order="41" intorder="2">kant2017leaderrank</bcf:citekey>
-    <bcf:citekey order="41" intorder="3">mohammadpour2019efficient</bcf:citekey>
-    <bcf:citekey order="41" intorder="4">wasid2018clustering</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">liji2018improved</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">kant2017leaderrank</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">mohammadpour2019efficient</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">wasid2018clustering</bcf:citekey>
     <bcf:citekey order="42" intorder="1">liji2018improved</bcf:citekey>
     <bcf:citekey order="43" intorder="1">kant2017leaderrank</bcf:citekey>
     <bcf:citekey order="44" intorder="1">mohammadpour2019efficient</bcf:citekey>
     <bcf:citekey order="45" intorder="1">wasid2018clustering</bcf:citekey>
     <bcf:citekey order="46" intorder="1">kant2017leaderrank</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">kant2017leaderrank</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">kant2017leaderrank</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

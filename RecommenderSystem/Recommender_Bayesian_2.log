@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.12.3)  3 JUL 2026 12:40
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.12.3)  3 JUL 2026 13:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -436,10 +436,11 @@ Package: amsthm 2020/05/29 v2.20.6
 \c@proposition=\count405
 \c@lemma=\count406
 \c@theorem=\count407
-\c@assumption=\count408
-\c@definition=\count409
-\c@example=\count410
-\c@remark=\count411
+\c@corollary=\count408
+\c@assumption=\count409
+\c@definition=\count410
+\c@example=\count411
+\c@remark=\count412
 
 (c:/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
@@ -464,7 +465,7 @@ File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
 (c:/texlive/2024/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip78
-\multirow@cntb=\count412
+\multirow@cntb=\count413
 \multirow@dima=\skip79
 \bigstrutjot=\dimen152
 )
@@ -480,12 +481,12 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen160
 \cmidrulekern=\dimen161
 \defaultaddspace=\dimen162
-\@cmidla=\count413
-\@cmidlb=\count414
+\@cmidla=\count414
+\@cmidlb=\count415
 \@aboverulesep=\dimen163
 \@belowrulesep=\dimen164
-\@thisruleclass=\count415
-\@lastruleclass=\count416
+\@thisruleclass=\count416
+\@lastruleclass=\count417
 \@thisrulewidth=\dimen165
 )
 (c:/texlive/2024/texmf-dist/tex/latex/caption/subcaption.sty
@@ -506,17 +507,17 @@ Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@hangindent=\dimen173
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count417
-\c@continuedfloat=\count418
+\c@caption@flags=\count418
+\c@continuedfloat=\count419
 )
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count419
+\c@subfigure=\count420
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count420
+\c@subtable=\count421
 )
 (c:/texlive/2024/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count421
+\c@float@type=\count422
 \float@exts=\toks29
 \float@box=\box54
 \@float@everytoks=\toks30
@@ -528,9 +529,9 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 (c:/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count422
-\Gm@cntv=\count423
-\c@Gm@tempcnt=\count424
+\Gm@cnth=\count423
+\Gm@cntv=\count424
+\c@Gm@tempcnt=\count425
 \Gm@bindingoffset=\dimen174
 \Gm@wd@mp=\dimen175
 \Gm@odd@mp=\dimen176
@@ -546,15 +547,15 @@ Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
 Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
 nment
 \@float@every@algorithm=\toks32
-\c@algorithm=\count425
+\c@algorithm=\count426
 )
 (c:/texlive/2024/texmf-dist/tex/latex/algorithms/algorithmic.sty
 Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
-\c@ALC@unique=\count426
-\c@ALC@line=\count427
-\c@ALC@rem=\count428
-\c@ALC@depth=\count429
+\c@ALC@unique=\count427
+\c@ALC@line=\count428
+\c@ALC@rem=\count429
+\c@ALC@depth=\count430
 \ALC@tlm=\skip80
 \algorithmicindent=\skip81
 )
@@ -600,14 +601,14 @@ de.tex
 \pgf@yd=\dimen193
 \w@pgf@writea=\write4
 \r@pgf@reada=\read3
-\c@pgf@counta=\count430
-\c@pgf@countb=\count431
-\c@pgf@countc=\count432
-\c@pgf@countd=\count433
+\c@pgf@counta=\count431
+\c@pgf@countb=\count432
+\c@pgf@countc=\count433
+\c@pgf@countd=\count434
 \t@pgf@toka=\toks37
 \t@pgf@tokb=\toks38
 \t@pgf@tokc=\toks39
-\pgf@sys@id@count=\count434
+\pgf@sys@id@count=\count435
  (c:/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
@@ -622,12 +623,12 @@ File: pgfsys-dvipdfmx.def 2023-01-15 v3.1.10 (3.1.10)
 (c:/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 )
-\pgfsys@objnum=\count435
+\pgfsys@objnum=\count436
 )))
 (c:/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count436
-\pgfsyssoftpath@bigbuffer@items=\count437
+\pgfsyssoftpath@smallbuffer@items=\count437
+\pgfsyssoftpath@bigbuffer@items=\count438
 )
 (c:/texlive/2024/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -656,7 +657,7 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 (c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen194
-\pgfmath@count=\count438
+\pgfmath@count=\count439
 \pgfmath@box=\box57
 \pgfmath@toks=\toks40
 \pgfmath@stack@operand=\toks41
@@ -681,7 +682,7 @@ x)
 etics.code.tex)
 (c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
 (c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count439
+\c@pgfmathroundto@lastzeros=\count440
 ))
 (c:/texlive/2024/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
@@ -718,7 +719,7 @@ File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfpic=\box58
 \pgf@hbox=\box59
 \pgf@layerbox@main=\box60
-\pgf@picture@serial@count=\count440
+\pgf@picture@serial@count=\count441
 )
 (c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code
 .tex
@@ -749,8 +750,8 @@ File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@max=\dimen274
-\pgf@sys@shading@range@num=\count441
-\pgf@shadingcount=\count442
+\pgf@sys@shading@range@num=\count442
+\pgf@shadingcount=\count443
 )
 (c:/texlive/2024/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -804,7 +805,7 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (c:/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.co
 de.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count443
+\pgf@plot@mark@count=\count444
 \pgfplotmarksize=\dimen279
 )
 \tikz@lastx=\dimen280
@@ -819,18 +820,18 @@ File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@figbox@bg=\box64
 \tikz@tempbox=\box65
 \tikz@tempbox@bg=\box66
-\tikztreelevel=\count444
-\tikznumberofchildren=\count445
-\tikznumberofcurrentchild=\count446
-\tikz@fig@count=\count447
+\tikztreelevel=\count445
+\tikznumberofchildren=\count446
+\tikznumberofcurrentchild=\count447
+\tikz@fig@count=\count448
 
 (c:/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count448
-\pgfmatrixcurrentcolumn=\count449
-\pgf@matrix@numberofcolumns=\count450
+\pgfmatrixcurrentrow=\count449
+\pgfmatrixcurrentcolumn=\count450
+\pgf@matrix@numberofcolumns=\count451
 )
-\tikz@expandcount=\count451
+\tikz@expandcount=\count452
 
 (c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
 brarytopaths.code.tex
@@ -860,33 +861,33 @@ File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
 braryfit.code.tex
 File: tikzlibraryfit.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-\@quotelevel=\count452
-\@quotereset=\count453
+\@quotelevel=\count453
+\@quotereset=\count454
  (./Recommender_Bayesian_2.aux)
 \openout1 = `Recommender_Bayesian_2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 6
-3.
+5.
 
 (c:/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
@@ -903,8 +904,8 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Recommender_Bayesian_2.bbl' found.
 
 (./Recommender_Bayesian_2.bbl)
-Package biblatex Info: Reference section=0 on input line 63.
-Package biblatex Info: Reference segment=0 on input line 63.
+Package biblatex Info: Reference section=0 on input line 65.
+Package biblatex Info: Reference segment=0 on input line 65.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -943,329 +944,296 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 65.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 67.
 
 (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 65.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 67.
 
 
 (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-LaTeX Warning: Citation 'li2024recent' on page 1 undefined on input line 82.
+LaTeX Warning: Citation 'li2024recent' on page 1 undefined on input line 84.
 
 
-LaTeX Warning: Citation 'rama2019deep' on page 1 undefined on input line 82.
+LaTeX Warning: Citation 'rama2019deep' on page 1 undefined on input line 84.
 
 [1
 
 ]
 
 LaTeX Warning: Citation 'aljunid2025collaborative' on page 2 undefined on input
- line 92.
+ line 94.
 
 
 LaTeX Warning: Citation 'isinkaye2023matrix' on page 2 undefined on input line 
-94.
+96.
 
 
-LaTeX Warning: Citation 'zhao2010user' on page 2 undefined on input line 96.
+LaTeX Warning: Citation 'zhao2010user' on page 2 undefined on input line 98.
 
 
 LaTeX Warning: Citation 'valcarce2019collaborative' on page 2 undefined on inpu
-t line 96.
+t line 98.
 
 
-LaTeX Warning: Citation 'sarwar2001item' on page 2 undefined on input line 96.
+LaTeX Warning: Citation 'sarwar2001item' on page 2 undefined on input line 98.
 
 
-LaTeX Warning: Citation 'fu2018attention' on page 2 undefined on input line 96.
+LaTeX Warning: Citation 'fu2018attention' on page 2 undefined on input line 98.
 
 
 
 LaTeX Warning: Citation 'isinkaye2023matrix' on page 2 undefined on input line 
-98.
+100.
 
 
-LaTeX Warning: Citation 'shi2020user' on page 2 undefined on input line 98.
+LaTeX Warning: Citation 'shi2020user' on page 2 undefined on input line 100.
 
 
-LaTeX Warning: Citation 'yang2018enhancing' on page 2 undefined on input line 9
-8.
+LaTeX Warning: Citation 'yang2018enhancing' on page 2 undefined on input line 1
+00.
 
 
-LaTeX Warning: Citation 'behera2023mixed' on page 2 undefined on input line 98.
-
+LaTeX Warning: Citation 'behera2023mixed' on page 2 undefined on input line 100
+.
 
 
 LaTeX Warning: Citation 'valdiviezo2019collaborative' on page 2 undefined on in
-put line 98.
+put line 100.
 
 
 LaTeX Warning: Citation 'wang2015collaborative' on page 2 undefined on input li
-ne 98.
+ne 100.
 
 
-LaTeX Warning: Citation 'angel2022deep' on page 2 undefined on input line 98.
+LaTeX Warning: Citation 'angel2022deep' on page 2 undefined on input line 100.
 
 
 LaTeX Warning: Citation 'li2017collaborative' on page 2 undefined on input line
- 98.
+ 100.
 
 
-Overfull \hbox (17.585pt too wide) in paragraph at lines 98--100
+Overfull \hbox (17.585pt too wide) in paragraph at lines 100--102
 \TU/lmr/m/n/10 dation accuracy and efficiency. These mainly includes approaches
  like Matrix factorization [],
  []
 
 
-LaTeX Warning: Citation 'dakhel2011new' on page 2 undefined on input line 102.
+LaTeX Warning: Citation 'dakhel2011new' on page 2 undefined on input line 104.
 
 
-LaTeX Warning: Citation 'zahra2015novel' on page 2 undefined on input line 102.
+LaTeX Warning: Citation 'zahra2015novel' on page 2 undefined on input line 104.
 
 
 
 LaTeX Warning: Citation 'ranjan2018category' on page 2 undefined on input line 
-102.
+104.
 
 
 LaTeX Warning: Citation 'kant2017leaderrank' on page 2 undefined on input line 
-102.
+104.
 
 
 LaTeX Warning: Citation 'birtolo2013advances' on page 2 undefined on input line
- 102.
+ 104.
 
 
 LaTeX Warning: Citation 'bobadilla2018recommender' on page 2 undefined on input
- line 102.
+ line 104.
 
 
 LaTeX Warning: Citation 'liji2018improved' on page 2 undefined on input line 10
-2.
+4.
 
 
 LaTeX Warning: Citation 'salah2015dynamic' on page 2 undefined on input line 10
-2.
+4.
 
 
 LaTeX Warning: Citation 'katarya2018recommender' on page 2 undefined on input l
-ine 102.
+ine 104.
 
 
-LaTeX Warning: Citation 'deng2019novel' on page 2 undefined on input line 103.
+LaTeX Warning: Citation 'deng2019novel' on page 2 undefined on input line 105.
 
 
 LaTeX Warning: Citation 'kant2017leaderrank' on page 2 undefined on input line 
-103.
+105.
 
 
 LaTeX Warning: Citation 'treerattanapitak2012exponential' on page 2 undefined o
-n input line 103.
+n input line 105.
 
 
 LaTeX Warning: Citation 'chen2017evolutionary' on page 2 undefined on input lin
-e 103.
+e 105.
 
 
-LaTeX Warning: Citation 'singh2018impact' on page 2 undefined on input line 103
+LaTeX Warning: Citation 'singh2018impact' on page 2 undefined on input line 105
 .
 
 
 LaTeX Warning: Citation 'science2018dynamic' on page 2 undefined on input line 
-103.
+105.
 
 
-Overfull \hbox (25.197pt too wide) in paragraph at lines 101--104
+Overfull \hbox (25.197pt too wide) in paragraph at lines 103--106
 []\TU/lmr/m/n/10 , evolutionary clustering that adapts user states over time []
 ,
  []
 
 
-Overfull \hbox (19.75499pt too wide) in paragraph at lines 101--104
+Overfull \hbox (19.75499pt too wide) in paragraph at lines 103--106
 \TU/lmr/m/n/10 and weighted clustering that assigns higher importance to users 
 with more interactions [].
  []
 
 [2]
 
-LaTeX Warning: Citation 'rajput2025nsga' on page 3 undefined on input line 105.
+LaTeX Warning: Citation 'rajput2025nsga' on page 3 undefined on input line 107.
 
 
 
-LaTeX Warning: Citation 'li2025self' on page 3 undefined on input line 105.
+LaTeX Warning: Citation 'li2025self' on page 3 undefined on input line 107.
 
 
-LaTeX Warning: Citation 'qian2025ifm' on page 3 undefined on input line 105.
+LaTeX Warning: Citation 'qian2025ifm' on page 3 undefined on input line 107.
 
 
-LaTeX Warning: Citation 'he2025fedai' on page 3 undefined on input line 105.
+LaTeX Warning: Citation 'he2025fedai' on page 3 undefined on input line 107.
 
 
-Overfull \hbox (6.837pt too wide) in paragraph at lines 105--106
+Overfull \hbox (6.837pt too wide) in paragraph at lines 107--108
 []\TU/lmr/m/n/10 Several advanced clustering-aware approaches such as [], propo
 ses an NSGA-II-optimized
  []
 
 
-LaTeX Warning: Citation 'liji2018improved' on page 3 undefined on input line 10
-9.
+LaTeX Warning: Citation 'liji2018improved' on page 3 undefined on input line 11
+1.
 
 
 LaTeX Warning: Citation 'chen2019n2vscdnnr' on page 3 undefined on input line 1
-09.
+11.
 
 
-LaTeX Warning: Citation 'zhao2017coarse' on page 3 undefined on input line 109.
+LaTeX Warning: Citation 'zhao2017coarse' on page 3 undefined on input line 111.
 
 
 
-LaTeX Warning: Citation 'sheugh2018novel' on page 3 undefined on input line 109
+LaTeX Warning: Citation 'sheugh2018novel' on page 3 undefined on input line 111
 .
 
 
 LaTeX Warning: Citation 'wasid2018clustering' on page 3 undefined on input line
- 109.
+ 111.
 
 
 LaTeX Warning: Citation 'gong2010collaborative' on page 3 undefined on input li
-ne 109.
+ne 111.
 
 
-LaTeX Warning: Citation 'lu2021novel' on page 3 undefined on input line 109.
+LaTeX Warning: Citation 'lu2021novel' on page 3 undefined on input line 111.
 
 
 LaTeX Warning: Citation 'wasid2018improved' on page 3 undefined on input line 1
-09.
+11.
 
 
-LaTeX Warning: Citation 'deng2019neural' on page 3 undefined on input line 109.
+LaTeX Warning: Citation 'deng2019neural' on page 3 undefined on input line 111.
 
 
 
 LaTeX Warning: Citation 'georgieva2008dynamic' on page 3 undefined on input lin
-e 112.
+e 114.
 
 
 LaTeX Warning: Citation 'baruah2012evolving' on page 3 undefined on input line 
-112.
+114.
 
 
-LaTeX Warning: Citation 'das2007google' on page 3 undefined on input line 112.
+LaTeX Warning: Citation 'das2007google' on page 3 undefined on input line 114.
 
 
 LaTeX Warning: Citation 'jakomin2020simultaneous' on page 3 undefined on input 
-line 112.
+line 114.
 
 [3]
-Overfull \hbox (6.705pt too wide) in paragraph at lines 115--116
+Overfull \hbox (6.705pt too wide) in paragraph at lines 117--118
 []\TU/lmr/m/n/10 One of the primary strategies for mitigating data sparsity is 
 cluster-based collaborative filtering. Clustering-
  []
 
 [4] [5]
-Overfull \hbox (386.9669pt too wide) in paragraph at lines 251--252
+Overfull \hbox (266.38858pt too wide) in paragraph at lines 385--386
  [][] 
  []
 
-
-Overfull \hbox (1.54706pt too wide) in paragraph at lines 268--269
-[]\TU/lmr/bx/n/10 Proposition 1 \TU/lmr/m/n/10 (Bayes-risk optimality of the ma
-rginalized relevance rule)\TU/lmr/bx/n/10 . []\TU/lmr/m/it/10 Under Assumption 
-1[], the marginal-
+[6] [7] [8] [9] [10] [11]
+Overfull \hbox (3.00002pt too wide) in paragraph at lines 973--974
+\TU/lmr/m/n/10 The proposed recommender system was evaluated on three benchmark
+ datasets: MovieLens-100K, MovieLens-
  []
 
+[12]
 
-LaTeX Warning: Citation 'devroye1996probabilistic' on page 6 undefined on input
- line 280.
-
-[6]
-Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined,
- overwriting on input line 290.
-
-
-LaTeX Warning: Citation 'bartlett2002rademacher' on page 7 undefined on input l
-ine 290.
-
-
-Overfull \hbox (42.22502pt too wide) in paragraph at lines 290--291
-[]\TU/lmr/m/n/10 The proof is a direct application of standard capacity-based g
-eneralization bounds (e.g. [])
- []
-
-[7] [8] [9]
-File: graph.png Graphic file (type bmp)
-<graph.png>
- [10]
-Overfull \hbox (159.65451pt too wide) in paragraph at lines 492--493
- [][] 
- []
-
-
-LaTeX Warning: Citation 'hathaway1986local' on page 11 undefined on input line 
-502.
-
-[11]
-File: Cnrate_FCM.png Graphic file (type bmp)
-<Cnrate_FCM.png>
-File: Cnrate_pmethod.png Graphic file (type bmp)
-<Cnrate_pmethod.png>
- [12]
-
-LaTeX Warning: Citation 'liji2018improved' on page 13 undefined on input line 6
-38.
+LaTeX Warning: Citation 'liji2018improved' on page 13 undefined on input line 1
+069.
 
 
 LaTeX Warning: Citation 'kant2017leaderrank' on page 13 undefined on input line
- 638.
+ 1070.
 
 
 LaTeX Warning: Citation 'mohammadpour2019efficient' on page 13 undefined on inp
-ut line 638.
+ut line 1071.
 
 
 LaTeX Warning: Citation 'wasid2018clustering' on page 13 undefined on input lin
-e 638.
+e 1072.
 
 
-Overfull \hbox (7.591pt too wide) in paragraph at lines 638--639
-\TU/lmr/m/n/10 cluding [], [], [], [].
- []
-
-
-LaTeX Warning: Citation 'liji2018improved' on page 13 undefined on input line 6
-50.
+LaTeX Warning: Citation 'liji2018improved' on page 13 undefined on input line 1
+077.
 
 
 LaTeX Warning: Citation 'kant2017leaderrank' on page 13 undefined on input line
- 651.
+ 1078.
 
 
 LaTeX Warning: Citation 'mohammadpour2019efficient' on page 13 undefined on inp
-ut line 652.
+ut line 1079.
 
 
 LaTeX Warning: Citation 'wasid2018clustering' on page 13 undefined on input lin
-e 653.
+e 1080.
+
+
+LaTeX Warning: Citation 'kant2017leaderrank' on page 13 undefined on input line
+ 1085.
+
+
+LaTeX Warning: Citation 'kant2017leaderrank' on page 13 undefined on input line
+ 1100.
+
+
+LaTeX Warning: Citation 'kant2017leaderrank' on page 13 undefined on input line
+ 1111.
 
 [13]
-
-LaTeX Warning: Citation 'kant2017leaderrank' on page 14 undefined on input line
- 670.
-
 File: fcm1final.png Graphic file (type bmp)
 <fcm1final.png>
 File: fcm2final.PNG Graphic file (type bmp)
 <fcm2final.PNG>
 File: fcm3final.png Graphic file (type bmp)
 <fcm3final.png>
-[14] [15]
+ [14] [15]
 
-LaTeX Warning: Empty bibliography on input line 789.
+LaTeX Warning: Empty bibliography on input line 1247.
 
 [16] (./Recommender_Bayesian_2.aux)
  ***********
@@ -1286,12 +1254,12 @@ Package logreq Info: Writing requests to 'Recommender_Bayesian_2.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24635 strings out of 474772
- 493287 string characters out of 5761268
- 1944842 words of memory out of 5000000
- 46388 multiletter control sequences out of 15000+600000
- 567934 words of font info for 89 fonts, out of 8000000 for 9000
+ 24491 strings out of 474772
+ 490897 string characters out of 5761268
+ 1940842 words of memory out of 5000000
+ 46251 multiletter control sequences out of 15000+600000
+ 567609 words of font info for 86 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 84i,20n,93p,2274b,3688s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,16n,93p,2274b,3688s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on Recommender_Bayesian_2.pdf (16 pages).
