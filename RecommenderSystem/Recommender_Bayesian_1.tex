@@ -91,6 +91,17 @@ To address these limitations, a Bayesian clustering model is introduced, incorpo
 
 
 
+
+
+
+
+
+
+
+%------------------------------
+
+
+
 \section{Proposed Method}
 \label{sec:proposed_method}
 
@@ -464,127 +475,327 @@ where \(\theta_j\) denotes the latent descriptor or representative parameter of 
 
 
 
-\subsection{Item clustering}
-Initially, items, assumed to be fixed, are clustered using the FCM algorithm. The objective function is defined as follows:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{From General Relevance Scoring to a Tractable Streaming Instantiation}
+\label{subsec:bridge}
+
+The formulation of Section~\ref{subsec:latent_filtering} assumes the hidden-component parameters $\psi_i = (\mathbf{m}_i, \Lambda_i)$ and the set descriptors $\theta_j = (\mu_j, \Sigma_j)$ are already available, so that $P(c_i \mid x)$ and $f(\theta_j \mid c_i)$ can be evaluated directly via Eqs.~\eqref{eq:posterior_component} and~\eqref{eq:posterior_set}. In a real recommender, however, neither is given in advance: both the latent prototypes and the candidate-set descriptors must be estimated from streaming user/item data.
+
+We therefore instantiate the general framework in the regime where hidden components and candidate sets coincide, $C = K$ and $c_j \equiv \mathcal{S}_j$, so that the two-stage relevance score of Eq.~\eqref{eq:relevance_score} collapses to a single learned filter,
 \begin{equation}
-    J = \sum_{k=1}^{C_i} \sum_{i=1}^{n} u_{ki}^m \| x_i - \mu_k \|^2
+	\label{eq:collapsed_relevance}
+	R_j(x) = f(\theta_j \mid \mathbf{z}(x)),
 \end{equation}
-where, $u$ represents the membership function, $u_{ki}$ is the degree of membership of $x_i$ in the cluster $k$, $x_i$ denotes the sample and $\mu$ is cluster centroid. $n$ is the number of samples, and ${C_i}$ is the number of clusters and $m$ is any real number greater than 1. By Taking the derivative of the objective function with respect to $u$ and $\mu$, the membership degree of each sample to each cluster and the corresponding cluster centroids are determined.
-\subsection{User clustering}
-In the context of streaming data, users are continuously added to the system. To address this, the proposed clustering method constructs a model for each cluster based on key parameters such as mean and covariance. Instead of retaining all historical data, only the cluster models are maintained. This method efficiently and scalability clusters new data by using prior knowledge from existing clusters, without needing to store the entire dataset.
+and the estimated-set rule of Eq.~\eqref{eq:estimated_set} is unchanged, $\widehat{\mathcal{S}}(x) = \mathcal{S}_{\widehat{j}}$ with $\widehat{j} = \arg\max_j R_j(x)$. Because $\theta_j$ is now unknown, the posterior $P(c_j \mid x)$ cannot be evaluated in closed form as in Eq.~\eqref{eq:posterior_component}; instead, it is \emph{jointly estimated} together with $\theta_j$ through a relaxed, fuzzy surrogate $u_{ij} \in [0,1]$ that plays the same role as $P(c_j\mid x_i)$ but is optimized rather than computed. This yields the maximum a posteriori training objective
+\[
+\max_{u,\,\theta} \; \sum_{j=1}^{K} \sum_{i=1}^{N} u_{ij}^{m} \, R_j(x_i), \qquad 1 < m < \infty,
+\]
+which is exactly the quantity developed below, first for fixed items (Section~\ref{subsec:item_clustering}) and then for streaming users, where the candidate-set descriptors $\theta_j$ are updated online as new evidence arrives (Section~\ref{subsec:user_clustering}). Sections~\ref{subsec:distributed_clustering}--\ref{subsec:theory} extend this instantiation with graph-based smoothing of the estimated $\theta_j$, a rating-prediction rule built directly on $R_j(x)$, and convergence guarantees for the resulting alternating estimator.
 
-\subsubsection{Method formulation}
+\subsection{Prototype Discovery via Fuzzy Item Clustering}
+\label{subsec:item_clustering}
 
-Aiming to maximize the similarity between user score vectors within each cluster and the cluster's statistical parameters, we have:
+As a first, static instantiation of Eq.~\eqref{eq:collapsed_relevance}, items are assumed fixed and are clustered using the Fuzzy C-Means (FCM) algorithm, which recovers a set of item-side prototypes analogous to $\{\mathbf{m}_i\}$ in the general framework. The objective function is
 \begin{equation}
-    max \sum_{i=1}^{C} f(\theta_j| z_i)
+	J = \sum_{k=1}^{C_i} \sum_{i=1}^{n} u_{ki}^m \| x_i - \mu_k \|^2,
 \end{equation}
-where C is the number of clusters and $f(\theta_i|z_i)$ is the posterior distribution function. Parameter $\theta_j$ includes mean($\mu_j$) and covariance($\Sigma_i$), which $\mu$ is mean of cluster samples and is a combination of scores and features, therefore, $\mu_j = \langle [r_{\mu j1}, r_{\mu j2}, \ldots, r_{\mu jC}; f_{\mu j1}, \ldots, f_{\mu jK}] \rangle $.
+where $u_{ki} \in [0,1]$ is the degree of membership of item $x_i$ in cluster $k$, $\mu_k$ is the corresponding centroid, $n$ is the number of items, $C_i$ is the number of item clusters, and $m > 1$ is the fuzzifier. Differentiating $J$ with respect to $u$ and $\mu$ yields the standard closed-form membership and centroid updates. These item-side clusters serve as fixed reference prototypes for the streaming user-side instantiation developed next.
 
-\begin{equation}\label{eq:first}
-    \max_{u, \theta_j} \sum_{j=1}^{c} \sum_{i=1}^{N} u_{ij}^{m} f(\theta_j \mid z_i), \quad 1 < m < \infty
+\subsection{Streaming Bayesian Realization of the Set Descriptors}
+\label{subsec:user_clustering}
+
+Users, unlike items, arrive continuously, so the set descriptors $\theta_j$ of Eq.~\eqref{eq:collapsed_relevance} cannot be estimated once and fixed; they must be realized online. Rather than retaining all historical data, the proposed method maintains, for each candidate set $j$, only its current descriptor $\theta_j = (\mu_j, \Sigma_j)$, updated incrementally as new users are observed — an online, memory-efficient realization of $R_j(x)$.
+
+\subsubsection{Objective Function}
+
+Let $z_i = \phi(x_i) \in \mathbb{R}^d$ denote the latent feature vector of user $i$ (Section~\ref{subsec:latent_filtering}), formed by concatenating their rating vector and side-feature vector,
+\[
+\mu_j = \big\langle [\,r_{\mu j1}, r_{\mu j2}, \ldots, r_{\mu jC}\,;\; f_{\mu j1}, \ldots, f_{\mu jK}\,] \big\rangle .
+\]
+Substituting the collapsed relevance score $R_j(x_i) = f(\theta_j \mid z_i)$ into the training objective of Section~\ref{subsec:bridge} gives
+\begin{equation}
+	\label{eq:first}
+	\max_{u,\theta_j} \sum_{j=1}^{C} \sum_{i=1}^{N} u_{ij}^m \, f(\theta_j \mid z_i), \qquad 1 < m < \infty.
+\end{equation}
+By Bayes' theorem, Eq.~\eqref{eq:first} is rewritten as
+\begin{equation}
+	\label{eq:bayes}
+	\max_{u,\theta_j} \sum_{j=1}^{C} \sum_{i=1}^{N} u_{ij}^m \, f(z_i \mid \theta_j) \, f(\theta_j), \qquad 1 < m < \infty,
+\end{equation}
+where $f(z_i \mid \theta_j)$ is the likelihood of user $i$'s latent vector under set $j$'s descriptor, and $f(\theta_j)$ is the prior over that descriptor — the same two Bayesian ingredients as $p(\mathbf{z}(x)\mid c_i)$ and $\rho_i$ in Section~\ref{subsec:latent_filtering}, now instantiated for a descriptor that must itself be estimated. Assuming both are Gaussian,
+\begin{align}
+	f(z_i \mid \theta_j) &\sim \mathcal{N}(z_i; \mu_j, \Sigma_j) = \frac{1}{(2\pi)^{d/2} |\Sigma_j|^{1/2}} \exp\!\left( -\frac{1}{2} (z_i - \mu_j)^T \Sigma_j^{-1} (z_i - \mu_j) \right), \label{eq:f_likelihood} \\
+	f(\theta_j) &\sim \mathcal{N}(\mu_j; \mu_{\theta_j}, \Sigma_{\theta_j}) = \frac{1}{(2\pi)^{d/2} |\Sigma_{\theta_j}|^{1/2}} \exp\!\left( -\frac{1}{2} (\mu_j - \mu_{\theta_j})^T \Sigma_{\theta_j}^{-1} (\mu_j - \mu_{\theta_j}) \right), \label{eq:f_theta_prior}
+\end{align}
+where $\mu_{\theta_j}$ and $\Sigma_{\theta_j}$ are the mean and covariance of the prior over $\theta_j$, carried over from the previous streaming step. Substituting Eqs.~\eqref{eq:f_likelihood}--\eqref{eq:f_theta_prior} into~\eqref{eq:bayes} gives the streaming objective
+\begin{equation}
+	\label{eq:obj_function}
+	\begin{split}
+		J_m(u_{11}, \ldots, u_{NC}, \theta_1, \ldots, \theta_C) = \sum_{j=1}^{C} \sum_{i=1}^{N} \frac{u_{ij}^m}{2\pi \, |\Sigma_j|^{1/2} |\Sigma_{\theta_j}|^{1/2}} \\
+		\times \exp\!\left( -\frac{1}{2} \Big( (z_i - \mu_j)^T \Sigma_j^{-1} (z_i - \mu_j) + (\mu_j - \mu_{\theta_j})^T \Sigma_{\theta_j}^{-1} (\mu_j - \mu_{\theta_j}) \Big) \right).
+	\end{split}
 \end{equation}
 
-Using Bayes' theorem relation \ref{eq:first} is rewrite as 
+\subsubsection{Update Equations}
 
-\begin{equation}\label{eq:bayes}
-    \max_{u, \theta_j} \sum_{j=1}^{c} \sum_{i=1}^{N} u_{ij}^{m} f( z_i \mid \theta_j) f(\theta_j), \quad 1 < m < \infty
+Incorporating the constraint $-\sum_{i=1}^{N} \lambda_i \big(\sum_{j=1}^{C} u_{ij} - 1\big)$ via a Lagrangian and differentiating with respect to each parameter yields the update rules below. For clarity, define the auxiliary quantities
+\begin{align}
+	f_{ij} &= \exp\!\left( -\frac{1}{2} \Big( (z_i - \mu_j)^T \Sigma_j^{-1} (z_i - \mu_j) + (\mu_j - \mu_{\theta_j})^T \Sigma_{\theta_j}^{-1} (\mu_j - \mu_{\theta_j}) \Big) \right), \label{eq:aux_f} \\
+	S &= \frac{\Sigma_j^{-1}}{\Sigma_j^{-1} + \Sigma_{\theta_j}^{-1}}, \qquad 1 - S = \frac{\Sigma_{\theta_j}^{-1}}{\Sigma_j^{-1} + \Sigma_{\theta_j}^{-1}}. \label{eq:aux_S}
+\end{align}
+The set descriptor's mean is updated as a Bayesian-weighted combination of the evidence-driven estimate and the prior,
+\begin{equation}
+	\label{eq:update_mean}
+	\mu_j = S \cdot \frac{\sum_{i=1}^{N} u_{ij}^m f_{ij} z_i}{\sum_{i=1}^{N} u_{ij}^m f_{ij}} \;+\; (1 - S) \cdot \mu_{\theta_j},
 \end{equation}
-which $f( z_i \mid \theta_j)$ denotes the likelihood function and $f(\theta_j)$ is the prior knowledge of cluster j.
-By assuming normally distributed both Likelihood and prior, the functions defined as
-
-\begin{equation} \label{eq:f likelihood}
-    f(z_i \mid \theta_j) \sim N(z_i; \mu_j, \Sigma_j) = \frac{1}{(2\pi)^{\frac{1}{2}}|\Sigma_j|^{\frac{1}{2}}} \exp \left(\frac{1}{2} (z_i - \mu_j)^T \Sigma_j^{-1} (z_i - \mu_j) \right)
+the covariance as
+\begin{equation}
+	\label{eq:update_cov}
+	\Sigma_j = \frac{\sum_{i=1}^{N} u_{ij}^m (z_i - \mu_j)(z_i - \mu_j)^T f_{ij}}{\sum_{i=1}^{N} u_{ij}^m f_{ij}},
 \end{equation}
-\begin{equation} \label{eq:f theta prior}
-    f(\theta_j) \sim N(\mu_j; \mu_{\theta j}, \Sigma_{\theta j}) = \frac{1}{(2\pi)^{\frac{1}{2}}|\Sigma_{\theta j}|^{\frac{1}{2}}} \exp \left(\frac{1}{2} (\mu_j - \mu_{\theta j})^T \Sigma_{\theta j}^{-1} (\mu_j - \mu_{\theta j}) \right)
+and the fuzzy surrogate for $P(c_j \mid x_i)$ — the learned analogue of Eq.~\eqref{eq:posterior_component} — as
+\begin{equation}
+	\label{eq:update_u}
+	u_{ij} = \left( \sum_{k=1}^{C} \left( \frac{f_{ij}}{f_{kj}} \right)^{\frac{1}{m-1}} \right)^{-1}, \qquad u_{ij} \in [0,1].
 \end{equation}
-
-The mean $\mu_{\theta j}$ and covariance $\Sigma_{\theta j}$ of cluster j are from the prior probability distribution. Substituting equations \ref{eq:f likelihood} and \ref{eq:f theta prior} into \ref{eq:bayes}, brings us objective function as  
-
-\begin{equation}\label{eq:obj function}
-\begin{split}
-        & J_m(u_{11}, \ldots, u_{NC}, \theta_1, \ldots, \theta_C)  = \sum_{j=1}^{C}  \sum_{i=1}^{N} \frac{u_{ij}^m}{2\pi \left| \Sigma_j \right|^{\frac{1}{2}} \left| \Sigma_{\theta_j} \right|^{\frac{1}{2}}} \\
-         & \quad \quad \quad \exp \left( \frac{1}{2} \left( (z_i - \mu_j)^T \Sigma_j^{-1} (z_i - \mu_j) + (\mu_j - \mu_{\theta_j})^T \Sigma_{\theta_j}^{-1} (\mu_j - \mu_{\theta_j}) \right) \right)
-\end{split}
+The prior for the next streaming step is then carried forward as
+\begin{equation}
+	\label{eq:update_prior}
+	\mu_{\theta_j}^{k+1} = \mu_j^{k}, \qquad \big(\Sigma_{\theta_j}^{k+1}\big)^{-1} = \frac{\sum_{i=1}^{N} u_{ij}^m (\mu_j - \mu_{\theta_j}) (\mu_j - \mu_{\theta_j})^T f_{ij}}{\sum_{i=1}^{N} u_{ij}^m f_{ij}},
 \end{equation}
+where superscripts $k, k+1$ index consecutive streaming iterations.
 
-Incorporating the given constraint $
-- \sum_{i=1}^{N} \lambda_i \left( \sum_{j=1}^{C} u_{ij} - 1 \right)$ into the problem, the Lagrange function is obtained. Finally, the parameters are calculated using the gradient descent method. Hence, taking derivation of the Lagrange function respect to each parameter leads to Eq. \ref{eq: update mean} to \ref{eq:update prior}.
-
-At first for clarity, the auxiliary variables $f_{ij}$, $S$ and $1-S$ are considered as follows:
-\begin{equation}\label{eq: aux f}
-    f_{ij} = \exp \left( -0.5 \left( (z_i - \mu_j)^T \Sigma_j^{-1} (z_i - \mu_j) + (\mu_j - \mu_{\theta_j})^T \Sigma_{\theta_j}^{-1} (\mu_j - \mu_{\theta_j}) \right) \right)
-\end{equation}
-
-
-\begin{equation}\label{eq: aux S}
-    S = \frac{\Sigma_j^{-1}}{\Sigma_j^{-1} + \Sigma_{\theta_j}^{-1}}, \quad 1 - S = \frac{\Sigma_{\theta_j}^{-1}}{\Sigma_j^{-1} + \Sigma_{\theta_j}^{-1}}
-\end{equation}
-Then, the mean of the samples within each cluster is calculated as follows:
-\begin{equation}\label{eq: update mean}
-    \mu_j = \left( S \times \frac{\sum_{i=1}^{N} u_{ij}^{m} f_{ij} z_i}{\sum_{i=1}^{N} u_{ij}^{m} f_{ij}} \right) 
-+ \left( (1-S) \times \frac{\sum_{i=1}^{N} u_{ij}^{m} f_{ij} \mu_{\theta_j}}{\sum_{i=1}^{N} u_{ij}^{m} f_{ij}} \right)
-\end{equation}
-covariance of the samples within each cluster: 
-\begin{equation}\label{eq:update cov}
-    \Sigma_j = \frac{\sum_{i=1}^{N} u_{ij}^{m} (z_i - \mu_j) (z_i - \mu_j)^T f_{ij}}{\sum_{i=1}^{N} u_{ij}^{m} f_{ij}}
-\end{equation}
-membership function, the degree of membership of sample $x_i$ to cluster $j$ :
-\begin{equation}\label{eq:update u}
-    u_{ij} = \left( \frac{1}{\sum_{k=1}^{C} \left( \frac{f_{ij}}{f_{kj}} \right)^{\frac{1}{m-1}}} \right)
-\end{equation}
-similarly, mean and covariance of prior knowledge obtained as
-\begin{equation}\label{eq:update prior}
-    \mu_{\theta_j}^{k+1} = \mu_j^{k} , \quad \Sigma_{\theta_j}^{-1} = \frac{\sum_{i=1}^{N} u_{ij}^{m} (\mu_j - \mu_{\theta_j}) (\mu_j - \mu_{\theta_j})^T f_{ij}}{\sum_{i=1}^{N} u_{ij}^{m} f_{ij}}
-\end{equation}
-where where $k$ and $k+1$ represent the iterations.
-
-In the proposed iterative method, a random membership matrix is created. Based on this matrix, the cluster parameters, mean and covariance, are obtained. The matrix is then updated using the new parameters. This process continues until the change in the membership values between iterations be smaller than $\epsilon$. As a result, a model with the mean and covariance for each cluster, and the membership degree of each sample to the clusters is achieved.
-
-
-Furthermore, when a new user joins the system, the cluster parameters are simply updated by incorporating the new user, the new user indexed as N+1,  using Eq. (\ref{eq: update mean}) and (\ref{eq:update cov}) to determine the appropriate cluster. Then, using the relationship (\ref{eq:update u}), the membership degree of the samples to each cluster is calculated.
-
-Algorithm \ref{alg: algo} describes this Bayesian-based user clustering process, where users are assigned to clusters by iteratively updating membership degrees and cluster parameters until convergence.
+In the resulting iterative procedure, a random membership matrix is initialized; set descriptors are computed from it via Eqs.~\eqref{eq:update_mean}--\eqref{eq:update_cov}; the membership matrix is updated accordingly via Eq.~\eqref{eq:update_u}; and this alternation continues until the change in membership values between consecutive iterations falls below a tolerance $\epsilon$. When a new user $N+1$ arrives, the descriptors are updated by incorporating that single user via Eqs.~\eqref{eq:update_mean}--\eqref{eq:update_cov}, and its membership degrees follow from Eq.~\eqref{eq:update_u} — without reprocessing any previously seen user. Algorithm~\ref{alg:algo} summarizes this realization of the general latent-filtering framework.
 
 \begin{algorithm}
-\caption{Bayesian-based User Clustering}
-\label{alg: algo}
-\begin{algorithmic}[1]
-\STATE Initialize a random membership matrix \( u^{(0)} \in \mathbb{R}^{N \times C} \)
-\REPEAT
-    \FOR{each cluster \( j = 1, \dots, C \)}
-        \STATE Calculate cluster parameters, mean and covariance (\( \mu_j, \Sigma_j \)), and prior knowledge (\( \mu_{\theta j}^k, \Sigma_{\theta j}^k \))
-    \ENDFOR
-    \STATE Update membership matrix \( u_{i,j}^{(k+1)} \) based on updated cluster parameters
-\UNTIL{\( \max_{i,j} | u_{ij}^{(k)} - u_{ij}^{(k+1)} | < \epsilon \)}
-\STATE Output: cluster parameters models (\( \mu_k, \Sigma_k \)) and user membership degrees \( u_{i,j}^{(k)} \)
-\end{algorithmic}
+	\caption{Streaming Realization of the Latent Filter via Bayesian User Clustering}
+	\label{alg:algo}
+	\begin{algorithmic}[1]
+		\STATE Initialize a random membership matrix $u^{(0)} \in \mathbb{R}^{N \times C}$
+		\REPEAT
+		\FOR{each candidate set $j = 1, \ldots, C$}
+		\STATE Update descriptor $\theta_j = (\mu_j, \Sigma_j)$ and prior $(\mu_{\theta_j}^k, \Sigma_{\theta_j}^k)$ via Eqs.~\eqref{eq:update_mean}, \eqref{eq:update_cov}, \eqref{eq:update_prior}
+		\ENDFOR
+		\STATE Update membership matrix $u^{(k+1)}$ via Eq.~\eqref{eq:update_u}
+		\UNTIL{$\max_{i,j} |u_{ij}^{(k)} - u_{ij}^{(k+1)}| < \epsilon$}
+		\STATE \textbf{Output:} set descriptors $(\mu_j, \Sigma_j)$ and user membership degrees $u_{ij}$, jointly realizing $\widehat{\mathcal{S}}(x) = \mathcal{S}_{\widehat{j}}$, $\widehat{j} = \arg\max_j u_{ij}$
+	\end{algorithmic}
 \end{algorithm}
 
-\subsubsection{Distributed clustering}
-In most recommender systems, the available information typically includes user features, user selection history, user-item ratings, and item attributes. However, it is important to note that users are often influenced by others, particularly those with similar preferences or behaviors. Therefore, considering the significance of social relationships, incorporating such information into the recommendation process can enhance the system performance.
-Therefore, in the proposed method, the influence of the centroids of the user clusters on each other is also considered. At first, a neighborhood graph is formed for the cluster centroids. In this graph, the centroids with a small distance from each other (less than a certain value) are considered as neighbors and are connected by an edge. Figure \ref{fig:graph} shows an example of a neighborhood graph for cluster centroids.
+\subsection{Graph-Regularized Prototype Propagation}
+\label{subsec:distributed_clustering}
+
+Recommender systems typically have access to user features, selection history, user--item ratings, and item attributes, but users are also influenced by socially or behaviorally similar peers. To exploit this, the streaming realization above is extended with a neighborhood graph over set descriptors $\{\mu_j\}$: descriptors whose pairwise distance falls below a threshold are connected as neighbors (Fig.~\ref{fig:graph}). A \emph{community} is a subgraph with higher internal than external edge density; descriptors within the same community are permitted to exert more mutual influence than descriptors in different communities.
 
 \begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{graph.png}
-    \caption{An example of the neighborhood graph representation among cluster centroids}
-    \label{fig:graph}
+	\centering
+	\includegraphics[width=0.5\linewidth]{graph.png}
+	\caption{An example of the neighborhood graph representation among set-descriptor centroids.}
+	\label{fig:graph}
 \end{figure}
 
-A community is a section (subgraph), which has higher internal density and lower external density with other sections. 
-intra- and inter-cluster density
-The cluster centroids in each community have more influence on each other than other centroids in other sections. It is necessary to use the influence of the centroids based on their distance from each other in updating the parameters. 
-
-Therefore, in the neighborhood graph, in updating the cluster’s mean, its centroid is adjusted according to Eq. (\ref{eq:cluster centroid}) and proportional to its distance from each neighbor, it moves a certain amount closer to the centroid of that neighbor.
-\begin{equation}\label{eq:cluster centroid}
-    \hat{\mu}_i = \frac{\sum_{j=1}^{N_i}w_j \mu_j}{\sum_{j=1}^{N_i}w_j}, \quad w_j = \exp(-\beta d_{ij})
+After each standard update (Eq.~\eqref{eq:update_mean}), every centroid is additionally smoothed toward its graph neighbors, proportionally to distance:
+\begin{equation}
+	\label{eq:cluster_centroid}
+	\hat{\mu}_j = \frac{\sum_{l=1}^{N_j} w_l \mu_l}{\sum_{l=1}^{N_j} w_l}, \qquad w_l = \exp(-\beta d_{jl}),
 \end{equation}
+where $\hat{\mu}_j$ is the smoothed descriptor mean for set $j$, $N_j$ is its number of graph neighbors, $\mu_l$ is neighbor $l$'s mean, $d_{jl}$ is the feature-space distance between descriptors $j$ and $l$, and $\beta > 0$ is a dataset-specific damping constant preventing any single neighbor from dominating the update. This regularization limits the impact of outlier evidence on any one descriptor, controlling abrupt changes and yielding a more robust streaming realization of $\theta_j$.
 
-Where $\hat{\mu}_i$ represents the centroid of cluster $i$ after the neighborhood operation, $N_i$ denotes the number of neighbors of the centroid of cluster $i$ and $\mu_j$ represents the centroid of cluster $j$. Additionally, $w_j$ denotes the neighborhood weight for the cluster centroid $j$. Where in that relation, $d_ij$ denotes the distance of the $j-th$ cluster centroid from the $i-th$ cluster centroid based on the feature vectors. Furthermore, $\beta$ is a constant, empirically chosen for each dataset, used to prevent a high impact from one cluster centroid on another.
+\subsection{Latent-Filtered Rating Prediction and Top-\textit{N} Recommendation}
+\label{subsec:rating_prediction}
 
-This approach limits the significant impact of outlier data points entering the system on cluster centroids. By moving closer to neighboring centroids, its abrupt change is controlled, ultimately leading to a more robust clustering
+Given a target user's membership degrees $u_{ij}$ — either previously computed (existing user) or freshly computed via Eq.~\eqref{eq:update_u} (new user) — the predicted rating for a candidate item is obtained by averaging the ratings assigned to that item by the user's neighbors within the sets to which they belong with non-negligible membership, directly instantiating the relevance-driven selection rule of Eq.~\eqref{eq:estimated_set}:
+\begin{equation}
+	\label{eq:avgrating}
+	\hat{r} = \frac{1}{C \times M} \sum_{j=1}^{C} \sum_{l=1}^{M} r_{jl},
+\end{equation}
+where $C$ is the number of sets the target user belongs to with non-negligible membership and $M$ is the number of neighbors considered per set. After predicting scores for all candidate items, the top-$N$ items by predicted rating are recommended; following common practice, we use $N = 5$.
+
+
+
+
+
+
+
+\begin{figure}[t]
+	\centering
+	\begin{tikzpicture}[
+		node distance=1.15cm and 1.5cm,
+		box/.style={draw, rounded corners, align=center, minimum width=2.7cm, minimum height=1.0cm, font=\small, fill=gray!5},
+		smallbox/.style={draw, rounded corners, align=center, minimum width=2.3cm, minimum height=0.85cm, font=\footnotesize, fill=gray!5},
+		decision/.style={draw, rounded corners, align=center, minimum width=2.6cm, minimum height=1.0cm, font=\small, fill=blue!5},
+		arrow/.style={-{Latex[length=2mm]}, thick},
+		feedback/.style={-{Latex[length=2mm]}, thick, dashed, gray!70!black},
+		dashedbox/.style={draw, dashed, rounded corners, inner sep=8pt},
+		phase/.style={font=\footnotesize\itshape, gray!40!black}
+		]
+		
+		% --- Offline / static branch (Section 3.3) ---
+		\node[box] (items) {Fixed items\\ $\{x_i\}$};
+		\node[box, below=of items] (fcm) {FCM prototype\\ discovery (\S\ref{subsec:item_clustering})};
+		
+		% --- Streaming branch (Section 3.4) ---
+		\node[box, right=2.3cm of items] (user) {Incoming user\\ $x$};
+		\node[box, below=of user] (enc) {Latent encoder\\ $z=\phi(x)$};
+		
+		\node[decision, below=of enc] (membership) {Fuzzy membership\\ update $u_{ij}$, Eq.~\eqref{eq:update_u}};
+		
+		\node[box, right=2.0cm of membership] (descriptor) {Descriptor update\\ $\theta_j=(\mu_j,\Sigma_j)$\\ Eqs.~\eqref{eq:update_mean}--\eqref{eq:update_cov}};
+		
+		\node[smallbox, above=0.9cm of descriptor] (prior) {Prior\\ $(\mu_{\theta_j},\Sigma_{\theta_j})$};
+		
+		\node[decision, below=of descriptor] (graph) {Graph-regularized\\ smoothing, Eq.~\eqref{eq:cluster_centroid}};
+		
+		\node[box, right=1.9cm of graph] (score) {Relevance score\\ $R_j(x)=f(\theta_j\mid z)$};
+		
+		\node[box, below=of score] (select) {Set selection\\ $\widehat{\mathcal S}(x)=\mathcal S_{\widehat j}$};
+		
+		\node[box, right=1.7cm of score] (rating) {Rating prediction\\ Eq.~\eqref{eq:avgrating}};
+		
+		\node[box, below=of rating] (topn) {Top-$N$\\ recommendation};
+		
+		% --- static -> streaming linkage
+		\draw[arrow] (items) -- (fcm);
+		\draw[arrow] (fcm.east) -| ++(0.9,0) |- (membership.west);
+		
+		% --- streaming main path
+		\draw[arrow] (user) -- (enc);
+		\draw[arrow] (enc) -- (membership);
+		\draw[arrow] (membership) -- (descriptor);
+		\draw[arrow] (descriptor) -- (graph);
+		\draw[arrow] (graph) -- (score);
+		\draw[arrow] (score) -- (select);
+		\draw[arrow] (score) -- (rating);
+		\draw[arrow] (rating) -- (topn);
+		
+		% --- prior feedback loop (streaming / online nature)
+		\draw[arrow] (prior) -- (descriptor);
+		\draw[feedback] (descriptor.north) .. controls +(0,1.0) and +(1.0,0) .. (prior.east)
+		node[midway, above right, phase] {carry forward, Eq.~\eqref{eq:update_prior}};
+		\draw[feedback] (graph) -- (membership) node[midway, below, phase] {refined $\theta_j$ re-weights $u_{ij}$};
+		
+		\node[dashedbox, fit=(user)(enc)(membership)(descriptor)(prior)(graph)] (streambox) {};
+		\node[phase, above=0.15cm of streambox] {Streaming Bayesian realization (\S\ref{subsec:user_clustering}--\S\ref{subsec:distributed_clustering})};
+		
+	\end{tikzpicture}
+	\caption{Streaming latent-filtering recommendation pipeline. Item-side prototypes are discovered once, offline (left), while user-side set descriptors $\theta_j$ are realized online through an alternating Bayesian loop: incoming users update fuzzy memberships $u_{ij}$ and descriptors $\theta_j$, which are graph-regularized and fed back as priors for the next arrival (dashed feedback arrows). The resulting descriptors instantiate the general relevance score $R_j(x)$ of Eq.~\eqref{eq:collapsed_relevance}, used both for set selection and for rating-based top-$N$ recommendation.}
+	\label{fig:recommender_flow}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Theoretical Analysis}
+\label{subsec:theory}
+
+\subsubsection{Convergence of the Streaming Estimator}
+
+The objective $J_m$ (Eq.~\eqref{eq:obj_function}) is optimized by alternating between updating the membership matrix $u$ (Eq.~\eqref{eq:update_u}) and updating the set descriptors $\theta_j$ (Eqs.~\eqref{eq:update_mean}--\eqref{eq:update_cov}), holding the other block fixed at each step — a block-coordinate (alternating) minimization scheme in the same family as classical FCM. Convergence follows from the generalized convergence theorem of Zangwill together with the local-convergence result of \cite{hathaway1986local}: provided (i) each subproblem — minimizing $J_m$ over $u$ with $\theta$ fixed, and over $\theta$ with $u$ fixed — has a unique, continuous solution (guaranteed here, since Eq.~\eqref{eq:update_u} and Eqs.~\eqref{eq:update_mean}--\eqref{eq:update_cov} are closed-form and continuous in their inputs), and (ii) the iterates are initialized sufficiently close to a stationary point of $J_m$, the sequence $\{u^{(k)}, \theta^{(k)}\}$ converges to a local minimum of $J_m$.
+
+Condition (ii) motivates the initial (non-streaming) clustering pass in Section~\ref{subsec:item_clustering}: performing item-side clustering before entering the streaming loop places the iterates close to a minimum of $J_m$ from the outset, rather than relying on convergence from an arbitrary random start.
+
+\subsubsection{Convergence Rate}
+
+We next characterize how quickly a set descriptor's mean stabilizes under the streaming update. From Eq.~\eqref{eq:update_mean}, incorporating a new sample $z_{n+1}$ into set $j$ yields the recursion
+\begin{equation}
+	\label{eq:mu_recursion}
+	\mu_{n+1} = S \, \mu_n + (1-S) \, z_{n+1} + M,
+\end{equation}
+where, from Eqs.~\eqref{eq:update_mean}--\eqref{eq:aux_S}, $S = \sum_{i=1}^{n} u_{ij}^m f_{ij} \big/ \sum_{i=1}^{n+1} u_{ij}^m f_{ij} \in [0,1)$ is the fraction of accumulated evidence mass contributed by previously seen samples, and $M$ collects the bounded prior-pull term.
+
+Equation~\eqref{eq:mu_recursion} is a first-order linear recursion, i.e., a discrete-time contraction whenever $S \in [0,1)$. Unrolling it $k$ steps from an initial mean $\mu(0)$ gives the closed form
+\begin{equation}
+	\label{eq:mu_k}
+	\mu(k) = S^{k}\mu(0) + \sum_{i=1}^{k} S^{\,k-i}(1-S)\,z(i) + \sum_{i=1}^{k} S^{\,k-i} M(i).
+\end{equation}
+Let $\mu^\star$ denote the fixed point of the recursion. Subtracting the fixed-point relation from Eq.~\eqref{eq:mu_recursion} gives
+\begin{equation}
+	\label{eq:error_recursion}
+	\mu(k) - \mu^\star = S^k \big(\mu(0) - \mu^\star\big) + O\!\big((1-S)\big),
+\end{equation}
+so the deviation from the fixed point decays geometrically with rate $S$: $\|\mu(k) - \mu^\star\| = O(S^k)$. Because $S$ is the fraction of evidence mass attributable to \emph{previously accumulated} samples, $S$ is smaller — and hence convergence is faster — precisely when the streaming update weighs incoming evidence more heavily relative to accumulated history, the regime induced by the proposed Bayesian weighting in Eq.~\eqref{eq:aux_S}. This gives a direct, closed-form account of the faster empirical convergence of the proposed method relative to standard FCM (Fig.~\ref{fig:cn-rate}): both follow a recursion of the form of Eq.~\eqref{eq:mu_recursion}, but differ in the effective contraction rate $S$ induced by their respective weighting schemes.
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{Cnrate_FCM.png}
+		\caption{FCM}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{Cnrate_pmethod.png}
+		\caption{Proposed method}
+	\end{subfigure}
+	\caption{Comparison of empirical convergence rates of the proposed clustering method and FCM. Both follow the geometric decay predicted by Eq.~\eqref{eq:error_recursion}; the proposed method attains a smaller effective contraction rate $S$, yielding faster convergence.}
+	\label{fig:cn-rate}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \subsection{Rating prediction based on cluster membership and recommendation}
 Following the clustering of users based on their ratings and feature vectors, in the test phase,the next step is to predict each user's rating for a given item. If the target user is already part of the system, their cluster membership have been previously determined. For new users, these degrees are computed using the method outlined in the previous section. Once the user’s cluster are determined, the predicted rating for a specific item is obtained as in Eq. \ref{eq:avgrating} by averaging the ratings given to that item by the user’s neighbors within the relevant clusters.
@@ -594,13 +805,6 @@ Following the clustering of users based on their ratings and feature vectors, in
 \end{equation}
 
 Finally, after predicting the scores for each user-item pair, items with the highest predicted scores are selected for recommendation. In most recommender systems, it is common to recommend the top 5 or 10 items. In the proposed recommender system, the top 5 items with the highest predicted ratings are recommended to each user.
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\linewidth]{flow.JPG}
-    \caption{Flowchart of the recommender system, this study propose a bayesian-based user clustering method.}
-    \label{fig:recommender_flow}
-\end{figure}
 
 
 \subsubsection{Convergence of the proposed method}
@@ -779,7 +983,61 @@ Finally, substituting this into, the exponential model for the variation of clus
 
 In Figure \ref{fig:cn-rate}, the exponential models of the proposed method and the FCM method are compared. The figure indicates that the cluster centroids in the proposed method change more rapidly, resulting in a faster convergence compared to FCM.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 % ************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Experiments}
 In this section, we investigate the accuracy and performance of the proposed method on various datasets. A comparative analysis with other methods as well as a discussion in parameter setting  is presented.
