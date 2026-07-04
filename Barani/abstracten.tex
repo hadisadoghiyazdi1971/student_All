@@ -1,0 +1,17 @@
+\def\title{\large{Abstract}}
+\def\keyword{\textbf{Keywords: }}
+\def\abstracten{ 
+Nowadays, distributed adaptive networks have attracted the attention of researchers in the field of distributed learning due to their high scalability, resistance to failures, and decentralization. The learning process of distributed algorithms must have a specific structure and be based on a parallel computing model so that the communication between parallel software and parallel hardware can be done easily. The parallel computing model \lr{BSP} can be easily applied to these networks; But in a heterogeneous environment, if barrier synchronization is applied in \lr{BSP}, the straggler problem occurs and the average idle time of nodes increases. In this thesis, in order to manage the heterogeneous environment, in the first step, using a content-structural clustering method, network nodes are regionalized. In the second step, a developed parallel computing model called federated \lr{BSP} or \lr{FBSP} is presented. The proposed computing model, like \lr{BSP}, consists of three important parts of calculation, communication, and barrier synchronization, with the difference that in \lr{FBSP}, there are two types of regional superstep and global superstep. Also, communication and barrier synchronization of proposed model are carried out at both regional and global levels. Two-level communication will reduce communication costs and two-level barrier synchronization will deal with the straggler problem and reduce the average idle time of nodes. In the next step, a distributed learning approach based on the \lr{FBSP} model was presented to solve the optimization problems. In order to robust the proposed approach against all type of noises and adapt to stationary and non-stationary environments, a distributed learning algorithm named \lr{RDSGD} based on stochastic gradient descent was introduced. Finally, an independent software tool named \lr{FBSPonMPI} is presented for developing distributed applications on the platform of adaptive networks in \lr{C} and Python, which is fast and independent of hardware. Analysis of the convergence and efficiency of the proposed approach in the mean state and the mean square state and the impact of random topology on the network and quantization error have been done. In order to confirm the obtained analytical results, the proposed approach has been compared with other approaches using a number of evaluation criteria. The FBSP model-based approach was evaluated on the optimization problem of system identification and stock market forecasting. The proposed approach is more resistant and consistent in the presence of different type of noises and in stationary and non-stationary environments than other methods. The obtained results show that the proposed approach has succeeded in reducing the average idle time by $36.9\%$ and reducing the average number of connections by $58\%$ while maintaining the convergence rate and learning accuracy.
+}
+
+\def\keyworden{Distributed Adaptive Networks, Distributed Learning, Parallel Computing Model, Federated Bulk Synchronous Parallel Computing Model, Regional Superstep, Global Superstep}
+
+
+
+\begin{center}
+\title
+\end{center}
+\abstracten
+
+\keyword
+\keyworden

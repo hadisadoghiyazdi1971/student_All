@@ -1,0 +1,18 @@
+
+
+	\begin{algorithm}
+	\caption{The ATC form of RDSGD algorithm}\label{Alg_RDSGD}
+	\begin{algorithmic}
+		\State Parameters: $\lambda$, $0<\gamma<1$, $\mu>0$
+		\State Initialization: $ w_{k,0}=0$ for $l\in\{1,2,...,N\}$
+		\State Set the coefficients \{$a_{l,k}$\} based on the conditions in Eq.\ref{e8}
+		\For {$t\in\{1,2,...,T\}$}
+			\For   {each node $k\in\{1,2,...,N\}$}
+				\State Draw sample $(\textbf{u}_{k,t},y_{k,t})$ randomly
+				\State Estimation error: \\\qquad$e_k(t)=d_k(t)-w_{k,t-1}^T\textbf{u}_{k,t}$
+				\State Adaptive step: \\\qquad$\psi_{k,t}=w_{k,t-1}-\mu_k S_t^{-1}\left(\lambda w_{k,t-1}-\frac{e_k(t)\textbf{u}_{k,t}^T}{\sqrt{1+(\frac{e_k(t)}{\delta})^2}}\right)$
+				\State Combination step: \\\qquad$w_{k,t}=\sum_{l\in N_k}a_{lk}\psi_{l,t}$
+			\EndFor
+		\EndFor
+	\end{algorithmic}
+\end{algorithm}

@@ -1,0 +1,21 @@
+This is XeTeX, Version 3.1415926-2.3-0.9997.5 (Web2C 2011) (format=xelatex 2011.11.10)  25 NOV 2011 09:26
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**FThesis.tex
+
+! Emergency stop.
+<*> FThesis.tex
+               
+*** (job aborted, file error in nonstop mode)
+
+ 
+Here is how much of TeX's memory you used:
+ 2 strings out of 494146
+ 17 string characters out of 3155806
+ 47917 words of memory out of 3000000
+ 3366 multiletter control sequences out of 15000+200000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 1018 hyphenation exceptions out of 8191
+ 0i,0n,0p,1b,6s stack positions out of 5000i,500n,10000p,200000b,50000s
+No pages of output.

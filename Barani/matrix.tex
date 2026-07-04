@@ -1,0 +1,25 @@
+\begin{algorithm}
+{
+\fontsize{9}{1}
+\caption{construct Matrix M}
+%\label{fig4}
+\begin{algorithmic}[1]
+
+\Function {main}{}
+  
+\For {each $g_{i}$ \in \mathcal{g}}
+\If {$g_{i}$ is one-inpute gate}
+
+\State\textcolor[rgb]{0.00,0.50,1.00}{ $\triangleright   g_{i}=(q_{j})$ }
+\State $M[j,i]=(j,n);$
+\EndIf
+\If{$g_{i} is two-inputs gate$}
+\State\textcolor[rgb]{0.00,0.50,1.00}{ $\triangleright   g_{i}=(q_{j},q_{k})$ }
+ \State $M[j,i]=(k,T)$
+\statr $M[k,i]=(j,C);
+\EndIf
+\EndFor
+\EndFunction
+\end{algorithmic}
+}
+\end{algorithm}

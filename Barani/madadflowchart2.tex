@@ -1,0 +1,24 @@
+
+\begin{tikzpicture}[
+    node distance=2cm,
+    startstop/.style={rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!80},
+    process/.style={rectangle, draw, fill=blue!20, 
+			text width=5em, text centered, rounded corners, minimum height=4em},
+    io/.style={trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=red, fill=purple!30},
+    decision/.style={diamond, minimum width=3cm, minimum height=1cm, text centered, draw=red, fill=green!70},
+    ]
+
+    \node (node0) [startstop]                             {\rl{شروع}};
+    \node (node1) [process, below of=node0]               {\rl{ورودی مساله : مدار کوانتومی یکپارچه\lr{(QC)}و تعداد پارتیشن ها\lr{(K)} }};
+     
+    \node (node3) [process, below of=node1]  {\rl{ساخت گراف $G(V,E)$ بااستفاده از مدار $QC$}};
+    \node (node4) [process, below of=node3]   {\rl{الگوریتم پارتیشنیگ(ورودی: گراف مدار کوانتومی و تعداد پارتیشن ها-خروجی: :پارتیشن های $P_{0},P_{1},...,P_{K}$}};
+    \node (node5) [process, below of=node3, yshift=-1cm]  {Print k};
+    \node (node6) [process, below of=node5]               {Stop};
+
+    \draw [arrows=-Stealth] (node1) --node[anchor=south]            {\rl{سطح اول}}        (node3);
+    \draw [arrows=-Stealth] (node3) --node[anchor=east]             {no}         (node5);
+    \draw [arrows=-Stealth] (node5) --node[anchor=east]             {exit}       (node6);
+    \draw [arrows=-Stealth] (node0) --node[anchor=east]             {Init}       (node1);
+   
+  \end{tikzpicture}

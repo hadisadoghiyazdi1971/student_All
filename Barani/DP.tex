@@ -1,0 +1,251 @@
+%Document Preamble of Monabbati groups for Ferdowsi univercity of mashhad
+%-------------------------------------------------------------------------------------------------------------------
+%  دستوراتی برای اصلاح تولید نمایه
+\immediate\write18{xindy -L persian -C utf8 -M texindy \jobname.idx}
+%  تعریف کلاس سند
+%  Kashida: برای تنظیم کشیدگی خودکار متن(این بسته باعث اختلال در خط نستعلیق می‌شود، openany: برای عدم شروع از صفحات فرد، ar: برای تنظیم پایان‌نامه، phd: برای تنظیم رساله، fleqn: برای؟؟؟
+\documentclass[a4paper, 11pt, openany, oneside, arshad, Kashida]{FThesis}
+%, Kashida
+\usepackage[font={footnotesize }]{caption}
+% در ورژن جدید زی‌پرشین برای تایپ متن‌های ریاضی، این سه بسته، حتماً باید فراخوانی شود
+%\usepackage{amsthm, amssymb, amsmath}
+% بسته‌ای برای تنطیم حاشیه‌های بالا، پایین، چپ و راست صفحه
+
+\usepackage[top=20mm, bottom=20mm, left=25mm, right=35mm]{geometry}
+% بسته‌‌ای برای ظاهر شدن شکل‌ها و تصاویر متن
+\usepackage{graphicx}
+% بسته‌ای برای رسم کادر\usepackage{graphicx,subfigure}
+\usepackage{graphicx,subfigure}
+%تداخل بسته subfigure با tocloft
+\PassOptionsToPackage{subfigure}{tocloft}
+\usepackage{fixmetodonotes}
+%\usepackage{float}
+
+\usepackage{amsthm}
+\usepackage{amsmath}
+
+\usepackage{indentfirst}
+\usepackage{fancyhdr}
+\usepackage{amsthm, amssymb, amsmath}
+\usepackage{framed} 
+% بسته‌‌ای برای چاپ شدن خودکار تعداد صفحات در صفحه «معرفی پایان‌نامه»
+\usepackage{lastpage}
+% بسته‌‌ای برای ایجاد دیاگرام‌های مختلف
+\usepackage[all]{xy}
+% بسته‌ و دستوراتی برای ایجاد لینک‌های رنگی با امکان جهش
+\usepackage[pagebackref=false, colorlinks, linkcolor=black, citecolor=magenta]{hyperref}
+% چنانچه قصد پرینت گرفتن نوشته خود را دارید، خط بالا را غیرفعال و  از دستور زیر استفاده کنید چون در صورت استفاده از دستور زیر‌‌، 
+% لینک‌ها به رنگ سیاه ظاهر خواهند شد که برای پرینت گرفتن، مناسب‌تر است
+%\usepackage[pagebackref=false]{hyperref}
+% بسته‌ لازم برای تنظیم سربرگ‌ها
+\usepackage{fancyhdr}
+% بسته‌ای برای ظاهر شدن «مراجع» و «نمایه» در فهرست مطالب
+%‪ \usepackage[nottoc,notlof,notlot]{tocbibind}
+% دستورات مربوط به ایجاد نمایه
+\usepackage{makeidx}
+\makeindex
+% بسته‌هایی برای رسم شکل
+%\usepackage{subfigure}
+
+
+\usepackage[usenames,dvipsnames]{pstricks}
+\usepackage{epsfig}
+\usepackage{pst-grad} % For gradients
+\usepackage{pst-plot} % For axes
+\usepackage{pst-node}
+%\usepackage{tikz}
+%\usetikzlibrary{decorations.pathmorphing} % noisy shapes
+%\usetikzlibrary{fit}					% fitting shapes to coordinates
+%\usetikzlibrary{backgrounds}	% drawing the background after the foreground
+% بسته‌ای که باعث ریست شدن شماره پانوشت‌ها در هر صفحه می‌شود
+
+\usepackage{cite}
+% بسته‌ای برای چندستونی نوشتن
+\usepackage{multicol}
+% بسته‌هایی برای الگوریتم
+\usepackage{algorithm}
+%\usepackage{algpseudocode}
+%\usepackage{enumerate}
+\usepackage{bidiftnxtra}
+% بسته‌ای برای اضافه کردن کدهای متلب
+%\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode}
+
+% بسته‌ای برای رسم دیاگرام
+\usepackage[all]{xy}
+
+% بسته‌هایی برای رسم گراف
+\usepackage{tkz-berge}
+\usepackage{tkz-graph}
+% بسته‌ای برای اضافه کردن نمایه
+\usepackage[xindy]{glossaries}
+%\makeglossaries
+%\glossarystyle{mylist}
+%\def\glossaryname{واژه نامه}
+%\newcommand{\mygls}[2]{\newglossaryentry{#1}{name=#1,description={#2}}}
+
+% بسته‌ای برای حذف بخشی از سند
+\usepackage{comment}
+
+
+% بسته‌ای برای رسم فلوچارت
+
+\usepackage{mathrsfs, setspace,  fancybox, subfigure,  hyperref}
+%, breqn
+% بسته breqn با بسته xy مشکل داره باید بسته pb-diagram رو چک کنم.
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% فراخوانی بسته زی‌پرشین و تعریف قلم فارسی و انگلیسی
+
+
+\usepackage[Kashida]{xepersian}
+\usepackage{xepersian}
+
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+
+\usepackage[noend]{algpseudocode}
+%\usepackage{perpage}
+%\MakePerPage{footnote}
+\settextfont[Scale=1.2]{Nazanin}%Persian Modern
+% از revision 118 زی‌پرشین به بعد، وارد کردن دستور زیر لازم نیست. توجه داشته باشید که در صورت  غیرفعال کردن این دستور،
+% از فونت پیش‌فرض لاتک برای کلمات انگلیسی استفاده خواهد شد.
+%\setlatintextfont[ExternalLocation,BoldFont={lmroman10-bold},BoldItalicFont={lmroman10-bolditalic},ItalicFont={lmroman10-italic}]{lmroman10-regular}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% چنانچه می‌خواهید اعداد در فرمول‌ها، انگلیسی باشد، خط زیر را غیرفعال کنید
+%\setdigitfont[Scale=1.1]{Parsi Digits}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% تعریف قلم‌های فارسی و انگلیسی اضافی برای استفاده در بعضی از قسمت‌های متن
+\defpersianfont\nastaliq[Scale=2]{IranNastaliq}
+\defpersianfont\nastaliqt[Scale=4]{IranNastaliq}
+\defpersianfont\sols[Scale=1.5]{XB Sols}
+\defpersianfont\chapternumber[Scale=3]{XB Niloofar}
+\defpersianfont\titr[Scale=1]{XB Titre}
+\setlatintextfont{Times New Roman}
+\defpersianfont\nazanint[Scale=1]{Nazanin}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% دستوری برای حذف کلمه «چکیده»
+%\renewcommand{\abstractname}{}
+% دستوری برای حذف کلمه «abstract»
+%\renewcommand{\latinabstract}{}
+% دستوری برای تغییر نام کلمه «اثبات» به «برهان»
+\renewcommand\proofname{\textbf{برهان}}
+% دستوری برای تغییر نام کلمه «کتاب‌نامه» به «مراجع»
+\renewcommand{\bibname}{مراجع}
+% دستوری برای تعریف واژه‌نامه انگلیسی به فارسی
+\newcommand\persiangloss[2]{#1\dotfill\lr{#2}\\}
+% دستوری برای تعریف واژه‌نامه فارسی به انگلیسی 
+\newcommand\englishgloss[2]{#2\dotfill\lr{#1}\\}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% تعریف و نحوه ظاهر شدن عنوان قضیه‌ها، تعریف‌ها، مثال‌ها و ...
+
+
+\tikzstyle{vertex}=[circle, draw, inner sep=0pt, minimum size=15pt]
+\usetikzlibrary{backgrounds,fit,decorations.pathreplacing}  % TikZ libraries
+\usetikzlibrary{shapes,arrows}
+\renewcommand{\labelitemi}{$\bullet$}
+\newcommand{\vertex}{\node[vertex]}
+\tikzstyle{vertexs}=[draw,minimum width=.5cm,minimum height=.5cm]
+\usetikzlibrary{backgrounds,fit,decorations.pathreplacing,calc}
+\newcommand{\ket}[1]{\ensuremath{\left|#1\right\rangle}} % Dirac Kets
+\newcommand{\vertexs}{\node[vertexs]}
+\theoremstyle{definition}
+\newtheorem{definition}{تعریف}[section]
+\newtheorem{example}[definition]{مثال}
+\theoremstyle{theorem}
+\newtheorem{theorem}[definition]{قضیه}
+\newtheorem{lemma}[definition]{لم}
+\newtheorem{proposition}[definition]{گزاره}
+\newtheorem{corollary}[definition]{نتیجه}
+\newtheorem{remark}[definition]{ملاحظه}
+\newtheorem{treaty}[definition]{قرارداد}
+\newtheorem{rema}[definition]{تبصره}
+\newtheorem{notice}[definition]{توجه}
+\newtheorem{hint}[definition]{تذکر}
+\newtheorem{problem}[definition]{مساله}
+\newtheorem{rem}[definition]{یادآوری}
+\newtheorem{x}[definition]{}
+\newenvironment{solution}{{\bf \noindent \\ حل. } \rm } 
+% محیط‌های آزاد با و بدون شماره
+
+\newcommand{\nameB}{}
+\newtheorem*{envB}{\nameB}
+\newenvironment{fenv}[1][پیش‌فرض]
+{\renewcommand{\nameB}{#1}\begin{envB}}{\end{envB}}
+
+\newcommand{\nameA}{}
+\newtheorem{envA}{\nameA}
+\newenvironment{fcenv}[1][پیش‌فرض]
+{\renewcommand{\nameA}{#1}\begin{envA}}{\end{envA}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% تعریف دستورات جدید برای خلاصه نویسی و راحتی کا در هنگام تایپ فرمول‌های ریاضی
+%\newcommand{\op}[1]{\mathop{#1}\limits}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% دستورهایی برای سفارشی کردن سربرگ صفحات
+\SepMark{-}
+
+
+\csname@twosidetrue\endcsname
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyhead[OL,EL]{\thepage}
+\fancyhead[OR,ER]{\small\leftmark}
+%\fancyhead[ER]{\small\leftmark}
+\renewcommand{\chaptermark}[1]{%
+\markboth{#1}{}}
+%\markboth{\thechapter.\ #1}{}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% دستورهایی برای سفارشی کردن صفحات اول فصل‌ها
+%\makeatletter
+%\newcommand\mycustomraggedright{%
+% \if@RTL\raggedleft%
+% \else\raggedright%
+% \fi}
+%\def\@part[#1]#2{%
+%\ifnum \c@secnumdepth >-2\relax
+%\refstepcounter{part}%
+%\addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
+%\else
+%\addcontentsline{toc}{part}{#1}%
+%\fi
+%\markboth{}{}%
+%{\centering
+%\interlinepenalty \@M
+%\ifnum \c@secnumdepth >-2\relax
+% \huge\bfseries \partname\nobreakspace\thepart
+%\par
+%\vskip 40\p@
+%\fi
+%\Huge\bfseries #2\par}%
+%\@endpart}
+%\def\@makechapterhead#1{%
+%\vspace*{80\p@}%
+%{\parindent \z@ \mycustomraggedright %\@mycustomfont
+%\ifnum \c@secnumdepth >\m@ne
+%\if@mainmatter
+% این دو جفت محیط center باعث وسط چین شدن عنوان فصل می‌شوند.
+%\begin{center}
+%\huge\bfseries\space {\chapternumber\thechapter}
+%\end{center}
+%\par\nobreak
+%\vskip 20\p@
+%\fi
+%\fi
+%\interlinepenalty\@M 
+%\begin{center}
+%\Huge \bfseries #1\par\nobreak
+%\end{center}
+%\vskip 50\p@
+%}}
+\makeatother
+% دستوراتی برای تنظیم شماره لاتین برای پانوشت‌ها
+\makeatletter
+\def\@makeLTRfnmark{\hbox{\@textsuperscript{\latinfont\@thefnmark}}}
+\renewcommand\@makefntext[1]{%
+    \parindent 1em%
+    \noindent
+    \hb@xt@1.8em{\hss\if@RTL\@makefnmark\else\@makeLTRfnmark\fi}#1}
+\makeatother
+% دستری برای تنظیم فرمول‌ها در حالت نمایشی
+\everymath\expandafter{\the\everymath \displaystyle}

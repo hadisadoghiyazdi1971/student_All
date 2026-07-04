@@ -1,0 +1,34 @@
+\tikzstyle{line} = [draw, -latex']
+
+    \begin{tikzpicture}
+   
+    
+\tikzstyle{edge_style} = [draw=black,line width=0.3,-latex']
+
+\draw [line,dashed][rotate around={20:(-6,-3)},red] (-6,-3) ellipse (90pt and 20pt);
+    %
+    % Qubits
+    \node at (-4,0) (q1) {$(S_{n},k)$};
+ \node at (-8,-2) (q2) {$(S^{'}_{n-1},k-1)$};
+ \node at (-4,-2) (q3) {$(S^{'}_{n-2},k-1)$};
+ \node at (0,-2) (q4) {...};
+ \node at (3,-2) (q5) {$(S^{'}_{n/2},k-1)$};
+ \node at (-11,-4) (q6) {$(S^{'}_{n-2},k-2)$};
+ \node at (-8,-4) (q7) {$(S^{'}_{n-3},k-2)$};
+\node at (-6,-4) (q8) {...};
+\node at (-4,-4) (q9) {$(S^{'}_{n-4},k-2)$};
+\node at (-2,-4) (q10) {...};
+\path[edge_style](q1)edge(q2);
+\path[edge_style](q1)edge(q3);
+\path[edge_style](q1)edge(q4);
+\path[edge_style](q1)edge(q5);
+\path[edge_style](q2)edge(q6);
+\path[edge_style](q2)edge(q7);
+\path[edge_style](q2)edge(q8);
+\path[edge_style](q3)edge(q7);
+\path[edge_style](q3)edge(q9);
+\path[edge_style](q3)edge(q10);
+
+    \end{tikzpicture}
+  
+  

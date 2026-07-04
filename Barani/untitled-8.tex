@@ -1,0 +1,23 @@
+\documentclass{article}
+
+\usepackage{ifluatex}
+\usepackage{xy}
+\input{Qcircuit}
+
+\begin{document}
+\begin{figure}[h]
+
+\centering
+\[
+\Qcircuit @C=0.1em @R=0.1em @!R{
+\lstick{q1}&	&\ctrl{2}		&\qw			&\targ		&\qw			&\qw		&\targ		&\qw			&\qw		&\rstick{q1}\\
+\lstick{q2}&	&\qw			&\qw			&\qw			&\ctrl{4}		&\qw		&\qw			&\qw			&\qw		&\rstick{q2}\\
+\lstick{q3}&	&\targ		&\ctrl{2}		&\qw			&\qw			&\gate{H}	&\qw			&\qw			&\qw		&\rstick{q3}\\
+\lstick{q4}&	&\qw			&\qw			&\qw			&\qw			&\qw		&\qw			&\targ		&\qw		&\rstick{q4}\\
+\lstick{q5}&	&\qw			&\targ		&\ctrl{-4}		&\qw			&\qw		&\ctrl{-4}		&\qw			&\qw		&\rstick{q5}\\
+\lstick{q6}&	&\qw			&\qw			&\qw			&\targ		&\qw		&\qw			&\ctrl{-2}		&\qw		&\rstick{q6}
+}
+\]
+
+\end{figure}
+\end{document}
