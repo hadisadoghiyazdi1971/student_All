@@ -1,0 +1,417 @@
+% !TEX TS-program = xelatex
+% Chapter 3: Distribution-Aware Active Learning
+% This file is a polished, standalone Persian LaTeX draft.
+% If you already have a thesis template, copy only from \chapter{...} onward.
+
+\documentclass[12pt,a4paper,oneside]{report}
+
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{xepersian}
+
+\IfFontExistsTF{XB Niloofar}{\settextfont{XB Niloofar}}{\settextfont{Amiri}}
+\IfFontExistsTF{Times New Roman}{\setlatintextfont{Times New Roman}}{\setlatintextfont{DejaVu Serif}}
+\IfFontExistsTF{Amiri}{\setdigitfont{Amiri}}{}
+
+\newtheorem{definition}{تعریف}[chapter]
+\newtheorem{proposition}{گزاره}[chapter]
+\newtheorem{remark}{نکته}[chapter]
+\newtheorem{assumption}{فرض}[chapter]
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\KL}{\mathrm{KL}}
+\newcommand{\MMD}{\mathrm{MMD}}
+\newcommand{\argmax}{\operatorname*{arg\,max}}
+\newcommand{\argmin}{\operatorname*{arg\,min}}
+
+\begin{document}
+
+\chapter{یادگیری فعال مبتنی بر توزیع}
+\label{chap:distribution_active_learning}
+
+\section{مقدمه}
+\label{sec:dal_intro}
+
+در بسیاری از مسائل یادگیری ماشین، دسترسی به نمونه‌های بدون برچسب آسان است؛ اما برچسب‌گذاری نمونه‌ها پرهزینه، زمان‌بر یا وابسته به نظر کارشناس است. یادگیری فعال پاسخی به این وضعیت است: به‌جای آن‌که همه‌ی نمونه‌ها برچسب‌گذاری شوند، الگوریتم در هر تکرار، نمونه‌هایی را انتخاب می‌کند که انتظار می‌رود بیشترین اثر را بر بهبود مدل داشته باشند. بنابراین یادگیری فعال، فرایند آموزش را از یک فرایند منفعل به یک فرایند تعاملی تبدیل می‌کند که در آن مدل، خود درباره‌ی نیاز اطلاعاتی‌اش تصمیم می‌گیرد.
+
+با وجود این، بسیاری از معیارهای کلاسیک یادگیری فعال فقط به میزان عدم‌قطعیت مدل توجه می‌کنند. این نگاه، هرچند ساده و مؤثر است، ممکن است نمونه‌هایی را انتخاب کند که روی مرز تصمیم قرار دارند اما از نظر توزیع داده‌ها نماینده‌ی بخش مهمی از جامعه‌ی داده نیستند. به بیان دیگر، نمونه‌ای می‌تواند بسیار نامطمئن باشد، اما در ناحیه‌ای کم‌چگال یا پرت قرار گیرد؛ در چنین حالتی برچسب‌گذاری آن لزوماً باعث بهبود تعمیم مدل روی توزیع واقعی داده‌ها نمی‌شود. از این‌رو، در این فصل یادگیری فعال از دیدگاه \lr{distribution-aware} بررسی می‌شود؛ یعنی انتخاب نمونه‌ها نه فقط بر اساس ابهام مدل، بلکه بر اساس جایگاه آن‌ها در توزیع داده، چگالی، نمایندگی، پوشش و تنوع انجام می‌شود.
+
+ایده‌ی اصلی این فصل آن است که پرس‌وجوی فعال باید همزمان به دو پرسش پاسخ دهد: نخست، «کدام نمونه برای مدل مبهم‌تر است؟» و دوم، «کدام نمونه برای توزیع داده‌ها نماینده‌تر است؟». ترکیب این دو نگاه سبب می‌شود الگوریتم از انتخاب نمونه‌های پرت، تکراری یا غیرنماینده دور شود و بودجه‌ی محدود برچسب‌گذاری به نواحی مهم‌تر فضای داده اختصاص یابد.
+
+\section{صورت‌بندی مسئله}
+\label{sec:dal_problem}
+
+فرض کنید فضای ورودی با $\cX \subseteq \R^d$ و فضای برچسب با $\cY=\{1,\ldots,C\}$ نشان داده شود. داده‌ها از یک توزیع ناشناخته‌ی مشترک $P_{XY}$ تولید می‌شوند. در یادگیری فعال، مجموعه‌ی داده در هر مرحله به دو بخش تقسیم می‌شود:
+\begin{equation}
+\cD_L=\{(x_i,y_i)\}_{i=1}^{n_L},
+\qquad
+\cD_U=\{x_j\}_{j=1}^{n_U},
+\end{equation}
+که $\cD_L$ مجموعه‌ی برچسب‌دار و $\cD_U$ مجموعه‌ی بدون برچسب است. هدف، آموزش مدلی مانند $f_\theta:\cX\rightarrow \Delta^{C-1}$ است؛ به‌گونه‌ای که با کمترین تعداد برچسب، ریسک تعمیم کمینه شود:
+\begin{equation}
+R(\theta)=\E_{(x,y)\sim P_{XY}}\left[\ell(f_\theta(x),y)\right].
+\end{equation}
+در این رابطه، $\ell$ تابع زیان و $\Delta^{C-1}$ سیمپلکس احتمال روی $C$ کلاس است.
+
+در هر دور یادگیری فعال، الگوریتم یک زیرمجموعه‌ی پرس‌وجو $\cS_t\subseteq \cD_U$ را با اندازه‌ی $b$ انتخاب می‌کند:
+\begin{equation}
+\cS_t = \argmax_{\cS\subseteq \cD_U,\ |\cS|=b} A(\cS;\theta_t,\cD_L,\cD_U),
+\end{equation}
+که در آن $A$ تابع اکتساب یا معیار انتخاب است. پس از دریافت برچسب‌های $\cS_t$ از کارشناس، مجموعه‌ی برچسب‌دار و بدون برچسب به‌روزرسانی می‌شوند:
+\begin{equation}
+\cD_L \leftarrow \cD_L \cup \{(x,y):x\in \cS_t\},
+\qquad
+\cD_U \leftarrow \cD_U\setminus \cS_t.
+\end{equation}
+
+\begin{definition}[یادگیری فعال مبتنی بر توزیع]
+یادگیری فعال مبتنی بر توزیع رویکردی است که در آن تابع اکتساب، علاوه بر عدم‌قطعیت یا اثر مورد انتظار نمونه بر مدل، ساختار توزیع داده‌های بدون برچسب را نیز لحاظ می‌کند. بنابراین انتخاب نمونه به صورت تابعی از سه مؤلفه‌ی اصلی انجام می‌شود:
+\begin{equation}
+A(x)=\Phi\big(U(x),R(x),D(x)\big),
+\end{equation}
+که در آن $U(x)$ میزان سودمندی اطلاعاتی یا عدم‌قطعیت، $R(x)$ میزان نمایندگی یا چگالی توزیعی، و $D(x)$ میزان تنوع نسبت به نمونه‌های انتخاب‌شده یا برچسب‌دار است.
+\end{definition}
+
+\section{سناریوهای اصلی یادگیری فعال}
+\label{sec:dal_scenarios}
+
+در ادبیات یادگیری فعال معمولاً سه سناریوی اصلی مطرح می‌شود.
+
+\subsection{تولید پرس‌وجوی عضویت}
+در این سناریو، الگوریتم می‌تواند هر نقطه‌ای را از فضای ورودی $\cX$ تولید کند و برچسب آن را از کارشناس بخواهد. این حالت از نظر نظری جذاب است، اما در بسیاری از کاربردهای واقعی مشکل دارد؛ زیرا نمونه‌ی تولیدشده ممکن است از نظر فیزیکی، معنایی یا تجربی معتبر نباشد. برای نمونه، در داده‌های تصویر، تولید یک نقطه‌ی دلخواه در فضای پیکسل‌ها لزوماً به یک تصویر طبیعی منجر نمی‌شود.
+
+\subsection{نمونه‌گیری انتخابی جریانی}
+در این حالت، نمونه‌ها به صورت جریان وارد می‌شوند. الگوریتم برای هر نمونه‌ی ورودی $x_t$ تصمیم می‌گیرد که آیا برچسب آن را درخواست کند یا خیر. اگر $q_t\in\{0,1\}$ تصمیم پرس‌وجو باشد، می‌توان نوشت:
+\begin{equation}
+q_t = \mathbb{I}\big(A(x_t)>\tau_t\big),
+\end{equation}
+که $\tau_t$ آستانه‌ای ثابت یا تطبیقی است. این سناریو برای داده‌های برخط، حسگرها، جریان‌های تصویری و داده‌های زمانی مناسب است.
+
+\subsection{نمونه‌گیری از مخزن داده‌های بدون برچسب}
+رایج‌ترین حالت، نمونه‌گیری از یک مخزن بزرگ بدون برچسب است. در این حالت، مجموعه‌ی $\cD_U$ از ابتدا در دسترس است و الگوریتم در هر دور، یک یا چند نمونه را برای برچسب‌گذاری انتخاب می‌کند. نگاه توزیعی در این سناریو بسیار مهم است؛ زیرا ساختار هندسی و آماری $\cD_U$ می‌تواند برای تخمین چگالی، خوشه‌بندی، تنوع و پوشش استفاده شود.
+
+\section{معیارهای کلاسیک انتخاب نمونه}
+\label{sec:dal_classic_acquisition}
+
+\subsection{نمونه‌گیری بر اساس عدم‌قطعیت}
+ساده‌ترین راهبرد یادگیری فعال، انتخاب نمونه‌هایی است که مدل درباره‌ی آن‌ها کمترین اطمینان را دارد. اگر خروجی مدل برای نمونه‌ی $x$ به صورت $p_\theta(y\mid x)$ باشد، معیار کمترین اطمینان چنین تعریف می‌شود:
+\begin{equation}
+U_{\mathrm{LC}}(x)=1-\max_{y\in\cY}p_\theta(y\mid x).
+\end{equation}
+در مسائل چندکلاسه، معیار حاشیه نیز رایج است. اگر $p_{(1)}(x)$ و $p_{(2)}(x)$ به‌ترتیب بزرگ‌ترین و دومین احتمال پیش‌بینی‌شده باشند، عدم‌قطعیت حاشیه‌ای به صورت زیر تعریف می‌شود:
+\begin{equation}
+U_{\mathrm{margin}}(x)=1-\big(p_{(1)}(x)-p_{(2)}(x)\big).
+\end{equation}
+همچنین می‌توان از آنتروپی پیش‌بینی استفاده کرد:
+\begin{equation}
+U_{\mathrm{ent}}(x)= -\sum_{c=1}^{C}p_\theta(y=c\mid x)\log p_\theta(y=c\mid x).
+\end{equation}
+هرچه آنتروپی بیشتر باشد، توزیع پیش‌بینی مدل پخش‌تر و تصمیم مدل نامطمئن‌تر است.
+
+\subsection{پرس‌وجو بر اساس کمیته}
+در روش پرس‌وجو با کمیته، مجموعه‌ای از مدل‌ها یا فرضیه‌ها با داده‌ی برچسب‌دار فعلی آموزش داده می‌شوند. نمونه‌ای انتخاب می‌شود که بیشترین اختلاف‌نظر را میان اعضای کمیته ایجاد کند. اگر کمیته شامل $M$ مدل باشد و رأی مدل $m$ برای نمونه‌ی $x$ با $h_m(x)$ نشان داده شود، آنتروپی رأی به صورت زیر است:
+\begin{equation}
+U_{\mathrm{VE}}(x)= -\sum_{c=1}^{C}\frac{v_c(x)}{M}\log\frac{v_c(x)}{M},
+\end{equation}
+که در آن $v_c(x)$ تعداد مدل‌هایی است که کلاس $c$ را برای $x$ انتخاب کرده‌اند. شکل دیگر اختلاف‌نظر، میانگین واگرایی \lr{KL} از پیش‌بینی هر عضو کمیته نسبت به میانگین پیش‌بینی‌ها است:
+\begin{equation}
+U_{\mathrm{KL}}(x)=\frac{1}{M}\sum_{m=1}^{M}
+\KL\Big(p_{\theta_m}(y\mid x)\,\big\|\,\bar p(y\mid x)\Big),
+\end{equation}
+که
+\begin{equation}
+\bar p(y\mid x)=\frac{1}{M}\sum_{m=1}^{M}p_{\theta_m}(y\mid x).
+\end{equation}
+
+\subsection{تغییر مورد انتظار مدل}
+در معیار تغییر مورد انتظار مدل، نمونه‌ای ترجیح داده می‌شود که پس از برچسب‌گذاری، بیشترین تغییر را در پارامترهای مدل ایجاد کند. چون برچسب واقعی نمونه‌ی بدون برچسب مشخص نیست، امید ریاضی روی برچسب‌های ممکن گرفته می‌شود:
+\begin{equation}
+U_{\mathrm{EGL}}(x)=\sum_{y\in\cY}p_\theta(y\mid x)
+\left\|\nabla_\theta \ell(f_\theta(x),y)\right\|.
+\end{equation}
+این معیار از نظر مفهومی قوی است؛ زیرا نمونه‌هایی را انتخاب می‌کند که آموزش روی آن‌ها جهت گرادیان مدل را بیشتر تغییر می‌دهد. با این حال، محاسبه‌ی آن در مدل‌های بزرگ می‌تواند پرهزینه باشد.
+
+\subsection{کاهش مورد انتظار خطا و واریانس}
+در این خانواده از روش‌ها، نمونه‌ای انتخاب می‌شود که انتظار می‌رود پس از برچسب‌گذاری، خطای تعمیم مدل را بیشترین مقدار کاهش دهد. یک صورت کلی از این معیار چنین است:
+\begin{equation}
+U_{\mathrm{ER}}(x)=
+-\sum_{y\in\cY}p_\theta(y\mid x)
+\widehat R\big(\theta^{+}(x,y)\big),
+\end{equation}
+که $\theta^{+}(x,y)$ پارامترهای مدل پس از افزودن نمونه‌ی $(x,y)$ و بازآموزی یا به‌روزرسانی مدل است. این روش‌ها معمولاً دقیق‌تر اما محاسباتی‌تر از نمونه‌گیری عدم‌قطعیت هستند.
+
+\section{چرا نگاه توزیعی لازم است؟}
+\label{sec:dal_why_distribution}
+
+معیارهای کلاسیک، به‌ویژه معیارهای مبتنی بر عدم‌قطعیت، عمدتاً محلی هستند؛ یعنی هر نمونه را به‌صورت جداگانه ارزیابی می‌کنند. این امر دو مشکل ایجاد می‌کند.
+
+نخست، نمونه‌های پرت می‌توانند به‌اشتباه جذاب به نظر برسند. اگر نمونه‌ای در ناحیه‌ای کم‌چگال از فضای ورودی قرار گیرد، مدل ممکن است درباره‌ی آن نامطمئن باشد. اما برچسب‌گذاری چنین نمونه‌ای لزوماً به بهبود رفتار مدل روی بخش‌های پرجمعیت توزیع داده کمک نمی‌کند.
+
+دوم، انتخاب نمونه‌ها می‌تواند تکراری شود. در یادگیری فعال دسته‌ای، اگر چند نمونه‌ی نزدیک به هم همگی عدم‌قطعیت بالایی داشته باشند، معیارهای نقطه‌ای ممکن است همه‌ی آن‌ها را انتخاب کنند. در این حالت، بودجه‌ی برچسب‌گذاری صرف نمونه‌های مشابه می‌شود و پوشش مناسبی از توزیع داده به دست نمی‌آید.
+
+برای رفع این دو مشکل، باید تابع اکتساب به ساختار توزیع داده حساس باشد. به طور خلاصه، نمونه‌ی مطلوب در یادگیری فعال توزیعی باید سه ویژگی داشته باشد:
+\begin{enumerate}[label=\arabic*)]
+\item برای مدل اطلاعاتی یا مبهم باشد؛
+\item در ناحیه‌ای نماینده از توزیع داده قرار داشته باشد؛
+\item نسبت به نمونه‌های انتخاب‌شده‌ی دیگر تنوع کافی داشته باشد.
+\end{enumerate}
+
+\section{چگالی و نمایندگی در فضای داده}
+\label{sec:dal_density}
+
+فرض کنید $z=g_\phi(x)$ نمایش نهفته‌ی نمونه‌ی $x$ باشد. این نمایش می‌تواند همان ویژگی‌های خام، خروجی یک لایه‌ی میانی شبکه‌ی عصبی، یا بردار ویژگی استخراج‌شده از یک مدل ازپیش‌آموزش‌دیده باشد. چگالی تجربی نمونه‌ی $x_i$ را می‌توان با تخمین هسته‌ای زیر محاسبه کرد:
+\begin{equation}
+\widehat p(z_i)=\frac{1}{n_U}\sum_{j=1}^{n_U}K_\sigma(z_i,z_j),
+\end{equation}
+که در آن $K_\sigma$ یک هسته‌ی شباهت است. برای نمونه، هسته‌ی گاوسی به صورت زیر تعریف می‌شود:
+\begin{equation}
+K_\sigma(z_i,z_j)=\exp\left(-\frac{\|z_i-z_j\|_2^2}{2\sigma^2}\right).
+\end{equation}
+هرچه $\widehat p(z_i)$ بزرگ‌تر باشد، نمونه‌ی $x_i$ در ناحیه‌ای پرتراکم‌تر از داده‌های بدون برچسب قرار دارد و از نظر توزیعی نماینده‌تر است.
+
+یک تابع اکتساب ساده‌ی توزیعی را می‌توان به صورت حاصل‌ضرب عدم‌قطعیت و چگالی تعریف کرد:
+\begin{equation}
+A_{\mathrm{DW}}(x_i)=U(x_i)\big(\widehat p(z_i)\big)^\beta,
+\label{eq:density_weighted}
+\end{equation}
+که $\beta\geq 0$ شدت اثر چگالی را کنترل می‌کند. اگر $\beta=0$ باشد، معیار به روش عدم‌قطعیت خالص تبدیل می‌شود. اگر $\beta$ بزرگ باشد، نمونه‌های پرت حتی در صورت عدم‌قطعیت بالا، امتیاز کمتری می‌گیرند.
+
+\begin{proposition}[کاهش اثر نمونه‌های پرت]
+اگر برای نمونه‌ای مانند $x_o$ مقدار چگالی تجربی $\widehat p(z_o)$ به صفر میل کند و $\beta>0$ باشد، آنگاه امتیاز چگالی‌وزن‌دار آن نیز به صفر میل می‌کند، حتی اگر عدم‌قطعیت $U(x_o)$ بزرگ باشد:
+\begin{equation}
+\lim_{\widehat p(z_o)\to 0} U(x_o)\big(\widehat p(z_o)\big)^\beta=0.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+چون $U(x_o)$ برای معیارهای رایج عدم‌قطعیت کران‌دار است، یعنی $0\leq U(x_o)\leq M$، داریم:
+\begin{equation}
+0\leq U(x_o)\big(\widehat p(z_o)\big)^\beta
+\leq M\big(\widehat p(z_o)\big)^\beta.
+\end{equation}
+با میل کردن $\widehat p(z_o)$ به صفر و با توجه به $\beta>0$، کران بالایی نیز به صفر میل می‌کند؛ پس نتیجه از قضیه‌ی فشردگی به دست می‌آید.
+\end{proof}
+
+\section{تنوع و پوشش توزیع}
+\label{sec:dal_diversity}
+
+در یادگیری فعال دسته‌ای، انتخاب چند نمونه‌ی مشابه، اطلاعات جدید زیادی به مدل اضافه نمی‌کند. بنابراین باید علاوه بر امتیاز نقطه‌ای هر نمونه، شباهت میان نمونه‌های انتخابی نیز کنترل شود. اگر $s_{ij}$ شباهت بین دو نمونه‌ی $x_i$ و $x_j$ باشد، می‌توان انتخاب دسته‌ای را چنین نوشت:
+\begin{equation}
+\cS^*=\argmax_{\cS\subseteq \cD_U,\ |\cS|=b}
+\left[
+\sum_{x_i\in\cS} A_{\mathrm{DW}}(x_i)
+-\lambda\sum_{\substack{x_i,x_j\in\cS\\ i<j}}s_{ij}
+\right],
+\label{eq:diverse_batch}
+\end{equation}
+که $\lambda\geq 0$ ضریب جریمه‌ی افزونگی است. یک انتخاب رایج برای شباهت، هسته‌ی گاوسی در فضای نهفته است:
+\begin{equation}
+s_{ij}=\exp\left(-\frac{\|z_i-z_j\|_2^2}{2\rho^2}\right).
+\end{equation}
+
+روش دیگر برای مدل‌کردن پوشش، معیار \lr{k-center} است:
+\begin{equation}
+\cS^*=\argmin_{\cS\subseteq\cD_U,\ |\cS|=b}
+\max_{x\in\cD_U}\min_{s\in\cD_L\cup\cS}\|g_\phi(x)-g_\phi(s)\|_2.
+\label{eq:kcenter}
+\end{equation}
+این معیار تلاش می‌کند فاصله‌ی هر نمونه‌ی بدون برچسب تا نزدیک‌ترین نمونه‌ی برچسب‌دار یا انتخاب‌شده را کاهش دهد؛ بنابراین به پوشش هندسی کل مخزن داده کمک می‌کند.
+
+\section{تطبیق توزیع با معیارهای فاصله‌ی آماری}
+\label{sec:dal_distribution_matching}
+
+یک نگاه پیشرفته‌تر آن است که زیرمجموعه‌ی انتخاب‌شده باید توزیع داده‌های بدون برچسب را تا حد امکان بازنمایی کند. فرض کنید $\widehat P_U$ توزیع تجربی کل مجموعه‌ی بدون برچسب و $\widehat P_S$ توزیع تجربی زیرمجموعه‌ی انتخاب‌شده باشد:
+\begin{equation}
+\widehat P_U=\frac{1}{n_U}\sum_{x_i\in\cD_U}\delta_{z_i},
+\qquad
+\widehat P_S=\frac{1}{b}\sum_{x_i\in\cS}\delta_{z_i}.
+\end{equation}
+در این صورت، می‌توان انتخاب نمونه را به صورت مسئله‌ی مصالحه میان اطلاعات و تطبیق توزیع تعریف کرد:
+\begin{equation}
+\cS^*=\argmin_{\cS\subseteq\cD_U,\ |\cS|=b}
+\left[
+\MMD^2(\widehat P_U,\widehat P_S)
+-\eta\frac{1}{b}\sum_{x_i\in\cS}U(x_i)
+\right],
+\label{eq:mmd_active}
+\end{equation}
+که $\eta\geq 0$ تعادل میان نمایندگی توزیعی و عدم‌قطعیت را تعیین می‌کند.
+
+فاصله‌ی \lr{MMD} با هسته‌ی مثبت‌معین $k$ به صورت زیر نوشته می‌شود:
+\begin{align}
+\MMD^2(\widehat P_U,\widehat P_S)
+=&\frac{1}{n_U^2}\sum_{i=1}^{n_U}\sum_{j=1}^{n_U}k(z_i,z_j)
++\frac{1}{b^2}\sum_{x_i,x_j\in\cS}k(z_i,z_j) \\
+&-\frac{2}{n_U b}\sum_{i=1}^{n_U}\sum_{x_j\in\cS}k(z_i,z_j).
+\end{align}
+
+همچنین می‌توان از انتقال بهینه برای اندازه‌گیری فاصله‌ی توزیعی استفاده کرد. اگر وزن‌های تجربی دو توزیع با $a$ و $b$ و ماتریس هزینه با $C_{ij}=\|z_i-z_j\|_2^2$ نشان داده شود، فاصله‌ی انتقال بهینه چنین است:
+\begin{equation}
+W_C(\widehat P_U,\widehat P_S)=
+\min_{\pi\in\Pi(a,b)}\sum_{i,j}\pi_{ij}C_{ij},
+\end{equation}
+که در آن $\Pi(a,b)$ مجموعه‌ی کوپلینگ‌هایی است که حاشیه‌های آن‌ها برابر $a$ و $b$ است. این نگاه برای انتخاب نمونه‌هایی که ساختار کلی توزیع را حفظ می‌کنند مناسب است، هرچند هزینه‌ی محاسباتی آن باید با تقریب‌ها یا نسخه‌های منظم‌شده کنترل شود.
+
+\section{سوگیری نمونه‌گیری فعال و وزن‌دهی اهمیت}
+\label{sec:dal_bias}
+
+یکی از نکات مهم در یادگیری فعال این است که داده‌ی برچسب‌دار تولیدشده توسط الگوریتم، نمونه‌گیری تصادفی مستقل از توزیع واقعی نیست. اگر $q(x)$ توزیع انتخاب فعال و $p_X(x)$ توزیع واقعی ورودی باشد، ریسک واقعی برابر است با:
+\begin{equation}
+R(\theta)=\E_{x\sim p_X,\ y\sim p(y\mid x)}\big[\ell(f_\theta(x),y)\big].
+\end{equation}
+اما داده‌های برچسب‌دار طبق $q(x)$ انتخاب می‌شوند. اگر $q(x)>0$ هرجا که $p_X(x)>0$، می‌توان ریسک را با وزن‌دهی اهمیت نوشت:
+\begin{equation}
+R(\theta)=\E_{x\sim q,\ y\sim p(y\mid x)}
+\left[\frac{p_X(x)}{q(x)}\ell(f_\theta(x),y)\right].
+\end{equation}
+بنابراین، یک الگوریتم فعال شدیداً متمرکز بر نواحی خاص، ممکن است تخمین ریسک را دچار سوگیری کند. روش‌های توزیع‌آگاه با حفظ نمایندگی و پوشش داده‌ها، این مشکل را کاهش می‌دهند.
+
+\section{تابع اکتساب پیشنهادی برای یادگیری فعال توزیعی}
+\label{sec:dal_proposed_acquisition}
+
+بر اساس بحث‌های قبل، یک تابع اکتساب ترکیبی را می‌توان به صورت زیر تعریف کرد:
+\begin{equation}
+A(x_i)=
+\underbrace{U(x_i)}_{\text{ابهام مدل}}
+\cdot
+\underbrace{\big(\widehat p(z_i)+\epsilon\big)^\beta}_{\text{نمایندگی توزیعی}}
+\cdot
+\underbrace{\left(1-d_L(x_i)\right)^\gamma}_{\text{فاصله از دانسته‌های فعلی}},
+\label{eq:proposed_score}
+\end{equation}
+که در آن $\epsilon>0$ برای پایداری عددی است و $d_L(x_i)$ شباهت نمونه‌ی $x_i$ به مجموعه‌ی برچسب‌دار فعلی را نشان می‌دهد:
+\begin{equation}
+d_L(x_i)=\max_{(x_j,y_j)\in\cD_L}
+\exp\left(-\frac{\|z_i-z_j\|_2^2}{2\rho^2}\right).
+\end{equation}
+در این رابطه، اگر نمونه‌ای بسیار نزدیک به داده‌های برچسب‌دار قبلی باشد، مقدار $d_L(x_i)$ بزرگ می‌شود و عامل $1-d_L(x_i)$ امتیاز آن را کاهش می‌دهد. بنابراین الگوریتم به سمت نمونه‌هایی می‌رود که هم مبهم و نماینده‌اند و هم اطلاعات تکراری نسبت به مجموعه‌ی برچسب‌دار فعلی ندارند.
+
+برای انتخاب دسته‌ای، می‌توان پس از محاسبه‌ی امتیاز نقطه‌ای، یک مرحله‌ی انتخاب تنوع‌محور اضافه کرد:
+\begin{equation}
+\cS^*=\argmax_{\cS\subseteq\cD_U,\ |\cS|=b}
+\left[
+\sum_{x_i\in\cS}A(x_i)-\lambda\sum_{i<j}s_{ij}
+\right].
+\label{eq:final_batch_score}
+\end{equation}
+این مسئله در حالت کلی ترکیبیاتی است؛ اما می‌توان آن را با روش حریصانه حل کرد.
+
+\begin{algorithm}[H]
+\caption{یادگیری فعال مبتنی بر توزیع}
+\label{alg:distribution_active_learning}
+\begin{algorithmic}[1]
+\Require مجموعه‌ی برچسب‌دار اولیه $\cD_L$، مجموعه‌ی بدون برچسب $\cD_U$، بودجه‌ی کل $B$، اندازه‌ی دسته $b$
+\Ensure مدل نهایی $f_\theta$
+\State مدل $f_\theta$ را روی $\cD_L$ آموزش دهید.
+\For{$t=1,2,\ldots,\lfloor B/b\rfloor$}
+    \State نمایش نهفته‌ی نمونه‌ها را محاسبه کنید: $z_i=g_\phi(x_i)$ برای $x_i\in\cD_U$.
+    \State برای هر $x_i\in\cD_U$ عدم‌قطعیت $U(x_i)$ را محاسبه کنید.
+    \State چگالی تجربی $\widehat p(z_i)$ را با هسته‌ی گاوسی یا روش همسایگی محاسبه کنید.
+    \State فاصله یا شباهت هر نمونه به مجموعه‌ی برچسب‌دار فعلی را محاسبه کنید.
+    \State امتیاز $A(x_i)$ را طبق رابطه‌ی \eqref{eq:proposed_score} به دست آورید.
+    \State یک دسته‌ی متنوع $\cS_t$ را با حل حریصانه‌ی رابطه‌ی \eqref{eq:final_batch_score} انتخاب کنید.
+    \State برچسب نمونه‌های $\cS_t$ را از کارشناس دریافت کنید.
+    \State $\cD_L\leftarrow \cD_L\cup\{(x,y):x\in\cS_t\}$ و $\cD_U\leftarrow\cD_U\setminus\cS_t$.
+    \State مدل $f_\theta$ را با مجموعه‌ی برچسب‌دار جدید به‌روزرسانی کنید.
+\EndFor
+\State \Return $f_\theta$
+\end{algorithmic}
+\end{algorithm}
+
+\section{تحلیل پارامترها}
+\label{sec:dal_parameters}
+
+در تابع پیشنهادی، پارامترهای $\beta$، $\gamma$ و $\lambda$ رفتار الگوریتم را کنترل می‌کنند. پارامتر $\beta$ شدت توجه به چگالی را مشخص می‌کند. اگر $\beta$ کوچک باشد، الگوریتم بیشتر به عدم‌قطعیت توجه می‌کند؛ اگر $\beta$ بزرگ باشد، نمونه‌های پرت حذف می‌شوند اما ممکن است برخی نمونه‌های مرزی کم‌چگال نیز نادیده گرفته شوند. پارامتر $\gamma$ نقش فاصله از داده‌های برچسب‌دار را کنترل می‌کند. مقدار زیاد آن باعث می‌شود الگوریتم از نمونه‌های نزدیک به داده‌های برچسب‌دار دور شود و پوشش بیشتری ایجاد کند. پارامتر $\lambda$ نیز میزان تنوع در انتخاب دسته‌ای را تعیین می‌کند.
+
+یک راه عملی برای تنظیم این پارامترها استفاده از برنامه‌ی افزایشی است. در تکرارهای ابتدایی، به دلیل کوچک بودن مجموعه‌ی برچسب‌دار، بهتر است چگالی و پوشش وزن بیشتری داشته باشند. در تکرارهای بعدی که مدل پایدارتر می‌شود، می‌توان وزن عدم‌قطعیت را افزایش داد. برای نمونه:
+\begin{equation}
+\beta_t=\beta_0\exp(-\alpha t),
+\qquad
+\eta_t=1-\exp(-\alpha t),
+\end{equation}
+که در آن $\eta_t$ وزن عدم‌قطعیت و $\beta_t$ وزن نمایندگی توزیعی در دور $t$ است.
+
+\section{معیارهای ارزیابی}
+\label{sec:dal_evaluation}
+
+برای ارزیابی یادگیری فعال، فقط دقت نهایی مدل کافی نیست. باید بررسی شود که الگوریتم با چه تعداد برچسب به چه سطحی از عملکرد می‌رسد. مهم‌ترین معیارها عبارت‌اند از:
+\begin{enumerate}[label=\arabic*)]
+\item \textbf{منحنی عملکرد بر حسب بودجه}: دقت، \lr{F1-score} یا زیان آزمون در برابر تعداد نمونه‌های برچسب‌گذاری‌شده رسم می‌شود.
+\item \textbf{مساحت زیر منحنی یادگیری}: اگر $M(b)$ عملکرد مدل در بودجه‌ی $b$ باشد، شاخص کلی می‌تواند به صورت زیر تعریف شود:
+\begin{equation}
+\mathrm{AULC}=\frac{1}{B}\sum_{t=1}^{B}M(t).
+\end{equation}
+\item \textbf{نرخ صرفه‌جویی برچسب}: تعداد برچسب‌های لازم برای رسیدن به یک آستانه‌ی عملکرد مشخص با روش‌های منفعل و فعال مقایسه می‌شود.
+\item \textbf{پوشش توزیعی}: فاصله‌ی توزیع زیرمجموعه‌ی انتخاب‌شده از توزیع کل داده‌های بدون برچسب با معیارهایی مانند \lr{MMD} یا فاصله‌ی مرکزها اندازه‌گیری می‌شود.
+\item \textbf{پایداری در برابر نمونه‌های پرت}: حساسیت الگوریتم به داده‌های دورافتاده و نویزی بررسی می‌شود.
+\end{enumerate}
+
+\section{جمع‌بندی}
+\label{sec:dal_conclusion}
+
+در این فصل یادگیری فعال از دیدگاه توزیعی بررسی شد. ابتدا صورت‌بندی کلی یادگیری فعال و معیارهای کلاسیک مانند عدم‌قطعیت، پرس‌وجو با کمیته، تغییر مورد انتظار مدل و کاهش مورد انتظار خطا معرفی شد. سپس نشان داده شد که انتخاب صرفاً مبتنی بر عدم‌قطعیت می‌تواند به انتخاب نمونه‌های پرت یا تکراری منجر شود. برای رفع این مشکل، مؤلفه‌های چگالی، نمایندگی، تنوع و تطبیق توزیع وارد تابع اکتساب شدند.
+
+نتیجه‌ی اصلی فصل آن است که نمونه‌ی مناسب برای برچسب‌گذاری فقط نمونه‌ی نامطمئن نیست؛ بلکه نمونه‌ای است که در عین نامطمئن‌بودن، بخشی مهم و نماینده از توزیع داده‌ها را پوشش دهد. این نگاه، یادگیری فعال را از یک مسئله‌ی صرفاً نقطه‌ای به یک مسئله‌ی انتخاب زیرمجموعه‌ی توزیع‌آگاه تبدیل می‌کند. چنین چارچوبی برای مسائل عملی که بودجه‌ی برچسب‌گذاری محدود و توزیع داده‌ها ناهمگن، نامتوازن یا دارای نواحی کم‌چگال است اهمیت ویژه‌ای دارد.
+
+\begin{thebibliography}{99}
+
+\bibitem{settles2009active}
+B. Settles,
+\newblock \lr{Active Learning Literature Survey},
+\newblock Computer Sciences Technical Report 1648, University of Wisconsin--Madison, 2009.
+
+\bibitem{cohn1996active}
+D. A. Cohn, Z. Ghahramani, and M. I. Jordan,
+\newblock \lr{Active Learning with Statistical Models},
+\newblock Journal of Artificial Intelligence Research, vol. 4, pp. 129--145, 1996.
+
+\bibitem{lewis1994sequential}
+D. D. Lewis and W. A. Gale,
+\newblock \lr{A Sequential Algorithm for Training Text Classifiers},
+\newblock Proceedings of SIGIR, pp. 3--12, 1994.
+
+\bibitem{seung1992query}
+H. S. Seung, M. Opper, and H. Sompolinsky,
+\newblock \lr{Query by Committee},
+\newblock Proceedings of the Fifth Annual Workshop on Computational Learning Theory, pp. 287--294, 1992.
+
+\bibitem{roy2001toward}
+N. Roy and A. McCallum,
+\newblock \lr{Toward Optimal Active Learning through Sampling Estimation of Error Reduction},
+\newblock Proceedings of ICML, pp. 441--448, 2001.
+
+\bibitem{settles2008analysis}
+B. Settles and M. Craven,
+\newblock \lr{An Analysis of Active Learning Strategies for Sequence Labeling Tasks},
+\newblock Proceedings of EMNLP, pp. 1070--1079, 2008.
+
+\bibitem{sener2018active}
+O. Sener and S. Savarese,
+\newblock \lr{Active Learning for Convolutional Neural Networks: A Core-Set Approach},
+\newblock International Conference on Learning Representations, 2018.
+
+\bibitem{gal2017deep}
+Y. Gal, R. Islam, and Z. Ghahramani,
+\newblock \lr{Deep Bayesian Active Learning with Image Data},
+\newblock Proceedings of ICML, pp. 1183--1192, 2017.
+
+\end{thebibliography}
+
+\end{document}

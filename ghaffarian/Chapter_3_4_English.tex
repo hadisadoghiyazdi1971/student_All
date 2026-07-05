@@ -1,0 +1,1965 @@
+
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb, amsthm, bm, mathtools, array}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{remark}{Remark}[section]
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\prox}{prox}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\KL}{KL}
+\DeclareMathOperator{\det}{det}
+\DeclareMathOperator{\MSE}{MSE}
+
+\title{Active Learning on Distributions}
+\author{}
+\date{}
+
+\begin{document}
+	
+	\maketitle
+	
+	\section{Active Learning on Distributions}
+	The goal of this thesis is to present active learning on distributions. The lack of direct access to the distribution is a fundamental challenge in the active learning problem. As we mentioned, access to distributions is indirect, through samples drawn from them. Consequently, the accuracy of estimating distributions will be effective in active learning.
+	
+	In the first part of this chapter, Section \ref{sec:theoretical}, we first examine theoretical approaches for the active learning problem in general. In this section, in \ref{subsec:pmal}, we present a method that plays an important role in the continuation and subsequent sections and prove that it is optimal. Then, in the second part, we solve the mentioned method for the active learning problem in the input space using a functional approach. This is a general algorithm that can be used for different sets of functions for active learning. We present a special case of this algorithm based on a linear form for the set of functions and examine its theoretical properties. Now, after preparing the theoretical tools, in the third part, we address the main goal of the thesis, which is the development of an active learning algorithm for distributional data.
+	
+	\subsection{Analysis of Theoretical Approaches for the Active Learning Problem}
+	\label{sec:theoretical}
+	
+	The goal of this section is to present a principled approach for active learning. In learning theory, there are two approaches for classification: Empirical Risk Minimization (ERM) and the Plug-in Classifier. In the following, we first address the development of a method for active learning using ERM in \ref{subsec:erm-al}, and then in \ref{subsec:pmal}, we focus on the plug-in classifier for active learning. In \ref{subsec:pmal}, we introduce the Probabilistic Minimax Active Learning (PMAL) method.
+	
+	\subsubsection{Towards Active Learning for Empirical Risk Minimization}
+	\label{subsec:erm-al}
+	
+	Assume $L = \{(x_i, y_i) | x_i \in \mathbb{R}^d, y_i \in \{-1, 1\}\}$ is the set of labeled data and $U = \{x_i | x_i \in \mathbb{R}^d\}$ is the set of unlabeled data. If the cost function on this data using a loss function $l$ is defined as
+	\begin{equation}
+		J(f, \lambda) = \sum_{i=1}^{n_l} l(y_i, f(x_i)) + \frac{\lambda}{2}\|f\|^2,
+	\end{equation}
+	then, based on empirical risk minimization, the optimal classifier in the function set $\mathcal{F}$ will be:
+	\begin{equation}
+		f^* = \argmin_{f \in \mathcal{F}} J(f, \lambda).
+	\end{equation}
+	To select a query point based on the version space reduction approach, we should query data that, regardless of its label, has the minimum loss. In other words,
+	\begin{equation}
+		\label{eq:erm-query}
+		x^*_q = \argmin_{x_q \in U} \max\{l(1, f^*(x_q)), l(-1, f^*(x_q))\} = \argmin_{x_q \in U} \max_{y_q} l(y_q, f(x_q)).
+	\end{equation}
+	Unfortunately, in the early stages of active learning, the current classifier boundary differs significantly from the optimal classifier boundary. Gradually, as the number of labeled samples increases, the difference between the current classifier and the optimal classifier is expected to decrease. The objective function \eqref{eq:erm-query} is equivalent to the following objective function:
+	\begin{equation}
+		\label{eq:erm-query-constrained}
+		x^*_q = \argmin_{x_q \in U} \min_{\substack{f \in \mathcal{F}, \\ J(f,\lambda) \le J(f^*,\lambda)}} \max_{y_q} l(y_q, f(x_q)).
+	\end{equation}
+	We know that for this constrained optimization problem, $\exists c_q \ge 0$ such that the above problem is equivalent to
+	\begin{equation}
+		\label{eq:erm-query-lagrange}
+		x^*_q = \argmin_{x_q \in U} \min_{f \in \mathcal{F}} \max_{y_q} c_q l(y_q, f(x_q)) + J(f, \lambda).
+	\end{equation}
+	By swapping the minimization over $f$ and maximization over $y_q$, we have:
+	\begin{equation}
+		\label{eq:erm-query-swap}
+		x^*_q = \argmin_{x_q \in U} \max_{y_q} \min_{f \in \mathcal{F}} c_q l(y_q, f(x_q)) + J(f, \lambda).
+	\end{equation}
+	By repeating the point selection in active learning using the above objective function, the empirical risk for this problem transforms as follows:
+	\begin{equation}
+		\hat{J}(f, \lambda) = \sum_{i=1}^{n} c_i l(y_i, f(x_i)) + \frac{\lambda}{2}\|f\|^2,
+	\end{equation}
+	where the coefficient $c_i$ for the initial labeled data is equal to one. Given that the labels of unlabeled data are unknown, the objective function of the active learning problem will be:
+	\begin{equation}
+		\label{eq:erm-final}
+		x^*_q = \argmin_{x_q \in U} \max_{y_q} \min_{f \in \mathcal{F}} \min_{\substack{y_i, \forall x_i \in U, \\ i \neq q}} \hat{J}(f, \lambda).
+	\end{equation}
+	The coefficient $c_s$, which ensures the equivalence of the two optimization problems \eqref{eq:erm-query-constrained} and \eqref{eq:erm-query-lagrange}, depends on the value of $f(x_q)$ and the loss of other points. Due to the non-independent and non-identically distributed nature of points selected in active learning, this coefficient cannot be assumed to be the same for all points. Using this coefficient, we can adjust the importance of the empirical risk of other points against the loss value at the point in question. If this coefficient is small, it means the loss at the point in question is not very important. If this coefficient is large, it indicates the importance of the loss at this point and consequently its importance for learning in the problem at hand.
+	
+	As we know, unlabeled data can harm learning \cite{zhang2000training}. Furthermore, as discussed in the previous chapter, \cite{cohen2004red} showed that adding some data to labeled data can increase the classifier error. Therefore, the goal is to nullify the effect of undesirable data in the learning process. Let's call the set of points to be removed $D_o$. We need a method to estimate it and remove or reduce its influence in the active learning process. Suppose we have a function $f_o$ that returns zero if the data point $x_i \in D_o$ and returns $y_i$ if the data point is noisy:
+	\begin{equation}
+		f_o(x_i) = 
+		\begin{cases}
+			0 & i \in D - D_o \\
+			y_i & i \in D_o
+		\end{cases}
+	\end{equation}
+	It is clear that if the classifier $f_o$ evaluates a point as part of the removal data, the loss of that point should not be included in the objective function. Therefore, for the loss of a point to be calculated in the above optimization problem, the function $f_o$ must be equal to zero. Consequently, we can set the coefficient $c_i$ equal to the following loss for the function. That is,
+	\begin{equation}
+		c_i = 
+		\begin{cases}
+			1 & y_i f_o(x_i) = 0 \\
+			0 & y_i f_o(x_i) = 1
+		\end{cases}
+	\end{equation}
+	Unfortunately, the removal data, i.e., the data that distorts the learning process, is unknown. Despite the unknown nature of this data, how can we remove them from the learning and active learning process?
+	
+	Our main assumption is that for the function $f_o$ to correctly identify this data, it must be much more complex than the function $f$. To clarify this, we need to refer to the equivalence between regularization and distortion in data points \cite{xu2007regularization}. We know that tolerating more distortion in data points by the function is equivalent to it being more regularized \cite{xu2007regularization}. If we create a large distortion in the independent variable at data points and the function remains unchanged, we are dealing with a simple function. Conversely, removal data are data points where small changes in them cause large changes in the classifier. These data do not follow the geometry of the distribution, and consequently, based on the Manifold Assumption, removing them will improve learning \cite{belkin2006manifold}. Therefore, by determining appropriate properties for the function $f_o$, we can make it identify the data points harmful to learning. First, let's examine this classifier, which we call the Simple-Complex Classifier.
+	
+	\paragraph{Simple-Complex Classifier}
+	The first necessary property for $f_o$ is that it be much more complex than the function $f$. The second property is the boundedness of the sum of its absolute values over all data points, or in other words, its $\ell_1$-norm. In fact, we have assumed that the data unsuitable for learning form a small subset of size $n_o$ of the data. Let $f(x) = w^T \phi(x), w \in \mathcal{H}$, $f_o(x) = w_o^T \psi(x), w_o \in \mathcal{H}_o$. Then, assuming the Hinge loss function $l(y_i, w^T\phi(x_i)) = (1 - y_i w^T\phi(x_i))_+$, and $\Psi(X) = [\psi(x_1), \ldots, \psi(x_n)]$ and $l_{io} = (1 - y_i w_o^T \psi(x_i))_+$, the target classification problem transforms as follows:
+	\begin{equation}
+		\label{eq:sc-obj}
+		\bar{J}(w, w_o) = \sum_{i \in D} (1 - y_i w_o^T \psi(x_i))_+ (1 - y_i w^T \phi(x_i))_+ + \frac{\lambda}{2}\|w\|^2_{\mathcal{H}} + \frac{\lambda_o}{2}\|w_o\|^2_{\mathcal{H}_o},
+	\end{equation}
+	where the function $w_o$ is much more complex than the function $w$, using the properties of the Hilbert space $\mathcal{H}_o$ and the parameter $\lambda_o$. Therefore, the resulting optimization problem for learning the simple-complex classifier is:
+	\begin{subequations}
+		\label{eq:sc-opt}
+		\begin{align}
+			&\min_{w, w_o} \bar{J}(w, w_o) \\
+			&\text{s.t. } \|\Psi(X)^T w_o\|_1 \le n_o.
+		\end{align}
+	\end{subequations}
+	This problem can also be written as:
+	\begin{equation}
+		\min_{w, w_o} \bar{J}(w, w_o) + c_p \|\Psi(X)^T w_o\|_1.
+	\end{equation}
+	Problem \eqref{eq:sc-opt} can be equivalently written as:
+	\begin{subequations}
+		\label{eq:sc-opt-equivalent}
+		\begin{align}
+			&\min_{w, w_o, p} \bar{J}(w, w_o) \\
+			&\text{s.t. } \forall i, \quad |w_o^T \phi(x_i)| \le p_i \\
+			&p^T \mathbf{1} \le n_o, \quad p_i \in [0, 1] \\
+			&\lambda \gg \lambda_o.
+		\end{align}
+	\end{subequations}
+	For simplicity, we can assume that the two spaces $\mathcal{H}$ and $\mathcal{H}_o$ are identical.
+	
+	\begin{theorem}
+		Problem \eqref{eq:sc-opt} is equivalent to the following problem:
+		\begin{subequations}
+			\label{eq:sc-dual-theorem}
+			\begin{align}
+				&\min_{w_o, p} \max_{\alpha} \sum_{i \in D} \alpha_i (1 - y_i w_o^T \phi(x_i))_+ - \frac{1}{2\lambda} \alpha^T Y K \odot G Y \alpha + \frac{\lambda^o}{2} \|w_o\|^2 \\
+				&\text{s.t. } 0 \le \alpha \le 1 \\
+				&|\Phi(X)^T w_o| \le p, \quad p \le 1, \quad p^T \mathbf{1} \le n_o \\
+				&G \succeq (1 - Y \Phi(X)^T w_o)(1 - Y \Phi(X)^T w_o)^T \\
+				&\diag(G) = 1 - Y \Phi(X)^T w_o \\
+				&\rank(G) = 1,
+			\end{align}
+		\end{subequations}
+		where $Y = \diag(y)$.
+	\end{theorem}
+	
+	In the case of unlabeled data, due to their unknown labels, the rank constraint on matrix $G$ makes the above problem non-convex. The following theorem presents a convex approximation of this problem.
+	
+	\begin{theorem}
+		Let $g' = 1 - Y \Phi(X)^T w_o$. The convex approximation of the above problem is:
+		\begin{subequations}
+			\label{eq:sc-convex-approx}
+			\begin{align}
+				&\min_{y_u} \min_{w_o, p, G} \min_{\beta', \eta'} t + \frac{\lambda_o}{2}\|w_o\|^2 + \beta'^T \mathbf{1} \\
+				&\text{s.t. } 
+				\begin{bmatrix}
+					K \odot H & g' + \eta' - \beta' \\
+					(g' + \eta' - \beta')^T & \frac{2}{\lambda} t
+				\end{bmatrix} \succeq 0 \\
+				&\beta', \eta' \ge 0 \\
+				&|\Phi(X)^T w_o| \le p, \quad p \le 1, \quad p^T \mathbf{1} \le n_o \\
+				&\begin{bmatrix}
+					H & Y \mathbf{1} - \Phi(X)^T w_o \\
+					(Y \mathbf{1} - \Phi(X)^T w_o)^T & 1
+				\end{bmatrix} \succeq 0 \\
+				&\diag(H) = 1 - \Phi(X)^T w_o.
+			\end{align}
+		\end{subequations}
+		The proof of these theorems is provided in the appendix.
+	\end{theorem}
+	
+	A point that might seem concerning is that multiplying the loss by a coefficient might exacerbate sample bias in active learning. According to Theorem 3.2.2, because the coefficient of the loss function is bounded, the simple-complex method is consistent; meaning that as the number of labeled examples increases, it converges to the optimal classifier.
+	
+	In the appendix, we have proven important properties for the simple-complex classifier. Examining the details of these results is beyond the scope of this thesis, and therefore we will not address them. However, as an example, we have proven that if there is outlier data and the model parameters satisfy simple conditions, the simple-complex classifier will eliminate its influence on classification. Furthermore, we have proven that under certain conditions, the simple-complex classifier does not exacerbate bias.
+	
+	The simple-complex classifier is related in some aspects to learning with a reject option \cite{herbster1998learning}. In this type of learning, points on both sides of the boundary that increase the empirical risk are rejected (removed), and the classification algorithm reduces or eliminates their influence on learning. As we have seen, the development of the above learning algorithm was, of course, independent of its connection to this type of learning algorithm.
+	
+	During the final stages of this work, a paper by Corrina Cortes and Mehryar Mohri on the learning with a reject option problem was first uploaded to their personal website and then a few months later presented in \cite{cortes2016learning}. Although this paper solely presents a classifier for this purpose, its approach is similar to the approach presented in this section of this thesis, in that it uses an auxiliary function to find rejected data. However, none of the approaches proposed in this thesis for convexifying the problem were presented in that paper. The research presented in this part of the thesis was submitted to arXiv around the same time \cite{karimi2016statistical}.
+	
+	Interestingly, the authors in \cite{cortes2016learning} stated that, based on the results of \cite{herbster1998learning}, they expected rejected points to be near the classifier boundary, but they expressed surprise that their method also rejected points in regions far from the classifier boundary. As shown in the proofs in the appendix, the proposed method here removes both types of noisy data, i.e., outliers and label noise, from the learning process. Interestingly, that paper stated that algorithms based on learning with a reject option could be used to develop solutions for other learning problems, such as active learning. However, nearly four years after that date and the authors' call for development of such algorithms at an ICML workshop, this has not yet been done for active learning.
+	
+	Before continuing, it is interesting to observe the results of the simple-complex classifier on synthetic data.
+	
+	\paragraph{Examining Results on Synthetic Data}
+	The simple-complex classifier was introduced to reduce the influence of noisy data, i.e., data that has a negative impact on learning. To study the behavior of the algorithm, we created several synthetic datasets. We expect the simple classifier to be minimally affected by this data, while the complex classifier should identify these examples. In the first dataset, we added outlier data. For clarity, we have added very obvious outliers to the data, the results of which are shown in Figure 3.1. As can be seen, the complex classifier has identified the outliers, and the contour of the simple classifier has received little influence from the outliers. In contrast, the SVM contour has changed relatively. It might seem that because the SVM boundary hasn't changed, this is not very important. To clarify, in Figure 3.1, label noise has been added on both sides of the boundary. As observed, in this case, the SVM boundary has become severely distorted, while the simple classifier boundary has hardly changed. Furthermore, the complex classifier has correctly identified the label noise. When label noise data is far from the classifier boundary, it is natural that its impact on the SVM classifier should be much greater. You can see this case in Figure 3.1. However, the impact of this data on the simple classifier is almost zero. This is thanks to adding a function, the complex classifier, to identify data harmful to learning. Figure 3.1 shows the behavior of the algorithm in a case where outliers are near the boundary.
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.45\textwidth]{fig3_1a.png}
+		\includegraphics[width=0.45\textwidth]{fig3_1b.png}
+		\includegraphics[width=0.45\textwidth]{fig3_1c.png}
+		\includegraphics[width=0.45\textwidth]{fig3_1d.png}
+		\caption{Synthetic dataset with clear outliers added to show the contours of the functions. As seen, the simple classifier is relatively unaffected by the outliers, and the complex classifier has absorbed all the outliers. In comparison, the SVM contour is severely affected. This affects the classifier boundary in active learning selection.}
+		\label{fig:synth-outliers}
+	\end{figure}
+	
+	\paragraph{Convex Approximation for Robust Active Learning}
+	Now we present the convex approximation for active learning. Because the set of query data $Q$ is a subset of the data, we use an integer variable $q_i \in \{0, 1\}$ for this selection, such that if $q_i = 1$, the $i$-th data point is a member of the query set, and otherwise not. Therefore, the objective function will be:
+	\begin{equation}
+		\label{eq:ral-obj}
+		\bar{J}(w, w_o) = \sum_{i \in D} (1 - q_i)(1 - y_i w_o^T \psi(x_i))_+ (1 - y_i w^T \phi(x_i))_+ + \sum_{j \in Q} q_j |w^T \phi(x_j)| + \frac{\lambda}{2}\|w\|^2_{\mathcal{H}} + \frac{\lambda_o}{2}\|w_o\|^2_{\mathcal{H}_o}.
+	\end{equation}
+	Consequently, the objective function of active learning will be:
+	\begin{subequations}
+		\label{eq:ral-final}
+		\begin{align}
+			&x^*_s = \argmin_{q} \min_{w, w_o} \min_{\substack{y_i \in \{-1, 1\}, \\ \forall x_i \in U}} \bar{J}(w, w_o, q) \\
+			&\text{s.t. } \mathbf{1}^T q = b, \quad q_i \in \{0, 1\} \\
+			&\|\Psi(X)^T w_o\|_1 \le n_o.
+		\end{align}
+	\end{subequations}
+	This problem is very difficult. The variables $q_i, y_i, \forall x_i \in U$ are integers. Furthermore, the problem is highly non-convex. We will attempt to approximate this problem in stages with a simpler problem.
+	
+	\begin{theorem}
+		The above problem is equivalent to:
+		\begin{subequations}
+			\label{eq:ral-dual-theorem}
+			\begin{align}
+				&\min_{q, w_o, p} \min_{\substack{y_i \in \{-1, 1\}, \\ \forall x_i \in U}} \max_{\alpha} \sum_{i \in D} \alpha_i (1 - g_i) + \frac{\lambda_o}{2}\|w_o\|^2 - \frac{1}{2\lambda} \alpha^T K \odot G_b \alpha \\
+				&\text{s.t. } 0 \le \alpha \le 1, \quad -1 \le \tau \le 1, \quad y_i \in \{-1, 1\}, \forall x_i \in U \\
+				&G_b = \left[\frac{Y(1-g)}{\sqrt{q}}\right] \left[\frac{Y(1-g)}{\sqrt{q}}\right]^T \\
+				&g = 1 - (I - \diag(q))(1 - Y \Phi(X)^T w_o) \\
+				&|\Phi(X)^T w_o| \le p, \quad p_i \in \{0, 1\}, \quad \mathbf{1}^T p \le n_o.
+			\end{align}
+		\end{subequations}
+	\end{theorem}
+	The proof of this theorem is provided in the appendix.
+	
+	This problem is non-convex due to the presence of $G_b$. Here, we present a convex approximation of the problem. First, consider it in the simple case without $w_o$ and $p$. In this case, the above problem transforms into the following problem:
+	\begin{subequations}
+		\label{eq:ral-simple}
+		\begin{align}
+			&\min_{q, y_u} \max_{\alpha} \sum_{i \in D} \alpha_i (1 - g_i) - \frac{1}{2\lambda} \alpha^T K \odot G_b \alpha \\
+			&\text{s.t. } 0 \le \alpha \le 1, \quad -1 \le \tau \le 1, \quad y_i \in \{-1, 1\}, \forall x_i \in U \\
+			&G_b = \left[\frac{Y(1-q)}{\sqrt{q}}\right] \left[\frac{Y(1-q)}{\sqrt{q}}\right]^T \\
+			&g = q \\
+			&q_i \in \{0, 1\}, \quad \sum_{i \in Q} q_i = b.
+		\end{align}
+	\end{subequations}
+	The constraint related to the matrix $G_b$ is highly non-convex. In \cite{karimi2016statistical}, a convex approximation for the satisfiability problem is proposed, which we use here. For this purpose, we replace the constraint $G_b = \left[\frac{Y(1-q)}{\sqrt{q}}\right] \left[\frac{Y(1-q)}{\sqrt{q}}\right]^T$ with the constraints
+	\begin{subequations}
+		\begin{align}
+			&G_b \succeq \left[\frac{Y(1-q)}{\sqrt{q}}\right] \left[\frac{Y(1-q)}{\sqrt{q}}\right]^T \\
+			&\diag(G_b) = \left[\frac{1-\hat{q}}{\hat{q}}\right], \quad \forall i \in D_l, \hat{q}_i = 0, \quad \forall i \in D_u, \hat{q}_i = q_i \\
+			&\rank(G_b) = 1.
+		\end{align}
+	\end{subequations}
+	Now, by removing the rank-one constraint on matrix $G_b$, the convex approximation is obtained. Of course, in this problem, we face another challenge that makes the resulting matrix non-convex. Based on Schur's theorem, we will have:
+	\begin{equation}
+		\begin{bmatrix}
+			\hat{G} & y_l & Y_u(1-q) \\
+			y_l^T & q & 1 \\
+			(1-q)^T Y_u & 1 & q^T
+		\end{bmatrix} \succeq 0
+	\end{equation}
+	\begin{equation}
+		\diag(\hat{G}) = 1 - q, \quad \forall i \in D_l, q_i = 0.
+	\end{equation}
+	Unfortunately, this constraint is still non-convex due to the term $v_u = Y_u(1-q)$. Fortunately, given that $Y_{u_i} \in \{-1, 1\}$, we can represent it as follows:
+	\begin{equation}
+		\begin{bmatrix}
+			\hat{G} & y_l & v_u \\
+			y_l^T & q & 1 \\
+			v_u^T & 1 & q^T
+		\end{bmatrix} \succeq 0
+	\end{equation}
+	\begin{equation}
+		|v_u| + q = 1, \quad \diag(\hat{G}) = 1 - q, \quad \forall i \in D_l, = 0.
+	\end{equation}
+	By relaxing the discrete values $q_i \in [0, 1]$ and $y_i \in [-1, 1], \forall x_i \in U$, we have:
+	\begin{subequations}
+		\label{eq:ral-relaxed}
+		\begin{align}
+			&\min_{q, y_u, G} \max_{\alpha} \sum_{i \in D} \alpha_i (1 - q_i) - \frac{1}{2\lambda} \alpha^T K \odot \hat{G}_b \alpha \\
+			&\text{s.t. } 0 \le \alpha_e \le 1, \quad -1 \le \tau \le 1, \quad y_i \in \{-1, 1\}, \forall x_i \in U \\
+			&G = \begin{bmatrix}
+				\hat{G} & y_l & r \\
+				y_l^T & q & 1 \\
+				r^T & 1 & q^T
+			\end{bmatrix} \succeq 0 \\
+			&|r| + q = 1 \\
+			&\diag(\hat{G}_b) = 1 - q, \quad \forall i \in D_l, q_i = 0 \\
+			&\mathbf{1}^T q = b, \quad q \in [0, 1].
+		\end{align}
+	\end{subequations}
+	
+	Now we solve the main form of the problem as follows. This problem has greater challenges. In addition to the problems of the previous problem, we have a more complex objective function here. This problem is equivalent to:
+	\begin{subequations}
+		\label{eq:ral-main}
+		\begin{align}
+			&\min_{q, y_u, w_o, p} \max_{\alpha} \sum_{i \in D} \alpha_i (1 - g_i) + \frac{\lambda_o}{2}\|w_o\|^2 - \frac{1}{2\lambda} \alpha^T K \odot G_b \alpha \\
+			&\text{s.t. } 0 \le \alpha \le 1, \quad -1 \le \tau \le 1, \quad y_i \in \{-1, 1\}, \forall x_i \in U \\
+			&G_b = \left[\frac{Y(1-g)}{\sqrt{q}}\right] \left[\frac{Y(1-g)}{\sqrt{q}}\right]^T \\
+			&1 - g = (I - \diag(q))(1 - Y \Phi(X)^T w_o) \\
+			&|\Phi(X)^T w_o| \le p, \\
+			&\mathbf{1}^T p \le n_o, \quad p_i \in \{0, 1\} \\
+			&\mathbf{1}^T q = b, \quad q_i \in \{0, 1\}.
+		\end{align}
+	\end{subequations}
+	We replace the constraint $G_b = \left[\frac{Y(1-g)}{\sqrt{q}}\right] \left[\frac{Y(1-g)}{\sqrt{q}}\right]^T$ with:
+	\begin{subequations}
+		\begin{align}
+			&G_b \succeq \left[\frac{Y(1-g)}{\sqrt{q}}\right] \left[\frac{Y(1-g)}{\sqrt{q}}\right]^T \\
+			&\diag(G_b) = \left[\frac{1-g}{q}\right] \\
+			&\rank(G_b) = 1.
+		\end{align}
+	\end{subequations}
+	Based on Schur's theorem, we will have:
+	\begin{equation}
+		\begin{bmatrix}
+			\hat{G} & v_l & v_u \\
+			v_l^T & q & 1 \\
+			v_u^T & 1 & q^T
+		\end{bmatrix} \succeq 0,
+	\end{equation}
+	where
+	\begin{align}
+		v_u &= Y_u \diag(1 - Y_u \Phi(X_u)^T w_o)(1 - q) \\
+		|v_u| &= \diag(1 - Y_u \Phi(X_u)^T w_o)(1 - q) \\
+		&= 1 - Y_u \Phi(X_u)^T w_o - q + \diag(q) Y_u \Phi(X_u)^T w_o \\
+		v_l &= Y_l \diag(1 - Y_l \Phi(X_l)^T w_o).
+	\end{align}
+	It is clear that we do not want to select noisy data for querying. In an ideal state, only one of the two values $p_i$ or $q_i$ will be equal to one, and the other will be zero. Therefore, we impose the constraint $|\Phi(X_u)^T w_o Y_u| <= 1 - q$. Under these conditions, we can use the following approximation. Given that at least one of the values $p_i$ or $q_i$ is small, the following approximation will be appropriate:
+	\begin{equation}
+		|v_u| + q + Y_u \Phi(X_u)^T w_o = 1
+	\end{equation}
+	\begin{equation}
+		|\Phi(X_u)^T w_o| + q <= 1.
+	\end{equation}
+	Constraint $|v_u| + q + Y_u \Phi(X_u)^T w_o = 1$ is still non-convex. Due to the complexity of the function $w_o$, we can assume $p_i = Y_u \Phi(X_u)^T w_o$.
+	
+	The final form for solving this problem is:
+	\begin{subequations}
+		\label{eq:ral-final-form}
+		\begin{align}
+			&\min_{G, q, y_u, w_o, p} \max_{\alpha} \sum_{i \in D} \alpha_{e_i} (1 - g_i) + \frac{\lambda_o}{2}\|w_o\|^2 - \frac{1}{2\lambda} \alpha^T (K \odot \hat{G}) \alpha + c_a \mathbf{1}^T a \\
+			&\text{s.t. } 0 \le \alpha_e \le 1, \quad -1 \le \tau \le 1, \quad q, p \in [0, 1] \\
+			&G = \begin{bmatrix}
+				\hat{G} & v_l & v_u \\
+				v_l^T & q & 1 \\
+				v_u^T & 1 & q^T
+			\end{bmatrix} \succeq 0 \\
+			&\diag(\hat{G}_b) = \left[\frac{1-g}{q}\right], \quad g = 1 - |v|, \quad |v| \le a \\
+			&a + q + p = 1, \quad \mathbf{1}^T q = b \\
+			&|\Phi(X_u)^T w_o| <= 1 - q \\
+			&|\Phi(X)^T w_o| \le p \\
+			&\mathbf{1}^T p \le n_o, \quad \sum_{i, \forall x_i \in L} p_i <= n_l.
+		\end{align}
+	\end{subequations}
+	
+	\subsubsection{Multi-Task Active Learning}
+	In this section, we propose a method for multi-task active learning based on the empirical risk minimization approach. Assume we have $T$ tasks and the sets
+	\begin{equation}
+		L_t = \{(x_{it}, y_{it}) | x_{it} \in \mathbb{R}^d, y_{it} \in \{-1, 1\}\}, \quad \forall t \in [1, \ldots, T]
+	\end{equation}
+	are the labeled data sets for the $t$-th task, and
+	\begin{equation}
+		U_t = \{x_{it} | x_{it} \in \mathbb{R}^d\}, \quad \forall t \in [1, \ldots, T]
+	\end{equation}
+	are the unlabeled data sets for the same task, and also the labeled and unlabeled data sets
+	\begin{equation}
+		D_t = \{(x_{it}, y_{it}) | x_{it} \in \mathbb{R}^d, y_{it} \in \{-1, 1\}\}, \quad \forall t \in [1, \ldots, T]
+	\end{equation}
+	where the labels of the unlabeled data are unknown. Also, the set of labeled data for all tasks is $L = \{L_1, \ldots, L_T\}$ and the set of all data is $D = \{D_1, \ldots, D_T\}$. The cost function on the set $L$, the labeled data for tasks $t \in \{1, \ldots, T\}$, using a loss function $l$ is defined as
+	\begin{equation}
+		J(W, L, \lambda) = \sum_{t=1}^{T} \sum_{i=1}^{|L_t|} l(y_{it}, w_t^{*T} x_{it}) + \frac{\lambda}{2}\|W\|_{2,1},
+	\end{equation}
+	where $w_t$ is the $t$-th column of matrix $W$, $w_t = W_{*,t}$. Then, based on empirical risk minimization, the optimal tasks will be:
+	\begin{equation}
+		W^* = \argmin_{W} J(W, L, \lambda).
+	\end{equation}
+	Similar to before, to select the query point based on the version space reduction approach, we should query a data point that, regardless of its label and task, has the minimum loss. In other words,
+	\begin{equation}
+		\label{eq:mt-query}
+		x^*_{st} = \argmin_{\substack{x_{st} \in U_t, \\ \forall t, s}} \max_{y_{st}} l(y_{st}, w_t^{*T} x_{st}).
+	\end{equation}
+	Similar to the previous section, as the number of labeled samples increases, the difference between the current classifiers of the tasks and the optimal classifier is expected to decrease. Consequently, we will have:
+	\begin{equation}
+		\label{eq:mt-query-constrained}
+		x^*_{st} = \argmin_{\substack{x_{st} \in U_t, \\ \forall t, s}} \min_{\substack{W, \\ J(W,L,\lambda) \le J(W^*,L,\lambda)}} \max_{y_{st}} l(y_{st}, w_t^{*T} x_{st}).
+	\end{equation}
+	We know that for this constrained optimization problem, $\exists c_s \ge 0$ such that the above problem is equivalent to
+	\begin{equation}
+		\label{eq:mt-query-lagrange}
+		x^*_s = \argmin_{\substack{x_{st} \in U_t, \\ \forall t, s}} \min_{W} \max_{y_{st}} c_{st} l(y_{st}, w_t^T x_{st}) + J(W, L, \lambda).
+	\end{equation}
+	To simplify the problem, we set $c_s = 1$. Consequently, considering the labeled data and the unknown nature of their labels, similar to Section \ref{subsec:erm-al}, the multi-task active learning problem will be:
+	\begin{equation}
+		\label{eq:mt-query-final}
+		x^*_{st} = \argmin_{\substack{x_{st} \in U_t, \\ \forall t, s}} \min_{W} \max_{y_{st}} J(W, D, \lambda).
+	\end{equation}
+	In the objective function of this problem, there is a non-differentiable or non-smooth term. To solve this problem, we use the proximal method \cite{parikh2014proximal}. For simplicity, we use the squared error loss function and set $l(y_{it}, w_t^T \phi(x_{it})) = (y_{it} - w_t^T x_{it})^2$. The objective function \eqref{eq:mt-query-final} is maximized when we set the label of the query point to the opposite of the label determined by the classifier; in other words:
+	\begin{equation}
+		y_{st} = -\operatorname{sign}(w_t^T x_{st}).
+	\end{equation}
+	Consequently, the objective function will be
+	\begin{equation}
+		J(W, L, \lambda) = \sum_{t=1}^{T} \sum_{i=1}^{|L_t|} (y_{it} - w_t^T x_{it})^2 + (2 + 2|w_t^T x_{st}|) + \frac{\lambda}{2}\|W\|_{2,1}.
+	\end{equation}
+	The term $h(W) = \frac{\lambda}{2}\|W\|_{2,1} + \sum_{t=1}^{T} \sum_{i=1}^{|L_t|} (y_{it} - w_t^T x_{it})^2$ is differentiable, and the term $g(W) = \frac{4}{\lambda} \sum_{t=1}^{T} |w_t^T x_{st}|$ is non-differentiable. Therefore, the solution to the problem is obtained by iterating the following relation with respect to $W$:
+	\begin{equation}
+		\label{eq:mt-prox-iter}
+		W_{k+1} = \prox_{\mu g} \left( W_k - \mu \nabla h(W_k) \right),
+	\end{equation}
+	where the proximal operator is defined as
+	\begin{equation}
+		\label{eq:mt-prox-def}
+		\prox_{\mu f}(v) = \argmin_{x} \left( f(x) + \frac{1}{2\mu}\|x - v\|^2 \right).
+	\end{equation}
+	We have:
+	\begin{equation}
+		g(W) = \sum_{\substack{u=1 \\ u \neq t}}^T \|W_{*,u}\|_2 + \|W_{*,t}\|_2 + \frac{4}{\lambda}|W_{*,t}^T x_{st}|.
+	\end{equation}
+	Consequently,
+	\begin{equation}
+		\prox_{\mu g}(v) = \argmin_{W} \left( g(W) + \frac{1}{2\mu}\|W - v\|^2 \right) = \argmin_{x} \left( \sum_{\substack{u=1 \\ u \neq t}}^T \|W_{*,u}\|_2 + \|W_{*,t}\|_2 + \frac{4}{\lambda}|x_{st}^T W_{*,t}| + \frac{1}{2\mu}\|W - v\|^2 \right).
+	\end{equation}
+	Because the above problem is separable with respect to the components $W_{*,u}$, we will have the following two problems:
+	\begin{align}
+		\label{eq:mt-prox-part1}
+		&\prox_{\mu g}(v)_{*, u, u \neq t} = \argmin_{W_{u=1,u \neq t}} \left( \sum_{u=1, u \neq t}^T \|W_{*,u}\|_2 + \frac{1}{2\mu} \|W_{*,u, u \neq t} - v_{*,u, u \neq t}\|^2 \right), \\
+		\label{eq:mt-prox-part2}
+		&\prox_{\mu g}(v)_{*, t} = \argmin_{W_{*,t}} \left( \|W_{*,t}\|_2 + \frac{4}{\lambda}|x_{st}^T W_{*,t}| + \frac{1}{2\mu}\|W_{*,t} - v_{*,t}\|^2 \right).
+	\end{align}
+	For the first problem, we know from \cite{parikh2014proximal}:
+	\begin{equation}
+		\left[ \prox_{\mu g}(W) \right]_{*, u, u \neq t} = \left[ \left(1 - \frac{\mu}{\|W_{*u}\|_2} \right)_+ W_{*u} \right]_{u=1, u \neq t}^T.
+	\end{equation}
+	We know that for the absolute value function, the following proximal operator is available:
+	\begin{equation}
+		\prox_{\mu |.^T x|}(v) = (v - \mu x)_+ - (-v - \mu x)_+.
+	\end{equation}
+	Consequently, for the second problem, we will have:
+	\begin{equation}
+		\left[ \prox_{\mu g}(W) \right]_{*, t} = \left(1 - \frac{\mu}{\|r\|_2} \right)_+ r,
+	\end{equation}
+	where $r$ is equal to:
+	\begin{equation}
+		r = \left( W_{*,t} - \mu \frac{4}{\lambda} x_{st} \right)_+ - \left( - W_{*,t} - \mu \frac{4}{\lambda} x_{st} \right)_+.
+	\end{equation}
+	Therefore, in the iterative relation \eqref{eq:mt-prox-iter}, we have calculated $\prox_{\mu g}(W)$.
+	
+	The gradient of the function $h$ is:
+	\begin{equation}
+		\nabla h(W) = 2X(X^t W - Y).
+	\end{equation}
+	Now we have all the components of the iterative relation \eqref{eq:mt-prox-iter}. By substituting them into this relation, the solution to the problem is obtained.
+	
+	\subsubsection{Learning Using Privileged Information}
+	A student, with the help of a teacher, can learn a concept much faster than a learning machine. In one of his last works, Vapnik posed a question that became the basis for the Learning Using Privileged Information (LUPI) approach: What makes a student (human learner) learn faster than a machine learner? And his answer was: the teacher provides the student with privileged knowledge \cite{vapnik2015learning}. The teacher provides the student with a source of knowledge that helps the student learn the concept more accurately and with less effort. Because this knowledge exists only during training and not during testing, Vapnik called it privileged information.
+	
+	This concept is inherently related to separable/non-separable data in classification. When different classes are separable, the probability of error in predicting the labels of points is of order $O(1/l)$, where $l$ is the number of labeled points. In contrast, in the non-separable case, the error probability is of order $O(1/\sqrt{l})$. This is an enormous difference; for example, for roughly the same accuracy, 320 examples are needed versus 100,000 examples in the non-separable case. The accuracy of machine learning in the non-separable case can be improved using the knowledge provided by the teacher \cite{vapnik2015learning}.
+	
+	Assume there is an oracle that can make the data separable again by providing the required slack for each example. The oracle provides the student with a function with infinite VC Dimension that calculates the slack for each example. In this case, the error rate improves to $O(1/l)$. However, such an oracle is not available. Therefore, Vapnik suggested that an Intelligent Teacher provides a triple $(x_i, y_i, x_i^*)$ for each example, where $(x_i, y_i)$ is the example-label pair and $x_i^*$ is the privileged knowledge. The privileged knowledge $x_i^*$ resides in the space $X^*$, where calculating the slack or predicting the label is much simpler \cite{vapnik2015learning}. In other words, the function that calculates the slack is much simpler. This approach is called Learning Using Privileged Information (LUPI).
+	
+	Almost always, privileged information exists in machine learning. For example, suppose one wants to predict the outcome of a surgery, whether the patient survives or not. Here, there is much information about the post-surgery symptoms of previous patients. Of course, for predicting the outcome of the current patient's surgery, such information is not available. The available information about previous patients after surgery could be used as privileged information \cite{vapnik2015learning}.
+	
+	The Support Vector Machine (SVM) minimizes the following objective function:
+	\begin{subequations}
+		\label{eq:svm-obj}
+		\begin{align}
+			&\min_{f} \sum_{i=1}^{n} \xi_i + \frac{C}{2}\|f\|^2 \\
+			&\text{s.t. } y_i f(x_i) \ge 1 - \xi_i \\
+			&\xi_i \ge 0.
+		\end{align}
+	\end{subequations}
+	LUPI assumes that there exists a function $f^*$ that can estimate $\xi_i$ from $x_i^*$ \cite{pekovic2013support}. More precisely:
+	\begin{equation}
+		\xi_i = \max\{0, f^*(x_i^*, \alpha^*)\}, \quad \alpha^* \in \Lambda.
+	\end{equation}
+	This results in the following objective function \cite{vapnik2015learning}:
+	\begin{subequations}
+		\label{eq:lupi-obj}
+		\begin{align}
+			&\min_{f} \sum_{i=1}^{n} \max\{0, f^*(x_i^*, \alpha^*)\} + \frac{C}{2}\|f\|^2 + \frac{C^*}{2}\|f^*\|^2 \\
+			&\text{s.t. } y_i f(x_i) \ge 1 - \max\{0, f^*(x_i^*, \alpha^*)\} \\
+			&\alpha^* \in \Lambda.
+		\end{align}
+	\end{subequations}
+	Interestingly, the authors in \cite{lapedriza2013privileged} proved that using privileged information is related to importance weighting, and they showed that privileged features can be expressed by weights for each training example. Furthermore, they showed that the set of solutions of a weighted support vector machine problem always contains the set of solutions of the model proposed by Vapnik for privileged learning. It is also noteworthy that privileged knowledge is completely related to the concept of distillation in deep neural networks \cite{hinton2015distilling}.
+	
+	Here, we have a number of samples $D_i, i = 1, 2, \ldots n$, each drawn from a distribution $P_i$. Each sample $D_i$ consists of a set of data points $D_i = \{x_{ij}, j = 1, 2, \ldots n_{ij}\}$. We assume that all the distributions $P_i$ are drawn from a parent distribution \cite{muandet2012domain}.
+	
+	In learning on distributions, we want to learn a function $f(P_i)$ for each distribution $P_i$. As mentioned earlier, because in practice we do not have access to the distributions themselves and only have access to a number of samples drawn from the distributions, learning on distributions is performed using these samples.
+	
+	Here, we propose that the teacher provides the learning system with information related to the details of the concept being learned. The teacher can provide the student with a classification that indicates an important concept related to the data points, each sample of which is composed of some of them. However, because we do not have access to the examples in learning on distributions, the teacher cannot do this. Instead, the teacher provides labels for a subset of the data points.
+	
+	Therefore, as privileged information, we have a number of labels for a subset $D_i^l$ of size $n_i^l$ of the data points drawn from the distribution $P_i$. In other words, the triple $(\{x_{ij}\}_{j=1}^{n_i}, \{x_{ij}, y_{ij}\}_{j \in D_i^l}, y_i)$ is the privileged knowledge for the distribution $P_i$. Assume $\mu_g(P_i) = \mathbb{E}_{x \sim P_i} g(P_i, x)$ is the mean of the distribution based on the sample drawn from $P_i$. Let $\mu_{P_i} = \mathbb{E}_{x \sim P_i} \phi(P_i, \cdot)$. We have:
+	\begin{align}
+		\mu_g(P_i) &= \mathbb{E}_{x \sim P_i} g(P_i, x) \\
+		&= \langle g, \mathbb{E}_{x \sim P_i} \phi(P_i, \cdot) \rangle \\
+		&= \langle g, \mu_{P_i} \rangle.
+	\end{align}
+	When we have a characteristic kernel \cite{smola2007hilbert}, we know that $\mu_{P_i}$ contains all the information about the distribution $P_i$.
+	
+	We define the following objective function:
+	\begin{equation}
+		T(f, g, \mu_g) = \frac{1}{2}\|f\|^2 + \frac{C_g}{2}\|g\|^2 + C \sum_{i=1}^{n} \left[ y_i \mu_g(P_i) \right]_+ + C_v \sum_{i=1}^{n} \sum_{j \in D_i^l} \left[ 1 - y_{ij} g(P_i, x_{ji}) \right]_+.
+	\end{equation}
+	To learn the desired classifier, the following optimization problem must be solved:
+	\begin{subequations}
+		\label{eq:lupi-dist-opt}
+		\begin{align}
+			&\min_{f, g} T(f, g, \mu_g) \\
+			&\text{s.t. } y_i f(P_i) \ge 1 - \left[ y_i \mu_g(P_i) \right]_+ \quad \forall i \in [1, n].
+		\end{align}
+	\end{subequations}
+	In addition to the challenges of the above problem, the structure of the function $g$ must be determined. Based on the work in \cite{louizos2015learning}, we assume that
+	\begin{equation}
+		g(P_i, x_{ji}) = \sum_{t=1}^{n} \sum_{h=1}^{n_t} \beta_{th} K(P_i, P_t) k(x_{ji}, x_{ht}).
+	\end{equation}
+	To estimate $\mu_g(P_i)$, we use a sample drawn from $P_i$:
+	\begin{equation}
+		\hat{\mu}_g(P_i) = \frac{1}{n_i} \left( \sum_{j \in D_i} g(P_i, x_{ji}) \right).
+	\end{equation}
+	Therefore, the above optimization problem becomes:
+	\begin{subequations}
+		\label{eq:lupi-dist-opt-approx}
+		\begin{align}
+			&\min_{f, g} T(f, g, \hat{\mu}_g) \\
+			&\text{s.t. } y_i f(P_i) \ge 1 - \left[ y_i \hat{\mu}_g(P_i) \right]_+ \quad \forall i \in [1, n].
+		\end{align}
+	\end{subequations}
+	The following theorem proves that the above optimization problem is equivalent to:
+	
+	\begin{theorem}
+		The optimization problem \eqref{eq:lupi-dist-opt-approx} is equivalent to:
+		\begin{subequations}
+			\label{eq:lupi-dual}
+			\begin{align}
+				&\min_{\eta, \alpha, \theta} \frac{1}{2} \alpha^T Y K Y \alpha + \frac{1}{2 C_g} \left( A^T Y (\eta + \alpha - C \mathbf{1}) + Z \theta \right)^T L \left( L A^T Y (\eta + \alpha - C \mathbf{1}) + L Z \theta \right) \\
+				&\text{s.t. } \eta, \alpha, \theta \ge 0 \\
+				&\alpha^T Y \mathbf{1} = 0 \\
+				&\mathbf{1}^T A^T Y (\eta + \alpha) + \mathbf{1}^T Z^T \theta = C \mathbf{1}^T A^T Y \mathbf{1} \\
+				&\theta \ge C_v B^T \mathbf{1} \\
+				&\eta + \alpha \ge (C + \Delta C) \mathbf{1}.
+			\end{align}
+		\end{subequations}
+	\end{theorem}
+	\textbf{Proof.} We know that
+	\begin{align}
+		T(f, g, \hat{\mu}_g) &= \frac{1}{2}\|f\|^2 + \frac{C_g}{2}\|g\|^2 + C \sum_{i=1}^{n} \left[ y_i \hat{\mu}_g(P_i) \right]_+ + C_v \sum_{i=1}^{n} \sum_{j \in D_i^l} \left[ 1 - y_{ij} g(P_i, x_{ji}) \right]_+.
+	\end{align}
+	To estimate $\hat{\mu}_g(P_i)$, we use a sample drawn from $P_i$:
+	\begin{equation}
+		\hat{\mu}_g(P_i) = \frac{1}{n_i} \left( \sum_{j \in D_i} g(P_i, x_{ji}) \right).
+	\end{equation}
+	This is a non-linear optimization problem. Its approximation based on the method in \cite{vapnik2015learning} consists of minimizing the objective function
+	\begin{align}
+		T(f, g) &= \frac{1}{2}\|f\|^2 + \frac{C_g}{2}\|g\|^2 + C \sum_{i=1}^{n} \left( y_i \hat{\mu}_g(P_i) + \xi_i \right) + \Delta C \sum_{i=1}^{l} \xi_i + C_v \sum_{i=1}^{n} \sum_{j \in D_i^l} \left[ 1 - y_{ij} g(P_i, x_{ji}) \right]_+
+	\end{align}
+	with respect to $f, g$ along with the constraints:
+	\begin{align}
+		&\xi_i \ge 0 \\
+		&y_i \hat{\mu}_g(P_i) + \xi_i \ge 0 \\
+		&y_i f(P_i) + y_i \hat{\mu}_g(P_i) \ge 1 - \xi_i.
+	\end{align}
+	This yields the desired functions. Assume $\zeta_{ij} = [1 - y_{ij} g(P_i, x_{ji})]_+$. Then, the optimization problem becomes minimizing the objective function
+	\begin{equation}
+		T(f, g) = \frac{1}{2}\|f\|^2 + \frac{C_g}{2}\|g\|^2 + C \sum_{i=1}^{n} \left( y_i \hat{\mu}_g(P_i) + \xi_i \right) + \Delta C \sum_{i=1}^{l} \xi_i + C_v \sum_{i=1}^{n} \sum_{j \in D_i^l} \zeta_i
+	\end{equation}
+	subject to the constraints:
+	\begin{align}
+		&\xi_i \ge 0, \quad \zeta_i \ge 0 \\
+		&y_i \hat{\mu}_g(P_i) + \xi_i \ge 0 \\
+		&y_i f(P_i) + y_i \hat{\mu}_g(P_i) \ge 1 - \xi_i \\
+		&y_{ji} g(P_i, x_{ji}) \ge 1 - \zeta_{ij}.
+	\end{align}
+	Assume
+	\begin{align}
+		f(P_i) &= \sum_{t=1}^{n} \gamma_t K(P_i, P_t) + b \\
+		g(P_i, x_{ji}) &= \sum_{t=1}^{n} \sum_{h=1}^{n_t} \beta_{th} K(P_i, P_t) k(x_{ji}, x_{ht}) + b_g.
+	\end{align}
+	Let $L$ be a matrix with components $L(x_{ji}, x_{ht}) = K(P_i, P_t) k(x_{ji}, x_{ht})$, and let $f$ be a vector with elements $f(P_i)$. Then we have:
+	\begin{equation}
+		g(P_i, x_{ji}) = L(x_{ji}, :) \beta + b_g, \quad f(P_i) = K(P_i, :) \gamma + b,
+	\end{equation}
+	where $\beta, g$ are vectors corresponding to components $\beta_{th}, h \in D_i$ and $g(P_i, x_{ji}), j \in D_i$, respectively. Therefore,
+	\begin{align}
+		\|f\|^2 &= \gamma^T K \gamma, \\
+		\|g\|^2 &= (L(., :) \beta)^T L(., :) \beta = \beta^T L \beta.
+	\end{align}
+	Assume $\mathbf{1}_i(x) = \mathbb{I}(x \in D_i)$ is a vector with zero for all data points of other distributions and one for data points drawn from distribution $P_i$. Then:
+	\begin{equation}
+		\mu_g(P_i) = \frac{1}{n_i} \sum_{j \in D_i} g(P_i, x_{ji}) = \frac{1}{n_i} \mathbf{1}_i^T g.
+	\end{equation}
+	Therefore, the above optimization problem becomes minimizing the objective function
+	\begin{equation}
+		T(f, g) = \frac{1}{2}\|f\|^2 + \frac{C_g}{2}\|g\|^2 + C \sum_{i=1}^{n} \left( y_i \frac{1}{n_i} \mathbf{1}_i^T g + \xi_i \right) + \Delta C \sum_{i=1}^{l} \xi_i + C_v \sum_{i=1}^{n} \sum_{j \in D_i^l} \zeta_i
+	\end{equation}
+	subject to the constraints:
+	\begin{align}
+		&\xi_i \ge 0, \quad \zeta_i \ge 0 \\
+		&y_i \frac{1}{n_i} \mathbf{1}_i^T g + \xi_i \ge 0 \\
+		&y_i f(P_i) + y_i \frac{1}{n_i} \mathbf{1}_i^T g \ge 1 - \xi_i \\
+		&y_{ji} g(P_i, x_{ji}) \ge 1 - \zeta_{ij}.
+	\end{align}
+	Furthermore, assume $A(i, :) = \frac{1}{n_i} \mathbf{1}_i^T$ for all data points of the distributions, and $B(i, :) = \mathbf{1}_l^{iT}$, where $\mathbf{1}_l^i(x) = \mathbb{I}(x \in D_i^0)$. Let $Y = \diag(y)$ and $Z = \diag(z)$, with $z_{ij} = 0, j \notin D_i^l$ and $z_{ij} = y_{ij}, j \in D_i^l$. The above optimization problem becomes
+	\begin{align}
+		T(f, g) &= \frac{1}{2} \gamma^T K \gamma + \frac{C_g}{2} \beta^T L \beta + C \mathbf{1}^T Y A (L\beta + b_g \mathbf{1}) + \xi + \Delta C \mathbf{1}^T \xi + C_v \mathbf{1}^T B \zeta
+	\end{align}
+	along with the constraints:
+	\begin{align}
+		&\xi \ge 0, \quad \zeta \ge 0 \\
+		&Y A (L\beta + b_g \mathbf{1}) + \xi \ge 0 \\
+		&Y (K\gamma + b) + Y A (L\beta + b_g \mathbf{1}) \ge 1 - \xi \\
+		&Z (L\beta + b_g \mathbf{1}) \ge 1 - \zeta.
+	\end{align}
+	The Lagrangian of this optimization problem is:
+	\begin{align}
+		\mathcal{L}(\gamma, b, \beta, b_g, \xi, \zeta; u, v, \eta, \alpha, \theta) &= T(f, g) - u^T \xi - v^T \zeta - \eta^T (Y A (L\beta + b_g \mathbf{1}) + \xi) \\
+		&\quad - \alpha^T (Y (K\gamma + b) + Y A (L\beta + b_g \mathbf{1}) + \xi - \mathbf{1}) \\
+		&\quad - \theta^T (Z (L\beta + b_g \mathbf{1}) + \zeta - \mathbf{1}) \\
+		&= \frac{1}{2} \gamma^T K \gamma - \alpha^T Y K \gamma \\
+		&\quad + \frac{C_g}{2} \beta^T L \beta - \left( L A^T Y (\eta + \alpha - C \mathbf{1}) + L Z \theta \right)^T \beta \\
+		&\quad - \alpha^T Y \mathbf{1} b - \left( \eta^T Y A + \alpha^T Y A + \theta^T Z - C \mathbf{1}^T Y A \right) \mathbf{1} b_g \\
+		&\quad - (v + \theta - C_v B^T \mathbf{1})^T \zeta - (u + \eta + \alpha - (C + \Delta C) \mathbf{1})^T \xi.
+	\end{align}
+	By minimizing with respect to the primal variables, the dual problem is obtained:
+	\begin{align}
+		\frac{\partial \mathcal{L}}{\partial \zeta} &= C_v B^T \mathbf{1} - v - \theta = 0 \\
+		\frac{\partial \mathcal{L}}{\partial \xi} &= (C + \Delta C) \mathbf{1} - u - \eta - \alpha = 0 \\
+		\frac{\partial \mathcal{L}}{\partial b_g} &= C \mathbf{1}^T Y A \mathbf{1} - \eta^T Y A \mathbf{1} - \alpha^T Y A \mathbf{1} - \theta^T Z \mathbf{1} = 0 \\
+		\frac{\partial \mathcal{L}}{\partial \beta} &= C_g L \beta + C L A^T Y \mathbf{1} - L A^T Y \eta - L A^T Y \alpha - L Z^T \theta = 0 \\
+		\frac{\partial \mathcal{L}}{\partial b} &= \alpha^T Y \mathbf{1} = 0 \\
+		\frac{\partial \mathcal{L}}{\partial \gamma} &= K \gamma - K Y \alpha = 0.
+	\end{align}
+	Assuming both $K^{-1}$ and $L^{-1}$ exist, we get:
+	\begin{align}
+		&v + \theta = C_v B^T \mathbf{1} \\
+		&u + \eta + \alpha = (C + \Delta C) \mathbf{1} \\
+		&\mathbf{1}^T A^T Y (\eta + \alpha) + \mathbf{1}^T Z \theta = C \mathbf{1}^T Y A^T \mathbf{1} \\
+		&C_g \beta = A^T Y (\eta + \alpha - C \mathbf{1}) + Z \theta \\
+		&\alpha^T Y \mathbf{1} = 0 \\
+		&\gamma = Y \alpha.
+	\end{align}
+	Therefore, the dual objective function is:
+	\begin{align}
+		\min_{\gamma, b, \beta, b_g, \xi, \zeta} \mathcal{L}(\gamma, b, \beta, b_g, \xi, \zeta; u, v, \eta, \alpha, \theta) &= -\frac{1}{2} \alpha^T Y K Y \alpha \\
+		&\quad - \frac{1}{2 C_g} \left( A^T Y (\eta + \alpha - C \mathbf{1}) + Z \theta \right)^T L \left( L A^T Y (\eta + \alpha - C \mathbf{1}) + L Z \theta \right).
+	\end{align}
+	The dual optimization problem is:
+	\begin{subequations}
+		\begin{align}
+			\max_{u, v, \eta, \alpha, \theta} &\quad -\frac{1}{2} \alpha^T Y K Y \alpha - \frac{1}{2 C_g} \left( A^T Y (\eta + \alpha - C \mathbf{1}) + Z \theta \right)^T L \left( L A^T Y (\eta + \alpha - C \mathbf{1}) + L Z \theta \right) \\
+			\text{s.t. } &u, v, \eta, \alpha, \theta \ge 0 \\
+			&\alpha^T Y \mathbf{1} = 0 \\
+			&(\eta + \alpha)^T Y A \mathbf{1} + \theta^T Z \mathbf{1} = C \mathbf{1}^T Y A \mathbf{1} \\
+			&v + \theta = C_v B^T \mathbf{1} \\
+			&u + \eta + \alpha = (C + \Delta C) \mathbf{1}.
+		\end{align}
+	\end{subequations}
+	This problem is equivalent to:
+	\begin{subequations}
+		\begin{align}
+			\max_{\eta, \alpha, \theta} &\quad -\frac{1}{2} \alpha^T Y K Y \alpha - \frac{1}{2 C_g} \left( A^T Y (\eta + \alpha - C \mathbf{1}) + Z \theta \right)^T L \left( L A^T Y (\eta + \alpha - C \mathbf{1}) + L Z \theta \right) \\
+			\text{s.t. } &\eta, \alpha, \theta \ge 0 \\
+			&\alpha^T Y \mathbf{1} = 0 \\
+			&\mathbf{1}^T A^T Y (\eta + \alpha) + \mathbf{1}^T Z^T \theta = C \mathbf{1}^T A^T Y \mathbf{1} \\
+			&\theta \ge C_v B^T \mathbf{1} \\
+			&\eta + \alpha \ge (C + \Delta C) \mathbf{1}.
+		\end{align}
+	\end{subequations}
+	Due to the complexity of this method, it is better to use the much simpler boundary-near approach, which reduces the version space, for active learning. By solving the above problem, we have the two functions $g(P_i, x_{ij})$ and $f(P_i)$. For active learning to label data points in each sampled set, we have:
+	\begin{equation}
+		(i, j) = \argmin_{i, j} |g(P_i, x_{ij})|
+	\end{equation}
+	and to query the labels of the distributions, we use the following objective function:
+	\begin{equation}
+		P_q = \argmin_{P_i} |f(P_i)|.
+	\end{equation}
+	
+	\subsubsection{Probabilistic Minimax Active Learning (PMAL)}
+	\label{subsec:pmal}
+	
+	\paragraph{Introduction}
+	In active learning on distributions, we do not have direct access to the distributions but rather to each distribution through a sample drawn from it. Therefore, similar to robust learning, any estimate of an example is inaccurate. This challenge of inaccurate examples adds to the already challenging problem of active learning. To solve these challenges, we provide an upper bound for the risk of the classifier in the next stage of active learning, where more labeled examples become available. Based on this upper bound, to deal with the challenges of robust active learning, we present the Probabilistic Minimax Active Learning (PMAL) method and prove that this algorithm selects an example whose label information minimizes the risk. Unfortunately, computing this objective function for the robust active learning problem is intractable. Therefore, we provide an efficient estimate of the objective function. To further exploit the available information about the distribution estimates, we present a robust active learning method based on Bayesian learning of kernel embeddings of distributions.
+	
+	In learning on distributions, examples have inherent uncertainty. Each example is estimated using a finite-sized sample. It is well known that estimating a distribution from a finite sample has uncertainty. Therefore, we need a method that is robust against inaccuracies in the examples. Robustness in active learning is much more challenging because another source of uncertainty is added, namely the unknown labels of many points.
+	
+	To solve this problem with a principled approach, we first consider the active learning problem in its most general form. To this end, we provide an upper bound on the risk of the classifier in the next stage of active learning, where the queried data is added to the labeled data. This risk upper bound is provided before determining the labels of the queried data. Then, examples are queried whose selection minimizes this upper bound. We call the resulting method Probabilistic Minimax Active Learning (PMAL). PMAL can be used in a Bayesian framework.
+	
+	\begin{table}[h!]
+		\centering
+		\caption{Notation table for Probabilistic Minimax Active Learning}
+		\label{tab:pmal-notation}
+		\begin{tabular}{c|l}
+			\hline
+			Symbol & Description \\
+			\hline
+			$(X, Y)$ & Random variables in $\mathbb{R}^d \times \{-1, 1\}$ \\
+			$n$ & Number of examples \\
+			$l$ & Number of labeled examples \\
+			$L = \{1, ..., l\}$ & Set of indices of labeled data \\
+			$L_q = \{1, ..., l, q\}$ & Set of indices of labeled data plus query \\
+			$U = \{l+1, ..., n\}$ & Set of indices of unlabeled data \\
+			$D = \{(x_1, y_1), ..., (x_n, y_n)\}$ & Set of labeled and unlabeled data \\
+			$D_l = \{(x_i, y_i) | i \in L\}$ & Set of labeled data \\
+			$D_u = \{(x_i, y_i) | i \in U\}$ & Set of unlabeled data \\
+			$x_L = (x_1, ..., x_l)$ & Ordered list of labeled data \\
+			$y_L = (y_1, ..., y_l)$ & Their labels \\
+			$x_U = (x_{l+1}, ..., x_n)$ & Ordered list of unlabeled data \\
+			$y_U = (y_{l+1}, ..., y_n)$ & Their unknown labels \\
+			$x = x_{LU} = (x_1, ..., x_n)$ & Ordered list of examples \\
+			$y = y_{LU} = (y_1, ..., y_n)$ & Their labels \\
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	\paragraph{Proposed Method}
+	We denote examples in lowercase letters, and bold lowercase letters represent ordered lists, e.g., $\mathbf{x} = (x_1, \ldots, x_n)$ or their labels $\mathbf{y} = (y_1, \ldots, y_n)$. For brevity, the notations are summarized in Table \ref{tab:pmal-notation}.
+	
+	As previously mentioned, there is no accurate estimate of the distributions. Such conditions are similar to robust learning, but also differ in that we have specific information about the estimates of the distributions using samples, which we can exploit.
+	
+	To effectively exploit this information, we first introduce the Probabilistic Minimax Active Learning (PMAL) approach in Section \ref{subsec:pmal}. Using PMAL, we can address uncertainty in active learning, i.e., robust active learning, in a principled manner. Although in the following sections we do not address active learning in the input space, in \ref{subsec:ral-input} we present an algorithm for robust active learning in the input space. This problem provides the reader with the foundations of robust active learning on distributions, so that one can easily understand the difference between the two. Furthermore, in \ref{subsec:ral-dist-simple}, we present a simpler form of robust active learning on distributions. In \ref{subsec:ral-dist-main}, we address the main goal of this chapter, which is robust active learning on distributions. In the following, we first review the definitions and prerequisites for Section \ref{subsec:ral-input}.
+	
+	\paragraph{Background and Definitions}
+	\begin{definition}[Bayes Decision Function and Bayes Risk]
+		\label{def:bayes-risk}
+		Assume $\eta^*(x, y)$ is the (unknown) label distribution function given the examples, i.e.,
+		\begin{equation}
+			\eta^*(x, y) = P(Y = y | X = x).
+		\end{equation}
+		The optimal classifier or Bayes optimal decision function $g^*(x)$ and the Bayes risk $L^*$ are respectively:
+		\begin{equation}
+			g^*(x) = \argmax_{y \in \mathcal{C}} \{\eta^*(x, y)\}, \quad L^* = P(g^*(X) \neq Y).
+		\end{equation}
+	\end{definition}
+	
+	\begin{definition}[Plug-in Classifier and its Risk]
+		\label{def:plug-in}
+		Let $y$ be the label of point $x$. Consider the classifier function $g_D(x)$, which we also call the plug-in classifier using the set $D$. The risk of this classifier is $L_D = P\{g_D(X) \neq Y | D\}$.
+	\end{definition}
+	
+	It is clear that
+	\begin{align}
+		L_D &= 1 - P\{g_D(X) = Y | D\} \\
+		&= 1 - \sum_{y \in \mathcal{C}} P\{g_D(X) = y, Y = y | D\} \\
+		&= 1 - \sum_{y \in \mathcal{C}} \int_{\mathbb{R}^d} \mathbb{I}[g_D(x)=y] P\{Y = y | D, X = x\} \mu(dx).
+	\end{align}
+	We define the quantity $P\{Y = y | D, X = x\}$ as $\eta_D$, equal to
+	\begin{equation}
+		\eta(x, y; \mathbf{x}_D, \mathbf{y}_D) \equiv \eta_D(x, y) := P\{Y = y | D, X = x\}.
+	\end{equation}
+	Also, let
+	\begin{equation}
+		A(x, D) := \max_{y \in \mathcal{C}} \{\eta^*(x, y) - \eta(x, y; \mathbf{x}_D, \mathbf{y}_D)\}.
+	\end{equation}
+	To minimize risk, the plug-in classifier $g_D$ is equal to $g_D(x) = \argmax_{y \in \mathcal{C}} \{\eta(x, y; \mathbf{x}_D, \mathbf{y}_D)\}$.
+	
+	To achieve the optimal classifier in the plug-in classifier, the function $\eta$ must provide a good estimate of the conditional probability of $y$ given $x$. In other words, to minimize risk, $\eta$ must be almost equal to the function $\eta^*$ using data $(x, y)$ as parameters. In fact, it is essential to have some assumption that relates the distribution criterion of the estimated label probability function $\eta$ to the true label probability function $\eta^*$. Without such an assumption, learning is impossible. This essentially means that we relate the data generation process to the label assignment process so that we can optimally use the existence of unlabeled data \cite{tsybakov2004introduction}. Tsybakov used the following assumption for this purpose. This assumption holds for various types of estimators and data distributions $P$ \cite{audibert2007fast, baxter2001direct}.
+	
+	\begin{assumption}
+		Assume $\eta_D$ is an estimator of the function $\eta^*$ using data $D$, and $\mathcal{P}$ is a class of probability distributions on $(X, Y)$ such that for constants $C_1 > 0, C_2 > 0$ and a positive sequence $a_n$, for almost all $x$ with respect to $P_X$:
+		\begin{equation}
+			\sup_{P \in \mathcal{P}} P\left\{ A(x, D) \ge \delta \right\} \le C_1 \exp(-C_2 a_n \delta^2).
+		\end{equation}
+	\end{assumption}
+	
+	\begin{lemma}
+		Assume that unlabeled data help reduce the risk of the classifier on $\mathcal{P}$. Under Assumption \ref{assump:tsybakov}, $\exists c_U > 1$ such that with probability $1 - C_1 \exp(-C_2 a_n \delta^2)$, we have:
+		\begin{equation}
+			\int_{\mathbb{R}^d} A(X, D) \mu(dx) \le c_U^{-1} \int_{\mathbb{R}^d} A(X, L) \mu(dx) + 2\delta.
+		\end{equation}
+	\end{lemma}
+	
+	\textbf{Proof.} The risk of the classifiers $g_D(x)$ and $g_L(x)$, $\forall P \in \mathcal{P}$, is:
+	\begin{align}
+		L_D - L^* &\le \int_{\mathbb{R}^d} A(x, D) \mu(dx), \\
+		L_L - L^* &\le \int_{\mathbb{R}^d} A(x, L) \mu(dx),
+	\end{align}
+	where $\mu \in \mathcal{P}$. Since we assume that unlabeled data reduce the classifier risk for distribution $P$, therefore for all $(\mu, \eta) \in \mathcal{P}$:
+	\begin{equation}
+		\min_{y_U} \int_{\mathbb{R}^d} A(x, D) \mu(dx) < \int_{\mathbb{R}^d} A(x, L) \mu(dx).
+	\end{equation}
+	Based on Assumption \ref{assump:tsybakov} and the regularization conditions, we have:
+	\begin{equation}
+		\sup_{P \in \mathcal{P}} P\left\{ \int_{\mathbb{R}^d} A(x, D) \mu(dx) \le \delta \right\} \ge 1 - C_1 \exp(-C_2 a_n \delta^2).
+	\end{equation}
+	Therefore, with high probability:
+	\begin{equation}
+		\int_{\mathbb{R}^d} \max_y \min_{y_U} \{\eta^*(x, y) - \eta(x, y; \mathbf{x}, \mathbf{y})\} \mu(dx) \le \min_{y_U} \int_{\mathbb{R}^d} A(x, D) \mu(dx) + 2\delta.
+	\end{equation}
+	Using this relation in the previous one, with probability $1 - C_1 \exp(-C_2 a_n \delta^2)$, we have:
+	\begin{equation}
+		\int_{\mathbb{R}^d} A(x, D) \mu(dx) < \int_{\mathbb{R}^d} A(x, L) \mu(dx) + 2\delta.
+	\end{equation}
+	
+	\paragraph{Probabilistic Minimax Active Learning}
+	At each stage of active learning, we want to select examples whose label knowledge helps build an accurate model. Our wish is that the current model can predict the labels of almost all unlabeled data points. We call these labels the best labels for the current model. However, the worst-case scenario is when, assuming the current model, the probability of the reverse label for an example is high. Here, the reverse label means a label opposite to the one predicted by the current model.
+	
+	Due to the lack of information about the label of an unlabeled example until querying the user, we must be prepared for the worst-case label for the query point. At the same time, we hope that some unlabeled examples have the best label, i.e., the label predicted by the model. Note that we prefer a simple model to a more complex one. Therefore, for unlabeled data except for the point to be queried, we expect the best label to occur because we assume that the current model is simpler than the models in subsequent stages of active learning, where the number of labeled examples increases. Thus, the motto of this approach is "prepare for the worst and expect the best."
+	
+	In one stage of active learning, only the subset $D_L$ is used for training, and the labels of unlabeled data $y_i, i \in U$ are unknown. The question is, even if we don't know the label of an example, what will happen to classification accuracy if we add it to the labeled data? At each stage of active learning, only a subset $D_L$ is used for training. It is clear that the labels of unlabeled data $y_i, i \in U$ are unknown.
+	
+	The fundamental question here is: can we know, before receiving the label of any point, what will happen to the classification accuracy if an example is added to the labeled data?
+	
+	The theorem we present below answers this question theoretically. Theorem \ref{thm:risk-upper-bound} provides an un-improvable upper bound for the classifier risk under the above conditions. This means that without having the new labeled data, we cannot know more about the classifier under the stated conditions.
+	
+	But before presenting this theorem, we need to know more about the risk of the multi-class plug-in classifier. Theorem \ref{thm:plug-in-risk-bound} provides an upper bound on the risk for the multi-class classifier. This risk upper bound is based on no additional assumptions about the data distribution.
+	
+	\begin{theorem}[Plug-in Risk Bound]
+		\label{thm:plug-in-risk-bound}
+		Let $T_D(x, y) = \eta^*(x, y) - \eta_D(x, y)$. Then we have:
+		\begin{equation}
+			L_D - L^* \le \sum_{i=1}^{|\mathcal{C}|} \mathbb{E}|T_D(X, c_i)| \le |\mathcal{C}| \max_{y \in \mathcal{C}} \mathbb{E}|T_D(X, y)|.
+		\end{equation}
+	\end{theorem}
+	
+	\textbf{Proof.} Using the definitions provided in Section \ref{def:plug-in}, we have:
+	\begin{equation}
+		\eta(X, c) = \mathbb{E}(\mathbb{I}_{\{Y=c\}} | X).
+	\end{equation}
+	The risk of the classifier $g_D$ is:
+	\begin{align}
+		L_D &= \sum_{y \in \mathcal{C}} \mathbb{E}(\mathbb{I}_{\{g_D(X) \neq y, Y = y\}}) \\
+		&= \sum_{y \in \mathcal{C}} \sum_{c \in \mathcal{C} - \{y\}} \mathbb{E}(\mathbb{E}(\mathbb{I}_{\{g_D(X)=c\}} \mathbb{I}_{\{Y=y\}} | X)) \\
+		&= \sum_{y \in \mathcal{C}} \sum_{c \in \mathcal{C} - \{y\}} \mathbb{E}\left( \mathbb{I}_{\{c = \argmax_z \eta_D(X, z)\}} \eta^*(X, y) \right).
+	\end{align}
+	Similarly, we can easily obtain:
+	\begin{equation}
+		L^* = \sum_{y \in \mathcal{C}} \sum_{c \in \mathcal{C} - \{y\}} \mathbb{E}\left( \mathbb{I}_{\{c = \argmax_z \eta^*(X, z)\}} \eta^*(X, y) \right).
+	\end{equation}
+	The set $A_{\eta}(c) := \{c = \argmax_z \eta_D(X, z)\}$ can be written as $\cup_{i=1}^{|\mathcal{C}|} B(c, c_i)$, where $B$ is defined using $\eta^*$:
+	\begin{equation}
+		B(c, c') = \{c = \argmax_z \eta_D(X, z), c' = \argmax_z \eta^*(X, z)\}.
+	\end{equation}
+	Similarly, the set $A_{\eta^*}(c) := \{c = \argmax_z \eta^*(X, z)\}$ can be written as $\cup_{i=1}^{|\mathcal{C}|} B(c_i, c)$. Using these sets, we have:
+	\begin{align}
+		\mathbb{E}\{ \mathbb{I}_{A_{\eta}(c)} \eta^*(X, y) \} &= \sum_{t \in \mathcal{C}} \mathbb{E}( \mathbb{I}_{B(c, t)} \eta^*(X, y) ), \\
+		\mathbb{E}\{ \mathbb{I}_{A_{\eta^*}(c)} \eta^*(X, y) \} &= \sum_{t \in \mathcal{C}} \mathbb{E}( \mathbb{I}_{B(t, c)} \eta^*(X, y) ).
+	\end{align}
+	To compute $L_D - L^*$, by canceling equal terms in the following expression, we get:
+	\begin{align}
+		\sum_{c \in \mathcal{C} - \{y\}} &\left( \mathbb{E}\{ \mathbb{I}_{A_{\eta}(c)} \eta^*(X, y) \} - \mathbb{E}\{ \mathbb{I}_{A_{\eta^*}(c)} \eta^*(X, y) \} \right) \\
+		&= \sum_{c \in \mathcal{C} - \{y\}} \left( \mathbb{E}\{ \mathbb{I}_{B(c, y)} \eta^*(X, y) \} - \mathbb{E}\{ \mathbb{I}_{B(y, c)} \eta^*(X, y) \} \right).
+	\end{align}
+	Using the previous relations, it is obtained that
+	\begin{align}
+		L_D - L^* = \sum_{i=1}^{|\mathcal{C}|-1} \sum_{j=i+1}^{|\mathcal{C}|} &\left( \mathbb{E}\left( \mathbb{I}_{B(c_j, c_i)} (\eta^*(X, c_i) - \eta^*(X, c_j)) \right) \right. \\
+		&\left. + \mathbb{E}\left( \mathbb{I}_{B(c_i, c_j)} (\eta^*(X, c_j) - \eta^*(X, c_i)) \right) \right).
+	\end{align}
+	In $B(c_j, c_i)$, we have $\eta(X, c_j) - \eta(X, c_i) \ge 0$. Similarly, in $B(c_i, c_j)$, we have $\eta(X, c_i) - \eta(X, c_j) \ge 0$. Adding these terms to the right-hand side of the above relation and rearranging terms, we get:
+	\begin{align}
+		L_D - L^* &\le \sum_{i=1, j=i+1}^{|\mathcal{C}|-1, |\mathcal{C}|} \mathbb{E}\left( \mathbb{I}_{E(c_j, c_i)} (|T_D(X, c_i)| + |T_D(X, c_j)|) \right) \\
+		&\le \sum_{i=1}^{|\mathcal{C}|} \left( \mathbb{E}(|T_D(X, c_i)|) \right).
+	\end{align}
+	
+	Now that we have proven this theorem, we can present the following theorem for the upper bound of the plug-in classifier assuming any label for the query data. This theorem provides an upper bound for the risk of the plug-in classifier trained on labeled data plus any label on unlabeled data:
+	
+	\begin{theorem}[Risk Upper Bound for Active Learning]
+		\label{thm:risk-upper-bound}
+		If the assumptions of Lemma \ref{lem:unlabeled-benefit} hold, let
+		\begin{equation}
+			\Delta_L \equiv \zeta \int_{\mathbb{R}^d} \max_{y \in \mathcal{C}} \{\eta^*(x, y) - \eta(x, y; \mathbf{x}, \mathbf{y})\} \mu(dx).
+		\end{equation}
+		Let $\beta = 1 - c_U^{-1}$. Then with probability $1 - C_1 \exp(-C_2 a_n \delta^2)$, the upper bound of the risk of the classifier trained using labeled data $L$ and query $Q$, $L_{LQ}$, is
+		\begin{equation}
+			L_{LQ} - L^* \le \beta \Delta_L + 2\zeta \delta + \zeta \alpha \left( 1 - c_0 \min_{y_Q} \max_{y_U} P(y|x) \right) E_\eta,
+		\end{equation}
+		where
+		\begin{equation}
+			E_\eta = \mathbb{E}\left( \max_{y \in \mathcal{C}} \eta(X, y; \mathbf{x}_L, \mathbf{y}_L) \right),
+		\end{equation}
+		$c_0 > 1$, $\alpha > 0$, and $\zeta \ge 2$ are constants independent of the data.
+	\end{theorem}
+	
+	\textbf{Proof.} Assume that $g$ is the classifier trained using data $\mathbf{x}, \mathbf{y}$. Using Theorem \ref{thm:plug-in-risk-bound}, and with $\|a\| = \max\{a, -a\}$, we have:
+	\begin{align}
+		L_D - L^* &\le |\mathcal{C}| \max_{y \in \mathcal{C}} \mathbb{E}|T_D(X, y)| \\
+		&= \int_{\mathbb{R}^d} |\mathcal{C}| \max_{y \in \mathcal{C}} \max\{T_D(x, y), -T_D(x, y)\} \mu(dx).
+	\end{align}
+	Then, because
+	\begin{align}
+		\eta^*(x, y) &= 1 - \sum_{c \in \{\mathcal{C} - \{y\}\}} \eta^*(x, c), \\
+		\eta_D(x, y) &= 1 - \sum_{c \in \{\mathcal{C} - \{y\}\}} \eta_D(x, c),
+	\end{align}
+	we have:
+	\begin{equation}
+		\max_{y \in \mathcal{C}} \{ -T_D(x, y) \} = \max_{y \in \mathcal{C}} \sum_{c \in \{\mathcal{C} - \{y\}\}} (T_D(x, c)) \le |\mathcal{C}| \max_{y \in \mathcal{C}} \{ T_D(x, y) \} = |\mathcal{C}| A(x, D).
+	\end{equation}
+	Substituting this into the expression for $L_D - L^*$ leads to the conclusion that $\exists \zeta \ge 2$ such that
+	\begin{equation}
+		L_D - L^* \le \zeta \int_{\mathbb{R}^d} A(x, D) \mu(dx) \equiv \Delta_L.
+	\end{equation}
+	Assuming that unlabeled data $y_U$ do not increase the classifier risk for the distribution $(\mu, \eta) \in \mathcal{P}$, therefore minimizing the risk upper bound over $y_U$ results in:
+	\begin{align}
+		L_D - L^* &\le \zeta \min_{y_U} \int_{\mathbb{R}^d} A(x, D) \mu(dx) \\
+		&= \zeta \int_{\mathbb{R}^d} \max_{y \in \mathcal{C}} \{ \eta^*(x, y) - \max_{y_U} \eta(x, y; \mathbf{x}, \mathbf{y}) \} \mu(dx),
+	\end{align}
+	where the last equality is because the quantity $\eta^*(x, y) - \eta(x, y; \mathbf{x}, \mathbf{y})$ is concave with respect to $y$ and convex with respect to $y_U$. Because $y_Q$ is still unknown, we need to consider the risk in the worst-case scenario. The worst-case scenario is when the label of the queried data maximizes the current estimate of the risk. The upper bound of the risk using labeled data, unlabeled data, and queried examples, based on the previous relation, is:
+	\begin{align}
+		L_D - L^* &\le \zeta \int_{\mathbb{R}^d} \max_{y \in \mathcal{C}} \{ \eta^*(x, y) - \max_{y_U} \eta(x, y; \mathbf{x}, \mathbf{y}) \} \mu(dx) \\
+		&\le \zeta \int_{\mathbb{R}^d} \max_{y \in \mathcal{C}} \{ \eta^*(x, y) - \min_{y_Q} \max_{y_U} \eta_D(x, y) \} \mu(dx).
+	\end{align}
+	Now, we relate this risk upper bound to the risk of the classifier trained only on labeled data. Let $\beta = 1 - c_U^{-1}$. Using Lemma \ref{lem:unlabeled-benefit}, it follows that $\exists \alpha > 0$ such that with probability $1 - C_1 \exp(-C_2 a_n \delta^2)$, we have:
+	\begin{align}
+		L_D - L^* &\le \zeta \int_{\mathbb{R}^d} \max_{y \in \mathcal{C}} \left\{ \eta^*(x, y) - \eta(x, y; \mathbf{x}_L, \mathbf{y}_L) + \eta(x, y; \mathbf{x}_L, \mathbf{y}_L) - \min_{y_Q} \max_{y_U} \eta(x, y; \mathbf{x}, \mathbf{y}) \right\} \mu(dx) \\
+		&\le \zeta \Delta_L + \zeta \alpha \int_{\mathbb{R}^d} \max_{y \in \mathcal{C}} \left\{ \beta \eta(x, y; \mathbf{x}_L, \mathbf{y}_L) - \min_{y_Q} \max_{y_U} \eta(x, y; \mathbf{x}, \mathbf{y}) \right\} \mu(dx) + 2\zeta \delta.
+	\end{align}
+	By definition, we have:
+	\begin{align}
+		\eta(x, y; \mathbf{x}, \mathbf{y}) &= \frac{P(y, \mathbf{y}|x, \mathbf{x})}{P(y)} \\
+		&= \frac{P(y, \mathbf{y}_U|x, \mathbf{x}, \mathbf{y}_{LQ}) P(\mathbf{y}_{LQ})}{P(y)} \\
+		&= \frac{P(y|x, \mathbf{x}, \mathbf{y}_{LQ}) P(\mathbf{y}_U|x, y, \mathbf{x}, \mathbf{y}_{LQ}) P(\mathbf{y}_{LQ})}{P(y)}.
+	\end{align}
+	Assuming independence of $y$ from $x_U$ and also independence of $y_U$ from $y$, we have:
+	\begin{align}
+		\eta(x, y; \mathbf{x}, \mathbf{y}) &= \frac{P(y|x, \mathbf{x}_{LQ}, \mathbf{y}_{LQ}) P(\mathbf{y}_U|x, \mathbf{x}, \mathbf{y}_{LQ}) P(\mathbf{y}_{LQ})}{P(y)} \\
+		&= \frac{P(y|x, \mathbf{x}_{LQ}, \mathbf{y}_{LQ}) P(\mathbf{y}_U, \mathbf{y}_{LQ}|x, \mathbf{x})}{P(y)}.
+	\end{align}
+	Assume $(\mathbf{y}_U, \mathbf{y}_{LQ}), \mathbf{x}$ are independent of $\mathbf{x}$, we have:
+	\begin{align}
+		\eta(x, y; \mathbf{x}, \mathbf{y}) &= \frac{P(y|x, \mathbf{x}_{LQ}, \mathbf{y}_{LQ}) P(\mathbf{y}_U, \mathbf{y}_{LQ}|x)}{P(y)} \\
+		&= \frac{\eta(x, y; \mathbf{x}_{LQ}, \mathbf{y}_{LQ}) P(y|x)}{P(y)}.
+	\end{align}
+	Because $0 < P(y) < 1$, we can assume that $\exists c_0 > 1$ such that
+	\begin{equation}
+		\eta(x, y; \mathbf{x}, \mathbf{y}) \ge c_0 \eta(x, y; \mathbf{x}_{LQ}, \mathbf{y}_{LQ}) P(y|x).
+	\end{equation}
+	Using this in the previous relation, with probability $1 - C_1 \exp(-C_2 a_n \delta^2)$, we have:
+	\begin{align}
+		L_{LQ} - L^* &\le \beta \Delta_L + 2\zeta \delta \\
+		&\quad + \zeta \alpha \int_{\mathbb{R}^d} \max_{y \in \mathcal{C}} \left\{ 1 - c_0 \min_{y_Q} \max_{y_U} P(y|x) \right\} \eta(x, y; \mathbf{x}_L, \mathbf{y}_L) \mu(dx) \\
+		&\le \beta \Delta_L + 2\zeta \delta + \zeta \alpha \left( 1 - c_0 \min_{y_Q} \max_{y_U} P(y|x) \right) E_\eta.
+	\end{align}
+	
+	Now the question is: which examples' labels yield the most improvement in classifier accuracy? Based on the above theorem, we can say the examples that minimize the expected risk upper bound for the classifier trained using labeled data plus the queried data.
+	
+	\begin{corollary}
+		Based on Theorem \ref{thm:risk-upper-bound}, the best query for a label that minimizes the expected risk is:
+		\begin{equation}
+			Q = \argmax_{\{Q, |Q|=b\}} \min_{y_Q} \max_{y_U} P(y|x).
+		\end{equation}
+	\end{corollary}
+	This theorem essentially states that to achieve higher accuracy, we need to label examples that, regardless of the classifier, provide the most improvement in our knowledge of the conditional probability of labels given examples $P(Y|X)$. If we know this distribution better, building a learner for it is easier. We know that $\forall y_U, \forall y_Q$,
+	\begin{equation}
+		\min_{y_Q} P(y|x) \le \min_{y_Q} \max_{y_U} P(y|x) \le \max_{y_U} P(y|x).
+	\end{equation}
+	At the same time, we know that even using all available knowledge, there are still examples whose label probability is low. This happens at points where we expect misclassification to occur \cite{mackay1992information}. This leads us to the objective function. In this case, to achieve higher accuracy, we should focus on examples/regions where the reverse label, using all available knowledge, is highest. Comparing the objective function with the above relation clarifies that it divides the selected unlabeled data points into two parts.
+	
+	Our main goal is to provide a method for active learning on distributional data. As we will see later, access to the distribution $P_i$ is through the sample $\{x_{1i}, x_{2i}, \ldots, x_{ni}\}$. Therefore, we do not have an accurate estimate of $P_i$. To develop a method for active learning on distributions, this inaccuracy must be used when selecting points. To this end, in the next section, we first present an active learning method in the input space with measurement error.
+	
+	If the batch size $b$ is small, we can easily solve the objective function. However, if this size is large, approximations such as the one presented in \cite{karimi2016statistical} or heuristic techniques can be used.
+	
+	\section{Functional Approach to Probabilistic Minimax Active Learning}
+	In this section, we presented a general and theoretical active learning approach. This approach is particularly useful when there is uncertainty in the examples along with uncertainty about the unknown labels of the majority of examples. When examples are inaccurate, it was shown that considering this uncertainty during sample selection in active learning is very effective.
+	
+	\subsection{Functional Approach to Probabilistic Minimax Active Learning}
+	Active learning uses sample selection for querying their labels from unlabeled data for learning. By selecting samples, active learning methods try to build a classifier with the minimum labeling cost. At the beginning of the active learning process, the available knowledge is very limited.
+	
+	Active learning assumes that the contribution of each data point to this limited knowledge is not the same across all data regions. Selecting data points in regions with more knowledge is much more beneficial because these points significantly reduce the labeling cost \cite{freund1997selective, lewis1994heterogeneous}. The goal of point selection is to select points with the most information and query their labels. These points contain information for the classifier and represent other points. As a criterion for being informative or representative, a classifier is usually trained on the unlabeled data. The classifier estimate is usually done parametrically in algorithms like SVM \cite{schohn2000active, tong2001support}. These approaches ignore the lack of knowledge in active learning.
+	
+	When the amount of knowledge is limited, it is more natural to find a function that roughly estimates the learner function. In fact, in such situations, humans usually try to build a rule of thumb and then, by asking simple questions, check whether this rule of thumb is accurate enough in the worst case. A rule of thumb can be considered a simple rule or function that roughly estimates the available data.
+	
+	One might ask how to choose a rule of thumb in a learning problem, e.g., classification, especially when part of the label data is unknown. The straightforward answer is to choose a rule that works well for the worst-case labels under the current model and then make a query to check its accuracy. This is the basis of the proposed active learning strategy. The proposed approach does not depend on a parametric model but is based on a space of simple rules or functions. In other words, learning is done in function space. Unlike parametric methods, the functional approach formulates the optimization problem in the space of functions, not in the space of model parameters. The goal of the current method is to develop a functional approach to active learning that can consider both the criteria of being informative and being representative.
+	
+	Working in this function space can be challenging. One way to deal with these challenges is to use functional gradient methods. Similar to gradient-based optimization of an objective function, functional gradient methods move in the direction of the gradient of the objective function. But unlike those methods, where the gradient is a vector in $\mathbb{R}^n$ of model parameters, here the gradient vector is a function. This approach is called functional gradient \cite{friedman2001greedy}.
+	
+	Now the question is: how to develop an active learning method with the properties of being informative and representative in function space? The goal of the current chapter is to propose a method to answer this question. To the best of our knowledge, no functional gradient-based method that considers both the criteria of being informative and representative has been proposed so far. The functional gradient approach is deeply related to Ensemble and Boosting methods in the machine learning literature \cite{friedman2001greedy}. All Ensemble and Boosting-based methods in active learning have only focused on having a diverse set of classifiers to achieve the informativeness criterion in active learning \cite{haas2017active}. Although boosting-based active learning methods have been proposed before \cite{schapire1997boosting}, these methods do not consider the representativeness of other points in point selection.
+	
+	When the number of labeled points is very small, both criteria of being informative and representative can improve the current estimate of the classifier. The challenge, of course, is how to consider both criteria and maintain the proper balance between them in the functional approach.
+	
+	The current chapter proposes a functional gradient approach to probabilistic minimax active learning. In the previous chapter, we proved that PMAL minimizes the classifier risk in the next stage of active learning. Having a meaningful objective function, PMAL balances the two main criteria in point selection. More importantly, PMAL unifies both criteria in the conditional probability of labels given data points. From another perspective, at each stage of active learning, PMAL divides the unlabeled data into two halves using the conditional probability of labels given points.
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.8\textwidth]{fig3_5.png}
+		\caption{Functional gradient approach to Probabilistic Minimax Active Learning}
+		\label{fig:fg-pmal}
+	\end{figure}
+	
+	The current chapter introduces a general form and a specific form of the algorithm on a simple class of functions. The general algorithm can be adapted to the specific needs of a domain of applications, while the specific algorithm is a simple form of the algorithm that is easily usable in a wide range of applications. Interestingly, the proposed specific form of the algorithm is inherently related to spectral filtering.
+	
+	The proposed approach connects active learning to two important research fields: spectral filtering and functional gradient approach to learning. This connection can be explored to provide other active learning algorithms. The proposed functional gradient framework provides a platform for developing better active learning algorithms designed for different applications. The proposed approach is effective in terms of accuracy and speed in general active learning problems. Detailed experiments on 28 datasets show that the proposed functional gradient approach is efficient in selecting points in various applications.
+	
+	\subsection{Functional Approach to Active Learning}
+	Assume $\mathbf{y} = [y_1, y_2, \ldots, y_n]^T$ and $\mathbf{x} = [x_1, x_2, \ldots, x_n]^T$. In one stage of active learning, we have a set of labeled data $D_L = (\mathbf{x}_L, \mathbf{y}_L)$ and a set of unlabeled data $D_U = (\mathbf{x}_U, \mathbf{y}_U)$. Without loss of generality, assume $\mathbf{y} = (\mathbf{y}_L, \mathbf{y}_U)$ and $\mathbf{x} = (\mathbf{x}_L, \mathbf{x}_U)$, where $\mathbf{y}_U$ is unknown.
+	
+	Instead of using a parametric model, in this chapter we use a functional approach. We assume the probability function is $P(y_i | x_i, \mathbf{y}, \mathbf{x}, \Psi)$, where $\Psi$ is a function. In each iteration, we estimate $\Psi$ using functional gradient. The function $\Psi_m$, which is an estimate of $\Psi$ at iteration $m$, can be estimated by summing a set of gradient steps in the optimal direction:
+	\begin{equation}
+		\Psi_m = \Psi_0 + \sum_{t=1}^{m} g_t.
+	\end{equation}
+	Similar to gradient in parameter space, each $g_t, t \in [1, m]$ is a functional gradient step, equal to:
+	\begin{equation}
+		g_m^* = \mathbb{E}_{x,y} [ \nabla_\Psi \log P(y | x, \mathbf{y}, \mathbf{x}, \Psi) |_{\Psi_{m-1}} ].
+	\end{equation}
+	Fortunately, the functional gradient at data points can be computed as:
+	\begin{equation}
+		g_m(y_i, x_i) = \nabla_\Psi \log P(y_i | x_i, \mathbf{y}, \mathbf{x}, \Psi) |_{\Psi_{m-1}}.
+	\end{equation}
+	
+	\subsection{Functional Gradient Approach and Unlabeled Data}
+	With unlabeled data, we need to be prepared for any label for the unlabeled data. Therefore, to estimate the gradient step, we choose a function from the function class space that has the minimum distance to the gradient at data points with the worst label for the unlabeled data:
+	\begin{equation}
+		\{a_m^*, \beta_m\} = \argmin_{a, \beta} \max_{y_i, i \in D_u} \sum_{i=1}^{n} [g_m(x_i, y_i) - \beta h(x_i; a)]^2.
+	\end{equation}
+	If solving this optimization problem is difficult, we can minimize the objective function on the labeled data plus one unlabeled data point $j$. With this strategy, a simple function is added at each iteration of the algorithm. In other words, at each iteration, we compute the following expression:
+	\begin{equation}
+		\{a_m^*, \beta_m\} = \argmin_{a, \beta} \max_{y_j \in \{-1, 1\}} \sum_{i \in D_l \cup \{(x_j, y_j)\}} [g_m(x_i, y_i) - \beta h(x_i; a)]^2.
+	\end{equation}
+	In some cases, we might remove an example from the unlabeled data to make the result more dependent on the unlabeled data. At each iteration $m$, the function $\Psi$ will be:
+	\begin{align}
+		\Psi_m &= \Psi_{m-1} + \beta_m^* h_m, \\
+		h_m(x_i) &= h(x_i; a_m^*).
+	\end{align}
+	The complete algorithm is shown in Algorithm 1. As seen in steps (3)-(8), the proposed approach computes $P(y_i | x_i, \mathbf{y}, \mathbf{x}, \Psi_m)$ with the functional approach at each step. Step (10) computes the query. Note that this algorithm is general. Often, we have a specific form for $P(y_i | x_i, \mathbf{y}, \mathbf{x}, \Psi)$ based on the available data. For example, the next section considers a normal distribution for $P(y_i | x_i, \mathbf{y}, \mathbf{x}, \Psi)$. To compute the gradient of the function $P(y_i | x_i, \mathbf{y}, \mathbf{x}, \Psi)$ with respect to $\Psi$, we can use the conditional probability of labels given examples. In the next section, we present a simple algorithm based on Algorithm 1.
+	
+	\begin{algorithm}[h!]
+		\caption{General Functional Gradient Probabilistic Active Learning}
+		\begin{algorithmic}[1]
+			\Procedure{GFGP Active Learning}{$K, y_l, \Psi_{m0}, m_l$}
+			\State $m \leftarrow m_0 + 1$
+			\While{$m \le m_0 + m_l$ or $\|\Psi_m - \Psi_{m-1}\| > \delta$}
+			\State $g_m(y_i, x_i) = \nabla_\Psi \log p(y_i | x_i, \mathbf{y}, \mathbf{x}, \Psi)|_{\Psi_{m-1}}, \forall i \in [1, n]$
+			\State Compute $a_m^*, \beta_m^*$ using (3-139) or (3-140).
+			\State $\Psi_m = \Psi_{m-1} + \beta_m^* h(., .; a_m^*)$
+			\State $m \leftarrow m + 1$
+			\EndWhile
+			\State $q \leftarrow \argmax_q \min_{y_q} \max_{y_{\bar{u}}} \prod_{i=1}^n P(y_i | x_i, \mathbf{y}, \mathbf{x}, \Psi_m)$
+			\State \Return $q, \Psi_m(\mathbf{x})$ \Comment{Query instance $x_q$}
+			\EndProcedure
+		\end{algorithmic}
+	\end{algorithm}
+	
+	\subsection{Minimax Approach to Active Learning in the L2Boost Model}
+	This section considers the following model for the conditional probability of the label given $x$:
+	\begin{equation}
+		y_i = \Psi_m(x_i, \mathbf{x}, \alpha) + \epsilon, \quad \epsilon \sim \mathcal{N}(0, \sigma^2),
+	\end{equation}
+	where $\mathcal{N}$ is the normal distribution and $\sigma^2$ is its variance. Therefore,
+	\begin{equation}
+		p(y_i | x_i, \mathbf{y}, \mathbf{x}, \Psi) = \mathcal{N}(y_i; \Psi_m(x_i, \mathbf{x}, \alpha), \sigma^2).
+	\end{equation}
+	To simplify notation, assume $\Psi(\mathbf{x}, \alpha) = [\Psi_m(x_1, \mathbf{x}, \alpha), \ldots, \Psi_m(x_n, \mathbf{x}, \alpha)]^T$ and $p(\mathbf{y}|\mathbf{x}, \alpha) = \prod_{i=1}^{n} p(y_i | x_i, \mathbf{y}, \mathbf{x}, \Psi(., \alpha))$. Then:
+	\begin{equation}
+		p(\mathbf{y}|\mathbf{x}) = \int p(\mathbf{y}|\mathbf{x}, \alpha) p(\alpha) d\alpha.
+	\end{equation}
+	Unfortunately, computing this integral is challenging. Instead, the current study uses the maximum value of $p(\mathbf{y}|\mathbf{x}, \alpha)$ for $p(\mathbf{y}|\mathbf{x})$. To compute the maximum, we use the functional gradient approach. The following lemma provides an approximation for the PMAL objective function for this model.
+	
+	\begin{lemma}
+		Let $K = \mathbf{x}^T \mathbf{x}$. Assuming a linear model
+		\begin{equation}
+			h(\mathbf{x}, \alpha) = K \alpha,
+		\end{equation}
+		in the above functional gradient model, we have:
+		\begin{equation}
+			p(\mathbf{y}|\mathbf{x}) \propto \exp\left( -\frac{1}{2} \mathbf{y}^T M \mathbf{y} \right),
+		\end{equation}
+		where $M = \sum_{t=1}^{m} R^t$, $R = (I - \eta K)$, and $\eta \in (0, 1 / \lambda_{\max}(K))$.
+	\end{lemma}
+	
+	\textbf{Proof.} Based on the functional gradient method:
+	\begin{align}
+		\alpha_t &= \alpha_{t-1} - \eta_t \nabla_\Psi \log p(\mathbf{y}|\mathbf{x}, \alpha)|_{\alpha_{t-1}} \\
+		&= \alpha_{t-1} + \eta_t (\mathbf{y} - \Psi_t(\mathbf{x}, \alpha_{t-1})).
+	\end{align}
+	Consequently:
+	\begin{align}
+		\alpha_t &= \alpha_{t-1} + \eta_t (\mathbf{y} - \Psi_{t-1}(\mathbf{x}, \alpha_{t-1}) - K \alpha_{t-1}) \\
+		&= (I - \eta_t K) \alpha_{t-1} + \eta_t (\mathbf{y} - \Psi_{t-1}(\mathbf{x}, \alpha_{t-1})) \\
+		&= (I - \eta_t K) \{ (I - \eta_{t-1} K) \alpha_{t-2} + \eta_{t-1} (\mathbf{y} - \Psi_{t-2}(\mathbf{x}, \alpha_{t-2})) \} + \eta_t (\mathbf{y} - \Psi_{t-1}(\mathbf{x}, \alpha_{t-1})) \\
+		&= (I - \eta_t K)(I - \eta_{t-1} K) \alpha_{t-2} + (I - \eta_t K) \eta_{t-1} (\mathbf{y} - \Psi_{t-2}(\mathbf{x}, \alpha_{t-2})) + \eta_t (\mathbf{y} - \Psi_{t-1}(\mathbf{x}, \alpha_{t-1})) \\
+		&= \prod_{i=0}^{t-1} (I - \eta_{t-i} K) \alpha_0 + \left\{ \sum_{i=0}^{t-1} \eta_{t-i} \prod_{j=0}^{i} (I - \eta_{t-j+1} K) (\mathbf{y} - \Psi_{t-i-1}(\mathbf{x}, \alpha_{t-i-1})) \right\},
+	\end{align}
+	where $\eta_{t+1} = 0$. Using this relation and the expression for $h$ in the integral for $p(\mathbf{y}|\mathbf{x})$, we get:
+	\begin{align}
+		p(\mathbf{y}|\mathbf{x}, \alpha_{t+1}) &\propto \exp\left( -\frac{1}{2} \| \mathbf{y} - \Psi_t(\mathbf{x}, \alpha_t) - K \alpha_t \|^2 \right) \\
+		&\propto \exp\left( -\frac{1}{2} \| \mathbf{y} - \Psi_t(\mathbf{x}, \alpha_t) - K \{ (I - \eta_t K) \alpha_{t-1} + \eta_t \mathbf{y} \} \|^2 \right) \\
+		&\propto \exp\left( -\frac{1}{2} \| (I - \eta_t K) \mathbf{y} - K(I - \eta_t K) \alpha_{t-1} \|^2 \right) \\
+		&\propto \exp\left( -\frac{1}{2} \left\| \mathbf{y} - K \left\{ \prod_{i=0}^{t-1} (I - \eta_{t-i} K) \alpha_0 + \left( \sum_{i=0}^{t-1} \eta_{t-i} \prod_{j=0}^{i} (I - \eta_{t-j+1} K) \right) \mathbf{y} \right\} \right\|^2 \right) \\
+		&\propto \exp\left( -\frac{1}{2} \left\| \left\{ I - K \sum_{i=0}^{t-1} \eta_{t-i} \prod_{j=0}^{i} (I - \eta_{t-j+1} K) \right\} \mathbf{y} - K \prod_{i=0}^{t-1} (I - \eta_{t-i} K) \alpha_0 \right\|^2 \right).
+	\end{align}
+	Starting from zero, $\alpha_0 = 0$, after the $t$-th iteration:
+	\begin{equation}
+		p(\mathbf{y}|\mathbf{x}) \propto \exp\left( -\frac{1}{2} \mathbf{y}^T M \mathbf{y} \right),
+	\end{equation}
+	where
+	\begin{equation}
+		M = I - K \sum_{i=0}^{t-1} \eta_{t-i} \prod_{j=0}^{i} (I - \eta_{t-j+1} K).
+	\end{equation}
+	Assume $\eta_i = \eta, \forall i$, and $R = (I - \eta K)$, then:
+	\begin{align}
+		M &= I - \eta K \sum_{i=0}^{t-1} (I - \eta K)^i \\
+		&= I + (R - I) \sum_{i=0}^{t-1} R^i \\
+		&= I + \sum_{i=0}^{t-1} R^{i+1} - \sum_{i=0}^{t-1} R^i \\
+		&= R^t.
+	\end{align}
+	
+	\begin{proposition}
+		Let $d_k, k = 1, \ldots, n$ be the eigenvalues of the kernel matrix $K = U \diag(d_k) U^T$, and let $f = [f(x_1), \ldots, f(x_n)]^T$ be a vector containing the unknown values of the function $f$ at the data points. Then the bias and variance are:
+		\begin{align}
+			b^2(m, K; f) &\propto \mu^{2m+2} f^T U \diag(1/(d_k + \mu)) U^T f, \\
+			\var(m, K; \sigma^2) &\propto \sigma^2 \sum_{t=1}^{n} \left( 1 - \frac{\mu^{m+1}}{(d_k + \mu)^{m+1}} \right)^2.
+		\end{align}
+	\end{proposition}
+	
+	\textbf{Proof.} Let $K = U D U^T$ be the SVD decomposition of $K$. We show that the following matrix is symmetric:
+	\begin{align}
+		H &= K(K + \mu I)^{-1} K^\dagger K \\
+		&= U D U^T U (D + \mu I)^{-1} U^T U D^\dagger U^T U D U^T \\
+		&= U D (D + \mu I)^{-1} D^\dagger D U^T \\
+		&= K K^\dagger (K + \mu I)^{-1} K.
+	\end{align}
+	This relation shows the relationship between the eigenvalues of $H$ and $K$. Let $d_k$ be an eigenvalue of $K$, then there is a one-to-one relationship between $d_k$ and $\lambda_k$:
+	\begin{equation}
+		\lambda_k = \frac{d_k}{d_k + \mu} = \frac{1}{1 + \frac{\mu}{d_k}}.
+	\end{equation}
+	Proposition 3 in \cite{buhlmann2003boosting} calculates the MSE error for the boosting operator:
+	\begin{align}
+		\MSE &= \text{bias}^2 + \text{var} \\
+		\text{bias}^2(m, H; f) &= n^{-1} f^T U \diag((1 - \lambda_k)^{2m+2}) U^T f, \\
+		\text{var}(m, H; \sigma^2) &= n^{-1} \sigma^2 \sum_{k=1}^{n} \left( 1 - (1 - \lambda_k)^{m+1} \right)^2,
+	\end{align}
+	where $\var(\epsilon_i) = \sigma^2$, $\mathbb{E}(\epsilon_i) = 0$, $Y_i = f(x_i) + \epsilon_i$, and $f$ are the function values computed at the data points. Relation (3-156) shows that the number of iterations in the boosting algorithm plays the role of a regularization parameter. As it increases, the function becomes more complex. It is important to note that because this matrix is symmetric, all its eigenvalues are real and between zero and one, i.e., $\{\lambda_i \in \mathbb{R} | 0 \le \lambda_i < 1\}$. Based on Proposition 3 from \cite{buhlmann2003boosting}, the result is proven.
+	
+	Let $\bar{U} = U - \{q\}$. With this approximation, the objective function is:
+	\begin{align}
+		q &= \argmax_{q \in U} \min_{y_q} \max_{y_{\bar{U}}} p(y|x) \\
+		&= \argmax_{q \in U} \min_{y_q} \max_{y_{\bar{U}}} \log p(y|x) \\
+		&= \argmin_{q \in U} \max_{y_q} \min_{y_{\bar{U}}} \mathbf{y}^T M \mathbf{y}.
+	\end{align}
+	The resulting algorithm is Algorithm 2. To ensure that matrix $M$ is positive semi-definite and the algorithm is stable, we choose $\eta = 1 / \lambda_{\max}(K)$, where $\lambda_{\max}(K)$ is the largest eigenvalue of $K$.
+	
+	\begin{algorithm}[h!]
+		\caption{Active Kernel L2Boost Algorithm}
+		\begin{algorithmic}[1]
+			\Procedure{AL2BOOSTKernel}{$K, y_l$} \Comment{L2Boost Kernel Active Learning algorithm}
+			\State $\eta \leftarrow 1 / \lambda_{\max}(K)$, $n_l \leftarrow \text{sizeof}(y_l)$
+			\State $M, R, L \leftarrow I$
+			\State $L \leftarrow (I - \eta K)$
+			\For{$t = 1$ to $4 * n_l$} \Comment{Compute the matrix L}
+			\State $R \leftarrow R L$
+			\State $M \leftarrow M + R$
+			\EndFor
+			\State Compute $q = \argmin_{q} \max_{y_q} \min_{y_u} \mathbf{y}^T M \mathbf{y}$
+			\State \Return $q$ \Comment{Query instance $x_q$}
+			\EndProcedure
+		\end{algorithmic}
+	\end{algorithm}
+	
+	As previously mentioned, Algorithm 1 works on a function space for active learning. At each iteration of the algorithm, a functional component, which is itself a functional gradient of $p(y|\mathbf{x})$ computed in step (4), is added to the function approximation of the classifier. Using the objective functions (3-139) or (3-140), a function of the form $h(., .; a)$ is chosen that is closest to the computed gradient for the current model in step (4) with the worst-case label for the unlabeled data.
+	
+	Because the labels of the unlabeled data are unknown, the objective function (3-139) or (3-140) is important for accessing a functional component for active learning. Using these objective functions, a functional component is added to the function $\Psi_{m-1}$ that is suitable for all labels of the unlabeled data that will later be revealed in the active learning process. This loop is repeated until a known number of iterations or a significant change in the functional approximation $\Psi_m$ is observed.
+	
+	The objective function in line (9) computes the query. This objective function calculates the worst-case label for the unlabeled data $\bar{y}_u$. Therefore, the calculation method is completely consistent with how the components of the function $\Psi_m$ were calculated in previous steps.
+	
+	Algorithm 2 is much simpler due to the normal assumption for $p(y|\mathbf{x}, \mathbf{x}, \mathbf{y}, \Psi)$ and the linearity of $h$. At each iteration of the algorithm, a special vector is added to the approximation. The result is an efficient algorithm for selecting examples.
+	
+	The objective function in Lemma 3.1.2 includes the matrix $M = \sum_{t=1}^{m} (I - \eta K)^t$, which is an admissible spectral filter applied to the matrix $K$ \cite{borwein1997convex}. Other admissible spectral filters, such as Iterated Tikhonov $G_\lambda(\sigma) = \frac{(\sigma + \lambda)^t - \lambda^t}{\sigma(\sigma + \lambda)^t}$, exist. With the help of the proposed method, any of these spectral filters can be used in active learning algorithms with different properties.
+	
+	The proposed approach regularizes the learning function in a different way. As previously mentioned, at each iteration of the algorithm, adding a component to the function is stage-wise. In other words, each new component is added to the function without updating the previously added components. Each component tries to minimize the difference between the desired function and the updated function $\Psi_m$ as much as possible. Therefore, the newer components change faster. Early stopping prevents the algorithm from adding fast-changing components. In other words, it regularizes the way the function $\Psi_m$ is built. This phenomenon is well known in the literature on both functional gradient and spectral filters \cite{borwein1997convex, friedman2001greedy}.
+	
+	\paragraph{Time Analysis}
+	The experiments in the case study show that the best number of iterations is a multiple of the number of labeled data. This finding is very understandable because when there are very few labeled examples, adding small components to the resulting approximation function might overfit the classifier. Therefore, in the early stages of active learning, very few iterations are needed to compute the classifier. But when the number of labeled data increases, we should have more iterations to be prepared for the increasing complexity of the classifier function for the data. In fact, in spectral filtering, the number of iterations plays the role of the regularization parameter \cite{borwein1997convex}. This phenomenon also holds in functional gradient. Therefore, the number of iterations in Algorithm 2 is $O(n_l)$.
+	
+	Furthermore, the time spent in each iteration of Algorithm 2 is $O(n^2)$. Computing $q$ involves solving a quadratic objective function and therefore has time complexity $O(n^3)$. Because the kernel matrix is fixed throughout the active learning process, we only need to compute its largest eigenvalue once, and therefore its computation time is negligible. Since the number of iterations is $O(n_l)$, the time complexity of the algorithm is $O(n^3 + n_l n^2)$ or $O(n^3)$ since $n_l < n$.
+	
+	\section{Active Learning in the Distribution Domain}
+	If the data of interest are distributions, then learning and active learning on this data will differ significantly from learning on vectors. The reason is that we usually do not have access to the data distribution, but we can sample from the distribution. Therefore, we have sampled a number of samples from each distribution. The accuracy of the estimate of each distribution depends on the number of samples we have selected from it. Consequently, learning based on these samples depends on the number of samples selected from each distribution.
+	
+	\subsection{Learning on Distributions}
+	One approach to learning on distributions is to map the distributions to a Hilbert space using the Hilbert Space Embedding of Distributions. This method allows us to view distributions as a point in the Hilbert space. As a result, all common learning methods that can use kernels can be used for learning on distributions.
+	
+	However, this has problems. One of these problems is the inaccuracy of the estimate of the distributions due to the small number of samples in the transformation domain. Often, we have few samples from some distributions and more samples from others. This causes the accuracy of the samples to differ from each other. Therefore, the sample accuracy is not uniform.
+	
+	A proposal is to estimate the samples in a weighted manner proportional to their accuracy so that learning is not biased. This allows us to exploit the difference in the estimation accuracy of samples in learning on distributions. In this method, samples do not have the same value. Samples with higher accuracy have more value, and samples with lower accuracy have less value. (This issue can be calculated based on the bounds obtained for the problem. These bounds are discussed in \cite{muandet2012domain}. The main paper on the relevant bound is \cite{muandet2012domain}.)
+	
+	Active learning algorithms try to reduce the cost of building learning systems by reducing the number of labeled examples needed. In recent years, many learning systems have been developed for higher-level and more abstract forms of data, such as learning on distributions. In learning on distributions, each example is itself a distribution. In this chapter, we propose active learning on distributions as a higher-level and more effective type of active learning algorithm. In active learning on distributions, we do not have direct access to the distributions but rather to each distribution through a sample drawn from it. Therefore, similar to robust learning, any estimate of an example is inaccurate. This challenge of inaccurate examples adds to the already challenging problem of active learning. To solve these challenges, we provide an upper bound for the risk of the classifier in the next stage of active learning, where more labeled examples become available. Based on this upper bound, to deal with the challenges of robust active learning, we present the Probabilistic Minimax Active Learning (PMAL) method and prove that this algorithm selects an example whose label information minimizes the risk. Unfortunately, computing this objective function for the robust active learning problem is intractable. Therefore, we provide an efficient estimate of the objective function. To further exploit the available information about the distribution estimates, we present a robust active learning method based on Bayesian learning of kernel embeddings of distributions. Experiments demonstrate the efficiency of the algorithm on a number of synthetic and real distributional datasets.
+	
+	To learn a concept, learning systems require knowledge. The goal of learning systems is to predict the labels of test data that were not seen during the construction of the learning system. Without knowledge, learning systems are unable to generalize the concept to unseen data.
+	
+	Transferring knowledge from human to machine is a fundamental aspect of learning systems. Knowledge is often provided in the form of supervision on data. Recent decades have witnessed the emergence of new paradigms for transferring knowledge from human to machine. One of these paradigms is active learning, where the machine selects data for supervision.
+	
+	To minimize the need for supervision, active learning deals with the intelligent use of limited supervision resources and human knowledge. By cleverly selecting parts of the data and querying a human user for supervisory data for them, active learning reduces the effort required to achieve a certain level of performance. However, humans usually perceive knowledge in abstract and high-level forms, while algorithms and machines usually require knowledge in low-level forms, such as labels on simple vectors.
+	
+	In practice, transferring knowledge in high-level forms can be an advantage in active learning because users may be able to provide information better. In such situations, active learning algorithms may obtain richer information from the user compared to receiving labels for simple vectors. For example, \cite{gilad2015active} presented a generalized query type equivalent to a large number of specific queries for rich communication between the user and the machine.
+	
+	Since the last decade, learning systems have gradually become more complex and have worked on higher-level data such as structured data or distributional data. In learning from structured data, the data has a structure like a graph \cite{lampert2009structured}, while in learning on distributions \cite{sriperumbudur2009kernel}, each data point is itself a distribution. It is highly desirable to provide effective methods to reduce supervision costs on this type of data.
+	
+	In many applications, it is more natural to assume that knowledge does not reside in each member of the sample, but rather in the distributions from which the sample is drawn. For example, in tasks such as anomaly detection, each point might be normal, but a group of points might be anomalous \cite{nguyen2007kernel}. In such applications, it is better to model the problem as learning on distributions. Such problems include learning from groups, such as group anomaly detection and preference learning. In recent years, many methods have been developed for learning on distributions \cite{flaxman2015fast, szabo2015learning, muandet2012domain, borgwardt2006integrating}.
+	
+	In this chapter, we present an active learning approach on distributions. In learning on distributions, examples have inherent uncertainty. Each distributional example is estimated using a finite-sized sample. It is well known that estimating a distribution from a finite sample has uncertainty. The proposed method is robust against inaccuracies in the examples. Robustness in active learning is much more challenging when we have partial information about the data.
+	
+	To solve this problem with a principled approach, we first consider the active learning problem in its most general form. In this setting, we provide an upper bound on the risk of the classifier in the next stage of active learning with an increased number of labeled data, under conditions where we have not yet received any new labeled examples. Then, an example is queried in such a way that its selection minimizes this upper bound. We call the resulting method Probabilistic Minimax Active Learning (PMAL). PMAL can be used in a Bayesian framework.
+	
+	Based on PMAL, we present a robust active learning algorithm. Here, examples can be inaccurate. Unfortunately, computing PMAL for robust active learning is intractable. Therefore, we provide an efficient estimate for Probabilistic Minimax Active Robust Learning (PMARL). The desired estimate is accurate in the sense that there exist labels for the unlabeled data for which the estimation error is negligible.
+	
+	The learning on distributions problem can be considered as a specific type of robust learning. Although we present a general robust active learning algorithm that considers uncertainty in example estimation, our focus here is on how to deal with uncertainty during the estimation of distributional examples. Note that here, robust learning differs from some other research \cite{karimi2016statistical, xu2007regularization}, where the goal is robustness against outlier and noisy data. The paper \cite{xu2007regularization} also mentions this difference, stating that there are two categories of robust learning algorithms. One category is robust against inaccuracies in the example, such as the algorithms proposed in this chapter, and the other category is robust against noisy data, which we addressed in previous chapters. To the best of our knowledge, this is the first active learning algorithm specifically designed for learning on distributions.
+	
+	Any learning on distributions algorithm is based on distribution estimation. Recently, approaches for distribution estimation in kernel-based methods have been proposed.
+	
+	Kernel-based approaches developed for learning on distributions usually use the Kernel Mean Embedding of distributions \cite{smola2007hilbert}, where each distribution is represented as a mean function in a Hilbert space. Because the sample size for a distribution is finite, the Empirical Kernel Mean Embedding is used, which is merely an average of the kernel function for each point in the sample \cite{muandet2012domain}. Recently, it has been shown that the Empirical Kernel Mean Embedding is not the best estimate for distributions \cite{law2018gaussian}. We know well that the Kernel Mean Embedding of distributions has an uncertainty that is a function of the sample size.
+	
+	Many learning on distributions algorithms ignore the inherent uncertainty of the estimate. Using the recently proposed Bayesian learning of kernel embedding approach \cite{flaxman2015fast}, in the current chapter, we propose a method for robust active learning on distributions. We call this method Probabilistic Minimax Active Robust Learning on Distributions with Bayesian learning of kernel embeddings. This method uses Bayesian learning of kernel embeddings to deal with uncertainty in the kernel embedding estimate. Experiments show that the proposed method is efficient in estimating inherent uncertainty and selecting distributional examples using samples.
+	
+	To summarize, two main innovations are presented in this work:
+	\begin{enumerate}
+		\item A robust active learning algorithm on distributions, in the sense that sample estimates have uncertainty.
+		\item Probabilistic Minimax Active Learning (PMAL), which is applicable to active learning problems and can be used in Bayesian learning in algorithms. We proved that this method selects examples in a way that minimizes the classifier risk.
+	\end{enumerate}
+	
+	\begin{table}[h!]
+		\centering
+		\caption{Notation table for active learning on distributions}
+		\label{tab:dist-al-notation}
+		\begin{tabular}{c|l}
+			\hline
+			Symbol & Description \\
+			\hline
+			\multicolumn{2}{c}{Learning on Distributions Notation} \\
+			\hline
+			$\mu^*_P$ & Kernel embedding of distribution $P$ \\
+			$\hat{\mu}_{P_i}$ & Empirical kernel embedding of distribution $P_i$ \\
+			$\hat{\mu}_{P_i}(x)$ & Evaluation of the kernel embedding value for distribution $P_i$ at point $x$ \\
+			$x_i \sim P_i$ & Sample drawn from distribution $P_i$ \\
+			$\forall u \in [1..n_i], x_{iu} \in \mathbb{R}^d$ & $x_i = \{x_{i1}, x_{i2}, \ldots, x_{i n_i}\}$ \\
+			$\hat{\mu}_{P_i}(\mathbf{x}_i) \in \mathbb{R}^{n_i}$ & Evaluation of the kernel mean embedding of $P_i$ at each point of $\mathbf{x}_i$ \\
+			$\hat{\boldsymbol{\mu}}_P = [\hat{\mu}_{P_1}, \hat{\mu}_{P_2}, \ldots, \hat{\mu}_{P_n}]^T$ & List of empirical kernel mean embeddings of distributions $P_1, \ldots, P_n$ \\
+			$\hat{\boldsymbol{\mu}}_P(\mathbf{x})$ & Ordered list of evaluations of kernel embeddings from the samples \\
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	In the remainder of this chapter, in \ref{subsec:proposed-method}, we present the proposed approach. The Probabilistic Minimax Active Learning method is presented in \ref{subsec:pmal}, and the robust active learning method is presented in \ref{subsec:ral-input}. In \ref{subsec:ral-dist-main}, the main active learning on distributions method is discussed. After that, the results of experimental evaluations and finally the conclusion are presented.
+	
+	\subsection{Active Learning on Distributions based on Probabilistic Minimax Active Learning}
+	\label{subsec:proposed-method}
+	
+	We denote examples in lowercase letters, and bold lowercase letters represent ordered lists, e.g., $\mathbf{x} = (x_1, \ldots, x_n)$ or their labels $\mathbf{y} = (y_1, \ldots, y_n)$. For brevity, the notations are summarized in Table \ref{tab:dist-al-notation}.
+	
+	As previously mentioned, there is no accurate estimate of the distributions. Such conditions are similar to robust learning, but also differ in that we have specific information about the estimates of the distributions using samples, which we can exploit.
+	
+	To effectively exploit this information, we first introduce the Probabilistic Minimax Active Learning (PMAL) approach in Section \ref{subsec:pmal}. Using PMAL, we can address uncertainty in active learning, i.e., robust active learning, in a principled manner. Although in the following sections we do not address active learning in the input space, in \ref{subsec:ral-input} we present an algorithm for robust active learning in the input space. This problem provides the reader with the foundations of robust active learning on distributions, so that one can easily understand the difference between the two. Furthermore, in \ref{subsec:ral-dist-simple}, we present a simpler form of robust active learning on distributions. In \ref{subsec:ral-dist-main}, we address the main goal of this chapter, which is robust active learning on distributions. In the following, we first review the definitions and prerequisites for Section \ref{subsec:ral-input}.
+	
+	\subsection{Robust Bayesian Active Learning in the Input Space}
+	\label{subsec:ral-input}
+	
+	In robust learning settings, each example is inaccurate. There can be many reasons for this inaccuracy. In any case, here we assume that there is a probability of error in the examples. On the other hand, the performance of the learning algorithm should not be degraded due to this issue. In other words, the algorithm must be robust against this inaccuracy. Let $x_i$ denote a data point and $x_i^*$ its true value.
+	
+	Here we assume that each data point $x_i$ has an uncertainty represented by the following conditional distribution:
+	\begin{equation}
+		x_i^* | x_i \sim \mathcal{N}(0, \sigma_i^2).
+	\end{equation}
+	Assuming a linear model, we have
+	\begin{equation}
+		y_i = x_i^{*T} w + \epsilon, \quad \epsilon \sim \mathcal{N}(0, \sigma^2).
+	\end{equation}
+	Therefore, to compute $P(\mathbf{y}|\mathbf{x})$, we first compute $P(y_i | x_i, w)$. We have:
+	\begin{align}
+		P(y_i | x_i, w) &= \int P(y_i | w, x_i^*) P(x_i^* | x_i) dx_i^* \\
+		&= \int \mathcal{N}(y_i; x_i^{*T} w, \sigma^2) \mathcal{N}(x_i^*; x_i, \sigma_i^2) dx_i^* \\
+		&= \mathcal{N}(y_i; x_i^T w, \sigma^2 + \sigma_i^2 \|w\|^2).
+	\end{align}
+	The first equality is the law of total probability. The second equality follows from relation (3-159). The last equality is the well-known integral of two Gaussians. Let $\sigma_i(w) = \sigma^2 + \sigma_i^2 \|w\|^2$. Then we have:
+	\begin{equation}
+		P(\mathbf{y}|\mathbf{x}, w) \propto \prod_i \sigma_i(w)^{-1/2} \exp\left( -\frac{1}{2} \sum_i \frac{(y_i - w^T x_i)^2}{\sigma_i(w)} \right).
+	\end{equation}
+	This relation states that if a point has higher variance compared to other points, it should have less influence on the classifier, and therefore its probability of being selected in active learning should be lower than other points that have more influence on the classifier. This relation also shows that if the classifier is simple, i.e., if $\|w\|$ is small, the variance of the conditional distribution $P(\mathbf{y}|\mathbf{x}, w)$ will be less affected by the uncertainty of a point. Considering the prior knowledge $p(w) = \mathcal{N}(0, \sigma_w^{-2} I)$ for $w$ to compute $p(\mathbf{y}|\mathbf{x})$, we have:
+	\begin{equation}
+		P(\mathbf{y}|\mathbf{x}) = \int P(\mathbf{y}|\mathbf{x}, w) P(w) dw.
+	\end{equation}
+	Unfortunately, this integral is intractable. More importantly, $\mathbf{y}_U$ is unknown. Therefore, we need to find an estimate of $P(\mathbf{y}|\mathbf{x})$ as a function of $\mathbf{y}_U$. We also need to find a way to compute it efficiently.
+	
+	To this end, we consider the Gaussian probability density function approximation $\tilde{P}(\mathbf{y}|\mathbf{x}, w)$. This function is equal to:
+	\begin{equation}
+		\tilde{P}(\mathbf{y}|\mathbf{x}, w) = \prod_{i=1}^{n} \mathcal{N}(y_i; w^T x_i, \sigma^2 + \sigma_i^2 v^2),
+	\end{equation}
+	where $v$ will be determined shortly. Using $\tilde{P}$ instead of $P$ solves the intractability of the integral. But the question is how close these are for each value of $\mathbf{y}_U$, under conditions where we cannot compute the integral?
+	
+	The theorem below approximates the KL divergence between the two distributions $P$ and $\tilde{P}$. This theorem is based on recent advances in the Laplace approximation of intractable integrals. For more information, see \cite{shun1995approximate, tierney1986accurate, wong2001laplace}.
+	
+	\begin{theorem}
+		Let
+		\begin{equation}
+			w^* = \argmax_w P(\mathbf{y}, w|\mathbf{x}), \quad \lambda = \frac{1}{\max_i\{\sigma_i^2\}}.
+		\end{equation}
+		Also,
+		\begin{align}
+			h(w; \mathbf{y}, \mathbf{x}) &= \frac{1}{2} \sum_{i=1}^{n} \left\{ \frac{(y_i - w^T x_i)^2}{\sigma_i(w)} + \log \sigma_i(w) \right\} + \frac{1}{2\sigma_w^2} \|w\|^2, \\
+			g(w, v) &= \frac{1}{2} \sum_{i=1}^{n} \left\{ \frac{\sigma_i^2(\|w\|^2 - v^2)(y_i - w^T x_i)^2}{\sigma_i(v) \sigma_i(w)} + \log \frac{\sigma_i(v)}{\sigma_i(w)} \right\}.
+		\end{align}
+		Then we have:
+		\begin{equation}
+			\KL(P(\mathbf{y}, w|\mathbf{x}) || \tilde{P}(\mathbf{y}, w|\mathbf{x})) = c_\lambda \left\{ \frac{n D(P, \tilde{P}; \mathbf{y}, \mathbf{x}, \lambda, v)}{\sqrt{\det D_h(w^*; \mathbf{y}, \mathbf{x})}} + \epsilon(\lambda) \right\},
+		\end{equation}
+		where
+		\begin{equation}
+			D(P, \tilde{P}; \mathbf{y}, \mathbf{x}, \lambda, v) \propto \sqrt{\frac{p}{e}} \frac{\det D_h(w^*; \mathbf{y}, \mathbf{x})}{g(w^*, v)},
+		\end{equation}
+		and $c_\lambda = \left( \frac{2\pi}{\lambda} \right)^{d/2}$, $\epsilon(\lambda) = e^{-h(w^*; \mathbf{y}, \mathbf{x})} O(1/\lambda)$ as $\lambda \to \infty$.
+	\end{theorem}
+	
+	\textbf{Proof.} The KL divergence between these two distributions is:
+	\begin{equation}
+		D_{\tilde{P}}^P = \KL(P||\tilde{P}) = \int_{\mathbb{R}^d} P(\mathbf{y}, w|\mathbf{x}) \log \frac{P(\mathbf{y}, w|\mathbf{x})}{\tilde{P}(\mathbf{y}, w|\mathbf{x})} dw.
+	\end{equation}
+	We know that
+	\begin{equation}
+		P(\mathbf{y}, w|\mathbf{x}) = (2\pi)^{-d} \exp(- h(w; \mathbf{y}, \mathbf{x})).
+	\end{equation}
+	Also, let
+	\begin{equation}
+		\lambda = 1 / \max_{i=1}^{n} \sigma_i^2.
+	\end{equation}
+	Note that as $\lambda \to \infty$, $P(\mathbf{y}, w|\mathbf{x})$ becomes a univariate Gaussian. For simplicity, let
+	\begin{equation}
+		f(w; \mathbf{y}, \mathbf{x}, \lambda) = h(w; \mathbf{y}, \mathbf{x}) / \lambda.
+	\end{equation}
+	Therefore, we have
+	\begin{equation}
+		P(\mathbf{y}, w|\mathbf{x}) = (2\pi)^{-d} \exp(-\lambda f(w; \mathbf{y}, \mathbf{x}, \lambda)).
+	\end{equation}
+	We easily see that
+	\begin{equation}
+		\log \frac{P(\mathbf{y}, w|\mathbf{x})}{\tilde{P}(\mathbf{y}, w|\mathbf{x})} = g(w, v).
+	\end{equation}
+	Based on Theorem 2 from \cite{wong2001laplace} and also Theorem 3.2 in \cite{shun1995approximate}, because $f(w; \mathbf{y}, \mathbf{x}, \lambda)$ is a function of $w$ and $g$ is smooth, the integral \eqref{eq:kl-integral} is approximated by:
+	\begin{align}
+		D_{\tilde{P}}^P &= \int_{\mathbb{R}^d} e^{-\lambda f(w; \mathbf{y}, \mathbf{x}, \lambda)} g(w, v) \\
+		&= c_\lambda e^{-\lambda f(w^*; \mathbf{y}, \mathbf{x}, \lambda)} \left( \frac{\sqrt{\det D_f(w^*; \mathbf{y}, \mathbf{x}, \lambda)}}{\sqrt{\det D_f(w^*; \mathbf{y}, \mathbf{x}, \lambda)}} g(w^*, v) + \epsilon(\lambda) \right) \\
+		&= c_\lambda e^{-h(w^*; \mathbf{y}, \mathbf{x})} \left( \frac{g(w^*, v)}{\sqrt{\det D_h(w^*; \mathbf{y}, \mathbf{x})}} + \frac{\epsilon(\lambda)}{\lambda} \right),
+	\end{align}
+	where $\epsilon(\lambda) = O(1/\lambda)$. Substituting $h$ into the relations leads to the desired result.
+	
+	If we set $v = \|w^*\|$, then by Theorem 3.1.3, $g(w^*, v)$ will be zero, and therefore the KL divergence between $\tilde{P}$ and $P$ will be almost zero.
+	
+	However, because $h$ is non-convex, computing $w^*$ is difficult. The following lemma provides an upper bound for $h$. This shows that instead of directly computing $w^*$, we can minimize a simple convex function in which $w$ is more regularized. Interestingly, Lemma 3.2.3 relates robust learning to more regularization of the learning function. This issue has been shown in the context of robust SVM learning in \cite{xu2007regularization}.
+	
+	\begin{lemma}
+		Assume $\sigma_w^2 = \sigma^2( \frac{1}{\sigma_w^2} + \sum_{i=1}^{n} \sigma_i^2 )$ and
+		\begin{equation}
+			h'(w; \mathbf{y}, \mathbf{x}) = \frac{1}{2} \sum_{i=1}^{n} \frac{(y_i - w^T x_i)^2}{\sigma^2} + \frac{1}{2} \frac{\sigma_w^{-2}}{\sigma^2} \|w\|^2.
+		\end{equation}
+		Then we have:
+		\begin{equation}
+			h(w; \mathbf{y}, \mathbf{x}) \le h'(w; \mathbf{y}, \mathbf{x}) + n \log \sigma.
+		\end{equation}
+	\end{lemma}
+	
+	\textbf{Proof.} Using the inequality $\alpha + \beta \le \alpha e^{\beta/\alpha}, \alpha \neq 0$, we have:
+	\begin{equation}
+		\sigma^2 \le \sigma^2 + \sigma_i^2 \|w\|^2 \le \sigma^2 e^{\sigma_i^2 \|w\|^2 / \sigma^2}.
+	\end{equation}
+	Using this in $h$, we get $h(w; \mathbf{y}, \mathbf{x}) \le h'$, where
+	\begin{equation}
+		h' = \frac{1}{2} \sum_{i=1}^{n} \frac{(y_i - w^T x_i)^2}{\sigma^2} + n \log \sigma + \frac{\sigma_w^{-2}}{2} \|w\|^2.
+	\end{equation}
+	Therefore, $h'$ can be used to minimize $h$. However, it is important to know the difference between their solutions so that we can systematically use the solution of $h'$ instead of the solution of $h$.
+	
+	\begin{theorem}
+		Let $w^*$ be a regularized solution of $\argmin_w h(w; \mathbf{y}, \mathbf{x})$, and let
+		\begin{equation}
+			\tilde{w} = \argmin_w h'(w, \mathbf{y}, \mathbf{x}).
+		\end{equation}
+		Then we will have:
+		\begin{equation}
+			\frac{\|w^* - \tilde{w}\|}{\|w^*\|} \le \frac{\sigma_w^2 \sigma_w^2}{ \|w^*\|} \left( D_x + N_x \right) + \sigma_w^2 n \left\{ \sum_{i=1}^{n} \frac{\sigma_i^2}{\sigma^2} \right\}.
+		\end{equation}
+		Also, $\lim_{\sigma_1, \ldots, \sigma_n \to 0} \|w^* - \tilde{w}\| = 0$, where
+		\begin{align}
+			D_x &= \sum_{i=1}^{n} \sum_{j=1}^{n} \frac{\|D_{ij}\| |\sigma_j^2 - \sigma_i^2|}{\sigma_i(w^*) \sigma_j(w^*)} \le \sum_{i=1}^{n} \sum_{j=1}^{n} \frac{\|D_{ij}\|}{\sigma^4} |\sigma_j^2 - \sigma_i^2|, \\
+			N_x &= \frac{1}{\sigma_w^2 \sigma^2} \sum_{i=1}^{n} \frac{\|x_i y_i\| \sigma_i^2}{\sigma_i(w^*)} \le \frac{1}{\sigma_w^2 \sigma^4} \sum_{i=1}^{n} \|x_i y_i\| \sigma_i^2,
+		\end{align}
+		and $D_{ij} = \sigma^{-2}(x_j x_j^T + \sigma_j^2 I)(x_i y_i)$. Note that $\lim_{\|w^*\| \to \infty} \frac{D_x}{\|w^*\|^2} = \lim_{\|w^*\| \to \infty} N_x = 0$.
+	\end{theorem}
+	
+	\textbf{Proof.} Let
+	\begin{equation}
+		h_\rho(w, \rho; \mathbf{y}, \mathbf{x}) = \frac{1}{2} \sum_{i=1}^{n} \left\{ \frac{(y_i - w^T x_i)^2}{\rho_i} + \log(\rho_i) \right\} + \frac{1}{2\sigma_w^2} \|w\|^2.
+	\end{equation}
+	The following problem is equivalent to the problem $\min_w h(w; \mathbf{y}, \mathbf{x})$:
+	\begin{equation}
+		\min_{w, \rho} h_\rho(w, \rho; \mathbf{y}, \mathbf{x}) \quad \text{s.t. } \rho_i = \sigma^2 + \sigma_i^2 \|w\|^2, \quad \forall i \in [1, n].
+	\end{equation}
+	The Lagrangian for problem (3-171) is:
+	\begin{equation}
+		\mathcal{L}(w, \rho; \theta) = h_\rho(w, \rho; \mathbf{y}, \mathbf{x}) - \theta^T(\rho - \sigma^2 - \sigma_I^2 \|w\|^2).
+	\end{equation}
+	The first-order necessary condition for this problem is:
+	\begin{equation}
+		\nabla h_\rho(w^*, \rho^*; \mathbf{y}, \mathbf{x}) - \sum_{i=1}^{n} \theta_i \nabla (\rho_i^* - \sigma^2 - \sigma_i^2 \|w^*\|^2) = 0,
+	\end{equation}
+	which can be written with respect to variables $w, \rho_i$ as:
+	\begin{align}
+		&\sum_{i=1}^{n} \frac{x_i (x_i^T w^* - y_i)}{\rho_i^*} + \frac{w^*}{\sigma_w^2} + \sum_{i=1}^{n} \theta_i 2 \sigma_i^2 w^* = 0, \\
+		&\frac{1}{2} \frac{-(y_i - x_i^T w^*)^2}{(\rho_i^*)^2} + \frac{1}{2} \frac{1}{\rho_i^*} - \theta_i = 0.
+	\end{align}
+	Using these relations, we have:
+	\begin{align}
+		V := \sum_{i=1}^{n} \frac{\sigma_i^2 (y_i - x_i^T w^*)^2}{(\rho_i^*)^2} = \sum_{i=1}^{n} \frac{\sigma_i^2}{\rho_i^*} - \sum_{i=1}^{n} 2 \theta_i \sigma_i^2.
+	\end{align}
+	Using the second-order sufficiency conditions $\nabla^2 \mathcal{L} \succ 0$, we must have at least:
+	\begin{align}
+		\nabla^2_{w,w} \mathcal{L} &= \sum_{i=1}^{n} \frac{x_i x_i^T}{\rho_i^*} + \left( \frac{1}{\sigma_w^2} + \sum_{i=1}^{n} \theta_i 2 \sigma_i^2 \right) I \succ 0, \\
+		\nabla^2_{\rho_i, \rho_i} \mathcal{L} &= \frac{2(y_i - x_i^T w^*)^2 - (\rho_i^*)^2}{(\rho_i^*)^3} \succ 0, \quad \forall i.
+	\end{align}
+	Because we assume $w^*$ is sufficiently regularized, $\sum_{i=1}^{n} \theta_i 2 \sigma_i^2 \ge 0$. Therefore, the first condition in (3-174) is satisfied by (3-173):
+	\begin{align}
+		V = \sum_{i=1}^{n} \frac{\sigma_i^2 (y_i - x_i^T w^*)^2}{(\rho_i^*)^2} \le \sum_{i=1}^{n} \frac{\sigma_i^2}{\rho_i^*} \le \sum_{i=1}^{n} \frac{\sigma_i^2}{\sigma^2}.
+	\end{align}
+	From the second condition in (3-174), we have:
+	\begin{equation}
+		(y_i - x_i^T w^*)^2 \ge \frac{1}{2}(\rho_i^*).
+	\end{equation}
+	Using this, we have:
+	\begin{align}
+		V = \sum_{i=1}^{n} \frac{\sigma_i^2 (y_i - x_i^T w^*)^2}{(\rho_i^*)^2} \ge \frac{1}{2} \sum_{i=1}^{n} \frac{\sigma_i^2}{\rho_i^*}.
+	\end{align}
+	Let
+	\begin{equation}
+		A = \sum_{i=1}^{n} \frac{x_i x_i^T}{\rho_i^*} + \left( \frac{1}{\sigma_w^2} + \sum_{i=1}^{n} \frac{\sigma_i^2}{\rho_i^*} \right) I.
+	\end{equation}
+	Using (3-172), we have:
+	\begin{equation}
+		w^* = A^{-1} \sum_{i=1}^{n} \frac{x_i y_i}{\rho_i^*} + A^{-1} V w^*.
+	\end{equation}
+	Let
+	\begin{equation}
+		B = \sum_{i=1}^{n} \frac{x_i x_i^T}{\sigma^2} + \sigma_w^{-2} I.
+	\end{equation}
+	Minimizing the function $h'$ in (3-168), we will have:
+	\begin{equation}
+		\tilde{w} = B^{-1} \sum_{i=1}^{n} \frac{x_i y_i}{\sigma^2}.
+	\end{equation}
+	Using relations (3-178) and (3-179) and the triangle inequality, we will have:
+	\begin{equation}
+		\|w^* - \tilde{w}\| \le \left\| A^{-1} \sum_{i=1}^{n} \frac{x_i y_i}{\rho_i^*} - B^{-1} \sum_{i=1}^{n} \frac{x_i y_i}{\sigma^2} \right\| + \| A^{-1} V w^* \|.
+	\end{equation}
+	Let $W = B \sum_{i=1}^{n} \frac{x_i y_i}{\rho_i^*} - A \sum_{i=1}^{n} \frac{x_i y_i}{\sigma^2}$. Using (3-175) and the Cauchy-Schwarz inequality:
+	\begin{equation}
+		\left\| \sum_{i=1}^{n} \frac{x_i y_i}{\rho_i^*} - A \sum_{i=1}^{n} \frac{x_i y_i}{\sigma^2} \right\| \le \| A^{-1} \| \| B^{-1} \| \| W \|.
+	\end{equation}
+	Then:
+	\begin{equation}
+		\|w^* - \tilde{w}\| \le \|A^{-1}\| \|B^{-1}\| \|W\| + \|A^{-1}\| n \left\{ \sum_{i=1}^{n} \frac{\sigma_i^2}{\sigma^2} \right\} \|w^*\|.
+	\end{equation}
+	With some simplification, it is easy to see that
+	\begin{align}
+		W &= \sum_{i=1}^{n} \sum_{j=1}^{n} D_{ij} \left\{ \frac{1}{\rho_i^*} - \frac{1}{\rho_j^*} \right\} + \frac{1}{\sigma_w^2} \sum_{i=1}^{n} x_i y_i \left\{ \frac{\sigma^2 - \rho_i^*}{\sigma^2 (\rho_i^*)} \right\} \\
+		&= \sum_{i=1}^{n} \sum_{j=1}^{n} D_{ij} \{ \rho_j^* - \rho_i^* \} + \frac{1}{\sigma_w^2} \sum_{i=1}^{n} x_i y_i \{ \sigma^2 - \rho_i^* \},
+	\end{align}
+	where $D_{ij} = \frac{(x_j x_j^T + \sigma_j^2 I) x_i y_i}{\sigma^2}$. Therefore,
+	\begin{equation}
+		\|W\| \le n \left( D_x + N_x \right) \|w^*\|^2.
+	\end{equation}
+	It is easy to see that
+	\begin{equation}
+		\|A^{-1}\| = \lambda_{\max}(A^{-1}) \le \sigma_w^2, \quad \|B^{-1}\| = \lambda_{\max}(B^{-1}) \le \sigma_w^2.
+	\end{equation}
+	Using these values, we conclude that
+	\begin{equation}
+		\frac{\|w^* - \tilde{w}\|}{\|w^*\|} \le \sigma_w^2 \sigma_w^2 (D_x + N_x) \|w^*\| + \sigma_w^2 n \left\{ \sum_{i=1}^{n} \frac{\sigma_i^2}{\sigma^2} \right\}.
+	\end{equation}
+	Computing the limit shows that $\lim_{\sigma_1, \ldots, \sigma_n \to 0} \|w^* - \tilde{w}\| = 0$.
+	
+	Because $\tilde{w}$ is sufficiently close to $w^*$, we can use its value to approximate $w^*$ for computing $\tilde{P}$, and based on the above theorem and Theorem 3.1.3, the distance between $P$ and $\tilde{P}$ is sufficiently small for any value of $\mathbf{y}_U$. Since $e^{-h(w^*; \mathbf{y}, \mathbf{x})}$ and $e^{-h'(w^*; \mathbf{y}, \mathbf{x})}$ change much more than $g$ with respect to $\mathbf{y}_U$, we use $\min_{\mathbf{y}_U} \min_w h'(w; \mathbf{y}, \mathbf{x})$ for the approximation.
+	
+	Let $K$ be the kernel matrix and also $L = (K + \sigma_w^{-2} I)^{-1} K (K + \sigma_w^{-2} I)^{-1}$. Then the following theorem determines the estimate of the objective function:
+	
+	\begin{theorem}
+		Let
+		\begin{equation}
+			\tau = \mathbf{y}_L^T (L_{ll} - L_{lu} L_{uu}^{-1} L_{ul}) \mathbf{y}_L,
+		\end{equation}
+		and $\kappa_i = (\sigma^2 + \sigma_i^2 \tau)^{-1}$, $\Upsilon = \diag(\kappa)$, $S = \Upsilon - \Upsilon n \sigma_w^2 (K^{-1} + \sigma_w^2 \Upsilon)^{-1} \circ \Upsilon$.
+		We have:
+		\begin{equation}
+			\tilde{P}(\mathbf{y}|\mathbf{x}) \propto \exp\left( -\frac{1}{2} \mathbf{y}^T S \mathbf{y} \right).
+		\end{equation}
+	\end{theorem}
+	
+	\textbf{Proof.} To compute $\tilde{P}$, similar to (3-163), we first compute the estimate $v^2 = \|\tilde{w}\|^2$, where $\tilde{w} = \argmin_w h'(w; \mathbf{y}, \mathbf{x})$. Based on Lemma 3.2.3, $\tilde{w} = (X X^T + \sigma_w^{-2} I)^{-1} X \mathbf{y}$, where $X = [x_1, x_2, \ldots, x_n]$. Therefore,
+	\begin{equation}
+		v^2 = \|\tilde{w}\|^2 = \mathbf{y}^T X^T (X X^T + \sigma_w^{-2} I)^{-1} (X X^T + \sigma_w^{-2} I)^{-1} X \mathbf{y}.
+	\end{equation}
+	Using $L$ and the equality \cite{golub2012matrix}
+	\begin{equation}
+		P B^T (B P B^T + R)^{-1} = (P^{-1} + B^T R^{-1} B)^{-1} B^T R^{-1},
+	\end{equation}
+	we have:
+	\begin{align}
+		\|\tilde{w}\|^2 &= \mathbf{y}^T (X^T X + \sigma_w^{-2} I)^{-1} X^T X (X^T X + \sigma_w^{-2} I)^{-1} \mathbf{y} \\
+		&= \mathbf{y}_L^T L_{ll} \mathbf{y}_L + 2 \mathbf{y}_L^T L_{lu} \mathbf{y}_U + \mathbf{y}_U^T L_{uu} \mathbf{y}_U.
+	\end{align}
+	Minimizing this with respect to $\mathbf{y}_U$, we get:
+	\begin{equation}
+		\mathbf{y}_U = - H_{uu}^{-1} H_{ul} \mathbf{y}_L,
+	\end{equation}
+	and similarly,
+	\begin{equation}
+		v^2 = \|\tilde{w}\|^2 \ge \mathbf{y}_L^T (L_{ll} - L_{lu} L_{uu}^{-1} L_{ul}) \mathbf{y}_L \equiv \tau.
+	\end{equation}
+	To compute $\tilde{P}(\mathbf{y}|\mathbf{x})$, we first compute:
+	\begin{align}
+		\tilde{P}(\mathbf{y}, w|\mathbf{x}) &= \tilde{P}(\mathbf{y}|\mathbf{x}, w) P(w) \\
+		&= P(w) \prod_{i=1}^{n} \mathcal{N}(y_i; w^T x_i, \sigma^2 + \sigma_i^2 \tau^2) \\
+		&\propto \exp\left( -\frac{1}{2} \left\{ \sum_i \kappa_i (y_i - w^T x_i)^2 + \sigma_w^{-2} \|w\|^2 \right\} \right).
+	\end{align}
+	Let
+	\begin{equation}
+		M = n \sigma_w^{-2} I + \sum_i \kappa_i x_i x_i^T, \quad \nu = M^{-1} \sum_i \kappa_i y_i x_i.
+	\end{equation}
+	By completing the square, we have:
+	\begin{equation}
+		\tilde{P}(\mathbf{y}|\mathbf{x}) = \int \tilde{P}(\mathbf{y}, w|\mathbf{x}) dw \propto \exp\left( -\frac{1}{2} \left\{ \sum_i \kappa_i y_i^2 - \|\nu\|^2 M \right\} \right).
+	\end{equation}
+	With some simplification,
+	\begin{equation}
+		\sum_i \kappa_i y_i^2 - \|\nu\|^2 M = \mathbf{y}^T \left\{ \Upsilon - \Upsilon X^T M^{-1} X \Upsilon \right\} \mathbf{y}.
+	\end{equation}
+	Using the Woodbury identity and $K = X^T X$, we get:
+	\begin{equation}
+		X^T M^{-1} X = \sigma_w^2 \left\{ X^T X - X^T X (\sigma_w^{-2} \Upsilon^{-1} + X^T X)^{-1} X^T X \right\}.
+	\end{equation}
+	Again using Woodbury, we get:
+	\begin{equation}
+		S = \Upsilon n \sigma_w^2 (K^{-1} + \sigma_w^2 \Upsilon)^{-1} \circ \Upsilon.
+	\end{equation}
+	The final objective function for the Probabilistic Minimax Active Robust Learning (PMARL) approach is:
+	\begin{equation}
+		Q = \argmin_{\{Q, |Q|=b\}} \max_{y_Q} \min_{y_U} \mathbf{y}^T S \mathbf{y}.
+	\end{equation}
+	Fortunately, because this objective function is quadratic, we can easily compute $Q$ when $b = 1$.
+	
+	There are many real-world applications for the robust active learning problem. One of these applications is active learning on distributions. The objective function \eqref{eq:pmar-obj} can be used directly for active learning on distributions. For this purpose, it is sufficient to set $\sigma_i = \beta n_i^{-1/2}$ and $\Upsilon = \diag(1 \oslash (\sigma^2 + \sigma_I^2 \tau))$, where $\beta$ is a parameter. We call this method Probabilistic Minimax Active Robust Learning on Distributions using Similarity (PMARLDS).
+	
+	\subsection{Robust Active Learning on Distributions using Bayesian Learning of Kernel Embeddings}
+	\label{subsec:ral-dist-main}
+	
+	To clarify the difference, in this section we call the points on which learning is performed "examples" and the points that are members of a sample drawn from a distribution "points." We have a number of distributions $P_i, i \in \{1, ..n\}$ as examples. For each distribution $P_i$, we have a sample $x_i = \{x_{i1}, x_{i2}, \ldots, x_{i n_i}\}$ drawn from it. Each member of this sample is a vector $x_{iu} \in \mathbb{R}^d, \forall u \in [1, n_i]$.
+	
+	The kernel embedding of distribution $P_i$ using the kernel function $k$ is:
+	\begin{equation}
+		\mu^*_{P_i} := \int \int k(x, .) dP_i(z),
+	\end{equation}
+	where $k$ is a continuous, bounded, and positive definite kernel function \cite{muandet2012domain}. The empirical kernel embedding for distribution $P_i$ is:
+	\begin{equation}
+		\hat{\mu}_{P_i} = \frac{1}{n_i} \sum_{j=1}^{n_i} k(x_{ij}, .).
+	\end{equation}
+	Let $\mathcal{H}$ be the Hilbert space associated with the kernel function $k$. $\mu(x)$ means the evaluation of $\mu$ at $x$. Specifically, for a given value $x$, the value
+	\begin{equation}
+		\hat{\mu}_{P_i}(x) = \frac{1}{n_i} \sum_{j=1..n_i} k(x_{ij}, x)
+	\end{equation}
+	is the evaluation of the empirical embedding of distribution $P_i$ at $x$.
+	
+	We need to compute the value $p(\mathbf{y}|\hat{\boldsymbol{\mu}}_P)$. The embedding $\hat{\boldsymbol{\mu}}_P$ is not the best estimate for the distribution $P$ \cite{muandet2012domain}. Recently, it was shown that we can obtain more accurate kernel embeddings with an uncertainty measure in the Hilbert space using a Bayesian framework \cite{flaxman2015fast}. We use this framework to consider the uncertainty in the kernel embedding estimate for the distribution. Assume $k_\theta$ is a positive definite kernel function with parameter $\theta$. The Bayesian kernel embedding proposes to define the prior probability on $\mu^*$ to ensure that the kernel embedding lies in the corresponding kernel space, i.e., $\mu^* \in \mathcal{H}_k$, as follows \cite{flaxman2015fast}:
+	\begin{equation}
+		\mu^* | \theta \sim \mathcal{GP}(0, r_\theta(., .)), \quad r_\theta(x, y) = \int k_\theta(x, u) k_\theta(u, y) du,
+	\end{equation}
+	where $\mathcal{GP}$ is a Gaussian process. The choice of $r_\theta$ guarantees that $\mu^*_{P_i} \in \mathcal{H}$ \cite{flaxman2015fast}. $\theta$ is the kernel function parameter, and henceforth we will omit it for simplicity.
+	
+	The following lemma determines the probability of a label for example $P_i$ given the kernel embedding value for example $P_i$ at each location $x_{ti} \in x_i, t \in [1, n_i]$.
+	
+	\begin{lemma}
+		Assume $r$ is the kernel function according to (3-184), and $r_{xx} = r(x, x)$, and $R_i = [r(x_{ti}, x_{vi})]_{t,v=1}^{n_i}$. Also,
+		\begin{equation}
+			R_i^x = [r(x, x_{1i}), r(x, x_{2i}), \ldots, r(x, x_{n_i})]^T.
+		\end{equation}
+		Furthermore, assume
+		\begin{equation}
+			B_i = (R_i + (\rho^2 / n_i) I_n)^{-1} R_i^x, \quad C_i = r_{xx} - R_i^{xT} (R_i + (\rho^2 / n_i) I_n)^{-1} R_i^x.
+		\end{equation}
+		Assuming a linear model $y_i = w^T \mu^*_{P_i} + \epsilon, \epsilon \sim \mathcal{N}(0, \sigma^2)$, we have:
+		\begin{equation}
+			P(y_i | \hat{\mu}_{P_i}(\mathbf{x}_i), w) \propto \sigma_i(w)^{1/2} \exp\left( -\frac{1}{2 \sigma_i(w)} (y_i - w^T B_i \hat{\mu}_{P_i}(\mathbf{x}_i))^2 \right),
+		\end{equation}
+		where $\sigma_i(w) = \sigma^2 + w^T C_i w$.
+	\end{lemma}
+	
+	\textbf{Proof.} Based on Theorem 1.1.2, the variance of the function $P(\hat{\mu}_{P_i}(x) | \mu^*_{P_i}(x))$ is proportional to $n_i^{-1/2}$. Therefore, we can assume that this function is:
+	\begin{equation}
+		P(\hat{\mu}_{P_i}(x) | \mu^*_{P_i}(x)) = \mathcal{N}(\hat{\mu}_{P_i}(x); \mu^*_{P_i}(x), \rho^2 / n_i),
+	\end{equation}
+	where $\rho$ is a parameter. This has also been proven in \cite{flaxman2015fast} based on the central limit theorem.
+	
+	Using a simple result in Gaussian processes \cite{mackay1992information}, the posterior distribution is:
+	\begin{equation}
+		P(\mu^*_{P_i}(x) | \hat{\mu}_{P_i}(\mathbf{x}_i)) = \mathcal{N}(\mu^*_{P_i}(x); B_i^T \hat{\mu}_{P_i}(\mathbf{x}_i), C_i).
+	\end{equation}
+	The quantity $\mu^*_{P_i}$ is unknown. Therefore, by marginalizing over $\mu^*_{P_i}$ along with the linear model assumption $y_i = w^T \mu^*_{P_i} + \epsilon, \epsilon \sim \mathcal{N}(0, \sigma^2)$, we have:
+	\begin{align}
+		P(y_i | \hat{\mu}_{P_i}(\mathbf{x}_i), w) &= \int P(y_i | \mu^*_{P_i}, w) P(\mu^*_{P_i} | \hat{\mu}_{P_i}(\mathbf{x}_i)) d\mu^*_{P_i} \\
+		&= \int \mathcal{N}(y_i; w^T \mu^*_{P_i}, \sigma^2) \mathcal{N}(\mu^*_{P_i}; \hat{\mu}_{P_i}(\mathbf{x}_i), C_i) d\mu^*_{P_i} \\
+		&\propto (\sigma_i(w))^{-1/2} \exp\left( -\frac{1}{2} \frac{(y_i - w^T B_i \hat{\mu}_{P_i}(\mathbf{x}_i))^2}{\sigma_i(w)} \right).
+	\end{align}
+	
+	If the distribution $P_i$ has a large covariance $C_i$, meaning that $w^T C_i w$ is large, its effect on the classifier will be small. Therefore, the probability of selecting $P_i$ for querying in active learning should be low. Looking at relation (3-185), we can gain insight into when this happens. This occurs when the normalized value of $R_i^x$, i.e., $(R_i + (\rho/n_i) I_n)^{-1/2} R_i^x$, is approximately orthogonal to $w$ in the Hilbert space.
+	
+	To compute $P(\mathbf{y}|\hat{\boldsymbol{\mu}}_P)$, we have:
+	\begin{equation}
+		P(\mathbf{y}|\hat{\boldsymbol{\mu}}_P(\mathbf{x})) = \int P(\mathbf{y}|\hat{\boldsymbol{\mu}}_P(\mathbf{x}), w) p(w) dw.
+	\end{equation}
+	Similar to \ref{subsec:ral-input}, this integral is intractable, and we need to find a way to efficiently compute its estimate.
+	
+	The problem now is how to find a tight lower bound for $w^T C_i w + \sigma^2$ for $\tau_i$. Here, we estimate the minimum value for $w^T C_i w$ from simpler conditions. In these simpler conditions, we assume there is no uncertainty for any distribution, and therefore the distribution is determined by its mean in the Hilbert space. Naturally, when $C_i$ is constant, considering the uncertainty for each distribution $P_i$ will not increase the value of $w^T C_i w$, because this itself is a measure of the complexity of $w$. The following theorem defines the lower bound $\tau_i$ for $w^T C_i w$.
+	
+	\begin{theorem}
+		Assume $U$ is unlabeled data and $L$ is labeled data for which we have the known labels $\mathbf{y}_L$. Without loss of generality, assume $\mathbf{y} = (\mathbf{y}_L, \mathbf{y}_U)$, where $\mathbf{y}_U$ is unknown. Furthermore, assume that kernel embedding through samples simplifies $P(\mathbf{y}|\hat{\boldsymbol{\mu}}_P(\mathbf{x}))$. Then $P(\mathbf{y}|\hat{\boldsymbol{\mu}}_P(\mathbf{x}))$ in relation (3-187) has the following tight lower bound:
+		\begin{equation}
+			\tilde{P}(\mathbf{y}|\hat{\boldsymbol{\mu}}_P(\mathbf{x})) \le P(\mathbf{y}|\hat{\boldsymbol{\mu}}_P(\mathbf{x})).
+		\end{equation}
+		This lower bound is proportional to:
+		\begin{equation}
+			\tilde{P}(\mathbf{y}|\hat{\boldsymbol{\mu}}_P(\mathbf{x})) \propto \exp\left( -\frac{1}{2} \mathbf{y}^T S \mathbf{y} \right),
+		\end{equation}
+		where
+		\begin{equation}
+			S = \Upsilon - \sigma_w^2 \Upsilon \left\{ K_{\mu B} - K_{\mu B} \left( \sigma_w^{-2} \Upsilon^{-1} + K_{\mu B} \right)^{-1} K_{\mu B} \right\}.
+		\end{equation}
+		Assume $\mu_{R_i} = (R_i + (\tau^2 / n_i) I_n)^{-1} \hat{\mu}_{P_i}(x_i)$. Then $K_{\mu B}$ is a matrix with elements
+		\begin{equation}
+			K_{\mu B}(i, j) = [\mu_{R_i}^T R_{ij} \mu_{R_j}],
+		\end{equation}
+		and
+		\begin{equation}
+			\Upsilon = \diag(1 \oslash \tau), \quad \tau_i = \mathbf{y}_L^T (H_{ll} - H_{lu} H_{uu}^{-1} H_{ul}) \mathbf{y}_L,
+		\end{equation}
+		where
+		\begin{equation}
+			L_t = (K_{\mu B} + \sigma_w^{-2} I)^{-1} E_t (K_{\mu B} + \sigma_w^{-2} I)^{-1}, \quad E_t = K_{\mu B} - P_t^T (R_t + (\tau^2 / n_t) I_n)^{-1} P_t,
+		\end{equation}
+		and $P_t = [R_{ti} \mu_{R_i}]_{i=1}^{n} \in \mathbb{R}^{n_t \times n}$. Then we have: $\tau_i = \mathbf{y}_l^T \{ L_i^{ll} - L_i^{ul^T} (L_i^{uu})^{-1} L_i^{ul} \} \mathbf{y}_l$. This lower bound is tight in the sense that there exists a label $y_U \in [-1, 1]^{n_u}$ for which the value of $P(\mathbf{y}|\hat{\boldsymbol{\mu}}_P(\mathbf{x}))$ is equal to this lower bound.
+	\end{theorem}
+	
+	\textbf{Proof.} To compute $\tilde{P}$, we need to evaluate the value $\tilde{v}_i^2 = \tilde{w}^T C_i \tilde{w}$. First, we need to estimate $\tilde{w}$. Assume $\hat{\mu}_B(\mathbf{x}) = [\hat{\mu}_{B_1}(x_1), \ldots, \hat{\mu}_{B_n}(x_n)]^T$, and $K_{\mu B} = \hat{\mu}_B(\mathbf{x}) \hat{\mu}_B(\mathbf{x})^T$. Based on Lemma 3.2.3, we have:
+	\begin{equation}
+		\tilde{w} = \argmin_w h'(w; \mathbf{y}, \hat{\mu}_P(\mathbf{x})) = (K_{\mu B} + \sigma_w^{-2} I)^{-1} \hat{\mu}_B(\mathbf{x}) \mathbf{y}.
+	\end{equation}
+	By substituting $\hat{\mu}_{B_i}(x_i)$ using $\mu_{R_i}$ and $R_{i*}^T R_{j*} = R_{ij}$, we have $K_{\mu B} = [\mu_{R_i}^T R_{ij} \mu_{R_j}]$. Let $K_{\text{reg}} = K_{\mu B} + \sigma_w^{-2} I$. We have:
+	\begin{equation}
+		\|\tilde{w}\|^2 C_t = \{ \hat{\mu}_B(\mathbf{x}) \mathbf{y} \}^T (K_{\text{reg}})^{-1} C_t (K_{\text{reg}})^{-1} \hat{\mu}_B(\mathbf{x}) \mathbf{y}.
+	\end{equation}
+	Let $E_t = \hat{\mu}_B(\mathbf{x})^T C_t \hat{\mu}_B(\mathbf{x})$. Using equality (3-180) and $L_t$, it follows that:
+	\begin{align}
+		\|\tilde{w}\|^2 C_t &= \mathbf{y}^T (K_{\mu B} + \sigma_w^{-2} I)^{-1} E_t (K_{\mu B} + \sigma_w^{-2} I)^{-1} \mathbf{y} \\
+		&= \mathbf{y}^T L_t \mathbf{y} = \mathbf{y}_L^T L_t^{ll} \mathbf{y}_L + 2 \mathbf{y}_L^T L_t^{lu} \mathbf{y}_U + \mathbf{y}_U^T L_t^{uu} \mathbf{y}_U.
+	\end{align}
+	By minimizing the last equality with respect to the unknown values $\mathbf{y}_U$, we get:
+	\begin{equation}
+		\|\tilde{w}\|^2 C_t \ge \mathbf{y}_L^T L_t^{ll} \mathbf{y}_L - \mathbf{y}_L^T L_t^{lu} (L_t^{uu})^{-1} L_t^{ul} \mathbf{y}_L \equiv \tau_t.
+	\end{equation}
+	Substituting $B_i$, $\hat{\mu}_B(\mathbf{x})$, and using $\mu_{R_i}$, we obtain:
+	\begin{align}
+		E_t(i, j) &= \hat{\mu}_B(\mathbf{x})^T C_t \hat{\mu}_B(\mathbf{x})(i, j) \\
+		&= \hat{\mu}_{P_i}(x_i)^T B_i C_t B_j^T \hat{\mu}_{P_j}(x_j) \\
+		&= \hat{\mu}_{P_i}(x_i)^T \left\{ (R_i + (\rho^2 / n_i) I_n)^{-1} R_{i*} \right\} C_t \\
+		&\quad \left\{ (R_j + (\rho^2 / n_i) I_n)^{-1} R_{j*} \right\}^T \hat{\mu}_{P_j}(x_j) \\
+		&= \mu_{R_i}^T R_{i*} C_t R_{j*}^T \mu_{R_j}.
+	\end{align}
+	The term $R_{i*} C_t R_{j*}^T$ can be simplified as:
+	\begin{align}
+		R_{i*} C_t R_{j*}^T &= R_{i*} \left\{ r_{**} - R_{t*}^T (R_t + (\rho^2 / n_t) I_n)^{-1} R_{t*} \right\} R_{j*}^T \\
+		&= R_{ij} - R_{it} (R_t + (\rho^2 / n_t) I_n)^{-1} R_{tj}.
+	\end{align}
+	Then:
+	\begin{equation}
+		E_t(i, j) = \mu_{R_i}^T \left\{ R_{ij} - R_{it} (R_t + (\rho^2 / n_t) I_n)^{-1} R_{tj} \right\} \mu_{R_j} = K_{\mu B}(i, j) - \mu_{R_i}^T R_{it} (R_t + (\rho^2 / n_t) I_n)^{-1} R_{tj} \mu_{R_j}.
+	\end{equation}
+	Using $P_t$, we have:
+	\begin{equation}
+		E_t = K_{\mu B} - P_t^T (R_t + (\rho^2 / n_t) I_n)^{-1} P_t.
+	\end{equation}
+	Therefore,
+	\begin{equation}
+		\tilde{P}(\mathbf{y}|\hat{\boldsymbol{\mu}}_P(\mathbf{x}), w) = \prod_{i=1}^{n} \tilde{P}(y_i | \hat{\mu}_{P_i}(\mathbf{x}_i), w) \propto \exp\left( -\frac{1}{2} H \right),
+	\end{equation}
+	where
+	\begin{equation}
+		H = \sum_{i=1}^{n_i} \kappa_i (y_i - w^T \hat{\mu}_{B_i}(\mathbf{x}_i))^2.
+	\end{equation}
+	Similar to Theorem 3.3.4, by setting
+	\begin{equation}
+		M = \sigma_w^{-2} I + \sum_{i=1}^{n_i} \kappa_i \hat{\mu}_{B_i}(\mathbf{x}_i) \hat{\mu}_{B_i}(\mathbf{x}_i)^T,
+	\end{equation}
+	completing the square and simplifying using $K_{\mu B} = \hat{\mu}_B(\mathbf{x}) \hat{\mu}_B(\mathbf{x})^T$, it follows that:
+	\begin{align}
+		\tilde{P}(\mathbf{y}|\hat{\boldsymbol{\mu}}_P(\mathbf{x})) &= \int \tilde{P}(\mathbf{y}|\hat{\boldsymbol{\mu}}_P(\mathbf{x}), w) P(w) dw \\
+		&\propto \exp\left\{ -\frac{1}{2} \mathbf{y}^T S \mathbf{y} \right\}.
+	\end{align}
+	This result is very intuitive because it essentially expresses the similarity between two distributions $(i, j)$ for selecting the label of distribution $t$ based on a common criterion, i.e., the metric present in distribution $t$.
+	
+	\chapter{Experiments}
+	In this chapter, we evaluate the performance of the proposed methods. First, we evaluate the performance of the proposed functional gradient approach to Probabilistic Minimax Active Learning. Then, in Section 3.0.4, we evaluate the performance of the proposed active learning on distributions method.
+	
+	\section{Experiments Related to the Functional Gradient Approach}
+	The goal of these experiments is to evaluate the efficiency of the proposed method compared to other state-of-the-art active learning strategies. Therefore, a set of experiments was designed to determine whether the proposed method based on Probabilistic Minimax Active Learning provides a better selection mechanism than other active learning methods, as well as boosting-based methods. For this purpose, we conducted experiments on a large set of widely used datasets in machine learning papers and problems.
+	
+	\subsection{Experiments on Various Datasets}
+	In this section, a set of experiments is conducted to demonstrate the efficiency of the proposed method compared to other active learning strategies on a large number of datasets. The goal is to show the effectiveness of the proposed method in selecting examples for querying based on the functional approach to active learning.
+	
+	In these experiments, the following methods were examined:
+	\begin{itemize}
+		\item \textbf{RANDOM}: Random sampling, which selects examples randomly.
+		\item \textbf{UNCERTAIN}: Uncertainty sampling, which selects examples based on the degree of uncertainty about their label.
+		\item \textbf{MARGIN}: This method selects the example closest to the current classifier boundary, regardless of its label \cite{scheffer2001active}. Here, the SVM classifier is used, implemented using the LIBSVM library.
+		\item \textbf{HARMONIC}: The Gaussian harmonic method is a semi-supervised and active learning method \cite{zhu2003semi}.
+		\item \textbf{SPCTL2BOOST}: The proposed method.
+	\end{itemize}
+	
+	To evaluate the algorithm, we selected a diverse set of datasets from various applications. These datasets include UCI datasets such as Breast Cancer, Bupa Liver, CODRNA, COVTYPE, ECOLI, Four Class, German Numer, Gisette, Glass, IJCNN, Image Segment, Ionosophere, Mushrooms, Pima Diabettes, and Sonar. We also used other datasets provided with the libsvm tools \cite{chang2011libsvm}, including german.numer, IJCNN1, phishing, liver-disorders, a1a, a2a, a3a, a4a, and a5a. The Gisette dataset is another dataset used in the NIPS feature challenge \cite{guyon2004result}. Some other datasets were obtained from other well-known sources \cite{newman1998uci, asuncion2007uci}. Table 4.1 provides details of the datasets used.
+	
+	In each of these experiments, the dataset was randomly divided into two separate subsets: one for training and one for testing. The test subset was used throughout the experiments to evaluate classifier accuracy. Active learning starts with one randomly selected point from each class until the labeling budget is exhausted. When a larger budget did not affect accuracy, we reduced the labeling budget as needed. At each iteration of active learning, an example is selected and its label is used to retrain the classifier and evaluate the classifier on the test subset. The LIBSVM library was used for training the classifier and comparing results for all methods \cite{chang2011libsvm}. The parameter C in LIBSVM was set to 1. The bandwidth of the RBF kernel was determined using the median heuristic \cite{gretton2012kernel}. The results of the experiments are presented in the figures.
+	
+	The performance of the RANDOM method is sometimes acceptable in the early stages of some datasets and can provide good accuracy at the end. Some examples have labels that are correctly identified by the current classifier and do not change the current classifier boundary; these are called useless examples \cite{hospedales2010finding}. When all examples are useless, active learning approaches select these examples, wasting the labeling budget. The MARGIN approach, which is the most popular active learning approach for SVM classifiers, performs very well on some datasets. However, it also performs very poorly on some datasets, such as Breast and IJCNN. The performance of the Harmonic method is acceptable on some datasets but significantly decreases on others. Finally, as seen in the experimental results, the simple form of the proposed method, SPCTL2BOOST, generally provides better performance than other methods.
+	
+	Table 4.2 shows the time spent for each method. For this purpose, we needed to calculate the average time spent in the querying method for each algorithm. As seen in Table 4.2, the time consumption of the proposed algorithm is often comparable to that of MARGIN. The time spent by the proposed method is often less than that spent by UNCERT. The time spent by the HARMON method is greater than that of UNCERT and is therefore not shown in the table.
+	
+	\subsection{Comparison with Boosting-Based Approaches}
+	In this section, we compare the proposed method with other boosting-based methods. Therefore, a set of experiments was designed with a focus on this comparison.
+	
+	As previously mentioned, the proposed method can be seen as a boosting algorithm in which a set of weak classifiers learns from the data. This subsection compares the proposed method with the boosting-based active learning method. As presented in \cite{schapire1997boosting}, the boosting approach to active learning selects points that have the minimum distance to the current ensemble of classifiers in the boosting classification.
+	
+	To determine whether the functional gradient approach to Probabilistic Minimax Active Learning is more effective than other boosting-based methods, we compared three algorithms using a common weak classifier with the same number of functional components/classifiers. The method used L2Boosting from \cite{buhlmann2003boosting} to obtain the FUNCGRDSTAL active learning method. For all methods, we used the datasets from the well-known work \cite{chang2011libsvm}. Here, the boosting-based method is named MARGINBOOST. The settings for these experiments are exactly the same as the previous experiments. Figure 4.4 shows the results of the experiments. As is clear, the proposed method SPCTL2BOOST is more efficient than the other two methods. The results show that the proposed method is more efficient because it selects more informative and representative points.
+	
+	\subsection{Comparison with Distribution Discrepancy Methods}
+	The goal of this section is to compare the proposed method with active learning algorithms that measure the difference between labeled, unlabeled, and query sets. Specifically, the proposed algorithm is compared with the following two new methods:
+	\begin{itemize}
+		\item \textbf{BMDR}: The approach proposed in \cite{wang2016active}.
+		\item \textbf{EXPREPINF}: The approach proposed in \cite{bissoto2015active}.
+	\end{itemize}
+	For these algorithms, parameters were set according to their original papers. All settings, as well as the parameter settings for the proposed method, were determined as in the previous experiments. We repeated the experiments ten times and reported the average results. Each iteration of active learning took much longer than the experiments in the previous step. The reason for this was that both BMDR and EXPREPINF methods required solving a constrained quadratic problem in each iteration. The constrained quadratic problems were solved using Mosek. Figure 4.5 shows the experimental results compared to the distribution discrepancy methods. As seen in Figure 4.5, the results of the proposed method show improvement compared to these methods.
+	
+	\subsection{Distributional Datasets}
+	In this section, we examine the results of active learning on distribution experiments. First, to demonstrate the efficiency of the proposed method in controlled conditions, we conducted experiments on a synthetic dataset. Then, we conducted experiments on real-world data. In each experiment, we compared the results of the proposed method with the following methods:
+	\begin{itemize}
+		\item \textbf{DISTRAND}: This method randomly selects distributional examples.
+		\item \textbf{DISTQUIRE}: We compute the mean of each distribution in the input space. Then, for each query, points are selected using the Quire method \cite{huang2014active}.
+		\item \textbf{DISTHARM}: The mean of each distribution is computed, and then examples are selected using the Gaussian harmonic method \cite{zhu2003semi}. This method performs active learning along with semi-supervised learning through harmonic functions.
+		\item \textbf{DISTMARGIN}: Using the computed means for each distribution, margin-based active learning in the SVM classifier selects the most informative points \cite{scheffer2001active}.
+		\item \textbf{HILBQUIRE}: Here, we proposed the HILBQUIRE method. In this proposed method, points are selected based on the QUIRE method \cite{huang2014active}. In this method, the kernel matrix between examples in QUIRE is computed using the mean embedding of distributions \cite{muandet2012domain}.
+	\end{itemize}
+	
+	In all experiments, each dataset was randomly divided into two separate datasets for training and testing. At each stage of active learning, we trained the classifier on the labeled data and reported the accuracy on the test data. We implemented the SMM classifier \cite{sriperumbudur2009kernel} using the LIBSVM package \cite{chang2011libsvm} for training and testing on distributional data. In these experiments, we used the empirical expectation kernel along with the RBF kernel between distributions using relation (2-1).
+	
+	For the synthetic distributional dataset, we used the dataset presented in \cite{sriperumbudur2009kernel}. We call this dataset GAUSSDIST. Two classes of Gaussian distributions are considered for both positive and negative classes. The mean parameters of these Gaussian distributions are normally distributed between (1, 1, ..., 1) and (2, 2, ..., 2) with covariance $\Sigma = 0.5 I$. The covariance of these distributions was obtained by a Wishart distribution with covariance $\Sigma_+ = 0.6 I$ and $\Sigma_- = 1.2 I$ with 10 degrees of freedom.
+	
+	We randomly selected 30\% of the samples for testing. The training set consisted of 150 distributions for the positive and negative classes. We set the kernel parameters for the input level and the second level to $\gamma = \gamma_{is} = 0.1$, and the regularization parameter to $\lambda = 2^{-7}$. Each experiment was repeated 50 times.
+	
+	To demonstrate the efficiency of the proposed active learning method, which considers uncertainty in the kernel embedding estimate of distributions, we designed an experiment with significantly different sample sizes for each distribution. For this purpose, a sample size of 5 or 100 was randomly selected for each distribution. The experimental results are shown in Figure 4.6. When the number of sampled points from each distribution is different, our proposed method PMARLDB performs much better than other methods. The reason for this could be that some distributions with large sample sizes bias the learning toward themselves.
+	
+	By directly modeling the uncertainty in estimating distributions, the accuracy of the proposed method increases in conditions of high uncertainty. Our proposed approach uses uncertainty information in both small and large sample size conditions to select better distributions. Even when the number of sampled points from each distribution is equal and small, our proposed method outperforms other methods. Although HILBQUIRE performs well in conditions of different sizes, its accuracy is not good in small sample size conditions. This situation usually occurs when there is high uncertainty in the kernel embedding estimate for the distributions used in HILBQUIRE.
+	
+	\subsection{Real-World Datasets}
+	
+	\paragraph{Handwritten Digit Recognition}
+	Here, we present the experimental results on the USPSDIST handwritten digit dataset \cite{sriperumbudur2009kernel}. This dataset is a distributional dataset created from images of digits zero to nine. The points are obtained using basic transformations (translation, resizing, rotation) on the images. Each image of a digit is a $16 \times 16$ matrix. The prior probability on the transformation parameters of equivalent classes determines the distributions.
+	
+	We used two sets of parameters for resizing and translation, one for the horizontal axis and one for the vertical axis. For rotation, we used a single parameter for the rotation angle. Similar to \cite{sriperumbudur2009kernel}, the values $\mathcal{N}([1, 1], 0.1 I_2)$, $\mathcal{N}([0, 0], 5 I_2)$, and $\mathcal{N}(0, \pi)$ were used for scaling, translation, and rotation, respectively. We randomly selected a subset of class pairs 3-8, 6-9, 3-4, and 1-8. In each of the mentioned classification tasks, 100 distributions were used. For each distribution $P_i$, the number of random points $n_i$ was generated according to the same method as in \cite{sriperumbudur2009kernel}. The value $n_i$ was set to $\max(1, \text{round}(\mathcal{N}(2, 10)))$.
+	
+	Active learning was started with two labeled examples and terminated with 50 examples. The experiments were repeated 50 times for each dataset. The results are shown in Figure 4.9.
+	
+	As observed in this figure, even with low variance in the sample sizes for each distributional point, our proposed method implemented in PMARLDB gives better results than other methods. Comparing the PMARLDB method with random sampling shows that PMARLDB selects distributional points whose labels significantly improve classifier performance.
+	
+	\paragraph{Bag of Words}
+	In this section, we present the experiments on several text datasets. To represent each document, we used the Bag of Words representation. We assume that each document can be represented by a distribution from which words are sampled. Each word can be represented by a vector, and each document by a distribution of these vectors. Because each document contains a variable number of words, we have sets of different sizes for the documents.
+	
+	Here, we used word2vec \cite{mikolov2013distributed} to convert words to vectors. In the experiments, we used the 20 Newsgroups dataset, which contains 20 different classes. Because this dataset is a multi-class dataset, we selected a number of class pairs that are more difficult to classify. We also selected fewer simpler tasks to demonstrate the performance of the proposed method on both hard and easy tasks.
+	
+	Because some documents in this dataset contain a very large number of words, we removed documents with more than 100 words. Then, we randomly selected 300 documents for each class. Figure ? shows the experimental results. As seen in this figure, the proposed method PMARLDB provides better results compared to almost all methods and is logically better than random sampling.
+	
+	\subsection{Analysis of the Effect of Bayesian Learning of Kernel Embeddings of Distributions}
+	A natural question that arises is whether using Bayesian learning of kernel embeddings of distributions in the PMARLDB active learning on distributions approach improves its results, or whether merely considering the inaccuracy of examples in robust active learning in the distribution space yields the improvements.
+	
+	On the other hand, the proposed active learning method in \ref{subsec:ral-input} can be used to attack the active learning on distributions problem. To characterize the uncertainty in examples, Theorem 1.1.2 states the uncertainty in the empirical mean embedding of distributions. This uncertainty can be expressed using a Gaussian distribution with mean equal to the empirical mean embedding of distributions and variance proportional to $1/\sqrt{n}$. This approach is essentially a weaker version of the PMARLDB method, in which Bayesian learning of kernel embeddings is not considered.
+	
+	In other words, our question is whether the robust active learning method from \ref{subsec:ral-input} using Theorem 1.1.2 for considering uncertainty in examples is effective for selecting distributional points.
+	
+	Theorem 1.1.2 essentially states that the estimate of distributions using the mean embedding of distributions in Hilbert space has a variance of order $O(n^{-1/2})$. Therefore, we can use the formulation from \ref{subsec:ral-input} for selecting examples. As previously mentioned, we call this method PMARLDS. In this section, we compare this method with the main method to demonstrate the effectiveness of the proposed method. To this end, we conducted experiments on the 20 Newsgroups dataset to compare PMARLDB and PMARLDS. The results are shown in Figure 4.10. In this figure, it is clear that the proposed main method PMARLDB is always better than PMARLDS. PMARLDB shows significant improvement due to the simultaneous Bayesian learning of kernel embeddings.
+	
+	\section{Conclusion}
+	In this chapter, we presented a general and theoretical active learning approach. This approach is particularly useful when there is uncertainty in the examples along with uncertainty about the unknown labels of the majority of examples. When examples are inaccurate, it was shown that considering this uncertainty during sample selection in active learning is very effective. Our main goal was to select distributional examples with different sizes from each distribution. To this end, we simultaneously performed Bayesian learning of distribution embeddings in kernel space during active learning, which led to an intuitively meaningful formulation for comparing and selecting distributions. Experiments on distributional and real-world datasets demonstrated the efficiency of the proposed method.
+	
+	One of the limitations of kernel-based learning on distributions is that the samples drawn from the distributions must be stored. This gradually becomes a major obstacle when the number of distributions and sampled points increases. In the future, we plan to use linear feature methods to reduce the storage requirement for large-scale datasets.
+	
+	\section*{Tables and Figures}
+	\begin{table}[h!]
+		\centering
+		\caption{Dataset Characteristics}
+		\label{tab:datasets}
+		\begin{tabular}{l|c|c}
+			\hline
+			Dataset & \# of Features & \# of Examples \\
+			\hline
+			a1a & 123 & 1605 \\
+			a2a & 123 & 2265 \\
+			a3a & 123 & 3185 \\
+			a4a & 123 & 4781 \\
+			a5a & 123 & 6414 \\
+			Breast Cancer & 10 & 683 \\
+			Bupa Liver & 7 & 345 \\
+			CORDNA & 8 & 59525 \\
+			FOUR Class & 2 & 862 \\
+			GERNMAN Numer & 24 & 1000 \\
+			GISETTE & 5000 & 6000 \\
+			GLASS & 10 & 214 \\
+			IJCNN & 22 & 49990 \\
+			IMAGESEGMENT & 19 & 2310 \\
+			Ionoshpere & 34 & 351 \\
+			MUSHROOMS & 22 & 8124 \\
+			PIMA Diabettes & 8 & 768 \\
+			SONAR & 60 & 208 \\
+			phishing & 68 & 11055 \\
+			liver-disorders & 5 & 145 \\
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	\begin{table}[h!]
+		\centering
+		\caption{Time spent by active learning methods on different datasets}
+		\label{tab:time}
+		\begin{tabular}{l|r|r|r|r}
+			\hline
+			Dataset & RANDOM & SPCTL2BOOST & MARGIN & UNCERT \\
+			\hline
+			a1a & 0.69 & 8.75 & 2.29 & 44.07 \\
+			a2a & 0.69 & 8.69 & 2.29 & 43.24 \\
+			a3a & 0.71 & 8.66 & 2.30 & 43.27 \\
+			a4a & 0.69 & 8.78 & 2.28 & 43.35 \\
+			a5a & 0.69 & 8.89 & 2.30 & 43.32 \\
+			breast & 0.77 & 24.25 & 1.98 & 132.92 \\
+			Bupa & 0.71 & 36.50 & 1.82 & 69.58 \\
+			CODRNA & 0.69 & 9.07 & 1.83 & 41.71 \\
+			COVTYPE & 0.70 & 8.88 & 2.00 & 42.67 \\
+			ECOLI & 0.70 & 13.15 & 1.85 & 44.12 \\
+			FOURCLASS & 0.67 & 9.04 & 1.79 & 42.20 \\
+			german & 0.69 & 8.94 & 1.95 & 42.31 \\
+			gisette & 0.68 & 8.70 & 31.72 & 106.39 \\
+			GLASS & 0.70 & 4.36 & 1.73 & 31.62 \\
+			ijcnn1 & 0.67 & 8.83 & 1.85 & 42.13 \\
+			IMAGESEG & 0.78 & 228.58 & 2.13 & 127.59 \\
+			ionospere & 0.67 & 38.67 & 2.03 & 70.18 \\
+			PIMA & 0.76 & 328.53 & 2.04 & 146.07 \\
+			sonar & 0.70 & 9.03 & 2.06 & 40.31 \\
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	\begin{table}[h!]
+		\centering
+		\caption{Time spent by algorithms on several datasets}
+		\label{tab:time2}
+		\begin{tabular}{l|r|r|r|r}
+			\hline
+			Dataset & RANDOM & SPCTL2BOOST & BMDR & EXPREPINF \\
+			\hline
+			ionospere & 0.00076 & 0.00239 & 3.76450 & 1.72880 \\
+			liver-disorders & 0.00062 & 0.00101 & 4.09025 & 1.72851 \\
+			sonar & 0.00068 & 0.00106 & 4.29759 & 1.85681 \\
+			phishing & 0.00063 & 0.00103 & 4.66769 & 1.96604 \\
+			a1a & 0.00062 & 0.00122 & 4.72226 & 2.11856 \\
+			a2a & 0.00063 & 0.00094 & 5.16078 & 2.22566 \\
+			a3a & 0.00067 & 0.00104 & 5.19418 & 2.38561 \\
+			a4a & 0.00079 & 0.00158 & 5.55162 & 2.61149 \\
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	\begin{table}[h!]
+		\centering
+		\caption{Classes of the 20 Newsgroups dataset}
+		\label{tab:20news}
+		\begin{tabular}{c|l}
+			\hline
+			label & class \\
+			\hline
+			1 & alt.atheism \\
+			2 & comp.graphics \\
+			3 & comp.os.ms-windows.misc \\
+			4 & comp.sys.ibm.pc.hardware \\
+			5 & comp.sys.mac.hardware \\
+			6 & comp.windows.x \\
+			7 & misc.forsale \\
+			8 & rec.autos \\
+			9 & rec.motorcycles \\
+			10 & rec.sport.baseball \\
+			11 & rec.sport.hockey \\
+			12 & sci.crypt \\
+			13 & sci.electronics \\
+			14 & sci.med \\
+			15 & sci.space \\
+			16 & soc.religion.christian \\
+			17 & talk.politics.guns \\
+			18 & talk.politics.mideast \\
+			19 & talk.politics.misc \\
+			20 & talk.religion.misc \\
+			\hline
+		\end{tabular}
+	\end{table}
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.8\textwidth]{fig4_1.png}
+		\caption{Comparison of the performance of the proposed algorithm and other algorithms on various datasets (Part 1)}
+		\label{fig:exp1}
+	\end{figure}
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.8\textwidth]{fig4_2.png}
+		\caption{Comparison of the performance of the proposed algorithm and other algorithms on various datasets (Part 2)}
+		\label{fig:exp2}
+	\end{figure}
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.8\textwidth]{fig4_3.png}
+		\caption{Comparison of the performance of the proposed algorithm and other algorithms on various datasets (Part 3)}
+		\label{fig:exp3}
+	\end{figure}
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.8\textwidth]{fig4_4.png}
+		\caption{Comparison of the proposed method with other boosting methods}
+		\label{fig:boosting}
+	\end{figure}
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.8\textwidth]{fig4_5.png}
+		\caption{Comparison of the proposed method with distribution discrepancy methods}
+		\label{fig:discrepancy}
+	\end{figure}
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.8\textwidth]{fig4_6.png}
+		\caption{Comparison of classifier accuracy in active learning on the GAUSSDIST dataset for two cases: different sample sizes and constant sample size for each distribution}
+		\label{fig:gaussdist}
+	\end{figure}
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.8\textwidth]{fig4_7.png}
+		\caption{Comparison of classification accuracy for a group of 20 Newsgroups datasets (Part 1)}
+		\label{fig:20news1}
+	\end{figure}
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.8\textwidth]{fig4_8.png}
+		\caption{Comparison of classification accuracy for another group of 20 Newsgroups datasets (Part 2)}
+		\label{fig:20news2}
+	\end{figure}
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.8\textwidth]{fig4_9.png}
+		\caption{Comparison of active learning accuracy for the USPSDIST dataset}
+		\label{fig:uspsdist}
+	\end{figure}
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.8\textwidth]{fig4_10.png}
+		\caption{Comparison of classification accuracy between Bayesian active learning in Hilbert space PMARLDS and PMARLDB on the 20 Newsgroups dataset}
+		\label{fig:pmarlds_vs_pmarldb}
+	\end{figure}
+	
+\end{document}
