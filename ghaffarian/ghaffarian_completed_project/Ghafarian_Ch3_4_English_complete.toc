@@ -1,0 +1,36 @@
+\contentsline {chapter}{Source Figure Note}{2}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}Active Learning on Distributions}{3}{chapter.1}%
+\contentsline {subsection}{\numberline {1.0.1}Analysis of Theoretical Approaches for the Active Learning Problem}{3}{subsection.1.0.1}%
+\contentsline {subsubsection}{\numberline {1.0.1.1}Towards Active Learning for Empirical Risk Minimization}{3}{subsubsection.1.0.1.1}%
+\contentsline {paragraph}{Simple-Complex Classifier}{5}{section*.3}%
+\contentsline {paragraph}{Examining Results on Synthetic Data}{7}{section*.4}%
+\contentsline {paragraph}{Convex Approximation for Robust Active Learning}{8}{section*.6}%
+\contentsline {subsubsection}{\numberline {1.0.1.2}Multi-Task Active Learning}{11}{subsubsection.1.0.1.2}%
+\contentsline {subsubsection}{\numberline {1.0.1.3}Learning Using Privileged Information}{13}{subsubsection.1.0.1.3}%
+\contentsline {subsubsection}{\numberline {1.0.1.4}Probabilistic Minimax Active Learning (PMAL)}{19}{subsubsection.1.0.1.4}%
+\contentsline {paragraph}{Introduction}{19}{section*.7}%
+\contentsline {paragraph}{Proposed Method}{20}{section*.9}%
+\contentsline {paragraph}{Background and Definitions}{21}{section*.10}%
+\contentsline {paragraph}{Probabilistic Minimax Active Learning}{22}{section*.11}%
+\contentsline {section}{\numberline {1.1}Functional Approach to Probabilistic Minimax Active Learning}{27}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Functional Approach to Probabilistic Minimax Active Learning}{27}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Functional Approach to Active Learning}{29}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Functional Gradient Approach and Unlabeled Data}{29}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Minimax Approach to Active Learning in the L2Boost Model}{30}{subsection.1.1.4}%
+\contentsline {paragraph}{Time Analysis}{34}{section*.13}%
+\contentsline {section}{\numberline {1.2}Active Learning in the Distribution Domain}{34}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Learning on Distributions}{34}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Active Learning on Distributions based on Probabilistic Minimax Active Learning}{37}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Robust Bayesian Active Learning in the Input Space}{38}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Robust Active Learning on Distributions using Bayesian Learning of Kernel Embeddings}{44}{subsection.1.2.4}%
+\contentsline {chapter}{\numberline {2}Experiments}{48}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Experiments Related to the Functional Gradient Approach}{48}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Experiments on Various Datasets}{48}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Comparison with Boosting-Based Approaches}{49}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Comparison with Distribution Discrepancy Methods}{50}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Distributional Datasets}{50}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Real-World Datasets}{51}{subsection.2.1.5}%
+\contentsline {paragraph}{Handwritten Digit Recognition}{51}{section*.15}%
+\contentsline {paragraph}{Bag of Words}{52}{section*.16}%
+\contentsline {subsection}{\numberline {2.1.6}Analysis of the Effect of Bayesian Learning of Kernel Embeddings of Distributions}{52}{subsection.2.1.6}%
+\contentsline {section}{\numberline {2.2}Conclusion}{53}{section.2.2}%

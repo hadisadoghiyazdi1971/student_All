@@ -1,0 +1,5 @@
+\contentsline {chapter}{Compilation Note}{2}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}Active Learning on Distributions}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Figure Blocks Already Normalized}{3}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Experiments}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Tables and Figures}{6}{section.2.1}%

@@ -1,0 +1,1985 @@
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.12.3)  5 JUL 2026 21:39
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Cybernetics.tex
+(./Cybernetics.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+(c:/texlive/2024/texmf-dist/tex/latex/ieeetran/IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen140
+\@IEEEtrantmpdimenB=\dimen141
+\@IEEEtrantmpdimenC=\dimen142
+\@IEEEtrantmpcountA=\count184
+\@IEEEtrantmpcountB=\count185
+\@IEEEtrantmpcountC=\count186
+\@IEEEtrantmptoksA=\toks17
+LaTeX Font Info:    Trying to load font information for TU+ptm on input line 50
+3.
+LaTeX Font Info:    No file TUptm.fd. on input line 503.
+
+LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
+(Font)              using `TU/lmr/m/n' instead on input line 503.
+
+-- Using 8.5in x 11in (letter) paper.
+-- Using DVI output.
+\@IEEEnormalsizeunitybaselineskip=\dimen143
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen144
+\CLASSINFOnormalsizeunitybaselineskip=\dimen145
+\IEEEnormaljot=\dimen146
+
+LaTeX Font Warning: Font shape `TU/ptm/bx/n' undefined
+(Font)              using `TU/ptm/m/n' instead on input line 1090.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/m/it' undefined
+(Font)              using `TU/ptm/m/n' instead on input line 1090.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/bx/it' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 1090.
+
+\IEEEquantizedlength=\dimen147
+\IEEEquantizedlengthdiff=\dimen148
+\IEEEquantizedtextheightdiff=\dimen149
+\IEEEilabelindentA=\dimen150
+\IEEEilabelindentB=\dimen151
+\IEEEilabelindent=\dimen152
+\IEEEelabelindent=\dimen153
+\IEEEdlabelindent=\dimen154
+\IEEElabelindent=\dimen155
+\IEEEiednormlabelsep=\dimen156
+\IEEEiedmathlabelsep=\dimen157
+\IEEEiedtopsep=\skip48
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@IEEEsubequation=\count191
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\c@figure=\count192
+\c@table=\count193
+\@IEEEeqnnumcols=\count194
+\@IEEEeqncolcnt=\count195
+\@IEEEsubeqnnumrollback=\count196
+\@IEEEquantizeheightA=\dimen158
+\@IEEEquantizeheightB=\dimen159
+\@IEEEquantizeheightC=\dimen160
+\@IEEEquantizeprevdepth=\dimen161
+\@IEEEquantizemultiple=\count197
+\@IEEEquantizeboxA=\box51
+\@IEEEtmpitemindent=\dimen162
+\IEEEPARstartletwidth=\dimen163
+\c@IEEEbiography=\count198
+\@IEEEtranrubishbin=\box52
+) (c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2023/05/13 v2.17o AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2024/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen164
+))
+(c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen165
+)
+(c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count199
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count266
+\leftroot@=\count267
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count268
+\DOTSCASE@=\count269
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen166
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count270
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count271
+\dotsspace@=\muskip16
+\c@parentequation=\count272
+\dspbrk@lvl=\count273
+\tag@help=\toks19
+\row@=\count274
+\column@=\count275
+\maxfields@=\count276
+\andhelp@=\toks20
+\eqnshift@=\dimen167
+\alignsep@=\dimen168
+\tagshift@=\dimen169
+\tagwidth@=\dimen170
+\totwidth@=\dimen171
+\lineht@=\dimen172
+\@envbody=\toks21
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(c:/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(c:/texlive/2024/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(c:/texlive/2024/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks23
+\thm@bodyfont=\toks24
+\thm@headfont=\toks25
+\thm@notefont=\toks26
+\thm@headpunct=\toks27
+\thm@preskip=\skip54
+\thm@postskip=\skip55
+\thm@headsep=\skip56
+\dth@everypar=\toks28
+)
+(c:/texlive/2024/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2023/07/08 v1.2f Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+)
+(c:/texlive/2024/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2024/03/11 v1.30 mathematical typesetting tools
+
+(c:/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks29
+)
+(c:/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count277
+\calc@Bcount=\count278
+\calc@Adimen=\dimen173
+\calc@Bdimen=\dimen174
+\calc@Askip=\skip57
+\calc@Bskip=\skip58
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count279
+\calc@Cskip=\skip59
+)
+(c:/texlive/2024/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+\g_MT_multlinerow_int=\count280
+\l_MT_multwidth_dim=\dimen175
+\origjot=\skip60
+\l_MT_shortvdotswithinadjustabove_dim=\dimen176
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen177
+\l_MT_above_intertext_sep=\dimen178
+\l_MT_below_intertext_sep=\dimen179
+\l_MT_above_shortintertext_sep=\dimen180
+\l_MT_below_shortintertext_sep=\dimen181
+\xmathstrut@box=\box55
+\xmathstrut@dim=\dimen182
+)
+(c:/texlive/2024/texmf-dist/tex/latex/tools/array.sty
+Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen183
+\ar@mcellbox=\box56
+\extrarowheight=\dimen184
+\NC@list=\toks30
+\extratabsurround=\skip61
+\backup@length=\skip62
+\ar@cellbox=\box57
+)
+(c:/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(c:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 107.
+
+(c:/texlive/2024/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen185
+\Gin@req@width=\dimen186
+)
+(c:/texlive/2024/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+
+(c:/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\c@ALC@unique=\count281
+\c@ALC@line=\count282
+\c@ALC@rem=\count283
+\c@ALC@depth=\count284
+\ALC@tlm=\skip63
+\algorithmicindent=\skip64
+)
+(c:/texlive/2024/texmf-dist/tex/latex/preprint/balance.sty
+Package: balance 1999/02/23 4.3 (PWD)
+\oldvsize=\dimen187
+)
+\c@theorem=\count285
+\c@lemma=\count286
+\c@definition=\count287
+\c@corollary=\count288
+
+
+! LaTeX Error: Command \det already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 \DeclareMathOperator{\det}{det}
+                                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \P already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 \DeclareMathOperator{\P}{\mathbb{P}}
+                                         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+(c:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2024-02-20 L3 backend support: XeTeX
+\g__graphics_track_int=\count289
+\l__pdf_internal_box=\box58
+\g__pdf_backend_object_int=\count290
+\g__pdf_backend_annotation_int=\count291
+\g__pdf_backend_link_int=\count292
+)
+No file Cybernetics.aux.
+\openout1 = `Cybernetics.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 2
+6.
+(c:/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 26.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 26.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 26.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 26.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 26.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 26.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 26.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 26.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 26.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 26.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 26.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 26.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 26.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 26.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 26.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 26.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 26.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 26.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 26.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/it' undefined
+(Font)              using `TU/ptm/bx/it' instead on input line 26.
+
+-- Lines per column: 58 (exact).
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 33.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 37.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/m/sc' undefined
+(Font)              using `TU/ptm/m/n' instead on input line 41.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 47.
+
+
+LaTeX Warning: Citation `du2010asking' on page 1 undefined on input line 47.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 49.
+
+
+LaTeX Warning: Citation `getoor2003learning' on page 1 undefined on input line 
+49.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 49.
+
+
+LaTeX Warning: Citation `muandet2012learning' on page 1 undefined on input line
+ 49.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 51.
+
+
+LaTeX Warning: Citation `poczos2012support' on page 1 undefined on input line 5
+1.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 51.
+
+
+LaTeX Warning: Citation `xiong2014learning' on page 1 undefined on input line 5
+1.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 51.
+
+
+LaTeX Warning: Citation `oliva2014fast' on page 1 undefined on input line 51.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 51.
+
+
+LaTeX Warning: Citation `muandet2017kernel' on page 1 undefined on input line 5
+1.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 51.
+
+
+LaTeX Warning: Citation `szabo2016learning' on page 1 undefined on input line 5
+1.
+
+[1
+
+
+]
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 61.
+
+
+LaTeX Warning: Citation `ghafarian2016active' on page 2 undefined on input line
+ 61.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 61.
+
+
+LaTeX Warning: Citation `xu2009robustness' on page 2 undefined on input line 61
+.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 63.
+
+
+LaTeX Warning: Citation `muandet2016kernel' on page 2 undefined on input line 6
+3.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 63.
+
+
+LaTeX Warning: Citation `muandet2017kernel' on page 2 undefined on input line 6
+3.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 65.
+
+
+LaTeX Warning: Citation `flaxman2016bayesian' on page 2 undefined on input line
+ 65.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 83.
+
+
+LaTeX Warning: Citation `dasgupta2008hierarchical' on page 2 undefined on input
+ line 83.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 83.
+
+
+LaTeX Warning: Citation `cai2012manifold' on page 2 undefined on input line 83.
+
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 87.
+
+
+LaTeX Warning: Citation `lewis1995sequential' on page 2 undefined on input line
+ 87.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 87.
+
+
+LaTeX Warning: Citation `zhang2015active' on page 2 undefined on input line 87.
+
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 87.
+
+
+LaTeX Warning: Citation `freund1997selective' on page 2 undefined on input line
+ 87.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 87.
+
+
+LaTeX Warning: Citation `wang2017committee' on page 2 undefined on input line 8
+7.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 89.
+
+
+LaTeX Warning: Citation `tong2001support' on page 2 undefined on input line 89.
+
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 89.
+
+(c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 89.
+
+
+(c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 89.
+
+
+LaTeX Warning: Citation `tong2001support' on page 2 undefined on input line 89.
+
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 89.
+
+
+LaTeX Warning: Citation `hoi2008semi' on page 2 undefined on input line 89.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 89.
+
+
+LaTeX Warning: Citation `hoi2008semi' on page 2 undefined on input line 89.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 89.
+
+
+LaTeX Warning: Citation `huang2014active' on page 2 undefined on input line 89.
+
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 89.
+
+
+LaTeX Warning: Citation `huang2014active' on page 2 undefined on input line 89.
+
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 89.
+
+
+LaTeX Warning: Citation `hoi2008semi' on page 2 undefined on input line 89.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 89.
+
+
+LaTeX Warning: Citation `huang2014active' on page 2 undefined on input line 89.
+
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 91.
+
+
+LaTeX Warning: Citation `du2017exploring' on page 2 undefined on input line 91.
+
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 91.
+
+
+LaTeX Warning: Citation `du2017exploring' on page 2 undefined on input line 91.
+
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 91.
+
+
+LaTeX Warning: Citation `chang2011libsvm' on page 2 undefined on input line 91.
+
+
+[2]
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 93.
+
+
+LaTeX Warning: Citation `fang2017active' on page 3 undefined on input line 93.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 93.
+
+
+LaTeX Warning: Citation `ramirez2017active' on page 3 undefined on input line 9
+3.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 93.
+
+
+LaTeX Warning: Citation `settles2012active' on page 3 undefined on input line 9
+3.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 98.
+
+
+LaTeX Warning: Citation `muandet2012learning' on page 3 undefined on input line
+ 98.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 103.
+
+
+LaTeX Warning: Citation `smola2007hilbert' on page 3 undefined on input line 10
+3.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 103.
+
+
+LaTeX Warning: Citation `muandet2017kernel' on page 3 undefined on input line 1
+03.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 105.
+
+
+LaTeX Warning: Citation `szabo2016learning' on page 3 undefined on input line 1
+05.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 110.
+
+
+LaTeX Warning: Citation `muandet2017kernel' on page 3 undefined on input line 1
+10.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 110.
+
+
+LaTeX Warning: Citation `muandet2016kernel' on page 3 undefined on input line 1
+10.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 110.
+
+
+LaTeX Warning: Citation `flaxman2016bayesian' on page 3 undefined on input line
+ 110.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 112.
+
+
+LaTeX Warning: Citation `szabo2016learning' on page 3 undefined on input line 1
+12.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 112.
+
+
+LaTeX Warning: Citation `lopez2015towards' on page 3 undefined on input line 11
+2.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 112.
+
+
+LaTeX Warning: Citation `lopez2015towards' on page 3 undefined on input line 11
+2.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 114.
+
+
+LaTeX Warning: Citation `lopez2015towards' on page 3 undefined on input line 11
+4.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 116.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 123.
+
+
+LaTeX Warning: Citation `law2017bayesian' on page 3 undefined on input line 123
+.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 125.
+
+
+LaTeX Warning: Citation `szabo2016learning' on page 3 undefined on input line 1
+25.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 125.
+
+
+LaTeX Warning: Citation `muandet2017kernel' on page 3 undefined on input line 1
+25.
+
+[3]
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 138.
+
+
+LaTeX Warning: Citation `devroye1996probabilistic' on page 4 undefined on input
+ line 138.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 140.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 141.
+
+
+LaTeX Warning: Citation `devroye1996probabilistic' on page 4 undefined on input
+ line 141.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 141.
+
+
+LaTeX Warning: Citation `chen2006consistency' on page 4 undefined on input line
+ 141.
+
+
+Underfull \hbox (badness 2426) in paragraph at lines 141--142
+\TU/ptm/m/sc/10 defined as $\OML/cmm/m/it/10 L[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/
+n/10 {\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 g[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 X\
+OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 6\OT1/cmr/m/n/10 = \OML/cmm/m/it/10 Y\OT1/cmr
+/m/n/10 )$ \TU/ptm/m/sc/10 and $\OML/cmm/m/it/10 g[]\OT1/cmr/m/n/10 (\OML/cmm/m
+/it/10 x\OT1/cmr/m/n/10 ) =
+ []
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 145.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 145.
+
+
+LaTeX Warning: Citation `devroye1996probabilistic' on page 4 undefined on input
+ line 145.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 155.
+
+
+LaTeX Warning: Citation `chen2006consistency' on page 4 undefined on input line
+ 155.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 158.
+
+
+LaTeX Warning: Citation `sinha2009semi' on page 4 undefined on input line 158.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 158.
+
+
+LaTeX Warning: Citation `singh2009unlabeled' on page 4 undefined on input line 
+158.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 158.
+
+
+LaTeX Warning: Citation `devroye1996probabilistic' on page 4 undefined on input
+ line 158.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 158.
+
+
+LaTeX Warning: Citation `audibert2007fast' on page 4 undefined on input line 15
+8.
+
+
+! LaTeX Error: Environment assumption undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.160 ^^I\begin{assumption}
+                            \label{ass:tsybakov}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \begin{document} ended by \end{assumption}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.165 ^^I\end{assumption}
+                         
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 167.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 168.
+
+
+LaTeX Warning: Reference `ass:tsybakov' on page 4 undefined on input line 168.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 180.
+
+
+LaTeX Warning: Reference `thm:risk-upper-bound' on page 4 undefined on input li
+ne 180.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 180.
+
+
+LaTeX Warning: Reference `thm:plug-in-risk-bound' on page 4 undefined on input 
+line 180.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 182.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 189.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 190.
+
+
+LaTeX Warning: Reference `lem:unlabeled-benefit' on page 4 undefined on input l
+ine 190.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 199.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 200.
+
+
+LaTeX Warning: Reference `thm:risk-upper-bound' on page 4 undefined on input li
+ne 200.
+
+[4]
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 211.
+
+
+LaTeX Warning: Citation `rasmussen2004gaussian' on page 5 undefined on input li
+ne 211.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 213.
+
+
+LaTeX Warning: Citation `goemans1995improved' on page 5 undefined on input line
+ 213.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 247.
+
+
+LaTeX Warning: Citation `wong2001asymptotic' on page 5 undefined on input line 
+247.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 247.
+
+
+LaTeX Warning: Citation `lapinski2019multivariate' on page 5 undefined on input
+ line 247.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 247.
+
+
+LaTeX Warning: Citation `inglot2014simple' on page 5 undefined on input line 24
+7.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 249.
+
+
+Overfull \hbox (21.34373pt too wide) detected at line 254
+[]
+ []
+
+
+Overfull \hbox (23.20215pt too wide) detected at line 258
+[][]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 y\OML/
+cmm/m/it/10 ; w\OMS/cmsy/m/n/10 j\OT1/cmr/bx/n/10 x\OT1/cmr/m/n/10 )\OMS/cmsy/m
+/n/10 jj[]\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 y\OML/cmm/m/it/10 ; w\OMS/cmsy/m/n/
+10 j\OT1/cmr/bx/n/10 x\OT1/cmr/m/n/10 )) = \OML/cmm/m/it/10 c[] [] ;
+ []
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 266.
+
+
+LaTeX Warning: Reference `thm:kl-approx' on page 5 undefined on input line 266.
+
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 268.
+
+
+LaTeX Warning: Reference `lem:h-upper-bound' on page 5 undefined on input line 
+268.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 268.
+
+
+LaTeX Warning: Citation `xu2009robustness' on page 5 undefined on input line 26
+8.
+
+[5]
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 270.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 280.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 296.
+
+
+LaTeX Warning: Reference `thm:kl-approx' on page 6 undefined on input line 296.
+
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 298--299
+[]\TU/ptm/m/sc/10 Let $\OML/cmm/m/it/10 K$ \TU/ptm/m/sc/10 be the kernel matrix
+ and $\OML/cmm/m/it/10 L \OT1/cmr/m/n/10 = (\OML/cmm/m/it/10 K \OT1/cmr/m/n/10 
++
+ []
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 300.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 318.
+
+
+LaTeX Warning: Citation `muandet2017kernel' on page 6 undefined on input line 3
+18.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 318.
+
+
+LaTeX Warning: Citation `flaxman2016bayesian' on page 6 undefined on input line
+ 318.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 318.
+
+
+LaTeX Warning: Citation `flaxman2016bayesian' on page 6 undefined on input line
+ 318.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 323.
+
+
+LaTeX Warning: Citation `flaxman2016bayesian' on page 6 undefined on input line
+ 323.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 327.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 335.
+
+
+LaTeX Warning: Reference `lem:prob-label-embedding' on page 6 undefined on inpu
+t line 335.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 339.
+
+[6]
+Overfull \hbox (218.1163pt too wide) detected at line 343
+[]\OML/cmm/m/it/10 P[] \OT1/cmr/m/n/10 = [\OML/cmm/m/it/10 R[]^^V[]\OT1/cmr/m/n
+/10 ][] \OMS/cmsy/m/n/10 2 \U/msb/m/n/10 R[]\OML/cmm/m/it/10 ;  E[] \OT1/cmr/m/
+n/10 = \OML/cmm/m/it/10 K[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 P[]\OT1/cmr/m
+/n/10 (\OML/cmm/m/it/10 R[] \OT1/cmr/m/n/10 + (\OML/cmm/m/it/10 ^^Z[]=n[]\OT1/c
+mr/m/n/10 )\OML/cmm/m/it/10 I[]\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 P[];  L[] \O
+T1/cmr/m/n/10 = (\OML/cmm/m/it/10 K[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ^^[[]I
+\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 E[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 K[] \O
+T1/cmr/m/n/10 + \OML/cmm/m/it/10 ^^[[]I\OT1/cmr/m/n/10 )[]\OML/cmm/m/it/10 :
+ []
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 360.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 361.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 361.
+
+
+LaTeX Warning: Citation `huang2014active' on page 7 undefined on input line 361
+.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 362.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 362.
+
+
+LaTeX Warning: Citation `zhu2003semi' on page 7 undefined on input line 362.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 363.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 363.
+
+
+LaTeX Warning: Citation `tong2001support' on page 7 undefined on input line 363
+.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 364.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 364.
+
+
+LaTeX Warning: Citation `huang2014active' on page 7 undefined on input line 364
+.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 365.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 368.
+
+
+LaTeX Warning: Reference `lem:prob-label-embedding' on page 7 undefined on inpu
+t line 368.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 368.
+
+
+LaTeX Warning: Citation `muandet2012learning' on page 7 undefined on input line
+ 368.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 368.
+
+
+LaTeX Warning: Citation `chang2011libsvm' on page 7 undefined on input line 368
+.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 372.
+
+
+LaTeX Warning: Citation `muandet2012learning' on page 7 undefined on input line
+ 372.
+
+
+LaTeX Warning: File `fig1a.png' not found on input line 378.
+
+! Unable to load picture or PDF file 'fig1a.png'.
+<to be read again> 
+                   }
+l.378 ...graphics[width=0.45\textwidth]{fig1a.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.378 ...graphics[width=0.45\textwidth]{fig1a.png}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: fig1a.png Graphic file (type bmp)
+<fig1a.png>
+
+LaTeX Warning: File `fig1b.png' not found on input line 379.
+
+! Unable to load picture or PDF file 'fig1b.png'.
+<to be read again> 
+                   }
+l.379 ...graphics[width=0.45\textwidth]{fig1b.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.379 ...graphics[width=0.45\textwidth]{fig1b.png}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: fig1b.png Graphic file (type bmp)
+<fig1b.png>
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 391.
+
+
+LaTeX Warning: Citation `muandet2012learning' on page 7 undefined on input line
+ 391.
+
+[7]
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 393.
+
+
+LaTeX Warning: Citation `muandet2012learning' on page 8 undefined on input line
+ 393.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 393.
+
+
+LaTeX Warning: Citation `muandet2012learning' on page 8 undefined on input line
+ 393.
+
+
+LaTeX Warning: File `fig2a.png' not found on input line 399.
+
+! Unable to load picture or PDF file 'fig2a.png'.
+<to be read again> 
+                   }
+l.399 ...graphics[width=0.45\textwidth]{fig2a.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.399 ...graphics[width=0.45\textwidth]{fig2a.png}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: fig2a.png Graphic file (type bmp)
+<fig2a.png>
+
+LaTeX Warning: File `fig2b.png' not found on input line 400.
+
+! Unable to load picture or PDF file 'fig2b.png'.
+<to be read again> 
+                   }
+l.400 ...graphics[width=0.45\textwidth]{fig2b.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.400 ...graphics[width=0.45\textwidth]{fig2b.png}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: fig2b.png Graphic file (type bmp)
+<fig2b.png>
+
+LaTeX Warning: File `fig2c.png' not found on input line 401.
+
+! Unable to load picture or PDF file 'fig2c.png'.
+<to be read again> 
+                   }
+l.401 ...graphics[width=0.45\textwidth]{fig2c.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.401 ...graphics[width=0.45\textwidth]{fig2c.png}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: fig2c.png Graphic file (type bmp)
+<fig2c.png>
+
+LaTeX Warning: File `fig2d.png' not found on input line 402.
+
+! Unable to load picture or PDF file 'fig2d.png'.
+<to be read again> 
+                   }
+l.402 ...graphics[width=0.45\textwidth]{fig2d.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.402 ...graphics[width=0.45\textwidth]{fig2d.png}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: fig2d.png Graphic file (type bmp)
+<fig2d.png>
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 412.
+
+
+LaTeX Warning: Citation `mikolov2013efficient' on page 8 undefined on input lin
+e 412.
+
+
+LaTeX Warning: File `fig3a.png' not found on input line 418.
+
+! Unable to load picture or PDF file 'fig3a.png'.
+<to be read again> 
+                   }
+l.418 ...graphics[width=0.45\textwidth]{fig3a.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.418 ...graphics[width=0.45\textwidth]{fig3a.png}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: fig3a.png Graphic file (type bmp)
+<fig3a.png>
+
+LaTeX Warning: File `fig3b.png' not found on input line 419.
+
+! Unable to load picture or PDF file 'fig3b.png'.
+<to be read again> 
+                   }
+l.419 ...graphics[width=0.45\textwidth]{fig3b.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.419 ...graphics[width=0.45\textwidth]{fig3b.png}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: fig3b.png Graphic file (type bmp)
+<fig3b.png>
+
+LaTeX Warning: File `fig3c.png' not found on input line 420.
+
+! Unable to load picture or PDF file 'fig3c.png'.
+<to be read again> 
+                   }
+l.420 ...graphics[width=0.45\textwidth]{fig3c.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.420 ...graphics[width=0.45\textwidth]{fig3c.png}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: fig3c.png Graphic file (type bmp)
+<fig3c.png>
+
+LaTeX Warning: File `fig3d.png' not found on input line 421.
+
+! Unable to load picture or PDF file 'fig3d.png'.
+<to be read again> 
+                   }
+l.421 ...graphics[width=0.45\textwidth]{fig3d.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.421 ...graphics[width=0.45\textwidth]{fig3d.png}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: fig3d.png Graphic file (type bmp)
+<fig3d.png>
+
+LaTeX Warning: File `fig3e.png' not found on input line 422.
+
+! Unable to load picture or PDF file 'fig3e.png'.
+<to be read again> 
+                   }
+l.422 ...graphics[width=0.45\textwidth]{fig3e.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.422 ...graphics[width=0.45\textwidth]{fig3e.png}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: fig3e.png Graphic file (type bmp)
+<fig3e.png>
+
+LaTeX Warning: File `fig3f.png' not found on input line 423.
+
+! Unable to load picture or PDF file 'fig3f.png'.
+<to be read again> 
+                   }
+l.423 ...graphics[width=0.45\textwidth]{fig3f.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.423 ...graphics[width=0.45\textwidth]{fig3f.png}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: fig3f.png Graphic file (type bmp)
+<fig3f.png>
+
+LaTeX Warning: File `fig3g.png' not found on input line 424.
+
+! Unable to load picture or PDF file 'fig3g.png'.
+<to be read again> 
+                   }
+l.424 ...graphics[width=0.45\textwidth]{fig3g.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.424 ...graphics[width=0.45\textwidth]{fig3g.png}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: fig3g.png Graphic file (type bmp)
+<fig3g.png>
+
+LaTeX Warning: File `fig3h.png' not found on input line 425.
+
+! Unable to load picture or PDF file 'fig3h.png'.
+<to be read again> 
+                   }
+l.425 ...graphics[width=0.45\textwidth]{fig3h.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.425 ...graphics[width=0.45\textwidth]{fig3h.png}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: fig3h.png Graphic file (type bmp)
+<fig3h.png>
+
+LaTeX Warning: File `fig3i.png' not found on input line 426.
+
+! Unable to load picture or PDF file 'fig3i.png'.
+<to be read again> 
+                   }
+l.426 ...graphics[width=0.45\textwidth]{fig3i.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.426 ...graphics[width=0.45\textwidth]{fig3i.png}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: fig3i.png Graphic file (type bmp)
+<fig3i.png>
+
+LaTeX Warning: File `fig3j.png' not found on input line 427.
+
+! Unable to load picture or PDF file 'fig3j.png'.
+<to be read again> 
+                   }
+l.427 ...graphics[width=0.45\textwidth]{fig3j.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.427 ...graphics[width=0.45\textwidth]{fig3j.png}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: fig3j.png Graphic file (type bmp)
+<fig3j.png>
+
+LaTeX Warning: File `fig3k.png' not found on input line 428.
+
+! Unable to load picture or PDF file 'fig3k.png'.
+<to be read again> 
+                   }
+l.428 ...graphics[width=0.45\textwidth]{fig3k.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.428 ...graphics[width=0.45\textwidth]{fig3k.png}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: fig3k.png Graphic file (type bmp)
+<fig3k.png>
+
+LaTeX Warning: File `fig3l.png' not found on input line 429.
+
+! Unable to load picture or PDF file 'fig3l.png'.
+<to be read again> 
+                   }
+l.429 ...graphics[width=0.45\textwidth]{fig3l.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.429 ...graphics[width=0.45\textwidth]{fig3l.png}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: fig3l.png Graphic file (type bmp)
+<fig3l.png>
+
+LaTeX Warning: File `fig3m.png' not found on input line 430.
+
+! Unable to load picture or PDF file 'fig3m.png'.
+<to be read again> 
+                   }
+l.430 ...graphics[width=0.45\textwidth]{fig3m.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.430 ...graphics[width=0.45\textwidth]{fig3m.png}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: fig3m.png Graphic file (type bmp)
+<fig3m.png>
+
+LaTeX Warning: File `fig3n.png' not found on input line 431.
+
+! Unable to load picture or PDF file 'fig3n.png'.
+<to be read again> 
+                   }
+l.431 ...graphics[width=0.45\textwidth]{fig3n.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.431 ...graphics[width=0.45\textwidth]{fig3n.png}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: fig3n.png Graphic file (type bmp)
+<fig3n.png>
+
+LaTeX Warning: File `fig3o.png' not found on input line 432.
+
+! Unable to load picture or PDF file 'fig3o.png'.
+<to be read again> 
+                   }
+l.432 ...graphics[width=0.45\textwidth]{fig3o.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.432 ...graphics[width=0.45\textwidth]{fig3o.png}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: fig3o.png Graphic file (type bmp)
+<fig3o.png>
+
+LaTeX Warning: File `fig3p.png' not found on input line 433.
+
+! Unable to load picture or PDF file 'fig3p.png'.
+<to be read again> 
+                   }
+l.433 ...graphics[width=0.45\textwidth]{fig3p.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.433 ...graphics[width=0.45\textwidth]{fig3p.png}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: fig3p.png Graphic file (type bmp)
+<fig3p.png>
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 443.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 443.
+
+
+LaTeX Warning: Citation `nene1996columbia' on page 8 undefined on input line 44
+3.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 444.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 444.
+
+
+LaTeX Warning: Citation `teufel2002summarizing' on page 8 undefined on input li
+ne 444.
+
+
+LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
+(Font)              using `TU/ptm/bx/n' instead on input line 445.
+
+
+LaTeX Warning: File `fig4a.png' not found on input line 452.
+
+! Unable to load picture or PDF file 'fig4a.png'.
+<to be read again> 
+                   }
+l.452 ...graphics[width=0.45\textwidth]{fig4a.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.452 ...graphics[width=0.45\textwidth]{fig4a.png}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: fig4a.png Graphic file (type bmp)
+<fig4a.png>
+
+LaTeX Warning: File `fig4b.png' not found on input line 453.
+
+! Unable to load picture or PDF file 'fig4b.png'.
+<to be read again> 
+                   }
+l.453 ...graphics[width=0.45\textwidth]{fig4b.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.453 ...graphics[width=0.45\textwidth]{fig4b.png}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: fig4b.png Graphic file (type bmp)
+<fig4b.png>
+
+LaTeX Warning: File `fig4c.png' not found on input line 454.
+
+! Unable to load picture or PDF file 'fig4c.png'.
+<to be read again> 
+                   }
+l.454 ...graphics[width=0.45\textwidth]{fig4c.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.454 ...graphics[width=0.45\textwidth]{fig4c.png}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: fig4c.png Graphic file (type bmp)
+<fig4c.png>
+
+LaTeX Warning: File `fig4d.png' not found on input line 455.
+
+! Unable to load picture or PDF file 'fig4d.png'.
+<to be read again> 
+                   }
+l.455 ...graphics[width=0.45\textwidth]{fig4d.png}
+                                                  
+The requested image couldn't be read because
+it was not a recognized image format.
+
+
+! Package graphics Error: Division by 0.
+
+See the graphics package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.455 ...graphics[width=0.45\textwidth]{fig4d.png}
+                                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+File: fig4d.png Graphic file (type bmp)
+<fig4d.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 2343) in paragraph at lines 462--463
+[]\TU/ptm/m/sc/10 A question that naturally comes to mind is if
+ []
+
+[8
