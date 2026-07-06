@@ -1,5 +1,0 @@
-GAUSSDIST pilot, variable bag sizes
-repeats=10, max_budget=35
-TC-KME-PMAL: final=0.9733, AULC=0.9045
-MARGIN: final=0.9633, AULC=0.9073
-RANDOM: final=0.9717, AULC=0.8524
