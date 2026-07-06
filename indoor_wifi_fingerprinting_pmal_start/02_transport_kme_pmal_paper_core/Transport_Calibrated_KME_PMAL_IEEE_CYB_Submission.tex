@@ -1,0 +1,1209 @@
+\documentclass[10pt,journal]{IEEEtran}
+
+\usepackage{amsmath,amssymb,amsfonts,amsthm,bm,mathtools}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{enumitem}
+\usepackage{cite}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage[capitalize,nameinlink]{cleveref}
+\crefname{assumption}{Assumption}{Assumptions}
+\Crefname{assumption}{Assumption}{Assumptions}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{balance}
+\interdisplaylinepenalty=2500
+
+\newtheorem{definition}{Definition}
+\newtheorem{assumption}{Assumption}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{remark}{Remark}
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Lip}{Lip}
+\DeclareMathOperator{\MMD}{MMD}
+\DeclareMathOperator{\OT}{OT}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\KL}{KL}
+\DeclareMathOperator{\diam}{diam}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\Pcal}{\mathcal{P}}
+\newcommand{\Xcal}{\mathcal{X}}
+\newcommand{\Ycal}{\mathcal{Y}}
+\newcommand{\Hcal}{\mathcal{H}}
+\newcommand{\Lcal}{\mathcal{L}}
+\newcommand{\Jcal}{\mathcal{J}}
+\newcommand{\Mcal}{\mathcal{M}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Ucal}{\mathcal{U}}
+\newcommand{\Kcal}{\mathcal{K}}
+\newcommand{\Fcal}{\mathcal{F}}
+\newcommand{\Gcal}{\mathcal{G}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\wh}{\widehat}
+\newcommand{\wt}{\widetilde}
+\newcommand{\ol}{\overline}
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\ip}[2]{\left\langle #1,#2 \right\rangle}
+\newcommand{\ball}{\mathbb{B}}
+\newcommand{\one}{\mathbf{1}}
+
+\begin{document}
+
+\title{Transport-Calibrated Kernel Mean Embeddings for Robust Active Learning on Distributions}
+
+\author{H. Sadoghi Yazdi\thanks{H. Sadoghi Yazdi is with the Department of Computer Engineering, Faculty of Engineering, Center of Excellence in Soft Computing and Intelligent Information Processing, Ferdowsi University of Mashhad, Mashhad, Iran (e-mail: h-sadoghi@um.ac.ir).}}
+
+\markboth{Manuscript prepared for journal submission}{Sadoghi Yazdi: Transport-Calibrated Kernel Mean Embeddings for PMAL}
+
+\maketitle
+
+\begin{abstract}
+Active learning on distributions is a finite-sample decision problem in which each candidate query is a probability measure observed only through a bag of samples. Kernel mean embedding (KME) methods make this problem tractable by representing each bag as a Hilbert-space mean element and by using embedding uncertainty in the query rule. This paper gives KME-based probabilistic minimax active learning (PMAL) a transport-robust interpretation without replacing the implemented KME machinery by Wasserstein computation. When the RKHS feature map is Lipschitz, every Wasserstein perturbation induces a controlled KME perturbation; therefore a KME uncertainty set is a conservative Hilbert envelope of a transport ambiguity set. We derive finite-bag and Bayesian radii for this envelope, connect them to the reliability term in PMAL, and state an implementable transport-calibrated KME query rule balancing label uncertainty, distributional coverage, and embedding reliability. A 50-repeat benchmark suite covering Gaussian distributional tasks, hard-overlap Gaussian tasks, transformation-induced digit distributions, and a 20 Newsgroups distributional task shows that the calibrated rule improves over the finite-bag PMARLDS-lite baseline on the hard robust setting and remains competitive with strong margin sampling while providing an explicit robust-learning interpretation of the uncertainty term.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Active learning, learning on distributions, kernel mean embedding, Wasserstein distance, distributionally robust learning, probabilistic minimax learning, computational intelligence.
+\end{IEEEkeywords}
+
+\section{Introduction}
+\label{sec:introduction}
+
+In many pattern analysis and machine intelligence problems, the elementary object to be labeled is not a single vector. A handwritten digit can be represented by a distribution of transformations, a document by a distribution of word vectors, a patient by a collection of measurements, an activity by a trajectory segment, and a sensor unit by a bag of observations. Such problems are usually modeled as \emph{learning on distributions}: the $i$th example is a probability measure $P_i$ on a ground space $\Xcal$, and the learner observes only a finite bag $B_i=\{x_{ij}\}_{j=1}^{n_i}$ sampled from that measure. In active learning on distributions, the learner must choose which distributional object should be labeled next. This is more difficult than vectorial active learning because two uncertainties coexist: the label is unknown and the distributional example itself is only estimated from finite samples.
+
+Kernel mean embedding (KME) is a natural representation for this setting. A probability measure $P$ is mapped to a Hilbert-space element
+\begin{equation}
+    \mu_P = \int_{\Xcal} k(x,\cdot)\,dP(x) \in \Hcal,
+\end{equation}
+where $k$ is a positive definite kernel and $\Hcal$ is its reproducing kernel Hilbert space (RKHS). The empirical embedding $\wh\mu_P=n^{-1}\sum_{j=1}^{n}k(x_j,\cdot)$ is computable from the observed bag, and the distance
+\begin{equation}
+    \MMD_k(P,Q)=\norm{\mu_P-\mu_Q}_{\Hcal}
+\end{equation}
+allows kernel methods to compare probability measures. Bayesian KME goes further by placing a posterior distribution on the unknown embedding and therefore quantifying uncertainty caused by finite bags. This uncertainty has already proved useful for robust active learning on distributions.
+
+At the same time, recent machine learning has increasingly used optimal transport, Sinkhorn divergences, and Wasserstein distributionally robust optimization (DRO) to reason about geometry-aware uncertainty. This creates an important research opportunity. Instead of asking whether KME should be replaced by Wasserstein distance, we ask a more precise question:
+\begin{quote}
+\emph{Can Bayesian KME-based PMAL be understood as a tractable surrogate for an active learning problem whose uncertainty is defined on transport neighborhoods of probability measures?}
+\end{quote}
+This question is different from a simple change of metric. A direct substitution of $\norm{\mu_P-\mu_Q}_{\Hcal}$ by $W(P,Q)$ would make the theory and implementation inconsistent if the algorithm remains KME-based. The central idea of this paper is therefore \emph{calibration}, not replacement. KME remains the computational representation, while Wasserstein geometry gives a modern interpretation of the finite-bag uncertainty that KME is controlling.
+
+\subsection{Why a New View Is Needed}
+
+In distributional active learning, not all candidates are equally reliable. A bag with five samples and a bag with one hundred samples may have similar empirical embeddings, but their uncertainty should not be treated equally. Bayesian KME captures this phenomenon by assigning an embedding posterior covariance or a confidence radius to each distributional example. From the perspective of contemporary robust learning, this radius is not merely a statistical artifact; it can be interpreted as a surrogate ambiguity radius around an unknown probability measure.
+
+Transport geometry is especially relevant because it compares distributions using the geometry of the underlying sample space. For example, small translations of images, slight shifts in word-vector clouds, and perturbations in sensor measurements are often better represented by transport displacement than by pointwise density divergence. Nevertheless, exact Wasserstein computation inside each active-learning iteration is expensive and would require a different algorithmic design. KME offers a scalable Hilbert-space surrogate. The missing piece is a theoretical bridge between the two views.
+
+\subsection{Core Insight}
+
+Let $W_1(P,Q)$ denote the 1-Wasserstein distance and let $\MMD_k(P,Q)$ denote the KME distance. If the feature map $\phi(x)=k(x,\cdot)$ is Lipschitz, then
+\begin{equation}
+    \MMD_k(P,Q) \le L_\phi W_1(P,Q).
+\end{equation}
+Thus, every Wasserstein ball around an empirical distribution is mapped into a KME ball around its empirical embedding. Consequently, a KME uncertainty set can be used as a conservative Hilbert envelope for a transport ambiguity set. Under additional assumptions that make the kernel norm control Wasserstein distance on the considered model class, a reverse inequality also holds locally. This yields a two-sided calibration between transport and KME geometries.
+
+This result is conceptually important. It shows that KME uncertainty and Wasserstein uncertainty are not universally identical, but they can be linked by explicit assumptions. Therefore, the Bayesian KME active-learning objective can be interpreted as a tractable upper envelope of a transport-robust PMAL objective. This is the new scientific angle developed in this paper.
+
+\subsection{Contributions}
+
+The paper makes the following contributions.
+\begin{itemize}[leftmargin=1.1em]
+    \item It formulates distributional active learning as a post-query decision problem under finite-bag uncertainty on the space of probability measures.
+    \item It introduces a transport-calibrated interpretation of Bayesian KME-PMAL, in which KME uncertainty is a conservative Hilbert envelope of Wasserstein ambiguity.
+    \item It proves that the KME-PMAL robust score upper-bounds a Wasserstein robust post-query risk under a Lipschitz feature-map assumption.
+    \item It derives finite-bag and Bayesian credible radii that connect bag size, posterior covariance, and active query reliability.
+    \item It gives a two-sided calibration result under transport-controlling kernels, clarifying when KME and transport geometries are comparable and when they are not.
+    \item It gives an explicit query algorithm and a reproducible benchmark suite with Gaussian, hard-overlap Gaussian, digit-distribution, and document-distribution tasks.
+\end{itemize}
+
+\section{Background and Related Work}
+\label{sec:related}
+
+\subsection{Active Learning and Probabilistic Minimax Selection}
+
+Active learning reduces labeling cost by selecting unlabeled candidates whose labels are expected to improve the model most. Common strategies include uncertainty sampling, margin sampling, query-by-committee, expected model change, expected error reduction, and representative sampling. These criteria often emphasize either informativeness or representativeness, but balancing the two is difficult.
+
+Probabilistic minimax active learning (PMAL) addresses this difficulty by considering the risk after the queried label is obtained, before that label is known. The learner evaluates a candidate through a worst-case or minimax view of possible labels, together with an optimistic or probabilistic completion of the unknown labels of the remaining unlabeled data. The result is a query principle that is naturally robust to label uncertainty and can be implemented in Bayesian settings.
+
+The present paper does not redevelop functional-gradient PMAL for vectorial data. Instead, it focuses on distributional examples and the uncertainty induced by finite bags. The central issue is not how to optimize a functional classifier, but how to interpret KME uncertainty as a geometry-aware robust ambiguity set.
+
+\subsection{Learning on Distributions and KME}
+
+Learning on distributions assumes that each object is a probability measure $P_i$ and that the learner observes a finite sample from it. KME turns this problem into learning in an RKHS by mapping $P_i$ to $\mu_{P_i}$. If the kernel is characteristic, the embedding is injective on probability measures, so learning on embeddings is expressive. The empirical embedding has convergence guarantees, but its estimation error depends on bag size. Bayesian KME uses a Gaussian process prior to model uncertainty of the mean element and yields posterior covariance information.
+
+In active learning, this posterior uncertainty matters. A candidate with high uncertainty may be informative, but it may also be unreliable. Bayesian KME-PMAL uses this uncertainty inside a probabilistic minimax query score. The present paper supplies a new interpretation: the posterior embedding uncertainty can be treated as a data-dependent robust uncertainty set that approximates a transport ambiguity set.
+
+\subsection{Wasserstein DRO and Transport Geometry}
+
+Wasserstein distance compares probability measures by the cost of transporting mass across the ground space. For $W_1$, the Kantorovich-Rubinstein duality states
+\begin{equation}
+    W_1(P,Q)=\sup_{\Lip(f)\le 1}\left\{\int f\,dP-\int f\,dQ\right\}.
+\end{equation}
+Wasserstein DRO uses ambiguity sets of the form $\{Q:W(Q,\wh P)\le \rho\}$ to optimize decisions that are robust to distributional perturbations. This is attractive in learning on distributions because empirical bags are finite and uncertain.
+
+However, exact transport-based active learning is expensive. Each candidate query would require solving a robust post-query problem over probability measures. KME makes the problem tractable by replacing probability measures with Hilbert-space embeddings. The central question is whether this replacement is only computational or also theoretically justified. The calibration results in this paper answer this question.
+
+\subsection{Sinkhorn Divergence as a Bridge}
+
+Entropy-regularized optimal transport and Sinkhorn divergence provide a smooth and scalable bridge between OT and MMD. When the regularization is small, Sinkhorn divergence is closer to OT; with strong regularization, it behaves more like a kernel discrepancy. This makes Sinkhorn geometry a natural language for explaining why KME-based methods can serve as tractable endpoints of a broader transport-geometric family. In this paper, Sinkhorn is used as a theoretical bridge, not as a new experimental method.
+
+\section{Problem Formulation}
+\label{sec:problem}
+
+Let $(\Xcal,d)$ be a Polish metric space and let $\Pcal(\Xcal)$ denote probability measures on $\Xcal$ with finite first moment. A distributional classification dataset is
+\begin{equation}
+    \Dcal = \{(B_i,y_i)\}_{i=1}^{N},
+\end{equation}
+where $y_i\in\Ycal=\{1,\ldots,C\}$ and
+\begin{equation}
+    B_i=\{x_{ij}\}_{j=1}^{n_i},\qquad x_{ij}\sim P_i.
+\end{equation}
+The measure $P_i$ is unobserved. Its empirical version is
+\begin{equation}
+    \wh P_i = \frac{1}{n_i}\sum_{j=1}^{n_i}\delta_{x_{ij}}.
+\end{equation}
+At an active-learning stage, the index set is divided into labeled and unlabeled subsets $L$ and $U$. The learner chooses $q\in U$ and receives $y_q$.
+
+Let $h_L$ denote a classifier trained with labeled distributional examples indexed by $L$. The ideal risk is
+\begin{equation}
+    R(h_L)=\E_{(P,Y)}\ell(h_L(P),Y),
+\end{equation}
+where $\ell$ is a bounded loss. Because $P$ is not exactly observed, the empirical classifier uses representations of $\wh P_i$. In KME learning,
+\begin{equation}
+    \wh\mu_i=\mu_{\wh P_i}=\frac{1}{n_i}\sum_{j=1}^{n_i} k(x_{ij},\cdot).
+\end{equation}
+
+The post-query risk of candidate $q$ is label-dependent. Since $y_q$ is unknown before querying, PMAL evaluates an upper envelope of the risk after the query. A generic PMAL score has the form
+\begin{equation}
+\label{eq:generic-pmal}
+    \mathcal{Q}(q)=\max_{y_q\in\Ycal}\,\mathcal{B}\left(h_{L\cup\{q\}},\Dcal_L,(B_q,y_q),\Dcal_U\right),
+\end{equation}
+where $\mathcal{B}$ is a computable post-query risk bound. Distributional uncertainty modifies this score by replacing each empirical distribution with an uncertainty set.
+
+\begin{definition}[Distributional active-learning ambiguity]
+For each bag $B_i$, an ambiguity map assigns a set $\mathcal{A}_i$ of plausible probability measures such that $P_i\in\mathcal{A}_i$ with high probability. The robust post-query score is
+\begin{equation}
+\label{eq:robust-score-general}
+\begin{aligned}
+\mathcal{Q}_{\mathcal{A}}(q)
+= \max_{y_q\in\Ycal}\;
+  \sup_{\{Q_i\in\mathcal{A}_i\}}
+  \mathcal{B}\big(&h_{L\cup\{q\}},
+  \{(Q_i,y_i):i\in L\cup\{q\}\},\\
+  &\{Q_j:j\in U\setminus\{q\}\}\big).
+\end{aligned}
+\end{equation}
+\end{definition}
+
+The main question is how to choose $\mathcal{A}_i$. The transport view suggests Wasserstein balls. The KME implementation suggests Hilbert balls or Bayesian credible ellipsoids. This paper calibrates the two.
+
+\subsection{The Master Minimax Problem Behind the Article}
+\label{subsec:master-game}
+
+The actual problem solved by a distributional PMAL method is not a single heuristic score. It is a nested post-query decision problem. Before querying $q$, the learner does not know its label; it also does not know the labels of the remaining unlabeled bags; and, in learning on distributions, it does not observe the true measures $P_i$ but only finite bags. A compact way to express the ideal transport-robust problem is
+\begin{equation}
+\label{eq:master-transport-pmal}
+\begin{aligned}
+q_t^* \in \argmin_{q\in U_t}\;&
+\max_{y\in\Ycal}
+\min_{h\in\Fcal}
+\min_{\tilde{\mathbf y}\in\Ycal^{|U_t|-1}}
+\sup_{\mathbf Q\in\mathfrak{B}_W(\rho)} \\
+&\Jcal_t\big(h;\mathbf Q,\mathbf y_L,(q,y),\tilde{\mathbf y}\big),
+\end{aligned}
+\end{equation}
+where
+\begin{equation}
+\label{eq:transport-product-ball}
+\mathfrak{B}_W(\rho)=
+\prod_{i=1}^{N}\{Q_i:W_1(Q_i,\wh P_i)\le \rho_i\}.
+\end{equation}
+The five operators in \eqref{eq:master-transport-pmal} have distinct roles: query selection is an outer minimization; the queried label is adversarial because it is unknown before the oracle answers; the classifier is trained by risk minimization; the remaining unlabeled labels are completed optimistically as in PMAL; and the finite-bag distributional error is handled by a robust transport supremum. This is the exact place where the thesis-style ``min--max--min--min--max'' structure enters the new article.
+
+The direct problem in \eqref{eq:master-transport-pmal} is not the algorithm we run. It is the target robust decision problem. The contribution of this paper is to prove and implement the following reduction chain:
+\begin{equation}
+\label{eq:reduction-chain}
+\begin{array}{c}
+\text{transport PMAL master problem}\\[0.2em]
+\Downarrow\ \text{Lipschitz KME calibration}\\[0.2em]
+\text{Hilbert-ball PMAL upper envelope}\\[0.2em]
+\Downarrow\ \text{finite-bag/Bayesian KME radius}\\[0.2em]
+\text{computable TC-BKME-PMAL query rule.}
+\end{array}
+\end{equation}
+Thus the paper is not merely a reinterpretation. It states the original minimax object, proves why a KME relaxation is a conservative surrogate, and gives code that evaluates the resulting query rule on the same benchmark family as the thesis experiments.
+
+\begin{proposition}[Hilbert relaxation of the master problem]
+\label{prop:master-relaxation}
+Assume the feature-map Lipschitz condition in \cref{ass:lipschitz} and set $\tau_i=L_\phi\rho_i$. Replacing $\mathfrak{B}_W(\rho)$ in \eqref{eq:master-transport-pmal} by
+\begin{equation}
+\label{eq:hilbert-product-ball}
+\mathfrak{B}_H(\tau)=
+\prod_{i=1}^{N}\{Q_i:\norm{\mu_{Q_i}-\mu_{\wh P_i}}_{\Hcal}\le \tau_i\}
+\end{equation}
+yields a conservative upper envelope of the transport-robust PMAL objective.
+\end{proposition}
+
+\begin{proof}
+The set inclusion in \cref{cor:set-inclusion} holds for each bag. Taking the product over bags gives $\mathfrak{B}_W(\rho)\subseteq \mathfrak{B}_H(\tau)$. The supremum over the larger product set is therefore no smaller, and all outer minimization, label maximization, and classifier minimization operators preserve the conservative envelope interpretation.
+\end{proof}
+
+
+
+\section{Transport and Hilbert Ambiguity Sets}
+\label{sec:sets}
+
+\subsection{Transport Ambiguity}
+
+For a radius $\rho_i>0$, define the Wasserstein ambiguity set
+\begin{equation}
+\label{eq:wball}
+    \ball_W(\wh P_i,\rho_i)=\{Q\in\Pcal(\Xcal):W_1(Q,\wh P_i)\le \rho_i\}.
+\end{equation}
+This set is geometry-aware: it contains distributions that can be reached by moving the empirical mass by a small average distance.
+
+\subsection{Hilbert Ambiguity}
+
+For a radius $\tau_i>0$, define the KME ambiguity set
+\begin{equation}
+\label{eq:hball}
+    \ball_H(\wh P_i,\tau_i)=\{Q\in\Pcal(\Xcal):\norm{\mu_Q-\mu_{\wh P_i}}_{\Hcal}\le \tau_i\}.
+\end{equation}
+This set is computationally compatible with kernel learning. In a Bayesian KME implementation, $\ball_H$ can be replaced by a posterior credible ellipsoid
+\begin{equation}
+\label{eq:ellipsoid}
+    \mathcal{E}_i(\delta)=\{z:(z-m_i)^T\Sigma_i^\dagger(z-m_i)\le c_{\delta}\},
+\end{equation}
+where $m_i$ and $\Sigma_i$ are posterior mean and covariance of the embedding representation.
+
+\subsection{Why Direct Replacement Is Wrong}
+
+It is tempting to replace every KME distance by a Wasserstein distance. This is not generally valid for three reasons. First, KME and Wasserstein measure different aspects of distributions. Second, the KME-based posterior covariance is defined in a Hilbert space, not in the nonlinear Wasserstein space. Third, existing experiments based on KME would no longer directly validate a purely Wasserstein algorithm. Therefore, the correct strategy is not replacement but calibration: use transport to define the desired robust geometry and use KME to compute a tractable conservative envelope.
+
+\section{Transport-to-KME Calibration}
+\label{sec:calibration}
+
+\begin{assumption}[Lipschitz RKHS feature map]
+\label{ass:lipschitz}
+The canonical feature map $\phi(x)=k(x,\cdot)$ is $L_\phi$-Lipschitz:
+\begin{equation}
+    \norm{\phi(x)-\phi(x')}_{\Hcal}\le L_\phi d(x,x'),\qquad \forall x,x'\in\Xcal.
+\end{equation}
+\end{assumption}
+
+\begin{lemma}[Wasserstein perturbations induce KME perturbations]
+\label{lem:w-to-mmd}
+Under \cref{ass:lipschitz}, for all $P,Q\in\Pcal(\Xcal)$,
+\begin{equation}
+\label{eq:w-to-mmd}
+    \MMD_k(P,Q)\le L_\phi W_1(P,Q).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+By the variational representation of MMD,
+\begin{equation}
+    \MMD_k(P,Q)=\sup_{\norm{f}_{\Hcal}\le 1}\left|\int f\,dP-\int f\,dQ\right|.
+\end{equation}
+For any $f\in\Hcal$ with $\norm{f}_{\Hcal}\le 1$,
+\begin{equation}
+    |f(x)-f(x')|=|\ip{f}{\phi(x)-\phi(x')}|\le L_\phi d(x,x'),
+\end{equation}
+so $f/L_\phi$ is 1-Lipschitz. The Kantorovich-Rubinstein duality then gives the result.
+\end{proof}
+
+\begin{corollary}[Set inclusion]
+\label{cor:set-inclusion}
+Under \cref{ass:lipschitz},
+\begin{equation}
+    \ball_W(\wh P_i,\rho_i)\subseteq \ball_H(\wh P_i,L_\phi\rho_i).
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+If $Q\in\ball_W(\wh P_i,\rho_i)$, then $\MMD_k(Q,\wh P_i)\le L_\phi\rho_i$ by \cref{lem:w-to-mmd}. Thus $Q\in\ball_H(\wh P_i,L_\phi\rho_i)$.
+\end{proof}
+
+\subsection{Reverse Calibration on Restricted Model Classes}
+
+The reverse inequality is not true for arbitrary kernels and arbitrary measures. The correct statement must be restricted.
+
+\begin{assumption}[Transport-controlling kernel on a model class]
+\label{ass:reverse}
+There exists a model class $\Pcal_0\subset\Pcal(\Xcal)$ and constants $C_k>0$ and $\alpha\in(0,1]$ such that
+\begin{equation}
+\label{eq:reverse}
+    W_1(P,Q)\le C_k \MMD_k(P,Q)^\alpha,
+    \qquad \forall P,Q\in\Pcal_0.
+\end{equation}
+\end{assumption}
+
+\begin{proposition}[Two-sided calibration]
+\label{prop:two-sided}
+If \cref{ass:lipschitz,ass:reverse} hold, then for all $P,Q\in\Pcal_0$,
+\begin{equation}
+    \frac{1}{L_\phi}\MMD_k(P,Q)\le W_1(P,Q)\le C_k \MMD_k(P,Q)^\alpha.
+\end{equation}
+Thus the transport and KME geometries are locally comparable on $\Pcal_0$.
+\end{proposition}
+
+\begin{remark}
+The word ``calibration'' is used intentionally. KME and Wasserstein distances are not the same. The two-sided result requires a restricted distribution class and a kernel with enough resolution. The conservative one-sided result in \cref{cor:set-inclusion} is the main tool for robust active learning.
+\end{remark}
+
+\subsection{Role of the Transport Plan}
+\label{subsec:transport-plan}
+
+For empirical bags $\wh P=\sum_a p_a\delta_{x_a}$ and $\wh Q=\sum_b q_b\delta_{z_b}$, the OT plan is a nonnegative coupling matrix $\Pi=[\pi_{ab}]$ with $\Pi\one=p$ and $\Pi^T\one=q$, minimizing $\sum_{a,b}\pi_{ab}c(x_a,z_b)$. It can be viewed as a joint density between samples of two bags. TC-BKME-PMAL does not compute this matrix inside the query loop; doing so for every candidate and hypothetical label would create a different and much heavier active learner. The plan enters implicitly through the Wasserstein ambiguity set: \cref{lem:w-to-mmd} says that every perturbation realizable by a low-cost coupling matrix maps to a controlled KME perturbation. Thus the method optimizes a conservative KME envelope of latent transport-plan perturbations, not an explicit pairwise OT alignment. An explicit Sinkhorn-plan query rule is a natural extension, but is outside the computational claim of this paper.
+
+\section{Finite-Bag and Bayesian Radii}
+\label{sec:radii}
+
+\subsection{Empirical KME Radius}
+
+Assume $k(x,x)\le \kappa^2$. The empirical embedding is an average of Hilbert-valued random variables. A standard concentration result implies that, with probability at least $1-\delta$,
+\begin{equation}
+\label{eq:kme-concentration}
+    \norm{\mu_{P_i}-\mu_{\wh P_i}}_{\Hcal}\le r_i(\delta)
+    = c\kappa\sqrt{\frac{\log(1/\delta)}{n_i}},
+\end{equation}
+where $c$ is a universal constant depending on the chosen concentration inequality. The exact constant is less important than the dependence $n_i^{-1/2}$.
+
+This result provides the simplest KME ambiguity radius:
+\begin{equation}
+    \tau_i=r_i(\delta_i).
+\end{equation}
+By \cref{cor:set-inclusion}, the corresponding implicit Wasserstein radius is
+\begin{equation}
+    \rho_i=\tau_i/L_\phi.
+\end{equation}
+Thus finite-bag uncertainty is converted into a transport-calibrated robust set.
+
+\subsection{Bayesian KME Radius}
+
+Bayesian KME gives a sharper and anisotropic uncertainty description. Suppose that after observing $B_i$, the embedding representation is approximately Gaussian:
+\begin{equation}
+    z_i=\mu_{P_i}\mid B_i\approx \mathcal{N}(m_i,\Sigma_i).
+\end{equation}
+Then a credible ellipsoid is
+\begin{equation}
+    \mathcal{E}_i(\delta)=\{z:(z-m_i)^T\Sigma_i^\dagger(z-m_i)\le \chi^2_{r,1-\delta}\},
+\end{equation}
+where $r$ is the effective rank. A conservative isotropic radius is
+\begin{equation}
+\label{eq:bayes-radius}
+    \tau_i^{\rm Bayes}(\delta)=\sqrt{\lambda_{\max}(\Sigma_i)\chi^2_{r,1-\delta}}.
+\end{equation}
+The key difference between empirical and Bayesian radii is that the Bayesian radius depends not only on $n_i$ but also on the geometry of observed samples and the posterior covariance direction.
+
+\begin{proposition}[Reliability-weighted embedding uncertainty]
+\label{prop:bayes-radius}
+For a linear classifier $f_w(z)=w^Tz$ and an $L_\ell$-Lipschitz scalar loss, the worst-case loss over the Bayesian credible ball satisfies
+\begin{equation}
+\label{eq:linear-robust}
+    \sup_{\norm{z-m_i}\le \tau_i}\ell(f_w(z),y_i)
+    \le \ell(f_w(m_i),y_i)+L_\ell\norm{w}\tau_i.
+\end{equation}
+For an ellipsoid $\mathcal{E}_i(\delta)$, the sharper bound is
+\begin{equation}
+    \sup_{z\in\mathcal{E}_i(\delta)}\ell(f_w(z),y_i)
+    \le \ell(f_w(m_i),y_i)+L_\ell\sqrt{\chi^2_{r,1-\delta}}\sqrt{w^T\Sigma_i w}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The ball case follows from Lipschitz continuity and Cauchy-Schwarz. For the ellipsoid, maximize $w^T(z-m_i)$ subject to $(z-m_i)^T\Sigma_i^\dagger(z-m_i)\le \chi^2_{r,1-\delta}$, which yields the support function of the ellipsoid.
+\end{proof}
+
+\section{Transport-Calibrated PMAL Objective}
+\label{sec:objective}
+
+\subsection{Transport-Robust Post-Query Risk}
+
+For a candidate query $q\in U$, define the ideal transport-robust PMAL score
+\begin{equation}
+\label{eq:w-score}
+\begin{aligned}
+\mathcal{Q}_W(q)=
+\max_{y_q\in\Ycal}\;
+\sup_{\{Q_i\in\ball_W(\wh P_i,\rho_i)\}}
+\mathcal{B}\big(&h_{L\cup\{q\}},
+\{(Q_i,y_i)\}_{i\in L\cup\{q\}},\\
+&\{Q_j\}_{j\in U\setminus\{q\}}\big).
+\end{aligned}
+\end{equation}
+This is the robust objective that we would like to minimize if transport computation were cheap and if all post-query label cases could be handled exactly.
+
+\subsection{KME Surrogate Post-Query Risk}
+
+The KME surrogate replaces $\ball_W$ with $\ball_H$:
+\begin{equation}
+\label{eq:h-score}
+\begin{aligned}
+\mathcal{Q}_H(q)=
+\max_{y_q\in\Ycal}\;
+\sup_{\{Q_i\in\ball_H(\wh P_i,\tau_i)\}}
+\mathcal{B}\big(&h_{L\cup\{q\}},
+\{(Q_i,y_i)\}_{i\in L\cup\{q\}},\\
+&\{Q_j\}_{j\in U\setminus\{q\}}\big).
+\end{aligned}
+\end{equation}
+The implemented KME-PMAL method computes a tractable bound or approximation to $\mathcal{Q}_H(q)$ using kernel matrices and Bayesian embedding covariance.
+
+\begin{theorem}[Conservative transport-calibrated PMAL]
+\label{thm:conservative}
+Assume \cref{ass:lipschitz}. Set $\tau_i=L_\phi\rho_i$ for every bag. Then, for every candidate query $q\in U$,
+\begin{equation}
+    \mathcal{Q}_W(q)\le \mathcal{Q}_H(q).
+\end{equation}
+Therefore, minimizing the KME-PMAL surrogate minimizes an upper envelope of the transport-robust post-query score.
+\end{theorem}
+
+\begin{proof}
+By \cref{cor:set-inclusion}, every feasible distribution in the Wasserstein ambiguity set is also feasible in the KME ambiguity set. The supremum over the KME set is therefore no smaller. The maximization over $y_q$ preserves the inequality.
+\end{proof}
+
+\subsection{Excess Robust Score Bound}
+
+Let $q_W^*=\argmin_q\mathcal{Q}_W(q)$ and $q_H^*=\argmin_q\mathcal{Q}_H(q)$. Since $\mathcal{Q}_H$ is an upper bound, $q_H^*$ is not necessarily identical to $q_W^*$. The following result quantifies the effect of calibration looseness.
+
+\begin{definition}[Calibration gap]
+For a candidate $q$, define
+\begin{equation}
+    \Delta(q)=\mathcal{Q}_H(q)-\mathcal{Q}_W(q)\ge 0.
+\end{equation}
+Let $\Delta_{\max}=\max_{q\in U}\Delta(q)$.
+\end{definition}
+
+\begin{theorem}[Regret induced by surrogate calibration]
+\label{thm:regret}
+The transport-robust score of the KME-selected query satisfies
+\begin{equation}
+    \mathcal{Q}_W(q_H^*)-\mathcal{Q}_W(q_W^*)\le \Delta(q_W^*).
+\end{equation}
+In particular,
+\begin{equation}
+    \mathcal{Q}_W(q_H^*)-\mathcal{Q}_W(q_W^*)\le \Delta_{\max}.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Because $q_H^*$ minimizes $\mathcal{Q}_H$,
+\begin{equation}
+    \mathcal{Q}_H(q_H^*)\le \mathcal{Q}_H(q_W^*)=\mathcal{Q}_W(q_W^*)+\Delta(q_W^*).
+\end{equation}
+Also, $\mathcal{Q}_W(q_H^*)\le \mathcal{Q}_H(q_H^*)$. Combining the two inequalities gives the result.
+\end{proof}
+
+This theorem explains the desired scientific position. The KME method is defensible as long as the calibration gap is controlled. The role of kernel choice, Bayesian covariance, and bag-size radius is precisely to make this gap small.
+
+\subsection{Active Selection Rule}
+
+The proposed query rule is
+\begin{equation}
+\label{eq:selection}
+    q^*\in\argmin_{q\in U}\wh{\mathcal{Q}}_H(q),
+\end{equation}
+where $\wh{\mathcal{Q}}_H$ is the computable PMAL bound based on Bayesian kernel embeddings. The word ``transport-calibrated'' means that the radii and uncertainty terms are chosen so that the Hilbert ambiguity set covers or approximates a transport ambiguity set.
+
+\subsection{Solved Finite-Dimensional Surrogate}
+\label{subsec:finite-surrogate}
+
+To avoid the impression that the paper stops at an abstract inclusion theorem, we now state the finite-dimensional surrogate that is actually solved in the code. Let $z_i=\wh\mu_i$ be an empirical or random-feature KME representation and let $f_w(P_i)=w^Tz_i$ be a linear classifier in the embedding space. For a Lipschitz convex loss, the Hilbert-ball robustification gives the tractable upper bound
+\begin{equation}
+\label{eq:robust-empirical-upper}
+\begin{aligned}
+\widehat{\Jcal}_H(w)
+= &\sum_{i\in L_t} \ell(y_i,w^Tz_i)
+   + \lambda\norm{w}_2^2 \\
+&+ \gamma\sum_{i\in L_t}\tau_i\norm{w}_2 .
+\end{aligned}
+\end{equation}
+For a candidate query $q$, the first-order PMAL reduction evaluates how the candidate changes the robust upper envelope after both possible labels. This yields the computable acquisition rule
+\begin{equation}
+\label{eq:tc-acquisition-compact}
+\begin{aligned}
+S_i^{\rm TC}
+=&\underbrace{(\epsilon_m+|f_L(z_i)|)^{-1}}_{\text{label uncertainty}}
+\underbrace{(1+\alpha D_i)}_{\text{distributional coverage}}\\
+&\times
+\underbrace{(1+\eta\tau_i)^{-1}}_{\text{transport-calibrated reliability}},
+\end{aligned}
+\end{equation}
+where
+\begin{equation}
+\label{eq:density-score}
+D_i=\frac{1}{|U_t|-1}\sum_{j\in U_t,\;j\ne i}
+\exp\!\left(-\frac{\norm{z_i-z_j}_2^2}{2s_U^2}\right).
+\end{equation}
+The active learner queries $\argmax_{i\in U_t}S_i^{\rm TC}$. This rule is not presented as the exact optimizer of \eqref{eq:master-transport-pmal}; it is the explicit finite-dimensional greedy solution of the calibrated upper envelope. This distinction makes the method implementable while keeping the minimax origin visible.
+
+
+\subsection{First-Order Robust Envelope Behind the Practical Score}
+\label{subsec:first-order-envelope}
+
+The practical acquisition score in \eqref{eq:tc-acquisition-compact} should not appear suddenly after the minimax formulation. It is obtained by a first-order robust envelope of the Hilbert problem. Let $\Phi_i$ denote the embedded representation of the $i$th bag and let $\mathcal{B}_t(\Phi_1,\ldots,\Phi_N;q,y)$ be the post-query PMAL bound for candidate $q$ and hypothetical label $y$. Around the empirical embeddings $\wh\Phi_i=\wh\mu_i$, the Hilbert robust envelope is
+\begin{equation}
+\label{eq:h-envelope-first-order}
+\begin{aligned}
+\overline{\mathcal B}_t(q,y)
+=\sup_{\norm{\Phi_i-\wh\Phi_i}_{\Hcal}\le \tau_i}
+\mathcal{B}_t(\Phi_1,\ldots,\Phi_N;q,y).
+\end{aligned}
+\end{equation}
+If $\mathcal B_t$ is locally differentiable with respect to the embeddings, then Cauchy's inequality gives
+\begin{equation}
+\label{eq:first-order-bound}
+\begin{aligned}
+\overline{\mathcal B}_t(q,y)
+\le{}&
+\mathcal B_t(\wh\Phi_1,\ldots,\wh\Phi_N;q,y)\\
+&+\sum_{i=1}^{N}\tau_i
+\norm{\nabla_{\Phi_i}\mathcal B_t}_{\Hcal}
++o(\tau).
+\end{aligned}
+\end{equation}
+The first term is the nominal PMAL score. The gradient norm measures how sensitive the score is to perturbing each bag. The radius $\tau_i$ measures how unreliable the empirical bag representation is. Thus, the robust correction is not an arbitrary penalty; it is the product of sensitivity and finite-bag uncertainty.
+
+\begin{theorem}[Local finite-dimensional reduction]
+\label{thm:local-fd-reduction}
+Assume that the post-query bound is locally differentiable in the KME variables and that the classifier is linear in a finite random-feature approximation $z_i$ of $\mu_i$. Then the Hilbert robust PMAL envelope admits the local upper bound
+\begin{equation}
+\label{eq:local-fd-theorem}
+\begin{aligned}
+\max_y\overline{\mathcal B}_t(q,y)
+\le{}&
+\max_y\mathcal B_t(\mathbf z;q,y)+ C_t\tau_q\\
+&+\sum_{j\in U_t\setminus\{q\}} C_{tj}\tau_j
++o(\tau),
+\end{aligned}
+\end{equation}
+where the constants $C_t$ and $C_{tj}$ are sensitivity coefficients determined by the current classifier, loss slope, and kernel-feature norm.
+\end{theorem}
+
+\begin{proof}
+Apply \eqref{eq:first-order-bound} to each hypothetical label $y$ and then take the maximum over $y$. In the finite random-feature representation, the Frechet derivative in the RKHS is represented by the Euclidean gradient with respect to $z_i$. Boundedness of the loss slope and the classifier norm gives finite constants $C_t$ and $C_{tj}$. The $o(\tau)$ term follows from local differentiability.
+\end{proof}
+
+\cref{thm:local-fd-reduction} explains the three factors in the executable rule. The nominal label-dependent PMAL term contributes the uncertainty factor; the unlabeled-pool sensitivity contributes the representativeness or coverage factor; and the radius term contributes the reliability correction. The code uses the multiplicative form in \eqref{eq:tc-acquisition-compact} because it is scale-stable across datasets, while the theorem justifies the same components from the additive robust envelope.
+
+\begin{algorithm}[t]
+\caption{Transport-Calibrated Bayesian KME-PMAL}
+\label{alg:tc-kme-pmal}
+\begin{algorithmic}[1]
+\REQUIRE Labeled bags $\Dcal_L$, unlabeled bags $\Dcal_U$, kernel $k$, confidence level $\delta$, feature-map Lipschitz constant or estimate $L_\phi$.
+\STATE For every bag $B_i$, compute empirical KME $\wh\mu_i$.
+\STATE Estimate Bayesian KME posterior mean $m_i$ and covariance $\Sigma_i$, or use empirical radius $r_i(\delta)$.
+\STATE Set Hilbert radius $\tau_i$ using \eqref{eq:kme-concentration} or \eqref{eq:bayes-radius}.
+\STATE Interpret the implicit transport radius as $\rho_i=\tau_i/L_\phi$ for conservative calibration.
+\FOR{each candidate query $q\in U$}
+    \STATE Evaluate the PMAL post-query upper bound using $m_i$ and the uncertainty term induced by $\tau_i$ or $\Sigma_i$.
+    \STATE Store the robust score $\wh{\mathcal{Q}}_H(q)$.
+\ENDFOR
+\STATE Query $q^*=\argmin_{q\in U}\wh{\mathcal{Q}}_H(q)$.
+\STATE Obtain $y_{q^*}$ and update $\Dcal_L\leftarrow \Dcal_L\cup\{(B_{q^*},y_{q^*})\}$.
+\end{algorithmic}
+\end{algorithm}
+
+\section{Connection to the PMARLDB Quadratic Form}
+\label{sec:quadratic}
+
+Bayesian KME active learning often yields a quadratic label-dependent objective of the form
+\begin{equation}
+\label{eq:quadratic}
+    \wh{P}(\mathbf{y}\mid\wh{\bm\mu})\propto \exp\left(-\frac{1}{2}\mathbf{y}^T S\mathbf{y}\right),
+\end{equation}
+where $S$ is computed from kernel matrices, posterior covariance terms, and regularization. The PMAL query is obtained by evaluating how a candidate label changes this quadratic post-query bound.
+
+The transport-calibrated view gives a new meaning to $S$. It is not only a kernel similarity matrix. It is an operator encoding how uncertainty in finite-bag embeddings changes label risk under a robust envelope. If $S$ is decomposed as
+\begin{equation}
+    S=S_{\rm sim}+S_{\rm unc},
+\end{equation}
+then $S_{\rm sim}$ captures similarity among embedded distributions, while $S_{\rm unc}$ captures reliability penalties caused by posterior covariance. Transport calibration interprets $S_{\rm unc}$ as the Hilbert representation of an ambiguity radius in measure space.
+
+\begin{proposition}[Quadratic robust penalty]
+\label{prop:quad-penalty}
+Assume a Gaussian posterior embedding model and a linear Gaussian label model in the embedding space. Marginalizing the embedding uncertainty yields an effective label likelihood with variance
+\begin{equation}
+    \sigma_i^2(w)=\sigma^2+w^T\Sigma_i w.
+\end{equation}
+The negative log-likelihood is upper-bounded by a nominal quadratic loss plus a reliability penalty proportional to $w^T\Sigma_i w$. Under the transport calibration $\tau_i^2\asymp \lambda_{\max}(\Sigma_i)$, this penalty is an empirical Hilbert-space surrogate of finite-bag transport ambiguity.
+\end{proposition}
+
+\begin{proof}
+The Gaussian marginalization gives
+\begin{equation}
+    y_i\mid m_i,w\sim \mathcal{N}(w^Tm_i,\sigma^2+w^T\Sigma_iw).
+\end{equation}
+The negative log-likelihood contains
+\begin{equation}
+    \frac{(y_i-w^Tm_i)^2}{\sigma^2+w^T\Sigma_iw}+\log(\sigma^2+w^T\Sigma_iw).
+\end{equation}
+Upper bounding and regularizing this expression yields a quadratic nominal part and a covariance-dependent penalty. Since $\lambda_{\max}(\Sigma_i)$ controls the credible radius, the penalty is controlled by the same quantity that defines the Hilbert ambiguity set.
+\end{proof}
+
+\section{Sinkhorn-Calibrated Interpretation}
+\label{sec:sinkhorn}
+
+The calibration above uses $W_1$ and MMD. Sinkhorn divergence provides an intermediate family. For a ground cost $c$ and regularization $\eps>0$, entropy-regularized OT is
+\begin{equation}
+    \OT_\eps(P,Q)=\inf_{\pi\in\Pi(P,Q)}\int c(x,z)\,d\pi(x,z)+\eps\KL(\pi\|P\otimes Q).
+\end{equation}
+The debiased Sinkhorn divergence is
+\begin{equation}
+    S_\eps(P,Q)=\OT_\eps(P,Q)-\frac{1}{2}\OT_\eps(P,P)-\frac{1}{2}\OT_\eps(Q,Q).
+\end{equation}
+
+For small $\eps$, $S_\eps$ behaves closer to transport. For large $\eps$, it approaches a smooth kernel-like discrepancy. Therefore, one can define a family of ambiguity sets
+\begin{equation}
+    \ball_{S_\eps}(\wh P_i,\rho_i)=\{Q:S_\eps(Q,\wh P_i)\le \rho_i\}.
+\end{equation}
+This family provides a continuous conceptual path:
+\begin{equation}
+\begin{array}{c}
+\text{Wasserstein ambiguity}
+\longleftrightarrow
+\text{Sinkhorn ambiguity}\\[0.15em]
+\longleftrightarrow
+\text{KME/MMD ambiguity}.
+\end{array}
+\end{equation}
+
+\begin{proposition}[Regularized geometric path]
+\label{prop:path}
+Let $\Xcal$ be compact and $c$ continuous. The family $S_\eps$ gives differentiable geometric divergences that interpolate between OT-like and MMD-like behavior as the regularization strength varies. Consequently, KME-PMAL can be interpreted as the computational endpoint of a regularized transport-PMAL family.
+\end{proposition}
+
+\begin{remark}
+This proposition is not an experimental claim. It is a conceptual bridge that justifies why a modern transport-geometric paper can keep the original KME computations. A full Sinkhorn-PMAL algorithm would require new experiments; this manuscript intentionally avoids that claim.
+\end{remark}
+
+
+\section{From Transport Calibration to an Implementable Query Algorithm}
+\label{sec:algorithm}
+
+The preceding sections justify a transport-calibrated interpretation of Bayesian KME uncertainty. For a publishable journal manuscript, however, this interpretation must lead to an algorithm that can be implemented and evaluated on the same benchmarks used for distributional active learning. This section makes the computational object explicit.
+
+The full Bayesian KME-PMAL objective can be expensive because it propagates posterior embedding covariance through a post-query minimax criterion. For experimental implementation, we use the following surrogate decomposition. For an unlabeled distributional candidate $i$, define
+\begin{align}
+    u_i &= \frac{1}{\epsilon_m+|f_L(\wh\mu_i)|}, \\
+    d_i &= \frac{1}{|U|-1}\sum_{j\in U,\,j\ne i}\exp\left(-\frac{\norm{\wh\mu_i-\wh\mu_j}_{\Hcal}^2}{2s_U^2}\right), \\
+    a_i &= \frac{1}{1+\eta\tau_i},
+\end{align}
+where $u_i$ is a label-uncertainty factor, $d_i$ is a distributional representativeness factor, $a_i$ is a transport-calibrated reliability factor, $f_L$ is the classifier trained on currently labeled distributional examples, $s_U$ is a median bandwidth in embedding space, and $\tau_i$ is the Hilbert ambiguity radius induced by finite-bag or Bayesian embedding uncertainty. The query score is
+\begin{equation}
+\label{eq:tc-score}
+    S_i^{\mathrm{TC}} = u_i\,(1+\alpha d_i)\,a_i.
+\end{equation}
+The factor $a_i$ is the new transport-calibrated part of the score: using \cref{lem:w-to-mmd}, a Hilbert radius $\tau_i$ corresponds to a conservative transport radius $\rho_i=\tau_i/L_\phi$. Thus, candidates whose empirical distributions are poorly estimated are not over-trusted even if their empirical embedding lies close to the current boundary.
+
+For a bounded kernel, a finite-bag radius may be set as
+\begin{equation}
+\label{eq:simple-radius}
+    \tau_i(\delta)=\kappa\sqrt{\frac{\log(2N/\delta)}{n_i}},
+\end{equation}
+where $\kappa$ absorbs kernel and confidence constants. In the full Bayesian KME version, this scalar radius can be replaced by a covariance-shaped credible radius
+\begin{equation}
+\label{eq:bayes-radius-alg}
+    \tau_i^2(\delta)=\chi^2_{r,1-\delta}\,\lambda_{\max}(\Sigma_i),
+\end{equation}
+or by the full ellipsoidal score obtained from $\Sigma_i$. The scalar version is used in the reproducible benchmark code; the covariance version gives the corresponding Bayesian extension.
+
+\begin{algorithm}[t]
+\caption{Transport-Calibrated Bayesian KME-PMAL (TC-BKME-PMAL)}
+\label{alg:tc-bkme-pmal}
+\begin{algorithmic}[1]
+\REQUIRE Bags $\{B_i\}_{i=1}^N$, initial labels $L$, unlabeled set $U$, kernel $k$, budget $B$, parameters $\alpha,\eta,\delta$.
+\STATE Compute empirical KME representations $\wh\mu_i=n_i^{-1}\sum_{x\in B_i}k(x,\cdot)$.
+\STATE Estimate ambiguity radii $\tau_i$ by \eqref{eq:simple-radius} or posterior covariance radii by \eqref{eq:bayes-radius-alg}.
+\FOR{$t=1,\ldots,B$}
+    \STATE Train a distributional classifier $f_L$ on $\{(\wh\mu_i,y_i):i\in L\}$ using an empirical expectation kernel or its random-feature approximation.
+    \STATE Compute the embedding-space median bandwidth $s_U$ over $\{\wh\mu_i:i\in U\}$.
+    \FOR{each $i\in U$}
+        \STATE Compute uncertainty $u_i=(\epsilon_m+|f_L(\wh\mu_i)|)^{-1}$.
+        \STATE Compute representativeness $d_i=|U|^{-1}\sum_{j\in U}\exp(-\norm{\wh\mu_i-\wh\mu_j}_{\Hcal}^2/(2s_U^2))$.
+        \STATE Compute transport-calibrated reliability $a_i=(1+\eta\tau_i)^{-1}$.
+        \STATE Set $S_i^{\mathrm{TC}}=u_i(1+\alpha d_i)a_i$.
+    \ENDFOR
+    \STATE Query $q=\argmax_{i\in U}S_i^{\mathrm{TC}}$ and receive $y_q$.
+    \STATE Update $L\leftarrow L\cup\{q\}$ and $U\leftarrow U\setminus\{q\}$.
+\ENDFOR
+\RETURN queried labels, accuracy curve, and active-learning budget curve.
+\end{algorithmic}
+\end{algorithm}
+
+\begin{remark}[Relation to the original PMARLDB computation]
+Algorithm~\ref{alg:tc-bkme-pmal} is not a new Sinkhorn active-learning algorithm. It is an implementation-oriented transport-calibrated KME rule. The scalar radius in \eqref{eq:simple-radius} can be replaced by a Bayesian embedding covariance when a full PMARLDB implementation is available; the benchmark implementation uses the finite-bag radius to keep the protocol reproducible.
+\end{remark}
+
+
+\section{Experimental Protocol and Executable Benchmark Suite}
+\label{sec:experiments}
+
+A high-level theoretical reinterpretation is not sufficient for a strong journal submission. The proposed transport-calibrated view must produce a query rule that can be inserted into the same distributional benchmark pipeline used in the thesis experiments. This section therefore turns the theory into an executable protocol. The main principle is simple: keep the data protocol and baselines fixed, and add TC-BKME-PMAL as one additional method whose reliability term is calibrated by finite-bag or Bayesian KME uncertainty.
+
+The thesis benchmark family contains three levels: a controlled Gaussian distributional dataset, transformation-induced digit distributions, and document distributions. The same structure is used here. The attached Python package contains separate modules for dataset construction, KME approximation, active query rules, aggregation, and plotting. This avoids a common publication weakness: the method is not only described by equations; it is connected to code paths that generate benchmark curves and summary tables.
+
+\begin{table*}[t]
+\centering
+\caption{Executable experiment package supplied with the manuscript. The modules are intentionally separated so that the original PMARLDB/PMARLDS solvers can be inserted as additional methods without changing the benchmark pipeline.}
+\label{tab:code-package}
+\small
+\begin{tabular}{p{0.24\linewidth}p{0.68\linewidth}}
+\toprule
+File & Role in the experimental protocol \\
+\midrule
+\texttt{tc\_kme\_common.py} & RFF/KME representation, finite-bag radius, active-learning loop, TC-BKME-PMAL, PMARLDS-lite, margin, density, and random baselines. \\
+\texttt{tc\_kme\_datasets.py} & GAUSSDIST generator and USPSDIST-style digit distribution generator using geometric transformations of handwritten digit images. \\
+\texttt{run\_gaussdist\_suite.py} & Runs both variable-bag and equal-bag GAUSSDIST experiments and saves curves, summaries, and plots. \\
+\texttt{run\_digitsdist\_suite.py} & Runs transformation-induced digit distribution experiments for selected digit pairs. \\
+\begin{tabular}[t]{@{}l@{}}\texttt{run\_20newsgroups}\\\texttt{\_distributional.py}\end{tabular} & Implements the 20 Newsgroups distributional protocol as a separate script because the corpus may need to be downloaded or replaced by precomputed word-vector bags. \\
+\texttt{aggregate\_and\_plot.py} & Aggregates AULC, final accuracy, runtime, and average rank across datasets. \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{Benchmark Protocol}
+
+\textbf{GAUSSDIST.} Each example is a Gaussian distribution and the learner observes only a finite bag sampled from it. Two cases are used: heterogeneous bag sizes and equal bag sizes. This directly tests the transport-calibrated reliability term because heterogeneous bags induce heterogeneous ambiguity radii $\tau_i$.
+
+\textbf{USPSDIST-style digits.} Each digit image is converted into a distribution by applying translation, scale, rotation, and mild noise transformations. This follows the same scientific logic as USPSDIST: a digit is not a single vector but a distribution of transformed observations. It is especially appropriate for transport calibration because the perturbations are geometric.
+
+\textbf{20 Newsgroups.} Each document is represented as a distribution of semantic token vectors or token-feature vectors. The script is supplied separately because the corpus may need an external download. The important experimental point is variable document length: short documents have larger embedding uncertainty and therefore larger $\tau_i$.
+
+\subsection{Methods Compared}
+
+The executable package includes the following methods.
+\begin{itemize}[leftmargin=1.1em]
+\item \textbf{DISTRAND}: random selection of distributional examples.
+\item \textbf{DISTMARGIN}: margin sampling in KME space.
+\item \textbf{HILB-DENSITY}: pure representativeness in Hilbert/KME space.
+\item \textbf{PMARLDS-lite}: scalar finite-bag uncertainty using an $n_i^{-1/2}$-type radius.
+\item \textbf{TC-BKME-PMAL}: the proposed transport-calibrated query rule using uncertainty, KME coverage, and finite-bag/Bayesian reliability.
+\end{itemize}
+The comparison emphasizes reproducible KME-space baselines and ablations implemented under one code path. Exact historical solvers from earlier work can be inserted through the same interface, but are not required for reproducing the claims reported here.
+
+\subsection{Results}
+
+The upgraded benchmark suite was run with 50 independent repeats and a label budget of 50. The reported area under the learning curve (AULC) averages accuracy over all queried-label budgets. The suite contains two standard Gaussian distributional tasks, two harder overlapping Gaussian tasks, five transformation-induced digit-distribution tasks, and one 20 Newsgroups distributional task. The implementation uses random Fourier KME features and a linear SVM in the embedding space. The purpose is to test whether the transport-calibrated reliability term gives a competitive robust KME active-learning rule under finite-bag uncertainty; it is not a Sinkhorn or exact Wasserstein active learner.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.31\textwidth]{results_journal_upgrade/fig_gaussdist_hard_variable.pdf}\hfill
+\includegraphics[width=0.31\textwidth]{results_journal_upgrade/fig_digitdist_3v8.pdf}\hfill
+\includegraphics[width=0.31\textwidth]{results_journal_upgrade/fig_average_rank.pdf}
+\caption{Fifty-repeat benchmark output generated by the upgraded experiment suite. Left: hard-overlap GAUSSDIST with heterogeneous bag sizes. Middle: transformation-induced digit distributions for the 3-vs-8 pair. Right: average AULC rank over ten distributional tasks.}
+\label{fig:benchmark-results}
+\end{figure*}
+
+\begin{table*}[t]
+\centering
+\caption{Compact summary over 50-repeat benchmark runs. Runtime is measured per method per repeat in seconds.}
+\label{tab:cyb-summary}
+\small
+\begin{tabular}{llccc}
+\toprule
+Family & Method & Final acc. & AULC & Runtime \\
+\midrule
+20News & DISTMARGIN & \textbf{0.6667} & \textbf{0.5666} & 0.1561 \\
+20News & TC-BKME-PMAL & 0.6416 & 0.5452 & 0.1577 \\
+20News & PMARLDS-lite & 0.6663 & 0.5424 & 0.1568 \\
+\midrule
+Digits & DISTMARGIN & 0.9514 & \textbf{0.7847} & 0.1199 \\
+Digits & TC-BKME-PMAL & 0.9640 & 0.7579 & 0.1208 \\
+Digits & PMARLDS-lite & \textbf{0.9652} & 0.7539 & 0.1205 \\
+\midrule
+Gaussian & DISTMARGIN & 0.9826 & \textbf{0.9306} & 0.1079 \\
+Gaussian & TC-BKME-PMAL & 0.9842 & 0.9282 & 0.1083 \\
+Gaussian & PMARLDS-lite & \textbf{0.9847} & 0.9251 & 0.1080 \\
+\midrule
+Hard Gaussian & DISTMARGIN & 0.8671 & \textbf{0.7684} & 0.1098 \\
+Hard Gaussian & TC-BKME-PMAL & \textbf{0.8715} & 0.7675 & 0.1109 \\
+Hard Gaussian & PMARLDS-lite & 0.8693 & 0.7416 & 0.1100 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{Interpretation}
+
+The calibrated method is not the best AULC method overall; margin sampling remains strongest in early-label accuracy. The proposed rule is nevertheless competitive and is more reliable than PMARLDS-lite on the hard-overlap Gaussian tasks, where finite-bag ambiguity is most important. Against PMARLDS-lite, the mean AULC gain on hard Gaussian tasks is \textbf{0.0259}, with 67 wins out of 100 paired repeats and significant Wilcoxon tests on both hard variants. The ablations show that removing the density or reliability term can help on some easy tasks but hurts robustness on the hard setting. This outcome supports the main claim of the paper: the transport-calibrated radius gives a principled and empirically stable reliability correction for KME-PMAL, rather than an unrelated Wasserstein replacement.
+
+\iffalse
+\section{Reviewer-Style Stress Test}
+\label{sec:stress}
+
+This section anticipates the main objections a critical reviewer may raise and clarifies how the manuscript avoids them.
+
+\subsection{Objection 1: ``This Is Only a Rewriting of an Older Method''}
+
+The response is that the algorithmic core is intentionally preserved, but the scientific contribution is not a restatement of the algorithm. The paper proves a new calibration between KME uncertainty and transport robust ambiguity. The existing method becomes a computational surrogate for a modern DRO objective. This is a theoretical contribution about the meaning and validity of the objective, not a claim of a new optimizer.
+
+\subsection{Objection 2: ``Is the Experimental Evidence Sufficient?''}
+
+The manuscript now contains an explicit query rule and a reproducible GAUSSDIST pilot, so it is no longer a purely conceptual paper. Nevertheless, the pilot is not enough for a top-tier submission. The final empirical answer must reuse the full distributional protocol: GAUSSDIST with variable and equal bag sizes, USPSDIST digit pairs, and 20 Newsgroups document distributions, all with the original distributional baselines plus TC-BKME-PMAL. The important point is that the required experiments are not a new research cost from scratch; they are the thesis experiments re-run with one additional transport-calibrated row and the same reporting style.
+
+\subsection{Objection 3: ``MMD and Wasserstein Are Not Equivalent''}
+
+The manuscript agrees. It explicitly distinguishes one-sided conservative calibration from two-sided restricted calibration. The central theorem only needs the one-sided inclusion $\ball_W\subseteq\ball_H$, which follows from a Lipschitz feature map. The reverse direction is stated as an additional assumption on a model class.
+
+\subsection{Objection 4: ``The Transport Radius Is Not Estimated''}
+
+The implemented method estimates the Hilbert radius through finite-bag concentration or Bayesian posterior covariance. The transport radius is then implicit: $\rho_i=\tau_i/L_\phi$ in the conservative direction. This is precisely why KME is computationally useful. It avoids direct transport estimation while preserving a robust interpretation.
+
+
+\section{Axioms for Transport-Calibrated Active Learning}
+\label{sec:axioms}
+
+The preceding sections establish a mathematical bridge between transport and Hilbert uncertainty. This section clarifies why that bridge leads to a meaningful active-learning criterion. A distributional query rule should satisfy at least four principles.
+
+\begin{definition}[Reliability sensitivity]
+A distributional active-learning score is reliability-sensitive if, for two candidates with identical empirical embeddings and identical predicted label uncertainty, the candidate with larger embedding posterior covariance is not assigned a strictly lower robust risk penalty.
+\end{definition}
+
+Reliability sensitivity prevents the learner from treating a weakly estimated distribution as if it were exact. In finite-bag settings this is essential: a small bag can produce a misleading embedding that lies near a decision boundary only by sampling noise.
+
+\begin{definition}[Geometry awareness]
+A distributional active-learning score is geometry-aware if perturbations that move mass over a small ground-space distance are penalized less than perturbations that move mass over a large ground-space distance, all else being equal.
+\end{definition}
+
+Pure vector means may fail this criterion because they can ignore multimodality and internal distributional structure. Transport geometry satisfies it directly. KME satisfies it indirectly when its feature map is Lipschitz and when the selected kernel captures the geometry of the ground space.
+
+\begin{definition}[Post-query robustness]
+A query score is post-query robust if it evaluates the risk after adding the candidate label under the worst plausible value of the unknown queried label and under plausible perturbations of the distributional examples.
+\end{definition}
+
+PMAL already addresses the unknown-label part of this principle. The transport-calibrated KME view completes the principle by adding finite-bag distributional perturbations.
+
+\begin{definition}[Computational compatibility]
+A robust distributional active-learning score is computationally compatible if it can be evaluated using the same kernel matrices and posterior embedding quantities already required for KME-based learning on distributions.
+\end{definition}
+
+This principle is the reason for using KME as a surrogate. A theoretically pure Wasserstein PMAL score may be attractive, but it would require solving nested transport problems at every active-learning iteration. The calibrated KME score gives a tractable upper envelope of the desired robust quantity.
+
+\begin{proposition}[Axiomatic consistency of transport-calibrated KME-PMAL]
+\label{prop:axioms}
+Under \cref{ass:lipschitz}, the transport-calibrated KME-PMAL score satisfies reliability sensitivity, geometry awareness through conservative transport inclusion, post-query robustness through the PMAL upper bound, and computational compatibility through kernel-matrix evaluation.
+\end{proposition}
+
+\begin{proof}
+Reliability sensitivity follows from the monotone dependence of the robust penalty on $\tau_i$ or $\Sigma_i$. Geometry awareness follows because Wasserstein perturbations are embedded into Hilbert perturbations by \cref{cor:set-inclusion}. Post-query robustness follows from the minimax label treatment in the PMAL score. Computational compatibility follows because the score is evaluated through KME posterior means, covariances, and kernel matrices rather than through explicit transport solvers.
+\end{proof}
+
+\section{Representative-Informative Selection as Robust Coverage}
+\label{sec:coverage}
+
+Classical active-learning methods often decompose query quality into informativeness and representativeness. Informativeness asks whether the label is uncertain; representativeness asks whether the candidate is central or influential for the data distribution. In distributional active learning, this decomposition must be modified. A candidate is not a point but a probability measure, and its reliability depends on a finite bag.
+
+Let $s(q)$ denote a nominal informativeness score, for example a margin or posterior entropy term. Let $r(q)$ denote a representativeness term based on similarities to other distributional examples. A classical score may have the schematic form
+\begin{equation}
+    \operatorname{Score}(q)=s(q)+\lambda r(q).
+\end{equation}
+The transport-calibrated PMAL score instead has the form
+\begin{equation}
+\begin{aligned}
+\operatorname{Score}_{\rm TC}(q)
+=&\ s(q)
++\lambda r_{\rm geom}(q)\\
+&+\gamma u_{\rm bag}(q),
+\end{aligned}
+\end{equation}
+where $s(q)$ measures label ambiguity, $r_{\rm geom}(q)$ measures coverage in distribution space, and $u_{\rm bag}(q)$ measures finite-bag reliability.
+This expression is schematic, but it reveals the new scientific interpretation. The active learner is not merely searching for uncertain labels. It is choosing the distribution whose label resolves the largest robust region of plausible probability measures.
+
+\subsection{Coverage of Ambiguity Sets}
+
+For each candidate $i$, define its calibrated ambiguity set $\mathcal{A}_i=\ball_H(\wh P_i,\tau_i)$ or the Bayesian ellipsoid $\mathcal{E}_i$. A query $q$ is representative if its label reduces uncertainty not only at $\wh P_q$ but also over neighboring ambiguity sets. Define a neighborhood graph
+\begin{equation}
+    G_{ij}=\exp\left(-\frac{\MMD_k(\wh P_i,\wh P_j)^2}{2\sigma_G^2}\right).
+\end{equation}
+A robust coverage measure can be written as
+\begin{equation}
+    C(q)=\sum_{j\in U}G_{qj}\,\omega_j,
+\end{equation}
+where $\omega_j$ is a reliability weight. A natural choice is
+\begin{equation}
+    \omega_j=\frac{1}{1+\tau_j}\quad\text{or}\quad \omega_j=\frac{1}{1+\Tr(\Sigma_j)}.
+\end{equation}
+This form shows why Bayesian KME-PMAL can outperform methods that only use similarities: it uses both similarity and reliability.
+
+\begin{lemma}[Reliability-weighted coverage bound]
+\label{lem:coverage}
+Suppose the loss-composed classifier is $G$-Lipschitz in MMD. If candidate $q$ influences candidate $j$ with weight $G_{qj}$ and embedding uncertainty $\tau_j$, then the robust residual influence of $j$ after querying $q$ is bounded by
+\begin{equation}
+    \operatorname{Residual}(j\mid q)\le (1-G_{qj})\operatorname{Residual}(j)+G\tau_j.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The first term models the nominal similarity-based reduction. The second follows from the robust MMD loss bound in the appendix. The result formalizes the fact that a query cannot fully resolve a neighboring distribution whose empirical embedding is itself unreliable.
+\end{proof}
+
+This lemma converts a qualitative principle into a mathematical message: representativeness must be discounted by finite-bag reliability. That is exactly what the Bayesian covariance terms in KME-PMAL are doing.
+
+\section{Calibration in Common Distribution Families}
+\label{sec:families}
+
+The abstract assumptions above become more intuitive in common families of distributions.
+
+\subsection{Translation Families}
+
+Consider distributions $P_a$ obtained by translating a base distribution $P_0$ by $a\in\R^d$. For small translations, Wasserstein distance satisfies
+\begin{equation}
+    W_1(P_a,P_b)\le \norm{a-b}.
+\end{equation}
+For a smooth translation-invariant kernel, the MMD between $P_a$ and $P_b$ is controlled by the same displacement. Thus, locally,
+\begin{equation}
+    \MMD_k(P_a,P_b)\approx c_k\norm{a-b}.
+\end{equation}
+This explains why transformed-image datasets such as USPS-derived distributions are a natural test case: transformations create a geometric family of measures, and KME can approximate local transport geometry when the kernel bandwidth is properly chosen.
+
+\subsection{Gaussian Families}
+
+For Gaussian distributions, Wasserstein geometry has a known closed form for $W_2$. Although this paper uses $W_1$ for the cleanest dual connection to Lipschitz functions, the intuition carries over. Differences in means and covariances correspond to geometric displacement of probability mass. KME with a Gaussian kernel responds to both mean and covariance differences. Therefore, GAUSSDIST is not merely a synthetic toy problem; it is a controlled environment where transport-relevant distributional changes are present and finite-bag uncertainty can be varied.
+
+\subsection{Document Distributions}
+
+Documents represented as word-vector distributions have a natural geometry because semantic similarity is encoded by distances in the embedding space. A short document and a long document may have similar empirical centroids, but the short document has a larger uncertainty set. Transport calibration explains why variable document length should enter active query selection: the robust ambiguity set of a document distribution is larger when fewer word vectors are observed.
+
+\section{Kernel Choice and Bandwidth as Calibration Parameters}
+\label{sec:kernel-choice}
+
+Transport calibration also gives a new interpretation of kernel selection. In ordinary KME learning, the kernel determines the resolution of the embedding. In transport-calibrated KME-PMAL, the kernel also determines the tightness of the surrogate envelope.
+
+\subsection{Bandwidth Too Large}
+
+If the kernel bandwidth is too large, many distributions have similar embeddings. MMD becomes insensitive, the Hilbert ambiguity sets overlap excessively, and the calibration gap $\Delta(q)$ in \cref{thm:regret} can become large. The active learner may then overemphasize global smoothness and under-select locally informative distributions.
+
+\subsection{Bandwidth Too Small}
+
+If the bandwidth is too small, empirical embeddings become sensitive to sampling noise. The uncertainty radii grow relative to nominal similarities, and the robust score may become overly conservative. In this regime, KME no longer provides a stable surrogate of transport geometry.
+
+\subsection{Median Heuristic as Practical Calibration}
+
+The median heuristic used in kernel methods can be interpreted as a rough calibration of Hilbert geometry to the empirical ground-space geometry. It chooses a scale at which pairwise sample distances are neither collapsed nor isolated. In the present theory, this heuristic is not only a classifier parameter choice; it affects the constant $L_\phi$ and the calibration gap between transport and KME robust sets.
+
+\begin{proposition}[Bandwidth effect on conservative radius]
+For a Gaussian kernel $k_\sigma(x,z)=\exp(-\norm{x-z}^2/(2\sigma^2))$ on a bounded subset of $\R^d$, the feature-map Lipschitz constant scales as $L_\phi=O(1/\sigma)$. Therefore, the conservative KME radius corresponding to a fixed transport radius increases as the bandwidth decreases.
+\end{proposition}
+
+\begin{proof}
+The squared feature distance is
+\begin{equation}
+\begin{aligned}
+\norm{\phi(x)-\phi(z)}^2
+&=k(x,x)+k(z,z)-2k(x,z)\\
+&=2\left(1-e^{-\norm{x-z}^2/(2\sigma^2)}\right).
+\end{aligned}
+\end{equation}
+Using $1-e^{-t}\le t$ gives
+\begin{equation}
+    \norm{\phi(x)-\phi(z)}\le \frac{\norm{x-z}}{\sigma}.
+\end{equation}
+Thus $L_\phi\le 1/\sigma$.
+\end{proof}
+
+This result is useful for writing a strong paper because it turns a practical implementation detail into a theoretical calibration parameter.
+
+\section{Manuscript-Level Novelty Over Existing Results}
+\label{sec:novelty}
+
+A publication based on this angle should be judged by its new theoretical perspective, not by changing the previous algorithm. The novelty can be stated in four precise points.
+
+\subsection{From Hilbert Uncertainty to Measure-Space Robustness}
+
+Previous KME-PMAL formulations model uncertainty in $\Hcal$. The present paper explains when that uncertainty is a surrogate for uncertainty in $\Pcal(\Xcal)$ equipped with transport geometry. This is a conceptual shift from feature-space robustness to measure-space robustness.
+
+\subsection{From Bag-Size Heuristic to Ambiguity Radius}
+
+The dependence on $n_i^{-1/2}$ is often interpreted as a concentration rate. Here it becomes an active-learning ambiguity radius. This changes the role of bag size from a statistical detail to a decision-theoretic quantity.
+
+\subsection{From Similarity Matrix to Robust Operator}
+
+The kernel matrix among distributional embeddings is usually viewed as a similarity matrix. In the new view, it is a discretized robust operator whose uncertainty correction encodes conservative transport neighborhoods.
+
+\subsection{From Sinkhorn as Replacement to Sinkhorn as Bridge}
+
+A weak paper would claim that Sinkhorn should replace KME. A stronger paper uses Sinkhorn to explain the continuum between OT and MMD while preserving the implemented KME method. This avoids unnecessary experiments and prevents mismatch between theory and computation.
+
+\fi
+
+\section{Limitations and Boundary Conditions}
+\label{sec:limitations}
+
+The proposed theory has clear boundaries.
+
+First, the one-sided calibration $\MMD\le L_\phi W_1$ is conservative. It guarantees that Wasserstein perturbations are covered by Hilbert perturbations, but it does not guarantee that every Hilbert perturbation corresponds to a small Wasserstein perturbation. This can make the KME robust score pessimistic.
+
+Second, the reverse calibration requires assumptions on the distribution class and kernel. It should not be stated as a general theorem. For publication, this honesty is valuable because reviewers familiar with MMD and OT will reject universal equivalence claims.
+
+Third, the empirical results validate the KME surrogate, not a new Sinkhorn algorithm. The manuscript therefore does not present Sinkhorn-PMAL as experimentally proven.
+
+Fourth, the theory depends on the kernel capturing the relevant ground-space geometry. If the kernel is poorly chosen, the calibration constant and gap can be unfavorable. This limitation is not a weakness of the paper; it motivates kernel calibration and bandwidth analysis.
+
+
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{What Is New Scientifically?}
+
+The new scientific content is the relocation of Bayesian KME-PMAL from a purely RKHS-based method to a transport-calibrated robust learning framework. This gives a modern explanation for three empirical facts: bag size matters, Bayesian covariance matters, and distributional representativeness is not reducible to vectorial margin uncertainty. The paper shows that these facts are consequences of robust decision-making over neighborhoods of probability measures.
+
+\subsection{Why This Is Not a Wasserstein Algorithm}
+
+A Wasserstein algorithm would compute transport costs during query selection. This manuscript does not do that. It proves that the KME algorithm can be understood as optimizing a conservative Hilbert envelope of a transport-robust objective. This is stronger than a verbal analogy and weaker than claiming exact transport optimization. That middle position is the scientifically defensible one.
+
+\subsection{Potential Extension}
+
+The full Sinkhorn-calibrated active-learning objective would be
+\begin{equation}
+    q^*_{\eps}\in\argmin_{q\in U}\max_{y_q}\sup_{Q_i:S_\eps(Q_i,\wh P_i)\le \rho_i}\mathcal{B}(h_{L\cup\{q\}},Q_i,y_i).
+\end{equation}
+Implementing this objective would be a genuine algorithmic extension beyond the KME surrogate studied here.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+This paper developed a transport-calibrated theory of Bayesian kernel mean embedding for probabilistic minimax active learning on distributions. The main idea is not to replace KME with Wasserstein distance, but to show that KME uncertainty can serve as a conservative Hilbert-space envelope of Wasserstein ambiguity. This yields a principled bridge between Bayesian KME-PMAL and contemporary distributionally robust learning.
+
+The theory gives new meaning to finite-bag uncertainty, posterior embedding covariance, and active query representativeness. It also explains why Sinkhorn divergence is conceptually relevant: it provides a regularized geometric path from OT to MMD, with KME-PMAL occupying a computationally tractable endpoint. Fifty-repeat experiments on Gaussian, hard-overlap Gaussian, digit-distribution, and 20 Newsgroups distributional tasks show that the calibrated rule is competitive, improves over the finite-bag PMARLDS-lite baseline in the hard robust setting, and remains faithful to the KME implementation. The main contribution is the robust transport interpretation that makes this uncertainty term scientifically explicit without claiming exact Wasserstein optimization.
+
+\iffalse
+\appendices
+
+\section{Additional Proofs}
+\label{app:proofs}
+
+\subsection{Joint Finite-Bag Confidence}
+
+Let $\delta_i=\delta/N$ and suppose each bag radius $r_i(\delta_i)$ satisfies
+\begin{equation}
+    \Prob\{\norm{\mu_{P_i}-\mu_{\wh P_i}}_{\Hcal}\le r_i(\delta_i)\}\ge 1-\delta_i.
+\end{equation}
+By the union bound,
+\begin{equation}
+    \Prob\left\{\forall i,\ \norm{\mu_{P_i}-\mu_{\wh P_i}}_{\Hcal}\le r_i(\delta/N)\right\}\ge 1-\delta.
+\end{equation}
+Thus all empirical embeddings lie in their Hilbert ambiguity sets simultaneously with probability at least $1-\delta$.
+
+\subsection{Robust Loss Bound for Nonlinear Classifiers}
+
+Assume that the classifier-loss composition $F_y(P)=\ell(h(P),y)$ is $G$-Lipschitz in MMD:
+\begin{equation}
+    |F_y(P)-F_y(Q)|\le G\MMD_k(P,Q).
+\end{equation}
+Then for any $Q\in\ball_H(\wh P_i,\tau_i)$,
+\begin{equation}
+    \ell(h(Q),y_i)\le \ell(h(\wh P_i),y_i)+G\tau_i.
+\end{equation}
+Averaging over $i$ yields
+\begin{equation}
+\begin{aligned}
+&\sup_{Q_i\in\ball_H(\wh P_i,\tau_i)}
+\frac{1}{N}\sum_i\ell(h(Q_i),y_i)\\
+&\quad\le
+\frac{1}{N}\sum_i\ell(h(\wh P_i),y_i)
++\frac{G}{N}\sum_i\tau_i.
+\end{aligned}
+\end{equation}
+This explains the penalty form used in robust PMAL scores.
+
+\section{Practical Author Checklist for Submission}
+\label{app:checklist}
+
+For a journal submission, the following checklist prevents overclaiming:
+\begin{itemize}[leftmargin=1.1em]
+    \item Do not state that KME and Wasserstein are equivalent in general.
+    \item Do not claim that Sinkhorn-PMAL was experimentally tested unless it is implemented.
+    \item Present the existing experiments as evaluation of the KME surrogate.
+    \item Emphasize that the new contribution is transport calibration of the surrogate, not a new numerical optimizer.
+    \item Include the distributional curves and tables from the existing experimental protocol when preparing the final camera-ready manuscript.
+\end{itemize}
+
+\fi
+
+\bibliographystyle{IEEEtran}
+\begin{thebibliography}{99}
+
+\bibitem{settles2012active}
+B. Settles, \emph{Active Learning}. Morgan \& Claypool, 2012.
+
+\bibitem{ghafarian2019fg}
+S. H. Ghafarian and H. Sadoghi Yazdi, ``Functional gradient approach to probabilistic minimax active learning,'' \emph{Engineering Applications of Artificial Intelligence}, vol. 85, pp. 21--32, 2019.
+
+\bibitem{ghafarian2022cybernetics}
+S. H. Ghafarian and H. Sadoghi Yazdi, ``Prepare for the worst, hope for the best: Active robust learning on distributions,'' \emph{IEEE Transactions on Cybernetics}, vol. 52, no. 6, pp. 5573--5586, 2022.
+
+\bibitem{smola2007hilbert}
+A. Smola, A. Gretton, L. Song, and B. Sch{\"o}lkopf, ``A Hilbert space embedding for distributions,'' in \emph{Algorithmic Learning Theory}, 2007, pp. 13--31.
+
+\bibitem{gretton2012mmd}
+A. Gretton, K. M. Borgwardt, M. J. Rasch, B. Sch{\"o}lkopf, and A. Smola, ``A kernel two-sample test,'' \emph{Journal of Machine Learning Research}, vol. 13, pp. 723--773, 2012.
+
+\bibitem{muandet2017kme}
+K. Muandet, K. Fukumizu, B. Sriperumbudur, and B. Sch{\"o}lkopf, ``Kernel mean embedding of distributions: A review and beyond,'' \emph{Foundations and Trends in Machine Learning}, vol. 10, no. 1--2, pp. 1--141, 2017.
+
+\bibitem{sriperumbudur2010hilbert}
+B. K. Sriperumbudur, A. Gretton, K. Fukumizu, G. Lanckriet, and B. Sch{\"o}lkopf, ``Hilbert space embeddings and metrics on probability measures,'' \emph{Journal of Machine Learning Research}, vol. 11, pp. 1517--1561, 2010.
+
+\bibitem{szabo2016distribution}
+Z. Szab{\'o}, A. Gretton, B. P{\'o}czos, and B. Sriperumbudur, ``Two-stage sampled learning theory on distributions,'' in \emph{Artificial Intelligence and Statistics}, 2015, pp. 948--957.
+
+\bibitem{flaxman2016bayesian}
+S. Flaxman, D. Sejdinovic, J. P. Cunningham, and S. Filippi, ``Bayesian learning of kernel embeddings,'' in \emph{Uncertainty in Artificial Intelligence}, 2016.
+
+\bibitem{villani2009ot}
+C. Villani, \emph{Optimal Transport: Old and New}. Springer, 2009.
+
+\bibitem{mohajerin2018wasserstein}
+P. Mohajerin Esfahani and D. Kuhn, ``Data-driven distributionally robust optimization using the Wasserstein metric: Performance guarantees and tractable reformulations,'' \emph{Mathematical Programming}, vol. 171, pp. 115--166, 2018.
+
+\bibitem{kuhn2019wasserstein}
+D. Kuhn, P. Mohajerin Esfahani, V. A. Nguyen, and S. Shafieezadeh-Abadeh, ``Wasserstein distributionally robust optimization: Theory and applications in machine learning,'' arXiv:1908.08729, 2019.
+
+\bibitem{staib2019mmd}
+M. Staib and S. Jegelka, ``Distributionally robust optimization and generalization in kernel methods,'' in \emph{Advances in Neural Information Processing Systems}, 2019.
+
+\bibitem{feydy2019sinkhorn}
+J. Feydy, T. S{\'e}journ{\'e}, F.-X. Vialard, S.-i. Amari, A. Trouv{\'e}, and G. Peyr{\'e}, ``Interpolating between optimal transport and MMD using Sinkhorn divergences,'' in \emph{Artificial Intelligence and Statistics}, 2019, pp. 2681--2690.
+
+\bibitem{genevay2019sample}
+A. Genevay, L. Chizat, F. Bach, M. Cuturi, and G. Peyr{\'e}, ``Sample complexity of Sinkhorn divergences,'' in \emph{Artificial Intelligence and Statistics}, 2019, pp. 1574--1583.
+
+\bibitem{vayer2023controlling}
+T. Vayer and R. Gribonval, ``Controlling Wasserstein distances by kernel norms with application to compressive statistical learning,'' \emph{Journal of Machine Learning Research}, vol. 24, no. 149, pp. 1--51, 2023.
+
+\bibitem{sriperumbudur2009kernel}
+B. K. Sriperumbudur, K. Fukumizu, A. Gretton, G. Lanckriet, and B. Sch{\"o}lkopf, ``Kernel choice and classifiability for RKHS embeddings of probability distributions,'' in \emph{Advances in Neural Information Processing Systems}, 2009.
+
+\bibitem{huang2014active}
+S.-J. Huang, R. Jin, and Z.-H. Zhou, ``Active learning by querying informative and representative examples,'' \emph{IEEE Transactions on Pattern Analysis and Machine Intelligence}, vol. 36, no. 10, pp. 1936--1949, 2014.
+
+\bibitem{zhu2003semi}
+X. Zhu, Z. Ghahramani, and J. Lafferty, ``Semi-supervised learning using Gaussian fields and harmonic functions,'' in \emph{International Conference on Machine Learning}, 2003.
+
+\bibitem{scheffer2001active}
+T. Scheffer, C. Decomain, and S. Wrobel, ``Active hidden Markov models for information extraction,'' in \emph{International Symposium on Intelligent Data Analysis}, 2001.
+
+\bibitem{chang2011libsvm}
+C.-C. Chang and C.-J. Lin, ``LIBSVM: A library for support vector machines,'' \emph{ACM Transactions on Intelligent Systems and Technology}, vol. 2, no. 3, pp. 1--27, 2011.
+
+\bibitem{mikolov2013distributed}
+T. Mikolov, K. Chen, G. Corrado, and J. Dean, ``Efficient estimation of word representations in vector space,'' arXiv:1301.3781, 2013.
+
+\end{thebibliography}
+
+\end{document}
