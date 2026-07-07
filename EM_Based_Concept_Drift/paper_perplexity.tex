@@ -16,6 +16,8 @@
 \usepackage{subcaption}
 \usepackage{xcolor}
 \usepackage{tikz}
+\usetikzlibrary{positioning}
+
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
 
@@ -139,9 +141,228 @@
 	
 	
 	% ---------------------------------------------------------------
-	\section{The Proposed System}
-	\label{sec:proposed}
-	% ---------------------------------------------------------------
+
+	
+	
+	
+\section{The Proposed Method}
+\label{sec:proposed}
+
+A significant challenge in streaming data is to design an adaptive ensemble that can handle various types of concept drift with limited memory and computational resources. To address this, we propose \textbf{EM-MTE} (Expectation-Maximization based Multi-Task Ensemble), which reformulates concept drift adaptation as a multi-task mixture learning problem.
+
+The proposed framework maintains a shared library of online learners (components) that are dynamically combined for different tasks through latent responsibility variables estimated by the Expectation-Maximization (EM) algorithm. This provides a principled probabilistic approach for adaptation, going beyond heuristic weighting methods such as Dynamic Weighted Majority (DWM).
+
+Figure~\ref{fig:em-mte-overview} presents the overall architecture of the EM-MTE framework. The remainder of this section details the problem formulation, the mixture model, the EM procedure, and the online adaptation mechanism.
+
+\begin{figure}[htbp]
+	\centering
+	\begin{tikzpicture}[
+		node distance=1.5cm and 1.8cm,
+		box/.style={rectangle, draw, rounded corners=4pt, minimum width=3.2cm, minimum height=1.1cm, align=center, fill=blue!10},
+		task/.style={rectangle, draw, rounded corners=4pt, minimum width=2.8cm, minimum height=0.9cm, align=center, fill=orange!15},
+		comp/.style={rectangle, draw, rounded corners=4pt, minimum width=2.6cm, minimum height=0.9cm, align=center, fill=green!15},
+		arrow/.style={->, thick, >=stealth}
+		]
+		
+		% Input
+		\node[box] (input) {Data Stream \\ $I_t$};
+		
+		% Tasks
+		\node[task, right=of input] (tasks) {Tasks / Blocks \\ $\mathcal{T}=\{1,\dots,T\}$};
+		
+		% Components
+		\node[comp, below=of tasks] (comps) {Shared Online Components \\ $\{C_1,\dots,C_K\}$};
+		
+		% EM
+		\node[box, right=of tasks] (em) {EM Algorithm \\ Latent Responsibilities $\gamma$};
+		
+		% Output
+		\node[box, right=of em] (output) {Adaptive Predictions \\ \& Drift Adaptation};
+		
+		% Arrows
+		\draw[arrow] (input) -- (tasks);
+		\draw[arrow] (tasks) -- (em);
+		\draw[arrow] (comps) -- (em);
+		\draw[arrow] (em) -- (output);
+		\draw[dashed, arrow] (comps) |- (tasks);
+		
+	\end{tikzpicture}
+	\caption{Overall architecture of the proposed EM-MTE framework.}
+	\label{fig:em-mte-overview}
+\end{figure}
+
+	
+
+
+
+	
+	
+	
+	
+	
+	
+	
+\subsection{Problem Setup and Notation}
+
+We consider a data stream classification problem where instances arrive sequentially over time. Let the input data stream be denoted as:
+\[
+D = \{(I_t, L_t) \mid t = 1, 2, \dots \},
+\]
+where $I_t \in \mathbb{R}^d$ is the feature vector of the $t$-th instance and $L_t \in \{-1, +1\}$ (or $\{1, \dots, C\}$ for multi-class) is the corresponding true label.
+
+Due to the potentially infinite nature of the stream and memory constraints, we cannot store all historical data. Instead, we process the stream in sequential blocks (or windows) $S = \{s_1, s_2, \dots, s_B\}$. Each block $s_b$ can be viewed as a temporary task or context that may undergo concept drift.
+
+Following the multi-task learning perspective, we define a set of tasks $\mathcal{T} = \{1, 2, \dots, T\}$, where each task $r \in \mathcal{T}$ corresponds to a specific data block, temporal view, or drift-sensitive objective. For each task $r$, the associated dataset is:
+\[
+\mathcal{D}^{(r)} = \{(x_i^{(r)}, y_i^{(r)})\}_{i=1}^{N_r},
+\]
+where $x_i^{(r)}$ is derived from the incoming instances $I_t$, and $y_i^{(r)}$ is the label or a task-specific target.
+
+We maintain a shared library of $K$ online learning components (experts) $\mathcal{C} = \{C_1, C_2, \dots, C_K\}$. Each component $C_k$ is an incremental learner that can be updated online. Examples of such components include Perceptron, Passive-Aggressive (PA), Online Gradient Descent (OGD), and Confidence-Weighted (CW) models. 
+
+Let $\theta_k$ denote the parameters of component $C_k$. The goal is to dynamically combine these shared components for each task while adapting to concept changes with minimal delay and resource usage.
+
+	
+	
+	
+	
+	
+	
+\subsection{Task-Conditioned Mixture Model}
+
+The core idea of our approach is to model the prediction for each task as a \emph{mixture} of the shared online components. Formally, the conditional probability of the label given the input for task $r$ is expressed as:
+\begin{equation}
+	p\left(y_i^{(r)} \mid x_i^{(r)}\right) = \sum_{k=1}^K \pi_k^{(r)} \cdot p_k\left(y_i^{(r)} \mid x_i^{(r)}, \theta_k\right),
+	\label{eq:mixture_model}
+\end{equation}
+where:
+\begin{itemize}
+	\item $\pi_k^{(r)} \geq 0$ is the mixing coefficient (weight) of component $k$ for task $r$, satisfying $\sum_{k=1}^K \pi_k^{(r)} = 1$.
+	\item $p_k\left(y_i^{(r)} \mid x_i^{(r)}, \theta_k\right)$ is the predictive distribution of the $k$-th online component with parameters $\theta_k$.
+\end{itemize}
+
+This formulation treats each task as having its own \emph{soft} combination of experts, allowing flexible adaptation to local concept drift while benefiting from knowledge sharing across tasks through the common component library $\mathcal{C}$.
+
+To make the assignment of samples to components explicit, we introduce latent responsibility variables $z_{ik}^{(r)} \in \{0,1\}$ indicating whether component $k$ is responsible for the $i$-th sample of task $r$. These latent variables enable a probabilistic interpretation of how the model detects and adapts to different types of concept drift (abrupt, gradual, recurring, or incremental).
+
+This mixture modeling approach goes beyond heuristic weighting schemes such as Dynamic Weighted Majority (DWM) by providing a principled maximum likelihood estimation framework via the Expectation-Maximization (EM) algorithm.
+
+	
+	
+	
+	
+
+
+
+
+
+\subsection{Latent Responsibility Variables and EM Framework}
+
+To enable principled adaptation, we introduce latent responsibility variables that explicitly model the contribution of each component to individual samples and tasks. For each sample $i$ of task $r$, let $z_{ik}^{(r)} \in \{0,1\}$ be a latent indicator variable such that $z_{ik}^{(r)}=1$ if component $C_k$ is responsible for generating $(x_i^{(r)}, y_i^{(r)})$, and $\sum_{k=1}^K z_{ik}^{(r)} = 1$.
+
+The complete-data log-likelihood for the mixture model can then be written as:
+\begin{equation}
+	\mathcal{L}_c = \sum_{r=1}^T \sum_{i=1}^{N_r} \sum_{k=1}^K z_{ik}^{(r)} \left[ \log \pi_k^{(r)} + \log p_k(y_i^{(r)} \mid x_i^{(r)}, \theta_k) \right].
+	\label{eq:complete_loglik}
+\end{equation}
+
+Since the latent variables $z_{ik}^{(r)}$ are unobserved, we maximize the \emph{expected} complete-data log-likelihood using the Expectation-Maximization (EM) algorithm. This approach offers several theoretical and practical advantages over heuristic methods (e.g., DWM):
+
+\begin{itemize}
+	\item \textbf{Probabilistic Interpretation}: Responsibilities $\gamma_{ik}^{(r)} = \mathbb{E}[z_{ik}^{(r)}]$ provide a soft assignment that naturally captures uncertainty and gradual concept drift.
+	\item \textbf{Optimality}: EM iteratively finds a local maximum of the marginal likelihood, offering a more principled optimization compared to ad-hoc weight updates.
+	\item \textbf{Shared Knowledge with Task Adaptation}: Components are shared globally ($\theta_k$), while mixing weights $\pi_k^{(r)}$ are task-specific, reducing negative transfer while allowing rapid adaptation to local drift.
+	\item \textbf{Handling Non-Stationarity}: The framework can detect changes in responsibility distributions over time, serving as an implicit drift detector.
+\end{itemize}
+
+The EM procedure consists of two main steps that will be detailed in the following subsections. This formulation draws inspiration from mixture of experts models and the EM-SVDD framework, extending them to the challenging online streaming setting.
+
+
+
+
+
+\subsection{E-step and M-step Updates}
+
+The EM algorithm alternates between the following two steps:
+
+\paragraph{E-step (Expectation):} Given the current parameter estimates $\Theta^{(t)} = \{\theta_k^{(t)}, \pi_k^{(r,t)}\}$, compute the posterior responsibilities:
+\begin{equation}
+	\gamma_{ik}^{(r)} = \frac{\pi_k^{(r)} \, p_k(y_i^{(r)} \mid x_i^{(r)}, \theta_k)}{\sum_{j=1}^K \pi_j^{(r)} \, p_j(y_i^{(r)} \mid x_i^{(r)}, \theta_j)}.
+	\label{eq:e-step}
+\end{equation}
+
+\paragraph{M-step (Maximization):} Update the parameters by maximizing the expected complete-data log-likelihood:
+\begin{align}
+	\pi_k^{(r)} &\propto \sum_{i=1}^{N_r} \gamma_{ik}^{(r)}, \\
+	\theta_k &\leftarrow \arg\max_{\theta_k} \sum_{r=1}^T \sum_{i=1}^{N_r} \gamma_{ik}^{(r)} \log p_k(y_i^{(r)} \mid x_i^{(r)}, \theta_k).
+	\label{eq:m-step}
+\end{align}
+
+For many online components (e.g., Perceptron, PA, CW), the M-step admits efficient incremental updates, making the algorithm suitable for streaming scenarios.
+
+
+
+
+
+
+
+\subsection{Online Adaptation and Drift Handling}
+
+In the streaming setting, EM-MTE processes data in an online fashion. When a new block arrives, it can be assigned to an existing task or treated as a new task. The responsibilities $\gamma_{ik}^{(r)}$ are updated incrementally, allowing the model to:
+
+\begin{itemize}
+	\item Quickly increase the weight of components that perform well on the new data distribution (abrupt drift).
+	\item Gradually shift responsibilities when the change is slow (gradual drift).
+	\item Reactivate previously useful components when patterns reappear (recurring drift).
+\end{itemize}
+
+This mechanism serves as an implicit drift detector: a significant change in the distribution of responsibilities $\pi_k^{(r)}$ across blocks signals concept drift without requiring a separate detection module.
+
+
+
+
+
+
+
+\subsection{Algorithm}
+
+\begin{algorithm}[ht]
+	\caption{EM-MTE: EM-based Multi-Task Ensemble for Streaming Data}
+	\begin{algorithmic}[1]
+		\STATE \textbf{Input:} Data stream, number of components $K$, tasks $\mathcal{T}$
+		\STATE Initialize shared components $\{C_k\}$ and mixing weights $\pi_k^{(r)}$
+		\FOR{each new data block $s_b$}
+		\STATE Assign block to task $r$ (or create new task)
+		\FOR{each sample $(x_i, y_i)$ in block}
+		\STATE \textbf{E-step:} Compute responsibilities $\gamma_{ik}^{(r)}$ using Eq.~\eqref{eq:e-step}
+		\STATE \textbf{M-step:} Update $\pi_k^{(r)}$ and incrementally update $\theta_k$
+		\ENDFOR
+		\STATE Adapt predictions using weighted combination of components
+		\ENDFOR
+	\end{algorithmic}
+\end{algorithm}
+
+
+
+
+
+
+
+\subsection{Complexity Analysis}
+
+The per-sample time complexity of EM-MTE is $\mathcal{O}(K \cdot c)$, where $c$ is the cost of a single component update (usually constant or linear in dimension $d$). Memory usage is $\mathcal{O}(K \cdot m + T \cdot K)$, where $m$ is the memory required by one component. This is significantly more efficient than maintaining separate models per task and competitive with popular ensembles such as DWM while providing stronger theoretical guarantees.
+
+
+
+
+
+
+
+
+
+	
+	
+	
 	
 	A significant issue in concept drift detection is the reliability of functional algorithms with minimum delay and storage usage. In this paper, the proposed method is reformulated as an \textit{EM-based multi-task ensemble}. The central idea is that a data stream is not handled by one global online model or by a fixed averaging of experts. Instead, each drift-sensitive prediction objective is treated as a task, and each task learns a soft combination of shared online components. The combination weights are estimated by the Expectation-Maximization (EM) principle through latent responsibility variables.
 	

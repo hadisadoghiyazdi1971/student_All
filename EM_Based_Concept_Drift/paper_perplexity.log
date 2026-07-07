@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.12.3)  7 JUL 2026 13:42
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.12.3)  7 JUL 2026 14:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -661,6 +661,10 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 brarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
+(c:/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
 (c:/texlive/2024/texmf-dist/tex/latex/pgfplots/pgfplots.sty
 (c:/texlive/2024/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
 Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
@@ -777,7 +781,7 @@ File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
 tex
 File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
-Package hyperref Info: Option `colorlinks' set `true' on input line 29.
+Package hyperref Info: Option `colorlinks' set `true' on input line 31.
  (c:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
 File: l3backend-xetex.def 2024-02-20 L3 backend support: XeTeX
 \g__graphics_track_int=\count332
@@ -789,31 +793,31 @@ File: l3backend-xetex.def 2024-02-20 L3 backend support: XeTeX
 (./paper_perplexity.aux)
 \openout1 = `paper_perplexity.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 3
-7.
+9.
  (c:/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -849,7 +853,7 @@ LaTeX Font Info:    ... okay on input line 37.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 37.
+Package hyperref Info: Link coloring ON on input line 39.
 (./paper_perplexity.out) (./paper_perplexity.out)
 \@outlinefile=\write4
 \openout4 = `paper_perplexity.out'.
@@ -860,42 +864,75 @@ Package caption Info: End \AtBeginDocument code.
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 42.
 
 (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
 
 
 (c:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (1036.32275pt too wide) in paragraph at lines 40--40
+Overfull \hbox (1036.32275pt too wide) in paragraph at lines 42--42
  [][] 
  []
 
 [1
 
-] [2] [3] [4] [5] [6] [7]
+] [2] [3]
+
+Package pgf Warning: Returning node center instead of a point on node border. D
+id you specify a point identical to the center of node ``tasks''? on input line
+ 187.
+
+
+Overfull \hbox (131.3986pt too wide) in paragraph at lines 189--190
+ [][] 
+ []
+
+[4]
+Overfull \hbox (4.90756pt too wide) in paragraph at lines 215--216
+[]\TU/lmr/m/n/12 Following the multi-task learning perspective, we define a set
+ of tasks $\OMS/cmsy/m/n/12 T \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f\OT1/cmr/m/n/
+12 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ; [] ; T\OMS/cmsy/m/n/
+12 g$\TU/lmr/m/n/12 ,
+ []
+
+
+Overfull \hbox (40.902pt too wide) in paragraph at lines 221--222
+[]\TU/lmr/m/n/12 We maintain a shared library of $\OML/cmm/m/it/12 K$ \TU/lmr/m
+/n/12 online learning components (experts) $\OMS/cmsy/m/n/12 C \OT1/cmr/m/n/12 
+= \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 C[]; C[]; [] ; C[]\OMS/cmsy/m/n/12 g$\TU/l
+mr/m/n/12 .
+ []
+
+[5]
+Overfull \hbox (10.70413pt too wide) in paragraph at lines 294--295
+ []\TU/lmr/bx/n/12 M-step (Maximization):[] \TU/lmr/m/n/12 Update the parameter
+s by maximizing the expected complete-
+ []
+
+[6]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 497.
- [8] [9] [10] [11] [12] [13] [14] [15] [16]
+put line 330.
+ [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19]
 (./paper_perplexity.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `paper_perplexity.out' has not changed.
-(rerunfilecheck)             Checksum: 7682E1E5C4305864EA13EED06D1D745C;1720.
+(rerunfilecheck)             Checksum: 87275614CD5A3C19D00CAF8A90D36B2D;3147.
  ) 
 Here is how much of TeX's memory you used:
- 33191 strings out of 474772
- 771460 string characters out of 5761268
- 1949842 words of memory out of 5000000
- 54822 multiletter control sequences out of 15000+600000
+ 33261 strings out of 474772
+ 773047 string characters out of 5761268
+ 1953842 words of memory out of 5000000
+ 54889 multiletter control sequences out of 15000+600000
  569207 words of font info for 93 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 84i,17n,87p,1652b,2165s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,17n,87p,1652b,2166s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on paper_perplexity.pdf (16 pages).
+Output written on paper_perplexity.pdf (19 pages).
