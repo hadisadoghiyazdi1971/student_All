@@ -1,0 +1,154 @@
+3. DWM: An Ensemble Method for Concept Drift
+Dynamic weighted majority maintains a weighted pool of experts or base learners. It adds and
+removes experts based on the global algorithm’s performance. If the global algorithm makes a
+mistake, then DWM adds an expert. If an expert makes a mistake, then DWM reduces its weight.
+If, in spite of multiple training episodes, an expert performs poorly, as indicated by a sufficiently
+low weight, then DWM removes it from the ensemble. This method is general, and in principle, one
+could use any online learning algorithm as a base learner. One could also use different types of base
+learners, although one would also have to implement control policies to determine what base learner
+to add.
+The formal algorithm for DWM appears in Figure 1. The algorithm maintains a set of m experts,
+E, each with a weight, wi for i = 1,...,m. Input to the algorithm is n training examples, each
+consisting of a feature vector and a class label. The parameters also include the number of classes
+(c) and β, a multiplicative factor that DWM uses to decrease an expert’s weight when it predicts
+incorrectly. A typical value for β is 0.5. The parameter θ is a threshold for removing poorly
+performing experts. If an expert’s weight falls below this threshold, then DWM removes it from the
+ensemble. Finally, the parameter p determines how often DWM creates and removes experts. We
+found this parameter useful and necessary for large or noisy problems, which we discuss further in
+Section 4.2. In the following discussion, we assume p = 1.
+DWM begins by creating an ensemble containing a single learner with a weight of one (lines 1–3
+of Figure 1). Initially, this learner could predict a default class, or it could predict using previous
+experience, background knowledge, or both. DWM then takes a single example (or perhaps a set of
+examples) from the stream and presents it to the single learner to classify (line 7). If the learner’s
+prediction is wrong (line 8), then DWM decreases the learner’s weight by multiplying it by β (line 9).
+Since there is one expert in the ensemble, its prediction is DWM’s global prediction (lines 12 and
+24). If DWM’s global prediction is incorrect (line 16), then it creates a new learner with a weight of
+one (lines 17–19). DWM then trains the experts in the ensemble on the new example (line 23). After
+training, DWM outputs its global prediction (line 24).
+When there are multiple learners, DWM obtains a classification from each member of the ensemble (lines 6 and 7). If one’s prediction is incorrect, then DWM decreases its weight (lines 8 and 9).
+Regardless of the correctness of the prediction, DWM uses each learner’s prediction and its weight
+to compute a weighted sum for each class (line 10). The class with the most weight is set as the
+global prediction (line 12).
+Since DWM always decreases the weights of experts, it normalizes the weights by scaling them
+uniformly so that, after the transformation, the maximum weight is one (line 14). This prevents
+newly added experts from dominating predictions. DWM also removes poorly performing experts
+by removing those with a weight less than the threshold θ (line 15), although it will not remove the
+2763
+KOLTER AND MALOOF
+Dynamic-Weighted-Majority ( {~x, y}
+1
+n
+, c,β,θ, p )
+{~x, y}
+1
+n
+: training data, feature vector and class label
+c ∈ N
+∗
+: number of classes, c ≥ 2
+β: factor for decreasing weights, 0 ≤ β < 1
+θ: threshold for deleting experts
+p: period between expert removal, creation, and weight update
+{e,w}
+1
+m: set of experts and their weights
+Λ,λ ∈ {1,..., c}: global and local predictions
+~σ ∈ R
+c
+: sum of weighted predictions for each class
+1. m ← 1
+2. em ← Create-New-Expert()
+3. wm ← 1
+4. for i ← 1,...,n // Loop over examples
+5. ~σ ← 0
+6. for j ← 1,...,m // Loop over experts
+7. λ ← Classify(e j
+,~xi)
+8. if (λ 6= yi and i mod p = 0)
+9. wj ← βwj
+10. σλ ← σλ +wj
+11. end;
+12. Λ ← argmaxj σj
+13. if (i mod p = 0)
+14. w ← Normalize-Weights(w)
+15. {e,w} ← Remove-Experts({e,w},θ)
+16. if (Λ 6= yi)
+17. m ← m+1
+18. em ← Create-New-Expert()
+19. wm ← 1
+20. end;
+21. end;
+22. for j ← 1,...,m
+23. e j ← Train(e j
+,~xi
+, yi)
+24. output Λ
+end;
+end.
+Figure 1: Algorithm for dynamic weighted majority (DWM), after Kolter and Maloof (2005).
+last expert in the ensemble. As mentioned previously, if the global prediction is incorrect (line 16),
+DWM adds a new expert to the ensemble with a weight of one (lines 17–19). Finally, after using
+the new example to train each learner in the ensemble (lines 22 and 23), DWM outputs the global
+prediction, which is the weighted vote of the expert predictions (line 24).
+As mentioned previously, the parameter p lets DWM better cope with many or noisy examples.
+p defines the period over which DWM will not update learners’ weights (line 8) and will not remove
+or create experts (line 13). During this period, however, DWM still trains the learners (lines 22 and
+23).
+DWM is a general algorithm for coping with concept drift. One can use any online learning
+algorithm as the base learner. To date, we have evaluated two such algorithms, naive Bayes and
+Incremental Tree Inducer, and we describe these versions in the next two sections.
+3.1 DWM-NB
+DWM-NB uses an incremental version of naive Bayes as the base learner. For this study, we used the
+implementation from WEKA (Witten and Frank, 2005), which stores for nominal attributes a count
+for each class and for each attribute value given the class. The count is simply the number of times
+each class or attribute value appears in the training set, and so the learning element increments the
+appropriate counts when processing a new example. The performance element uses these counts to
+compute estimates of the prior probability of each class, P(Ci), and the conditional probability of
+each attribute value given the class, P(v j
+|Cj). It then operates under the assumption that attributes
+are conditionally independent and uses Bayes’ rule to predict the most probable class:
+C = argmax
+Ci
+P(Ci)∏
+j
+P(v j
+|Ci) .
+For numeric attributes, it stores the sum of an attribute’s values and the sum of the squared values.
+Given a value, v j
+,
+P(v j
+|Ci) =
+1
+σi j
+√
+2π
+e
+−(v j−µi j)
+2/2σ
+2
+i j
+,
+where µi j
+is the average of the jth attribute’s values for the ith class, and σi j
+is their standard
+deviation. The performance element computes these values from the stored sums.
+3.2 DWM-ITI
+DWM-ITI uses as a base learner an incremental algorithm for inducing decision trees, called Incremental Tree Inducer, or ITI (Utgoff et al., 1997). ITI uses as its concept description a decision tree
+with only binary tests. (Note that we can represent multi-valued attributes with a binary tree by
+treating each value as a binary attribute.) A decision tree is a rooted tree with internal nodes corresponding to attributes. Edges correspond to attribute values. For numeric attributes, there are two
+edges corresponding to a cut-point: one edge for values above the cut-point, the other for values less
+than or equal to the cut-point. The external nodes of the decision tree correspond to class labels.
+To facilitate incremental learning, external nodes also store examples, while the internal nodes of
+ITI’s decision trees store frequency counts for symbolic attributes and a list of observed values for
+numeric attributes.
+2765
+KOLTER AND MALOOF
+Like standard decision tree algorithms, given an observation, the performance element uses the
+observation’s attributes and their values to traverse from the root node to an external node. It predicts
+the class label stored in the node.
+ITI updates a tree by propagating a new example to a leaf node. During the descent, the algorithm updates the information stored at each node—counts or values—and upon reaching a leaf
+node, determines if the tree should be extended by converting the leaf node to a decision node. A
+secondary process examines whether the tests at each node are most appropriate, and if not, restructures the tree accordingly.
+As one can imagine, for large problems, storing all examples at leaf nodes and restructuring
+decision trees can be costly, especially when maintaining an ensemble of such trees. While we
+were judicious when applying DWM-ITI to large problems, as we see in the next section, where w

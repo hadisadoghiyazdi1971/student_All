@@ -28,22 +28,25 @@
 	urlcolor=blue
 }
 
-\title{\textbf{An Online Ensemble Method for Detecting Concept Drift in a Data Stream}}
+\title{\textbf{An EM-Based Multi-Task Ensemble Framework for Adaptive Concept Drift Detection in Data Streams}}
 
-\author{
-	Emad Mahmodi$^{1}$, \quad Hadi Sadoghi Yazdi$^{2}$, \quad Abbas Ghaemi Bafghi$^{3}$ \\[6pt]
-	\small $^{1,2,3}$Department of Computer Engineering, Ferdowsi University of Mashhad, Iran \\[4pt]
-	\small \texttt{emad.mahmodi@mail.um.ac.ir}
-}
+\author{H. Sadoghi Yazdi, Department of Computer Engineering, Faculty of Engineering, Center of Excellence in Soft Computing and Intelligent Information Processing, Ferdowsi University of Mashhad, Mashhad, Iran (e-mail: h-sadoghi@um.ac.ir}
 
-\date{Received: ---\quad Revised: ---\quad Accepted: ---}
+
 
 \begin{document}
 	
 	\maketitle
 	
 	\begin{abstract}
-		Today's incoming data has been expanding rapidly, and a streaming classifier is increasingly used to cope with essential processing requirements, i.e., rapid prediction and high performance with limited resources. Streaming mining techniques must be adapted to the sudden change of data. To deal with these problems, in this paper, we propose an \textbf{EM-Based Multi-Task Ensemble (EM-MTE)} for concept-drifting streaming data. Online learning algorithms are treated as shared components, while drift-sensitive objectives are treated as tasks. The proposed method combines task outputs through latent responsibility variables and estimates task-specific component weights by the Expectation-Maximization (EM) algorithm. Performance of our approach is evaluated against related streaming algorithms using benchmark and real datasets from the UCI repository and malicious web pages respectively. The main advantage of our approach is its adaptive task combination with fast functionality, low resource usage, and usability in real-life applications for streaming data.
+		The rapid growth of streaming data in dynamic environments necessitates classifiers that can efficiently handle concept drift while maintaining high predictive performance under strict resource constraints. Traditional single-model or fixed-ensemble approaches often fail to adapt quickly to various types of drift (abrupt, gradual, recurring, or incremental).
+		
+		In this paper, we propose \textbf{EM-MTE}, an \textbf{Expectation-Maximization based Multi-Task Ensemble} framework for concept-drifting data streams. We model the streaming problem as a multi-task learning scenario where each drift-sensitive objective or data block/view is treated as a task. A shared library of online learning components (e.g., Perceptron, Passive-Aggressive, Confidence-Weighted models) is dynamically combined for each task through latent responsibility variables. These responsibilities are iteratively estimated via the EM algorithm, enabling principled, adaptive, and task-specific weighting of experts.
+		
+		The proposed method provides a probabilistic interpretation of component combination, closed-form updates in the M-step, and natural handling of uncertainty in non-stationary environments. Extensive experiments on benchmark datasets from the UCI repository and real-world malicious web page detection demonstrate that EM-MTE achieves superior adaptation speed and accuracy compared to state-of-the-art streaming ensembles, while maintaining low memory and computational overhead.
+		
+		Our framework bridges the gap between theoretical multi-task mixture modeling and practical online concept drift adaptation, offering robustness to label scarcity and different drift patterns.
+
 		
 		\medskip
 		\noindent\textbf{Keywords:} Concept drift; Data stream; Online learning; Multi-task learning; Ensemble method; Expectation-Maximization
