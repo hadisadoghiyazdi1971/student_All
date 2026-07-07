@@ -308,15 +308,16 @@ For many online components (e.g., Perceptron, PA, CW), the M-step admits efficie
 
 \subsection{Online Adaptation and Drift Handling}
 
-In the streaming setting, EM-MTE processes data in an online fashion. When a new block arrives, it can be assigned to an existing task or treated as a new task. The responsibilities $\gamma_{ik}^{(r)}$ are updated incrementally, allowing the model to:
+In the streaming setting, we process data blocks sequentially. When a new block arrives, responsibilities are updated incrementally. Now, we decouple the sources of error into optimization error, gradient noise, and drift-induced error.
 
+The EM-MTE framework naturally handles different drift regimes:
 \begin{itemize}
-	\item Quickly increase the weight of components that perform well on the new data distribution (abrupt drift).
-	\item Gradually shift responsibilities when the change is slow (gradual drift).
-	\item Reactivate previously useful components when patterns reappear (recurring drift).
+	\item \textbf{High drift-to-noise regime}: Larger mixing weight updates allow fast tracking of abrupt changes.
+	\item \textbf{Low drift-to-noise regime}: More stable responsibilities with gradual adaptation, similar to step decay schedules in drifting optimization.
+	\item \textbf{Recurring drift}: Previously useful components can regain high responsibility without restarting the entire ensemble.
 \end{itemize}
 
-This mechanism serves as an implicit drift detector: a significant change in the distribution of responsibilities $\pi_k^{(r)}$ across blocks signals concept drift without requiring a separate detection module.
+Significant shifts in the responsibility distribution $\pi^{(r)}$ across blocks serve as a signal of concept drift, providing an implicit and probabilistic drift detection mechanism.
 
 
 
@@ -350,7 +351,9 @@ This mechanism serves as an implicit drift detector: a significant change in the
 
 \subsection{Complexity Analysis}
 
-The per-sample time complexity of EM-MTE is $\mathcal{O}(K \cdot c)$, where $c$ is the cost of a single component update (usually constant or linear in dimension $d$). Memory usage is $\mathcal{O}(K \cdot m + T \cdot K)$, where $m$ is the memory required by one component. This is significantly more efficient than maintaining separate models per task and competitive with popular ensembles such as DWM while providing stronger theoretical guarantees.
+Let $K$ be the number of components and $d$ the feature dimension. The per-sample computational cost is $\mathcal{O}(K \cdot c)$, where $c$ is the update cost of a single component (typically $\mathcal{O}(d)$). Memory complexity is $\mathcal{O}(K \cdot m + T \cdot K)$, where $m$ is the memory per component.
+
+In terms of tracking error under drift, our method achieves a favorable trade-off between adaptation speed and stability by dynamically adjusting responsibilities rather than using fixed step sizes or heuristic weight updates. This leads to better performance in both high and low drift-to-noise regimes compared to purely heuristic ensembles.
 
 
 
