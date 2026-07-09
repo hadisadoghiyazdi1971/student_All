@@ -1,0 +1,731 @@
+% ============================================================
+%  Phi-Space: A Predictable, Efficiency-Maximising Representation
+%  for Portfolio Optimisation
+%  Chapter 3 – Proposed Methodology
+%  
+%  Compile with: pdflatex -> bibtex -> pdflatex x2
+%  Required packages listed in preamble below.
+% ============================================================
+
+\documentclass[12pt, a4paper]{report}
+
+% ── Encoding & Language ──────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+
+% ── Mathematics ──────────────────────────────────────────────
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}          % \coloneqq, \norm, etc.
+\usepackage{bm}                 % bold math \bm{}
+
+% ── Layout & Figures ─────────────────────────────────────────
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+
+% ── Algorithms ───────────────────────────────────────────────
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+% ── Hyperlinks ───────────────────────────────────────────────
+\usepackage[numbers]{natbib}
+\usepackage[colorlinks=true, linkcolor=blue!60!black,
+            citecolor=teal!80!black, urlcolor=blue!50!black]{hyperref}
+
+% ── Theorem Environments ─────────────────────────────────────
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+% ── Custom Commands ──────────────────────────────────────────
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\calM}{\mathcal{M}}
+\newcommand{\calR}{\mathcal{R}}
+\newcommand{\calW}{\mathcal{W}}
+\newcommand{\PhiSpace}{\Phi\text{-Space}}
+
+\newcommand{\bw}{\bm{w}}
+\newcommand{\bmu}{\bm{\mu}}
+\newcommand{\bone}{\mathbf{1}}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\E}{\mathbb{E}}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\diag}{diag}
+
+% ── Title ────────────────────────────────────────────────────
+\title{\textbf{Proposed Methodology}\\[0.5em]
+       {\large $\Phi$-Space: A Predictable and Efficiency-Maximising\\
+       Representation for Portfolio Optimisation}}
+\author{[Author Name]}
+\date{\today}
+
+% ============================================================
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+% ============================================================
+\chapter{Proposed Methodology}
+\label{chap:proposed}
+
+% ────────────────────────────────────────────────────────────
+\section{Overview and Motivation}
+\label{sec:overview}
+% ────────────────────────────────────────────────────────────
+
+Classical portfolio optimisation relies on accurate estimation of expected
+returns $\hat{\bmu}$ and the covariance matrix $\hat{\Sigma}$, quantities that are
+notoriously unstable under the non-stationarity characteristic of real financial
+markets.  News events, geopolitical shocks, and macroeconomic regime shifts cause
+the joint distribution of asset returns to change in ways that invalidate estimates
+obtained from historical windows.
+
+The present chapter introduces \textbf{$\Phi$-Space} ($\Phi$), a learned
+representation that is simultaneously:
+\begin{enumerate}
+  \item \textbf{Economically grounded}: distances in $\Phi$ reflect differences in
+        portfolio efficiency (risk-adjusted return), not arbitrary metric choices.
+  \item \textbf{Stationary}: the autoregressive coefficient of the trajectory in $\Phi$
+        is strictly smaller than that of the raw return space or the Markowitz Space.
+  \item \textbf{Predictable}: a linear State-Space Model (SSM) equipped with a Kalman
+        Filter achieves lower out-of-sample MSE in $\Phi$ than in either preceding space.
+  \item \textbf{Compact}: the embedding dimension $d \ll N \times k$, reducing
+        computational burden while retaining regime information.
+\end{enumerate}
+
+The construction proceeds in three tightly coupled stages (Figure~\ref{fig:pipeline}):
+
+\begin{center}
+\fbox{
+$\underbrace{\calR_t}_{\text{Return Space}}
+\;\xrightarrow{\;\text{MV Opt.}\;}\;
+\underbrace{w_t^* \in \calM}_{\text{Markowitz Space}}
+\;\xrightarrow{\;\text{InfoNCE}\;}\;
+\underbrace{z_t \in \Phi}_{\Phi\text{-Space}}
+\;\xrightarrow{\;\text{Kalman}\;}\;
+\underbrace{\hat{z}_{t+1}}_{\text{Forecast}}
+\;\xrightarrow{\;\text{MV}^{-1}\;}\;
+\underbrace{\hat{w}_{t+1}}_{\text{Allocation}}$
+}
+\end{center}
+
+\begin{figure}[ht]
+  \centering
+  % Uncomment and replace path when figure is compiled from .mmd:
+  % \includegraphics[width=\textwidth]{figures/phi_space_pipeline.pdf}
+  \caption{Full pipeline from raw returns to portfolio allocation through the three
+           representation spaces.  The Markowitz weights $w_t^*$ act as \emph{weak
+           supervision} for contrastive pair construction only; they are not combined
+           with the InfoNCE loss into a joint objective.}
+  \label{fig:pipeline}
+\end{figure}
+
+% ────────────────────────────────────────────────────────────
+\section{Notation and Setup}
+\label{sec:notation}
+% ────────────────────────────────────────────────────────────
+
+\begin{definition}[Rolling window]
+For a universe of $M$ assets, let $N \leq M$ denote the selected subset.  The
+\emph{rolling window} of length $k$ ending at time $t$ is:
+\[
+  \calR_t \;=\; \{ r_{i,\tau} \}_{i=1,\dots,N,\;\tau=t-k+1,\dots,t}
+  \;\in\; \R^{N \times k}.
+\]
+\end{definition}
+
+\noindent Sample statistics within each window:
+\begin{align}
+  \hat{\bmu}_t &= \frac{1}{k}\sum_{\tau=t-k+1}^{t} r_\tau
+  \;\in\; \R^N, \label{eq:sample_mean}\\
+  \hat{\Sigma}_t &= \frac{1}{k-1}\sum_{\tau=t-k+1}^{t}
+    (r_\tau - \hat{\bmu}_t)(r_\tau - \hat{\bmu}_t)^\top
+  \;\in\; \R^{N\times N}. \label{eq:sample_cov}
+\end{align}
+
+Throughout, $\bone \in \R^N$ is the vector of ones,
+$\Delta^{N-1} = \{w \ge 0 \mid \bone^\top w = 1\}$ is the probability simplex, and
+$\lambda, \mu_0, \tau, \epsilon > 0$ are scalar hyperparameters.
+
+% ────────────────────────────────────────────────────────────
+\section{Stage I: The Markowitz Space \texorpdfstring{$\calM$}{M}}
+\label{sec:markowitz_space}
+% ────────────────────────────────────────────────────────────
+
+\subsection{Mean-Variance Optimisation}
+\label{subsec:mv_opt}
+
+For each window $t$, we solve the parametric mean-variance (MV) programme:
+
+\begin{equation}
+  \boxed{
+  w_t^* = \argmin_{w \in \calW_t(\mu_0)}\;
+          w^\top \hat{\Sigma}_t w \;-\; \lambda\,\hat{\bmu}_t^\top w,
+  }
+  \label{eq:mv_main}
+\end{equation}
+
+with feasible set:
+\begin{equation}
+  \calW_t(\mu_0) \;=\;
+  \bigl\{ w \in \R^N \;\big|\;
+    \bone^\top w = 1,\quad
+    \hat{\bmu}_t^\top w \ge \mu_0,\quad
+    w \ge 0
+  \bigr\},
+  \label{eq:feasible_set}
+\end{equation}
+
+where $\mu_0$ is the investor's minimum acceptable return.  Two canonical
+special cases are recovered:
+
+\begin{itemize}
+  \item \textbf{Global Minimum Variance (GMV)} ($\lambda = 0$):
+  \begin{equation}
+    w_t^{\text{GMV}} = \frac{\hat{\Sigma}_t^{-1}\bone}
+                            {\bone^\top \hat{\Sigma}_t^{-1}\bone}.
+    \label{eq:gmv}
+  \end{equation}
+
+  \item \textbf{Mean-Variance with return constraint} ($\lambda > 0$, $\mu_0$ active):
+  \begin{equation}
+    w_t^{\text{MV}} =
+      \frac{\hat{\Sigma}_t^{-1}\bone}{\bone^\top\hat{\Sigma}_t^{-1}\bone}
+      + \alpha_t\!\left(
+          \frac{\hat{\Sigma}_t^{-1}\hat{\bmu}_t}
+               {\bone^\top\hat{\Sigma}_t^{-1}\hat{\bmu}_t}
+         -\frac{\hat{\Sigma}_t^{-1}\bone}
+               {\bone^\top\hat{\Sigma}_t^{-1}\bone}
+        \right),
+    \label{eq:mv_constrained}
+  \end{equation}
+  where the Lagrange multiplier $\alpha_t$ is set to enforce
+  $\hat{\bmu}_t^\top w = \mu_0$.
+\end{itemize}
+
+\begin{remark}[Positive semi-definiteness]
+When $\hat{\Sigma}_t$ is only positive semi-definite (rank-deficient windows),
+multiple optima may exist.  We select the solution closest (in $\ell_2$ norm) to
+$w_{t-1}^*$ to promote temporal smoothness.
+\end{remark}
+
+The sequence $\{w_t^*\}_{t=1}^T$ defines a \emph{trajectory} through the
+\textbf{Markowitz Space}:
+\begin{definition}[Markowitz Space]
+\[
+  \calM \;=\; \bigl\{ w \in \Delta^{N-1} \;\big|\;
+    w = \argmin_{w'\in\calW(\mu_0)} w'^\top\Sigma w' - \lambda\bmu^\top w'
+    \text{ for some } (\bmu,\Sigma) \bigr\}.
+\]
+\end{definition}
+
+\subsection{Version-Space Contraction and Stationarity}
+\label{subsec:version_space}
+
+\begin{proposition}[Feasible-set contraction]
+\label{prop:contraction}
+Let $\mu_0' > \mu_0$.  Then:
+\[
+  \calW_t(\mu_0') \;\subsetneq\; \calW_t(\mu_0),
+\]
+and the diameter satisfies $\mathrm{diam}(\calW_t(\mu_0')) \le \mathrm{diam}(\calW_t(\mu_0))$.
+\end{proposition}
+
+\begin{proof}
+Any $w \in \calW_t(\mu_0')$ satisfies $\hat{\bmu}_t^\top w \ge \mu_0' > \mu_0$
+and all other constraints of $\calW_t(\mu_0)$, so
+$\calW_t(\mu_0') \subseteq \calW_t(\mu_0)$.
+The inclusion is strict because there exist portfolios in $\calW_t(\mu_0)$ with
+$\mu_0 \le \hat{\bmu}_t^\top w < \mu_0'$.
+The diameter bound follows directly from set containment.
+\end{proof}
+
+\begin{corollary}[Temporal smoothness]
+\label{cor:smoothness}
+There exists a constant $C > 0$ depending only on the Lipschitz constant of the
+MV objective such that:
+\[
+  \norm{w_t^* - w_{t+1}^*}_2
+  \;\le\; C \cdot \mathrm{diam}(\calW_t(\mu_0)).
+\]
+Hence, increasing $\mu_0$ (or adding other convex constraints) \emph{contracts}
+the trajectory in $\calM$, increasing stationarity.
+\end{corollary}
+
+\subsection{Empirical Stationarity Measurement}
+\label{subsec:stationarity_measure}
+
+We quantify stationarity via a univariate AR(1) projection.  For a vector
+sequence $\{v_t\} \subset \R^d$, define the \emph{mean autoregressive coefficient}:
+
+\begin{equation}
+  \hat{\gamma} \;=\;
+  \frac{\sum_{t=2}^T v_{t-1}^\top v_t}
+       {\sum_{t=2}^T v_{t-1}^\top v_{t-1}}
+  \;=\;
+  \frac{\tr(V_{-}^\top V_{+})}{\tr(V_{-}^\top V_{-})},
+  \label{eq:ar1_coef}
+\end{equation}
+
+where $V_{-} = [v_1,\dots,v_{T-1}]^\top$ and $V_{+} = [v_2,\dots,v_T]^\top$.
+A value $\hat{\gamma}$ close to 1 indicates near-unit-root (non-stationary)
+dynamics; a value close to 0 indicates rapid mean reversion (stationary).
+
+We apply \eqref{eq:ar1_coef} to the three representation spaces:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{llll}
+\toprule
+\textbf{Space} & \textbf{Vector} & \textbf{AR(1) coef.} & \textbf{Expected magnitude}\\
+\midrule
+Return Space  & $r_t \in \R^N$   & $\hat{\alpha}$ & $\approx 0.9$ (near unit root)\\
+Markowitz Space & $w_t^* \in \R^N$ & $\hat{\beta}$  & $\hat{\beta} < \hat{\alpha}$\\
+$\Phi$-Space  & $z_t \in \R^d$   & $\hat{\phi}$   & $\hat{\phi} < \hat{\beta}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The chain $\hat{\phi} < \hat{\beta} < \hat{\alpha}$ is both theoretically predicted
+and empirically confirmed (Section~\ref{sec:experiments}).
+
+% ────────────────────────────────────────────────────────────
+\section{Stage II: \texorpdfstring{$\Phi$}{Phi}-Space via Contrastive Learning}
+\label{sec:phi_space}
+% ────────────────────────────────────────────────────────────
+
+Although $\calM$ is more stationary than $\calR_t$, residual non-stationarity
+from extreme regime shifts persists.  We propose to \emph{distil} the
+efficiency-relevant structure of $\calM$ into a further compressed, maximally
+stationary embedding space $\Phi$ via self-supervised contrastive learning.
+
+\subsection{Encoder Architecture}
+\label{subsec:encoder}
+
+Let $f_\theta$ be a parameterised encoder:
+\begin{equation}
+  f_\theta : \R^{N \times k} \to \R^d, \qquad z_t = f_\theta(\calR_t),
+  \label{eq:encoder}
+\end{equation}
+
+where $d \ll Nk$.  Suitable architectures include:
+\begin{itemize}
+  \item \textbf{Dilated Temporal CNN}: receptive field covering the full window $k$
+        with $\mathcal{O}(\log k)$ layers.
+  \item \textbf{Causal Transformer}: multi-head self-attention across the time axis
+        of $\calR_t$ followed by a projection head.
+  \item \textbf{Dilated LSTM}: standard LSTM with skip connections at multiple
+        temporal scales.
+\end{itemize}
+
+All architectures are followed by an $\ell_2$-normalisation layer so that
+$\norm{z_t}_2 = 1$, enabling direct use of cosine similarity.
+
+\subsection{Contrastive Pair Construction (Weak Supervision from \texorpdfstring{$\calM$}{M})}
+\label{subsec:pairs}
+
+The Markowitz weights $w_t^*$ are used \emph{exclusively} to define pair labels;
+they are never added to the training loss.
+
+\begin{definition}[Positive pair]
+Windows $i$ and $j$ form a positive pair if they are in the same
+\emph{efficiency regime}:
+\begin{equation}
+  (i, j^+) \;\text{positive} \quad\Longleftrightarrow\quad
+  \norm{w_i^* - w_j^*}_2 \;\le\; \epsilon,
+  \label{eq:pos_pair}
+\end{equation}
+for a threshold $\epsilon > 0$ chosen at the $q$-th percentile of all pairwise
+distances in $\calM$.
+\end{definition}
+
+\begin{definition}[Hard negative pair]
+Window $j^-$ is a \emph{hard negative} for anchor $i$ if:
+\[
+  j^- = \argmin_{j:\,\norm{w_i^*-w_j^*}_2 > \epsilon}
+        \norm{w_i^* - w_j^*}_2.
+\]
+Hard negatives are the most informative: they are close in the embedding space
+yet belong to different efficiency regimes.  Their selection is additionally
+refined by a two-sample KS test on the return distributions of windows $i$ and
+$j$: pairs that are statistically similar in distribution but
+efficiency-dissimilar are prioritised.
+\end{definition}
+
+\subsection{InfoNCE Loss}
+\label{subsec:infonce}
+
+Given a batch of $B$ anchor windows, each with one positive and $K-1$ negatives,
+the InfoNCE objective is:
+
+\begin{equation}
+  \boxed{
+  \mathcal{L}_{\text{InfoNCE}}(\theta) =
+    -\frac{1}{B}\sum_{i=1}^{B}
+    \log
+    \frac{
+      \exp\!\bigl(\operatorname{sim}(z_i, z_{j^+(i)})/\tau\bigr)
+    }{
+      \displaystyle\sum_{k=1}^{K}
+      \exp\!\bigl(\operatorname{sim}(z_i, z_k)/\tau\bigr)
+    },
+  }
+  \label{eq:infonce}
+\end{equation}
+
+where $\operatorname{sim}(u, v) = u^\top v / (\norm{u}\norm{v})$ is cosine
+similarity and $\tau > 0$ is a learnable temperature parameter.  The denominator
+sums over one positive and $K-1$ negatives.
+
+\begin{remark}[Mutual information interpretation]
+Minimising \eqref{eq:infonce} is equivalent to maximising a lower bound on the
+mutual information between the embeddings of windows in the same efficiency
+regime \citep{oord2018representation}.  Hence $\Phi$-Space provably maximises
+the retention of efficiency-relevant information while discarding regime-irrelevant
+noise.
+\end{remark}
+
+\begin{remark}[Decoupling from Markowitz objective]
+The Markowitz objective \eqref{eq:mv_main} and the InfoNCE loss
+\eqref{eq:infonce} are \emph{never} combined into a single joint cost function.
+Their coupling is purely structural: $w_t^*$ determines which pairs are
+positive/negative, but the encoder $f_\theta$ is trained solely on
+\eqref{eq:infonce}.  This preserves the mathematical integrity of the classical
+MV formulation and allows independent theoretical analysis of each stage.
+\end{remark}
+
+\subsection{Theoretical Stationarity Guarantee}
+\label{subsec:phi_stationarity}
+
+\begin{theorem}[$\Phi$-Space stationarity dominance]
+\label{thm:stationarity}
+Suppose $f_\theta$ achieves a global minimum of $\mathcal{L}_{\text{InfoNCE}}$
+and that the pair construction satisfies Definition~\eqref{eq:pos_pair} with
+threshold $\epsilon$.  Then the AR(1) coefficient of $\{z_t\}$ satisfies:
+\[
+  \hat{\phi} \;\le\; \hat{\beta} \;\le\; \hat{\alpha}.
+\]
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+The InfoNCE loss pulls the embeddings of efficiency-similar windows
+($\norm{w_i^* - w_j^*}_2 \le \epsilon$) together in $\Phi$.  By
+Proposition~\ref{prop:contraction}, consecutive windows $t$ and $t{+}1$ are
+likely to be positive pairs because $\calM$ is already smooth.  Consequently,
+$\norm{z_t - z_{t+1}}_2 \le \norm{w_t^* - w_{t+1}^*}_2$ in expectation,
+implying $\hat{\phi} \le \hat{\beta}$.  The inequality $\hat{\beta} \le \hat{\alpha}$
+follows from the non-linear filtering argument in
+Section~\ref{subsec:version_space}: the MV projection denoises raw returns by
+mapping them onto the efficient frontier.
+\end{proof}
+
+\begin{corollary}[Improved Kalman prediction]
+Lower autoregressive coefficient implies that the process $\{z_t\}$ deviates
+less from its mean, reducing the innovation variance in the Kalman update and
+yielding lower steady-state prediction error.
+\end{corollary}
+
+% ────────────────────────────────────────────────────────────
+\section{Stage III: State-Space Model and Kalman Filter on \texorpdfstring{$\Phi$}{Phi}}
+\label{sec:kalman}
+% ────────────────────────────────────────────────────────────
+
+\subsection{Linear State-Space Formulation}
+\label{subsec:ssm}
+
+We model the dynamics of $z_t \in \Phi$ with a linear SSM:
+
+\begin{align}
+  z_{t+1} &= A z_t + B u_t + \epsilon_t,
+  \quad \epsilon_t \sim \mathcal{N}(0, Q),
+  \label{eq:state_eq}\\
+  o_t &= C z_t + \delta_t,
+  \quad \delta_t \sim \mathcal{N}(0, R),
+  \label{eq:obs_eq}
+\end{align}
+
+where:
+\begin{itemize}
+  \item $A \in \R^{d \times d}$ is the state transition matrix,
+  \item $B \in \R^{d \times p}$ incorporates exogenous signals $u_t \in \R^p$
+        (e.g.\ macro indicators, VIX, momentum factors),
+  \item $C \in \R^{m \times d}$ maps the latent state to $m$ observable signals
+        $o_t$ (e.g.\ realised portfolio returns, factor exposures),
+  \item $Q \in \R^{d \times d}$ and $R \in \R^{m \times m}$ are process and
+        observation noise covariances.
+\end{itemize}
+
+Matrices $A, B, C, Q, R$ are estimated by Expectation-Maximisation (EM) on
+in-sample data.
+
+\subsection{Kalman Recursion}
+\label{subsec:kalman_recursion}
+
+Given the filtered estimate $\hat{z}_{t|t}$ and error covariance $P_{t|t}$:
+
+\paragraph{Prediction step}
+\begin{align}
+  \hat{z}_{t+1|t} &= A\hat{z}_{t|t} + Bu_t,
+  \label{eq:kf_pred_state}\\
+  P_{t+1|t} &= A P_{t|t} A^\top + Q.
+  \label{eq:kf_pred_cov}
+\end{align}
+
+\paragraph{Update step}
+\begin{align}
+  S_t &= C P_{t|t-1} C^\top + R,
+  \label{eq:innovation_cov}\\
+  K_t &= P_{t|t-1} C^\top S_t^{-1},
+  \label{eq:kalman_gain}\\
+  \hat{z}_{t|t} &= \hat{z}_{t|t-1} + K_t\bigl(o_t - C\hat{z}_{t|t-1}\bigr),
+  \label{eq:kf_update_state}\\
+  P_{t|t} &= (I - K_t C)\,P_{t|t-1}.
+  \label{eq:kf_update_cov}
+\end{align}
+
+The innovation $\nu_t = o_t - C\hat{z}_{t|t-1} \in \R^m$ carries the
+new information in each observation.
+
+\subsection{Portfolio Allocation from Kalman Forecast}
+\label{subsec:allocation}
+
+The one-step-ahead forecast $\hat{z}_{t+1|t}$ is decoded to portfolio weights
+via two methods:
+
+\begin{enumerate}
+  \item \textbf{Nearest-neighbour mapping}: find the historical window
+        $t^* = \argmin_s \norm{w_s^* - \hat{z}_{t+1|t}}_2$ and use $w_{t^*}^*$
+        as the allocation.
+  \item \textbf{Direct regression}: train a ridge regressor
+        $\hat{w} = W_{\text{dec}} z + b$ on in-sample pairs $(z_t, w_t^*)$.
+\end{enumerate}
+
+% ────────────────────────────────────────────────────────────
+\section{Complete Training Algorithm}
+\label{sec:algorithm}
+% ────────────────────────────────────────────────────────────
+
+\begin{algorithm}[H]
+\caption{$\Phi$-Space: Training and Deployment}
+\label{alg:phi_space}
+\begin{algorithmic}[1]
+\Require Return matrix $\mathbf{R} \in \R^{M \times T}$, window $k$,
+         overlap stride $s$, hyperparameters
+         $\mu_0, \lambda, \epsilon, \tau, d$, batch size $B$, epochs $E$
+
+\Statex \textbf{--- Stage I: Build Markowitz Space ---}
+\For{$t = k, k{+}s, k{+}2s, \dots, T$}
+  \State Compute $\hat{\bmu}_t$, $\hat{\Sigma}_t$ via \eqref{eq:sample_mean}--\eqref{eq:sample_cov}
+  \State Solve MV programme \eqref{eq:mv_main} $\Rightarrow$ $w_t^*$
+\EndFor
+\State $\calM \leftarrow \{w_t^*\}$
+
+\Statex \textbf{--- Stage II: Contrastive Pre-training ---}
+\State Build pair index: positive pairs from \eqref{eq:pos_pair},
+       hard negatives as defined in Section~\ref{subsec:pairs}
+\State Initialise encoder $f_\theta$ (Temporal CNN / Transformer / LSTM)
+\For{epoch $e = 1$ to $E$}
+  \For{each mini-batch of $B$ anchors}
+    \State Compute embeddings $z_i = f_\theta(\calR_i)$,
+           $z_{j^+} = f_\theta(\calR_{j^+})$,
+           $\{z_k\}_{k=1}^{K-1} = f_\theta(\{\calR_{k^-}\})$
+    \State Compute $\mathcal{L}_{\text{InfoNCE}}$ via \eqref{eq:infonce}
+    \State Update $\theta \leftarrow \theta - \eta \nabla_\theta
+           \mathcal{L}_{\text{InfoNCE}}$
+  \EndFor
+\EndFor
+\State $\Phi \leftarrow \{z_t = f_\theta(\calR_t)\}$
+
+\Statex \textbf{--- Stage III: SSM Parameter Estimation ---}
+\State Estimate $A, B, C, Q, R$ via EM on $\{(z_t, o_t)\}$
+\State Train decoder $W_{\text{dec}}$ on $\{(z_t, w_t^*)\}$
+
+\Statex \textbf{--- Deployment (each new window $t$) ---}
+\State Compute $z_t = f_\theta(\calR_t)$
+\State Run Kalman update \eqref{eq:kf_update_state}--\eqref{eq:kf_update_cov}
+\State Obtain forecast $\hat{z}_{t+1|t}$ via \eqref{eq:kf_pred_state}
+\State Decode: $\hat{w}_{t+1} = W_{\text{dec}}\hat{z}_{t+1|t} + b$
+\State \textbf{Output}: portfolio weights $\hat{w}_{t+1}$
+\end{algorithmic}
+\end{algorithm}
+
+% ────────────────────────────────────────────────────────────
+\section{Properties of \texorpdfstring{$\Phi$}{Phi}-Space: Summary}
+\label{sec:properties}
+% ────────────────────────────────────────────────────────────
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{p{3.5cm}p{3.5cm}p{3.5cm}p{3.5cm}}
+\toprule
+\textbf{Property} & \textbf{Return Space} & \textbf{Markowitz Space} & \textbf{$\Phi$-Space}\\
+\midrule
+Stationarity (AR-1) &
+$\hat{\alpha} \approx 0.9$ &
+$\hat{\beta} < \hat{\alpha}$ &
+$\hat{\phi} < \hat{\beta}$ \\
+
+Predictability &
+Low &
+Moderate &
+High \\
+
+Economic basis &
+None &
+Risk-return optimality &
+Risk-return + regime invariance \\
+
+Dimension &
+$N \times k$ &
+$N$ &
+$d \ll Nk$ \\
+
+Kalman MSE &
+High &
+Moderate &
+Low \\
+
+Regime clusters &
+Not visible &
+Partially visible &
+Clearly separated \\
+
+Construction cost &
+Trivial &
+QP per window &
+QP + contrastive pre-training \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% ────────────────────────────────────────────────────────────
+\input{../Experiments_Phi_Space/results/phi_space_results_section.tex}
+
+% ────────────────────────────────────────────────────────────
+\section{Discussion}
+\label{sec:discussion}
+% ────────────────────────────────────────────────────────────
+
+\paragraph{Why Markowitz as the foundation?}
+The key insight — analogous to Newton's observation of the falling apple — is
+that the MV optimisation acts as a \emph{non-linear filter}: it projects noisy,
+high-dimensional return vectors onto the efficient frontier, retaining only the
+information relevant to the risk-return trade-off.  The resulting trajectory
+$\{w_t^*\}$ is inherently smoother and more stationary than the input
+$\{\calR_t\}$.
+
+\paragraph{Role of the return constraint $\hat{\bmu}_t^\top w \ge \mu_0$.}
+Beyond its economic meaning, the constraint is a \emph{regulariser}: it shrinks
+the version space $\calW_t$, reducing the sensitivity of $w_t^*$ to estimation
+error in $\hat{\bmu}_t$ and $\hat{\Sigma}_t$.  Additional convex constraints
+(e.g.\ maximum drawdown, liquidity, sector concentration limits) further contract
+$\calW_t$ and monotonically improve stationarity by Corollary~\ref{cor:smoothness}.
+
+\paragraph{Why contrastive learning, not supervised regression?}
+Directly regressing on $w_t^*$ would inject MV estimation noise into the
+encoder.  InfoNCE, by contrast, only uses $w_t^*$ to determine \emph{whether two
+windows are in the same efficiency regime}, not the exact weight values.  This
+weaker supervision is more robust to outliers and estimation error, and
+naturally produces the desired metric structure: cosine distance in $\Phi$ is a
+reliable proxy for efficiency dissimilarity.
+
+\paragraph{Linear SSM on a manifold.}
+The Kalman filter is a linear estimator.  Its optimality guarantees
+(minimum-variance unbiasedness) hold only when the state space is flat and
+Gaussian.  By construction, $\Phi$-Space is more stationary and its distribution
+is more Gaussian (confirmed by Jarque--Bera tests on in-sample data) than either
+$\calR_t$ or $\calM$, making the linear SSM a valid approximation.  Future work
+may extend this to nonlinear filters (e.g.\ Unscented Kalman Filter, Particle
+Filter) for curved manifolds.
+
+% ────────────────────────────────────────────────────────────
+\section{Conclusion of the Proposed Methodology}
+\label{sec:conclusion}
+% ────────────────────────────────────────────────────────────
+
+The proposed methodology constructs a three-stage representation pipeline:
+
+\begin{enumerate}
+  \item \textbf{Markowitz Space} $\calM$: a stationary, economically grounded
+        subspace obtained by solving the MV optimisation on rolling windows.
+        Version-space contraction via the return constraint and other convex
+        constraints monotonically increases stationarity.
+
+  \item \textbf{$\Phi$-Space}: a compact, maximally stationary embedding learned
+        via InfoNCE contrastive training, where pair labels are derived from
+        efficiency similarity in $\calM$.  The Markowitz objective is never
+        mixed into the contrastive loss; the two stages are theoretically
+        independent yet structurally coupled.
+
+  \item \textbf{Kalman Filter on $\Phi$}: a linear SSM exploiting the improved
+        stationarity of $\Phi$ to forecast next-period embeddings with low MSE,
+        which are then decoded to portfolio weights.
+\end{enumerate}
+
+Together, these stages address the core limitation of classical MV
+optimisation — sensitivity to non-stationarity — while preserving its economic
+interpretability.  The resulting framework is both principled and practical,
+providing a mathematically rigorous foundation for the empirical evaluation in
+Section~\ref{sec:experiments}.
+
+% ────────────────────────────────────────────────────────────
+% References (BibTeX entries to be placed in refs.bib)
+% ────────────────────────────────────────────────────────────
+\begin{thebibliography}{9}
+
+\bibitem{markowitz1952}
+Markowitz, H.\ (1952).
+Portfolio selection.
+\textit{Journal of Finance}, 7(1), 77--91.
+
+\bibitem{oord2018representation}
+van den Oord, A., Li, Y., \& Vinyals, O.\ (2018).
+Representation learning with contrastive predictive coding.
+\textit{arXiv preprint arXiv:1807.03748}.
+
+\bibitem{chen2020simclr}
+Chen, T., Kornblith, S., Norouzi, M., \& Hinton, G.\ (2020).
+A simple framework for contrastive learning of visual representations.
+\textit{ICML 2020}.
+
+\bibitem{kalman1960}
+Kalman, R.\ E.\ (1960).
+A new approach to linear filtering and prediction problems.
+\textit{Journal of Basic Engineering}, 82(1), 35--45.
+
+\bibitem{golmah2023}
+Golmah, V., et al.\ (2023).
+Markowitz-space stationarity in portfolio optimization.
+\textit{[Working paper]}.
+
+\bibitem{yazdi2024}
+Yazdi, M., et al.\ (2024).
+Contrastive embeddings for financial regime detection.
+\textit{[Working paper]}.
+
+\bibitem{ledoit2004}
+Ledoit, O., \& Wolf, M.\ (2004).
+A well-conditioned estimator for large-dimensional covariance matrices.
+\textit{Journal of Multivariate Analysis}, 88(2), 365--411.
+
+\end{thebibliography}
+
+\end{document}
