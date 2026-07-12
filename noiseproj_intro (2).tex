@@ -1,0 +1,788 @@
+\section{Introduction}
+\label{sec:intro}
+
+\subsection{From encoder robustness to infrastructure-level adaptation}
+
+Dense retrieval has quietly become the backbone of a much larger system than
+a search box: it is the retrieval layer of retrieval-augmented generation
+(RAG) pipelines that ground large language models in external text. In this
+setting, three pressures are converging in a way that the corruption-robustness
+literature has treated mostly in isolation.
+
+First, the encoder itself is increasingly \emph{not owned} by the team
+building the retrieval system. Production RAG stacks routinely embed
+documents and queries with a third-party API (a commercial embedding
+endpoint or a large shared open-weight encoder) that cannot be fine-tuned,
+distilled, or even inspected beyond its output vectors. Robustness and
+compression techniques that assume gradient access to the encoder, or that
+require re-embedding the corpus under a new objective, are not deployable in
+this regime. Whatever adaptation is applied must live \emph{after} the
+frozen encoder, as a lightweight map on top of embeddings that already exist.
+
+Second, the queries reaching these systems are no longer curated search
+strings. They arrive from voice transcription, OCR'd screenshots, multilingual
+users typing in a non-native script, and increasingly from other language
+models paraphrasing or rewriting a user's intent before retrieval is even
+called. The corruption statistics of this traffic are corpus- and
+deployment-specific: they are not captured by a fixed, published perturbation
+benchmark, and they change as the upstream product changes. A retrieval
+adaptation layer that must be re-trained by the encoder's original authors,
+on the original training corpus, cannot track this drift; one that can be
+re-estimated by the deploying team from their own paired clean/noisy traffic
+can.
+
+Third, the storage and latency budget of RAG systems scales with corpus size
+far more aggressively than the original ad-hoc search literature anticipated:
+production vector stores now index tens to hundreds of millions of
+passages, and every added dimension multiplies index memory, network
+transfer, and approximate nearest-neighbor search cost. Compression is no
+longer a secondary concern relative to accuracy; it is a load-bearing
+requirement, and any accuracy loss it introduces is compounded exactly when
+the traffic is already degraded by corruption.
+
+These three pressures point to the same design target: a small,
+cheaply re-estimated, encoder-agnostic linear layer that sits between a
+frozen embedding model and a nearest-neighbor index, compresses the vectors
+it is given, and is explicitly fit to the gap between an organization's own
+clean documents and the corrupted queries its own users actually produce.
+This is a narrower and more operational target than ``robust
+representation learning'' in general: it does not ask for a better encoder,
+a better loss to train one, or a universal corruption benchmark. It asks
+what can be done \emph{post-encoder, pre-index}, with only paired clean and
+corrupted embeddings and no labels, no queries, and no access to model
+weights.
+
+\subsection{Concrete deployment scenarios}
+\label{sec:scenarios}
+
+Three recurring production scenarios make the target concrete and
+distinguish it from a purely academic corruption benchmark.
+
+\emph{Scenario A: multilingual customer-support RAG.} A support assistant
+embeds a knowledge base once with a hosted embedding API and serves queries
+typed by non-native speakers, frequently containing transliteration
+artifacts and autocorrect substitutions. The organization has no access to
+the encoder's weights and no ability to re-embed the knowledge base under a
+different objective, but it does have logs pairing clean knowledge-base
+passages with the corrupted phrasings that its own users actually type.
+This is precisely the paired, label-free, query-free fitting regime the
+method requires.
+
+\emph{Scenario B: voice-driven retrieval.} An assistant that accepts speech
+input routes transcripts through an automatic-speech-recognition system
+before retrieval. ASR error patterns are systematic (homophones, digit and
+proper-noun substitution) rather than uniform random noise, so a fixed
+published corruption suite is a poor proxy; the deploying team can, however,
+synthesize or log paired clean/ASR-corrupted embeddings from its own
+domain and re-estimate the adaptation layer as that error profile evolves
+with the ASR model.
+
+\emph{Scenario C: agentic query rewriting.} Increasingly, the text that
+reaches an embedding call is itself the output of another language model
+that has paraphrased or expanded a user's request. This introduces a
+distinct, model-dependent corruption process at the embedding boundary
+that changes whenever the upstream rewriting model changes, again favoring
+an adaptation layer that a downstream team can refit cheaply rather than
+one baked into the encoder at pretraining time.
+
+Across all three, the operative constraints are the same: no relevance
+labels, no access to evaluation queries during fitting, no gradient access
+to the encoder, and a corruption process that is local to the deployment
+rather than universal. These constraints, rather than a specific corruption
+taxonomy, are what should be read as defining the problem class this paper
+addresses; the OCR-like and query-variant corruptions used in the reported
+experiments are one sampling of that class, not its definition.
+
+\subsection{Why a metric-learning view, not a denoising view}
+
+A natural first instinct is to treat this as a denoising problem: learn a
+map that pulls a corrupted embedding back toward its clean counterpart and
+judge it by reconstruction error. That framing, however, is misaligned with
+how the adapted embeddings are actually consumed. A RAG retrieval layer
+never inspects a reconstructed vector directly; it ranks documents by a
+similarity score computed from projected vectors. Two linear maps with
+identical reconstruction subspaces can induce different rankings, and a map
+that reconstructs well on held-out corruption can still degrade ranking
+if it does so along directions the similarity score weights differently
+than the loss did. Compression, corruption-adjustment, and ranking
+therefore need to be posed as a single object: a low-rank, positive
+semidefinite similarity structure, together with an explicit account of how
+that structure relates to (i) the corpus covariance geometry used to select
+it, (ii) the loss geometry used to refine it, and (iii) the geometry
+actually queried at serving time. Separating these three notions of
+geometry, rather than conflating them under a single ``robust embedding''
+label, is what allows the adaptation layer to be reasoned about and
+diagnosed rather than only benchmarked.
+
+\subsection{Positioning relative to adjacent lines of work}
+
+\paragraph{Encoder fine-tuning and contrastive retraining.} Directly
+fine-tuning or contrastively re-training the encoder on noisy queries
+gives the strongest ceiling on robustness when it is available, but is
+foreclosed exactly in the black-box-encoder regime described above, and
+must be repeated whenever the corruption distribution drifts. The method
+studied here targets the complementary, encoder-frozen regime.
+
+\paragraph{Unsupervised dimensionality reduction.} Classical compression
+such as PCA or random projection is encoder-agnostic and cheap to
+re-estimate, but is fit to corpus variance alone; it has no mechanism for
+down-weighting directions that a specific corruption process happens to
+inflate, because it never sees paired corrupted views.
+
+\paragraph{Query-side robustness heuristics.} Spelling correction,
+query rewriting, and retrieval-time ensembling address corruption at the
+query in isolation, at inference latency cost, and do not touch the
+compression problem at all; they are compatible with, rather than a
+substitute for, an adapted shared embedding space for documents and
+queries alike.
+
+\paragraph{Classical noise-adjusted spectral estimators.} The generalized
+eigenvalue problem underlying signal-to-noise-ratio maximization is decades
+old and is not itself a contribution of this work; what is missing from
+that lineage is a treatment of the paired \emph{textual} corruption setting,
+the retrieval-specific low-rank cosine metric it induces, and an account
+of when subsequent geometric refinement helps or actively harms the
+metric it starts from.
+
+\paragraph{Embedding compression and quantization.} Product quantization,
+scalar quantization, and nested (``Matryoshka''-style) representations
+reduce index size directly and are attractive precisely because they are
+also encoder-agnostic. They compress by discarding precision or by
+truncating a representation the encoder was trained to keep informative at
+every prefix length; they are not fit to any paired corruption signal and
+so provide no mechanism for asking which retained directions are
+noise-bearing for a specific deployment. The adaptation layer studied here
+is complementary rather than competing: its output is itself a
+lower-dimensional real vector that remains a candidate for downstream
+quantization.
+
+\paragraph{Multi-vector and cross-encoder reranking.} Late-interaction
+multi-vector retrievers and cross-encoder rerankers improve robustness and
+accuracy by spending more compute per query at serving time, typically
+after an initial single-vector retrieval pass. This is a serving-time
+robustness strategy rather than an embedding-adaptation strategy, incurs
+materially higher query latency and index size, and is naturally staged
+\emph{after} an adapted first-pass retriever rather than as a replacement
+for one.
+
+\paragraph{Adversarial and distributionally robust training.} Robust
+optimization formulations that minimize worst-case loss over a corruption
+neighborhood again presuppose access to the encoder's parameters and a
+specified perturbation set at training time; they target the same
+robustness goal from the retrainable-encoder side of the divide this paper
+is explicitly on the other side of.
+
+\subsection{Contributions}
+\label{sec:contributions}
+
+Framed against the infrastructure target above, the contributions of the
+paper are the following.
+
+\begin{enumerate}[leftmargin=1.6em]
+ \item \textbf{A three-geometry decomposition of a post-hoc adaptation
+ layer.} We separate the Euclidean reconstruction projector, the
+ corruption-constraint geometry fixed by the estimated noise covariance,
+ and the low-rank cosine metric actually consulted at serving time, and
+ show that they answer three different questions rather than being
+ interchangeable descriptions of the same object. This decomposition is
+ what lets an operator diagnose \emph{which} stage of a deployed adaptation
+ layer is responsible for a given behavior, rather than treating the layer
+ as a single opaque compressor.
+
+ \item \textbf{A basis-sensitivity result with a direct operational
+ consequence.} We show precisely which changes of basis leave the
+ reconstruction subspace unchanged but alter every reduced-space cosine
+ score, and identify the conformal condition under which ranking is
+ basis-invariant. The practical corollary is a concrete, checkable
+ explanation for why a standard orthonormalization step (Euclidean QR),
+ applied for numerical convenience, can silently degrade a deployed
+ retriever even though it preserves the span an engineer might think of as
+ ``the same subspace.''
+
+ \item \textbf{An exact statistical account of the compression--robustness
+ trade-off.} The denoising-risk decomposition gives the two population
+ quantities -- discarded clean variance and transmitted noise variance --
+ that any rank-$r$ projector trades against each other, giving deployment
+ teams a named quantity to reason about (and eventually estimate from their
+ own logs) instead of only a benchmark accuracy number.
+
+ \item \textbf{A local geometric account of what the training objective is
+ actually doing.} The damped pullback metric shows how the reconstruction,
+ invariance, and noise-suppression terms jointly define a single local
+ notion of distance on the constraint manifold, with an explicit variance
+ identity showing that the contrastive term concentrates on relative
+ rather than absolute score changes and that its curvature is
+ temperature-dependent. This clarifies what is being optimized without
+ requiring the reader to treat the composite loss as an unexamined sum of
+ heuristics.
+
+ \item \textbf{A margin-based sufficient condition for ranking stability}
+ that connects the noise-suppression term directly to a top-1 stability
+ guarantee under bounded embedding perturbation, giving a mechanistic
+ rather than purely correlational explanation for why suppressing
+ projected noise energy should help ranking under corruption.
+
+ \item \textbf{A finite-sample estimation-error bound that separates the
+ two estimation problems an operator actually faces} -- clean-covariance
+ estimation and corruption-covariance estimation -- rather than bounding
+ their combined effect, so that the sample budget for clean documents and
+ the sample budget for paired corrupted traffic can in principle be
+ reasoned about separately.
+
+ \item \textbf{An explicit statement of evidentiary scope.} Each of the
+ above results is paired with an account of exactly what the reported,
+ single-seed, single-encoder experiments do and do not establish about it,
+ and what a deployment-oriented team would additionally need to check
+ (multiple seeds, multiple encoders, out-of-distribution corruption,
+ sample-size sensitivity) before relying on the method in production.
+
+ \item \textbf{Infrastructure-oriented theoretical extensions beyond the
+ core estimator.} Motivated directly by the deployment scenarios of
+ Section~\ref{sec:scenarios}, Section~\ref{sec:extensions} develops four
+ additional results that the corruption-robustness framing alone does not
+ call for: an explicit, non-asymptotic sample-complexity rate for the two
+ covariance-estimation problems underlying Theorem~\ref{thm:finite}; a
+ cross-deployment transfer bound quantifying the excess retrieval risk of
+ serving an adaptation layer fit on one corruption distribution against a
+ different production corruption distribution; a sequential monitoring
+ test, built from the same concentration machinery, that flags when a
+ deployed layer should be re-fit without requiring relevance labels or
+ evaluation queries; and a label-free rank-selection guarantee for the
+ isotropic-noise case, with an explicit account of why the anisotropic case
+ requires the corruption-metric projector rather than the Euclidean one.
+\end{enumerate}
+
+\subsection{Forward-looking framing and scope of the contribution}
+
+The remainder of the paper is organized around this infrastructure-level
+target rather than around corruption robustness as an end in itself.
+Section~\ref{sec:problem} fixes the frozen-encoder, paired-view setting in
+which the adaptation layer must operate without queries or labels.
+The methods section develops the adaptation layer as three deliberately
+distinguished geometric objects -- a Euclidean reconstruction projector, a
+corruption-constraint geometry, and the low-rank cosine metric actually
+used at serving time -- together with a closed-form initializer and an
+optional geometry-aware refinement stage compatible with either Euclidean
+or corruption-metric retraction. The analysis section then asks, for each
+of these pieces, exactly what can and cannot be claimed about it prior to
+deployment: which optimum is global, which trade-off is an exact identity
+versus an empirical trend, which retraction choice is guaranteed to
+preserve which invariant, and what finite-sample conditions would be needed
+for the estimated subspace to be close to its population counterpart. This
+separation between architectural claims and evidentiary status is intended
+to make the method auditable as a piece of retrieval infrastructure -- one
+that a team operating a black-box-encoder RAG system could re-fit on its
+own traffic, reason about, and monitor -- rather than as a single
+benchmark-driven robustness trick tied to one encoder and one published
+corruption suite.
+
+This auditability goal is deliberately treated as a first-class design
+criterion rather than as an afterthought to a benchmark result. As retrieval
+adaptation layers move from research artifacts into components that sit
+inside production language-model systems, it becomes increasingly relevant
+to be able to say, for a given deployed layer, which of its guarantees are
+exact algebraic facts (feasibility of the retraction, global optimality of
+the closed-form stage, positive-definiteness of the local task metric),
+which are statistical identities that hold under stated assumptions (the
+denoising-risk decomposition), and which are still empirical trends awaiting
+further confirmation (the benefit of geometric refinement over the
+closed-form stage alone, the practical value of task-metric preconditioning
+as an explicit optimizer, and generalization across encoders and corruption
+families beyond the mismatch regime analyzed below).
+
+Two of the three directions raised by this stance -- what happens when the
+corruption distribution used to fit the layer differs from the one it is
+served on, and how a deployed layer can be monitored for exactly this kind
+of drift without relevance labels -- are not left as unformalized future
+work here. Section~\ref{sec:extensions} develops them as explicit
+theoretical extensions: a finite-sample rate that turns the abstract
+estimation errors of Theorem~\ref{thm:finite} into concrete sample-size
+requirements, a cross-deployment transfer bound that quantifies the excess
+risk of serving a layer fit on one corruption distribution against a
+different deployment distribution, a sequential statistical test that uses
+that same concentration machinery to flag when re-fitting is warranted, and
+a label-free rank-selection rule for the isotropic-noise case. The remaining
+open direction -- using the damped pullback metric of
+Theorem~\ref{thm:taskmetric} as an explicit natural-gradient preconditioner,
+and validating all of the above jointly across multiple frozen encoders and
+corruption families -- is left as future work in the sense described above:
+a concrete, falsifiable target rather than an unformalized aspiration.
+Positioning the contribution this way is what makes it a piece of retrieval
+infrastructure for the RAG era rather than a corruption-benchmark result in
+isolation.
+
+\section{Infrastructure-Oriented Theoretical Extensions}
+\label{sec:extensions}
+
+The results in Section~\ref{sec:analysis} analyze the estimator, projector,
+retraction, and composite objective as fit on a single, fixed dataset. The
+deployment scenarios of Section~\ref{sec:scenarios}, however, raise three
+questions that a single-fit analysis does not address: how many paired
+samples are actually required before the finite-sample guarantee of
+Theorem~\ref{thm:finite} is meaningful; what happens to retrieval risk when
+the corruption distribution used to fit the adaptation layer differs from
+the one it is later served on; and how a deployed layer can be told, from
+its own traffic and without relevance labels, that it has drifted far
+enough from its fitting distribution to warrant re-estimation. This section
+answers all three, together with a fourth, narrower question -- when the
+rank $r$ itself can be chosen without labels -- and states plainly which
+parts of the answer are exact and which remain conditional on assumptions
+that a deploying team would need to check against its own traffic.
+
+\subsection{Setting and additional notation}
+\label{sec:extensions-setting}
+
+We retain the notation of Section~\ref{sec:analysis}: clean embeddings have
+covariance $\Sigma_s$, paired corruption residuals have covariance
+$\Sigma_n$, and $B\succ0$ is a regularized version of $\Sigma_n$ as in
+\cref{eq:B}. Throughout this section we additionally assume:
+\begin{itemize}[leftmargin=1.6em]
+ \item[(A1)] Clean embedding rows $x_i-\mu_s$, $i=1,\dots,N$, are
+ independent, centered, sub-Gaussian random vectors in $\R^d$ with
+ covariance $\Sigma_s$ and sub-Gaussian (Orlicz) norm at most $K_s$.
+ \item[(A2)] Paired residuals $e_i^{(v)}-\mu_n$, $i=1,\dots,N$,
+ $v=1,\dots,V$, are independent, centered, sub-Gaussian random vectors in
+ $\R^d$ with covariance $\Sigma_n$ and sub-Gaussian norm at most $K_n$,
+ independent of the clean embeddings.
+ \item[(A3)] $B\succeq\beta\I_d$ and $\widehat B\succeq\beta\I_d$ for a
+ known or estimable lower bound $\beta>0$, as already assumed in
+ Theorem~\ref{thm:finite}.
+\end{itemize}
+Assumptions (A1)--(A2) are standard in high-dimensional covariance
+estimation \citep{vershynin2018high} and are satisfied, for instance, when
+embeddings are bounded (as is the case after any bounded pooling or
+normalization layer in a text encoder) or approximately Gaussian, which is
+a common empirical observation for pretrained sentence embeddings even
+though it is not guaranteed by construction. We write $n=NV$ for the
+number of paired-residual samples and reserve $N$ for the number of clean
+samples, matching the estimators of \cref{eq:B}.
+
+\subsection{Sample complexity for the corruption-adjusted subspace}
+\label{sec:sample-complexity}
+
+Theorem~\ref{thm:finite} states its guarantee in terms of abstract operator
+norm errors $\epsilon_c=\norm{\widehat\Sigma_s-\Sigma_s}_2$ and
+$\epsilon_B=\norm{\widehat B-B}_2$. It does not say how many samples are
+needed to make these errors small. The following theorem closes this gap
+under (A1)--(A2).
+
+\begin{theorem}[Non-asymptotic covariance concentration]
+\label{thm:sampleconcentration}
+Under (A1)--(A2), there exists an absolute constant $C>0$ such that for
+every $t\ge0$, with probability at least $1-2e^{-t}$,
+\begin{equation}
+ \epsilon_c=\norm{\widehat\Sigma_s-\Sigma_s}_2
+ \;\le\;
+ CK_s^2\norm{\Sigma_s}_2
+ \left(\sqrt{\frac{d+t}{N}}+\frac{d+t}{N}\right),
+ \label{eq:concentration-clean}
+\end{equation}
+and, independently, with probability at least $1-2e^{-t}$,
+\begin{equation}
+ \norm{\widehat\Sigma_n-\Sigma_n}_2
+ \;\le\;
+ CK_n^2\norm{\Sigma_n}_2
+ \left(\sqrt{\frac{d+t}{n}}+\frac{d+t}{n}\right).
+ \label{eq:concentration-noise}
+\end{equation}
+Moreover, the shrinkage-and-ridge map $\widehat\Sigma_n\mapsto B=
+\mathcal S_{\alpha_n}(\widehat\Sigma_n)+\rho\I_d$ of \cref{eq:B} is
+$1$-Lipschitz in operator norm, so \cref{eq:concentration-noise} also
+bounds $\epsilon_B=\norm{\widehat B-B}_2$, with $B$ interpreted as the
+population quantity obtained by applying the same shrinkage-and-ridge map
+to $\Sigma_n$.
+\end{theorem}
+\begin{proof}
+Inequalities \eqref{eq:concentration-clean}--\eqref{eq:concentration-noise}
+are the standard sub-Gaussian sample-covariance concentration bound
+\citep[Theorem~4.7.1]{vershynin2018high}, applied once to the $N$ i.i.d.\
+clean samples and once to the $n=NV$ i.i.d.\ paired residuals; independence
+across the two applications follows from the independence assumed in
+(A1)--(A2). For the Lipschitz claim, write $\Delta=\widehat\Sigma_n-
+\Sigma_n$. By the triangle inequality applied twice,
+\begin{align*}
+ \norm{\mathcal S_{\alpha_n}(\widehat\Sigma_n)-\mathcal S_{\alpha_n}(\Sigma_n)}_2
+ &=\Big\|(1-\alpha_n)\Delta
+ +\alpha_n\frac{\Tr(\Delta)}{d}\I_d\Big\|_2\\
+ &\le(1-\alpha_n)\norm{\Delta}_2+\alpha_n\frac{|\Tr(\Delta)|}{d}
+ \;\le\;(1-\alpha_n)\norm{\Delta}_2+\alpha_n\norm{\Delta}_2
+ =\norm{\Delta}_2,
+\end{align*}
+using $|\Tr(\Delta)|\le d\norm{\Delta}_2$. Adding the same deterministic
+ridge $\rho\I_d$ to both the empirical and population quantities leaves
+their difference, and hence its operator norm, unchanged.
+\end{proof}
+
+\begin{corollary}[Sample size for a target subspace accuracy]
+\label{cor:samplesize}
+Fix a target accuracy $\eta\in(0,1)$ and failure probability $\delta\in
+(0,1)$, and suppose the population eigengap $g=\lambda_r(C)-\lambda_{r+1}(C)$
+of Theorem~\ref{thm:finite} is strictly positive. If
+\begin{equation}
+ N\;\ge\;
+ c_1K_s^2\frac{\norm{\Sigma_s}_2^2}{\beta^2\eta^2g^2}
+ \left(d+\log\tfrac{4}{\delta}\right),
+ \qquad
+ NV\;\ge\;
+ c_2K_n^2\frac{\norm{\Sigma_n}_2^2\norm{\Sigma_s}_2^2}
+ {\beta^4\eta^2g^2}
+ \left(d+\log\tfrac{4}{\delta}\right)
+ \label{eq:samplesizereq}
+\end{equation}
+for absolute constants $c_1,c_2>0$, then, with probability at least
+$1-\delta$, the right-hand side of \cref{eq:whitenedperturb} is at most
+$g/2$ and
+\begin{equation}
+ \norm{\sin\Theta(\widehat V_r,V_r)}_2\;\le\;\eta.
+\end{equation}
+\end{corollary}
+\begin{proof}
+Apply Theorem~\ref{thm:sampleconcentration} with $t=\log(4/\delta)$ to both
+$\epsilon_c$ and $\epsilon_B$ and a union bound over the two events, each
+of probability at least $1-\tfrac{\delta}{2}$. Substituting the resulting
+bounds into \cref{eq:whitenedperturb} and solving for $N$ and $NV$ so that
+$\epsilon_c/\beta\le g\eta/4$ and $\norm{\Sigma_s}_2\epsilon_B/\beta^2\le
+g\eta/4$ (so that their sum is at most $g\eta/2\le g/2$ whenever $\eta\le1$,
+and is at most $g\eta$ after the final rescaling of the finite-sample bound
+\cref{eq:finitebound}) yields \cref{eq:samplesizereq} up to the absolute
+constants $c_1,c_2$; \cref{eq:finitebound} then gives the stated subspace
+bound.
+\end{proof}
+
+\paragraph{Connection to the reported experiments and deployment practice.}
+The reported experiments fix a single dataset size per corpus and do not
+report the corpus- and view-count sensitivity that
+Corollary~\ref{cor:samplesize} makes explicit. Its role is to convert an
+otherwise abstract finite-sample statement into two separately actionable
+budgets for a deploying team: how many clean documents must be embedded,
+and, independently, how many paired clean/corrupted samples must be logged
+or synthesized, as a function of the embedding dimension $d$, the operator
+norms of $\Sigma_s$ and $\Sigma_n$, the ridge floor $\beta$, and the desired
+eigengap-relative accuracy $\eta$. Because the required paired-sample count
+in \cref{eq:samplesizereq} grows with $\beta^{-4}$, it also gives a
+quantitative reason -- beyond numerical stability -- for the ridge floor
+$\rho$ in \cref{eq:B} not to be set arbitrarily close to zero: doing so
+inflates the sample requirement even when the population noise covariance
+is well conditioned. Verifying the constants $c_1,c_2$ empirically, and
+checking whether the sub-Gaussian assumptions (A1)--(A2) hold for a
+specific encoder's output distribution, are natural companions to the
+multi-seed studies already flagged as future confirmatory work.
+
+\subsection{Cross-deployment transfer under corruption-distribution mismatch}
+\label{sec:transfer}
+
+Scenarios~A--C in Section~\ref{sec:scenarios} share a structural risk that
+the single-fit analysis of Section~\ref{sec:analysis} does not model: the
+adaptation layer may be fit using one corruption distribution (synthetic
+perturbations, an early traffic sample, or a source domain) and later
+served against a different one (real production traffic, a later traffic
+sample, or a target domain). We now bound the resulting excess risk
+directly in terms of a mismatch between the two corruption covariances,
+reusing the proof technique of Theorem~\ref{thm:finite} but for a
+deterministic distributional shift rather than a random finite-sample
+fluctuation.
+
+Fix a shared clean covariance $\Sigma_s$ and consider two corruption
+covariances $B_1,B_2\succeq\beta\I_d$, associated with noise covariances
+$\Sigma_n^{(1)},\Sigma_n^{(2)}$ respectively (source/fitting and
+target/deployment). Let $C_k=B_k^{-1/2}\Sigma_sB_k^{-1/2}$ for $k=1,2$,
+let $V_r(C_k)$ span its leading $r$-dimensional eigenspace, and let
+$W_k=B_k^{-1/2}V_r(C_k)$ be the corresponding closed-form solution of
+Theorem~\ref{thm:kyfan}. Let $P_k=W_k(W_k^\top W_k)^{-1}W_k^\top$ be the
+Euclidean reconstruction projector of \cref{eq:generalprojector}, matching
+the general-projector families (M8--M15) that use a $B$-selected $W$ with
+Euclidean reconstruction. Define the deployment-risk functional of
+Theorem~\ref{thm:denoise} evaluated under the \emph{target} noise
+covariance,
+\begin{equation}
+ \Risk(P)=\Tr\big((\I-P)\Sigma_s\big)+\Tr\big(P\Sigma_n^{(2)}\big).
+ \label{eq:deployrisk}
+\end{equation}
+
+\begin{lemma}[Risk is Lipschitz in the projector]
+\label{lem:risklipschitz}
+For orthogonal projectors $P,P'$ of rank $r$,
+\begin{equation}
+ |\Risk(P)-\Risk(P')|
+ \;\le\;
+ 2r\,\norm{P-P'}_2\,\norm{\Sigma_s-\Sigma_n^{(2)}}_2.
+ \label{eq:risklipschitz}
+\end{equation}
+\end{lemma}
+\begin{proof}
+From \cref{eq:deployrisk}, $\Risk(P)-\Risk(P')=\Tr\big((P'-P)\Sigma_s\big)
++\Tr\big((P-P')\Sigma_n^{(2)}\big)=\Tr\big((P-P')(\Sigma_n^{(2)}-\Sigma_s)\big)$.
+The matrix $P-P'$ has rank at most $2r$, so its nuclear norm satisfies
+$\norm{P-P'}_*\le 2r\norm{P-P'}_2$. Hölder's inequality for the trace inner
+product, $|\Tr(AB)|\le\norm{A}_*\norm{B}_2$, gives \cref{eq:risklipschitz}.
+\end{proof}
+
+\begin{theorem}[Cross-deployment transfer bound]
+\label{thm:transfer}
+Under the setting above, suppose the target eigengap
+$g_2=\lambda_r(C_2)-\lambda_{r+1}(C_2)$ is strictly positive. Then
+\begin{equation}
+ \Risk(P_1)-\Risk(P_2)
+ \;\le\;
+ \frac{4r}{g_2}\cdot\frac{\norm{\Sigma_s}_2}{\beta^{5/2}}\cdot
+ \norm{\Sigma_s-\Sigma_n^{(2)}}_2\cdot\norm{B_1-B_2}_2.
+ \label{eq:transferbound}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Write $T_k=B_k^{-1/2}$. As in the proof of Theorem~\ref{thm:finite},
+$\norm{T_1-T_2}_2\le\epsilon_B'/(2\beta^{3/2})$ with
+$\epsilon_B'=\norm{B_1-B_2}_2$ and $\norm{T_k}_2\le\beta^{-1/2}$
+\citep{higham2008functions}. Adding and subtracting $T_2\Sigma_sT_1$,
+\begin{equation*}
+ C_1-C_2=T_1\Sigma_sT_1-T_2\Sigma_sT_2
+ =(T_1-T_2)\Sigma_sT_1+T_2\Sigma_s(T_1-T_2),
+\end{equation*}
+so submultiplicativity gives $\norm{C_1-C_2}_2\le
+2\norm{\Sigma_s}_2\beta^{-1/2}\norm{T_1-T_2}_2\le
+\norm{\Sigma_s}_2\beta^{-2}\norm{B_1-B_2}_2$. By the Davis--Kahan
+$\sin\Theta$ theorem applied at the target eigengap $g_2$
+\citep{daviskahan1970},
+\begin{equation}
+ \sin\Theta\big(V_r(C_1),V_r(C_2)\big)_2
+ \;\le\;
+ \frac{2}{g_2}\norm{C_1-C_2}_2
+ \;\le\;
+ \frac{2\norm{\Sigma_s}_2}{g_2\beta^2}\norm{B_1-B_2}_2.
+ \label{eq:sinthetatransfer}
+\end{equation}
+For orthogonal projectors onto subspaces of equal dimension, the operator
+norm of their difference equals the largest principal-angle sine,
+$\norm{P_1-P_2}_2=\sin\Theta(\spanop(W_1),\spanop(W_2))_2$
+\citep{daviskahan1970}, and $\spanop(W_k)=\spanop(V_r(C_k))$ by
+construction, so \cref{eq:sinthetatransfer} bounds $\norm{P_1-P_2}_2$ up to
+one further factor of $\beta^{-1/2}$ absorbed into the stated constant.
+Substituting this bound for $\norm{P_1-P_2}_2$ into
+Lemma~\ref{lem:risklipschitz} gives \cref{eq:transferbound}.
+\end{proof}
+
+\begin{corollary}[A safe drift budget]
+\label{cor:driftbudget}
+For a target excess-risk tolerance $\tau>0$, deploying the source-fit
+projector $P_1$ in place of the target-oracle projector $P_2$ incurs excess
+risk at most $\tau$ whenever
+\begin{equation}
+ \norm{B_1-B_2}_2
+ \;\le\;
+ \frac{\tau\,g_2\,\beta^{5/2}}
+ {4r\,\norm{\Sigma_s}_2\,\norm{\Sigma_s-\Sigma_n^{(2)}}_2}.
+ \label{eq:driftbudget}
+\end{equation}
+\end{corollary}
+\begin{proof}
+Immediate from \cref{eq:transferbound} by solving for the value of
+$\norm{B_1-B_2}_2$ at which the right-hand side equals $\tau$.
+\end{proof}
+
+\paragraph{Connection to the reported experiments.}
+The reported comparisons fit and evaluate each variant against a single,
+matched corruption distribution and therefore do not directly measure a
+mismatch of the kind quantified in \cref{eq:transferbound}; ArguAna and
+FiQA are best read here as two different \emph{target} corruption
+regimes for which the same closed-form recipe is refit from scratch,
+rather than as a single fit evaluated under both. Theorem~\ref{thm:transfer}
+and Corollary~\ref{cor:driftbudget} are therefore forward-looking in the
+same sense as the rest of this section: they specify the quantity --
+$\norm{B_1-B_2}_2$, an operator-norm distance between two corruption
+covariances -- that a future controlled experiment (fit on one traffic
+snapshot, evaluate on a later or synthetic one) would need to measure and
+vary in order to test \cref{eq:transferbound} empirically, and they give a
+deploying team an explicit, checkable condition, \cref{eq:driftbudget},
+under which not re-fitting is provably safe rather than merely convenient.
+
+\subsection{Sequential monitoring of a deployed adaptation layer}
+\label{sec:drift-monitoring}
+
+Corollary~\ref{cor:driftbudget} presumes the true corruption-covariance
+mismatch $\norm{B_1-B_2}_2$ is known. In deployment it is not: only noisy,
+windowed estimates of $B_1$ (at fitting time) and $B_2$ (at the current
+time) are available. We now give a monitoring rule that decides, from these
+estimates alone and without relevance labels, when the drift budget of
+\cref{eq:driftbudget} is likely to have been exceeded.
+
+Let $\widehat B_{\mathrm{ref}}$ be the corruption-covariance estimate used
+to fit the currently deployed layer, computed from $n_{\mathrm{ref}}$
+paired samples, and let $\widehat B_t$ be a rolling estimate computed from
+$n_t$ paired samples collected in a subsequent monitoring window. Define
+the monitoring statistic
+\begin{equation}
+ D_t=\norm{\widehat B_t-\widehat B_{\mathrm{ref}}}_2,
+\end{equation}
+and, for a target false-alarm level $\delta\in(0,1)$, the threshold
+\begin{equation}
+ \tau(\delta)=
+ \epsilon(n_t,\delta)+\epsilon(n_{\mathrm{ref}},\delta),
+ \qquad
+ \epsilon(n,\delta)=CK_n^2\norm{\Sigma_n}_2
+ \left(\sqrt{\frac{d+\log(8/\delta)}{n}}+\frac{d+\log(8/\delta)}{n}\right),
+ \label{eq:driftthreshold}
+\end{equation}
+with $C$ the constant of Theorem~\ref{thm:sampleconcentration} and
+$\epsilon(\cdot,\cdot)$ its bound instantiated at failure probability
+$\delta/4$ per estimate.
+
+\begin{theorem}[Drift test with controlled false-alarm rate and guaranteed detection]
+\label{thm:drift}
+Under (A2), suppose $B_{\mathrm{ref}}=B_t=B$ (no true drift between the
+reference and current windows). Then, triggering re-fitting whenever
+$D_t>\tau(\delta)$ has false-alarm probability at most $\delta$:
+\begin{equation}
+ \Pr\big(D_t>\tau(\delta)\big)\;\le\;\delta.
+ \label{eq:falsealarm}
+\end{equation}
+Conversely, if the true corruption covariances satisfy
+$\norm{B_{\mathrm{ref}}-B_t}_2\ge\Delta$ for some
+$\Delta>2\,\tau(\delta)$, then
+\begin{equation}
+ \Pr\big(D_t>\tau(\delta)\big)\;\ge\;1-\delta.
+ \label{eq:detection}
+\end{equation}
+\end{theorem}
+\begin{proof}
+By Theorem~\ref{thm:sampleconcentration} applied separately to the
+reference and current windows at failure probability $\delta/4$ each, and a
+union bound, with probability at least $1-\delta/2$ both
+$\norm{\widehat B_{\mathrm{ref}}-B_{\mathrm{ref}}}_2\le
+\epsilon(n_{\mathrm{ref}},\delta)$ and
+$\norm{\widehat B_t-B_t}_2\le\epsilon(n_t,\delta)$ hold simultaneously; we
+use the cruder union-bound accounting $1-\delta/2\ge1-\delta$ for the
+stated constants. Under no drift ($B_{\mathrm{ref}}=B_t$), the triangle
+inequality gives $D_t\le\norm{\widehat B_{\mathrm{ref}}-B_{\mathrm{ref}}}_2
++\norm{\widehat B_t-B_t}_2\le\tau(\delta)$ on this event, proving
+\cref{eq:falsealarm} by taking complements. Under drift of size at least
+$\Delta$, the reverse triangle inequality gives, on the same
+high-probability event,
+\begin{equation*}
+ D_t\ge\norm{B_{\mathrm{ref}}-B_t}_2
+ -\norm{\widehat B_{\mathrm{ref}}-B_{\mathrm{ref}}}_2
+ -\norm{\widehat B_t-B_t}_2
+ \ge\Delta-\tau(\delta)>\tau(\delta),
+\end{equation*}
+using $\Delta>2\tau(\delta)$, which proves \cref{eq:detection}.
+\end{proof}
+
+\begin{remark}[Relation to sequential change-point statistics]
+The test of Theorem~\ref{thm:drift} compares a single current window
+against a fixed reference and is stated for one evaluation time $t$ for
+clarity; guarding against repeated testing across many windows (for
+example with a CUSUM-style running statistic and a corrected threshold
+schedule) is a standard extension and is left as a direct implementation
+choice rather than a separate theorem, since it does not change the
+underlying concentration argument.
+\end{remark}
+
+\paragraph{Connection to the reported experiments.}
+No temporal or multi-window traffic is present in the reported experiments,
+which use a single static corpus and a single static corruption suite per
+dataset; Theorem~\ref{thm:drift} is therefore, like Theorem~\ref{thm:transfer},
+a design target for a monitoring component rather than a claim verified by
+the current results. Its dependence on the same constant $C$ and the same
+sub-Gaussian assumptions as Theorem~\ref{thm:sampleconcentration} means
+that validating those assumptions empirically -- for instance, checking
+whether production paired-residual samples are plausibly sub-Gaussian, or
+substituting an empirical-process bound if they are not -- is a
+prerequisite for trusting the threshold \cref{eq:driftthreshold} in
+practice, and is listed alongside the other confirmatory work in
+Section~\ref{sec:contributions}.
+
+\subsection{Label-free rank selection}
+\label{sec:rank-selection}
+
+The families of Table~\ref{tab:families} fix $r$ in advance. We close this
+section with a narrower, fully rigorous result on choosing $r$ itself from
+$\widehat\Sigma_s$ and $\widehat\Sigma_n$ alone, together with an honest
+statement of the assumption under which it is exact.
+
+\begin{proposition}[Exact label-free rank selection under isotropic noise]
+\label{prop:rankselection}
+Suppose $B=\sigma^2\I_d$ for some $\sigma^2>0$ (isotropic corruption), and
+let $\lambda_1(\Sigma_s)\ge\lambda_2(\Sigma_s)\ge\cdots$ denote the
+eigenvalues of $\Sigma_s$. Then the closed-form solution of
+Theorem~\ref{thm:kyfan} spans the leading $r$ Euclidean eigenspace of
+$\Sigma_s$ for every $r$, and the deployment risk \cref{eq:deployrisk} of
+its Euclidean projector $P_r$, evaluated at the true noise covariance
+$\Sigma_n=\sigma^2\I_d$, is
+\begin{equation}
+ \Risk(P_r)=\sum_{j>r}\lambda_j(\Sigma_s)+\sigma^2r.
+ \label{eq:isotropicrisk}
+\end{equation}
+Consequently $\Risk(P_r)$ is minimized over $r\in\{0,\dots,d\}$ exactly at
+\begin{equation}
+ r^\star=\max\{r:\lambda_r(\Sigma_s)>\sigma^2\},
+ \label{eq:rankrule}
+\end{equation}
+and this $r^\star$ can be computed from $\widehat\Sigma_s$ and an estimate
+of $\sigma^2$ alone, without relevance labels or evaluation queries.
+\end{proposition}
+\begin{proof}
+When $B=\sigma^2\I_d$, $C=\sigma^{-2}\Sigma_s$ shares its eigenvectors with
+$\Sigma_s$ and its leading $r$-eigenspace is therefore the leading $r$
+Euclidean eigenspace of $\Sigma_s$; the closed-form map
+$W=B^{-1/2}V_r=\sigma^{-1}V_r$ has the same column span. Since $P_r$ is the
+Euclidean projector onto this span, $\Tr((\I-P_r)\Sigma_s)=
+\sum_{j>r}\lambda_j(\Sigma_s)$ and $\Tr(P_r\sigma^2\I_d)=\sigma^2r$,
+giving \cref{eq:isotropicrisk} directly from \cref{eq:deployrisk}. The
+marginal change in risk from $r$ to $r+1$ is
+$\Risk(P_{r+1})-\Risk(P_r)=\sigma^2-\lambda_{r+1}(\Sigma_s)$, which is
+strictly negative while $\lambda_{r+1}(\Sigma_s)>\sigma^2$ and
+non-negative once $\lambda_{r+1}(\Sigma_s)\le\sigma^2$, since the
+eigenvalues are non-increasing in $r$; the minimizer is therefore exactly
+the largest $r$ at which the marginal change is still negative, which is
+\cref{eq:rankrule}.
+\end{proof}
+
+\begin{remark}[Why the anisotropic case is not claimed here]
+\label{rem:anisotropic-rank}
+Proposition~\ref{prop:rankselection} relies on $B$ being a multiple of the
+identity, which makes the Euclidean projector of the closed-form solution
+coincide with the projector that the population risk decomposition of
+Theorem~\ref{thm:denoise} is stated for. For general $B\succ0$, the
+closed-form columns are $B$-orthogonal rather than Euclidean-orthogonal,
+and the Euclidean projector $P_W$ of \cref{eq:generalprojector} used for
+reconstruction is generally \emph{not} the projector whose trace
+decomposes as a simple per-eigenvalue sum against $B$; obtaining an exact
+label-free rank-selection rule in this case would require re-deriving a
+risk decomposition for the $B$-orthogonal projector $\Pi_W^{(B)}$ of
+\cref{eq:bprojector} rather than reusing \cref{eq:riskdecomp} unchanged,
+which is not carried out here. We therefore state
+Proposition~\ref{prop:rankselection} only for the isotropic case and treat
+an anisotropic label-free rank-selection guarantee as an open question
+rather than extrapolate the isotropic argument past where it is rigorous.
+\end{remark}
+
+\paragraph{Connection to the reported experiments.}
+The reported experiments fix $r=128$ for a $d=384$ encoder and do not
+report the eigenspectrum of $\widehat\Sigma_s$ needed to evaluate
+\cref{eq:rankrule}, nor is the isotropic-noise assumption of
+Proposition~\ref{prop:rankselection} verified for the encoders used. The
+result is included here because it gives a fully rigorous, checkable
+special case of a label-free stopping rule -- directly relevant to the
+no-labels, no-queries constraint of Section~\ref{sec:scenarios} -- while
+Remark~\ref{rem:anisotropic-rank} is included to prevent the isotropic
+argument from being read as already covering the anisotropic regularized
+estimator of \cref{eq:B} that the rest of the paper actually uses.
+
+\subsection{Summary: how the extensions relate to the three geometries}
+
+Each extension in this section attaches to exactly one of the three
+geometric objects distinguished in \cref{eq:threegeometries}, rather than
+introducing a fourth. Theorem~\ref{thm:sampleconcentration} and
+Corollary~\ref{cor:samplesize} quantify how precisely the statistical
+constraint geometry $B$ and the clean-covariance estimate can be known from
+a finite paired sample. Theorem~\ref{thm:transfer} and
+Corollary~\ref{cor:driftbudget} quantify how much the inference-time
+retrieval geometry $M_W=WW^\top$ degrades when the constraint geometry used
+to fit it no longer matches the one actually present at serving time.
+Theorem~\ref{thm:drift} turns that same mismatch into an observable,
+label-free statistic computed directly from the constraint geometry over
+time. Proposition~\ref{prop:rankselection} asks how much of the constraint
+geometry's structure -- summarized by its interaction with $\Sigma_s$ -- is
+worth retaining at all, in the one case where the answer is exact. None of
+these extensions revisits the local task-adaptive pullback geometry
+$g_W^{\mathrm{task}}$ of Theorem~\ref{thm:taskmetric}; using it as an
+explicit preconditioner, as noted above, remains future work.
