@@ -1,0 +1,15 @@
+OVERVIEW: The PAPA SSGN (Project 661) is a nuclear-powered guided missile submarine.
+
+DETAILS:   The single PAPA- class SSGN is likely a prototype to test SSGN in concepts. It was intended to  to carry an ASM missile that was never deployed and was subsequently fitted to carry the SS-N-9.  The single PAPA SSGN has little operational deployments, and has undergone extensive overhauls. 
+
+NOTES: 
+      Displacement: 8,000 tons submerged.
+       Speed: approximately 42 knots submerged
+       Reactors: 2 
+       Complement: 85 (approx.)
+       Hulls built:  1 
+       Period of Service:	  1971-1988 (in reserver)
+
+SOURCES: Norman Polmar, "Guide to the Soviet Navy, 3rd ed. (Annapolis, MD: Naval Institute Press, 1983), 95 ; Norman Polmar, "Submarines of the Russian and Soviet Navies, 1718-1990. (Annapolis, MD: Naval Institute Press, 1991), 302 ; Federation of American Scientists. "Project 661 Anchar / Papa - Russian / Soviet Nuclear Forces." Accessed November 30, 2013. http://www.fas.org/nuke/guide/russia/theater/661.htm.
+
+

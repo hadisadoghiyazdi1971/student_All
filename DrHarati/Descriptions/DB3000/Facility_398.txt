@@ -1,0 +1,20 @@
+OVERVIEW: The HN-503 radar is a mobile, 2D radar operating in the B (NATO) or VHF (IEEE) bands. 
+
+DETAILS: The HN-503 radar has the longest detection range of any Chinese air defense radar.  It is intended to support over the water interceptions from coastal sites.   It features a high level of ECCM capability, incorporating adaptive and random pulse-to-pulse frequency agility.  It also has a high reliability and good mobility.
+
+Specifications:
+
+Frequency: 		 150-170 MHz (B Band (NATO), VHF Band (IEEE)))  
+Power output: 		 2 kW(average); 20 kW (peak) 
+PRF:			 230 Hz 	
+Range Resolution:	 300 m (range), 2 degree azimuth 					
+On/Off time:		 30 seconds
+Deploy/Stow Time	 unknown min / unknown min
+Detection Range:
+80% Pd, 1.5 m2 RCS:	 450 km
+Max Range:		 720 km
+
+
+NOTES:  
+
+SOURCES: Bussert, James, and Bruce Elleman. People's Liberation Army Navy: Combat System Technology, 1949-2010. n.d.

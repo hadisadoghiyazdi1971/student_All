@@ -1,0 +1,22 @@
+OVERVIEW: The P-14 radar (NATO name: TALL KING) is a long-range 2-D early warning radar operating in the  "A" Band.
+
+DETAILS: Also known as the 5N84A.  Weapon systems associated with the P-14 include the SA-5 GAMMON
+
+Specifications:
+
+Frequency: 		150-180 MHz ("A" Band)
+Power output: 		800 W (average) 700-900 kW (peak)
+PRF:			100-200 Hz
+Range Resolution:	1200 m					
+On/Off time:		unknown
+Detection Ranges
+  Fighter size aircraft
+	500 m altitude:	unknown 
+ 	10000m alt.:	300+ km
+
+ 
+NOTES: The P-14 entered service in the 1950's.  Users include the Soviet Union, Hungary, Peru, Syria, Poland, Iraq and Yugoslavia.  VHF radars such as the P-14 remain important, as they can be better at detecting stealth aircraft than more recent, higher frequency radars.
+
+
+
+SOURCES: Janes Radar and Electronic Warfare Systems "P-14 early-warning radars, 22 October 2004; Russian / PLA Low Band Surveillance Radar Systems (Counter LowObservable Technology Radars). (n.d.). Retrieved from http://www.ausairpower.net/APA-Rus-Low-Band-Radars.html#mozTocId284592 ; P-14 / 5N84A / TALL KING. (n.d.). Retrieved from http://www.globalsecurity.org/military/world/russia/tall-king.htm ; Radar Basics. (n.d.). Retrieved from http://www.radartutorial.eu/19.kartei/karte907.en.html ; http://fas.org/man/dod-101/sys/missile/row/radar-rus.htm

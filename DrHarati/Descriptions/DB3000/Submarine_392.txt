@@ -1,0 +1,14 @@
+OVERVIEW: The HOTEL II is a nuclear powered ballistic missile submarine.
+
+DETAILS:   The HOTEL II submarine is a conversion from the HOTEL I SSBN.  Originally fitted to carry the surface launched SS-N-4 missile, seven were subsequently converted to carry the underwater launched SS-N-5. One of these was subsequently converted as HOTEL III. The HOTEL class is fitted with the same reactor plant installed in the ECHO and NOVEMBER class submarines.
+
+NOTES: 
+      Displacement: 6,000 tons submerged.
+       Speed: approximately 25 knots submerged
+       Reactors: 1 pressurized water 
+       Complement: 80 (approx.)
+       Hulls built:  7
+       Period of Service:	  1959-62 (HOTEL I);  1962-67 (Conversion to HOTEL II), 1987-91 (decomissioned).
+
+SOURCES: Norman Polmar, "Guide to the Soviet Navy, 3rd ed. (Annapolis, MD: Naval Institute Press, 1983), 90 ; Norman Polmar, "Submarines of the Russian and Soviet Navies, 1718-1990. (Annapolis, MD: Naval Institute Press, 1991), 300 ; Federation of American Scientists. "658 HOTEL I / II / III- Russian and Soviet Nuclear Forces." Accessed November 30, 2013. http://www.fas.org/nuke/guide/russia/slbm/658.htm ; Wikipedia. "Hotel-class submarine." Accessed November 30, 2013. http://en.wikipedia.org/wiki/Hotel-class_submarine.
+

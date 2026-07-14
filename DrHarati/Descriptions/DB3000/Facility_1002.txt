@@ -1,0 +1,19 @@
+OVERVIEW: The Type 408C radar is a mobile, long range air defense warning radar operating in the B (NATO) or VHF band (IEEE) Band.
+
+DETAILS: The Type 408C employs a dipole planar array antenna type with two back to arrays which can be operated simultaneously at the high and low bands, giving two transmit/receive channels.  The equipment has a wide operating frequency range within each band, enabling it to counter active jamming by rapid change of frequency within the bands.  By integrating the video signal it is able to suppress asynchronous pulse jamming, and by modulating the transmitter PRF it counters repeater pulse jamming.  
+
+Specifications:
+
+Frequency: 		 150-180 MHZ and 100-120 MHz (B Band (NATO), VHF Band (IEEE)))  
+Power output: 		 unknown kW(average); 800 kW (peak) 
+PRF:			 200 Hz 	
+Range Resolution:	 unknown m (range), unknown degree azimuth 					
+On/Off time:		 unknown seconds
+Deploy/Stow Time	 unknown min / unknown min
+Detection Range:
+80% Pd, 2 m2 RCS:	 unknown km
+
+NOTES: The Type 408C is mobile with its units installed in eight operation vehicles, two transmitter/receiver vehicles, one display unit vehicle, one antenna unit vehicle, two transport vehicles and two power supply vehicles.
+
+
+SOURCES: China Defence Today Forum. "PLA Photos - Page 77." Accessed December 1, 2013. http://www.sinodefenceforum.com/world-military-pictures/pla-photos-77-2023.html ; "Jane's Radar and Electronic Warfare Systems," Librarum.org, page 406, Librarun.org - E-book Online. Accessed August 14, 2015. http://librarun.org/book/30265/406.

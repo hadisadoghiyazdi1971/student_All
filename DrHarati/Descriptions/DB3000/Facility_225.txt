@@ -1,0 +1,7 @@
+OVERVIEW: Generic Coastal Surveillance Radar, fixed position.
+
+DETAILS: Radar is for detecting naval surface contacts.
+
+NOTES: Denmark and Norway uses fixed position radars. No real radar type known, this simulate older Coastal radars.
+
+SOURCES: No sources found for this radar. 

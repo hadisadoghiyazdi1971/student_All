@@ -1,0 +1,24 @@
+OVERVIEW: USS Enterprise (CVN-65) is a retired United States Navy aircraft carrier. She was the world's first nuclear-powered aircraft carrier and the eighth United States naval vessel to bear the name. Like her predecessor of World War II fame, she is nicknamed "Big E". At 1,123 ft (342 m), she was the longest naval vessel in the world, a record which still stands. Her 93,284-long-ton (94,781 t) displacement ranked her as the 11th-heaviest supercarrier, after the 10 carriers of the Nimitz class. Enterprise had a crew of some 4,600 service members.
+
+The only ship of her class, Enterprise was the third oldest commissioned vessel in the United States Navy after the wooden-hulled USS Constitution and USS Pueblo. She was originally scheduled for decommissioning in 2014 or 2015, depending on the life of her reactors and completion of her replacement, USS Gerald R. Ford, but the National Defense Authorization Act for Fiscal Year 2010 slated the ship's retirement for 2013, when she would have served for 51 consecutive years, longer than any other U.S. aircraft carrier.
+
+DETAILS: Enterprise was meant to be the first of a class of six, but construction costs ballooned and the remaining vessels were never laid down. Because of the huge cost of her construction, Enterprise was launched and commissioned without the planned RIM-2 Terrier missile launchers. These were never installed and the ship's self-defense suite instead consisted of three shorter-range RIM-7 Sea Sparrow, Basic Point Defense Missile System (BPDMS) launchers.[21] Later upgrades added two NATO Sea Sparrow (NSSM) and three Mk 15 Phalanx CIWS gun mounts. One CIWS mount was later removed and two 21-cell RIM-116 Rolling Airframe Missile launchers were added.
+
+Enterprise is also the only aircraft carrier to house more than two nuclear reactors, having an eight-reactor propulsion design, with each A2W reactor taking the place of one of the conventional boilers in earlier constructions. She is the only carrier with four rudders, two more than other classes, and features a more cruiser-like hull.
+
+Enterprise also had a phased array radar system known as SCANFAR. SCANFAR was intended to be better at tracking multiple airborne targets than conventional rotating antenna radars. SCANFAR consisted of two radars, the AN/SPS-32 and the AN/SPS-33. The AN/SPS-32 was a long-range air search and target acquisition radar developed by Hughes for the US Navy. The AN/SPS-32 operated together with the AN/SPS-33, which was the square array used for 3D tracking, into one system. It was installed on only two vessels, Enterprise and the cruiser USS Long Beach, placing a massive power drain on the ship's electric system. The technology of the AN/SPS-32 was based on vacuum tubes and the system required constant repairs. The SPS-32 was a phased array radar which had a range of 400 nautical miles against large targets, and 200 nautical miles against small, fighter-size targets. These early phased arrays, replaced around 1980, were responsible for the distinctive square-looking island. The AN/SPS-32 and AN/SPS-33 radars, while ahead of their time, suffered from issues relating to electrical beam steering mechanism and were not pursued in further ship classes. While they are considered to be an early form of "phased array" radar, they were ahead of their time and it would take the later technology of the Aegis phased array AN/SPY-1 with its electronically controlled beam steering to make phased array radars both reliable and practical for the USN.
+
+TYPE: Nuclear Powered Aircraft Carrier (CVN).
+
+SPECIFICATION: Displacement: 93,284 long tons (94,781 t) Full Load || Length: 1,123 ft (342 m) || Beam: 132.8 ft (40.5 m) (waterline)
+257.2 ft (78.4 m) (extreme) || Draft: 39 ft (12 m) || Propulsion: (8) Westinghouse A2W nuclear reactors, (4) sets Westinghouse geared steam turbines, (4) shafts || Power: 280,000 shp (210 MW) || Complement: 5,828 (maximum) || Ship's company: 3,000 (2,700 Sailors, 150 Chiefs, 150 Officers) || Air wing: 1,800 (250 pilots, and 1,550 support personnel).
+
+PERFORMANCE: Speed: 33.6 kn (38.7 mph; 62.2 km/h) || Range: Unlimited distance; 20-25 years.
+
+SENSORS: AN/SPS-48 3D air search radar || AN/SPS-49 2D air search radar || Electronic warfare & decoys:	AN/SLQ-32 and Mark 36 SRBOC.
+
+ARMAMENT: (2) NATO Sea Sparrow launchers || (2) 20 mm Phalanx CIWS mounts || (2) RAM launchers.
+
+AIR WING: Holds up to 90, 60+ (normally).
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org

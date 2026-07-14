@@ -1,0 +1,24 @@
+OVERVIEW: The AN/TPS-43 is a transportable 3-D air search radar that operates in the "E/F" Band.   
+
+DETAILS: The AN/TPS-43 is a lightweight air and ground transportable radar designed for use with manned aircraft or surface-to-air missile batteries in a wide variety of tactical environments. It incorporates extensive clutter rejection and electronic counter-countermeasures features are incorporated in the design, including a digital coherent moving target indicator system, pulse-to-pulse frequency agility, Jamming Analysis and Transmission Selection (JATS), coded pulse anti-clutter system and sidelobe blanking.
+
+Specifications:
+
+Frequency: 		 2.9-3.1 GHz (E/F Band)
+Power output: 		 6.7 kW(average); 4 MW (peak) 
+PRF:			 250 Hz	
+Range Resolution:	 152 m (range),   1.1 degrees azimuth 					
+On/Off time:		unknown
+Deploy/Stow Time	60 minutes/30 minutes
+ 
+Detection Range (AN/TPS-43E) 
+80% Pd, 2 m2 RCS target:
+
+tgt alt. 100m:		300 km
+tgt alt. 18000m:	408 km
+Max Range:		450 km
+
+  
+NOTES:  IOC 1968. The entire system can be transported by two trucks.
+
+SOURCES: "AN/TPS-43." Wikipedia, the Free Encyclopedia. Accessed March 22, 2015. http://en.wikipedia.org/wiki/AN/TPS-43 ; "Radar Basics." Grundlagen Der Radartechnik. Accessed March 22, 2015. http://www.radartutorial.eu/19.kartei/karte804.en.html ; http://www.mobileradar.org/radar_descptn_3.html ; Westinghouse; The AN/TPS-43E Tactical Radar System, pg. 12, www.mobileradar.org/Documents/43E_Tactical%20Radar%20System.pdf

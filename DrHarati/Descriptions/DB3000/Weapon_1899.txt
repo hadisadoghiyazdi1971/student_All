@@ -1,0 +1,3 @@
+The AA-10 ALAMO C (R-27 RE) is an extended range Semi-Active Radar Homing (SARH) version of the earlier R-27T1.  These employ midcourse datalink support, but require terminal illumination.
+
+ Source: http://www.bharat-rakshak.com/IAF/Images/Weapons/AAMs/R27/

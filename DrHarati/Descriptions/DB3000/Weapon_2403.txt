@@ -1,0 +1,16 @@
+OVERVIEW: The Griffin LGB is a laser-guided gravity bomb (LGB).
+
+
+DETAILS: The Griffin LGB is a bolt on guidance kit for the Mk 82/83/84 series bombs.  It is intended for use against hardened, point, or mobile targets, such as command posts, bunkers, bridges, hardened shelters, SAM sites and ships. Target illumination is performed by either by a ground-based designator or by an aircraft.    The weapon can launch in loft, dive or straight and level attack profiles.  
+
+Specifications (when used with Mk 82/83/84 series bombs): 
+
+Range:		6.5 nm
+CEP:		5.0 meters	
+
+
+NOTES:  IOC: 1991.  Used by India, South Africa and Israel
+
+ 
+
+SOURCES:   Jane's Air Launched Weapons "Griffin LGB", 03 August 2016 ; Griffin." Guide to Military Equipment and Civil Aviation. Accessed December 5, 2016. http://www.deagel.com/Bombs-and-Guidance-Kits/Griffin_a000960001.aspx ; "Laser Guided Bomb Kits." Israel Aerospace Industries. n.d. http://www.iai.co.il/2013/34290-16151-n/SystemMissileandSpace_MBTMissiles_PrecisionGuidedMunitions.aspx.

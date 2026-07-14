@@ -1,0 +1,8 @@
+OVERVIEW: The AN/APS-94F is an all-weather Side Looking Airborne Radar (SLAR) used for reconnaissance, surveillance and mapping.
+
+DETAILS:  The AN/APS-94F is a 8-12.5GHz I-band radar.  Is is capable of imaging up to 100 km on either side of the flight track.
+
+
+NOTES:  The AN/APS-94F is primarily used by OV-1D surveillance aircraft.  It is used by both the United States and Argentina, which purchased units in 1996.  The Argentine version was subsequently modified to use digital versus analog silver halide film media.  The Argentine version also incorporates GPS data-derived image annotating.
+
+SOURCES:  Jane's Electronic Missions Aircraft, "AN/APS-94F," 11 January 2011 ; SPIE | Proceeding | Digital image capture, processing, and recording system upgrade for the APS-94F SLAR. (n.d.). Retrieved from http://proceedings.spiedigitallibrary.org/proceeding.aspx?articleid=918429

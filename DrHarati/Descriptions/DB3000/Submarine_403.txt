@@ -1,0 +1,22 @@
+OVERVIEW: The Type 041 submarine (NATO reporting name Yuan-class) is a class of diesel-electric submarine in China's People's Liberation Army Navy. It is China's first AIP powered submarine. This class was first launched at Wuhan Shipyard and is the successor of the Type 039. The official Chinese designation is 039A as the ship is based on the 039 class, but as the 039A has very little resemblance to the 039 it is commonly referred to as the Type 041.
+
+DETAILS: The Type 041 inherits the tail design of the Type 039 (NATO codename: Song class) with four diving planes and a single large shaft. The teardrop shaped hull and large sail suggest heavy Kilo influence. The teardrop shape also suggests a pressurized double hull design inherited from the Kilo. A pair of foreplanes are positioned in the middle of the sail. The submarine is equipped with indigenously developed cabin-raft (shock absorbers) system that helped to reduce noise level by over 35dB. Additionally, the submarine is covered with rubber anti-sonar protection tiles to reduce the risk of detection. A new improved "C" variant was also launched.
+
+According to the Chinese newspaper Science and Technology Daily, this 041 class is equipped with an air-independent propulsion system developed by the 711th Research Institute of the China Shipbuilding Heavy Industry Group Corp., referred as a "specialized engine" in official Chinese sources.
+
+SPECIFICATIONS: Tonnage: 3,600 tonnes (submerged) || Length: 75 m || Propulsion: 	Diesel-electric, 1 shaft, AIP (air-independent propulsion) || Complement: 65.
+
+PERFORMANCE: Speed:	20+ kts.
+
+SENSORS: China was known to have imported the Thales TSM 2233 ELEDONE / DSUV-22 and Thales TSM 2255 / DUUX-5 from France during the 1980s and early 1990s. It also has access to a wide range of modern Russian sonar systems (MG-519 MOUSE ROAR, MGK-500 SHARK GILL) through its purchase of the Kilo Class. Comparable systems are expected to be installed for the Type 041.
+
+The Type 041 is likely to be fitted with a comparable surface/air search radar similar to the MRK-50 SNOOP TRAY, a commercial navigation radar like a Furuno unit observed on a number of SONG class and ESM system is comparable to the Type 921-A.
+
+ARMAMENT: The Type 041 has six 533 mm torpedo tubes. These can be used to launch indigenous as well as Russian-made torpedoes. The Type 041 is also believed to be capable of launching YJ-8X (C-80X) series anti-ship missiles. The missile uses inertial + terminal active radar guidance. It carries a 165 kg time-delayed semi-armour-piercing high-explosive warhead, with a maximum range of 80~120 km and speed of Mach 0.9.
+
+The Type 041 is also capable of firing the CY-1 ASW missile under water, but the status of the missile is in question because nothing is heard about its production. The CY-1 ASW missile has a maximum range of 18 km (10 nm), and when using A244 or Mark 46 torpedo as a payload.
+
+SHIPS BUILT: 13.
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org
+

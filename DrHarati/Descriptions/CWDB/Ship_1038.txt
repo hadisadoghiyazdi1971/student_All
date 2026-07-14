@@ -1,0 +1,15 @@
+OVERVIEW: The GLENTEN class torpedo boat is a 3 shaft Diesel-powered torpedo boat.
+
+DETAILS: The GLENTEN class are former German Kriegsmarine Schnellboote.  
+
+NOTES: Displacement:   112-21  tons standard
+       Speed: 39-42 knts
+       Range: 700 nm @ 30 knts
+       Complement: 24
+       In Commission:  1951-65
+       Completed:  12 
+
+SOURCES: Gardiner, Robert, and Norman Friedman. Conway's All the World's Fighting Ships, 1947-1982. Annapolis, Md: Naval Institute Press, 1983, pg 16 ; 
+
+
+

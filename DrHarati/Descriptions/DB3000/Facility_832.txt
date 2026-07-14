@@ -1,0 +1,6 @@
+OVERVIEW: AN/FPS-85 Spacetrack Radar (or Space Surveillance Radar) is a very large fixed-array radar that conducts space surveillance and reconnaissance of man-made objects in earth orbit.
+DETAILS: Located Eglin AFB, the AN/FPS-66 phased array radar can detect, track and identify up to 200 satellites simultaneously.  It is the only phased array radar dedicated to tracking more than 16,000 near-earth and deep-space objects.  Radar began operational in January 1969. Initially designed to track objects in Earth's orbit, software installed in 1975 allowed tracking of submarine launched ballistic missiles. 
+ 
+NOTES:  The system became operational in January 1969 and deep space capable in 1988.  
+
+SOURCES: GlobalSecurity.org - Reliable Security Information. "AN/FPS-85 Spacetrack Radar." Accessed November 24, 2013. http://www.globalsecurity.org/space/systems/an-fps-85.htm ;  Grundlagen der Radartechnik. "Radar Basics." Accessed November 24, 2013. http://www.radartutorial.eu/19.kartei/karte101.en.html ;  Wikipedia, the free encyclopedia. "AN/FPS-85." Accessed November 24, 2013. http://en.wikipedia.org/wiki/AN/FPS-85

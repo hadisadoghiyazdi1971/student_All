@@ -1,0 +1,22 @@
+OVERVIEW: The Vostok-D is a mobile, active array, 2-D early warning radar operating in the VHF band.
+
+DETAILS:  The system is reported to be effective against stealth aircraft.  It is capable of tracking approximately 120 targets. Its ECCM capabilities include a wide  
+dynamic range, frequency hopping and active noise jamming compensation. Low peak power is used to minimize detection range against hostile ESM
+
+Specifications:
+
+Frequency			150-200 MHz (VHF Band)
+Power output: 			14kW (average)
+PRF:				400, 800 Hz
+Range Resolution:		200 m (range), 5.5 degrees (azimuth)
+On/Off time: 			< 5 min. 
+Deploy/Stow time: 		6 min
+Effective Range (Pd> 0.5):	255 km (max)(vs. B-52 sized target in jammed environment)
+				150 km (vs. F-14 sized target in jammed environment)
+				57nm ( vs. F-117A in jammed environment)
+ 
+
+NOTES: IOC 2013. The Vostok-D is intended as a replacement for the SPOON REST D (P-18) series of radars. 
+
+
+SOURCES: "Russian / PLA Low Band Surveillance Radar Systems (Counter LowObservable Technology Radars)." Air Power Australia. Accessed August 26, 2015. http://www.ausairpower.net/APA-Rus-Low-Band-Radars.html ; "“Vostok” Radar - Radar" Accessed August 26, 2015. http://www.kbradar.by/text/pages-view-37.html.

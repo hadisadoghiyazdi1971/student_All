@@ -1,0 +1,12 @@
+OVERVIEW: AN/TPS-43E is a lightweight air and ground transportable 3-D radar designed for use with manned aircraft or surface-to-air missile batteries. 
+
+DETAILS: The AN/TPS-43E is transportable 3-dimensional air search radar.  The entire system can be broken down and  
+packed into two M35 trucks for road transport. 
+
+NOTES: The TPS-43E2 was redesignated the AN/TPS-75 which is the current transportable air control and warning (AC&W)  
+radar used by the United States Air Force. Starting in 1991, most of the US AN/TPS-43 radars were modified to the AN/TPS-75 configuration. The AN/TPS-43E radar was deployed by the Argentine Air Force during the 1982  
+Falklands War and survived two British attacks with AGM-45 Shrike anti-radar missiles. One of  
+the radars was captured by British forces after the Argentine surrender and deployed at RAF Buchan. 
+
+
+SOURCES: Grundlagen der Radartechnik. "Radar Basics." Accessed December 1, 2013. http://www.radartutorial.eu/19.kartei/karte804.en.html ; Federation of American Scientists. "AN/TPS-43." Accessed December 1, 2013. http://www.fas.org/man/dod-101/sys/ac/equip/an-tps-43.htm

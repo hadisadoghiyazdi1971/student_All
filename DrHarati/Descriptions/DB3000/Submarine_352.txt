@@ -1,0 +1,22 @@
+OVERVIEW: The ZULU class SS (Project 611) is a diesel powered attack submarine.
+
+DETAILS:   The ZULU SS were a longer-range equivalent of the WHISKEY class.
+
+
+Specifications:
+       Displacement: 2,350 tons submerged.
+       Speed: approximately 16  knots surfaced, 16 knots  submerged
+       Machinery: 3 2000bhp diesel
+       Endurance: 70 days; 20,000 nm surfaced; 9,500 nm/8 knts
+       Operational Depth: 300 m
+       Maximum Depth:     500m				 
+       Complement: 72 
+       Hulls built:  26
+       Period of Service:	  1953-1983
+
+NOTES: Design was influenced by the German Type XXI U-boat of WWII.  THe class was orginally equiped with deck guns, but all were removed in the 1950's.
+
+SOURCES: Conway's All the World's Fighting Ships, 1947-1982. Part II: The Warsaw Pact and Non-Aligned Nations. London: Conway Maritime Press, 1983, pg 493 ; http://www.deepstorm.ru/DeepStorm.files/45-92/dts/611/list.htm ; http://www.russianwarrior.com/STMMain.htm?1947vec_Zulu.htm&1 ; Moore, John Evelyn. Jane's Fighting Ships 1987-88.  London: Jane's Pub, 1987, pg. 563.
+
+
+

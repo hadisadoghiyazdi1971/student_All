@@ -1,0 +1,23 @@
+OVERVIEW: The Charles F. Adams class is a ship class of 29 guided missile destroyers built between 1958 and 1967. Twenty three destroyers were built for the United States Navy, three for the Royal Australian Navy, and three for the West German Bundesmarine. The design of these ships was based on that of Forrest Sherman-class destroyers, but the Charles F. Adams class were the first class designed to serve as guided missile destroyers. 19 feet (5.8 m) of length was added to the center of the design of the Forrest Sherman-class to carry the ASROC launcher, and the boilers were upgraded from 600 psi (4,100 kPa) to 1,275 psi (8,790 kPa) boilers. Both changes caused significant maintenance problems in the long run for all the ships. The Charles F. Adams-class destroyers were the last steam turbine-powered destroyers built for the U.S. Navy. Starting with the later Spruance-class destroyers, all U.S. Navy destroyers have been powered by gas turbines. Some of the destroyers of the Charles F. Adams-class served during the blockade of Cuba in 1962 and during the War in Vietnam.
+
+DETAILS: Although designed with cutting-edge technology for the 1950s, by the mid-1970s it was clear to the Navy that the Charles F. Adams-class destroyers were not prepared to deal with modern air attacks and guided missile. To reduce this vulnerability, the Navy began the New Threat Upgrade (NTU) program. This consisted of a number of sensor, weapons and communications upgrades that were intended to extend the service lives of the ships. Under the NTU, these destroyers received improved electronic warfare capability through the installation of the AN/SLQ-32(V)2 EW Suite.
+
+The upgraded combat system would include the MK86 Gun Fire Control System with AN/SPQ-9 radar, the Hughes AN/SPS-52C 3D radar, the AN/SPG-51C (Digital) Fire Control Radars, and the Naval Tactical Data System (NTDS). These ships were also planned to have the ability to launch several Harpoon antiship missiles, which were to be installed in their MK-11 Tartar missile launcher.
+
+During the 1980s, the Reagan Administration chose to accelerate production of the Ticonderoga-class guided missile cruisers and build the Arleigh Burke-class guided missile destroyers as replacements for these and other classes of destroyers, and of nuclear-powered cruisers. The result of this was that only three of these destroyers, Tattnall, Goldsborough, and Benjamin Stoddert received the full upgrade.
+
+Other ships, of the class, such as Charles F. Adams, received only partial upgrades, which included the AN/SLQ-32 and Harpoon Missile upgrades, that were intended to extend their service lives until the Arleigh Burke-class could reach operational capability.
+
+TYPE: Guided Missile Destroyer (DDG).
+
+SPECIFICATIONS: Displacement: 4,526 full load || Length: 437 ft (133 m) || Beam: 47 ft (14 m) || Draught: 15 ft (4.6 m) || Propulsion: (2) steam turbines providing 70,000 shp (52 MW), (2) shafts, (4) 1,275 psi (8,790 kPa) boilers || Complement: (310-333).
+
+PERFORMANCE: Speed: 33 knots (61 km/h) || Range: 4,500 nautical miles (8,300 km) at 20 knots (37 km/h).
+
+SENSORS: AN/SPS-10 surface search RADAR || AN/SPS-37 air search RADAR || AN/SPS-39 3D air search RADAR || AN/SPG-51 Tartar fire control RADAR || AN/SPG-53 gun fire control RADAR || AN/SQS-23 SONAR.
+
+ARMAMENT: (1) Mk 11 missile launcher (DDG2-14) or (1) Mk 13 single arm missile launcher (DDG-15-24) for RIM-24 Tartar SAM system or later the RIM-66 Standard (SM-1) and Harpoon antiship missile || (2) 5"/54 caliber Mark 42 (127 mm) gun || (1) RUR-5 ASROC Launcher || (6) 12.8 in (324 mm) ASW Torpedo Tubes (2) Mark 32 Surface Vessel Torpedo Tubes.
+
+SHIPS BUILT: Charles F. Adams (DDG-2) || John King (DDG-3) || Lawrence (DDG-4) || Claude V. Ricketts (DDG-5) || Barney (DDG-6) || Henry B. Wilson (DDG-7) || Lynde McCormick (DDG-8) || Towers (DDG-9) || Sampson (DDG-10) || Sellers (DDG-11) || Robison (DDG-12) || Hoel (DDG-13) || Buchanan (DDG-14) || Berkeley (DDG-15) || Joseph Strauss (DDG-16) || Conyngham (DDG-17) || Semmes (DDG-18) || Tattnall (DDG-19) || Goldsborough (DDG-20) || Cochrane (DDG-21) || Benjamin Stoddert (DDG-22) || Richard E. Byrd (DDG-23) || Waddell (DDG-24).
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org

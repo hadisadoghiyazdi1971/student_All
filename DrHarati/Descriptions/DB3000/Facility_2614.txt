@@ -1,0 +1,13 @@
+OVERVIEW:  The C-701 aka YJ-7 aka Kosar battalion is short range, mobile, surface-to-surface missile unit intended for use against small to medium sized surface naval targets.  
+
+DETAILS:  After launch, the missile is initially guided by inertial navigation system, switching to EO guidance during the terminal phase.  The C-701 uses a radar altimeter to cruise at 500 meters (est), transitioning to a dive onto the target during the terminal phase. The operator in the controlling platform uses a datalink to receive the transmitted TV image and designate the target and precise aim point.   
+
+
+Specifications:
+
+Speed:			 0.8 mach 
+Range:			 1.5 (est)-8.1 nm (3-15 km)
+
+NOTES: IOC 2006 (approx). 
+
+SOURCES: Jane's Weapon Systems Vol 1: Air-Launched, "C-701 (YJ-7 Kosar), 22 August 2013.

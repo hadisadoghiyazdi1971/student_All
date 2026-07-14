@@ -1,0 +1,20 @@
+OVERVIEW: The AGM-154C-1 aka AGM-154C Block III Joint Standoff Weapon (JSOW) is an air-to-surface precision-attack glide bomb with a multi-stage 454 kg blast fragmentation/penetrator warhead.
+
+DETAILS:
+
+ The AGM-154C-1 is intended for use against both maritime and stationary land targets from standoff ranges.  It uses a (GPS)/Inertial Navigation System (INS) for mid-course guidance and an IIR seeker for terminal guidance.  It includes a dual-mode (UHF/Link-16) datalink for inflight targeting updates from the launching aircraft.
+
+The BROACH warhead increases lethality against hardened targets by employing a two stage warhead consisting of a WDU-44 shaped augmenting warhead which cuts a passage through a target's armor, allowing the larger WDU-45 follow through warhead to penetrate inside the target.
+
+
+Specifications: 
+Weight: 	483 kg (1,065 lb)
+Length: 	4.10 m (160 in)
+Diameter: 	0.33 m (13 in)
+Wingspan: 	2.69 m (106 in) 
+Range:		70nm (130 km) (high altitude release);
+		12nm (22 km) (low altitude release)		
+
+NOTES: IOC June 2016.
+
+SOURCE: Petty, Dan. The US Navy -- Fact File: AGM-154 Joint Standoff Weapon (JSOW). n.d. https://www.navy.mil/navydata/fact_display.asp?cid=2100&tid=300&ct=2 ; Raytheon AGM-154 JSOW. May 24, 2007. http://www.designation-systems.net/dusrm/m-154.html.

@@ -1,0 +1,9 @@
+OVERVIEW: The KAI T-50 Golden Eagle is a family of South Korean supersonic advanced trainers and light combat aircraft,
+
+DETAILS: The T-50 Golden Eagle design is largely derived from the F-16 Fighting Falcon, and they have many similarities: use of a single engine, speed, size, cost, and the range of weapons. KAI's previous engineering experience in license-producing the KF-16 was a starting point for the development of the T-50.
+
+The trainer has seating for two pilots in a tandem arrangement. The high-mounted canopy developed by Hankuk Fiber is applied with stretched acrylic, providing the pilots with good visibility, and has been tested to offer the canopy with ballistic protection against 4-lb objects impacting at 400 knots. The altitude limit is 14,600 metres (48,000 ft), and airframe is designed to last 8,000 hours of service. There are seven internal fuel tanks with capacity of 2,655 litres (701 US gal), five in the fuselage and two in the wings. An additional 1,710 litres (452 US gal) of fuel can be carried in the three external fuel tanks. T-50 trainer variants have a paint scheme of white and red, and aerobatic variants white, black, and yellow.
+
+The T-50 uses a single General Electric F404-102 turbofan engine license-produced by Samsung Techwin, upgraded with a FADEC system jointly developed by General Electric and KAI. The engine consists of three-staged fans, seven axial stage arrangement, and an afterburner. The aircraft has a maximum speed of Mach 1.5. Its engine produces a maximum of 78.7 kN (17,700 lbf) of thrust with afterburner. 
+
+SOURCE:Wikipedia, the Free Encyclopedia. "KAI T-50 Golden Eagle - Wikipedia." n.d. Accessed September 8, 2017. https://en.wikipedia.org/wiki/KAI_T-50_Golden_Eagle. 

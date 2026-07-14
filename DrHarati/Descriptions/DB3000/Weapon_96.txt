@@ -1,0 +1,15 @@
+OVERVIEW: The AN/ZSW-1 Datalink pod is two-way Improved Datalink (IDL) for the GBU-15/B, AGM-130 series bombs.
+
+DETAILS:    
+ 
+
+NOTES: Used with F-111, F-15
+
+
+SOURCES:  Designation-Systems.Net. "AN/ZPQ to AN/ZSW - Equipment Listing." Accessed November 24, 2014. http://www.designation-systems.net/usmilav/jetds/an-z.html
+ 
+
+
+
+
+

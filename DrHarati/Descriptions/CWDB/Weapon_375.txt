@@ -1,0 +1,7 @@
+OVERVIEW: The AN/ALQ-101 is an external pod mounted, active noise and repeater jammer.
+
+DETAILS:  The AN/ALQ-101 noise and repeater jammer. AN/ALQ-101 (V)4,  covered the 2 to 20 GHz frequency range.  The AN/ALQ-101 (V)8  is the most numerous unit in service. This version  uses a gondola layout, with a trough compartment underneath the main body that increases the available volume. 
+
+NOTES: Used by Germany, Israel and the UK and USA.
+
+SOURCES:  Scramble. "Westinghouse AN/ALQ-101 - Scramble." Accessed November 15, 2014. http://wiki.scramble.nl/index.php/Westinghouse_AN/ALQ-101.

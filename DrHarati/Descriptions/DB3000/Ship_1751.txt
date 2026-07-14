@@ -1,0 +1,11 @@
+OVERVIEW:The Type 052 Luhu-class is one of the first modern multi-role guided missile destroyers built by China.
+
+DETAILS: The class is said to be the first indigenous Chinese warship design approaching modern standards, a significant improvement over the earlier Luda class. The Luhu class made extensive use of foreign technologies that were accessible to the PRC prior to the Tiananmen Square incident of 1989. These included French-made radars and fire-control systems and the General Electric LM2500 gas turbine engines from the US, two of which power each ship. The Type 052 became the first Chinese destroyer design to use gas turbine engines, and also the first equipped with a integrated combat system
+
+the Luhu destroyers (and the smaller Jiangwei class frigate) were fitted with the HQ-7 SAM that gives them much better air defense capability than other previous Chinese designs, although they are still limited to within visual range (WVR).
+
+The HQ-7 SAM system is reported to be equipped with 8 ready to fire missiles, plus 16 stored in a semi-automatic reloader system. The same system is also used on the upgraded 051G Luda Destroyer.
+
+In spite of the advances, the 052 Luhu-class destroyers still suffer in some areas such as electronic warfare and electronic counter-measures.
+
+SOURCES:Wikipedia, the Free Encyclopedia. "Type 052 Destroyer - Wikipedia." n.d. Accessed September 9, 2017. https://en.wikipedia.org/wiki/Type_052_destroyer

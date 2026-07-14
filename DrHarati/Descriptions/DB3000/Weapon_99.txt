@@ -1,0 +1,10 @@
+OVERVIEW: The GBU-15(V)31A/B CWW (Cruciform Wing Weapon) is a unpowered glide bomb intended for precision bombing against hardened targets.
+
+
+DETAILS: The basic GBU-15 configuration consists of a bolt-on guidance/fin section and a cruciform wing group and data link attached to a BLU-109/B bomb.  The GBU-15(V)31A/B guidance section uses a electro-optical sensor for guidance.  It also incorporates a GPS receiver,  giving the weapon an all-weather capability. The weapon can be launched at low altitude.  The BLU-109/B is capable of penetrating 4-6 feet of reinforced concrete.
+
+
+NOTES:  IOC with U.S. in 2001. Does not require target acquisition before release.   
+ 
+
+SOURCES:   Rockwell GBU-15(V)/B. (n.d.). Retrieved from http://www.designation-systems.net/dusrm/m-112.html ; Clancy, T. (1995). Fighter wing: A guided tour of an Air Force combat wing. New York: Berkley Books, pg. 149-50 ; GBU-15 - Smart Weapons. (n.d.). Retrieved from http://fas.org/man/dod-101/sys/smart/gbu-15.htm ; BLU-109 / I-2000 / HAVE VOID - Dumb Bombs. (n.d.). Retrieved from http://www.globalsecurity.org/military/systems/munitions/blu-109-specs.htm

@@ -1,0 +1,8 @@
+OVERVIEW: The Giraffe is a mobile, medium range air identification and surveillance radar. Giraffe is a powerful 3D surveillance radar system and Command and Control system intended for short and medium-range surveillance and ground based air defence. In addition it can also warn of incoming rocket, artillery and mortar rounds, as well as provide coastal surveillance. 
+
+DETAILS: The Giraffe is a frequency agile, low to medium altitude pulse doppler air search radar and combat control center which can be used in mobile or static short to medium range air defense applications. Giraffe is designed to detect low-altitude, low cross-section aircraft targets in conditions of severe clutter and electronic countermeasures. When equipped as an air-defense command center Giraffe provides an air picture to each firing battery using manpack radio communication. It is normally housed in a single 6m long shelter mounted on an all-terrain vehicle for high mobility.
+
+NOTES: Used by France 2005.
+
+SOURCES:  Wikipedia "GIRAFFE Radar" Accessed December 2. 2013. http://en.wikipedia.org/wiki/GIRAFFE_Radar ; 
+Saabgroup "Giraffe AMB" Accessed December 2. 2013. http://www.saabgroup.com/en/Land/Ground_Based_Air_Defence/Ground-Based-Surveillance/Giraffe-AMB/

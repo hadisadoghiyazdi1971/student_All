@@ -1,0 +1,22 @@
+OVERVIEW: The YLC-4 is a 2-D long-range surveillance radar operating in the A (NATO) and VHF (IEEE) bands.
+
+DETAILS:   The YLC-4 is a 2-D long-range surveillance radar intended for early warning. It features pulse-to-pulse and burst-to-burst adaptive frequency agility.  It can synthesize and display data from up to four other radars to provide a unified radar picture. 
+
+
+Specifications:
+
+Frequency: 		  216-220 MHz (A Band (NATO),  VHF Band (IEEE))
+Power output: 		  unknown kW(average);  40-50 kW (peak) 
+PRF:			   Hz	
+Range Accuracy:		   300 m (range),   0.5 degrees azimuth 					
+On/Off time:		  unknown
+Deploy/Stow Time	  unknown minutes/  unknown minutes
+ 
+Detection Range:  	  380 km (Pd=0.8); 410 km (Pd=0.5)
+Max Range:		    km 
+
+  
+NOTES: 
+
+SOURCES: "Russian / PLA Low Band Surveillance Radar Systems (Counter LowObservable Technology Radars)." Air Power Australia. Accessed August 6, 2015. http://www.ausairpower.net/APA-Rus-Low-Band-Radars.html#YLC-4 ; "YLC-4 Radar." Wikipedia, the Free Encyclopedia. Accessed August 6, 2015. https://en.wikipedia.org/wiki/YLC-4_Radar ; Jane's Radar and Electronic Warfare Systems, Page 400,  Librarum.org." Librarun.org - E-book Online. Accessed August 6, 2015. http://librarun.org/book/30265/400.
+

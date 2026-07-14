@@ -1,0 +1,7 @@
+OVERVIEW: The Surveillance and Target Acquisition Radar System. Used to control the ROLAND missile SAM launchers.
+
+DETAILS:  The TRML-2D G-Band radar is designed to be employed as a command and control center for area protection, site protection and the protection of individual military units. The signal processing contains a dedicated helicopter detection function. This ensures the reliable detection of low flying aircraft, ARMS, and slow flying, hovering and pop-up helicopters. EPM features and clutter suppression ensure the detection of small targets even in very hostile enviroment. The highly mobile TRML-2D radar system can be deployed and put into operation within 10 minutes. 
+
+NOTES: The TRML-2D including the C² equipment has been deployed with the German Air Force and is employed as a Command and Control Center (FGR) to control the ROLAND missile lounchers.
+
+SOURCES: http://www.radartutorial.eu/19.kartei/karte419.en.html

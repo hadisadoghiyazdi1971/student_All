@@ -1,0 +1,37 @@
+OVERVIEW: USS Freedom (LCS 1) is the lead ship of the Freedom class of littoral combat ships (LCS). She is the third vessel of the United States Navy to be so named for the concept of freedom. She is the design competitor produced by the Lockheed Martin consortium, in competition with the General Dynamics-designed USS Independence. She was officially accepted by the Supervisor of Shipbuilding Gulf Coast on behalf of the US Navy from the Lockheed Martin/Marinette Marine/Gibbs and Cox team in Marinette, WI on 18 September 2008.
+
+She is designed for a variety of missions in shallow waters, capable against submarines, small ships, minesweeping and humanitarian relief but not designed to take on large Warships. The ship is a semi-planing monohull design capable of over 40 knots (74 km/h; 46 mph).
+
+Commissioned in Milwaukee, Wisconsin on 8 November 2008, USS Freedom is home-ported in San Diego.
+
+DETAILS: The USS Freedom is the first of two dramatically different LCS designs being produced; the other, USS Independence (LCS 2), is a trimaran built by a team led by General Dynamics' Bath Iron Works and Austal USA in Mobile, Alabama. USS Freedom is designed to be a fast, maneuverable and networked surface combatant for missions such as anti-mine warfare, anti-submarine warfare, surface warfare and humanitarian relief.
+
+The ship is a semi-planing steel monohull with an aluminum superstructure. The friction stir welded aluminum deckhouse is very flat, which, combined with an angular design, makes it difficult for radar systems to spot. The ship is 377 feet (115 m) in length, displaces 3,000 metric tons (2950 metric tons) and can go faster than 40 knots (46 mph; 74 km/h).
+
+The design incorporates a large reconfigurable seaframe to allow rapidly interchangeable mission modules, a flight deck with integrated helicopter launch, recovery and handling system and the capability to launch and recover boats (manned and unmanned) from both the stern and side.
+
+The flight deck is 1.5 times the size of that of a standard surface ship, and uses a Trigon traversing system to move helicopters in and out of the hangar. The ship has two ways to launch and recover various mission packages: a stern ramp and a starboard side door near the waterline. The mission module bay has a 3-axis crane for positioning modules or cargo. The fore deck has a modular weapons zone which can be used for a 57 mm gun turret or missile launcher. A Rolling Airframe Missile launcher is mounted above the hangar for short-range defense against aircraft and cruise missiles, and .50-caliber gun mounts are provided topside.
+
+The core crew will be 40 sailors, usually joined by a mission package crew and an aviation detachment for a total crew of about 75. Automation allows a reduced crew, which greatly reduces operating costs, but workload can still be "grueling."
+
+Four 750-kilowatt Fincantieri Isotta-Fraschini diesel generators provide 3 megawatts of electrical power to power the ship systems.
+
+Freedom has relaxed stability so it can rapidly change course.
+
+In her limited time at sea, Freedom has been "plagued by flawed designs and failed equipment since being commissioned, has at least 17 known cracks, and has repeatedly been beset by engine-related failures."
+
+TYPE: Littoral Combat Ship (LCS).
+
+SPECIFICATION: Displacement: 3,000 t (3,000 t) || Length: 378 ft (115 m) || Beam: 57.4 ft (17.5 m) || Draft: 12.8 ft (3.9 m) || Power: (4) Isotta Fraschini V1708 diesel engines, Hitzinger generator units, 800 kW each || Propulsion: (2) Rolls-Royce MT30 36 MW gas turbines, 2 Colt-Pielstick diesel engines, 4 Rolls-Royce waterjets || Complement: 50 core crew, 98 or more with mission package and air detachment crew (Blue and Gold crews).
+
+PERFORMANCE: Speed: 47 knots (87 km/h; 54 mph) || Range: 3,500 nmi (6,500 km; 4,000 mi) at 18 knots (33 km/h; 21 mph) || Endurance: 21 days (336 hours).
+
+SENSORS: EADS TRS-3D 3D air and surface search radar || Lockheed Martin COMBATSS-21 combat management system || AN/SQR-20 Multi-Function Towed Array || Argon ST WBR-2000 ESM system || Terma A/S SKWS decoy system.
+ 
+ARMAMENT: (1) BAE Systems Mk 110 57 mm gun, 400 rounds in turret and two ready service magazines with 240 rounds each || (4) .50-cal machine guns || (2) Mk44 Bushmaster II 30mm guns || (21) RIM-116 Rolling Airframe Missile Surface-to-Air Missiles || Other weapons as part of mission modules.
+
+AIRCRAFT: (1) MH-60R/S Seahawk || MQ-8 Fire Scout.
+
+BOATS: 11 m (36 ft) Rigid-hulled inflatable boat || 40 ft (12 m) high-speed boats. 
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org

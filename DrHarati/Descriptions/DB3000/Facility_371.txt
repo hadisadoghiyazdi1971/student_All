@@ -1,0 +1,26 @@
+OVERVIEW:  The Nike-Hercules (MIM-14B) battery is a fixed, long range, medium-to-high altitude, command guided, surface to air/surface to surface missile. The system was primarily deployed to defend critical installations and cities as well as field armies and theatres of operation against aircraft and SRBMs.
+
+DETAILS:  
+
+A typical engagement begins with the initial target detection with either the Low Power Acquisition Radar (LOPAR) or High Power Alternate Battery Acquisition Radar (HIPAR AAR).  This information is transmitted to the Target Tracking Radar (TTR). Based on this data, a computer calculates an intercept point, and updated the gyros of the missile on the launch pad. A separate missile tracking radar (MTR) also locks onto the missile while still on the pad.  Upon launch, the MIM-14 uses its internal gyros to roll to the correct intercept attitude.  During flight, the ground-based computer receives updated target and missile position information and continually provides updated intercept data via a command link to the MIM-14.  This command link is also used to order the detonation of the missile's warhead as it closes the target.  
+
+Specifications:
+
+Maximum Acquisition Range: 	172 nm (bombers)(HIPAR), 148 nm (fighter-sized)(HIPAR)
+Maximum Tracking Range:		99 nm (TTR)
+Engagement Envelope:
+   Max Range, anti-air:		5-83.7 nm (9-155 km)(SAM role)
+	      anti-SLBM:	17-37 nm (max), depending on target trajectory)
+	      SSM:		27 nm (182.9 km); 2380 knts 
+   Altitude:			20,000-100,000 feet (6,096-30,480 m)
+
+Reload time:			30 seconds/launcher
+Emplacement /Displacement	N/A
+Mobility:			Fixed
+Reaction Time:			36 seconds (first missile); 11 seconds after airborne missile                                   destruction/abandonment 
+
+NOTES:  IOC: 1958.  The Nike system could be disassembled in approximately 6 hours and transported to a new location and reassembled in approximately 12 hours, although this was rarely done. 
+
+
+SOURCES: IHS. "MIM-14 Nike-Hercules." Land Warfare Platforms: Artillery & Air Defence, 03 March 2016 ; http://ed-thelen.org/index.html#missiles ; http://nikemissile.org/IFC/nike_hercules.shtml ; 
+"Ed's Nike Missile Web Site." Ed's Nike Missile Web Site. Accessed December 11, 2016. http://ed-thelen.org/index.html#missiles ; "Nike Hercules United States Nuclear Forces." Accessed December 11, 2016. https://fas.org/nuke/guide/usa/airdef/nike-hercules.htm ; The Nike Historical Society. "HERCULES MIM-14, MIM-14A, MIM-14B." Accessed December 10, 2016. www.nikemissile.org/IFC/nike_hercules.shtml ; Dept. of the Army. "Nike Hercules Technical Description" (TM9-1440-250-10/2), 13, 16, 86. 1960. http://ed-thelen.org/TM9-1440-250-10-2-Dec1960-1.pdf ; "Nike: Firing a Missile." The Military Standard. Accessed September 23, 2019. http://www.themilitarystandard.com/missile/nike/missilefire.php.

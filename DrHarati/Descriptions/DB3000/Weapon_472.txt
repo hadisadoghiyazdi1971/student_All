@@ -1,0 +1,28 @@
+OVERVIEW: The GBU-28B/B Deep Throat is a short-range, GPS and laser guided gravity bomb designed for enhanced penetration against hardened and buried targets.
+ 
+DETAILS:  The Guided Bomb Unit-28 (GBU-28) bomb is designed to penetrate  hardened targets before exploding, and is reported as being capable of penetrating 30 meters of earth or 6 meters of concrete.  Warhead weight is approximately 304 kilograms.  The weapon has a reported CEP of 9 meters.  
+
+NOTES: The GBU-28B/B is derived from the earlier GBU-28 A/B, encorporating enhanced guidance capabilities using a GPS system in addition to the laser guidance system.  Two versions are available: the EGBU-28B/BLU-113 carried by the Strike eagle, employing the GPS enhanced laser guidance kit and GBU-37/GAM, using a GPS Aided Munition guidance kit, carried by the B-2A Spirit stealth bomber. Other users include Israel and South Korea.
+ 
+
+SOURCES: Raytheon Paveway III. (n.d.). Retrieved from http://www.designation-systems.net/dusrm/app5/paveway-3.html ; Guided Bomb Unit-28 (GBU-28) Bunker Buster - Smart Weapons. (n.d.). Retrieved from http://fas.org/man/dod-101/sys/smart/gbu-28.htm ; Guided Bomb Unit-28 (GBU-28) Bunker Buster - Smart Weapons. (n.d.). Retrieved from http://www.globalsecurity.org/military/systems/munitions/gbu-28.htm ; GBU-28 Bunker Buster. (n.d.). Retrieved from http://www.deagel.com/Bombs-and-Guidance-Kits/GBU-28-Bunker-Buster_a001151007.aspx ; Enhanced Guided Bomb Unit (EGBU)-28. (n.d.). Retrieved from http://www.globalsecurity.org/military/systems/munitions/gbu-28e.htm ; Raytheon / Texas Instruments GBU-28 Bunker Buster. (n.d.). Retrieved from http://www.ausairpower.net/GBU-28.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

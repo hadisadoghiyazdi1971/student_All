@@ -1,0 +1,15 @@
+OVERVIEW: The HMCS BONAVENTURE class aircraft carrier is a 2 shaft steam aircraft carrier.
+
+DETAILS: The HMCS BONAVENTURE was a Royal Navy  MAJESTIC class aircraft carrier, the ex-HMS POWERFUL, and was the last aircraft carrier in Canadian service.  She was completed with an angled flightdeck.  Initially equipped with both F-2H Banshee fighters and S-2F ASW aircraft, she transitioned to an all ASW aircraft wing 
+
+NOTES: Displacement:   16,000  tons standard
+       Speed: 24.5 knts
+       Range: 
+       Complement: 1370
+       In Commission:  1957-70
+       Completed:  1 
+
+SOURCES: Gardiner, Robert, and Norman Friedman. Conway's All the World's Fighting Ships, 1947-1982. Annapolis, Md: Naval Institute Press, 1983, pg 7 ; http://en.wikipedia.org/wiki/HMCS_Bonaventure_(CVL_22)
+
+
+

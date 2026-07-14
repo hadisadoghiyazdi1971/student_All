@@ -1,0 +1,5 @@
+A license copy of the Antonov An-12 “Cub”, the Y-8 is used for many roles in Chinese service. Production started in the late 1960s and continues today; more than 125 have now been built plus additional examples for export and civilian (Y-8B & Y-8F100) use. The original design had a twin NR-23 gun in a manned tail turret; this is not included on the civilian versions, the specialized versions described below, nor recent examples of the military cargo version.
+
+Y-8 for electronic counter-measures (ECM) uses a traditional Y-8C airframe. A large canoe shaped structure is located between the nose gear and main gear. This structure is similar to the domes installed on the Y-8 AEW 2 and PLA's Tu-154M/D electronic intelligence aircraft (registration number B-4138). The B-4138 Tu-154M/D was equipped a SAR in the canoe. However, the devices in Y-8 AEW 2 and Y-8 ECM are unknown. Besides these external characteristics, there are several blade antennas on the position of cargo door.
+
+Original Author: Jason W. Henson, http://www.globalsecurity.org/

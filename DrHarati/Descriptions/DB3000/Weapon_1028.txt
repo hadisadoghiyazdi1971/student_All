@@ -1,0 +1,15 @@
+OVERVIEW: The AN/AXQ-14 Datalink pod is two-way datalink that provides guidance to GBU-15 and AGM-130 series bombs.
+
+DETAILS: The AN/AXQ-14 Datalink is a two-way communications system that transmits a television or IR image from a camera mounted in the GBU-15"glide bomb" or the AGM-130 powered bomb to the launching aircraft, as well as guidance controls from a human controller back to the bome, allowing it to be "steered" to the target.
+ 
+
+NOTES: Entered service in 1982.   
+
+
+SOURCES:  Federation Of American Scientists -. "AN/AXQ-14 Data Link System." Accessed November 18, 2014. http://fas.org/man/dod-101/sys/smart/an-axq-14.htm ; Air Power Australia. "AGM-130, AGM-136A Tacit Rainbow." Accessed November 18, 2014. http://www.ausairpower.net/TE-AGM-130-136.html
+ 
+
+
+
+
+

@@ -1,0 +1,13 @@
+OVERVIEW: The AN/AVQ-23 Pave Spike is an airborne laser target designator pod, designed to improve day time/visual conditions attack capabilities.
+
+DETAILS:  The AN/AVQ-23 has both a laser designator/ranger and a TV sensor for target acquisition.  Although primarily used for the designation and accurate delivery of laser-guided weapons, the laser range finder also improves the accuracy of "dumb" bombs. 
+
+NOTES:  The AN/AVQ-23 was used by the USAF between 1974-89.  The RAF used the system from 1978-1992.  It is also used by Turkey.
+
+SOURCES:  Jane's Electro-Optic Systems, "Northrop Grumman AN/ASQ-153 and AN/AVQ-23 PaveSpike," 14 October 2009 Popeye 1,2 (AGM Have Nap/Have Lite/Raptor), 22 October 2014 ; Wikipedia, the free encyclopedia. "Pave Spike." Accessed November 2, 2014. http://en.wikipedia.org/wiki/Pave_Spike ; "Factsheets : AN/AVQ-23 Pave Spike." Accessed November 2, 2014. https://archive.today/20121212203007/www.nationalmuseum.af.mil/factsheets/factsheet.asp?id=1010.
+ 
+
+
+
+
+

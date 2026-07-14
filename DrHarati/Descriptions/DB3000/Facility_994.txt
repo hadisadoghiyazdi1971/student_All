@@ -1,0 +1,22 @@
+OVERVIEW: The Plessey AR-3D is a transportable, long range, 3-D air defense radar operating in the E/F Band.
+
+DETAILS:  The AR-3D uses a planar-array antenna with frequency steered pencil beam groups to electronically scan in elevation. The system is highly automated.  ECCM  
+capabilities include frequency scanning in elevation and electronic antenna-tilting.  Additionally, its narrow radiated beam, low sidelobes allow it to operate effectively in an ECM environment.  
+
+Specifications:
+
+Frequency: 		 2.9-3.1 GHz (E/F Band (NATO), S Band (IEEE))
+Power output: 		 10 kW(average);  1.1 MW (peak) 
+PRF:			  variable	
+Range Accuracy:		 18 m (range),   0.16 degrees azimuth 					
+On/Off time:		 unknown
+Deploy/Stow Time	  minutes/  minutes
+ 
+Detection Range (2m2 target)(max):	556 km  
+
+
+  
+NOTES: IOC 1975.Users include Egypt, South Africa, Great Britian, Quatar and Ecuador
+
+SOURCES: http://woottonbridgeiow.org.uk/decca-legacy/chapter7.php#7.5 ; Radar Forecast International, "AR-320-325", May 1997, pg. 1-6,  http://www.docstoc.com/docs/41653896/AR- 
+320325---Archived-598 ; http://woottonbridgeiow.org.uk/decca-legacy/chapter7.php#7.5

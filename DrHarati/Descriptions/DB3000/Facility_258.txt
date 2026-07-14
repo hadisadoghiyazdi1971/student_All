@@ -1,0 +1,23 @@
+OVERVIEW: The PRV-9 radar (NATO name: PATTY CAKE) is a height finding radar operating in the "D/E" Band.
+
+DETAILS:   The PATTY CAKE is a predecessor to the PRV-10M PATTY CAKE mobile radar.  Weapon systems associated with the PRV-9 include the S-25.  The PRV-9 radar is also associated with GCI systems.
+
+Specifications:
+
+Frequency: 		2 Ghz (E-Band)
+Power output: 		
+PRF:			
+Range Resolution:	Unknown					
+On/Off time:		unknown
+Detection Ranges	
+  Fighter size aircraft
+	500 m altitude:	unknown 
+ 	10000m alt.:	200 km
+
+ 
+NOTES: IOC 1960-61 (approx).  
+
+
+
+SOURCES: Jane's Radar and Electronic Warfare Systems, 1998-99 "Cake series height-finder radars", 22 October  
+2004; Radar Basics. (n.d.). "Radar Basics." Grundlagen Der Radartechnik. Accessed March 8, 2015. http://www.radartutorial.eu/19.kartei/karte914.en.html.

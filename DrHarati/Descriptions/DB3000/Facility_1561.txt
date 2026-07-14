@@ -1,0 +1,7 @@
+OVERVIEW: 2D Air Search Radar.
+
+DETAILS: 
+
+NOTES: Due to Pressure from the USSR and difficulties in obtaining modern systems or spare parts for exisiting systems, the Finns had to begin developing their own radars. DI Jouko Pohjanpalo developed a radar named VRRVI (Viestiväline Radio Radar Valvonta Ilma). Also called "Pohjanpalo 1". An order for 10 systems was placed in 1952 and deliveries began in 1953. The system became operational in 1954 and the last system was delivered in 1956. Operated until the 1985.
+
+SOURCES: http://en.wikipedia.org/wiki/User:MoRsE/Radars

@@ -1,0 +1,14 @@
+OVERVIEW: The SAAR 1 class PC is a four shaft, diesel-powered gun-armed patrol craft.
+
+DETAILS:    
+
+SPECIFICATIONS: Displacement: 200 tons standard, 250 full load
+       		Speed: 42 knts
+       		Range:  2500 nm @ 15 knts; 1000nm @ 30 knts  
+       		Complement: 40  
+       		In Commission: 1968-1997 
+       		Completed: 6
+
+NOTES: MIVTACH (311); MIZNAG (312); MIFGAV (313) 
+
+SOURCES: Blackman, Raymond V. B. Jane's Fighting Ships, 1967-68, 147. New York: McGraw-Hill, 1967.  

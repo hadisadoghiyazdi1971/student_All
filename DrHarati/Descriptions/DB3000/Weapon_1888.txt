@@ -1,0 +1,12 @@
+OVERVIEW: The AN/SSQ-62A DICASS (Directional Command Active Sonobuoy System) is an "A-size" command activated, active,  directional sonobuoy designed primarily to develop and maintain attack criteria in an ASW prosecution.  
+ 
+
+DETAILS:  The AN/SSQ-62A DICASS is typically used to fix a submerged target's position after it has been localized by a DIFAR or other means.  It can be command-activated to deploy to either  60 or 1,500 feet. Its active sonar is command activated and transmits on one of four factory set frequencies (6.5, 7.5, 8.5, 9.5 kHz).  The AN/SSQ-62A has a lifetime of 60 minutes.   
+   
+
+NOTES:  Entered USN service in 1980.
+
+
+
+ 
+SOURCES:  Jane's C4ISR & Mission Systems: Maritime, "AN/SSQ-62 series DICASS", 03 September 2014 ; Federation Of American Scientists -. "AN/SSQ-62B/C/D/E Directional Command Activated Sonobuoy System (DICASS)Sonobuoy." Accessed November 23, 2014. http://fas.org/man/dod-101/sys/ship/weaps/an-ssq-62.htm; Friedman, Norman, and Norman Friedman. The Naval Institute Guide to World Naval Weapon Systems, 5th Edition. Annapolis, Md: Naval Institute Press, 2006, pg. 703

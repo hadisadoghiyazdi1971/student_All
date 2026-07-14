@@ -1,0 +1,29 @@
+OVERVIEW: The Type 054A (NATO codename Jiangkai II) frigate is a Chinese multi-role warship class, the first of which entered service with the People's Liberation Army Navy in 2007. The class is planned to comprise 22 vessels. As of 2014, 16 were in service, 4 were fitting out, and 2 were under construction. It is a development of the Type 054 frigate, using the same hull but with improved sensors and weapons.
+
+The Type 054A was first revealed while under construction at the Guangzhou-based Huangpu Shipyard in 2005.
+
+DETAILS: The Type 054A carries HQ-16 medium-range air defence missiles and various anti submarine rockets in a VLS system. The HQ-16 provides area air defence from all engagement angles up to a range of 50 km, a considerable improvement over the HQ-7 carried on the Type 054 which have inferior range and limited engagement angles. Contrary to HQ-9 VLS on Type 052C destroyer which adopts a cold launch method, HQ-16 appears to adopt a hot launch method instead, with the same design principle of US Mk 41 VLS: a shared common exhaust system is sited between the two rows of rectangular launching tubes.The VLS system is also capable of firing anti-submarine missile.
+
+The 4 AK-630 close-in weapon systems (CIWS) of the Type 054 were replaced with 2 Type 730 CIWS on the Type 054A. The autonomous Type 730 provides improved reaction time against close-in threats.
+
+The 100 mm main gun on earlier Type 054 class is replaced by H/PJ26 stealthy 76 mm dual purpose gun mount, which is a Chinese development of Russian AK-176. The adoption of smaller caliber gun is the result of the need of higher rate of fire for air defense, including sea-skimming anti-ship missiles. H/PJ26 utilizes advanced synthetic material such as fiber glass to a much greater degree than the original AK-176, resulting in over 30% of weight reduction to 11.5 ton of H/PJ26, as opposed to the 16.8+ tons of AK-176.
+
+Another improvement of Type 054A over the original Type 054 (as well other older ships in the People's Liberation Army Navy) is its information systems (IS) for maintenance and inventory control, which automatically provides information to shore based facilities or supply ships on the parts in need, to the last detail, so that parts in need can be provided more quickly. The resulting down time due to maintenance & repair is reduced to a fraction of what it is for older vessels without this IS system. The Chinese[who?] have termed this IS for maintenance and inventory control another force multiplier because it increased availability for deployment by reducing downtime.
+
+The Type 054A retains its predecessor's stealth features, including sloped hull design, radar absorbent materials, and a clean profile.
+
+An improved variant, sometimes called the Type 054A+, launched from Huangpu Shipyard in 2009.
+
+TYPE: Guided Missle Frigate (FFG).
+
+SPECIFICATION: Displacement: 4,053 tonnes || Length: 134.1 m (440 ft) || Beam: 16 m (52 ft) || Propulsion: CODAD, (4) Shaanxi 16 PA6 STC diesels @ 5700 kW (7600+ hp @ 1084 rpm) each || Complement: 165.
+
+PERFORMANCE: Speed: 27 knots || Range:	8025 nautical miles estimated.
+
+SENSORS: Type 382 Radar (Upgraded from Type 381 Radar "Sea Eagle S/C") 3D air/surface search radar || Type 344 Radar (Mineral-ME Band Stand) OTH target acquisition and SSM fire control radar || (4) Type 345 Radar(MR-90 Front Dome) SAM fire control radars || MR-36A surface search radar, I-band || Type 347G 76 mm gun fire control radar || (2) Racal RM-1290 navigation radars, I-band || MGK-335 medium frequency active/passive sonar system || ZKJ-4B/6 (developed from Thomson-CSF TAVITAC) combat data system || HN-900 Data link (Chinese equivalent of Link 11A/B, to be upgraded) || SNTI-240 SATCOM || AKD5000S Ku band SATCOM.
+
+ARMAMENT: (1) 32-cell VLS HQ-16 SAM / anti submarine rocket launcher || (2) 4 C-803 anti-ship / land attack cruise missiles || (1) PJ26 76 mm dual purpose gun || (2) Type 730 7-barrel 30 mm CIWS guns || (2) 3 324mm YU-7 ASW torpedo launchers || (2) 6 Type 87 240mm anti-submarine rocket launcher (36 rockets carried) || (2) Type 726-4 18-tube decoy rocket launchers.
+
+AIRCRAFT: (1) Kamov Ka-28 'Helix' or Harbin Z-9C.
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org 

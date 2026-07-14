@@ -1,0 +1,5 @@
+OVERVIEW: The Kamov Ka-27 (NATO reporting name 'Helix') is a military helicopter developed for the Soviet Navy, and currently in service in various countries including Russia, Ukraine, Vietnam, China, South Korea, and India. 
+
+DETAILS: The helicopter was developed for ferrying and anti-submarine warfare. Design work began in 1969 and the first prototype flew in 1973. It was intended to replace the decade-old Kamov Ka-25, and is similar in appearance to its predecessor due to the requirements of fitting in the same hangar space. Like other Kamov military helicopters it has coaxial rotors, removing the need for a tail rotor.
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org

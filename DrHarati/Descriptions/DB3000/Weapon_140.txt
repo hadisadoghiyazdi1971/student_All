@@ -1,0 +1,30 @@
+OVERVIEW: The SS-N-12 SANDBOX (P-500 Bazalt) is a long-range, liquid fuel turbojet-powered supersonic surface-to-surface anti-ship missile with an active radar.  It has a 750-1000kg high explosive and possibly a 350 kt nuclear warhead.
+  
+DETAILS:  Targets for the SS-N-12 were originally detected by Tu-95RT BEAR D aircraft.  Beginning in 1979, ESM and radar equipped satellites also provided targeting data.  The target information was then transmitted to either shore or ships, and targets allocated to the SS-N-12s.  After launch, the missile received mid-course guidance by command links using aircraft, Ka-25 and Ka-27 helicopters or the launching platform.  Possibly satellites could also provide updated mid-course targeting information. The SS-N-12 may also use a datalink between missiles launched in a salvo. In this reported mode, one missile would fly at between 16000-23000 feet and use its active radar to detect and transmit targeting information to other lower flying missiles in the salvo. In addition to its active radar homing, the SANDBOX also has an EECM packaged designed to jam the fire control system of a target warship. 
+
+NOTES: The SS-N-12 entered service in 1975 and used onboard the ECHO II and JULIETT SSGNs, the KIEV CHG and SLAVA CG.
+
+SOURCES: Air Power Australia. "Soviet/Russian Cruise Missiles." Accessed December 1, 2013. http://www.ausairpower.net/APA-Rus-Cruise-Missiles.html#mozTocId705682 ; Jane’s Weapon Systems Vol 3: Naval "SS- N-12 SANDBOX" dated 31 May 2013 ; Russian Military Analysis. "SS-N-12 Sandbox / P-500 Bazalt/V-1000 Vulkan." Accessed December 1, 2013. http://warfare.be/db/catid/312/linkid/2083/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+OVERVIEW: The PRV-13 radar (NATO name: ODD PAIR) is a height finding radar operating in the  "E" Band.
+
+DETAILS:   Weapon systems associated with the PRB-13 include the SA-5 GAMMON
+
+Specifications:
+
+Frequency: 		2.5-2.7 Ghz (E-Band)
+Power output: 		1 kW (average); 1.6 MW (peak)
+PRF:			400 Hz
+Range Resolution:	unknown					
+On/Off time:		unknown
+Detection Ranges	
+  Fighter size aircraft
+	500 m altitude:	unknown 
+ 	10000m alt.:	310 km
+
+ 
+NOTES: The smaller antenna is possibly used to minimize sidelobes.
+
+
+
+SOURCES: Janes Radar and Electronic Warfare Systems "P-14 early-warning radars, 22 October 2004; http://fas.org/man/dod-101/sys/missile/row/radar-rus.htm ; Radar Basics. (n.d.). Retrieved from http://www.radartutorial.eu/19.kartei/karte916.de.html ; http://www.roaf.ro/en/dotare/prv13_en.php ; http://fas.org/man/dod-101/sys/missile/row/radar-rus.htm ; Rosoboronexport 2003 "Air Defense Systems Export Cataloge" pg. 55

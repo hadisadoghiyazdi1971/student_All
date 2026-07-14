@@ -1,0 +1,15 @@
+OVERVIEW: The PEDER SKRAM class frigate is a 2 shaft gas turbine-powered escort vessel.
+
+DETAILS: The PEDER SKRAM class was an indigenous Danish design.
+
+NOTES: Displacement:   2,200  tons standard
+       Speed: 28 knts
+       Range: 800 nm @28 knts; 2500 nm @18 knts
+       Complement: 200
+       In Commission:  1966
+       Completed:  2 
+
+SOURCES: Gardiner, Robert, and Norman Friedman. Conway's All the World's Fighting Ships, 1947-1982. Annapolis, Md: Naval Institute Press, 1983, pg 14 ; 
+
+
+

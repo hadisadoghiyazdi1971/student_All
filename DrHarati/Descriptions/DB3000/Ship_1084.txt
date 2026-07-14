@@ -1,0 +1,30 @@
+OVERVIEW:  The primary war-fighting mission of the LHA-1 Tarawa class is to land and sustain United States Marines on any shore during hostilities. The ships serve as the centerpiece of a multi-ship Amphibious Readiness Group (ARG). Some 3,000 Sailors and Marines contribute to a forward-deployed ARG composed of approximately 5,000 personnel. 
+
+DETAILS: The ships are designed to maintain what the Marine Corps calls "tactical integrity" - getting a balanced force to the same place at the same time. One LHA can carry a complete Marine battalion, along with the supplies and equipment needed in an assault, and land them ashore by either helicopter or amphibious craft. This two pronged capability, with emphasis on airborne landing of troops and equipment, enables the Navy and Marine Corps to fulfill their present-day mission. Whether the landing force is involved in an armed conflict, acting as a deterrent force in an unfavorable political situation or serving in a humanitarian mission, the class offers tactical versatility.
+
+The Tarawa class is designed to operate independently or as a unit of a force, as a flagship or individual ship unit in both air and/or surface assaults, these ships are key elements of the amphibious assault forces for the Navy. They incorporate the best design features and capabilities of several amphibious assault ships currently in service: the Amphibious Assault Ship (LPH), Amphibious Transport Dock (LPD), Amphibious Cargo Ship (LKA), and Dock Landing Ship (LSD).
+
+A capital ship, the Tarawa class can simultaneously fulfill six war-fighting requirements: flagship for embarked amphibious squadron, flag or general officer staff; aircraft carrier, with a 35-aircraft complement including AV-8B fighter/attack V/STOL Harrier jets, AH-1 helicopter gunships, CH-53E Super Sea Stallion "heavy lift" and CH-46D/E Sea Knight helicopters; amphibious assault launching platform, employing a variety of surface assault craft including the Navy's newest 40+ knot LCAC, 135-foot Landing Craft Utility (LCU), and other amphibious assault vehicles; hospital ship, equivalent to the nation's finest local hospitals with 17 ICU beds, 4 operating rooms, 300 beds, a 1,00-unit blood bank, full dental facilities, and orthopedics, trauma, general surgery, and x-ray capabilities; command and control (C4I) ship, with the Navy's most sophisticated SHF and EHF satellite communications capability; and assault provisions carrier able to sustain embarked forces with fuel, ammunition and other supplies.
+
+The LHA's full length flight deck can handle ten helicopters simultaneously, as well as the AV-8 HARRIER jump-jet aircraft and OV-10 BRONCO fixed-wing turboprop reconnaissance aircraft. There is also a large well deck in the stem of the ship for a number of amphibious assault craft, both displacement hull and air cushion. Although the LHA usually doesn't carry Landing Craft, Air Cushioned (LCAC) boats onboard, they frequently operate with them and control them.
+
+The ships have an extensive command, communication and control suite. These electronic systems give the amphibious task force commander nearly unlimited versatility in directing the assault mission. The heart of the LHA's electronic system is a tactical amphibious warfare computer which not only keeps track of the landing force's positions after leaving the ship, but tracks enemy targets ashore. With current information on troop positions in relation to enemy targets, the tactical data system can also direct the targeting of the guns and missiles from the ship as well as the support ships. Additionally, the system maintains air and surface traffic control during the landing not only for her own helicopters and assault craft, but for the combat air control and task force support ships as well.
+
+TYPE: Amphibious Assault Ship (LHA).
+
+SPECIFICATIONS: Displacement: 39,967 tonnes (39,336 long tons; 44,056 short tons) full load || Length: 834 feet (254 m) || Beam: 131.9 feet (40.2 m) || Draft: 	25.9 feet (7.9 m) || Propulsion: (2) Combustion Engineering boilers, (2) Westinghouse turbines @ 70,000 horsepower (52,000 kW), (2) propeller shafts, (1) bow thruster || Complement: 56 officers, 874 sailors || Troops: 1,703.
+
+PERFORMANCE: Speed:	24 knots (44 km/h; 28 mph) || Range: 10,000 nautical miles (19,000 km; 12,000 mi) at 20 knots (37 km/h; 23 mph).
+
+SENSORS: AN/SPS-40B 2G Air Search Radar || AN/SPS-52C 3D Air Search Radar || AN/SPS-64 Surface Search Radar || AN/SPS-67 Surface Search Radar || AN/SLQ-32 ESM Offensive/Defencsive ECM || AN/SPG-60 STIR Fire Control Radar || Mk1 Mod2 ROS LLTV Weapon Director || AN/VPS-2 Search Track Radar.
+
+ARMAMENT: Late Configyration: ColdMark 49 RAM missile system || (2) Vulcan Phalanx || (6) 25 mm automatic cannons || (8) 12.7 mm machine guns ##### Early Configuration: (2) 8 cell MK- 25 NATO Sea Sparrow BPDMS launchers (replaced by Phalanx units) || (3) 5-inch (127 mm) Mk 45 lightweight guns. 
+
+AIRCRAFT: Up to (19) Sea Stallions, (26) Sea Knights, or mixed airgroup
+(6) Harrier jump-jets.
+
+BOATS: (4) LCU 1610 || (2) LCU and (2) LCM-8 || (17) LCM-6 || (45) LVT.
+
+SHIPS BUILT: Tarawa (LHA-1) || Saipan (LHA-2) || Belleau Wood (LHA-3) || Nassau (LHA-4) || USS Peleliu (LHA-5).
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org, FAS Military Analysis Network http://fas.org/man/dod-101/sys/ship/index.html

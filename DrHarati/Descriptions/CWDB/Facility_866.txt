@@ -1,0 +1,24 @@
+OVERVIEW: The PRV-10M radar (NATO name: ROCK CAKE) is a nodding height finding radar operating in the "E" Band.
+
+DETAILS:   The ROCK CAKE is a mobile version of the PRV-10M PATTY CAKE static radar.  Weapon systems associated with the PRV-10 include the SA-2 GUIDELINE.  The PRV-10 radar is also associated with GCI systems.
+
+Specifications:
+
+Frequency: 		2 Ghz (E-Band)
+Power output: 		2 MW (peak)
+PRF:			
+Range Resolution:	3 km, 500 m height					
+On/Off time:		unknown
+Detection Ranges	
+  Fighter size aircraft
+	500 m altitude:	unknown 
+ 	10000m alt.:	300 km
+
+ 
+NOTES: IOC 1960-61 (approx). The PVR-10 system is housed in two trailers: an antenna/transceiver system in one trailer and generator in the second trailer. 
+
+
+
+SOURCES: Jane's Radar and Electronic Warfare Systems, 1998-99 "Cake series height-finder radars", 22 October  
+2004; Radar Basics. (n.d.). Retrieved from http://www.radartutorial.eu/19.kartei/karte914.en.html ;  
+Http://en.valka.cz. Accessed March 7, 2015. http://en.valka.cz/viewtopic.php/t/37775/start/-1.

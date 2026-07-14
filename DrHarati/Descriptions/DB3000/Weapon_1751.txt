@@ -1,0 +1,9 @@
+OVERVIEW: The AS-11 KILTER (Kh-58) is a sub-sonic, air-launched, solid-fuel, anti-radar (ARM) missile.  It has a 149 kg HE warhead.
+
+DETAILS: The KH 58 has accuracy of approximately 20 m CEP.
+
+NOTES: The AS-11 became operational in approximately 1980. It was first used operationally in August 2008 against Georgian radars.
+
+SOURCES: Jane's Weapons Systems, Vol. 1: Air-Launched,  "Kh-58 (AS-11 'Kilter')" 17 September 2013; Federation of American Scientists. "Raduga Kh-58 (AS-11 Kilter)." Accessed November 5, 2013. http://www.fas.org/man/dod-101/sys/missile/row/as-11.htm.
+
+

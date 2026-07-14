@@ -1,0 +1,7 @@
+OVERVIEW: The HQ-64/LY-60 engagement radar is primarily a Continuous Wave X-band illuminator for the monopulse semi-active homing LY-60 missile round.
+
+DETAILS: The simplicity of the fixed single horn feed makes it unlikely that this radar includes a monopulse precision angle tracking capability often seen in Russian CW tracker/illuminator designs.
+
+NOTES: The HQ-64/LY-60 engagement radar was first displayed publicly in late 2008.  It is a reverse engineered Aspide Mk.1 (AIM-7 derivative).
+
+SOURCES: WORLD DEFENCE. "WORLD DEFENCE: LY-60 / HQ-64 Engagement Radar." Accessed December 1, 2013. http://defenceanalyzist.blogspot.com/2011/08/ly-60-hq-64-engagement-radar.html.

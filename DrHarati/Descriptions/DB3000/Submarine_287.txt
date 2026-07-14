@@ -1,0 +1,21 @@
+OVERVIEW: The WHISKEY class SS (Project 613V) is a diesel powered attack submarine.
+
+DETAILS:   The WHISKEY SS were a shorter-range equivalent of the ZULU class, and designated as a coastal patrol submarine.  The WHISKEY was still considered to be a very loud submarine, due in part to the limber holes along the hull.  
+
+
+Specifications:
+       Displacement: 1,350 tons submerged.
+       Speed: approximately 17  knots surfaced, 13.5 knots  submerged
+       Machinery: 2 2000bhp diesel
+       Endurance: 40-45 days; 8,880/10 knts (surface) 6,000 nm/5 knts on snorkel; 335/2 knts (submerged)
+       Operational Depth: 200 m
+       Maximum Depth:     				 
+       Complement: 54
+       Hulls built:  215 + 21 Chinese-built
+       Period of Service:	  1950-1983
+
+NOTES: Design was influenced by the German Type XXI U-boat of WWII.  Early versions were orginally equiped with deck guns, but all were removed in the 1950's.  Likely originally intended to protect the sea approaches to the USSR rather than as oceanic commercer-raiders.
+
+SOURCES: Conway's All the World's Fighting Ships, 1947-1982. Part II: The Warsaw Pact and Non-Aligned Nations. London: Conway Maritime Press, 1983, pg 492 ; http://www.russianwarrior.com/STMMain.htm?1947vehicle_Whiskeyhist.htm&1 ; Moore, John Evelyn. Jane's Fighting Ships 1987-88.  London: Jane's Pub, 1987, pg. 564.
+
+

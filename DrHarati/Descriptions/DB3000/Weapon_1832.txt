@@ -1,0 +1,22 @@
+OVERVIEW:  The SA-3b GOA mod 1 (S-125M Neva, 5V27) is a two-stage, solid-fuel, short range, low-to-medium altitude, SARH guided, surface to air missile equipped with a 18 kg warhead using proximity,  radar and contact fuzing.
+
+DETAILS:  The SA-3b GOA was designed as a low-to-medium altitude complement to the medium-to-high altitude SA-2 system.  After launch and booster jettison, the second stage is captured in the radar beam and guidance signals are sent to place the missile on an intercept trajectory.  The missile has a lethal radius of 12.5 meters. 
+
+Specifications: 
+Weight: 		953 kg 
+Length: 		5.95 m (with booster)
+Diameter: 		0.390 m (missile), 0.55 m (booster)
+Wingspan: 		1.22 m
+Speed:			3.5 mach
+Engagement Range:	2.2-13.5 nm (4-25 km) range
+Engagement Altitude:	328-45,932 feet; 100-14,000 meters 
+Reload time:		50 minutes
+Max target speed: 	700 km/h (head on); 300 km/h (receding)
+	
+
+
+NOTES:  IOC: 1964. The missile's ability to dive allows it to be used against surface targets and naval vessels.
+
+ 
+
+SOURCES: IHS. "S-125 Neva/Pechora (SA-3 'Goa')." Land Warfare Platforms: Artillery & Air Defence, November 2016 ; PVO.SU. "Missile system S-125 (SA-3 GOA." PVO.SU. Last modified July 25, 2011. http://pvo.guns.ru/s125/ ; "S-125 SA-3 GOA Russia / Soviet Nuclear Forces." Accessed December 3, 2016. https://fas.org/nuke/guide/russia/airdef/s-125.htm ; "S-125M1 Neva (SA-3B Goa) Short Range Surface to Air Missile System Simulator Documentation." Last modified November 21, 2014. https://sites.google.com/site/samsimulator1972/home ; "Almaz 5V24/5V27/S-125 Neva/Pechora / SA-3 Goa." Air Power Australia. Accessed December 5, 2016. http://www.ausairpower.net/APA-S-125-Neva.html.

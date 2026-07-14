@@ -1,0 +1,15 @@
+OVERVIEW: The KILDEN MOD class DDG is a steam-powered, multi-role destroyer.
+
+DETAILS:   The KILDEN DDG is based on the KOTLIN class DDG.  Between 1972-77, the KILDEN MOD further modified the KILDEN class by removing the SS-N-1 launcher and replacing it with four SS-N-2c SSMs.
+
+NOTES: Displacement: 2,800 tons standard
+       Speed: 38 knts
+       Range: 1,000 nm @ 32 knts; 3,600 nm @ 18 knts
+       Complement: 300 (approx.)
+       In Commission: 1958 (KILDEN class); 1972-1991 (KILDEN MOD class)
+       Completed: 3	  
+
+SOURCES: Norman Polmar, "Guide to the Soviet Navy, 3rd ed. (Annapolis, MD: Naval Institute Press, 1983), 140-41 ; 
+Federation of American Scientists. "Kildin Class - Project 56M." Accessed November 17, 2013. http://www.fas.org/man/dod-101/sys/ship/row/rus/56m.htm.
+
+

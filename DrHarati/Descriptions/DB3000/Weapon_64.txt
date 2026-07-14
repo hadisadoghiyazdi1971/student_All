@@ -1,0 +1,10 @@
+OVERVIEW: The AN/AAR-55 is pod-mounted thermal navigation system used by the F/A-18 
+
+DETAILS:  AN/AAS-38 (Hornet) and AN/AAS-46 (Super Hornet) 
+
+
+NOTES: Typically, the AN/AAR-55 NAVFLIR is used with the AN/AAS-38 or AN/AAS-46 FLIR to provide a navigation and targeting system for F/A-18s.
+
+
+SOURCES:  
+

@@ -1,0 +1,23 @@
+OVERVIEW: The 9S19M2 Imbir (NATO name: HIGH SCREEN B) is a self-propelled, long range, high power-aperture, coherent, phased array designed for the rapid acquisition and initial tracking of IRBMs, cruise missiles and aircraft.  It operates in the I/J Band.
+
+DETAILS:  The 9S19M2 HIGH SCREEN B is capable of tracking up to 16 simultaneous targets. ECCM features include a high power Travelling Wave Tube (TWT) source, very low sidelobes and frequency hopping techniques to provide good resistance to jamming. 
+
+Specifications:
+
+Frequency: 		  unknown GHz (I/J Band (NATO),  X Band (IEEE))
+Power output: 		  unknown kW(average);   MW (peak) 
+PRF:			  unknown Hz	
+Range Accuracy:		 70 m (range),   0.25 degrees azimuth 					
+On/Off time:		 unknown
+Deploy/Stow Time	 unknown minutes/  minutes
+ 
+Detection Range 
+1m2 RCS 
+Max Detection Range:	  185 km
+
+
+  
+NOTES: The 9S19 HIGH SCREEN is deployed at the battalion level. 
+
+
+Source: "9K81/9K81-1/9K81M / /SA-12/SA-23 Giant/Gladiator." Air Power Australia. Accessed March 29, 2015. http://www.ausairpower.net/APA-Giant-Gladiator.html#mozTocId126299 ; "9S19 HIGH SCREEN." GlobalSecurity.org - Reliable Security Information. Accessed March 29, 2015. http://www.globalsecurity.org/military/world/russia/high-screen.htm.

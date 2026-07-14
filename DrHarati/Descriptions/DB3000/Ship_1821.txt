@@ -1,0 +1,22 @@
+OVERVIEW: The SURIBACHI class AE is a steam-powered Ammunition Ship.
+
+DETAILS:   The SURIBACHI class AE are specialized underway replenishment ships built after the Second World War, designed to conduct underway replenishment in support of operating forces by simultaneously providing ammunition from 6 stations (2 starboard and 4 port) and stores, fleet freight, mail, personnel and other items.  
+
+Specifications: 
+
+       Displacement: 10,000 tons (standard), 15,500 tons (full load)
+       Speed: 18 knts
+       Engineering: 1 shaft, 2 steam boilers
+       Range:
+       Complement: 350
+       In Commission: 1956-1995
+       Completed: 5
+
+NOTES: Units in class: SURIBACHI (AE 21); MAUNA KEA (AE 22); NITRO (AE 23); PYRO (AE 24); HALEAKALA (AE 25).  All ships were modernized in the 1960s with "FAST" high speed transfer equipment, three holds configured for missile stowage and a helicopter platform.  The Nitro-class ammunition ships are sometimes considered part of this class.   
+
+SOURCES: Moore, John Evelyn. Jane's Fighting Ships 1987-88.  London: Jane's Pub, 1987, pg. 773 ; "Suribachi-class Ammunition Ship." Wikipedia, the Free Encyclopedia. Accessed April 5, 2015. http://en.wikipedia.org/wiki/Suribachi-class_ammunition_ship ; "AE-11 Mount Hood." GlobalSecurity.org - Reliable Security Information. Accessed April 5, 2015. http://www.globalsecurity.org/military/systems/ship/ae-21.htm.
+
+
+
+
+

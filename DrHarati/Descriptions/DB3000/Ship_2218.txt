@@ -1,0 +1,15 @@
+OVERVIEW: The Boris Chilikin-class is a diesel-powered replenishment oiler.
+
+DETAILS:   The Boris Chilikin-class oiler (Project 1559V/1593) is a class of fleet replenishment oilers used by the Soviet and Russian navies.  The class was conceived in the 1960's to meet increasing fleet deployments to remote stations and the projected logistic requirements of the Project 1143 aircraft carriers.  To speed design the class is based on a slightly  modified version of the civilian Velikiy Oktyabr class.  Consequentially, they have only a minimal dry cargo/stores replenishment capability. 
+
+One unit, the former Boris Chilikin was transferred to the Ukrainian Navy in 1997 and renamed the Makeevka.  It has been used as commercial bulk carrier since 2001.  One unit of the class, Vladimir Kolechitskiy was decomissioned in 2013.
+
+NOTES: Displacement: 6,950 standard; 22,460 tons full load
+       Speed: 16 knts
+       Range: 12,000 nm @ 12 knts; 10,00 nm @ 16 knts
+       Complement: 75-93 crew
+       In Commission: 1970
+       Vessels in class: 6
+ 
+
+SOURCES: Boris Chilikin-class fleet oiler - Wikipedia, the free encyclopedia. (n.d.). Retrieved October 18, 2014, from http://en.wikipedia.org/wiki/Boris_Chilikin-class_fleet_oiler ; Project 1559V/1593 Boris Chilikin class Voyenyy Tanker (VT) Military Tanke. (n.d.). Retrieved October 18, 2014, from http://www.globalsecurity.org/military/world/russia/1559v.htm ; Large seagoing tanker - Project 1559V. (n.d.). Retrieved from http://russian-ships.info/eng/support/project_1559.htm

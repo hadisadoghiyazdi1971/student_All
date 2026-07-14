@@ -1,0 +1,19 @@
+OVERVIEW:  The C-701 aka C-701T aka FL-10 aka YJ-7 aka Kosar is air-launched, short range,  EO guided, solid fuel, anti-ship missile. It has a 30 kg SAP warhead.
+
+DETAILS:  The C-701 lightweight anti-ship missile was developed for use against small-to-medium sized naval vessels.  
+
+After launch, the missile is initially guided by inertial navigation system, switching to EO guidance during the terminal phase.  The C-701 uses a radar altimeter to cruise at 500 meters (est), transitioning to a dive onto the target during the terminal phase. The operator in the controlling platform uses a datalink to receive the transmitted TV image and designate the target and precise aim point.   
+
+
+Specifications:
+
+Weight: 		 100 kg 
+Length: 		 2.51m 
+Diameter: 		 180 mm (body)  
+Wingspan: 		 0.54 m 
+Speed:			 0.8 mach 
+Range:			 1.5 (est)-8.1 nm (3-15 km)
+
+NOTES: IOC 1998 (approx). Subsequent versions have been equipped with IR and radar seekers. Produced under license by Iran where it is designated 'Kosar'. 
+
+SOURCES: Jane's Weapon Systems Vol 1: Air-Launched, "C-701 (YJ-7 Kosar), 22 August 2013.

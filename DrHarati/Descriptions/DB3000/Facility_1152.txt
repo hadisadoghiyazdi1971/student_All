@@ -1,0 +1,17 @@
+OVERVIEW: The ASR-3 is a medium-range 2D Airport Surveillance Radar operating in the E (NATO) or S (IEEE) band.
+
+DETAILS: 
+
+Specifications:
+
+Frequency: 		 2.7-2.9 GHz (E Band (NATO), S Band (IEEE)))  
+Power output: 		 unknown kW(average); 500 kW (peak) 
+PRF:			 1200 Hz (approx)	
+Range Resolution:	 125 m (range), unknown degree azimuth 					
+On/Off time:		 unknown seconds
+Deploy/Stow Time	 unknown min / unknown min
+Maximum Range:		 100 km
+
+NOTES: IOC 1953 (approx).  
+
+SOURCES: Wikipedia. "Airport surveillance radar" Accessed December 2, 2013. http://en.wikipedia.org/wiki/Airport_surveillance_radar ; "Radar Basics." Grundlagen Der Radartechnik. Accessed August 14, 2015. http://www.radartutorial.eu/19.kartei/karte806.en.html.

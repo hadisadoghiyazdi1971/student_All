@@ -1,0 +1,14 @@
+OVERVIEW: The T-43 class radar picket is a two-shaft, diesel-powered radar picket vessel converted from the T-43 minesweeper.
+
+DETAILS:   The T-43 class (Project 254PGR) is a radar picket vessel.
+
+
+NOTES: Displacement: 520 tons standard; 590 tons full load
+       Speed: 14 knts
+       Range: 3,000 nm @ 10 knts
+       Complement: 70 crew 
+       In Commission: 1957.  Reclassified as radar pickets in 1977 
+       Vessels in class: 11
+ 
+
+SOURCES: Seagoing minesweeper - Project 254. (n.d.). Retrieved from http://russian-ships.info/eng/warships/project_254.htm

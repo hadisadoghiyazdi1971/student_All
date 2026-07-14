@@ -1,0 +1,11 @@
+OVERVIEW: The FAB-1000M (Fugasnaya Aviabomba) is a general purpose (GP) low-drag freefall bomb with a high explosive filler.
+ 
+DETAILS:  The FAB series of general purpose bombs can be released at between 500 meters-12,000 meters altitude and at speeds from 500-1100 km/hour. 
+
+Weight: 	1033 kg
+Filling Weight:	 476 kg
+ 
+
+NOTES:  IOC 1962. 
+
+SOURCES: "FAB M62." Weapon Systems.net. Accessed December 19, 2015. weaponsystems.net/weapon.php?weapon=HH12%20-%20FAB%20M62 ; Janes Air-Launched Weapons, "Type 62 FAB bombs (M-62 series)", 4 Febraury 2015.

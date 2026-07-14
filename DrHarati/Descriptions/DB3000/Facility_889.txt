@@ -1,0 +1,7 @@
+OVERVIEW: The KEVA (Keskivalvontatutka) system (also known as Matalavalvontatutka, or MVT) is a domestically produced, moveable, long range air identification and surveillance radar system, consisting of two radars, which gives position and altitude. It replaced the aging VRRVI and VRRVY systems. Used by the Finnish Air Force.
+
+DETAILS: Altitude measurements are either done with the domestic KMA/80 (KEVA HF) system or with the French Thompson CSF VT 150 XOB radars (4 systems).
+
+NOTES: An order was placed in 1972 and the first prototype unit was ready in 1975. Series production began in 1977 after initial testing and deliveries began in 1978. The last unit was delivered in 1985. 20 radar stations with a total of 38 radars (25 V, 4 XOB and 9 KMA antennae). The system is planned to be retired in 2015.
+
+SOURCES: http://en.wikipedia.org/wiki/User:MoRsE/Radars

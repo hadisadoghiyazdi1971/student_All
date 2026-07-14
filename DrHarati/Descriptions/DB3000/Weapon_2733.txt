@@ -1,0 +1,20 @@
+OVERVIEW: The AGM-176A Griffin is a lightweight, short range, air-launched, rocket-powered PGM intended as a low-collateral damage weapon for irregular warfare.  It has an 5.9 kg warhead.
+
+DETAILS:
+
+  The AGM-176A Griffin is designed to provide a rapid reaction capability against unarmored vehicles and personnel, especially where low-collateral damage is desired.  It uses a GPS, INS or semi-active laser (SAL) for targeting. To maximize lethality, the user can choose to engage the target with direct attack or high impact angle and has the option of using height of burst, point detonation or delayed fusing.
+
+
+Specifications: 
+Weight: 	20 kg 
+Length: 	1.09 m 
+Diameter: 	0.14 m 
+Wingspan: 	?? m 
+Range:		10.7 nm (20 km)
+Accuracy:	2 m		
+
+NOTES: IOC 2008. 
+
+
+
+SOURCE: AGM-176 Griffin. n.d. Accessed September 30, 2019. https://military.wikia.org/wiki/AGM-176_Griffin ; Griffin. n.d. http://www.deagel.com/Defensive-Weapons/Griffin_a002714001.aspx ; Aaron M. U. Church, Air Force Magazine, "Almanac 2018 Gallary of Weapons", http://www.airforcemag.com/MagazineArchive/Magazine%20Documents/2018/June%202018/Almanac_2018_Gallery%20of%20Weapons.pdf ; Pike, John. Raytheon's AGM-176 Griffin Mini-Missile. June 12, 2017. https://www.globalsecurity.org/military/systems/munitions/agm-176.htm ; n.d. https://web.archive.org/web/20161213060710/www.dtic.mil/ndia/2012armaments/Tuesday14014tackett.pdf.

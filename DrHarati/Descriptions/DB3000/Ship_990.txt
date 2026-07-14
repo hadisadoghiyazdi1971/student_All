@@ -1,0 +1,19 @@
+OVERIEW: The Greek Thermistocles class destroyer started out life as a Gearing class destroyer with the US Navy. The Gearing class is a group of 98 destroyers built for the US Navy during and shortly after World War II. The Gearing design was a minor modification of the immediately preceding Allen M. Sumner class. The hull was lengthened 14 ft (4.3 m) amidships, creating more storage space for fuel, thus giving the ships a larger range than the Sumners.
+
+The first Gearings were not ready for service until mid-1945, so they saw relatively little wartime service. They continued serving, with a series of upgrades, until the 1970s. At that time many were sold to other nations, where they served many more years.
+
+TYPE: Destroyer.
+
+SPECIFICATIONS: Displacement: Standard: 3520 tons || Length: 119 m (390 ft) || Beam: 12.4 m (40.7 ft) || Draft: 5.8 m (19 ft) || Propulsion: (4) Babcock & Wilcox boilers, two shaft steam turbines, 60,000 shp (45 MW) || Complement: 274.
+
+PERFORMANCE: Max Speed: 33 knots (61 km/h) || Range: 4,500 nmi. at 20 knots (8,300 km at 37 km/h).
+
+SENSORS: AN/SPS-10 Surface Search Radar || AN/SPS-40 2D Air Search Radar || MK-25 Weapons Director || AN/WLR-11 Radar Warning Receiver || WLR-1G ESM || AN/ULQ-6B Offenseive/Defensive ECM || AN/SQQ-23A Hull Mounted Sonar. 
+
+ARMAMENT: (6) 127 mm (5 inch)/38 caliber guns in three twin turrets (two fore, one aft) || (6) 325 mm (12.75 in.) Anti-Submarine Torpedo tubes (2x3) (for Mk44-Mk46 torpedoes) || (2) Hedgehog launchers (Mark 11, 24 bombs each).
+
+AIRCRAFT: (1) Alouette III helicopter (hangar and flight deck placed in 1978).
+
+SHIPS: Themistocles (D-210) || Kanaris (D-212).
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org

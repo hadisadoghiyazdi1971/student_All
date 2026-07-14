@@ -1,0 +1,21 @@
+OVERVIEW: The HEN HOUSE "Dnestr-M" 5N15M-series radar is a fixed radar operating in the NATO "A" band and designed to provide early warning and tracking in support of antiballistic missile (ABM) deployments.
+
+DETAILS: Dnestr-series radars have two arrays projecting from each side of the central control facility in either a straight line (Dnestr), or at an angle (Dnestr-M).  This shape allows for radar sites to have different fields of view based on their position and the requirements of the BMEW network.  The system has a track-while-scan capability.
+
+
+Specifications:
+
+Frequency:          150 MHz  (A band (NATO),  VHF Band (IEEE))
+Power output:       unknown (average); 10MW (peak)
+PRF:                25-100 pps
+Range Resolution:   unknonwn
+On/Off time:        unknown min. 
+Deploy/Stow time:   N/A
+Maximum Range:      3200 nm (estimate)
+ 
+
+NOTES:     
+
+SOURCES: Jane's C4ISR & Mission Systems: Air, "'Hen House' ABM radar",  09 January 2005; "Hen House Radars - Soviet BMD." Federation Of American Scientists -. Accessed August 13, 2016. http://fas.org/spp/starwars/program/soviet/hen_house.htm ; "Hen House." GlobalSecurity.org - Reliable Security Information. Accessed August 13, 2016. http://www.globalsecurity.org/wmd/world/russia/hen-house.htm ; "Russian/Soviet Anti-Ballistic Missile Systems." Air Power Australia. Accessed August 13, 2016. http://www.ausairpower.net/APA-Rus-ABM-Systems.html.
+
+

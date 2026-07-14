@@ -1,0 +1,21 @@
+OVERVIEW: The Belknap class cruiser was a class of single-ended guided missile cruisers (their missile armament was installed only forward, unlike "double-ended" missile cruisers with missile armament installed both forward and aft) built for the United States Navy during the 1960s. They were originally designated as DLG frigates (destroyer leaders; the USN use of the term frigate from 1950 to 1975 was intended to evoke the power of the sailing frigates of old), but in the 1975 fleet realignment, they were reclassified as guided missile cruisers (CG).
+
+DETAILS: When commissioned, the main armament of the Belknap class was a 5-inch/54-caliber Mk. 42 gun on the quarterdeck and a twin-rail RIM-2 Terrier Mk 10 Missile Launcher on the foredeck. The class was also equipped with two twin 3"/50 caliber guns for defence against sub-sonic aircraft. In the early 1980s, the Terrier missiles were replaced with RIM-67 Standard missiles; and during the NTU program in the late 1980s and early 1990s the class had its Standard SM-1 system upgraded to utilize SM-2ER Block II, the 3 inch guns were replaced with two 4 cell Harpoon Surface-to-surface missile launchers, and two Phalanx CIWS systems were installed.
+
+The derivative USS Truxtun shared the weapons systems outfit of the Belknap class, but was nuclear-powered, larger and substantially unrelated in design (for example, many weapons systems in different locations, such as the aft-facing GMLS). Most information related to nuclear cruisers is still classified, but Truxtun appears to be more a Belknap-like derivative of the nuclear cruiser Bainbridge than the other way around.
+
+TYPE: Guided Missle Cruiser (CG).
+
+SPECIFICATIONS: Displacement: 7,930 tons (8,057 metric tons) || Length: 547 ft (167 m) || Beam: 55 ft (17 m) || Draft: 29 ft (8.8 m) || Propulsion: (4) 1200 psi (8300 kPa) boilers, two geared steam turbines, two shafts. 85,000 shp (63,384 kW) || Complement: (27) officers, (450) enlisted.
+
+PERFORMANCE: Speed: 32 knots (59 km/h).
+
+SENSORS: AN/SPS-10 surface search RADAR || AN/SPS-48 3D air search radar || AN/SPS-49 2D air search radar || AN/SPG-55 Terrier missile fire control radar || AN/SQS-26 SONAR.
+
+ARMAMENT: (1) Mk 10 Mod 7 Guided Missile Launching System with (40) SM-2ER Standard missiles || (20) RUR-5 ASROC Antisubmarine Missiles Fired From Mk 10 launcher || (2) Quad Harpoon missile launchers || (2) Tripple Mark 46 torpedo launchers || (1) 5 Inch/54-caliber Mk. 42 gun || (2) Phalanx CIWS.
+
+AIRCRAFT: (1) SH-2H Seasprite.
+
+SHIPS BUILT: Belknap (CG-26) || Josephus Daniels (CG-27) || Wainwright (CG-28) || Jouett (CG-29) || Horne (CG-30) || Sterett (CG-31) || William H. Standley (CG-32) || Fox (CG-33) || Biddle (CG-34).
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org

@@ -1,0 +1,5 @@
+OVERVIEW:The IAI Searcher is a reconnaissance UAV developed in Israel in the 1980s.
+
+DETAILS:The Searcher looks almost identical to the Scout and Pioneer, but is in fact scaled up and is well over twice the size of the Scout. The Searcher is powered by a 35 kW (47 hp) piston engine. The new design features updated avionics and sensor systems with greater flight endurance as well as increased redundancy for improved survivability. In addition to Israel, the system had been exported and is currently in use by Russia,
+
+SOURCE: Wikipedia, the Free Encyclopedia. "IAI Searcher - Wikipedia." n.d. Accessed September 14, 2017. https://en.wikipedia.org/wiki/IAI_Searcher#cite_note-8

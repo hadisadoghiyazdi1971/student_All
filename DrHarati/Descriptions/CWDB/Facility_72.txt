@@ -1,0 +1,23 @@
+OVERVIEW: The P-10 radar (NATO name: KNIFE REST B) is an mobile, 2-D early warning  radar operating in the  "A" Band.
+
+DETAILS: The P-10 is a mobile, truck-mounted mobile version of the P-8 radar. The P-10 was able to alter its carrier frequency to improve resistance to both passive clutter and active jamming. Weapons systems frequently associated with the P-10 include the S-75 Dvina/SA-2 GUIDELINE.
+
+Specifications:
+
+Frequency: 		
+Power output: 		100 kW	
+PRF:			100 Hz, 50 pps	
+Range Resolution:	2.5 km					
+On/Off time:		unknown
+
+Detection Ranges
+  Fighter size aircraft
+	500 m altitude:	unknown 
+ 	5000m alt.:	200-250 km
+
+ 
+NOTES: IOC 1953.   
+
+
+SOURCES: Janes Radar and Electronic Warfare Systems "P-10 early-warning radars, 02 July 2001; "SPOON REST." "KNIFE REST." GlobalSecurity.org - Reliable Security Information. Accessed March 14, 2015. http://www.globalsecurity.org/military/world/russia/knife-rest.htm ; "P-10 Radar." Wikipedia, the Free Encyclopedia. Accessed March 14, 2015. http://en.wikipedia.org/wiki/P-10_radar ; http://pvo.guns.ru/rtv/nitel/p10.htm ; "Radar Basics." Grundlagen Der Radartechnik. Accessed March 14, 2015. http://www.radartutorial.eu/19.kartei/karte905.en.html ; "P-8 Radar." Wikipedia, the Free Encyclopedia. Accessed March 14, 2015. http://en.wikipedia.org/wiki/P-8_radar ; China-Defense.com; koxinga; "A Brief History of Chinese Naval Radar and EW developments", 2004.   
+ 

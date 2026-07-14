@@ -1,0 +1,8 @@
+OVERVIEW: The AA-1a Alkali PC-2V is a solid-fuel, short range Air to Air missile equipped with a beam riding homing head and a 13.0 kilogram warhead.
+
+DETAILS: The AA-1a Alkali is guided to the target by a combination method. Initially, it is guided inertially with radio correction of trajectory in the initial flight phase.  It then transitions to homing in the terminal phase. This provides for reliable target lock-on at long ranges from the launching aircraft. The missile can be guided along special trajectories to create favorable conditions for homing head and proximity fuse operation. It is capable of going around a plume of passive jamming, of being moved out of the main lobe of the platform's radar, and of approaching a low-flying target from above at a given angle. 
+
+NOTES: Because of the difficulty in using a short range beam riding missile against manuvering fighter, the AA-1a Alkali was primarily intended for use against bombers. 
+
+
+SOURCES: 

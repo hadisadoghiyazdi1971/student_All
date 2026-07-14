@@ -1,0 +1,20 @@
+OVERVIEW:The Sukhoi Su-25 Grach  NATO reporting name: Frogfoot) is a single-seat, twin-engine jet aircraft developed in the Soviet Union by Sukhoi. 
+
+DETAILS:  It was designed to provide close air support for the Soviet Ground Forces.
+Overview
+
+The Su-25 has a conventional aerodynamic layout with a shoulder-mounted trapezoidal wing and a traditional tailplane and rudder. Several metals are used in the construction of the airframe: 60% aluminium, 19% steel, 13.5% titanium, 2% magnesium alloy and 5.5% other materials.
+
+All versions of the Su-25 have a metal cantilever wing, of moderate sweep, high aspect ratio and equipped with high-lift devices. The wing consists of two cantilever sections attached to a central torsion box, forming a single unit with the fuselage. The air brakes are housed in fairings at the tip of each wing. Each wing has five hardpoints for weapons carriage, with the attachment points mounted on load-bearing ribs and spars. Each wing also features a five-section leading edge slat, a two-section flap and an aileron.
+
+The flaps are mounted by steel sliders and rollers, attached to brackets on the rear spar. The trapezoidal ailerons are near the wingtips. The fuselage of the Su-25 has an ellipsoidal section and is of semi-monocoque, stressed-skin construction, arranged as a longitudinal load-bearing framework of longerons, beams and stringers, with a transverse load-bearing assembly of frames. The one-piece horizontal tailplane is attached to the load-bearing frame at two mounting points.
+
+Early versions of the Su-25 were equipped with two R95Sh non-afterburning turbojets, in compartments on either side of the rear fuselage. The engines, sub-assemblies and surrounding fuselage are cooled by air provided by the cold air intakes on top of the engine nacelles. A drainage system collects oil, hydraulic fluid residues and fuel from the engines after flight or after an unsuccessful start. The engine control systems allows independent operation of each engine. The latest versions (Su-25T and TM) are equipped with improved R-195 engines.
+
+The cannon is in a compartment beneath the cockpit, mounted on a load-bearing beam attached to the cockpit floor and the forward fuselage support structure. The nose is fitted with distinctive twin pitot probes and hinges up for service access.
+
+Su-25K
+
+The basic Su-25 model was used as the basis for a commercial export variant, known as the Su-25K (Komercheskiy). This model was also built at Factory 31 in Tbilisi, Georgia. The aircraft differed from the Soviet Air Force version in certain minor details concerning internal equipment.
+
+SOURCE:Wikipedia, the Free Encyclopedia. "Sukhoi Su-25 - Wikipedia." n.d. Accessed September 9, 2017. https://en.wikipedia.org/wiki/Sukhoi_Su-25#Su-25.

@@ -1,0 +1,22 @@
+OVERVIEW:  The SA-1a GUILD (S-25 Berkut V-300) is a single stage, liquid fuel, medium range, medium-to-high altitude, radio command guided, surface to air missile equipped with a 200-320 kg warhead.
+
+DETAILS:  After launch, the SA-1 is guided to the target using command guidance. The CEP is approximately  65-120 feet.
+
+
+Specifications:
+ 
+Weight: 		3975 kg 
+Length: 		12.22 m (with booster)
+Diameter: 		0.65 m (missile), 0.65 (booster)
+Wingspan: 		unknown m (booster)
+Speed:			2.5 mach
+Range:			4-18.5 nm (7- 34 km)
+Engagement Altitude:	3,000-59,000 ft (900-18,000 m)   
+Reload time:		unknown minutes
+Max target speed: 	540 knts (1,000 km/h)	
+
+
+NOTES:  IOC:  1955-56. The missile's low initial velocity limited its engagement capability against supersonic targets.
+
+
+SOURCES: "Soviet/Russian SAM Site Configuration Part 1: S-25/SA-1,S-75/SA-2, S-125/SA-3 and S-200/SA-5." Accessed December 10, 2016. http://www.ausairpower.net/APA-Rus-SAM-Site-Configs-A.html#mozTocId357043 ; Zaloga, Steven J. "Defending the Kremlin: The First Generation of Soviet Strategic Air Defense Systems 1950-60." Accessed December 10, 2016. http://bobrowen.com/nymas/defendingthekremlin.htm ; "S-25 Berkut - Wikipedia." Wikipedia, the Free Encyclopedia. Accessed December 10, 2016. https://en.wikipedia.org/wiki/S-25_Berkut ; "S-25 SA-1 GUILD Russia / Soviet Nuclear Forces." Accessed December 10, 2016. https://fas.org/nuke/guide/russia/airdef/s-25.htm.

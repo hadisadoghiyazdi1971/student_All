@@ -1,0 +1,13 @@
+OVERVIEW: The NANUCHKA II class Corvette is a 3 shaft diesel powered, multi-role guided missile corvette.
+
+DETAILS:   The NANUCHKA II class is a heavily armed coastal missile ship.  It is the export version of the NANUCHKA  
+I, except it is armed with SS-N-2c missiles instead of S-N-9.   They have poor sea keeping qualities.  Vessels of this class have been exported to Algeria, India, and Lybia.      
+
+NOTES: Displacement: 780 tons standard
+       Speed: 32 knts
+       Range: 900 nm @ 30.5 knts; 2,500 nm @ 12 knts
+       Complement: 60 (approx)
+       In Commission: 1969-present
+       Completed: 	  
+
+SOURCES: Norman Polmar, "Guide to the Soviet Navy, 3rd ed. (Annapolis, MD: Naval Institute Press, 1983), 192-92 ; 

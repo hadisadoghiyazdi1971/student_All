@@ -1,0 +1,23 @@
+OVERVIEW: The S-244 radar is a fixed height finding radar, operating in the NATO "E" band.  
+
+DETAILS: The S-244 radar was a nodding-type height finding radar.
+
+
+Specifications:
+
+Frequency			2.7-3.3 GHz (E band (NATO),  S Band (IEEE))
+Power output: 			3-5 kW (average); 3 MW (peak)
+PRF:				200-500 pps
+Range Resolution:		1700 ft at 150 nm
+On/Off time: 			unknown min. 
+Deploy/Stow time: 		N/A min
+Maximum Range:			 km (range), km (altitude)
+	  
+ 
+
+NOTES:   Used in NATO NADGE radar network.
+ 
+SOURCES: "3 Megawatt Heightfinder S-band Radar Heightfinder Type S244." Marconi Radar History / MARCONI RADAR. Accessed December 8, 2018. https://marconiradarhistory.pbworks.com/w/file/fetch/89086823/S244%203-Megawatt%20S-Band%20Radar%20Heightfinder.pdf ; "Marconi Radar History / S244." Marconi Radar History / MARCONI RADAR. Accessed December 8, 2018. https://marconiradarhistory.pbworks.com/w/page/30098195/S244.
+
+
+

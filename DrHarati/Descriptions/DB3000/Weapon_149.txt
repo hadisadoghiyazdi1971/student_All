@@ -1,0 +1,12 @@
+OVERVIEW: The AN/ALQ-131 jammer is a broadband Noise and Deception Jamming Pod. 
+
+
+DETAILS:  The  AN/ALQ-131 provides self protection jamming against pulse doppler or CW jamming threats, using a combination of noise, repeater or transponder electronic jamming techniques.
+
+
+NOTES:  Initially deployed in the 1970's and subsequently upgraded AN/ALQ-131(V) and AN/ALQ-131 Block II configurations.   Uses a modular design, allowing it to be configured for a variety of threats.  Used with A-7, A-10, C-130, AC-130, F-4, F-15, F-16, F-111, F-105.  Used by eleven countries, including Belgium, Egypt, Japan, the Neterlands, and the United States. 
+
+
+SOURCES: AN/ALQ-131(V) ECM Pod. (n.d.). Retrieved from http://www.northropgrumman.com/Capabilities/ANALQ131/Pages/default.aspx ; AN/ALQ to AN/ALT - Equipment Listing. (n.d.). Retrieved from http://www.designation-systems.net/usmilav/jetds/an-alq2aly.html ; AN/ALQ-131 Self Protection Jammer Pod. (n.d.). Retrieved from http://fas.org/man/dod-101/sys/ac/equip/an-alq-131.htm ; Northrop Grumman (Westinghouse) AN/ALQ-131 - Scramble. (n.d.). Retrieved from http://wiki.scramble.nl/index.php/Northrop_Grumman_(Westinghouse)_AN/ALQ-131
+
+

@@ -1,0 +1,25 @@
+OVERVIEW: The JY-14 GREAT WALL Radar is a long-range, 3-D surveillance and interceptor control radar operating in the E/F Band.
+
+DETAILS: The JY-14 is primarily used in national air defense system.  It is capable of tracking over 72 contacts.  The JY-14 is reported to have a range of anti-jamming facilities, to ensure normal operation in the most severe of electronic warfare (EW) environments.  It has 8 RF feeds, six in E/F-band and two in D-band, the latter two giving good height cover where the lowest may also be used for an IFF facility.  This radar employs a number of modern technologies including a low-sidelobe antenna, pulse compression, self-adaptive moving target indication (AMTI).
+
+Specifications:
+
+Frequency: 		 1.5-2.1 GHz (E/F Band (NATO), S Band (IEEE)))  
+Power output: 		 10 kW(average); 1.0 MW (peak) 
+PRF:			 unknown	
+Range Resolution:	 90 m (range), 0.2 degrees azimuth 					
+On/Off time:		 unknown
+Deploy/Stow Time	 unknown min
+ 
+Detection Range:
+90% Pd, 3 m2 RCS target:
+tgt alt. 100m:		 km
+tgt alt. 18000m:	 km
+Max Range:		450 km
+
+NOTES: IOC 1998.  The  JY-14 is expected to be deployed in regional air defense networks.
+
+Source: Air Power Australia. "PLA Air Defence Radars." Accessed December 1, 2013. http://www.ausairpower.net/APA-PLA-IADS-Radars.html#mozTocId756208 ; Jane's Radar and Electronic Warfare Systems, 2002-03, "JY-13 3-D surveillance radar," 25 March 2003 ; "JY-14 Radar." Wikipedia, the Free Encyclopedia. Accessed March 28, 2015. http://en.wikipedia.org/wiki/JY-14_Radar.
+
+
+

@@ -1,0 +1,10 @@
+OVERVIEW: The English Electric Lightning is a supersonic fighter aircraft of the Cold War era. It was designed, developed, and manufactured by English Electric, which was subsequently absorbed by the newly formed British Aircraft Corporation
+
+DETAILS:The Lightning was used by the Royal Air Force (RAF) and the Royal Saudi Air Force (RSAF). Although it was the RAF's primary interceptor for more than two decades it was never required to attack another aircraft.
+
+The Lightning is powered by two Rolls-Royce Avon turbojet engines in a unique staggered stacked installation in the fuselage. The Lightning was developed to intercept increasingly capable bomber aircraft (Tupolev Tu-16, Tupolev Tu-22, Tupolev Tu-95), and thus has exceptional rate of climb, ceiling, and speed; pilots have described flying it as "being saddled to a skyrocket". This performance made the Lightning a "fuel-critical" aircraft, meaning that its missions are dictated to a high degree by its limited range. Later developments provided greater range and speed along with aerial reconnaissance and ground-attack capability.
+
+Lightning F.6
+    Single-seat fighter (an improved longer-range variant of the F.3). It featured new wings with better efficiency and subsonic performance, overwing fuel tanks and a larger ventral fuel tank, reintroduction of 30 mm cannon (initially no cannon but later in the forward part of the ventral pack rather than in the nose), use of Red Top missiles. A total of 39 built (also nine converted from F.3 and 15 from F.3A). 
+
+SOURCE: Wikipedia, the Free Encyclopedia. "English Electric Lightning - Wikipedia." n.d. Accessed September 8, 2017. https://en.wikipedia.org/wiki/English_Electric_Lightning#Variants.

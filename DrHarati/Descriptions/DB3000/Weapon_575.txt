@@ -1,0 +1,24 @@
+OVERVIEW:  The MM.40 Exocet Block III missile is a turbojet powered, high sub-sonic, surface-launched, medium-range, radar homing, anti-ship missile, equipped with a 165 kg warhead.
+
+DETAILS:  After launch, the MM.40 Exocet uses a hybrid GPS/inertial navigation system for midcourse guidance. This guidance system allows for programing multiple 3D way points.  For the terminal phase, the missile uses a 24 km range adaptive search pattern capable J-band (10-20 Ghz) active radar. The missile has a lower RCS and IR signature than earlier versions of the Exocet, and is capable of high-g maneuvers in the terminal phase. The missile is all-weather capable, and is capable of attacking land targets using coordinates.  
+
+
+Specifications: 
+Weight: 	780 kg 
+Length: 	5.8 m (with booster)
+Diameter: 	0.350 m
+Wingspan: 	1.13 m
+Speed:		0.93 mach
+Range:		4-180 km ( nm) 	
+
+
+NOTES: IOC: 2011. Purchased by France, the UAE, Qatari, Oman and Morocco.  Upgrade kits allow the modification of Block 2 missiles to the Block 3 standard.
+ 
+
+SOURCES: "Exocet Block III Anti-Ship Missile Modernizion." Defense Update: | Military Technology &  
+Defense News. Accessed December 3, 2016. http://defense-update.com/products/e/exocet-3.htm ; "Exocet."  
+WeaponSystems.net. n.d. http://weaponsystems.net/weaponsystem/HH10%20-%20Exocet.html ; MBDA. "Exocet  
+MM40 block 3 Data Sheet." Last modified December 3, 2016.  
+http://file:///C:/Users/Steven/Downloads/EXOCET-MM40-B31.pdf ; "MM40 Block 3 Exocet." Guide to Military  
+Equipment and Civil Aviation. Accessed December 3, 2016. http://www.deagel.com/Anti-Ship-Missiles/MM40- 
+Block-3-Exocet_a001135006.aspx.

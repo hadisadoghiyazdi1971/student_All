@@ -1,0 +1,15 @@
+OVERVIEW: The Mikoyan-Gurevich MiG-19 NATO reporting name: "Farmer" is a Soviet second-generation, single-seat, twin jet-engined fighter aircraft. It was the first Soviet production aircraft capable of supersonic speeds in level flight. A comparable U.S. "Century Series" fighter was the North American F-100 Super Sabre, although the MiG-19 would primarily oppose the more modern McDonnell Douglas F-4 Phantom II and Republic F-105 Thunderchief over North Vietnam.
+
+DETAILS: Initial enthusiasm for the aircraft was dampened by several problems. The most alarming of these was the danger of a midair explosion due to overheating of the fuselage fuel tanks located between the engines. Deployment of airbrakes at high speeds caused a high-g pitch-up. Elevators lacked authority at supersonic speeds. The high landing speed of 230 km/h (145 mph) (compared to 160 km/h (100 mph) in the MiG-15), combined with absence of a two-seat trainer version, slowed pilot transition to the type. Handling problems were addressed with the second prototype, "SM-9/2", which added a third ventral airbrake and introduced all-moving tailplanes with a damper to prevent pilot-induced oscillations at subsonic speeds. It flew on 16 September 1954, and entered production as the MiG-19S.
+
+Approximately 5,500 MiG-19s were produced, first in the USSR and in Czechoslovakia as the Avia S-105, but mainly in the People's Republic of China as the Shenyang J-6. The aircraft saw service with a number of other national air forces, including those of Cuba, North Vietnam, Egypt, Pakistan, and North Korea. The aircraft saw combat during the Vietnam War, the 1967 Six Day War, and the 1971 Bangladesh War.
+
+In the USSR, the MiG-19 was superseded by the MiG-21. The Shenyang J-6 remained a staple of the Chinese People's Liberation Army Air Force until the 1980s and has also been developed into the Nanchang Q-5 (NATO reporting name "Fantan") attack aircraft. Despite its age, the MiG-19 and its descendants exhibit good handling characteristics at low altitude and a surprisingly high rate of climb, and their heavy cannon armament a one-second burst from three 30 mm NR-30 cannons had a projectile mass of 18 kg (40 lb) makes them formidable adversaries in close combat.
+
+SPECIFICATION: Crew: (1) || Length: 12.54 m (41 ft) || Wingspan: 9.0 m (29 ft 6 in) || Height: 3.9 m (12 ft 10 in) || Empty weight: 5,447 kg (11,983 lb) || Max. takeoff weight: 7,560 kg (16,632 lb) || Powerplant: (2) Tumansky RD-9B afterburning turbojets, 31.9 kN (7,178 lbf) each.
+
+PERFORMANCE: Maximum speed: 1,455 km/h (909 mph) || Range: 1,390 km (860 mi) 2,200 km with external tanks || Service ceiling: 17,500 m (57,400 ft) || Rate of climb: 180 m/s (35,425 ft/min) || Thrust/weight: 0.86.
+
+ARMAMENT: Guns: (3) 30 mm NR-30 cannons (75 rounds per gun for wing guns, 55 rounds for the fuselage gun) || Hardpoints: 4 underwing pylons, with a maximum load of 1000 kg and provisions to carry combinations of || Rockets: unguided rockets || Missiles: (4) Vympel K-13 AAMs || Bombs: Up to 250 kg (550 lb) of bombs.
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org

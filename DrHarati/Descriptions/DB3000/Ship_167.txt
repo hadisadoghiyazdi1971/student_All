@@ -1,0 +1,33 @@
+OVERVIEW: The Type 053 frigates were a family of Chinese ships that served with the People's Liberation Army Navy (PLAN), and a small number of foreign navies. The Type 053 was developed from the Soviet Riga-class frigates after the Sino-Soviet split.
+
+The designation of ships and subclasses is somewhat confusing. Chinese nomenclature temporarily changed during the Cultural Revolution, and some subclasses gained different NATO reporting names.
+
+This article covers the entire Type 053 family except for the final two subclasses, the Type 053H2G and Type 053H3 frigates.
+
+DETAILS: In the 1950s, the Soviets provided China with four kits for Riga-class frigates and four completed Gnevny-class destroyers. These entered PLAN service as the Type 01 Chengdu-class and the Type 07 Anshan-class respectively. The Riga kits were assembled by the Huangpu Shipyard in Guangzhou, and the Hudong Shipyard in Shanghai,from 1955 to 1958. These ships formed the PLAN's backbone in the 1950s and 1960s.
+
+Following the Sino-Soviet split and the withdrawal of Soviet aid, the Wuhan-based No. 701 Institute began reverse-engineering the Type 01 in 1962. The result was the Type 065. It was based on the Riga hull with the flush deck replaced by a long forecastle. This modification was needed to accommodate a large medium-speed diesel powerplant; the civilian diesel was a substitute for the Riga's compact high-pressure steam turbine powerplant that the Chinese were unable to replicate. The first Type 065, 529 Haikou, was laid down at Huangpu in August 1964 and commissioned by August 1966.
+
+From 1965 to 1967, the No. 701 Institute designed the Type 053K (Kong for air-defence), an air-defence variant of the Type 065. This met a PLAN requirement for air-defence ships to accompany the surface-warfare Type 051 destroyers. The Type 053K was originally intended to have three screws powered by a combined gas-turbine and diesel engine, with a speed of 38 knots. However, technical constraints forced the Chinese to settle for a diesel engine, powering two screws for a maximum speed of 30 knots.
+
+The Type 053Ks were armed with HQ-61 surface-to-air missiles, launched from two twin-armed launchers; these did not enter service until the mid-1980s. The 100 mm. gun armament was also delayed.
+
+Only two Type 053Ks were completed, possibly due to unsatisfactory performance and the long development time for their intended armament. 531 Yingtan was laid down in 1970 and commissioned in 1977, and followed by 532. Both ships were withdrawn from service in 1992, with one scrapped in 1994 and the other preserved as a museum ship.
+
+The PLAN retired many older frigates in the 1970s, and the No. 701 Institute developed the Type 053H (Hai for anti-ship) as a replacement. The initial design was armed with six SY-1 anti-ship missiles in two three-missile box launchers, and a single 100 mm. gun. The Type 053H received the NATO codename Jianghu-I. The first was constructed by the Hudong Shipyard and entered service in the mid-1970s. At least a dozen were built and entered service with the PLAN East Sea Fleet.
+
+The Type 053H was improved in four successive subclasses, receiving NATO codenames Jianghu-II through Jianghu-V. The Type 053Hs were succeeded by the PLAN's first multirole frigates, the Type 053H2G and Type 053H3 frigates.
+
+TYPE: Guided Missle Frigate (FFG).
+
+SPECIFICATION: Displacement: 1,600 to 1,900 tons || Length: 103 to 112 m || Beam: 10 to 12 m || Draught: 3 to 4 m || Propulsion: 2 to 4 diesel engines @ 16,000 to 22,000 shp.
+
+PERFORMANCE: Speed: 32 knots || Range: 7408km (4000nm).
+
+SENSORS: Type 354 (Eye Shield) 2D air/surface search radar || Type 352 Radar (Square Tie) || G/H-band radar for SSM and 100 mm gun targeting || EH-5 hull-mounted MF sonar || Jug Pair intercept ECM/EW system || ZKJ-3 combat data system (with reported speed of 1 Mbit/s) in some units || Data link: HN-900 (Chinese equivalent of Link 11A/B, to be upgraded) || Communication: SNTI-240 SATCOM.
+
+ARMAMENT: (6) SY-1 SSM || (2) 100 mm gun || (4) dual 37 mm AA guns || (2) Type 81 (RBU-1200) 5-tube ASW RL (30 rockets) || (2) Type 3200 6-tube ASW RL (36 rockets) || (2) Type 62 5-tube A/S mortar launchers || (2) depth charge (DC) racks & projector.
+
+BOATS: (2) High speed boats.
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org

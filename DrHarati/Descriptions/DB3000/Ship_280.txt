@@ -1,0 +1,16 @@
+OVERVIEW: The FPB 45-class fast attack craft (PGM) is a  diesel-powered, missile-armed patrol vessel designed for ASUW and patrol operations in the littoral environment. 
+
+DETAILS:   
+
+
+NOTES: Displacement: 259 full load
+       Speed: 40 knts
+       Engineering: 4 MTU diesel, 15,400 shp 4 shafts
+       Range: 1,600 nm @ 16 knts
+       Complement: 36
+       In Commission: 1984
+       Completed: 4 
+
+NOTES: Produced by Lurssen.  Units in class: AHMAD EL FATEH (20); AL JABIRI (21); ABDUL RAHMAN AL FADEL (22); AL TAWEELAH (23)	  
+
+SOURCES: Sharpe, Richard. Jane's Fighting Ships 1991-92.  London: Jane's Pub, 1991, pg. 37 

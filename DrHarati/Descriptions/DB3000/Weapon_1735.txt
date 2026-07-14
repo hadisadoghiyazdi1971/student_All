@@ -1,0 +1,19 @@
+OVERVIEW: The APR-2 is an airborne-delivered, solid fuel, rocket-powered ASW active/passive acoustic  
+Homing rocket with a 100 kg. warhead.
+
+DETAILS:  The APR-2 (Aviacionnaia Podvodnaia Raketa-1) is an rocket powered ASW weapon utilizing a rocket for propulsion. After deployment, the rocket acoustically acquires a submarine contact.  Upon target detection, the missile ignites propelling the missile to speeds of up to 63 knots,  minimizing target reaction time.  Homing is by a correlation-phase system, with a maximum range of 1,500 meters. The weapon has advertised kill probability of 70-85%.
+
+Specifications:
+
+Weight:	575 kg
+Range: 	2000 meters
+Max Depth: 600 meters
+Endurance: 1-2 minutes
+
+
+NOTES:  IOC: 1980s. 
+
+SOURCES: Friedman, Norman. The Naval Institute Guide to World Naval Weapons Systems, 1997 
+-1998. Annapolis, Md: Naval Institute Press, 1997, pg 684 ;  
+http://www.navweaps.com/Weapons/WTRussian_post-WWII.php; "APR-3E Torpedo." Wikipedia, the Free  
+Encyclopedia. Accessed September 25, 2016. https://en.wikipedia.org/wiki/APR-3E_torpedo.

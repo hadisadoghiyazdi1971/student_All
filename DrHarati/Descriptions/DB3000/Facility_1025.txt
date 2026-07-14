@@ -1,0 +1,8 @@
+OVERVIEW: AN/FPR-120 is Ballistic Missile Early Warning System (BMEWS) fixed phased array radar. The primary mission of BMEWS is to provide NORAD with Tactical Warning/Attack Assessment (TW/AA) data on ICBMs and SLBMs. The secondary mission is to provide NORAD with Launch and Impact (L&I) predictions for attack assessment by NORAD. 
+
+DETAILS: AN/FPR-120 the Thule BMEWS is a 2-faced phased array radar. It is currently part of the larger BMEWS radar network, which dates back to the early 1960s, and includes radars located in Fylingdales, United Kingdom, and Clear, Alaska. 
+
+NOTES: The Thule radar became operational in 1953.
+
+SOURCES: Missile Threat. "Thule Upgraded Early Warning Radar Missile Threat." Accessed November 24, 2013. http://missilethreat.com/defense-systems/thule-early-warning-radar/ ;  Radomes, Inc. - The Air Defense Radar Veterans Association. "Ballistic Missile Early Warning System (BMEWS)." Accessed November 24, 2013. http://www.radomes.org/museum/documents/BMEWS.html; Radomes, Inc. - The Air Defense Radar Veterans Association. "AN/FPS-115, AN/FPS-120, AN/FPS-123, AN/FPS-126." Accessed November 24, 2013. http://www.radomes.org/museum/equip/fps-115.html
+

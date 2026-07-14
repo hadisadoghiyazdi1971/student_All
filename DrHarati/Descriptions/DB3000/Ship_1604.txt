@@ -1,0 +1,21 @@
+OVERVIEW: The FORT class is a diesel-powered Fleet Replenishment Ship (AEFS).
+
+DETAILS:   The FORT class Fleet Replenishment Ship is designed for underway replenishment of fleet units using both RAS and VERTREP.  
+It is also capable of being used as a base for ASW helicopters.
+
+Specifications: 
+
+       	Displacement: 23,384 tons (full load)
+       	Speed: 22 knts
+       	Engineering: 1 shaft, 1 diesel engine
+       	Range: 10,000 nm @ 20 knts
+       	Complement: 127 + 45 RN for helo detachment, 36 civilian supply staff 
+      	In Commission: 1978-?
+       	Completed: 2
+       	Capacity: 	
+
+NOTES: Units in class: FORT GRANGE (A 385), FORT AUSTIN (A 386). FORT GRANGE renamed FORT ROSALIE in 2000. 
+   
+
+SOURCES: Moore, John Evelyn. Jane's Fighting Ships 1987-88.  London: Jane's Pub, 1987, pg. 681 ; RFA Fort Rosalie (A385) - Wikipedia,  
+the free encyclopedia. (n.d.). Retrieved May 4, 2015, from http://en.wikipedia.org/wiki/RFA_Fort_Rosalie_(A385)

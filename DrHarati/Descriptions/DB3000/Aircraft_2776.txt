@@ -1,0 +1,5 @@
+OVERVIEW: The F-5 is a high-subsonic fighter aircraft which is a Chinese-built single-seat jet interceptor and fighter aircraft derived from the Soviet Mikoyan-Gurevich MiG-17. The J-5 was exported as the F-5. The aircraft's NATO reporting name is "Fresco".
+
+DETAILS:MiG-17s were designed to intercept straight-and-level-flying enemy bombers, not for air-to-air combat (dogfighting) with other fighters. This subsonic (.93 Mach) fighter was effective against slower (.6-.8 Mach), heavily loaded U.S. fighter-bombers, as well as the mainstay American strategic bombers during the MiG-17's development cycle (such as the Boeing B-50 Superfortress or Convair B-36 Peacemaker, which were both still powered by piston engines). It was not however able to intercept the new generation of British jet bombers such as the Avro Vulcan and Handley Page Victor, which could both fly higher.
+
+SOURCE: Wikipedia, the Free Encyclopedia. "Mikoyan-Gurevich MiG-17 - Wikipedia." n.d. Accessed September 9, 2017. https://en.wikipedia.org/wiki/Mikoyan-Gurevich_MiG-17

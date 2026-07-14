@@ -1,0 +1,7 @@
+OVERVIEW: Height Finder radar.
+
+DETAILS: Used with the main radar SGR.110
+
+NOTES: 
+
+SOURCES: 

@@ -1,0 +1,25 @@
+OVERVIEW: The BUTTE class AE is a steam-powered Ammunition Ship.
+
+DETAILS:   The BUTTE class AE are specialized underway replenishment ships, designed to conduct underway replenishment in support of operating forces by simultaneously providing  
+ammunition from 7 stations as well as and stores, fleet freight, mail, personnel and limited quantities of fuel. The embarked helicopters give this class the ability to conduct Vertical Replenishment (VERTREP) as well as Connected Replenishment (CONREP).  
+
+Specifications: 
+
+       Displacement:  18,088 tons (full load)
+       Speed: 20 knts
+       Engineering: 1 shaft, 3 steam boilers
+       Range:
+       Complement: 385 (USN) or 180 (MSC)
+       In Commission: 1967-2008
+       Completed: 8
+
+NOTES: Units in class: KILAUEA (AE 26); BUTTE (AE 27); NITRO (AE 23); SANTA BARBARA (AE 28); MOUNT HOOD (AE 29); FLINT (AE 32); SHASTA (AE 33) MOUNT BAKER (AE 34); KISKA (AE 35).   
+All units were transferred to Military Sealift Command (MSC) beginning in 1980.
+   
+
+SOURCES: Moore, John Evelyn. Jane's Fighting Ships 1987-88.  London: Jane's Pub, 1987, pg. 773 ; "Kilauea-class Ammunition Ship." Wikipedia, the Free Encyclopedia. Accessed April 5, 2015. http://en.wikipedia.org/wiki/Kilauea-class_ammunition_ship. ; "T-AE 26 Kilauea." GlobalSecurity.org - Reliable Security Information. Accessed April 5, 2015. http://www.globalsecurity.org/military/systems/ship/tae-26.htm ; http://fas.org/man/dod-101/sys/ship/tae-26.htm
+
+
+
+
+

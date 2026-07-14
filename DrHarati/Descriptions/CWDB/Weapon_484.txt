@@ -1,0 +1,8 @@
+OVERVIEW: The KS-1 Kometa or AS-1 KENNEL, was a short-range, turbojet-powered semi-active radar guided air launched ASCM.  It carried a 600 kg HE warhead.
+    
+DETAILS: After launch, the KENNEL used inertial mid-course guidance and semi-active radar from a K-1M X-band radar operated from the launch platform. At approximately 10NM to the target, the K-2 radar in the AS-1 switched to autonomous semi-active radar homing.  At this point the host plane could switch back to regular radar operation and break the “beam.”    
+
+NOTES: The AS-1 entered service in approximately 1955 and was removed from service in 1969.  It was a derivative of the MiG-15 FAGOT airframe.  A land attack variant, the SSC-2A Salish, and the coastal defense SSC-2B Samlet, were also produced. It was carried by the Tu-4 BULL and Tu-16KS BADGER-B.
+
+SOURCE: Air Power Australia. "Soviet/Russian Cruise Missiles." Accessed November 5, 2013. http://www.ausairpower.net/APA-Rus-Cruise-Missiles.html ; Harpoon Database, www.harpoondatabases.com/encyclopedia/Entry3052.aspx.
+

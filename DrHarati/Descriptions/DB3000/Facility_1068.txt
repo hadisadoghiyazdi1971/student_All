@@ -1,0 +1,25 @@
+OVERVIEW: The TRS 22XX radar is a transportable, 3D E/F-band phased-array radar operating in the NATO "E/F" band.  
+
+DETAILS: The TRS 22XX features enhanced ECCM capablilities over its TRS-2215 and 2230 predecessors, including  pulse-to-pulse or burst-to-burst frequency agility, and automatic extraction of jam
+strobes, selection of least jammed frequency, and display of jammed sectors.  The antenna has very low sidelobes.  
+
+
+Specifications:
+
+Frequency: 		 2-4 GHz (E-F Band (NATO), S Bands (IEEE)))  
+Power output: 		 20 kw (mean); 700 kW (peak) 
+PRF:			  380 Hz (est., based on TRS 2215)	
+Range Resolution:	 120 m (range), 2.5 degrees azimuth 				 
+	
+On/Off time:		 unknown seconds
+Deploy/Stow Time	 < 120 min / < 120 min
+Effective Range:	 470 km
+			 459 km (vs. 2sq meter-sized target
+
+NOTES: IOC 1989 (approx).  The TRS-22XX is transportable by C-160 and C-130 aircraft.  In use with France, Kuwait, Turkey
+
+
+SOURCES: "Jane's Radar and Electronic Warfare Systems, 2002-03, Librarum.org." Page 772-73,  Librarun.org - E-book Online. Accessed August 16, 2015.  
+http://librarun.org/book/30265/772 ; "Radar Basics." Grundlagen Der Radartechnik. Accessed August 16, 2015. http://www.radartutorial.eu/19.kartei/karte115.en.html; Aerospace, Defense & Power Systems - Market Research, Intelligence & Consulting. Accessed December 1, 2018. https://www.forecastinternational.com/archive/disp_old_pdf.cfm?ARC_ID=906 ; "Jane's Radar and Electronic Warfare Systems, 1997" Page 134-35,  Librarun.org - E-book Online. Accessed 1 December 2018,  ftp://york.chatterweb.net.ru/%D0%91%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0%20%D0%AD%D0%B9%D1%81%D0%B0/jane's/spravochniki/Janes%20Air%20Defence%20Radar-Land%20and%20Sea.pdf ; "Radar Basics - TRS-2215." Grundlagen Der Radartechnik. Accessed December 1, 2018. http://www.radartutorial.eu/19.kartei/02.surv/karte011.en.html.
+
+

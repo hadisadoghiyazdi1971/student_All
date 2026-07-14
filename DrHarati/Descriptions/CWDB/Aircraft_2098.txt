@@ -1,0 +1,21 @@
+OVERVIEW: The CH-53 Sea Stallion is the most common name for the Sikorsky S-65 family of heavy-lift transport helicopters. Originally developed for use by the United States Marine Corps, it is also in service with Germany, Iran, Israel, and Mexico. The United States Air Force operated the HH-53 "Super Jolly Green Giant" during the late- and post-Vietnam War era, updating most of them as the MH-53 Pave Low.
+
+The dimensionally-similar CH-53E Super Stallion is a heavier-lifting, improved version designated S-80E by Sikorsky. Its third engine makes it more powerful than the Sea Stallion, which it has replaced in the heavy-lift mission.
+
+DETAILS: The Sea Stallion has a fuselage design similar to the Sikorsky S-61R/Jolly Green Giant series. It has a passenger door on the right side of the fuselage behind the cockpit and a power-operated rear loading ramp. The fuselage was watertight, though not intended for amphibious use, and only landed on water in emergencies. The Stallion has mechanical flight controls which are backed by three independent hydraulic systems. Armor protects crew and vital systems. The CH-53A carries a crew of four; pilot, copilot, crew chief, and an aerial observer, a load of 38 troops, 24 litters with medical attendants, an internal cargo load of 8,000 pounds (3,600 kg) or an external load of 13,000 pounds (5,900 kg) on the single-point sling hook. The CH-53A is equipped with a pair of 7.62 mm M60 machine guns that point out to each side of the fuselage.
+
+The CH-53A features a six-bladed main rotor and four-bladed tail rotor developed from those used on the S-64 Skycrane. To save space on board naval vessels, the tail boom and the rotors folded. Initially, the CH-53 was powered by twin General Electric T64-6 turboshaft engines providing 2,850 shaft horsepower (2,130 kW) each, each engine being located on the upper fuselage. Later engines included the T64-1 with 3,080 shp (2,300 kW) and the T64-16 with 3,485 shp (2,599 kW). The HH-53B featured T64-3 engines producing 3,080 shp (2,300 kW).
+
+The CH-53D features uprated engines, initially T64-GE-412 with 3,695 shp (2,755 kW) then the T64-413 with 3,925 shp (2,927 kW) with an uprated transmission. Its interior added seats to allow for 55 troops. CH-53Ds are generally armed with twin .50 BMG (12.7 mm) M2/XM218 machine guns. In later years, CH-53Ds have been fitted with defensive countermeasures including an AN/ALE-39 chaff dispenser and an AN/ALQ-157 infrared countermeasure.
+
+TYPE: Heavy Lift Transport Helicopter.
+
+SPECIFICATIONS: Crew: (2) pilots, (1) or more crew chiefs || Capacity: 38 troops (55 in alternate configuration) or 24 stretchers || Length: 88 ft 6 in (26.97 m) || Rotor diameter: 72 ft 2.8 in (22.01 m) || Height: 24 ft 11 in (7.6 m) || Max. takeoff weight: 42,000 lb (19,100 kg) || Powerplant: (2) General Electric T64-GE-413 turboshaft, 3,925 shp (2,927 kW) each || Rotor systems: 6 blades on main rotor.
+
+PERFORMANCE: Maximum speed: 170 knots (196 mph, 315 km/h) || Cruise speed: 150 kt (173 mph, 278 km/h) || Range: 540 nmi (1,000 km) || Combat radius: 100 mi (160 km) 95 mi || Ferry range: 886 nmi (1,640 km) || Service ceiling: 16,750 ft (5,106 m) || Rate of climb: 2,460 ft/min (12.5 m/s).
+
+SENSORS: AN/AAR-47A MAWS (Missle Appraoch Warning System) || Safire Infrared FLIR || AN/APR-39A Radar Warning Receiver || AN/ALQ-157A IRCM.
+
+ARMAMENT: (2) door mounted .50 BMG GAU-15/A machine guns || Some have a ramp mounted .50 BMG GAU-21 machine gun || German CH-53Gs can mount two 7.62 mm MG3 machine guns in the side doors, which are to be replaced by two .50 BMG M3M/GAU-21 machines guns in the doors and one on the ramp.
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org

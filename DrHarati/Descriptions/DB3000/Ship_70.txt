@@ -1,0 +1,12 @@
+OVERVIEW: The NANUCHKA I class Corvette is a 3 shaft diesel powered, multi-role guided missile corvette.
+
+DETAILS:   The NANUCHKA I class is a heavily armed coastal missile ship.  They have poor sea keeping qualities.      
+
+NOTES: Displacement: 780 tons standard
+       Speed: 32 knts
+       Range: 900 nm @ 30.5 knts; 2,500 nm @ 12 knts
+       Complement: 60 (approx)
+       In Commission: 1977-present
+       Completed: 	  
+
+SOURCES: Norman Polmar, "Guide to the Soviet Navy, 3rd ed. (Annapolis, MD: Naval Institute Press, 1983), 192-92 ; 

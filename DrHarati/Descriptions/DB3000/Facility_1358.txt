@@ -1,0 +1,7 @@
+OVERVIEW: AN/FPS-92 is improved version of the AN/FPS-49 tracking radar that was used in the Ballistic Missile Early Warning System (BMEWS)
+
+DETAILS: AN/FPS-92 surveillance radar used a large, fixed-antenna fence system. Two beams were projected from the antenna array. Single radar was installed at Clear, Alaska, in the late 1960s. 
+ 
+NOTES: The AN/FPS-92 tracking radar utilizes a mechanical antenna 84 feet in diameter, housed in a 140 foot high radome. 
+
+SOURCES: Radomes, Inc. - The Air Defense Radar Veterans Association. "AN/FPS-92." Accessed November 24, 2013. http://www.radomes.org/museum/equip/radarequip.php?link=fps-92.html ; "AN/FPS-92 Tracking Dish." Accessed November 24, 2013. http://wikimapia.org/6953571/AN-FPS-92-Tracking-Dish"AN/FPS-92 Tracking Dish." Accessed November 24, 2013. http://wikimapia.org/6953571/AN-FPS-92-Tracking-Dish ; "Ballistic Missile Early Warning System." Accessed November 24, 2013. http://en.wikipedia.org/wiki/Ballistic_Missile_Early_Warning_System

@@ -1,0 +1,8 @@
+OVERVIEW: The AN/ASQ-213 HARM Targeting System (HTS) is a pod-mounted  system used by F-16 to detect, identify and locate radarsOVERVIEW: The AN/ASQ-213 HARM Targeting System (HTS) is a pod-mounted  system used by F-16 to detect, identify and locate radars and provide targeting information to AGM-88 HARM missiles.
+
+DETAILS:  
+
+NOTES:  The AN/ASQ-213 is used on F-16 Block 50/52 aircraft to engage SEAD targets faster and more accurately, giving them the same EW abilities as the F-4G Wild Weasel.  The HTS can rapidly generate ranges to target radars, as well as to provide greater discretion between different types of enemy radars. With the introduction of HTS Revision 7 (HTS R7), the AN/ASQ-213 Pod has a precision geolocation capability to target Precision Guided Munitions (PGMs) to destroy fixed and mobile enemy air defense elements.  HTS has been exported to Israel.
+
+SOURCES:  Jane's Radar and Electronic Warfare Systems, "AN/ASQ-213 HARM Targeting System (HTS)," 21 November 2005; http://www.nationalmuseum.af.mil/factsheets/factsheet.asp?id=16891 ; Federation Of American Scientists -. "AN/ASQ-213 HARM Targeting Systems (HTS) - Smart Weapons." Accessed November 8, 2014. http://fas.org/man/dod-101/sys/smart/hts.htm ; http://www.harpoondatabases.com/encyclopedia/Entry1828.aspx
+yclopedia/Entry1828.aspx

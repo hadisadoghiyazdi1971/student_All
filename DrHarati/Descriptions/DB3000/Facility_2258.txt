@@ -1,0 +1,20 @@
+OVERVIEW: The AN/TPQ-36A is a mobile, 3-D, Low Altitude Surveillance radar operating in the I Band.
+
+DETAILS:  The AN/TPQ-36A radar is a pulse Doppler system.  It is typically trailer mounted and towed by a 4x4 truck. It is capable of tracking up to 60 targets. Weapon systems associated with the AN/TPQ-36A include the NASAMS and NOAH SAM-missile.
+
+Specifications:
+
+Frequency: 		  8-10 GHz (I Band (NATO), X Band (IEEE))
+Power output: 		  unknown kW(average); unknown kW (peak) 
+PRF:			  unknown Hz	
+Accuracy:		  30 m (range),   0.2 degrees azimuth 					
+On/Off time:		  unknown
+Deploy/Stow Time	  10 minutes/ unknown minutes
+ 
+Detection Range  
+fighter sized aircraft: 60 km
+
+
+NOTES: Norway's started upgrading TPQ-36A 2003. This upgrade will convert TPQ-36A into units similar to that of the most recent AN/MPQ-64 Sentinel, high mobile ground-based radar.
+
+SOURCES: Wikipedia. "NASAMS" Accessed December 2, 2013. http://en.wikipedia.org/wiki/NASAMS ; Deagel. "NASAMS TPQ-36A Radars Upgraded" Accessed December 2, 2013. http://www.deagel.com/news/NASAMS-TPQ-36A-Radars-Upgraded_n000000024.aspx ; International Electronic Countermeasures Handbook. Norwood, MA: Horizon House Publications, 2003, pg. 128 ; http://rbase.new-factoria.ru/missile/wobb/nasams/nasams.shtml

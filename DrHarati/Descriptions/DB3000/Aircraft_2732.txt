@@ -1,0 +1,11 @@
+OVERVIEW:The Mikoyan-Gurevich MiG-21 (NATO reporting name: Fishbed) is a supersonic jet fighter and interceptor aircraft, designed by the Mikoyan-Gurevich Design Bureau in the Soviet Union.
+
+DETAILS:Early versions are considered second-generation jet fighters, while later versions are considered third-generation jet fighters. Approximately 60 countries over four continents have flown the MiG-21, and it still serves many nations six decades after its maiden flight. It made aviation records, became the most-produced supersonic jet aircraft in aviation history, the most-produced combat aircraft since the Korean War and previously the longest production run of a combat aircraft 
+
+MiG-21PFM (1964; Izdeliye 94; NATO "Fishbed-F")
+    P = Perekhvatchik ("Interceptor")
+    F = Forsirovannyy ("Uprated")
+    M = Modernizirovannyy ("Modernised")
+    The production version of the Ye-7M was a modernised MiG-21PF, with an upgraded RP-21M radar, SRZO-2 Khrom-Nikkel IFF transponder and other changes in avionics. Further, later-production PFMs reintroduced cannon armament, in the form of the capability to carry a GSh-23 cannon and 200 rounds in an underbelly pod. Following tests in 1966, MiG-21PFM aircraft built after 1968 could carry the Kh-66 air-to-surface missile. 
+
+SOURCE:Wikipedia, the Free Encyclopedia. "List of Mikoyan-Gurevich MiG-21 Variants - Wikipedia." n.d. Accessed September 8, 2017. https://en.wikipedia.org/wiki/List_of_Mikoyan-Gurevich_MiG-21_variants#Specifications_.28Mikoyan-Gurevich_MiG-21PFM.29.

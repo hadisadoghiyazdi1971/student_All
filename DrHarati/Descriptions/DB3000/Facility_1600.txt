@@ -1,0 +1,20 @@
+OVERVIEW: The EL/M-2080 Green Pine radar is a transportable, ground-based, long range, phased array search, tracking and fire control missile-defense radar, operating in the NATO "D" band (IEEE "L" band).  
+
+DETAILS: Green Pine is an active electronically scanned array (AESA) solid state radar.  Green Pine reportedly operates in search, detection, tracking, and missile guidance modes simultaneously, and is capable of detecting targets at ranges of up to about 500 km (310 mi), and is able to track more than 30 targets at speeds over 3,000 m/s 
+
+Specifications:
+
+Frequency			1.215-1.4 GHz  (D band (NATO),  L Band (IEEE))
+Power output: 			unknown (average); unknown (peak)
+PRF:				unkn pps
+Range Resolution:		4 meters
+On/Off time: 			unknown min. 
+Deploy/Stow time: 		unknown min
+Maximum Range:			500 km   
+ 
+
+NOTES:    IOC 1998. Exported to India, South Korea and Axerbaijan. The radar can relocate to a new site and be operational in under 24 hours.  The effective radiated power (ERP) of the Green Pine also may make it a possible candidate for conversion into a directed-energy weapon.
+
+SOURCES: "EL/M-2080 Green Pine." Guide to Military Equipment and Civil Aviation. Accessed December 2, 2018. http://www.deagel.com/Sensor-Systems/ELM-2080-Green-Pine_a001469001.aspx ; "EL/M-2080 Green Pine." Wikipedia, the Free Encyclopedia. Last modified December 1, 2018. https://en.wikipedia.org/wiki/EL/M-2080_Green_Pine#cite_note-gpj-10; Newdick, Thomas. "It Came From Outer Space." Asian Military Review. Last modified August 31, 2017. https://asianmilitaryreview.com/2017/07/it-came-from-outer-space-ballistic-missiles/. ; http://www.radartutorial.eu/19.kartei/06.missile/pubs/29117.pdf; Jane's Radar and Electronic Warfare Systems 2002-2003, "EL/M-2080 anti-tacical ballistic missile early warning and fire-control radar," 09 November 2001
+
+

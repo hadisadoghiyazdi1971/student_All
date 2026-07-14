@@ -1,0 +1,23 @@
+OVERVIEW:  The SA-4a GANEF (2K11, 3M8M1) is a mobile, two-stage, liquid-fuel ramjet sustainer, medium range, medium-to-high altitude, surface to air missile equipped with a 150 kg warhead using contact or proximity fuzing.
+
+DETAILS:  The SA-4a GANEF uses four solid booster rockets that burn for about 15 seconds to boost the missile to Mach 1, where the kerosene-fueled ramjet igntes.  It has a 135 kg contact and proximity fuzed warhead
+
+Specifications: 
+Weight: 		2453 kg 
+Length: 		8.436 m 
+Diameter: 		0.86 m (missile)
+Wingspan: 		2.73 m
+Speed:			4 mach
+Range:			4.8-27 nm (9-50 km)
+Altitude		820-80,400 feet (250-24,500 m)
+Reload time:		10-15 minutes/missile
+Max target speed: 	700 km/h (head on); 300 km/h (receding)
+Max Manuverability:	5 g
+	
+
+
+NOTES:  IOC: 1965. Optical tracking is possible for guidance in a heavy ECM environment
+
+ 
+
+SOURCES: "2K11 Krug." Valka.cz. Accessed December 9, 2016. http://www.valka.cz/1147-2K11-Krug ; "Legacy Air Defence System Vehicles." Air Power Australia. Accessed December 9, 2016. http://www.ausairpower.net/APA-Legacy-SAM-TEL-TL.html#mozTocId438509 ; "SA-4 Ganef 2K11 Krug Air Defense Missile System Technical Data Sheet 13012155 | Russia Russian Missile System Vehicle UK | Russia Russian Army Military Equipment Vehicles UK." Global Military Army Magazine Defence Security Industry Technology News Exhibition World Land Forces - Army Recognition. Accessed December 9, 2016. http://www.armyrecognition.com/russia_russian_missile_system_vehicle_uk/sa-4_ganef_2k11_krug_air_defense_missile_system_technical_data_sheet_13012155.html ; Vestnik PVO, Accessed December 10, 2016. http://pvo.guns.ru/russia/index33.htm ; "Sword of the Motherland Historical Foundation." Welcome to the Sword of the Motherland Foundation Website. Accessed December 10, 2016. http://www.russianwarrior.com/STMMain.htm?1969vehicle_sa4.htm&1.

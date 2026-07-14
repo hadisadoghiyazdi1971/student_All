@@ -1,0 +1,5 @@
+OVERVIEW: The PL-10 is a short-range, infrared-homing air-to-air missile (AAM) developed by the People's Republic of China. 
+
+DETAILS:The missile is fitted with a multi-element IIR seeker capable of +/-90 degree off boresight angles. The missile seeker can be slaved to a Helmet Mounted Display (HMD), allowing the pilot to track a target beyond the aircraft's radar scan envelope using the missile's high off-boresight capability, achieved by the pilot turning his head towards the target to lock-on, better known as ¡°look and shoot¡±. Flight is controlled by a thrust-vector controlled solid rocket motor and free-moving type control wings on the missile's tail. The central portion of the missile has long, thin strakes, which help maintain missile maneuverability in the terminal homing stage after the rocket motor stops firing.
+
+SOURCES:Wikipedia, the Free Encyclopedia. "PL-10 (ASR) - Wikipedia." n.d. Accessed September 14, 2017. https://en.wikipedia.org/wiki/PL-10_(ASR). 

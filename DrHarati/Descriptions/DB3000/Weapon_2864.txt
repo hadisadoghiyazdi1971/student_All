@@ -1,0 +1,19 @@
+OVERVIEW: The CM-400AKG  is an air-launched, long-range, high-supersonic, solid-fuel AGM using an active radar seeker.  It carries a 150 kg HE or 200 kg penetrator warhead. 
+
+DETAILS: After launch, the missile accelerates to a speed of Mach 3+, first climbing to a high altitude for the cruise phase before diving into the target in the terminal stage.  During the cruise phase it uses inertial and GPS guidance. 
+
+
+Specifications:
+ 
+Weight: 		  910 kg 
+Length: 		  5.2 m 
+Diameter: 		  0.4 m (missile)  
+Wingspan: 		  1.2 m 
+Speed:			  Mach 3-4 (altitude dependant); 
+Range:			  ??-135 nm; (??-250 km)   
+Accuracy:		  5-10m CEP
+
+NOTES: IOC: 2015. The CM-400AKG is a smaller version of the YJ-12.
+  
+SOURCES: China has published information about the missile CM-400AKG. (2013, December 9). Retrieved from http://survincity.com/2013/12/china-has-published-information-about-the-missile_3/ ; CM-400AKG. (n.d.). Retrieved from http://www.deagel.com/Offensive-Weapons/CM-400AKG_a003099002.aspx ; 
+DUBAI: China details performance of 'carrier killer' missile for JF-17. (2013, November 19). Retrieved from https://www.flightglobal.com/news/articles/dubai-china-details-performance-of-carrier-killer-missile-for-jf-17-393301/

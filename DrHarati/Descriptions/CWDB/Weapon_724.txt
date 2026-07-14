@@ -1,0 +1,11 @@
+OVERVIEW: The AGM-62B WALLEYE II ERDL (Extended Range Data Link) is an electo-optical (EO), air-to-surface, glide bomb carrying a 900 kg warhead.
+
+DETAILS: The WALLEYE consists of three main assemblies: a nose section that contains the TV camera, the main body that contains the warhead, and the rear section, containing the datalink antenna and control section.  The controlling aircraft carried a datalink pod. After being dropped, the weapon glides to the target. Unlike the AGM-62A, the WALLEYE II was released, and the weapon locked onto the target late in flight, extending the range of the weapon.  The AGM-62B was capable of autonomously guiding itself to the target once the gyro-stabilized TV camera was "locked on" to the target, allowing the launch aircraft to depart the area.  Alternatively, the operator could take manual control and guide the weapon, if necessary. The weapon has a CEP of 4.6-6.1 meteres.  
+
+Weight:		1082 kg
+Warhead:	900 kg shaped charge
+Range:		1.8-59.89 km (altitude dependent)
+
+NOTES: IOC 1976. The AGM-62 can be carried by the A-4, A-6, A-7, AV-8B and F-4.  Electro-optical sensors such as used on Walleye depend on both light and optical contrast for target searching and identification, limitting their use at night, dawn or dusk and in significantly adverse weather or visual conditions where the line of sight to a target was obscured. 
+
+SOURCES: Friedman, Norman, "The Naval Institute Guide to World Naval Weapons Systems, 1997-1998,  Annapolis: MD 1997, pg. 261 ; Chant, Christopher, "A Compendium of Armaments and Military Hardware", pg. 505 ; "AGM-62 WALLEYE I/II." Accessed August 21, 2015. http://www.airwar.ru/weapon/avz/agm62.html ; "Martin Marietta AGM-62 Walleye." Designation-Systems.Net. Accessed August 21, 2015. http://www.designation-systems.net/dusrm/m-62.html ; "Walleye II (AGM-62) - Smart Weapons." Federation Of American Scientists -. Accessed August 21, 2015. http://fas.org/man/dod-101/sys/smart/agm-62.htm.

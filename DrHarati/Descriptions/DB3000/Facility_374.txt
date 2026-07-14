@@ -1,0 +1,21 @@
+OVERVIEW: The Hughes Air Defense Radar (HADR), is a fixed, 3-D Longe-Range, phased-array, Air Surveillance radar operating in the F band (NATO) or S Band (IEEE). 
+
+DETAILS: 
+
+NOTES: Germany (FRG) have Four HADR systems are operational in Germany, two used in conjunction with the NATO Air Defence Ground Environment (NADGE) beginnig 1986 and Norway have three 1993 installed as part of the NADGE. One unit was deployed to Malaysia 1986. Norway is plannig to upgrade this aging radar.
+
+Specifications:
+
+Frequency: 		 		3-4 GHz (F Band (NATO), S Band (IEEE)))  
+Power output: 		 		32 kW(average); 1.5 MW (peak) 
+PRF:			 		60-1430 Hz (approx)	
+Range Resolution:	 		137 m (range), unknown degree azimuth 					
+On/Off time:		 		unknown seconds
+Deploy/Stow Time	 		unknown min / unknown min
+Maximum Range:		 		444 Km (instrumented range)
+Effective Range, (1 m2 target): 	320 km
+
+
+NOTES: Four HADR systems are operational in Germany, two used in conjunction with the NATO Air Defence Ground Environment (NADGE), and known as GEADGE (German ADGE).
+
+SOURCES: Radartutorial "HADR". Accessed December 2. 2013. http://www.radartutorial.eu/19.kartei/karte106.en.html ; Saab "Royal Norwegian Air Force Sindre-I HADR upgrade". Accessed December 2. 2013. http://www.saabsensis.com/wp-content/uploads/2012/09/HADR-Norway-CS-HR-1-12.pdf ; "Radar Basics." Grundlagen Der Radartechnik. Accessed August 28, 2015. http://www.radartutorial.eu/19.kartei/karte106.en.html.

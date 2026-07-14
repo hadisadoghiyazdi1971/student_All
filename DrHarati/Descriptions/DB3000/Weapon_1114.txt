@@ -1,0 +1,9 @@
+OVERVIEW: The AS-15 KENT A (Kh-55) is an air-launched, turbo-fan powered, sub-sonic, solid fuel cruise missile that combines.  It carries a 200 kt nuclear warhead.   
+
+DETAILS: The AS-15 KENT A can be launched from both high and low altitudes.  On launch, the AS-15 KENT A descends to 40-110 meters cruise altitude and navigates to its target using inertial mid-course guidance and TERCOM navigation. It has a CEP of less less than 100 meters.
+
+NOTES: It was used by the Tu-95MS, Tu-160, and Su-34 aircraft. 
+
+SOURCES: Federation of American Scientists. "AS-15 KENT - Russian and Soviet Nuclear Forces." Accessed November 9, 2013. http://www.fas.org/nuke/guide/russia/bomber/as-15.htm ; Air Power Australia. "Soviet/Russian Cruise Missiles." Accessed November 9, 2013. http://www.ausairpower.net/APA-Rus-Cruise-Missiles.html#mozTocId152650 ; Jane's Weapons Systems, Vol. 1: Air-Launched,  "Kh-55/RKV-500A, Kh-55SM/RKV-500B, Kh-555 and Kh-65SE (AS-15 'Kent')" 30 April 2013.
+
+

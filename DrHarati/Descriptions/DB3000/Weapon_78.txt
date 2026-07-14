@@ -1,0 +1,11 @@
+OVERVIEW: The GBU-10 H/B Paveway II is a laser guided bomb (LGB).
+
+
+DETAILS: The GBU-10 H/B Paveway II is intended for precision bombing against hardened targets.  It consists of a bolt-on gimballed seeker head and Computer Control Group (CCG), and a stabilizing tail airfoil assembly attached to a conventional BLU-109/B penetrating bomb.  This converts the BLU-109/B into a laser-guided weapon that homes in on a reflected laser beam transmitted from a ground or air-based laser designator.    A Paveway II-series bomb steers to the target using "bang-bang" guidance, where the control surfaces are always fully deflected.  This results in a relatively inefficient flight path. Its sensor also was limited by mist and fog.  Accuracy is reportedly 6 meters CEP. 
+
+
+NOTES:    IOC in 1986.  Paveway II is cheaper and simpler than the Paveway I predecessor, as it uses some plastic parts and simplified the CCG.  Paveway II also uses foldable tailfins instead of the fixed tailfins used by the Paveway I.
+
+ 
+
+SOURCES:   Jane's Air Launched Weapons "Paveway (GBU-10/11/12/16/17/24, January 01, 1997 ; Friedman, Norman. The Naval Institute Guide to World Naval Weapon Systems, 1997-1998 Annapolis, Md: Naval Institute Press, 1998, pg. 253-54 ; Laser Guided Bombs (LGB) | NAVAIR - U.S. Navy Naval Air Systems Command - Navy and Marine Corps Aviation Research, Development, Acquisition, Test and Evaluation. (n.d.). Retrieved from http://www.navair.navy.mil/index.cfm?fuseaction=home.displayPlatform&key=8ABEFAFF-CF7B-4649-A502-38E4E0A42F37 ; Raytheon Paveway II. (n.d.). Retrieved from http://www.designation-systems.net/dusrm/app5/paveway-2.html ; DESERT STORM - Precision Guided Munitions. (n.d.). Retrieved from http://www.ausairpower.net/TE-PGM-ODS-92.

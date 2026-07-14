@@ -1,0 +1,13 @@
+OVERVIEW:  The C-704 aka Nasr battalion is a  mobile, surface launched, sea-skimming, short-to-medium range, radar guided, solid fuel, unit intended to be employed against small-to-medium sized naval vessels.  
+
+DETAILS:  After launch, the missile is initially guided by inertial navigation system, switching to monopulse active radar guidance during the terminal phase.  The C-704 uses a radar altimeter to cruise at 20 meters, transitioning to 5-7 meters altitude during the terminal phase. The radar seeker has an effective range of approximately 8 nm (15 km).  The C-704 is effective up to Sea State 4.
+
+
+Specifications:
+
+Speed:			 0.8 mach 
+Range:			 2.7-20.5 nm (5-38 km)
+
+NOTES: IOC 2006 (approx).  
+
+SOURCES: Jane's Weapon Systems Vol 1: Air-Launched, "C-704, C-704KD (Nasr), 21 August 2013

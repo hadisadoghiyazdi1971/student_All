@@ -1,0 +1,19 @@
+OVERVIEW: The CHURCHILL is a nuclear-powered patrol attack submarine (SSN).
+
+DETAILS:  The CHURCHILL class were primarily used in the anti-submarine role.  They incorporated the rafting concept, to reduce machinery noise. 
+ 
+
+Specifications:
+ 
+	Displacement: 4,000 (Light);  4,800 tons submerged.
+	Speed: 28 knts  (submerged)
+       	Engineering: 1 pressurized water-cooled reactor; 1 shaft
+	Diving Depth: 300 meters
+	Range: 	
+      	Complement: 103       
+     	Hulls built: 3 
+	Period of Service:  1970-1992
+
+NOTES: Units in class: CHURCHILL (S 46); CONQUEROR (S 48); COURAGEOUS (S 50)
+
+SOURCES:  Moore, John Evelyn. Jane's Fighting Ships 1987-88.  London: Jane's Pub, 1987, pg. 658 ; Churchill-class submarine - Wikipedia, the free encyclopedia. (n.d.). Retrieved May 4, 2015, from http://en.wikipedia.org/wiki/Churchill-class_submarine ; Valiant / Churchill. (n.d.). Retrieved from http://www.globalsecurity.org/military/world/europe/hms-valiant.htm

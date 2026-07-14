@@ -1,0 +1,11 @@
+OVERVIEW: The AN/SSQ-53D DIFAR (Directional Frequency Analysis and Recording) is an "A-size" passive directional sonobuoy.
+
+
+DETAILS:  The AN/SSQ-53D DIFAR is a passive sonobuoy that provides a magnetic bearing to the signal of interest, allowing a fix on a contact with as few as two sonobuoys.  It has a directional capability in the 5 Hz-2,400 Hz range, as well as an omnidirectional hydrophone for general listening purposes.  It is capable of deploying at preset depths of either 90, 400 or 1,000 feet preset lifetimes of either 0.5, 1, 2, 4 or 8 hours. Capable of remaining operational in up to Sea State 6.  Capable of being deployed at airspeeds between 30-370 knots and altitudes of 100-30,000 feet.  
+
+
+NOTES:   Entered service in 1991.  Includes an improved suspension to reduce self-noise. The AN/SSQ-53D(3) version includes a depth setting of 60 meters for use in littoral/shallow water operations. Most widely used airborne sonobuoy.  In service with Australia, Canada, France, Germany, Japan, New Zealand, Norway, Spain, United Kingdom and the United States.
+ 
+  
+
+SOURCES:  Friedman, Norman, and Norman Friedman. The Naval Institute Guide to World Naval Weapon Systems, 1997-1998. Annapolis, Md: Naval Institute Press, 1997, pg. 656 ; Federation Of American Scientists -. "AN/SSQ-53 Directional Frequency Analysis and Recording Sonobuoy." Accessed November 21, 2014. http://fas.org/man/dod-101/sys/ship/weaps/an-ssq-53.htm ; Jane's C4ISR and Mission Systems: Maritime, "AN/SSQ-53D(3)/AN/SSQ-53E (DIFAR)", 16 October 2014.

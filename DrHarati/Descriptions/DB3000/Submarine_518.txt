@@ -1,0 +1,11 @@
+OVERVIEW: The Kilo class is the NATO reporting name for a naval diesel-electric attack submarine that is made in Russia. 
+
+DETAILS: These attack submarines are mainly intended for anti-shipping and anti-submarine operations in relatively shallow waters. Original Project 877 boats are equipped with Rubikon MGK-400 sonar system (with NATO reporting name Shark Gill), which includes a mine detection and avoidance sonar MG-519 Arfa (with NATO reporting name Mouse Roar).
+
+Newer Project 636 boats are equipped with improved MGK-400EM, with MG-519 Arfa also upgraded to MG-519EM. The improved sonar systems have reduced the number of operators needed by sharing the same console via automation.
+
+Anechoic tiles are fitted on casings and fins to absorb the sound waves of active sonar, which results in a reduction and distortion of the return signal. These tiles also help attenuate sounds that are emitted from the submarine, thus reducing the range at which the sub may be detected by passive sonar.
+
+The version Kilo 636MV (exported to Vietnam) contains a GE2-01 radar and an improved MGK 400E sonar. In this version, the submarine is also able to operate in more weather conditions than the original Kilo-class submarines
+
+SOURCES: Wikipedia, the Free Encyclopedia. "Kilo-class Submarine - Wikipedia." n.d. Accessed September 9, 2017. https://en.wikipedia.org/wiki/Kilo-class_submarine#Variants. 

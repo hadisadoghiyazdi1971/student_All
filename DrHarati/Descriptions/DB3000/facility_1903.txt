@@ -1,0 +1,5 @@
+This I-band radar is designed for tactical battlefield use. It can be either a relocatable post, or in German use, mounted on a 6x6 armoured personnel carrier. Iran captured a number of Iraqi radars during the 1980-1988 war, and now manufactures a reverse-engineered version carried aboard a truck, as shown above. Rasit can be used to monitor low-flying aircraft and helicopters; it is sensitive enough to detect large ground vehicles in optimum conditions. Range against a treetop-altitude small plane is 25NM. Rasit can also be used in a coastal defense role.
+
+In the 1990s France, Germany, and Pakistan purchased Rasit-E, an upgrade with 50NM range and a counter-battery function added.
+
+Original Author: Jason W. Henson

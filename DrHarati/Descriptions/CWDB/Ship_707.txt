@@ -1,0 +1,15 @@
+OVERVIEW: The ROPUCHA class Landing Ship, Tank (LST) is a small, diesel-powered LST.
+
+DETAILS:   The ROPUCHA class is a beachable, general-purpose LST-type design with bow and stern ramps for unloading vehicles. Cargo capacity is 450 tons.  Up to 25 APCs can be carried.
+
+NOTES: Displacement: 2,500 tons standard
+       Speed: 18 knts
+       Range: 3,500 nm @ 16 knts; 6,000 nm @ 12 knts
+       Complement: 70 crew, 230 troops (approx.)
+       In Commission: 1975  
+
+SOURCES: Norman Polmar, "Guide to the Soviet Navy, 3rd ed. (Annapolis, MD: Naval Institute Press, 1983), 222 ; 
+
+
+
+

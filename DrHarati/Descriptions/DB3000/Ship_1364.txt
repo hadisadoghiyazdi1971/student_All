@@ -1,0 +1,15 @@
+OVERVIEW: The INVINCIBLE class is a VSTOL-capable light aircraft carrier (CV) powered  by a gas turbine propulsion system  and used as a flagship in a power-projection role.
+
+DETAILS:  Originally designed as flagships for ASW task forces in the North Atlantic, the mission of the INVINCIBLE-class was expanded to act as an command, control and communications platform for a variety of power projection missions including strike and amphibious warfare. 
+
+Specifications: Displacement: 20,600 full load
+       		Speed: 28 knts
+       		Engineering: 4 gas turbine, 8 diesel, 2 shafts, 94,000 SHP. 
+       		Range: 5,000 nm @ 18nm
+       		Complement: 667 crew + 366 airwing
+		In Commission: 1977-2014 
+      		Completed: 3 
+
+NOTES:  Units in class: HMS INVINCIBLE (R 05), HMS ILLUSTRIOUS (R 06); HMS ARK ROYAL (R 07)
+
+SOURCES: Sharpe,  Richard. Jane's Fighting Ships 1991-92. London: Jane's Pub, 1991, pg. 679

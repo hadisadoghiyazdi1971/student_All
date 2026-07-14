@@ -1,0 +1,28 @@
+OVERVIEW: The JY-8A WALL RUST is a mobile, short range 3-D air mobile tactical radar operating in the G/H-band.  
+
+DETAILS: A modified version of the JY-8, the JY-8A is intended to provide precise 3-D information on targets for fire control.  It has an increased capability of detecting low-altitude targets, but at the cost of a reduced detection range, and lower height accuracy.  It is physically identical to the JY-8.  ECCM features include frequency agility, Constant False Alarm Rate (CFAR), low sidelobes and blanking of jammed beams.  It is capable of tracking up to 24 targets.
+
+Specifications:
+
+Frequency: 		 4-8 GHz (G/H Band (NATO), C Band (IEEE))
+Power output: 		 40 kW(average); 800 kW (peak) 
+PRF:			 300 pps	
+Range Accuracy:		 500 m (range),   0.3 degrees azimuth 					
+On/Off time:		 unknown
+Deploy/Stow Time	 120 minutes/ 120 minutes
+ 
+Detection Range  
+
+
+tgt alt. 100m:		 unknown km
+tgt alt. 18000m:	 unknown km
+Max Range:		 150 km
+
+  
+NOTES:  The JY-8 can be employed as the main radar sensor for an automated tactical defense system, or can be used as an independent radar. 
+
+
+  
+NOTES:  The JY-8 can be employed as the main radar sensor for an automated tactical defence system, or can be used as an independent radar. 
+
+SOURCES: http://en.wikipedia.org/wiki/JY-8_Radar ; Bussert, James C., and Bruce A. Elleman. People's Liberation Army Navy Combat Systems Technology, 1949-2010. Annapolis, Md: Naval Institute Press, 2011, pg. ; Jane's Radar and Electronic Warfare Systems, 2001-02, "JY-8A tactical radar," pg. 416-17, http://librarun.org/book/30265/416

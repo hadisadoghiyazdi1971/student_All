@@ -1,0 +1,19 @@
+OVERVIEW:  The C-705  is an single stage (with optional booster), air-or-surface-launched, medium range, radar guided, solid fuel, anti-ship missile. It has a 120 kg warhead.
+
+DETAILS:  The C-705 is a intended for use against ships up to approximately 1,500 tons displacement. After launch, the missile is initially guided by inertial navigation system, switching to monopulse active radar guidance during the terminal phase.  The C-704 uses a radar altimeter to cruise at 12 meters, before transitioning to a lower altitude during the terminal phase. 
+
+
+Specifications:
+
+Weight: 		 320 kg 
+Length: 		 3.0 m 
+Diameter: 		 250 mm (body)  
+Wingspan: 		 0.6 m 
+Speed:			 0.8 mach 
+Range:			  nm (140-170 km)
+
+NOTES: IOC 2010 (approx).  The C-705KD replaces the radar seeker in the C-705 with a TV or IIR seeker, and incorporates a datalink.
+
+SOURCES: "TURN BACK ToT : C705 Vs BRAHMOS." JakartaGreater. Accessed August 18, 2019. https://jakartagreater.com/turn-back-tot-c705-vs-brahmos/.
+ ; C-705 AShM". Archived from the original on 2014-01-03. Retrieved 2012-11-21.
+

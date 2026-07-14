@@ -1,0 +1,21 @@
+OVERVIEW: The ITT Gilfillan Series 320 is a fixed or mobile, long range, 3-D air defense radar operating in the E/F Band.
+
+DETAILS:  The Series 320 uses a planar-array antenna with frequency steered pencil beam groups to electronically scan in elevation. The system is highly automated. ECCM
+capabilities include frequency agility, jammer frequency analysis, jam-strobe reports and silent sector operations, low sidelober and Constant False Alarm Rate (CFAR). Remote monitoring is possible. 
+
+Specifications:
+
+Frequency: 		 2.9-3.1 GHz (E/F Band (NATO), S Band (IEEE))
+Power output: 		 20 kW(average);  1.1 MW (peak) 
+PRF:			  variable	
+Range Accuracy:		 18 m (range),   0.16 degrees azimuth 					
+On/Off time:		 unknown
+Deploy/Stow Time	 360 minutes/  minutes
+ 
+Detection Range (Pd<50%, 2m2 target):	556 km  
+
+
+  
+NOTES: The Series 320 is based on the Plessey AR-3D.  A reduced 370 km range version using a peak power of only 150 kW is also available.
+
+SOURCES: Jane's Radar and Electronic Warfare Systems, 2001-2002, 10 November 2000, pg. 3569, http://librarun.org/book/30265/3570 ; http://www.docstoc.com/docs/41653896/AR-320325---Archived-598 ; http://woottonbridgeiow.org.uk/decca-legacy/chapter7.php#7.5

@@ -1,0 +1,13 @@
+OVERVIEW: The APR-1 KONDOR is an airborne-delievered, rocket-powered ASW active/passive acoustic homing torpedo with an 80 kg. warhead.
+
+DETAILS:  The APR-1 (Aviacionnaia Podvodnaia Raketa-1) is an rocket powered ASW torpedo. The range of the homing system was 1,400 yards (1,300 m). Could be used to depths of 1,400 feet (420 m).
+
+Specifications:
+
+Weight:	650 kg
+Range: 	800 meters
+
+
+NOTES:  IOC: 1960s. 
+
+SOURCES:  http://www.navweaps.com/Weapons/WTRussian_post-WWII.php 

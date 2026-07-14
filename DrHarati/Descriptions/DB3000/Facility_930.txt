@@ -1,0 +1,7 @@
+OVERVIEW: The S-600 radar is fixed 2D Medium-Range air search radar.
+
+DETAILS: Used to fill gaps in Norway NADGE radar network. It was becoming obsolete late 1970s, it lacked height finding (3D) and was easy to jam.
+
+NOTES: Entered service 1965, was almost obsolite Used by Air Forces in Norway. It was sold widely around the world including but not limited to the following countries. Yugoslavia, Malaysia, Kenya, Abu Dhabi, Oman, Jordan, Saudi Arabia, It was reported that some of the units sold to Yugoslavia were sold on to other counties in Africa. One system was used by the Uk in the Falklands immediately after the conflict ended.
+
+SOURCES: Defencetalk "Forum" Accessed December 2. 2013. http://www.defencetalk.com/forums/air-force-aviation/marconi-s-600-radar-12433/ ; Raadrpage "Forty years of Marconi radar 1946-1986" http://www.radarpages.co.uk/download/p172.pdf

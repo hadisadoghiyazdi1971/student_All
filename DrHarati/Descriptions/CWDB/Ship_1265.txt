@@ -1,0 +1,13 @@
+OVERVIEW: The KOTLIN SAM class DDG is a steam-powered, AAW destroyer.
+
+DETAILS:   The KOTLIN SAM DDG is based on the KOTLIN class DD.  Between 1962-72, nine units were modified to the KOTLIN SAM class by removing after gun and torpedo mount and replacing it with an SA-N-1 SAM system.  One unit was subsequently transferred to Poland.
+
+NOTES: Displacement: 2,700 tons standard
+       Speed: 38 knts
+       Range: 1,000 nm @ 34 knts; 3,600 nm @ 18 knts
+       Complement: 300 (approx.)
+       In Commission: 1954 (KOTLIN class); 1962-1989 (KOTLIN SAM class)
+       Completed: 9	  
+
+SOURCES: Norman Polmar, "Guide to the Soviet Navy, 3rd ed. (Annapolis, MD: Naval Institute Press, 1983), 170-71 ; 
+Federation of American Scientists. "Kotlin Class - Project 56." Accessed November 17, 2013. http://www.fas.org/man/dod-101/sys/ship/row/rus/56.htm.

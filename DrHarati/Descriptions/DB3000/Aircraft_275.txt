@@ -1,0 +1,7 @@
+OVERVIEW: The Sukhoi Su-34 (NATO reporting name: Fullback) is a Russian twin-engine, twin-seat, all-weather supersonic medium-range fighter-bomber.
+
+DETAILS:Based on the Sukhoi Su-27, two-seat Su-34 is designed primarily for tactical deployment against ground and naval targets (tactical bombing/attack/interdiction roles, including against small and mobile targets) on solo and group missions in daytime and at night, under favourable and adverse weather conditions and in a hostile environment with counter-fire and EW counter-measures deployed, as well as for aerial reconnaissance.
+
+The Su-34 is a three-surface design having both a conventional horizontal tailplane at the rear and a canard foreplane in front of the main wings. The foreplane provides both additional lift (force) and greater maneuverability. It has twin tail fins like those of Su-27 from which it is derived. The Su-34 has 12 hardpoints for 8,000?12,000 kg (17,600?26,500 lb) of ordnance, intended to include the latest Russian precision-guided weapons. It retains the Su-27/Su-30's 30 mm GSh-30-1 cannon, and the ability to carry R-77 air-to-air missiles (6 pcs) and R-73 (also 6). The maximum weight of any single munition carried is 4000 kg, with a maximum munitions load the maximum attack range is 250 kilometres (160 mi). A Khibiny Electronic countermeasures (ECM) system is fitted as standard.
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org

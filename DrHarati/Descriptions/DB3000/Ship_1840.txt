@@ -1,0 +1,35 @@
+OVERVIEW: The Independence-class is a class of littoral combat ships built for the United States Navy.
+
+The hull design evolved from a project at Austal to design a 40 knot cruise ship. That hull design evolved into the high-speed trimaran ferry HSC Benchijigua Express and the Independence class was then proposed by General Dynamics and Austal as a contender for Navy plans to build a fleet of small, multipurpose warships to operate in the littoral zone. Two ships were approved, to compete with Lockheed Martin's Freedom-class design for a construction contract of up to 55 vessels.
+
+As of 2010, the lead ship is active, while a second ship, Coronado, was commissioned in 2014. Despite initial plans to only accept one of the Independence and Freedom classes, the Navy has requested that Congress order ten additional ships of each class, for a total 12 ships per class. In February 2012, Secretary of the Navy Ray Mabus announced that the fifth Independence-class littoral combat ship will be named USS Gabrielle Giffords, and the sixth USS Omaha. In April 2013, the name Manchester was assigned to LCS-14, while in June 2013, the name Tulsa was assigned to LCS-16.
+
+DETAILS: The Independence-class design began life at Austal as a platform for a high-speed cruise ship. The principal requirements of that project were speed, stability and passenger comfort, and Austal's team determined that the trimaran hull form offered significant passenger comfort and stability advantages over both a catamaran and a monohull. The high-speed cruise ship project evolved into Austal's commercial high-speed trimaran ferry HSC Benchijigua Express. The ships are 127.4 m (418 ft) long, with a beam of 31.6 m (104 ft), and a draft of 13 ft (3.96 m). Their displacement is rated at 2,176 tons light, 2,784 tons full, and 608 tons deadweight.
+
+The standard ship's company is 40, although this can increase depending on the ship's role with mission-specific personnel. The habitability area with bunks is located under the bridge. The helm is controlled by joysticks instead of traditional steering wheels.
+
+Although the trimaran hull increases the total surface area, it is still able to reach sustainable speeds of about 50 knots (93 km/h; 58 mph), with a range of 10,000 nautical miles (19,000 km; 12,000 mi). Austal claims that the design will use a third less fuel than the competing Freedom class, but the Congressional Budget Office found that fuel would account for 18 percent or less of the total lifetime cost of Freedom.
+
+The lack of bridge wings on the Independence class had been noted as the top problem in the entire LCS program to the extent that these will need to be retrofitted onto existing ships.
+
+The lightweight aluminum construction of the Independence-class ships makes them more vulnerable to damage than the Freedom-class ships.
+
+The first ships of both LCS classes were delivered before the designs were mature so that improvements could be built into future ships. The Navy is improving the Independence-class with bridge wings for safety and replacing the 5.1-meter Rigid Hull Inflatable Boat (RHIB) with a 7-meter boat. An improved cathodic protection system will enhance corrosion protection. Like the Freedom-class, the Independence will be getting axial flow water jets which pushes water parallel to the shaft of the impeller to improve efficiency and reduce maintenance; they will also be upgraded to handle the horsepower provided by the gas turbine propulsion system. A winch control system will modulate the motion of the anchor to reduce the reliance on manual hand brakes. The mission bay side door will be redesigned for reliability and the platform lift elevator reconfigured to better handle weapons and ordnance.
+
+TYPE: Littoral Combat Ship (LCS).
+
+SPECIFICATIONS: Displacement: 2,307 metric tons light, 3,104 metric tons full, 797 metric tons deadweight || Length: 127.4 m (418 ft) || Beam: 31.6 m (104 ft) || Draft: 14 ft (4.27 m) || Propulsion: (2) MTU Friedrichshafen 20V 8000 Series diesel engines, (2) General Electric LM2500 gas turbines, (2) American VULKAN light weight multiple-section carbon fiber propulsion shaftlines, (2) LJ160E and (2) LJ150E Wartsila waterjets, retractable bow-mounted azimuth thruster, (4) diesel generators || Complement: (40) core crew (8 officers, 32 enlisted) plus up to (35) mission crew.
+
+PERFORMANCE: Speed: 44 knots (51 mph; 81 km/h) || Range: 4,300 nm at 18 knots.
+
+SENSORS: SAAB AN/SPS-77(V)1 Sea GIRAFFE 3D air and surface search radar || Serry Marine BridgeMaster E navigational radar || AN/KAX-2 electro-optical sensor with TV and FLIR || Northrop Grumman ICMS (Integrated Combat Management System) || ITT Corporation ES-3601 ESM system || SRBOC decoy launchers for chaff and infrared decoys || BAE Systems NULKA active radar decoy system.
+
+ARMAMENT: AGM-114L Hellfire missiles || (1) BAE Systems Mk 110 57 mm gun || (4) .50-cal guns (2 aft, 2 forward) || (1) Raytheon SeaRAM CIWS || Other weapons as part of mission modules.
+
+AIRCRAFT: (2) MH-60R/S Seahawk || (2) MQ-8 Fire Scout.
+ 
+
+SHIPS BUILT: Independence (LCS-2) || Coronado (LCS-4) || Jackson (LCS-6) || Montgomery (LCS-8) || Gabrielle Giffords (LCS-10) || Omaha (LCS-12) || Manchester (LCS-14) || Tulsa (LCS-16).
+
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org

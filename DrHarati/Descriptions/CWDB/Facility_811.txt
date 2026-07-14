@@ -1,0 +1,7 @@
+OVERVIEW: The AN/FPS-110 is long-range 2D air surveillance radar. It's part of the NATO Integrated Air Defense System which was the NATO response to the Soviet development of long range bombers in the 1970s. The need to maintain a credible deterrence when early warning and intercept times were massively reduced led to the development of an improved air defence system.
+
+DETAILS:  At least four AN/FPS-110 was deployed in Norway. NADGE radars in Norway had eight radar stations (some remote controlled air defence radars) in Magero, Mt Grakallen, Mt Njunis, Kirkenes airport, Klettkovfjellet, Selbu, Sorreisa, Vagsoy and Vardo. One AN/FPS-110 radar was deployed to Denmark. 2D radar could not get altitude data, so they needed Height Finder radar example AN/FPS-6A HF.
+
+NOTES: Deployed 1972, used by NATO Air Forces in Denmark and Norway.
+
+SOURCES: Wikipedia. "Integrated NATO Air Defense System" Accessed December 2, 2013. http://en.wikipedia.org/wiki/Integrated_NATO_Air_Defense_System

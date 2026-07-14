@@ -1,0 +1,11 @@
+OVERVIEW: The Otomat Mk3 is a long range, turbojet-powered,  anti-ship missile equipped with a dual active radar and imaging infrared (IIR) seeker.  
+
+DETAILS:  The Otomat Mk3 features a data link, allowing it to receive targeting information from air and surface platforms other than the launcher. It also features improved ECCM features and GPS guidance.  These features improve the missile's performance against littoral targets.
+	After being boosted from its launching platform by two jettisonable solid-fuel boosters, the missile descends to a cruising altitude of 20 meters, using inertial navigation system during the mid-course phase.  At a predetermined point from the target the X-band active radar performs a left-right scan search, until the target is acquired.    The missile then enters a sea-skimming attack phase.  After impact, the 210 kilogram SAP warhead explodes inside the ship with the force of the explosion directed to the bottom of the target ship.
+
+NOTES:  The Mk 2 and Mk 3 versions featured folding wings, increasing the number of missiles that could be carried by a platform.  The program was cancelled in 1999 before it achieved operational status.
+  
+SOURCES: Wikipedia, the free encyclopedia. "Otomat." Accessed November 3, 2014. http://en.wikipedia.org/wiki/Otomat ; Harpoon Database, http://www.harpoondatabases.com/encyclopedia/Entry2348.aspx ; Jane's Strategic Weapon Systems, "Otomat/Teseo", dated 11 April 2014 ; GlobalSecurity.org - Reliable Security Information. "Otomat." Accessed November 3, 2014.  
+http://www.globalsecurity.org/military/world/europe/otomat.htm.
+
+

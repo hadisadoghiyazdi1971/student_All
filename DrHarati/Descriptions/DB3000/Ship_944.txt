@@ -1,0 +1,19 @@
+OVERVIEW: The BRISTOL class (Type 82) is a COSAG-powered guided missile destroyer (DDG).
+
+DETAILS:   The BRISTOL class DDG used a combined steam and gas (COSAG) to power its two shafts. The BRISTOL class was designed around the Sea Dart anti-aircraft missile system. 
+
+Specifications: 
+
+       Displacement:  6,300 tons (standard);  7,100 (full load)
+       Speed: 30 knts
+       Engineering: 2 shaft, 2 steam engines, 2 gas turbines
+       Range: 5,000 nm @ 18 knts
+       Complement: 397 
+       In Commission: 1973-1987 (post-1987 in commission as a training vessel).
+       Completed: 1
+
+NOTES: Units in class: BRISTOL (D 23).  The remainder of the class were canceled due to high cost and cancelation of the aircraft carrier they were intended to escort.  HMS BRISTOL was fitted with flagship facilities in 1979.
+ 
+   
+
+SOURCES: Moore, John Evelyn. Jane's Fighting Ships 1987-88.  London: Jane's Pub, 1987, pg. 661 ;  "HMS Bristol (D23), the Free Encyclopedia." Wikipedia. Accessed May 17, 2015. http://en.wikipedia.org/wiki/HMS_Bristol_(D23).

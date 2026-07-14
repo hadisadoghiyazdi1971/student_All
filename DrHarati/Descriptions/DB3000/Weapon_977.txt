@@ -1,0 +1,8 @@
+OVERVIEW: The AN/AAQ-13 is the navigation pod portion of the combined AAQ-13/AAQ-14 Low Altitude Navigation and Targeting Infrared for Night (LANTIRN) system.  The AN/AAQ-13 pod allows equipped aircraft to fly at low altitudes at night and under-the-weather to attack ground targets.
+
+DETAILS:  The LANTIRN system consists of two separate but integrated pods mounted externally beneath the aircraft. The AN/AAQ-13 system is the autonomous navigation subsystem portion of the LANTIRN system.  The navigation subsystem uses a Ku-band terrain-following radar (TFR) (AN/APN-237A), and a wide field-of-view (WFOV) forward-looking infra-red sensor that displays an infrared image of the terrain in the aircraft’s head-up display, enabling the aircraft to maintain a pre-selected altitude above the ground and avoid obstacles.
+
+NOTES:  The AN/AAQ-13 navigation pod provides high-speed penetration and precision attack on tactical targets at night and in adverse weather.  Initial deliveries began in March 1987.  It has been deployed on the F-16C/D, F-15E/I/S and F-14 aircraft.  It has also been purchased by Belgium, Portugal, Holland, Norway and Denmark for use on their F-16s.
+
+
+SOURCES: Wikipedia, the free encyclopedia. "LANTIRN." Accessed October 25, 2014. http://en.wikipedia.org/wiki/LANTIRN ; F-16.net - The ultimate F-16, F-22, F-35 reference. "F-16 Armament - AN/AAQ-13 & AN/AAQ-14 LANTIRN." Accessed October 25, 2014. http://www.f-16.net/f-16_armament_article2.html ; Spy Flight. "Lockheed Martin AN/AAQ-13 ? AN/AAQ-14 LANTIRN." Accessed October 25, 2014. http://www.spyflight.co.uk/LANTIRN.htm

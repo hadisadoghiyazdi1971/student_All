@@ -1,0 +1,27 @@
+OVERVIEW: The RAC-3D is a self-propelled, planar phased-array,  medium range air surveillance radar operating in the G/H-band.  
+
+DETAILS:  The RAC-3D is intended as a gap-filling and warning radar for air defense units. It is optimized for detecting low observable targets.  To maximize low altitude capabilities, the radar is attached to a 13 m hydraulic mast, giving it a good capability against medium to very low-altitude targets.  It can be unattended, as well as operated as either a stand-alone or networked with other radars.  
+
+Specifications:
+
+Frequency: 		 4-8 GHz (G/H Band (NATO), C Band (IEEE))
+Power output: 		  kW(average);  kW (peak) 
+PRF:			  Hz	
+Range Accuracy:		 20 m (range),   0.4 degrees azimuth 					
+On/Off time:		 unknown
+Deploy/Stow Time	 15 minutes/ 15 minutes
+ 
+Detection Range  
+
+
+tgt alt. 100m:		 unknown km
+tgt alt. 18000m:	 unknown km
+Max Range:		  80 km, instrumented to 100 km
+
+  
+NOTES:  The RAC-3D is aircraft transportable.
+
+
+
+SOURCES: "Radar Basics." Grundlagen Der Radartechnik. Accessed March 29, 2015. http://www.radartutorial.eu/19.kartei/karte413.en.html ; ThalesRaython Systems, "RAC-3D intermediate Range Tactical 3-D surveillance radar," www.mobileradar.org/Documents/RAC_3D.pdf
+

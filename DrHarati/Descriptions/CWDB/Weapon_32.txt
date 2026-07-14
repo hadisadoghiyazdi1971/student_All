@@ -1,0 +1,8 @@
+OVERVIEW: The AN/ALQ-99 Tactical Jamming System (TJS) is a noise jamming pod that automatically intercepts and processes surveillance, acquisition and tracking radar signals and manages the system's transmitters to effectively jam large numbers of diverse radar threats with very high effective radiated power (ERP).
+
+DETAILS:  The AN/ALQ-99 TJS is an active jamming pod consisting of a Ram Air Turbine (RAT) powering a Universal Exciter Unit (UEU) and two transmittters.  The UEU generates the appropriate jamming signal based on computer analysis, and directs a jamming signal that is sent from two 2 kW transmitters utilizing two steerable, high-gain antennas.  The ALQ-99 has several noise/spot-noise jamming modes, and can be operated in Automatic, Semiautomatic  and Manual modes. 
+
+NOTES:  The AN/ALQ-99C featured an improved automatic jamming capability over earlier models.
+
+SOURCES:  Federation Of American Scientists -. "AN/ALQ-99 Tactical JammingSystem (TJS)." Accessed November 9, 2014. http://fas.org/man/dod-101/sys/ac/equip/an-alq-99.htm ; Jane's Electronic Mission Aircraft, "AN/ALQ-99  Tactical Jamming System (TJS) ," 11 January 2011; Air Power Australia. "THE ANATOMY OF THE TACJAMMER." Accessed November 9, 2014. http://www.ausairpower.net/TE-Tacjammer.html ; Norman Friedman. The Naval Institute Guide to World Naval Weapon Systems. Annapolis, Md: Naval Institute Press, 2006, pg 408-09.
+

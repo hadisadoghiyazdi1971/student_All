@@ -1,0 +1,15 @@
+OVERVIEW: The Bars-M EO satellite is designed to take high-resolution stereo images of the Earth surface.
+
+DETAILS: The Bars-M EO camera system includes a wide-angle and a high-resolution camera. The high resolution camera is capable of covering a ground swath of 60 Kilometers, and the low-resolution instrument can cover a swath of 1,300 Kilometers.  Images can be downlinked back to a ground station.
+
+
+Specifications:
+ 
+Weight: 		  4000 kg (approx)
+Dimensions: 		  4.0 X 2.3 X 2.3 meters
+
+
+NOTES: IOC 2014.  Follow-on to the Kometa EO satellite.
+  
+SOURCES:  Bars-M – Spacecraft & Satellites. (n.d.). Retrieved from http://spaceflight101.com/spacecraft/bars-m/ ; Bars-M: Russia's first digital cartographer. (n.d.). Retrieved from http://www.russianspaceweb.com/bars-m.html ; Soyuz 2-1A launches second Bars-M satellite. (2016, March 24). Retrieved from https://www.nasaspaceflight.com/2016/03/soyuz-2-1a-launches-bars-m-satellite2/
+

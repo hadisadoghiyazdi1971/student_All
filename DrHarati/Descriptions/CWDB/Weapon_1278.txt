@@ -1,0 +1,8 @@
+OVERVIEW: The AN/SSQ-41A Jezebel LOFAR  (LOw Frequency Analysis and Ranging) is an A-size omnidirectional sonobuoy.
+
+DETAILS:  The AN/SSQ-41A uses a line hydrophone operating between 10 Hz-20kHz at a depth of 60 or 300 feet and a lifetime of up to 8 hours.
+
+
+NOTES: IOC in 1963.  Can be launched from an aircraft traveling at up to 370 knots and up to 30,000 feet.
+
+SOURCES:  Friedman, Norman, and Norman Friedman. The Naval Institute Guide to World Naval Weapon Systems, 1997-1998. Annapolis, Md: Naval Institute Press, 2006, pg. 656 ; Federation Of American Scientists -. "AN/SSQ-41 Sonobuoy." Accessed November 20, 2014. http://fas.org/man/dod-101/sys/ship/weaps/an-ssq-41.htm.

@@ -1,0 +1,6 @@
+OVERVIEW:The Ilyushin Il-78 (NATO reporting name Midas) is a Soviet four-engined aerial refuelling tanker based on the Il-76.
+
+DETAILS:Il-78M
+    The Il-78M entered service in 1987 as a dedicated tanker equipped with three permanent fuselage tanks, a higher gross weight of 210 tons, and no cargo door or cargo handling equipment. The cargo ramp is retained but non-functional. Total fuel capacity is 138 tonnes (303,600 lb), of which 105.7 tonnes (232,540 lb) is transferable.
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org

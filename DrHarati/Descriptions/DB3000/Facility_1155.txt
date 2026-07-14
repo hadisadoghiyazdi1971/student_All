@@ -1,0 +1,25 @@
+OVERVIEW: The Kabina 66/5N87 P-80 radar (NATO name: BACK NET) is a mobile 2-D early warning/Ground Control Intercept (GCI)  radar operating in the  "E/F" Band.
+
+DETAILS: The P-80 is a mobile, van-mounted mobile radar. Weapons systems associated with the P-80 include the SA-5 GAMMON.
+
+Specifications:
+
+Frequency: 		1.98-2.45 GHz (E/F Band)
+Power output: 		32 kW (average), 1.5 MW (peak) (some sources report up to 2.4 MW peak power)
+PRF:			60-1460 Hz	
+Range Resolution:	1.7 km (range)/1 degree (azimuth)					
+On/Off time:		unknown
+
+Detection Ranges,   1 m2 RCS target
+
+	200 m alt:	 50 km
+	400 m alt:	200 km 
+ 	6000m alt.:	310 km
+Max range:		450 km (380 km for fighter sized target)
+
+ 
+NOTES: IOC 1962.   
+
+
+SOURCES: "Radar Basics." Grundlagen Der Radartechnik. Accessed March 15, 2015. http://www.radartutorial.eu/19.kartei/karte901.en.html ; http://users.sch.gr/dlabaditis/TH/radars/index.htm ; "S-200 (missile)." Wikipedia, the Free Encyclopedia. Accessed March 15, 2015. http://en.wikipedia.org/wiki/S-200_(missile) ; "Die Seiten Der Funktechnischen Truppen Der NVA." Die Seiten Der Funktechnischen Truppen Der NVA. Accessed March 15, 2015. http://www.nva-futt.de/index.html?http://www.nva-futt.de/besonderheiten/technik/tta/k-66.html.
+

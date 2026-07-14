@@ -1,0 +1,9 @@
+OVERVIEW: The AN/AAQ-33 SNIPER XR is a targeting pod  designed to improve both day and night attack capabilities.
+
+DETAILS:  The SNIPER contains a laser designator and tracker for guiding laser-guided bombs. The pod also features a third-generation FLIR receiver and a CCD television camera, allowing for observation and tracking in low light / no light situations as well as during day time operations. The pod incorporates a multi-spectral sensor capability. For target coordination the laser spot tracker, a laser marker, and video down link to joint terminal air controllers improve rapid target detection and identification.  The pod's wedge-shaped nose is made of sapphire which is transparent to visible and infrared wavelengths.  The unique design gives Sniper a semi-low-observable characteristic, as well as making it compatible with fighters carrying the system on an engine inlet by reducing shock surface forming on the pod reduces disturbances in air entering the inlet.
+
+NOTES:  Initial deliveries began in 2001.   The Sniper ATP provides a 3-5 times increase in detection range over the legacy LANTIRN system. The pod also provides high-resolution imagery for non-traditional Intelligence, surveillance and reconnaissance (ISR) missions.  It is currently operational on the F-15, F-16, F-18, B-1, B-52 and A-10, and is used by Norway, Oman, Poland, Singapore, Canada, Belgium, Turkey, Saudi Arabia, Thailand the United Kingdom and Pakistan.
+
+
+SOURCES:  Lockheed Martin · Lockheed Martin. "Sniper Advanced Targeting Pod · Lockheed Martin." Accessed October 26, 2014. http://www.lockheedmartin.com/us/products/Sniper.html ; Wikipedia, the free encyclopedia. "Sniper Advanced Targeting Pod." Accessed October 26, 2014. http://en.wikipedia.org/wiki/Sniper_Advanced_Targeting_Pod ; Defense Update: | Military Technology & Defense News. "Lockheed Martin Sniper XR targeting pod." Accessed October 26, 2014. http://defense-update.com/directory/sniper-xr.htm.
+

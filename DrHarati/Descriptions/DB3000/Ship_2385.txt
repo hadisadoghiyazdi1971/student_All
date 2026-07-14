@@ -1,0 +1,9 @@
+OVERVIEW: chungmugong Yi Sun-sin class destroyers are multipurpose destroyers of the Republic of Korea Navy.
+
+DETAILS:The ships have a 32-cell strike-length Mk 41 VLS for SM-2 Block IIIA area-air defence missiles, one 21-round RAM inner-layer defence missile launcher, one 30 mm Goalkeeper close-in weapon system, one Mk 45 Mod 4 127 mm gun, eight Harpoon anti-ship missiles and two triple 324 mm anti-submarine torpedo tubes.
+
+The electronics suite includes one Raytheon AN/SPS-49(V)5 2D long-range radar (LRR), one Thales Nederland MW08 3D target indication radar (TIR), two Thales Nederland STIR240 fire-control radars with OT-134A Continuous Wave Illumination (CWI) transmitters, an SLQ-200(V)K SONATA electronic warfare system and a KDCOM-II combat management system which is derived from the Royal Navy Type 23 frigate's SSCS combat management system. BAE Systems WDS Mk 14 originally developed for the US Navy's New Threat Upgrade evaluates threats, prioritizes them, and engages them in order with SM-2.
+
+On the 4th unit, ROKS Wang Geon, the 32-cell Mk 41 VLS is moved to the left and an indigenous VLS named K-VLS is installed on the right. The ship's forward part is spacious enough to take a 64-cell Mk 41 VLS.
+
+SOURCES:Wikipedia, the Free Encyclopedia. "Chungmugong Yi Sun-sin-class Destroyer - Wikipedia." n.d. Accessed September 8, 2017. https://en.wikipedia.org/wiki/Chungmugong_Yi_Sun-sin-class_destroyer. 

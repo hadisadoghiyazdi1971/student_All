@@ -1,0 +1,23 @@
+OVERVIEW: The AGM-122A Sidearm is a short-range, supersonic, air-to-ground anti-radiation missile with a 11.3 kilogram warhead.   
+
+DETAILS:  The AGM-122A Sidearm was a modification of the AIM-9C created in the 1980's.  Although was less capable than ARMs like the AGM-88 HARM, it was lighter, allowing it to be carried by helicopters as well as aircraft for use against low altitude anti-air threats such as the ZSU-23 and SA-8. The missile replaced the narrow-band radar seeker of the AIM-9C with a broader-band seeker.  A "pitch up" maneuver after launce was also programed into the missile, to enable it to be launched from very low altitude.  
+
+Specifications:
+Weight:			88.5 kg 
+Length: 		2.870 m 
+Diameter: 		127 mm 
+Wingspan: 		0.53 m
+Warhead:		11.3 kg, blast fragmentation 
+
+PERFORMANCE: 
+Operational range: 	16.5 km (8.9 nm)
+Speed: 			2.3 mach
+Maneuverability:	unknown
+
+NOTES: IOC 1986.
+ 
+
+
+SOURCES: Friedman, Norman, "The Naval Institute Guide to World Naval Weapons Systems, 1997-1998, Annapolis, MD: Naval  
+Institute Press, 1997, pg. 259 ; "AIM-9 Sidewinder - Military Power." Welcome to the Military Power Wiki - Military Power. Accessed September 1, 2015. http://militarypower.wikidot.com/aim-9-sidewinder ; "AIM-9 Sidewinder." Federation Of American Scientists -. Accessed September 1, 2015. http://fas.org/man/dod-101/sys/missile/aim-9.htm ; "AIM-9 Sidewinder." Wikipedia, the Free Encyclopedia. Accessed September 1, 2015. https://en.wikipedia.org/wiki/AIM-9_Sidewinder ; "Raytheon AIM-9 Sidewinder." Designation-Systems.Net. Accessed September 1, 2015. http://www.designation-systems.net/dusrm/m-9.html ; "The Sidewinder Story / The Evolution of the AIM-9 Missile." Air Power Australia. Accessed September 1, 2015. http://www.ausairpower.net/TE-Sidewinder-94.html ; "U.S. Naval Museum of Armament & Technology." U.S. Naval Museum of Armament & Technology. Accessed September 1, 2015. http://www.chinalakemuseum.org/exhibits/sidewinder.shtml ; AGM-122 Sidearm." Wikipedia, the Free Encyclopedia. Accessed September 2, 2015. https://en.wikipedia.org/wiki/AGM-122_Sidearm ; "Motorola AGM-122 Sidearm." Designation-Systems.Net. Accessed September 3, 2015. http://www.designation-systems.net/dusrm/m-122.html.
+

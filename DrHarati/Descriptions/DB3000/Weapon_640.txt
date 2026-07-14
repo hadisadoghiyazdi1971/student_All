@@ -1,0 +1,14 @@
+OVERVIEW: The KAB-500Kr (Korrektiruyeskaya Aviatsionnaya Bomba) is a stand-off capable, Electro-Optical guided bomb with a high explosive filler.
+
+
+DETAILS: The KAB-500Kr series are Electro-Optical guided bombs. The seeker employs a gimballed daylight television imaging sensor under a wide angle glass dome. Unlike the contrast lock technology, used in the GBU-8 HOBOS and AGM-65 Maverick, the -Kr series guidance system employs Scene Matching Area Correlation technology more akin to the US Navy DAMASK or Tomahawk DSMAC. This results in the ability to attack low contrast targets by exploiting the contrast of nearby terrain features or objects.  It has a release envelope of 550-1,100 km/hr speed and 500-5000 meters altitude. It has a reported CEP of 4 to 7 metres.
+
+Weight: 	 520 kg
+Filling Weight:	 
+Range (min):	
+
+
+NOTES:  IOC 1984. Intended targets are stationary ground and surface targets such as small-size solid concrete shelters, runways, rail and highway bridges, military and industrial facilities, ships and transport vessels.
+
+
+SOURCES: Tactical Missiles Corporation. KAB-500KR. Accessed December 26, 2015. http://www.ktrv.ru/production/68/685/ ; Kopp, Carlo. "Soviet/Russian Guided Bombs." Air Power Australia. Accessed December 26, 2015. Last modified January 27, 2014. www.ausairpower.net/APA-Rus-GBU.html#mozTocId284178.

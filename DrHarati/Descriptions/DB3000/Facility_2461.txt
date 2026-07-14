@@ -1,0 +1,22 @@
+OVERVIEW: The YLC-6 radar is a mobile or transportable 2D, medium range, low and medium altitude air surveillance radar, operating in the NATO "E/F" bands.  
+
+DETAILS: The YLC-6 radar can be used as a highly mobile, medium/low altitude radar in the air defense system. It can also be used as a gap filler radar, replacing destroyed or damaged systems. 
+
+Specifications:
+
+Frequency			2-4 GHz  (E/F band (NATO),  S Band (IEEE))
+Power output: 			unknown (average); 180 kW (peak)
+PRF:				700 pps (average)
+Range Resolution:		150 m, 1.5 degrees azimuth
+On/Off time: 			unknown min. 
+Deploy/Stow time: 		8 minutes, setup
+ 				6 minutes, stow
+Maximum Range:			180 km (instrumented range), 10,000 feet (instrumented altitude)
+				 
+	  
+NOTES:   IOC 1996. Exported to Pakistan and Bangladesh. A static version of this radar used at some airports and known as YLC-6 ATC. 
+
+SOURCES: John C Wise. "PLA Air Defence Radars." Air Power Australia. Accessed December 9, 2018. http://www.ausairpower.net/APA-PLA-IADS-Radars.html#mozTocId672911 ; "Radar Basics - YLC-6." Grundlagen Der Radartechnik. Accessed December 9, 2018. http://www.radartutorial.eu/19.kartei/02.surv/karte046.en.html ; 
+"YLC-6 Radar." Wikiwand. Accessed December 9, 2018. http://www.wikiwand.com/en/YLC-6_Radar.
+
+

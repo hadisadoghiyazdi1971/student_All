@@ -1,0 +1,22 @@
+OVERVIEW: The AIM-9M Sidewinder is a short-range, supersonic, infra-red guided (IR) air-to-air missile with a 10.15 kilogram warhead.   
+
+DETAILS: The AIM-9M is an improved AIM-9L with enhanced countermeasures resistance and clutter rejection, as well as improved detection against low-signature targets.  It also features a smokeless  motor.
+   
+Specifications:
+Weight:			86 kg 
+Length: 		2.9 m 
+Diameter: 		127 mm 
+Wingspan: 		0.64 m
+Warhead:		10.15 kg, annular blast fragmentation with laser fusing 
+
+PERFORMANCE: 
+Operational range: 	10 nm.
+Speed: 			2.5 mach
+Maneuverability:	35 g
+
+NOTES: IOC 1984. The AIM-9L achieved a kill probabilities in excess of 80% in the Falklands and Bekka air campaigns.
+
+
+
+SOURCES: Friedman, Norman, "The Naval Institute Guide to World Naval Weapons Systems, 1997-1998, Annapolis, MD: Naval  
+Institute Press, 1997, pg. 427 ; Jane's Weapons: Air Launched 2012-2013, pg. 35, https://planesandstuff.files.wordpress.com/2014/05/samplejwal.pdf ;  "AIM-9 Sidewinder - Military Power." Welcome to the Military Power Wiki - Military Power. Accessed September 1, 2015. http://militarypower.wikidot.com/aim-9-sidewinder ; "AIM-9 Sidewinder." Federation Of American Scientists -. Accessed September 1, 2015. http://fas.org/man/dod-101/sys/missile/aim-9.htm ; "AIM-9 Sidewinder." Wikipedia, the Free Encyclopedia. Accessed September 1, 2015. https://en.wikipedia.org/wiki/AIM-9_Sidewinder ; "Raytheon AIM-9 Sidewinder." Designation-Systems.Net. Accessed September 1, 2015. http://www.designation-systems.net/dusrm/m-9.html ; "The Sidewinder Story / The Evolution of the AIM-9 Missile." Air Power Australia. Accessed September 1, 2015. http://www.ausairpower.net/TE-Sidewinder-94.html ; "U.S. Naval Museum of Armament & Technology." U.S. Naval Museum of Armament & Technology. Accessed September 1, 2015. http://www.chinalakemuseum.org/exhibits/sidewinder.shtml ; "US Air-to-Air Missiles." Accessed September 2, 2015. http://www.pmulcahy.com/aams/us_aams.htm ; Flight International, 29 May 1976, pg. 1446. https://www.flightglobal.com/pdfarchive/view/1976/1976%20-%200924.html

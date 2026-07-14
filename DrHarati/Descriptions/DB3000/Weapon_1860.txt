@@ -1,0 +1,8 @@
+OVERVIEW: The AN/ALQ-167 is an external pod mounted, active noise, deception and coherent jamming system.
+
+DETAILS:  The AN/ALQ-167  is an electronic countermeasures jamming and threat simulation pod. The AN/ALQ-167 uses ULQ-21 modules to cover a different jamming modes in the frequency rangeing from 425 MHz to 18 GHz (C-J Bands). Specific operating frequencies and parameters are preset prior to flight.    
+
+
+NOTES: The AN/ALQ-167 is used by A-6E, EA-6A, EA-6B, EP-3J, F-14A/B, F/A-18A-D, EC-24A, and NKC-135, Sea King HAS.5, Lynx, Sea Lynx and Commando Mk5 aircraft. Also used by the UK, (where it is known as Yellow Veil) Pakistan (where it is known as Peril), Oman and Finland.  
+
+SOURCES:  Federation Of American Scientists -. "AN/ALQ-167." Accessed November 19, 2014. http://fas.org/man/dod-101/sys/ac/equip/an-alq-167.htm ; Rodale Electronics, Inc. "EW Training Pods « Rodale Electronics, Inc." Accessed November 19, 2014. http://www.rodaleelectronics.com/products/an-alq-167/ew-training-pods/ ; http://www.harpoondatabases.com/encyclopedia/Entry2343.aspx

@@ -1,0 +1,11 @@
+OVERVIEW: AN/TPY-2 is transportable Terminal High Altitude Area Defense (THAAD) SAM radar. 
+
+DETAILS: Terminal High Altitude Area Defense (THAAD), formerly Theater High Altitude Area Defense, is a United States  
+Army system designed to shoot down short, medium, and intermediate ballistic missiles in their terminal phase using a hit-to-kill approach. The missile carries no warhead but relies on the kinetic energy of the impact. THAAD was  
+designed to hit Scuds and similar weapons, but has a limited capability against ICBMs. 
+
+NOTES: THAAD was initially deployed in May 2008. The TPY-2 has been deployed to Israel and to Turkey’s Kürecik Air Force base. The United Arab Emirates signed a deal to purchase the missile defense system on December 25, 2011, and o 
+Oman has announced a deal for the acquisition of the THAAD air defense system.
+
+SOURCES: Wikipedia. "Terminal High Altitude Area Defense." Accessed December 1, 2013.  
+http://en.wikipedia.org/wiki/AN/TPY-2.

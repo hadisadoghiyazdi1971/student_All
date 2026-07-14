@@ -1,0 +1,7 @@
+OVERVIEW: Long range, fixed, nodding height finder radar. 
+
+DETAILS: Height finding on aircraft at long, medium or short range. 
+
+NOTES: The HF 200's (along with the AN/FPS-6) were also known as "Nodding Horrors" and they spewed hydraulic oil everywhere. 
+
+SOURCES: The Radar Pages http://www.radarpages.co.uk/mob/linesman/hf200.htm ; Wikipedia: Linesman/Mediator http://en.wikipedia.org/wiki/Linesman/Mediator

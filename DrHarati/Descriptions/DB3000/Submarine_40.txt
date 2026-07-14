@@ -1,0 +1,17 @@
+OVERVIEW: The Virginia class, also known as the SSN-774 class, is a class of nuclear-powered fast attack submarines in service with the United States Navy. 
+
+DETAILS: The submarines are designed for a broad spectrum of open-ocean and littoral missions. They were conceived as a less expensive alternative to the Seawolf-class attack submarines, designed during the Cold War era, and they are planned to replace the older of the Los Angeles-class submarines. The class was developed under the codename Centurion, renamed to NSSN (New SSN) later on. The "Centurion Study" was initiated in February 1991. Virginia-class submarines will be acquired through 2043, and are expected to remain in service past 2060. Based on recent updates to the designs, some of the Virginia class subs will still be in service in 2070. The Virginia class incorporates several innovations not previously incorporated into other submarine classes.
+
+Instead of a traditional periscope, the class utilizes a pair of AN/BVS-1 telescoping photonics masts located outside the pressure hull. Each mast contains high-resolution cameras, along with light-intensification and infrared sensors, an infrared laser rangefinder, and an integrated Electronic Support Measures (ESM) array. Signals from the masts' sensors are transmitted through fiber optic data lines through signal processors to the control center. Visual feeds from the masts are displayed on LCD interfaces in the command center.
+
+In contrast to a traditional bladed propellor, the Virginia class uses pump-jet propulsors (built by BAE Systems), originally developed for the Royal Navy's Swiftsure-class submarines. The propulsor significantly reduces the risks of cavitation, and allows quieter operation.
+
+Sonar arrays aboard Virginia class submarines have an Open System Architecture (OSA) which enables rapid insertion of new hardware and software as they become available. Hardware updates (dubbed Technology Insertions) are usually carried out every four years while software updates (dubbed Advanced Processor Builds) are carried out every two years. Virginia class submarines feature several types of sonar arrays.
+
+ARMAMENT: (12) VLS & (4) 21" torpedo tubes, capable of launching Mark 48 torpedoes, UGM-109 Tactical Tomahawks, Harpoon missiles, and the new advanced mobile mine when it becomes available.
+
+SPECIFICATION: Length 377 ft, Beam 34 ft, Displacement 7900 tons, Speed (Wikipedia Estimate) 34 kts, Depth Test (Wikipedia Estimate) 1600 ft, Crew (14) Officers (120) Enlisted. 
+
+SHIPS BUILT: Virginia (SSN-774), Texas (SSN-775), Hawaii (SSN-776), North Carolina (SSN-777), New Hampshire (SSN-778), USS New Mexico (SSN-779) Missouri (SSN-780), California (SSN-781), USS Mississippi (SSN-782), Minnesota (SSN-783), North Dakota (SSN-784), John Warner (SSN-785), Illinois (SSN-786), Washington (SSN-787), Colorado (SSN-788), Indiana (SSN-789), South Dakota (SSN-790), Delaware (SSN-791), many pending construction.
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org, FAS Military Analysis Network

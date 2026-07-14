@@ -1,0 +1,36 @@
+OVERVIEW: The BRP Emilio Jacinto (PS-35) is the lead ship of the three Jacinto class of corvettes, and are considered as one of the most modern ships in the Philippine Navy. She was originally called HMS Peacock (P239) during her service with the Royal Navy. She is currently assigned with the Patrol Force of the Philippine Fleet.
+
+DETAILS: The ships under this class are characterized by a low freeboard, an Oto-Melara 76 mm gun turret located forward, large funnel amidships and a crane and rigid-hulled inflatable boat (RHIB) aft.
+
+The Oto Melara 76 mm Compact DP, the ships' primary weapon, has a range of up to 10 nautical miles (20 km) and can be used against ships, aircraft or off and on-shore ground targets. It is remotely controlled from within the Combat Information Center by the gunnery officer and has no crew within the gun itself. The gun can fire 80 rounds in 60 seconds without reloading its magazine. The ship has load capacity for up to 450 rounds.
+
+Its secondary weapon located at the stern, a MSI Defence System Seahawk mount for a M242 Bushmaster 25 mm cannon, is integrated with the 76 mm primary weapon via an Ultra Electronics Command and Control System and a Radamec 1500 Series 2500 Electro-Optical Tracking/Fire Control System. This new system was installed as part of Phase 1 of the Philippine Navy JCPV upgrade program. The Radamec 1500 Series 2500 replaced the older GSA7 Sea Archer Mk 1 electro-optical director with a GEC V3800 thermal imager added in 1987.
+
+In addition to the abovementioned guns, these ships also carry two .50 caliber heavy machine guns at the bridgewings, and two 20 mm Mk.16 cannons on Mk.68 mounts at the midships.
+
+The ships are powered by two APE-Crossley SEMT-Pielstick diesels (14,188 bhp combined) driving two three-bladed propellers. It has a drop down loiter engine with a shrouded prop of 181 bhp (135 kW) used to keep station and save fuel. The main engines can propel the 664 ton (712 tons full load) ship at over 28 knots (52 km/h), with a sustained speed of 25 knots (46 km/h). Its range is 2,500 nautical miles (4,630 km) at 17 knots (31 km/h).
+
+These corvettes were specifically designed for Asian service, having air-conditioned crew spaces and have been designed to stay at sea during typhoons and other strong weather anomalies common to Asian seas. The ships were modified soon after entering Royal Navy service with deeper bilge keels to alleviate a propensity to roll during moderate and heavy seas.
+
+The ship also carries two Avon Searaider 5.4 m, 30 kt, 10-man RHIB.
+
+UPGRADES: Aside from the new M242 Bushmaster 25 mm cannon and upgrade of its Command and Control & Fire Control Systems as part of the ship's Phase 1 upgrade completed on December 2006, the Philippine Navy also installed a new Raytheon Gyro Compass, Sperry Marine Naval BridgeMaster E Surface Search Radar, GPS, Anemometer, and EM logs. These were integrated with the ship's existing systems. The Phase 1 upgrade was completed last 2005.
+
+The Phase 2 is the Marine Engineering Upgrade Program, which includes the repair and remediation of the hull, overhaul and improvement of the Main Propulsion including control and monitoring systems, electrical plant, auxiliary systems, outfitting and hull furnishings and training the navy crew in the operation and maintenance of the new plant.
+
+Phase 3, which is still under bidding, is a Service Life Extension Program (SLEP).
+
+Apart from the upgrades, additional refits were made to replace the four (4) 7.62mm machine guns with two (2) .50 caliber heavy machine guns and two 20 mm Mk.16 cannons. There are plans to add anti-ship missiles to the ships, but due to top-weight problems, it would have to be a lightweight system such as Sea Skua, although no missiles have been ordered to date.
+
+SPECIFICATIONS: Displacement: 763 tons || Length: 205.4 ft (62.6 m) || Beam: 32.8 ft (10.0 m) || Draft: 8.9 ft (2.7 m) || Installed power: 14,188 bhp (10,580 kW) || (2) APE-Crossley SEMT-Pielstick 18 PA6 V 280 Diesel engines || Complement: 31.
+
+PERFORMANCE: Speed: 25 knots (46 km/h) ||Range: 2,500 nmi (4,600 km) at 17 knots (31 km/h).
+
+SENSORS: Sperry Marine Naval BridgeMaster E Series Surface Search Radar || Kelvin Hughes Type 1006 Navigation Radar || Ultra Electronics Command and Control System || Radamec 1500 Series 2500 Electro-Optical Tracking/Fire Control System.
+
+ARMAMENT: (1) 76 mm Oto Melara Compact DP gun || (1) 25 mm M242 Bushmaster on MSI Defence Seahawk mount || (2) 20 mm Mk.16 cannons on Mk.68 mounts || (2) .50 caliber machine guns.
+
+SHIPS BUILT: BRP Emilio Jacinto (PS-35)|| BRP Artemio Ricarte (PS-37). 
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org 
+

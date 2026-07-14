@@ -1,0 +1,7 @@
+OVERVIEW: Martello is transportable long range air surveillance phased array 3D radar. S-713 was RAF Type 91 air defence radar and slightly modified S-723 RAF Type 91.
+
+DETAILS: The two types of Martello radar are both transportable, long range air defence 3D sensors. They feature frequency agility, pulse compression and comprehensive signal processing and both employ planar phased arrays to achieve minimum side-lobes for maximum resistance to jamming. The equipment is designed for military use and combines into complementary sets of vehicles, including main and standby diesel generators.
+
+NOTES: One single Type 91 was built for trial.
+
+SOURCES: http://www.skomer.u-net.com/projects/greenginger.htm

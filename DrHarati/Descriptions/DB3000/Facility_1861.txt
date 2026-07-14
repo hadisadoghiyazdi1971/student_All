@@ -1,0 +1,25 @@
+OVERVIEW: The  9S15M Obzor radar (NATO name: BILL BOARD B) is a mobile, high-capacity 3-D target acquisition radar operating in the F Band.
+
+DETAILS:  The BILL BOARD is intended to provide long range early warning of aerial threats and low end TBMs for the S-300V (NATO name SA-12a GLADIATOR/SA-12b GIANT) SAM systems.
+ ECCM features include cycle to cycle frequency hopping, automatic cancellation of detected jamming signals, low side-lobe levels, and channel blanking.  It is capable of locating up to 200 targets per scan.  Weapons systems associated with the BILL BOARD include the S-300V (NATO name SA-12a GLADIATOR/SA-12b GIANT)
+
+Specifications:
+
+Frequency: 		 3-4 GHz (F Band)
+Power output: 		  kW(average);   MW (peak)
+PRF:			 unknown Hz	
+Accuracy:		 250 m (range), 0.5 degrees azimuth 					
+On/Off time:		unknown
+Deploy/Stow Time	5 minutes
+ 	
+Detection Ranges,   3 m2 RCS target
+ 	8000m alt.:	315 km
+	TBMs:		111 km
+
+ 
+NOTES: The BILL BOARD is limited in low level coverage footprint by its antenna elevation. 
+
+SOURCES: Janes Radar and Electronic Warfare Systems 2002-2003 "9S15MTZ target acquisition radar", 09 November 2001, pg. 1801-02 (http://librarun.org/book/30265/1984); http://www.ausairpower.net/APA-Acquisition-GCI.html#mozTocId77869
+
+
+

@@ -1,0 +1,20 @@
+OVERVIEW: AN/FPS-124 is unattended radar providing short range and radar surveillance of airborne targets, operating in the "D" Band.  
+
+DETAILS:  The AN/FPS-124 is intended to cover any surveillance gaps left by the NWS’s long range radar, the AN/FPS-117.  The AN/FPS-117 and AN/FPS-124 form an array of radars stretching across North America from Alaska, USA to Labrador, Canada. 
+
+Specifications:
+
+Frequency: 		1.215-1.4 GHz (D Band)
+Power output: 		 unknown kW(average);   unknown kW (peak) 
+PRF:			 unknown Hz	
+Range Resolution:	unknown m (range),  unknown degrees azimuth 					
+On/Off time:		unknown
+Deploy/Stow Time	N/A
+
+Detection Range (max):  112 km 
+
+
+NOTES:  The AN/FPS-124 is part of the SEEK FROST North Warning System (NWS).T he SEEK FROST NWS radars replaced obsolete Cold War DEW Line radars with 57 unattended and 13 minimally attended radars.   The SEEK FROST NWS is designed to provide long-range detection and coverage for drug interdiction support and tactical command and control.   
+
+SOURCES: Wikipedia, the free encyclopedia. "AN/FPS-124." Accessed November 24, 2013. http://en.wikipedia.org/wiki/AN/FPS-124  ;  Federation of American Scientists. "AN/FPS-124 North Warning System - United States Nuclear Forces." Accessed November 24, 2013. http://www.fas.org/nuke/guide/usa/airdef/an-fps-124.htm ;  "AN/FPS Series." Alternate Wars. Accessed March 22, 2015. http://www.alternatewars.com/BBOW/Radar/FPS_Series.htm.
+

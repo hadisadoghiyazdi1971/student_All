@@ -1,0 +1,21 @@
+OVERVIEW:  SA-6a GAINFUL mod 0 (2K12 KUB; 3M9) SAM battalion is a mobile air defense unit intended to protect front line-armor and mechanized divisions against low-to-medium altitude threats.
+
+
+DETAILS:  The SA-6a GAINFUL battalion can link to the Integrated Air Defense System  (IADS) for early warning and target acquisition data from radars. A typical engagement begins with detection by the  IADS surveillance radar.  This information, as well as height data from the THIN SKIN radar is sent to the SAM regiment, which designates the appropriate battery to engage the target.  To avoid revealing the battery's location, the battalion's G-band (acquisition) and H-band (tracking/illumination) STRAIGHT FLUSH  radar does not transmit until a target is assigned. After the target is illuminated, but before firing, the missile seeker acquires the target. After launch, the STRAIGHT FLUSH guides it to an intercept by simultaneously tracking the target and the missile via its G/H band beacon, and controlling the missile via and I-band command link.  In the terminal phase, the missile is flown using  semi-active radar terminal homing. Each SA-6 battery is capable of engaging one target at a time,  although the STRAIGHT FLUSH radar can control up to three missiles simultaneously.
+      
+
+Specifications:
+
+Maximum Acquisition Range: 	40.5 nm (STRAIGHT FLUSH)
+Maximum Tracking Range:		15 nm (STRAIGHT FLUSH)
+Engagement Envelope:		328-22,965 ft (altitude),  3.2-11.9 nm range
+Max Target Speed: 		1166 knts (head on), 583 knts (receding)
+Reload Time:			10 minutes
+Mobility:			mobile
+Emplacement/Displacement:	5 minutes.  
+
+
+NOTES:  IOC: 1967.  Later variants of the STRAIGHT FLUSH incorporate a 9Sh33 telescopic TV camera for visual angle tracking of targets in high jamming environments.
+
+
+SOURCES: "9M9." Guide to Military Equipment and Civil Aviation. Accessed December 10, 2016. http://www.deagel.com/Surface-to-Air-Missiles/9M9_a000831001.aspx ; "Legacy Air Defence System Vehicles." Accessed December 10, 2016. "2K12 Kub/Kvadrat Self Propelled Air Defence System / SA-6 Gainful" Air Power Australia. Accessed January 21, 2017. http://www.ausairpower.net/APA-2K12-Kvadrat.html.; IHS. "2K12 Kub." Land Warfare Platforms: Artillery & Air Defence, 01 April 2016; http://www.ausairpower.net/APA-2K12-Kvadrat.html ; US Army.; OPFOR WORLDWIDE EQUIPMENT GUIDE, Vol 2: Airspace and Air Defense Systems. TRADOC DCSINT Threat Support Directorate, December 2011, pg. 6-71 ; Vestnik-pvo; "Self-propelled air devense missile system 2K12 'Cube'". Accessed December 10, 2016. http://pvo.guns.ru/russia/index33.htm.

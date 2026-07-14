@@ -1,0 +1,18 @@
+OVERVIEW: The AN/FPS-6 Radar was a fixed, long-range, nodding  height finding radar operating in the "E" Band. 
+
+DETAILS:  The AN/FPS-6 was noted for extreme accuracy at long range. The radar consisted of an antenna group, a transmitter group, a receiver group, and an ancillary group. Most fixed sites had a remote group, which allowed the control of the radar from inside the operations center. Also located in operations, was the anti-jam receivers. These receivers were fed with raw video from the tower receiver, and output several types of processed video to enable operators to see through jamming.
+
+Specifications:
+
+Frequency: 		2.7-to-2.9 GHz (E Band)
+Power output: 		3.6 kW(average);  3.5 MW (peak) 
+PRF:			300-405 Hz	
+Range Resolution:	300 m (range),  unknown degrees azimuth 					
+On/Off time:		unknown
+Deploy/Stow Time	N/A
+Max Detection Ranges:   370 km 
+
+
+NOTES: The AN/FPS-6 radar was introduced into service in the late 1950s and served as the principal height-finder radar for the United States for several decades thereafter. It was also used by the Royal Air Force alongside their Type 80 radars. Built by General Electric, the S-band radar operated on a frequency of 2700 to 2900 MHz. Between 1953 and 1960, about 450 units of the AN/FPS-6 and the mobile AN/MPS-14 version were produced. Other user countries include Argentina, Denmark, Germany, Greece, Israel, Spain and Norway. The AN/FPS-90 and AN/FPS-116 radars were identical to the AN/FPS-6 except for receiver modifications.
+
+SOURCES: Wikipedia. "General Electric AN/FPS-6 Radar" Accessed December 2, 2013. http://en.wikipedia.org/wiki/General_Electric_AN/FPS-6_Radar ; "General ElectricElectric AN/FPS-6 Radar." Wikipedia, the Free Encyclopedia. Accessed March 22, 2015. http://en.wikipedia.org/wiki/General_Electric_AN/FPS-6_Radar ; http://fas.org/nuke/guide/usa/airdef/an-fps-6.htm ; http://www.radartutorial.eu/19.kartei/karte802.en.html

@@ -1,0 +1,7 @@
+OVERVIEW: Marconi Type S.244 in powerful Long-Range Heigh-Finding radar based on older Type S.239.
+
+DETAILS: Provides height of the aircrafts for main 2D air search radars. Used in NATO NADGE radar network.
+
+NOTES: Used by Air Forces in Denmark and Norway.
+
+SOURCES: Flightblobal Aviation History 1961 PDF archive. ttp://www.flightglobal.com/pdfarchive/view/1961/1961%20-%201812.html

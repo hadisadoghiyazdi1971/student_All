@@ -1,0 +1,23 @@
+OVERVIEW: The Sikorsky SH-3 Sea King (company designation S-61) is an American twin-engined anti-submarine warfare (ASW) helicopter designed and built by Sikorsky Aircraft. It was a landmark design, being one of the first ASW helicopter to take advantage of turboshaft engines, as well as being the first amphibious helicopter in the world.
+
+Introduced in 1961, it served as the United States Navy as a key ASW and utility asset for several decades before being replaced by the non-amphibious Sikorsky SH-60 Seahawk in the 1990s. The type also proved popular in civil service and with foreign military customers, as of 2014 many remain in service in a number of nations around the world. The Sea King has been built under license by Agusta in Italy, Mitsubishi in Japan, and by Westland in the United Kingdom (See Westland Sea King). The major civil versions are the S-61L and S-61N.
+
+DETAILS: When introduced, the Sea King was a considerable advancement over previous helicopters; its twin-turboshaft powerplant layout gave the SH-3 a payload capacity and level of reliability far in excess of previous anti-submarine helicopters. In the event of an engine failure, the Sea King can maintain flight on a single engine alone. Sea Kings operating in an anti-submarine capacity typically had a four-man crew; a pilot and copilot in the cockpit and two aircrew in the cabin area to operate and monitor the aircraft's detection equipment and to interpret the sensor data; the two rear aircrew were retained in other mission roles such as cargo transfer and rescue operations. The cabin can accommodate up to 22 survivors or nine stretchers in addition to two medical officers in an SAR capacity; up to 28 soldiers can be accommodated when operated as a troop transport.
+
+The Sea King features many design elements to support naval-orientated operations; the main rotor blades and the tail section can be folded for storage when deployed onboard ships. An amphibious hull allows most Sea Kings to land on and remain on the ocean's surface if required; for stability and increased flotation, the aircraft's sponsons contain deployable airbags for use when the Sea King operates in direct contact with the sea.
+
+Depending upon their intended mission, the armament fitted upon a Sea King could vary considerably. A typical armament configuration in an anti-submarine capacity could include up to four torpedoes or four depth charges. For anti-ship duties some models were outfitted to carry one or two missiles, typically Sea Eagles or Exocets. The Sea King had also the option of being outfitted to deploy the B57 nuclear bomb.
+
+ASW equipment used onboard Sea Kings has included the AQS-13A/B/E dipping sonar, specialized computers for processing sonar and sonobuoy data, various models of sonobuoys, ARR-75 Sonobuoy Receivers, and Magnetic Anomaly Detectors. The commonly-fitted AKT-22 data link enabled the rapid dissemination of gathered sonar information to other friendly elements in range.[29] Some later Sea King models featured digital navigation systems and overhauled cockpit instrumentation for night vision compatibility.
+
+TYPE: General purpose twin turbine powered helicopter available in Anti-Submarine Warfare (SH-3H/D) and Utility (UH-3H/SH-3G) configurations.
+
+SPECIFICATIONS: Crew: (4) two pilots, two ASW systems operators || Capacity: (3) passengers || Length: 54 ft 9 in (16.7 m) || Rotor diameter: 62 ft (19 m) || Height: 16 ft 10 in (5.13 m) || Max. takeoff weight: 22,050 lb (10,000 kg) || Powerplant: (2) General Electric T58-GE-10 turboshafts, 1,400 shp (1045 kW) each.
+
+PERFORMANCE: Max Speed: 166 mph (267 km/h) || Range: 621 mi (1,000 km) || Service ceiling: 14,700 ft (4,481 m) || Rate of climb: 1,310-2,220 ft/min (400-670 m/min).
+
+SENSORS: AN/AQS-13B Dipping Sonar || Generic MAD || Sonobuoys.
+
+ARMAMENT: (2) Mk 46/44 anti-submarine torpedoes (SH-3H) || Various sonobuoys and pyrotechnic devices || B-57 Nuclear depth charge.
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org, FAS Military Analysis Network http://fas.org/man/dod-101/sys/ship/index.html

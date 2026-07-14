@@ -1,0 +1,9 @@
+OVERVIEW: The Popeye Turbo is a submarine launched, long range,  turbofan-powered missile designed for nuclear strike.
+
+DETAILS: The Popeye Turbo is derived from the AGM-142 Raptor missile.  It likely uses a GPS-aided inertial guidance system that pilots the missile towards the target.  
+
+NOTES:  The Popeye Turbo was possibly first tested in 2000, and operational by 2002.  It is possibly deployed on Dolphin-class submarines.  
+
+
+SOURCES:  Wikipedia, the free encyclopedia. "Popeye (missile)." Accessed November 2, 2014. http://en.wikipedia.org/wiki/Popeye_(missile) ; GlobalSecurity.org - Reliable Security Information. "AGM-142 Raptor / Have Nap / Popeye - Smart Weapons." Accessed November 2, 2014. http://www.globalsecurity.org/military/systems/munitions/agm-142.htm ; i-HLS. "i-HLS 'Popeye Turbo' - the Main Weapon for 'Second Strike'." Accessed November 2, 2014. http://i-hls.com/2013/03/popeye-turbo-cruise-missile-the-main-israeli-weapon-for-a-second-strike-capability/ ; Federation Of American Scientists -. "Popeye Turbo - Israel Special Weapons." Accessed November 2, 2014. http://fas.org/nuke/guide/israel/missile/popeye-t.htm.
+

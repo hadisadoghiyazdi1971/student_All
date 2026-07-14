@@ -1,0 +1,22 @@
+OVERVIEW: The AN/TPS-1E is a lightweight, portable, medium-range 2-D search radar operating in the NATO "D" band. 
+
+DETAILS: The AN/TPS-1E is a 2-D search and acquisition radar to provide early warning of enemy air attacks. It was intended for medium-range surveillance, as a gap-filler, and for the designation of targets for anti-aircraft units, such as NIKE Hercules.
+
+Specifications:
+
+Frequency			1220 to 1350 MHz  (D band (NATO),  L Band (IEEE))
+Power output: 			 unknown (average); 500 kw (peak)
+PRF:				360, 380, 400 pps
+Range Resolution:		3% of range, +1 mile (Range), 1%  (azimuth)(for AN/TPS-1G)
+On/Off time: 			unknown min. 
+Deploy/Stow time: 		Unknown min
+Maximum Range:			160 nautical miles instrumented.  
+ 
+
+NOTES:  The AN/TPS-1 series was developed during World War II to provide early warning of enemy air attacks, and the B and C variants were used during the war. The system breaks down into 10 individual packages for easy delivery to forward areas.  The TPS-1G variant has a  
+total weight of only 1,900 pounds. The AN/TPS-1 series was used until the 1990s. The AN/FPS-36 is a modified AN/TPS-1D.
+
+SOURCES: US Army Air Defense School. "Introduction and Start-Stop to the AN/TPS-1G." Ed's Nike Missile Web Site. Last modified January 1960. http://ed-thelen.org/ST-44-188-2G.pdf ; "Bendix AN/TPS-1 Radar." Wikipedia, the Free Encyclopedia. Accessed August 6, 2016.  
+https://en.wikipedia.org/wiki/Bendix_AN/TPS-1_Radar ; "Radar Basics - AN/TPS-1E." Grundlagen  
+Der Radartechnik. Accessed August 6, 2016. http://www.radartutorial.eu/19.kartei/karte812.en.html ; "Radar_descptn_3." Home Page.  
+Accessed August 6, 2016. http://www.mobileradar.org/radar_descptn_3.html

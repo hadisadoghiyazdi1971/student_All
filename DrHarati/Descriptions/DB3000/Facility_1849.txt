@@ -1,0 +1,25 @@
+OVERVIEW: The 1L119 Nebo SVU radar is a mobile, 2-D early warning radar operating in the A/B Band.
+
+DETAILS:    The 1L119 Nebo SVU radar is an Active Electronically Steered Array (AESA) radar designed to automatically detect and track aircraft, ASALM-type air missiles and low-visibility targets, particularly targets using Stealth technology.  It can track up to 100 simultaneous targets, including ballistic missile targets.  ECCM features include frequency and beam steering agility.  It may be deployed as a target acquisition radar for a modern SAM system like the S-300PMU1/2 / SA-20 Gargoyle or S-400 / SA-21 Growler, and may be sufficiently accurate to provide mid-course guidance for SAMs and AA missiles.
+
+Specifications:
+
+Frequency: 		30-300 MHz (approx)(NATO A/B Band)(IEEE: VHF Band)
+Power output: 		120-140 kW (peak)(est)
+PRF:			300 Hz (est, based on 1L13-3)
+Accuracy:		100 m/ 0.33 degrees azimuth		
+Runup time:		Unknown
+Set up/Stow time: 	30 minutes / 30 minutes
+
+
+Detection Ranges (2.5 m2 RCS )
+	100 m altitude:		25 km
+	500 m altitude:		60 km
+     10,000 m altitude:	       270 km
+     20,000 m altitude:	       360 km
+
+ 
+NOTES: IOC 2001 (approx).  Capable of being used as part of a radar system to  provide a valuable early warning capability against low observable aircraft.  As part of an IADS system, the 1L119 Nebo SVU would be used to cue the high power aperture X-band systems to a small acquisition box in which the VLO aircraft can be found.
+
+
+SOURCES: "Russian / PLA Low Band Surveillance Radar Systems (Counter Low Observable Technology Radars)." Air Power Australia. Accessed April 4, 2015. http://www.ausairpower.net/APA-Rus-Low-Band-Radars.html#mozTocId481197 ; "NNIIRT Nebo SVU / RLM-M Nebo M / Assessing Russia's First Mobile VHF AESAs." Air Power Australia. Accessed April 4, 2015. http://www.ausairpower.net/APA-Nebo-SVU-Analysis.html ; "Nebo-SVU - «Almaz ? Antey» Corp." Accessed April 4, 2015. http://www.almaz-antey.ru/en/catalogue/millitary_catalogue/1219/1241/1340 . 

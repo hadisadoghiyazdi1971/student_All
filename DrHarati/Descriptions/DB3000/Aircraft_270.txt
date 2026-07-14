@@ -1,0 +1,23 @@
+OVERVIEW: The Northrop Grumman E-2 Hawkeye is an American all-weather, carrier-capable tactical airborne early warning (AEW) aircraft. This twin-turboprop aircraft was designed and developed during the late 1950s and early 1960s by the Grumman Aircraft Company for the United States Navy as a replacement for the earlier E-1 Tracer, which was rapidly becoming obsolete. The aircraft's performance has been upgraded with the E-2B, and E-2C versions, where most of the changes were made to the radar and radio communications due to advances in electronic integrated circuits and other electronics. The fourth version of the Hawkeye is the E-2D, which first flew in 2007. The E-2 was the first aircraft designed specifically for its role, as opposed to a modification of an existing airframe, such as the Boeing E-3 Sentry. Variants of the Hawkeye have been in continuous production since 1960, giving it the longest production run of any carrier-based aircraft.
+
+The E-2 also received the nickname "Super Fudd" because it replaced the E-1 Tracer "Willy Fudd". In recent decades, the E-2 has been commonly referred to as the "Hummer" because of the distinctive sounds of its turboprop engines, quite unlike that of turbojet and turbofan jet engines. In addition to U.S. Navy service, smaller numbers of E-2s have been sold to the armed forces of Egypt, France, Israel, Japan, Mexico, Singapore and Taiwan.
+
+DETAILS: The E-2 is a high-wing airplane, with one turboprop engine on each wing and retractable tricycle landing gear. As with most carrier-borne airplanes, the E-2 is equipped with a tail hook for landings, and it is capable of using the aircraft carrier's catapults for takeoff. A distinguishing feature of the Hawkeye is its 24-foot (7.3 m) diameter rotating dome that is mounted above its fuselage and wings. This carries the E-2's primary antennas for its long-range radar and IFF systems. No other carrier-borne aircraft possesses one of these, and among land-based aircraft, they are mostly seen atop the Boeing E-3 Sentry, a larger AWACS airplane operated by the U.S. Air Force and NATO air forces in large numbers.
+
+The aircraft is operated by a crew of five, with the pilot and co-pilot on the flight deck and the combat information center officer, air control officer and radar operator stations located in the rear fuselage directly beneath the rotodome.
+
+In U.S. service, the E-2 Hawkeye provides all-weather airborne early warning and command and control capabilities for all aircraft-carrier battle groups. In addition, its other purposes include sea and land surveillance, the control of the aircraft carrier's fighter planes for air defense, the control of strike aircraft on offensive missions, the control of search and rescue missions for naval aviators and sailors lost at sea, and for the relay of radio communications, air-to-air and ship-to-air. It can also serve in an air traffic control capacity in emergency situations when land-based ATC is unavailable.
+
+The E-2C and E-2D Hawkeyes use advanced electronic sensors combined with digital computerized signal processing, especially its radars, for early warning of enemy aircraft attacks and anti-ship missile attacks, and the control of the carrier's combat air patrol (CAP) fighters, and secondarily for surveillance of the surrounding sea and land for enemy warships and guided-missile launchers, and any other electronic surveillance missions as directed.
+
+TYPE: Carrier Based Airborn Early Warning.
+
+SPECIFICATIONS: Crew: (5) Pilot, Copilot, Radar Officer (RO), Combat Information Center Officer (CICO), Aircraft Control Officer (ACO) || Length: 57 ft 8.75 in (17.60 m) || Wingspan: 80 ft 7 in (24.56 m) || Height: 18 ft 3.75 in (5.58 m) || Max. takeoff weight: 57,500 lb (26,083 kg) || Powerplant: (2) Allison / Rolls-Royce T56-A-427 (E-2C), T56-A-427A (E-2D) turboprop, 5,100 shp (3,800 kW) each.
+
+PERFORMANCE: Max Speed: 350 knots (648 km/h) || Endurance: 6 hr || Service ceiling: 34,700 ft (10,576 m) || Power/mass: 0.19 hp/lb (0.32 kW/kg).
+
+SENSORS: AN/APS-145 Radar || OL-483/AP IFF interrogator system || APX-100 IFF Transponder || OL-698/ASQ Tactical Computer Group || AN/ARC-182 UHF/VHF radio || AN/ARC-158 UHF radio || AN/ARQ-34 HF radio || AN/USC-42 Mini-DAMA SATCOM system.
+
+ARMAMENT: None.
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org 

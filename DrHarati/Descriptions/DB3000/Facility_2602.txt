@@ -1,0 +1,22 @@
+OVERVIEW: The Kontainer 29B6 radar is a fixed over-the-horizon radar, intended to monitor airspace and ballistic missile detection, operating in the NATO "A" band.  
+
+DETAILS: The Konteyner radar is intended to fill radar surveillance coverage gaps created in the post-Soviet era.  It consists of 144 antenna feeder masts and is reportedly capable of monitoring planes, helicopters, drones and cruise missiles from over the horizon by reflecting the signal off the ionosphere. The Konteyner reportedly features a modular set-up.
+
+Specifications:
+
+Frequency			3-30 MHz  (A band (NATO),  HF Band (IEEE))
+Power output: 			unknown (average); unknown (peak)
+PRF:				50 pps
+Range Resolution:		unknonwn
+On/Off time: 			unknown min. 
+Deploy/Stow time: 		N/A min
+Maximum Range:			30000 km (range), 100 km (altitude)
+Field of View:			Initially 180 degrees, increased to 240 degrees in 2014.
+Dimensions	  
+ 
+
+NOTES:    The first radar, near Kovylkino, Mordovia, Russia, became operational in December 2013. The receiving antennas are located 8 km south-west from Kovylkino, Mordovia, Russia 53.9841°N 43.8427°E. The transmitters antennas are located 300 km from receiver, 5 km north from Gorodets town, Nizhegorodskaya oblast', Russia 56.69328°N 43.48625°E. The system is aligned on bearing of 240 degrees to monitor airspace west of Russia. Another Kontainer radar is under construction in far east of Russia, with an IOC in 2018. 
+
+SOURCES: GlobalSecurity.org - Reliable Security Information. Accessed August 12, 2016. http://www.globalsecurity.org/wmd/world/russia/konteyner.htm ; "29B6 Kontainer" MilitaryRussia.Ru.  Accessed August 12, 2016. http://militaryrussia.ru/blog/topic-768.html ; "Container Radar." Wikipedia, the Free Encyclopedia. Accessed August 12, 2016. https://en.wikipedia.org/wiki/Container_radar.
+
+

@@ -1,0 +1,27 @@
+OVERVIEW: The Midway class aircraft carrier was one of the longest-living carrier designs in history. First commissioned in late 1945, the lead ship of the class, USS Midway, was not decommissioned until 1992, shortly after service in Operation Desert Storm in 1991.
+
+The carriers were very large, with the ability to accommodate more planes than any other carrier in the U.S. fleet (30-40 more aircraft than the Essex class). In their original configuration, the Midway class ships had an airwing of almost 130 aircraft. Unfortunately, it was soon realized that the coordination of so many planes was beyond the effective command and control ability of one ship.
+
+DETAILS: The ships featured excellent protection and unprecedented airwing size, they also had several undesirable characteristics. Internally, the ships were very cramped and crowded. Freeboard was unusually low for such large carriers; in heavy seas, they shipped large amounts of water (only partially mitigated by the fitting of a hurricane bow during the SCB-110/110A upgrades) and corkscrewed in a manner that hampered landing operations. In addition, in contrast with the earlier Lexington, Yorktown and Essex-classes, the beam (width) of the Midway-class carriers meant that they could not pass through the Panama Canal.
+
+Although they were intended to augment the US Pacific fleet during World War II, the lead ship of the class, USS Midway (CV-41), was not commissioned until 10 September 1945 (eight days after the Surrender of Japan). None of the class went on war cruises during the Korean War. They were mainly deployed to the Atlantic and Mediterranean. During the 1950s, all three ships underwent the SCB-110 modernization program, which added angled decks, steam catapults, mirror landing systems, and other modifications that allowed them to operate a new breed of large, heavy naval jets.
+
+All three of the Midway class made combat deployments in the Vietnam War. Coral Sea deployed to the Gulf of Tonkin six times, Midway deployed on three occasions, and Franklin D. Roosevelt made one combat deployment before returning to the Mediterranean.
+
+In the late 1960s, Midway underwent an extensive modernization and reconstruction program, which proved to be controversial and expensive and thus was not repeated on the other ships. By the 1970s, Franklin D. Roosevelt and Coral Sea were showing their age. All three retained the F-4 Phantom II in their air wings, being too small to operate the new F-14 Tomcat fleet defense fighter or the S-3 Viking anti-submarine jet. In 1977, Franklin D. Roosevelt was decommissioned. On her final deployment, Roosevelt embarked AV-8 Harrier jump jets to test the concept of including VSTOL aircraft in a carrier air wing.
+
+Coral Sea underwent extensive refits to address the ship's poor condition. When the F/A-18 Hornet became operational in the mid-1980s, the Navy quickly deployed them to the Midway and Coral Sea to replace the older F-4's. A 1986 refit for Midway removed her 6" armor belt and bulged her hull to try to increase freeboard. While successful in this regard, the bulges also resulted in a dangerously fast rolling period that prevented Midway from operating aircraft in heavy seas. The bulging was therefore not repeated on Coral Sea.
+
+TYPE: Aircraft Carrier (CV).
+
+SPECIFICATIONS: Displacement: 45,000 tons || Length: 968 ft (295 m) || Beam: 113 ft (34 m) || Draft: 33 ft (10 m) || Propulsion: Steam turbines, 212,000 shp || Complement: 4,104.
+
+PERFORMANCE: Speed: 33 knots (61 km/h).
+
+SENSORS: SN/SPN-43 Shipboard ATC || AN/SPS-10 Surface Search Radar || AN/SPS-30 3D Air Search Radar || SPS-43 2D Long Range Air Search Radar || LN-66LP Short Range Surface Search Radar || MK-35 Fire Control || AN/WLR-11 Radar Warning Receiver || AN/WLR-1C ESM || AN/ULQ-6C Offensive/Defensive ECM. 
+
+ARMAMENT: (18) 5 in/54 caliber guns || (21) quad 40 mm Bofors gun || (28) 20 mm Oerlikon cannon ##### Refit: (2) 8-cell Sea Sparrow launchers || (2) Mark 71 mod 0 Phalanx CIWS.
+
+SHIPS BUILT: Midway (CV-41) || Franklin D. Roosevelt (CV-42) || Coral Sea (CV-43).
+
+SOURCE: Wikipedia http://en.wikipedia.org

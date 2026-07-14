@@ -1,0 +1,20 @@
+OVERVIEW: PAVE PAWS is a ground-based phased array radar system designed for missile warning and space surveillance, operating in the "B" Band.  
+
+DETAILS: The PAVE PAWS is phased array radar is primarily used to detect and track sea-launched (SLBM) and intercontinental ballistic missiles (ICBMs) with a secondary mission of detecting and tracking earth orbiting satellites.  The system differs from a mechanical radar, which must be physically aimed at an object in space to detect and/or track it.  
+
+Specifications:
+
+Frequency: 		420-450 MHz (B Band)
+Power output: 		150 kW (average per face);  600 kW (peak per face) 
+PRF:			unknown Hz	
+Range Resolution:	unknown (range), unknown degrees azimuth 					
+On/Off time:		unknown
+Deploy/Stow Time	N/A
+
+Detection Range:	unknown
+
+
+NOTES: IOC 1978. PAVE PAWS is operated by the U.S. Air Force Space Command. Operational PAVE PAWS radars are located at: Cape Cod Air Force Station, Massachusetts. (41°45'08"N 70°32'17"W) Beale AFB, California. (39°08'10"N 121°21'03"W) Clear Air Force Station, Alaska. (64°18'01"N 149°11'23"W).  In addition, two other facilities were shuttered by the Air Force in 1995: Robins Air Force Base, Warner Robins, Georgia (32°34'52"N 83°34'09"W), and Eldorado AFS, Texas (30.979°N 100.554°W). 
+
+ 
+SOURCES: Federation of American Scientists. "PAVE PAWS (U)." Accessed November 24, 2013. http://www.fas.org/spp/military/program/nssrm/categories/pavepws.htm ;  Air Force Space Command - Home. "Factsheets : PAVE PAWS Radar System." Accessed November 24, 2013. http://www.afspc.af.mil/library/factsheets/factsheet.asp?id=3656 ; Wikipedia, the free encyclopedia. "PAVE PAWS." Accessed November 24, 2013. http://en.wikipedia.org/wiki/PAVE_PAWS ; "AN/FPS Series." Alternate Wars. Accessed March 22, 2015. http://www.alternatewars.com/BBOW/Radar/FPS_Series.htm.

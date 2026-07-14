@@ -1,0 +1,24 @@
+OVERVIEW: The AN/TPQ-37 Firefinder is a mobile, short-to-medium-range, 3-D,  phased array artillery locating radar system operating in the E/F-band.  
+
+DETAILS:   The AN/TPQ-37 Firefinder is designed to detect and track incoming artillery and rocket fire to determine the point of origin for counter-battery fire. The AN/TPQ-37 also tracks, corrects, and improves the fire of friendly weapons with registration and adjustment data.
+
+
+Specifications:
+
+Frequency: 		  unknown MHz (E/F Band (NATO),  S Band (IEEE))
+Power output: 		  unknown kW(average);  120 kW (peak) 
+PRF:			  unknown Hz	
+Range Accuracy:		  m (range),    degrees azimuth 					
+On/Off time:		  unknown
+Deploy/Stow Time	  unknown minutes/  unknown minutes
+ 
+Detection Range  
+
+Max Range:		  50 km Rockets, 30 km artillery rounds
+
+  
+NOTES:  The AN/TPQ-37 Firefinder is truck, C-130 and helo transportable. The U.S. Army combines the AN/TPQ-37 with the AN/TPQ- 36 to field an accurate and mobile Firefinder weapon-locating system. The AN/TPQ-36 would be deployed near the battle line, with the AN/TPQ-37 farther back in friendly territory.
+
+
+
+SOURCES: "AN/TPQ-37 Firefinder Radar." Wikipedia, the Free Encyclopedia. Accessed March 28, 2015. http://en.wikipedia.org/wiki/AN/TPQ-37_Firefinder_radars/land/sentinel.html ; ThalesRaython Systems, AN/TPQ-37 Firefinder Weapons Locating System, www.radartutorial.eu/19.kartei/pubs/cms01_050672.pdf

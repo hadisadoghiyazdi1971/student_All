@@ -1,0 +1,8 @@
+OVERVIEW: The AN/ALQ-87 is an external pod mounted, Barrage Jamming pod.
+
+DETAILS:  The AN/ALQ-87  is a barrage jamming pod that operatats in the A-H bands (1-8GHz).   
+
+
+NOTES: The AN/ALQ-87 was used by USAF F-111, F-4, F-100, F-101, F-105, AC-130A, OV-1Ds. It was retired in the mid-1970's.
+
+SOURCES:  Designation-Systems.Net. "AN/ALQ to AN/ALT - Equipment Listing." Accessed November 20, 2014. http://www.designation-systems.net/usmilav/jetds/an-alq2aly.html

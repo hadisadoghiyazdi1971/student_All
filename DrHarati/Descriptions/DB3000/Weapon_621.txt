@@ -1,0 +1,17 @@
+OVERVIEW: The AGM-84H/K SLAM-ER (Standoff Land Attack Missile Expanded Response) is a precision-guided, medium-to-long-range, air-launched cruise missile. 
+
+DETAILS: The SLAM-ER was designed to provide all-weather, day and night, precision attack capabilities against stationary high-value targets, although it can also attack moving targets. The SLAM-ER uses the Global Positioning System (GPS) and infrared imaging for its navigation and control.  Developed from the AGM-84E, the SLAM-ER incorporates several improvements, including a modified warhead for increased penetration and an improved datalink, that increases the control range by 50% over the AGM-84E, while also enhancing its resistance to jamming. The SLAM-ER can be remotely controlled while in flight, and it can be redirected to another target after launch if the original target has already been destroyed, or is no longer considered to be dangerous. The SLAM-ER is a very accurate weapon, having the best circular error probable (CEP) of any missile used by the USN (as of 2009).
+
+Specifications: 
+Weight: 674.5 kg (1,487 lb)
+Length: 4.36 m (14.3 ft)
+Diameter: 34.3 cm (13.5 in)
+Wingspan: 2.2 m (7.2 ft)
+
+PERFORMANCE: 
+Operational range: 270 kilometres (170 mi)
+Speed: 855 km/h (531 mph, 0.698 mach)
+
+NOTES: IOC 2002.
+
+SOURCES: Wikipedia http://en.wikipedia.org ; Friedman, Norman, "The Naval Institute Guide to World Naval Weapons Systems, 1997-1998, Annapolis, MD: Naval Institute Press, 1997, pg. 256-57 ; "AGM-84 Harpoon/SLAM - Smart Weapons." Federation Of American Scientists. Accessed August 21, 2015. http://fas.org/man/dod-101/sys/smart/agm-84.htm ; Boeing. "Backgrounder: Harpoon Block II." Last modified March 2013. http://www.boeing.com/assets/pdf/defensespace/missiles/harpoon/docs/HarpoonBlockIIBackgrounder.pdf ; "MCDONNELL-DOUGLAS AGM-84L HARPOON and AGM-84E SLAM." Air Power Australia. Accessed August 21, 2015. http://www.ausairpower.net/TE-Harpoon.html ; "Harpoon." Weaponsystems.net. Accessed August 21, 2015. http://weaponsystems.net/weaponsystem/HH10%20-%20Harpoon.html ; "Boeing AGM/RGM/UGM-84 Harpoon." Designation-Systems.Net. Accessed August 21, 2015. http://www.designation-systems.net/dusrm/m-84.html.

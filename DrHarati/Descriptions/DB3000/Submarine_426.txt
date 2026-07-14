@@ -1,0 +1,19 @@
+OVERVIEW: The VALIANT is a nuclear-powered patrol attack submarine (SSN).
+
+DETAILS:  The VALIANT class were primarily used in the anti-submarine role.  They incorporated the rafting concept, to reduce machinery noise.  They also included a diesel-electric generator for silent running. 
+ 
+
+Specifications:
+ 
+	Displacement: 4,000 (Light);  4,800 tons submerged.
+	Speed: 28 knts  (submerged)
+       	Engineering: 1 pressurized water-cooled reactor; 1 shaft
+	Diving Depth: 300 meters
+	Range: 	
+      	Complement: 116       
+     	Hulls built: 2 
+	Period of Service:  1966-1994
+
+NOTES: Units in class: VALIANT (S 102); WARSPITE (S 103)
+
+SOURCES:  Moore, John Evelyn. Jane's Fighting Ships 1987-88.  London: Jane's Pub, 1987, pg. 658 ; HMS Valiant (S102) - Wikipedia, the free encyclopedia. (n.d.). Retrieved May 4, 2015, from http://en.wikipedia.org/wiki/HMS_Valiant_(S102)

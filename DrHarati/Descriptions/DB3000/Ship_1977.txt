@@ -1,0 +1,17 @@
+OVERVIEW: The KANIN class DDG is a steam-powered AAW/ASW destroyer.
+
+DETAILS:   The KANIN class DDG was converted from the KRUPNYY class missile destroyer.  Originally designed as an ASUW vessel and equipped with an SS-N-1 missile, between 1968-77 these vessels were converted to AAW destroyers by deleting their SSM armambent and replacing it with an SA-N-1 launcher. 
+
+NOTES: Displacement: 3,700 tons standard
+       Speed: 35 knts
+       Range: 1,100 nm @ 32 knts; 4,500 nm @ 15 knts
+       Complement: 300-350 (approx.)
+       In Commission: 1960-93
+       Completed: 8	  
+
+SOURCES: Norman Polmar, "Guide to the Soviet Navy, 3rd ed. (Annapolis, MD: Naval Institute Press, 1983), 166-67 ; Federation of American Scientists. "Class - Project 57PLO Kanin." Accessed November 17, 2013. http://www.fas.org/man/dod-101/sys/ship/row/rus/57PLO.htm.
+
+
+
+
+

@@ -1,0 +1,18 @@
+OVERVIEW: The HAINAN class (Type 037) is a diesel-powered fast attack craft-patrol (PC).
+
+DETAILS:    The HAINAN class is a Chinese-built version of the Soviet SO-1 PC.    
+
+Specifications: 
+
+       Displacement:  375 tons (standard);  392 (full load)
+       Speed: 30.5 knts
+       Engineering: 4 shaft, 4 diesel engines 
+       Range: 1300 nm @ 15 knts
+       Complement: 69 
+       In Commission: 1963- (approx.) 
+       Completed: 76 (approximate) 
+
+NOTES: Units in class: 267-285, 290,302, 305, 609,641, 642, 649, 661-70, 677, 678,680, 686-87, 690.  Pakistan purchased four units, Bangladesh and Egypt purchased eight hulls each and North Korea purchased six units. Can be fitted with four Ying-Ji launchers in lieu of the after 57mm mount.
+
+
+SOURCES: Moore, John Evelyn. Jane's Fighting Ships 1991-92.  London: Jane's Pub, 1991, pg. 118 ; 

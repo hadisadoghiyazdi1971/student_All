@@ -1,0 +1,5 @@
+The IVAN ROGOV-class (Project 1174 Nosorog) Large Landing Ship provides sealift and landing of troops and equipment. Military materiel is landed via a bow ramp and also via assault boats through the doors of the flooded well. The vessel
+has both bow ramp and well deck; it may operate as either a LST or as a LPD. A typical load is one battalion of 520 marines and 25 tanks. Up to 53 tanks or 80 armoured personnel carriers may be carried if the well deck is used for ground vehicle parking. 2,500 tons of cargo may be carried. The vessel accommodates four helicopters. The helicopter hangar is located within the superstructure and there are landing pads forward  and aft of the superstructure. A total of three ships were built. One currently remains in service with the Russian Navy.
+
+
+Source:  http://en.wikipedia.org/wiki/Ivan_Rogov-class_landing_ship;  http://www.naval-technology.com/projects/ivan/

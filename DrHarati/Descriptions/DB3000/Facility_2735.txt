@@ -1,0 +1,25 @@
+OVERVIEW: The CHEESE BOARD (96L6E) is a mobile, 3D "all altitude" early-warning and acquisition phased arrary radar operating in C-Band.
+
+DETAILS:    The CHEESE BOARD (96L6E) is a  frequency hopping design intended to provide high jam resistance and high clutter rejection.  It can track up to 100 tracks automatically, and is capable against airbreathing targets, stealth aircraft and missiles.
+
+It is associated with the SA-10 “Grumble” (S-300) and SA-21 “Growler” (S-400) theatre defence missile systems. 
+
+Specifications:
+
+Frequency: 		 C-Band
+Power output: 		unknown
+PRF:			unknown
+Range Resolution:	unknown
+Target speed:		30-2800 m/s			
+Runup time:		40 seconds		
+Set up time: 		5 minutes		
+
+ 
+NOTES: IOC 2007. Designed to replace the 36D6 “Tin Shield B” and 76N6 “Clam Shell”  
+
+
+SOURCES: Pike, John. "96L6 Radar." GlobalSecurity.org. Last modified 7, 2019. https://www.globalsecurity.org/military/world/russia/96l6.htm; "Radar Basics - 96L6E “Cheese Board”." Grundlagen Der Radartechnik. Accessed August 2, 2019. http://www.radartutorial.eu/19.kartei/02.surv/karte044.en.html; "RADAR STATION 96L6E." Accessed August 2, 2019. http://pvo.guns.ru/rtv/96l6.htm; Dr C Kopp. "Russian / PLA Low Band Surveillance Radar Systems (Counter LowObservable Technology Radars)." Air Power Australia. Accessed August 2, 2019. https://www.ausairpower.net/APA-Rus-Low-Band-Radars.html#mozTocId240523.
+
+
+
+

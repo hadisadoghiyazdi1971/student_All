@@ -1,0 +1,8 @@
+OVERVIEW: AN/FPS-130 ARSR-4 is an 3-D air surveillance radar used by the U.S. Air Force and the Federal Aviation Administration to control airspace within and around the borders of the United States.
+
+DETAILS:  ARSR-4 systems are installed along the borders and coastal areas of the United States, Guantanamo Bay Naval Base in Cuba, Guam, and a training site in Oklahoma City. They are generally unmanned, being equipped with remote monitoring of both the radar data and the status of the radar's health and environment.  
+
+NOTES:  Installation of the system began in the 1990s. By the late 1990s, this radar had replaced most of the 1960s-vintage AN/FPS-20 variant search radars and a number of ARSR-3 search radars.
+
+SOURCES: Wikipedia, the free encyclopedia. "Air Route Surveillance Radar." Accessed November 24, 2013. http://en.wikipedia.org/wiki/Air_Route_Surveillance_Radar ; Radomes, Inc. - The Air Defense Radar Veterans Association. "ARSR-1, 2, 3, 4." Accessed November 24, 2013. http://www.radomes.org/museum/equip/arsr-1234.html.
+

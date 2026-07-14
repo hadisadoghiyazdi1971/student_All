@@ -1,0 +1,27 @@
+OVERVIEW: The AN/MPQ-64 Sentinel is a mobile, low-altitude, short-to-medium-range 3-D air surveillance and target acquisition/tracking radar system operating in the X-band.  
+
+DETAILS:   The AN/MPQ-64 Sentinel is designed to alert and queue Short Range Air Defense (SHORAD) weapons to the locations of hostile aircraft, UAVs or cruise missiles approaching front line forces. It uses an X-band range-gated, pulse-doppler system. The radar automatically acquires, tracks, classifies, identifies and reports targets, including cruise missiles, unmanned aerial vehicles, rotary and fixed-wing aircraft.  Weapon systems associated with the AN/MPQ-64 include STINGER, AMRAAM and AAA. 
+
+Specifications:
+
+Frequency: 		  MHz (X Band (NATO),  Band (IEEE))
+Power output: 		  kW(average);  kW (peak) 
+PRF:			  Hz	
+Range Accuracy:		  m (range),    degrees azimuth 					
+On/Off time:		 unknown
+Deploy/Stow Time	  15 minutes/  unknown minutes
+ 
+Detection Range  
+
+
+tgt alt. 100m:		 unknown km
+tgt alt. 18000m:	 unknown km
+Max Range:		   40 km
+
+  
+NOTES:  The AN/MPQ-64 is truck, C-130 and helo transportable.
+
+
+  
+
+SOURCES: "AN/MPQ-64 Sentinel." Wikipedia, the Free Encyclopedia. Accessed March 28, 2015. http://en.wikipedia.org/wiki/AN/MPQ-64_Sentinel ; "AN/MPQ-64 Sentinel." Guide to Military Equipment and Civil Aviation. Accessed March 28, 2015. http://www.deagel.com/Ground-Sensors/ANMPQ-64-Sentinel_a001633001.aspx. ; http://fas.org/man/dod-101/sys/land/sentinel.html

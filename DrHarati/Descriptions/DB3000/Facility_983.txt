@@ -1,0 +1,8 @@
+OVERVIEW: The RAT-31 is Long Range 3D Air Defence Radar, in service or on delivery to a large number of NATO/European and extra European countries, both in fixed (DL) or transportable configuration (DL/M). The current production of these systems carries the highest maturity and technological level.
+
+DETAILS: The radar can be controlled through the local radar management console or through a remote console. The mechanical configuration is designed to facilitate
+assembly/disassembly on battlefield, to provide an increased survivability. The RAT 31 DL/M Radar systems, consisting of a foldable antenna and a shelter, both in two ISO 20 ft packages, can be transported in one A400M type aircraft as well as on truck and rail. This configuration allows for a high degree of mobility and fast deployment/re-deployment of the system, which is carried out autonomously, without external cranes or other on-site technical support, also on unprepared sites.
+
+NOTES: Made by Selex ES, Germany. User Air forces include Autria, Czech, Denmark, Germany, Greece, Hungary, Italy, Malaysia, Poland and Turkey.
+
+SOURCES: Radartutorial "RAT-31 DL/M". Accessed December 2. 2013. http://www.radartutorial.eu/19.kartei/karte116.en.html ; Selex ES "RAT-31 DL". Accessed December 2. 2013. http://www.selex-es.com/documents/737448/2632201/body_RAT31DL_ok.pdf

@@ -1,0 +1,25 @@
+OVERVIEW:  The SA-10b GRUMBLE (5V55RUD) aka GRUMBLE mod 2 is a single stage, solid fuel, long-range, TVM guided  surface-to-air missile.  It has a 133 kg warhead utilizing a RF proximity or impact fuze.
+
+DETAILS: The SA-10b series was developed as an area defense/strategic SAM system for both land and naval use. It uses Track via Missile (TVM) for guidance. The TVM guidance requires target illumination from a ground station and reception of the reflected signal by the missile, which relays it back to the ground station via a datalink.  The ground station then computes an interception course and uses the datalink to send guidance commands back to the missile.  The missile uses a thrust vectoring system for enhanced maneuverability.
+
+
+Specifications:
+ 
+Weight: 		1665 kg 
+Length: 		7.25 m 
+Diameter: 		514 mm (missile body)
+Wingspan: 		 1.133 m 
+Speed:			 3,304 knts; 1700 m/s
+Range:			 2.7-40.5 nm;  
+Engagement Altitude:	 25-25,000 m (aircraft)     
+Reload time:		 ?? seconds 
+Max target speed: 	2235 knots 
+Kill probability:	?? (single missile v. fighter-type aircraft)
+Maneuverability:	?? g (est)	
+
+
+NOTES:  IOC 1982.  The 5V55RUD is part of the S-300PMU self-propelled system.  To ensure missile reliability, the missile uses the TPK combined launch and transport container. This container was never opened until missile launch. The vertical launch technique adopted used a catapult accelerator within the container to pop the missile to an altitude 20 m above the launcher, where the main motor ignited.
+
+
+
+SOURCES: SOURCES: Jane's Land Warfare Platforms: Artillery & Air Defense, "S-300P", 17 May 2016; Dr Carlo Kopp, PEng. "Almaz S-300P/PT/PS/PMU/PMU1/PMU2 / Almaz-Antey S-400 Triumf /SA-10/20/21 Grumble / Gargoyle." Air Power Australia. Last modified 2007. https://www.ausairpower.net/APA-Grumble-Gargoyle.html ; "Federation of American Scientists :: SA-10 GRUMBLE/300PMU/SA-N-6 GRUMBLE/HQ-10/15 (Chinese Licensed Copy)." Last modified September 9, 2013. https://fas.org/programs/ssp/nukes/nuclearweapons/russia_nukescurrent/sa10.html ; "S-300P Long-Range Air Defense Missile System | Military-Today.com." MILITARY TODAY - Everything About Modern Warfare. Accessed April 22, 2019. http://www.military-today.com/missiles/s300p.htm ; "Designations of Soviet and Russian Military Aircraft and Missiles." Designation-Systems.Net. Last modified January 18, 2008. http://www.designation-systems.net/non-us/soviet.html#_Listings_SA.

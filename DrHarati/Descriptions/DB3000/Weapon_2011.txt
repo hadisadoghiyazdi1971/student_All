@@ -1,0 +1,13 @@
+OVERVIEW: The AN/ALE-41 is a pod-mounted, high-capacity, bulk Countermeasures Dispensing System (CMDS).
+
+
+DETAILS:  The AN/ALE-41 provides continuous dipole chaff dispersal and instantaneous bloom for laying chaff corridors, tuned to the 2-6 GHz and 10 to 18/20 GHz bands.  Can be automatically activated by the aircraft warning receiver. The AN/ALE-41 is capable of laying an 80nm corridor.
+
+
+NOTES:  First deployed in approximately 1972.  The USAF version is the AN/ALE-38.  The USN version is known as the AN/ALE-41.  Used in the A-3, EA-4, A-6, EA-6, A-7, EB-66, F-4, F-105F, AQM-34H/V.
+
+
+SOURCES:  http://www.designation-systems.net/usmilav/jetds/an-ala2aln.html ; Jane's Radar and Electronic Warfare Systems 2002-03, "AN/ALE-38/41 CounterMeasures Dispensing Systems (CMDS)." 09 November 2001 ; riedman, Norman, and Norman Friedman. The Naval Institute Guide to World Naval Weapon Systems. Annapolis, Md: Naval Institute Press, 1997-98, pg. 536.
+
+
+

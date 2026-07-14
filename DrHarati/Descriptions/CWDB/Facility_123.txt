@@ -1,0 +1,21 @@
+OVERVIEW: The AN/FPS-49 radar is a 3-Faced Phased Array radar operating in the "B" Band
+
+DETAILS:  The Ballistic Missile Early Warning System (BMEWS) detects, tracks, and provides tactical warning/attack assessment (TW/AA) of ballistic missiles launched against the U.S., Canada, and the United Kingdom. The Three-face array give 360-degrees coverage.
+
+Specifications:
+
+Frequency: 		425 MHz (B Band)
+Power output: 		 unknown kW(average);   5 MW (peak) 
+PRF:			 27 pps	
+Range Resolution:	>50 m (range),  0.18 degrees azimuth 					
+On/Off time:		unknown
+Deploy/Stow Time	N/A
+
+Detection Range 
+
+
+NOTES: IOC 1953. Located at BMEWS site III. Very similar to AN/FPS-49A, which is at BMEWS site I, and the AN/FPS-92, which is at BMEWS site II. ite is located at RAF Flyingdales Air Base, United Kingdom.
+ 
+
+
+SOURCES: Federation of American Scientists. "Fylingdales (U)." Accessed November 24, 2013. http://www.fas.org/spp/military/program/nssrm/initiatives/fyling.htm ; Federation of American Scientists. "BMEWS (U)." Accessed November 24, 2013. http://www.fas.org/spp/military/program/nssrm/initiatives/bmews.htm ; "AN/FPS Series." Alternate Wars. Accessed March 22, 2015. http://www.alternatewars.com/BBOW/Radar/FPS_Series.htm.

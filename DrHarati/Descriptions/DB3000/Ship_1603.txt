@@ -1,0 +1,19 @@
+OVERVIEW: The REGENT class is a steam-powered Fleet Replenishment Ship (AEFS).
+
+DETAILS:   The REGENT class Fleet Replenishment Ship is designed for underway replenishment of fleet units using both RAS and VERTREP.  They carried a full range of ammunition and armament stores, with limited stores and provisions. 
+
+Specifications: 
+
+       	Displacement: 13,590 (light); 22,890 tons (full load)
+       	Speed: 20 knts
+       	Engineering: 1 shaft, 1 Steam engine
+       	Range: 10,000 nm @ 20 knts
+       	Complement: 134 RFA + 11 RN for helo detachment, 37 civilian supply staff 
+      	In Commission: 1967-1997
+       	Completed: 2
+      
+
+NOTES: Units in class: RESOURCE (A 480), REGENT (A 486). 
+   
+
+SOURCES: Moore, John Evelyn. Jane's Fighting Ships 1987-88.  London: Jane's Pub, 1987, pg. 681 ; RFA Resource (A480) - Wikipedia, the free encyclopedia. (n.d.). Retrieved May 4, 2015, from http://en.wikipedia.org/wiki/RFA_Resource_(A480)

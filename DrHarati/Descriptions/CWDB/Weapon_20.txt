@@ -1,0 +1,16 @@
+OVERVIEW: The Mk84 is a unguided freefall bomb.
+
+
+DETAILS:  The MK84 is a 2000 pound bomb.
+
+
+Weight: 	 895-945 kg
+Filling Weight:	  429 kg (Tritonal, Comp H6)
+
+
+
+NOTES:  The Mk84 has a  lethal radius of 22 meters against standing personnel, and 7 meters against personnel in foxholes. The baseline Mk84 can penetrate up to 15 inches (381.0 mm) of metal or 11 ft (3.4 m) of concrete, depending on the height from which it is dropped.
+
+
+
+SOURCES:  "Mark 84 Bomb." Wikipedia, the Free Encyclopedia. Accessed December 28, 2015. https://en.wikipedia.org/wiki/Mark_84_bomb ; Friedman, Norman. The Naval Institute Guide to World Naval Weapons Systems, 1997-1998. Annapolis, Md: Naval Institute Press, 1997, pg. 264 ; "Mk 83 General Purpose Bomb". Federation of American Scientists,  Accessed December 28, 2015. http://fas.org/man/dod-101/sys/dumb/mk84.htm

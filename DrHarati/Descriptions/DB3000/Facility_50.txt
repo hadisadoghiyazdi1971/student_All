@@ -1,0 +1,22 @@
+OVERVIEW: The 9S36 CHAIR BACK B radar is a mobile, passive phased array target illumination and guidance Radar (TIGR) radar.  
+
+DETAILS: The 9S36 CHAIRBACK B is part of the 9K317 Buk M2/M2E (SA-17) SAM system.  The 9S36 radar is capable of guiding 4 missiles simultaneously. 
+
+Specifications:
+
+Frequency			?? MHz  ( band (NATO),  HF Band (IEEE))
+Power output: 			unknown (average); unknown (peak)
+PRF:				pps
+Range Resolution:		unknown
+On/Off time: 			unknown min. 
+Deploy/Stow time: 		N/A min
+Maximum Range:			100 km (range v. MiG 21 RCS target), 95 km (track)
+
+  
+ 
+
+NOTES: The S936 can be mounted both  mounted on the SA-17 TELAR, as well as on a supplemental standalone 21 meter telescoping mast.  The mast mounted version is designed to provide extended low altitude and surface coverage, for air defence and maritime coastal defence applications. 
+
+SOURCES: Dr C Kopp. "Engagement and Fire Control Radars (S-Band, X-band)." Air Power Australia. Accessed December 6, 2018. http://www.ausairpower.net/APA-Engagement-Fire-Control.html#mozTocId110872 ; Dr Carlo Kopp, PEng. "9K37/9K37M1/9K317 Buk M1/M2 / SA-11/17 Gadfly/Grizzly /C????????? ???????? ???????? ???????? 9?37/9?317 ??? ?/?1/?2." Air Power Australia. Accessed December 6, 2018. http://www.ausairpower.net/APA-9K37-Buk.html ; "NationStates | Dispatch | Air-Defense Systems." NationStates | Create Your Own Country. Accessed December 6, 2018. https://www.nationstates.net/page=dispatch/id=595261.
+
+

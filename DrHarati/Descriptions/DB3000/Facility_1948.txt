@@ -1,0 +1,7 @@
+OVERVIEW: The 2S1 "Gvozdika" is a Soviet self-propelled 122mm howitzer.
+
+DETAILS: The 2S1 Gvozdika mounts a 2A31 122mm/36 howitzer, which is a modified version of the D-30 towed 122mm howitzer. It is amphibious and lightly armored. It is capable of firing standard high-explosive (HE) rounds, HE Rocket Assisted Projectiles (HE/RAP), Armor-Piercing HE rounds (direct fire), flechette rounds (direct fire), and chemical rounds. Standard ammunition has a range of 15,300m (8.26nm) and HE/RAP rounds have a range of 21,900m (11.82nm). The 2S1 has a large number of current and former operators and was widely exported and produced, but it has been phased out in Soviet Army service today.
+
+NOTES: The 2S1 was developed in the late 1960's and entered service in 1971. It was deployed in the SP Artillery battalions of the tank regiment and motorized rifle regiment. A battalion of 2S1 consists of three batteries of six guns each. In the offense, Soviet combined arms doctrine would forward deploy 2S1 howitzers in battery strength with leading elements of an attacking motorized rifle battalion or tank battalion. Their purpose was to provide heavy direct and/or indirect fire support as soon as enemy contact was made. The SP Artillery Battalion (2S1) also had an organic counterbattery radar such as SMALL FRED or TALL MIKE.
+
+SOURCES: FM 100-2-3. Washington D.C.: Headquarters, Department of the Army, 1991 ; Wikipedia, the free encyclopedia. "2S1 Gvozdika." Accessed November 14, 2013. http://en.wikipedia.org/wiki/2s1_gvozdika.

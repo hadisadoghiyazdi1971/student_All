@@ -1,0 +1,25 @@
+OVERVIEW: The Xian JH-7 NATO reporting name Flounder, also known as the FBC-1 (Fighter/Bomber China-1) Flying Leopard, is a 4th generation tandem two-seat, twin-engine fighter-bomber in service with the People's Liberation Army Naval Air Force (PLANAF), and the People's Liberation Army Air Force (PLAAF). The main contractors are Xian Aircraft Industry Corporation (XAC) and the 603rd Aircraft Design Institute (later named the First Aircraft Institute of AVIC-1.)
+
+The first JH-7s were delivered to the PLANAF in the mid-1990s for evaluation, with the improved JH-7A entering service in 2004.
+
+DETAILS: In the early 1970s, the PLAAF required a new fighter-bomber to replace the Harbin H-5 and Nanchang Q-5. A request was duly submitted to the Ministry of Aviation Industry (later renamed to the Aviation Industry Corporation of China), which organized a domestic development program when efforts to secure a joint venture with foreign partners failed. The program was authorized on 19 April 1983 by then-paramount leader Deng Xiaoping. The program was also aiming to make use of newly imported British Spey turbofan engines at the time.
+
+The PLANAF required a similar aircraft and the program set out to develop a variant for each set of requirements. The PLAAF variant would be a two-man all-weather deep strike bomber, with side-by-side cockpit seating, electronic countermeasures (ECM), and terrain following capabilities similar to the General Dynamics F-111. The PLANAF would receive a two-man all-weather, tandem cockpit, strike and reconnaissance aircraft. The PLAAF variant was dropped in the early 1980s, with the PLANAF variant becoming the JH-7.
+
+The JH-7 was designed as an anti-shipping fighter-bomber. As with the later JH-7A, its aerial combat capability was insignificant given the large number of specialist aircraft for that role.
+
+When the PLA examined the future role of air forces, it identified a need for precision air-to-surface capability. An improved JH-7, the JH-7A, was designed to meet this requirement.
+
+The JH-7A had a lighter and stronger airframe than the JH-7, allowing the newer aircraft to carry a maximum ordnance load of 9000 kg. In PLANAF, this allowed four YJ-82 anti-ship missiles to be carried, compared to the two on the JH-7.
+
+The JH-7A is equipped with domestic Chinese helmet mounted sight (HMS) for evaluation. HMS tested on JH-7A is compatible with air-to-air/surface missiles, and it is also compatible with airborne sensors such as radars and electro-optics so that the sensors are slaved to HMS, enabling the fast tracking and aiming of the weaponry. The cockpit of JH-7A still retains some traditional single function dial indicators, but there are two large color liquid crystal display multi-function displays which can be monochrome if pilots choose. Other avionic upgrades of JH-7 include: replacing Type 960-2 noise jammer with BM/KJ-8605, replacing Type 265A radar altimeter with Type 271 radar altimeter, fully digitized fly-by-wire flight control system, and in addition, Type 232H airborne radar is replaced by JL-10A pulse Doppler radar, enabling JH-7A to fire laser-guided bombs and Kh-31P anti-radiation missiles. The existing JH-7s were upgraded with JH-7A electronics. Two additional hardpoints increased the total to 6 from the original 4, and one-piece windscreen replaced the original three-piece windscreen.
+
+SPECIFICATIONS: Crew: (2) || Payload: 9,000 kg[6][7] (19,842 lb) of weapons || Length: 22.32 m (73 ft 2 in) || Wingspan: 12.8 m (41 ft 7 in) || Height: 6.22 m (20 ft 4 in) || Max. takeoff weight: 28,475 kg (62,720 lb) || Powerplant: (2) Xian WS-9 afterburning turbofans || Dry thrust: 54.29 kN (12,250 lbf) each || AB Thrust: 91.26 kN (20,515 lbf) each.
+
+PERFORMANCE: Max Speed: Mach 1.75 (1,808 km/h, 1,122 mph) || Combat radius: 1,759 km (890 nm, 1,093 mi) || Service ceiling: 16,000 m (51,180 ft).
+
+SENSORS: JL-10A radar.
+
+ARMAMENT: (1) 23mm twin-barrel GSh-23L autocannon, 300 rounds || Hardpoints: 9 in total (6) under-wing, (2) wing-tip, (1) under-fuselage) with a capacity of 9,000 kg (20,000 lb) external fuel and ordnance || 57mm/90mm unguided rocket pods || PL-5 AA Missle || PL-8 AA Missle || PL-9 AA Missle || Yingji-8K AS Missle || Yingji-82K AS Missle || Kongdi-88 AS Missle || Yingji-91 Anti-Radiation Missle || Unguided bombs || Laser-guided bombs.
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org

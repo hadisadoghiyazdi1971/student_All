@@ -1,0 +1,7 @@
+OVERVIEW: The AN/ALQ-119 is an external pod mounted, active, dual-mode noise and deception jammer.
+
+DETAILS:  The AN/ALQ-119 is follow on from the AN/ALQ-101 noise and repeater jammer. The AN/ALQ-119 covered the E-J bands (approx. 2 to 20 GHz).  
+
+NOTES: First combat use in 1972.  Used by Germany, Japan and Turkey, Egypt, Israel and the USA.  The AN/ALQ-119 / AN/ALR-46 combination was called Compass Tie.
+
+SOURCES:  International Electronic Countermeasures Handbook. Norwood, MA: Horizon House Publications, 1996,  pg. 63 ; Scramble. "Westinghouse AN/ALQ-119 - Scramble." Accessed November 15, 2014. http://wiki.scramble.nl/index.php/Westinghouse_AN/ALQ-119 ; Federation Of American Scientists -. "ALQ-119 Jamming Pod." Accessed November 15, 2014. http://fas.org/man/dod-101/sys/ac/equip/an-alq-119.htm

@@ -1,0 +1,7 @@
+OVERVIEW: CH-4 is the largest fixed wing UCAV of the Rainbow series (as of end of 2013).CH-4 looks almost identical to General Atomics MQ-9 Reaper, and the only distinct visual difference between two UAVs is that the ventral fin below the V-tail on MQ-9 is absent on CH-4.
+
+DETAILS:There are two versions, the CH-4A and CH-4B. The CH-4A is a reconnaissance drone (capable of a 3500?5000 km range and a 30- to 40-hour endurance) while the CH-4B is a mixed attack and reconnaissance system with provisions for 6 weapons and a payload of up to 250 to 345 kg.
+
+CH-4 is capable of firing air-to-ground missile from altitude of 5,000 meters, therefore the aircraft can stay outside of effective range of most anti-aircraft guns. It also allow CH-4 to be able to fire from a position that provides wider viewing area.
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org

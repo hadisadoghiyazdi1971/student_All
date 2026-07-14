@@ -1,0 +1,8 @@
+OVERVIEW: The AN/FPS-66 is fixed, long-range, L-Band General Air Surveillance Radar
+
+DETAILS: The AN/FPS-66 is fixed, long-range, L-Band general air surveillance radar.  It was the main surveillance radar for the continental United States.
+
+NOTES:  The AN/FPS-66 is upgraded anti-jam version of the AN/FPS-20 surveillance radar that dominated the US radar network.
+
+SOURCES: Federation of American Scientists. "AN/FPS-20 AN/FPS-66 AN/FPS-67 General Surveillance Radar - United States Nuclear Forces." Accessed November 24, 2013. http://www.fas.org/nuke/guide/usa/airdef/an-fps-20.htm
+

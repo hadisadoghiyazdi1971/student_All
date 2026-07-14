@@ -1,0 +1,8 @@
+OVERVIEW: The Ballistic Missile Early Warning System (BMEWS) detects, tracks, and provides tactical warning/attack assessment (TW/AA) of ballistic missiles launched against the U.S., Canada, and the United Kingdom. 
+
+DETAILS: AN/FPS-50 surveillance radar that used a large, fixed-antenna fence system. Two beams were projected from the antenna array. AN/FPS-50 radar was installed these systems at Beale AF, Clear, Alaska, and Thule, Greenland, during the early 1960s. A prototype of BMEWS, located in Trinidad, began providing surveillance and tracking of ballistic missiles by 1958, and went operational on February 4, 1959, to gather data on missiles fired at the Atlantic Missile Range, as well as satellites and meteors.
+ 
+NOTES: Early 1980s AN/FPS-50 was upgraded to AN/FPS-155 "PAVE PAWNS", AN/FPS-120 AN/FPS-123 radars.
+
+SOURCES: Wikipedia, the free encyclopedia. "Ballistic Missile Early Warning System." Accessed November 24, 2013. http://en.wikipedia.org/wiki/Ballistic_Missile_Early_Warning_System ;  "BMEWS - 510 Full Days - Detection Radar." Accessed November 24, 2013. http://www.bwcinet.com/thule/4techdr.htm
+

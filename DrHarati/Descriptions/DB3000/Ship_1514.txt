@@ -1,0 +1,18 @@
+OVERVIEW: The ROTHESAY/PRESIDENT class (Type 12M) is a steam-powered guided missile Frigate (FFG) primarily intended for ASW.
+
+DETAILS:    The ROTHESAY/PRESIDENT class was originally designed as an ASW escort for fleet units.  
+
+Specifications: 
+
+       Displacement:  2,380 tons (standard);  2,800 (full load)
+       Speed: 30 knts
+       Engineering: 2 shaft, 2 steam turbines 
+       Range: 4,500 nm @ 12 knts
+       Complement: 203 
+       In Commission: 1962-1985
+       Completed: 3 (South Africa) 9 (Royal Navy) 2 (New Zealand)
+
+NOTES: Units in class: PRESIDENT KRUGER (F150); PRESIDENT STEYN (F147); PRESIDENT PRETORIUS (F145). A successful design, the Type 12M design was subsequently modified to create the LEANDER-class frigate. The ROTHESAY class was also used by the Royal and New Zealand navies.  
+
+
+SOURCES: Moore, John Evelyn. Jane's Fighting Ships 1987-88.  London: Jane's Pub, 1987, pg. 458, 668 ;  "Rothesay-class Frigate." Wikipedia, the Free Encyclopedia. Accessed May 18, 2015. http://en.wikipedia.org/wiki/Rothesay-class_frigate ; http://www.leander-project.homecall.co.uk/Type%2012m.html.

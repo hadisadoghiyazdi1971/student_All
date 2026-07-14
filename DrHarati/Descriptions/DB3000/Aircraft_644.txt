@@ -1,0 +1,23 @@
+OVERVIEW: The Bell UH-1N Twin Huey is a medium military helicopter that first flew in April, 1969. The UH-1N has a fifteen seat configuration, with one pilot and fourteen passengers. In cargo configuration the UH-1N has an internal capacity of 220 cubic feet (6.23 cubic meters). An external load of 5,000 lb (2,268 kg) can be carried by the UH-1N. The CUH-1N Twin Huey (later CH-135 Twin Huey) was the original version, first ordered by the Canadian Forces.
+
+DETAILS: The UH-1N's main rotor is powered by a PT6T-3/T400 Turbo Twin Pac made up of two Pratt & Whitney Canada PT6 turboshaft power turbines driving a single output shaft. They are capable of producing up to 1,342 kW (1,800 shp). Should one engine fail the remaining engine can deliver 671 kW (900 shp) for 30 minutes or 571 kW (765 shp) enabling the UH-1N to maintain cruise performance at maximum weight.
+
+The United States Marine Corps (USMC) modified a large number of their UH-1Ns with a Stability Control Augmentation System (SCAS) which provides servo inputs to the rotor head to help stabilize the aircraft during flight. This modification removed the gyroscopic "Stabilization Bar" on top of the main rotor head, instead relying on the computer system for stability.
+
+VARIANTS: UH-1N Iroquois - Initial production model, used by the USAF, USN, and USMC. Over the years the primary operators, the USMC has developed a number of upgrades for the aircraft including improved avionics, defenses, and a FLIR turret. The USAF planned to replace their UH-1Ns with the Common Vertical Lift Support Platform to support the service's ICBM activities, but is now examining a life extension for their current fleet. || VH-1N - VIP transport configuration || HH-1N SAR variant || UH-1Y Venom.
+
+VARIANTS CANADIAN: CUH-1N Twin Huey - Original Canadian Armed Forces designation for the UH-1N utility transport helicopter. || CH-135 Twin Huey - Canadian version of the UH-1N. Canada purchased 50 CH-135s with deliveries starting in 1971.
+
+VARIANTS ITALIAN: Agusta-Bell AB 212 - Civil or military utility transport version. || Agusta-Bell AB 121EW - Electronic warfare version for Turkey. || Agusta-Bell AB 212ASW - Anti-submarine warfare, anti-shipping version of the AB 212 helicopter. Operated by the Italian Navy, Hellenic Navy and Islamic Republic of Iran Navy, Peru, Spain, Turkey, and Venezuela. The AB-212ASW is a Model 212 Twin Huey with a prominent radome above the cockpit. A left side winch is used for dipping the Bendix ASQ-18 sonar. Other changes include structural reinforcement for a gross weight of 11,197 lbs (5080 kg), ECM, shipboard deck tie-down attachments and corrosion protection. Armament is two Mk 44 or Mk 46 torpedoes or two depth charges in the ASW role and four AS.12 air-to-surface wire-guided missiles for the anti-shipping role.
+
+TYPE: Medium Utilty Helicopter with EW/ASW/ASUW variants.
+
+SPECIFICATION: Crew: (4) || Capacity: (6-8) combat-equipped troops or equivalent cargo || Length: 57 ft 8 in (12.69 m) || Rotor diameter: 48 ft 0 in (14.6 m) || Height: 14 ft 5 in (4.4 m) || Max. takeoff weight: 10,500 lb (4,762.7 kg) || Powerplant: (2) Pratt & Whitney Canada T400-CP-400 turboshaft, 900 shp (671 kW), (total 1,250 shp) each.
+
+PERFORMANCE: Max Speed: 130 knots (135 mph, 220 km/h) || Cruise speed: 110 knots (126 mph, 207.3 km/h) || Range: 248 nmi (286 mi, 460 km) || Service ceiling: 17,300 ft (5,273 m) || Rate of climb: 1,755 ft/min (8.9 m/s).
+
+SENSORS: AN/AAR-47A (MAWS) Missle Approach Warning System || Target Sight System (TSS) forward looking infrared (FLIR) sensor that provides target sighting (day, night or adverse weather conditions) and can track with FLIR or by TV || AN/APR-39B (RWR) Radar Warning Receiver || AN/AVR-2 (LWR) Laser Warning Receiver || AN/ALQ-144A IRCM.
+
+ARMAMENT: 2.75-inch (70 mm) rocket pods || 0.50 in (12.7 mm) GAU-16 machine gun || 7.62 mm (0.308 in) GAU-17 minigun or 7.62 mm (0.308 in) M240 lightweight machine gun.
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org

@@ -1,0 +1,20 @@
+OVERVIEW: The AIM-9B Sidewinder is a short-range, supersonic, infrared guided (IR) air-to-air missile with a 4.5 kilogram warhead.   
+
+DETAILS:  The AIM-9B Sidewinder is capable of only rear-aspect attacks.  Designed to intercept lumbering bombers, the AIM-9B was ill suited to dogfighting at low level. Its launch load factor limit of 2G hampered aircrew, while its seeker very often locked on to the sun or clouds, subsequently sending the missile ballistic.  At lower altitudes ground infrared interfered with target IR.   
+
+Specifications:
+Weight:			76 kg 
+Length: 		2.83 m 
+Diameter: 		127 mm 
+Wingspan: 		0.53 m
+Warhead:		4.5 kg, blast fragmentation 
+
+PERFORMANCE: 
+Operational range: 	2.0 km (1.1 mn) sea level ; 4.6 km (2.5nm) at 30K feet.
+Speed: 			2.5 mach
+Maneuverability:	12 g
+
+NOTES: IOC 1956. Developed in the early 1950's and continually updated, the AIM-9 family is one of the oldest, least expensive, and most successful air-to-air missiles, with an estimated 270 aircraft kills in its history of use. The AIM-9F was the European version of the AIM-9B.  The primary difference is a more sensitive CO2-based cooler for the seeker head.  Also called the AIM-9B FGW.2.
+
+SOURCES: Friedman, Norman, "The Naval Institute Guide to World Naval Weapons Systems, 1997-1998, Annapolis, MD: Naval  
+Institute Press, 1997, pg. 427 ; "AIM-9 Sidewinder - Military Power." Welcome to the Military Power Wiki - Military Power. Accessed September 1, 2015. http://militarypower.wikidot.com/aim-9-sidewinder ; "AIM-9 Sidewinder." Federation Of American Scientists -. Accessed September 1, 2015. http://fas.org/man/dod-101/sys/missile/aim-9.htm ; "AIM-9 Sidewinder." Wikipedia, the Free Encyclopedia. Accessed September 1, 2015. https://en.wikipedia.org/wiki/AIM-9_Sidewinder ; "Raytheon AIM-9 Sidewinder." Designation-Systems.Net. Accessed September 1, 2015. http://www.designation-systems.net/dusrm/m-9.html ; "The Sidewinder Story / The Evolution of the AIM-9 Missile." Air Power Australia. Accessed September 1, 2015. http://www.ausairpower.net/TE-Sidewinder-94.html ; "U.S. Naval Museum of Armament & Technology." U.S. Naval Museum of Armament & Technology. Accessed September 1, 2015. http://www.chinalakemuseum.org/exhibits/sidewinder.shtml ; "US Air-to-Air Missiles." Accessed September 2, 2015. http://www.pmulcahy.com/aams/us_aams.htm.

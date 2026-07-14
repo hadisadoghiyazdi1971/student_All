@@ -1,0 +1,22 @@
+OVERVIEW: The AN/FPS-117 SEEK IGLOO is a low power, long range, phased array, 3-D air search radar that operates in the "D" Band.   
+
+DETAILS: The AN/FPS-117 is designed to provide long-range detection and coverage for drug interdiction support and tactical command and control. The  System includes a redundant architecture with computer software remote controlled and monitored operations to minimize manning requirements. It can select between 18 randomly selected channels within its frequency band to counter jamming.
+
+Specifications:
+
+Frequency: 		1.215-1.4 GHz (D Band)
+Power output: 		 5.2 kW(average);   29 kW (peak) 
+PRF:			 241 Hz	
+Range Resolution:	>50 m (range),  0.18 degrees azimuth 					
+On/Off time:		unknown
+Deploy/Stow Time	N/A
+
+Detection Range 
+80% Pd, 1 m2 RCS target:  330 km
+Max Range:		470 km
+
+  
+NOTES:  IOC 1980. It is in part of the American-Canadian North Warning System. The Air Force and the FAA also operate a limited number of AN/FPS-117 radars within the continental United States.  The AN/FPS-117 is in operation in several other countries including Australia, Belgium, Brazil, Croatia, Denmark, Estonia, Germany, Hungary, Iceland, Iraq, Italy, Jordan, Kuwait, Latvia, Pakistan, Romania, Saudi Arabia, Singapore, South Korea, Taiwan, Thailand and the United Kingdom. The transportable version is called AN/TPS-77
+
+SOURCES: Federation of American Scientists. "AN/FPS-117 North Warning System - United States Nuclear Forces." Accessed November 24, 2013. http://www.fas.org/nuke/guide/usa/airdef/an-fps-117.htm ;  Wikipedia, the free encyclopedia. "AN/FPS-117." Accessed November 24, 2013. http://en.wikipedia.org/wiki/AN/FPS-117 ; "AN/FPS-117." Wikipedia, the Free Encyclopedia. Accessed March 22, 2015. http://en.wikipedia.org/wiki/AN/FPS-117 ; Lockheed Martin, "FPS-117 Fact Sheet," http://www.lockheedmartin.com/content/dam/lockheed/data/ms2/documents/FPS-117-fact-sheet.pdf ; AN/FPS Series." Alternate Wars. Accessed March 22, 2015. http://www.alternatewars.com/BBOW/Radar/FPS_Series.htm.
+

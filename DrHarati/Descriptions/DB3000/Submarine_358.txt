@@ -1,0 +1,19 @@
+OVERVIEW: The Skipjack class was a class of United States Navy nuclear submarines. This class was named after its lead ship, the USS Skipjack. This new class introduced the teardrop hull and the S5W reactor to U.S. nuclear submarines. The Skipjacks were the fastest U.S. nuclear submarines until the Los Angeles-class submarines.
+
+DETAILS: The Skipjack's design was based on the successful Barbel-class submarines that were based on the USS Albacore design. The design of the Skipjacks was very different from the Skate-class submarines that preceded the Skipjacks. Unlike the Skates, this new design was maximized for underwater speed by shaping the hull like a blimp. This required that the single screw was aft of the rudders and dive planes. This so-called "body-of-revolution hull" reduced her surface sea-keeping, but was essential for underwater performance. Skipjack's hull was also a single hull design, where the pressure hull and outer hull are the same for most of the length of the ship.
+ 
+The bow planes were moved to the massive sail to cut down on flow-induced noise near the bow sonar array. This design feature would be repeated on all U.S. nuclear submarines until the improved Los Angeles-class submarine. The small "turtleback" behind the sail was the exhaust piping of the auxiliary diesel generator.
+ 
+The Skipjacks also introduced the S5W reactor to U.S. nuclear submarines. The S5W was used on 98 U.S. nuclear submarines and the first British nuclear submarine, HMS Dreadnought.
+ 
+The George Washington-class submarines were based on the Skipjack design. The hull of Scorpion was laid down twice as the original hull was redesigned to become the first US ballistic missile submarine George Washington. Also, the material for building Scamp was diverted into building Theodore Roosevelt, which delayed her progress.
+
+ARMAMENT: The Skipjack class submarine had six 21" forward torpedo tubes capable of launching Mark 37 torpedoes, Mark 14 torpedoes, Mark 16 torpedoes, Mark 27 torpedoes, or Mark 45 ASTOR nuclear torpedoes.
+
+SERVICE: The first Skipjack class was authorized in the FY 1956 new construction programmed with the first of the class commissioned in April 1959. Each hull cost around $40 million. The Skipjacks saw service in Vietnam and throughout the Cold War. The Skipjack-class submarines were withdrawn from service in the late 1980s and early 1990s except for the Scorpion, which sank on 5 June 1968 in the south west Azores, while returning from a Mediterranean deployment.
+
+SPECIFICATION: Length 252 ft, Beam 31 ft, Displacement 3513 tons, Speed (Wikipedia Estimate) 33 kts, Depth Test (Wikipedia Estimate) 700 ft, Crew 93.
+
+SHIPS BUILT: USS Skipjack (SSN-585), USS Scamp (SSN-588) USS Scorpion (SSN-589), USS Sculpin (SSN-590), USS Shark (SSN-591), USS Snook (SSN-592).
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org

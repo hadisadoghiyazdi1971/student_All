@@ -1,0 +1,7 @@
+OVERVIEW: General Air Survellaince Radar
+
+DETAILS: Altitude measurements are done with the SGR.109 HF radar.
+
+NOTES: 
+
+SOURCES: 

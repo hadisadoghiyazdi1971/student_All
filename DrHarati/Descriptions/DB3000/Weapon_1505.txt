@@ -1,0 +1,15 @@
+OVERVIEW: The FAB-250-54 (Fugasnaya Aviabomba) is a general purpose (GP) freefall bomb with a high explosive filler.
+
+
+DETAILS: The high-drag FAB-250-54 fragmentation bomb can be released at 500-1,200 km/hr speed and up to 500-12,000 meters altitude. It can be fitted with a braking system allowing low-level delievery, with a release envelope of 500-1,000 km/hr speed and up to 50-500 meters altitude.  
+
+
+Weight: 	 230 kg
+Filling Weight:	  97 kg (TNT equivalent)
+
+
+
+NOTES:  IOC 1954 (approx).  The OFAB-250-270 is designed for use against lightly or unarmored targets, fortifications and industrial targets. 
+
+
+SOURCES:  Bazalt, "SRPE Bazalt," pg. 16, https://missiles2go.files.wordpress.com/2012/02/bazalt_08_.pdf

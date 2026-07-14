@@ -1,0 +1,23 @@
+OVERVIEW: The JY-27 WIDE MAT is a long-range 2-D surveillance and early warning radar operating in the A/B-band  
+
+DETAILS: The JY-27 is claimed to have pseudorandom frequency hopping, and ECCM capabilities.  
+
+Specifications:
+
+Frequency: 		  30-300 MHz (approx) ( A/B Band (NATO),  VHF Band (IEEE)))  
+Power output: 		  unknown kW(average);  unknown kW (peak) 
+PRF:			  unknown pps	
+Range Resolution:	  150 m (range),  1 degrees azimuth 					
+On/Off time:		  unknown
+Deploy/Stow Time	  unknown min/ unknown min
+ 
+Detection Range:
+Pd=80%, 1.5 m2 RCS:
+tgt alt. 100m:		 km
+tgt alt. 18000m:	 km
+Max Range:		 444-722 km
+
+  
+NOTES:  Design appears to be influenced by the 1L13 Nebo SV  BOX SPRING and 1L119 Nebo SVU.  The design may provide a valuable early warning capability against stealth-type aircraft.
+
+SOURCES: "PLA Air Defence Radars." Air Power Australia. Accessed March 28, 2015. http://www.ausairpower.net/APA-PLA-IADS-Radars.html ; "Russian / PLA Low Band Surveillance Radar Systems (Counter LowObservable Technology Radars)." Air Power Australia. Accessed March 28, 2015. http://www.ausairpower.net/APA-Rus-Low-Band-Radars.html#mozTocId132830.

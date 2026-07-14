@@ -1,0 +1,24 @@
+OVERVIEW:  The SA-4a GANEF (2K11, 3M8M1) battery is a mobile, air defense unit intended to protect combat formations against medium-to-high level air threats at medium range.
+
+DETAILS:  
+
+A typical engagment begins with the initial target detection P-40 "Long Track" early warning E-band radar, which has a 150 km range and 30 km maximum altitude coverage. Target data is then passed to the SA-4 `Ganef' battery where the 1S32 H-band `Pat Hand' continuous wave fire control and command guidance radar takes over. This radar typically acquires the target at about 120 to 130 km and, when it is within 80 to 90 km, tracking can begin. The PRV-9 "Thin Skin" truck or trailer-mounted height-finder radar also provides height information. If required, the `Pat Hand' can handle two missiles per target in order to increase kill probability. Optical tracking is possible for guidance in a heavy ECM environment.
+
+Specifications:
+
+Maximum Acqusition Range: 	81 nm (LONG TRACK)
+Maximum Tracking Range:		43 nm (PAT HAND)
+Engagement Envelope:
+	Range:			 4.8-27 nm (9-50 km)
+	Altitude		 820-80,400 feet (250-24,500 m)
+
+Reload time:			10-15 minutes/missile
+Emplacement /Displacement	5 minutes
+Mobility:			Mobile, tracked
+
+
+NOTES:  IOC: 1967.  Bulgaria, Czechoslovakia, Hungary, East Germany, Poland, Soviet Union ( Armenia, Azerbaijan, Russia )
+
+ 
+
+SOURCES: "2K11 Krug." Valka.cz. Accessed December 9, 2016. http://www.valka.cz/1147-2K11-Krug ; "Legacy Air Defence System Vehicles." Air Power Australia. Accessed December 9, 2016. http://www.ausairpower.net/APA-Legacy-SAM-TEL-TL.html#mozTocId438509 ; "SA-4 Ganef 2K11 Krug Air Defense Missile System Technical Data Sheet 13012155 | Russia Russian Missile System Vehicle UK | Russia Russian Army Military Equipment Vehicles UK." Global Military Army Magazine Defence Security Industry Technology News Exhibition World Land Forces - Army Recognition. Accessed December 9, 2016. http://www.armyrecognition.com/russia_russian_missile_system_vehicle_uk/sa-4_ganef_2k11_krug_air_defense_missile_system_technical_data_sheet_13012155.html.

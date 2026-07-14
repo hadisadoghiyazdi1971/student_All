@@ -1,0 +1,18 @@
+OVERVIEW: The Yu-7 is a lightweight ASW torpedo armed with a 45 kg shaped charge warhead with contact fuzing.
+
+DETAILS:  The Yu-7 employs active and passive sonar for search and attack phases and homing to a selected target.  It is estimated to have similar capabilities to the A244 torpedo.
+
+Specifications:
+
+Weight:		235 kg
+Length:		2.70 m
+Diameter: 	324 mm
+Speed:		43 kt
+Range: 		7.6 nm
+Depth:		6-400 m
+
+
+NOTES:  IOC: 1994. Possibly based on a reverse engineered A244/S or Mk 46. The Yu-7 is designed to be launched from standard torpedo tubes on surface ships and from helicopters and maritime patrol aircraft. The torpedo was initially provided with an electric power plant and at some undetermined stage was redesigned to use an Otto II fuel system.
+
+SOURCES:  Jane's Weapons: Naval, "Yu-7/ET-52 torpedo", 20 October 2016 ; 
+"YU-7 ANTI-SUBMARINE TORPEDO." China Defense Today. Last modified October 5, 2013. http://www.sinodefence.com/navy/weapon/yu7.asp ; "Yu-7 Torpedo - Wikipedia." Wikipedia, the Free Encyclopedia. Accessed December 4, 2016. https://en.wikipedia.org/wiki/Yu-7_torpedo.

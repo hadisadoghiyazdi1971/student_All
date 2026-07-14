@@ -1,0 +1,23 @@
+OVERVIEW:  The AN/TPS-71 Relocatable Over-the-Horizon Radar (ROTHR) is an HF frequency, tactical, land-based, bistatic ionospheric backscatter radar designed to provide a wide area over-the-horizon surveillance of both aircraft and ships in support of tactical forces.
+
+DETAILS: The AN/TPS-71 ROTHR is designed to provide tactical warning to battle group commanders of air and surface threats at an extended range allowing time for responsive engagement.  The system consists of three distinct elements; a transmit site, a receive site and an operations control centre. The transmit and receive sites are separated by about 50 to 100 nautical miles (92 to 185 km). 
+ 
+
+Specifications:
+
+Frequency			5-28 MHz (A Band (NATO), HF Band (IEEE))
+Power output: 			200kW (peak)
+PRF:				
+Angular Resolution:		0.5 degrees		
+On/Off time: 			 
+Deploy/Stow time: 		N/A
+Range:				926 to 2,963 km
+(1.5m2 RCS at 100m alt)		unk km
+(1.5m2 RCS at 5000m alt)	unk km
+(1.5m2 RCS at 12000m alt)	unk km
+
+
+NOTES: IOC .  Currently operated at Corpus Christi, TX and Chesapeake, VA. Although the transmitters, receivers and the operational control centre are transportable, the transnsmit and receive antennas are not intended to be relocatable, and redeployment sites would be preprepared with antennas and cables.
+
+SOURCES: "AN/TPS-71 ROTHR (Relocatable Over-the-Horizon Radar) - United States Nuclear Forces." Federation Of American Scientists – Science for a Safer, More Informed World. Accessed November 28, 2018. https://fas.org/nuke/guide/usa/airdef/an-tps-71.htm.; Liu, Bin-Yi Liu. "HF OVER-THE-HORIZON RADAR SYSTEM PERFORMANCE ANALYSIS." DTIC Online. Last modified September 2007. https://apps.dtic.mil/dtic/tr/fulltext/u2/a474069.pdf ; 
+"Radar Basics - ROTH." Grundlagen Der Radartechnik. Accessed November 28, 2018. http://www.radartutorial.eu/19.kartei/01.oth/karte006.en.html.

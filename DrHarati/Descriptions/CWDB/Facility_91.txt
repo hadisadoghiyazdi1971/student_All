@@ -1,0 +1,7 @@
+OVERVIEW: Long range, fixed, early warning radar. Type 80 changed older Rotor radar system in early 1957. 
+
+DETAILS: As the anticipated Type 80 "Green Garlic" radar started testing shortly after ROTOR came online, it became clear that it could fill both early warning and interception guidance from a single site. This dramatically decreased the complexity of the ROTOR system, which otherwise required sightings from the early warning radars to be telephoned to the fighter control GCI stations for local plotting. By concentrating all of this complexity at a single site the total number of operators was greatly reduced. Until the end of the Cold War many of the sites were retained by the government but now have been sold off to private buyers or converted into museums (for example 'RAF Hack Green') and some transferred to the National Air Traffic Control Centre.
+
+NOTES: Type 80 was easy to jam and some sites upgraded to Type 84 early 1960's.
+
+SOURCES: Wikipedia: "ROTOR" http://en.wikipedia.org/wiki/ROTOR ; The Radar Pages: "Rotor radar system" http://www.radarpages.co.uk/mob/rotor/rotorarticle1.htm

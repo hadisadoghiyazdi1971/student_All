@@ -1,0 +1,19 @@
+OVERVIEW: The Bell AH-1 SuperCobra is a twin-engine attack helicopter based on the United States Army's AH-1 Cobra. The twin Cobra family includes the AH-1J SeaCobra, the AH-1T Improved SeaCobra, and the AH-1W SuperCobra. The AH-1W is the backbone of the United States Marine Corps's attack helicopter fleet, but it will be replaced in service by the Bell AH-1Z Viper upgrade.
+
+DETAILS: In the early 1980s, the U.S. Marine Corps sought a new navalized helicopter, but it was denied funding to buy the AH-64 Apache by Congress in 1981. The Marines in turn pursued a more powerful version of the AH-1T. Other changes included modified fire control systems to carry and fire AIM-9 Sidewinder and AGM-114 Hellfire missiles. The new version was funded by Congress and received the AH-1W designation. Deliveries of AH-1W SuperCobras totaled 179 new-built helicopters plus 43 upgrades of AH-1Ts.
+
+The AH-1T+ demonstrator and AH-1W prototype was later tested with a new experimental composite four blade main rotor system. The new system offered better performance, reduced noise and improved battle damage tolerance. Lacking a USMC contract, Bell developed this new design into the AH-1Z with its own funds. By 1996, the Marines were again not allowed to order the AH-64. Developing a marine version of the Apache would have been expensive and it was likely that the Marine Corps would be its only customer. They instead signed a contract for upgrading 180 AH-1Ws into AH-1Zs.
+
+The AH-1Z Viper features several design changes. The AH-1Z's two redesigned wing stubs are longer with each adding a wing-tip station for a missile such as the AIM-9 Sidewinder. Each wing has two other stations for 70 mm (2.75 in) Hydra rocket pods, or AGM-114 Hellfire quad missile launcher. The Longbow radar can be mounted on a wing tip station.
+
+TYPE: Twin Engine Attack Helicopter.
+
+SPECIFICATIONS: Crew: (2) pilot, co-pilot/gunner (CPG) || Length: 58 ft (17.7 m) || Rotor diameter: 48 ft (14.6 m) || Height: 13 ft 9 in (4.19 m) || Max. takeoff weight: 14,750 lb (6,690 kg) || Powerplant: (2) General Electric T700-401 turboshaft, 1,690 shp (1,300 kW) each || Rotor systems: 2 blades on main rotor, 2 blades on tail rotor || Fuselage length: 45 ft 7 in (13.9 m) || Stub wing span: 10 ft 9 in (3.28 m).
+
+PERFORMANCE: Max Speed: 190 knots (218 mph, 352 km/h) || Range: 317 nmi (365 mi, 587 km) || Service ceiling: 12,200 ft (3,720 m) || Rate of climb: 1,620 ft/min (8.2 m/s).
+
+SENSORS: AN/AAR-47A (MAWS) Missle Approach Warning System || Generic FLIR || AN/APR-39B (RWR) Radar Warning Receiver || AN/AVR-2 (LWR) Laser Warning Receiver || ICRN || Laser Target Designator.
+
+ARMAMENT: (1) 20 mm (0.787 in) M197 3-barreled Gatling cannon in the A/A49E-7 turret (750 rounds ammo capacity) || 2.75 in (70 mm) Hydra 70 rockets || APKWS II rockets || 5 in (127 mm) Zuni rockets || TOW missiles || AGM-114 Hellfire missiles || AIM-9 Sidewinder anti-aircraft missiles.
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org

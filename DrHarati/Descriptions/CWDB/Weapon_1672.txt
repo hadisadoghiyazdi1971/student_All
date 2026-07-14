@@ -1,0 +1,10 @@
+OVERVIEW: The CBU-24/B is an unguided, free-falling cluster bomb designed for attacking area targets with fragmentation munitions.
+ 
+DETAILS:  The CBU-24 (Cluster Bomb Unit-24) is an unguided, aircraft delivered bomb.   It consists of a SUU-30 dispenser unit containing a payload of 665 tennis ball-sized BLU-26 fragmentation bomblets. Each submunition is designed to detonate and damage or destroy targets by explosion, concussion and fragmentation effects. While most BLU-26 submunitions explode on impact, they can also be set for air-burst or a fixed or random-period delayed detonation. The time-delay function is designed to continue to deny the area to the enemy for some time after the initial attack and hamper clean up and casualty recovery operations. While designed as an anti-personnel weapon, the bomblets can also damage structures and soft vehicle targets within the target area.
+  
+NOTES: 
+
+
+SOURCES: "CBU-24." Wikipedia, the Free Encyclopedia. Accessed April 11, 2015. http://en.wikipedia.org/wiki/CBU-24.
+
+

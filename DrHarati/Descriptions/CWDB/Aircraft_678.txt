@@ -1,0 +1,23 @@
+OVERVIEW: The Mikoyan-Gurevich MiG-17 NATO reporting name: Fresco (China:Shenyang J-5) is a high-subsonic fighter aircraft produced in the USSR from 1952 and operated by numerous air forces in many variants. It is an advanced development of the very similar appearing MiG-15 of the Korean War.
+
+The MiG-17 first saw combat in 1958 over the Straits of Taiwan and was used as an effective threat against supersonic fighters of the United States in the Vietnam War.
+
+DETAILS: The Mig-17 was one of the most successful transonic fighters introduced before the advent of true supersonic types such as the Mikoyan-Gurevich MiG-19 and North American F-100 Super Sabre. The design would ultimately still prove effective into the 1960s when pressed into dogfights over Vietnam against supersonic types which were generally flown at subsonic speeds, and not optimized for subsonic maneuvering short-range engagements.
+
+The MiG-17 was designed to be controllable at higher Mach numbers. Early versions which retained the original Soviet copy of the Rolls-Royce Nene VK-1 engine were heavier with equal thrust. Later MiG-17s would be the first Soviet fighter application of an afterburner which offered increased thrust on demand by dumping fuel in the exhaust of the basic engine.
+
+Though the MiG-17 still strongly resembles its forebear, it had an entirely new thinner and more highly swept wing and tailplane for speeds approaching Mach 1. The wing had a "sickle sweep" compound shape with a 45 degree angle like the U.S. F-100 Super Sabre near the fuselage (and tailplane), and a 42 degree angle for the outboard part of the wings. The stiffer wing resisted the tendency to bend its wingtips and lose aerodynamic symmetry unexpectedly at high speeds and wing loads.
+
+Serial production started in August 1951, but large quantity production was delayed in favor of producing more MiG-15s so it was never introduced in the Korean War. It did not enter service until October 1952, when the MiG-19 was almost ready to be flight tested. During production, the aircraft was improved and modified several times. The basic MiG-17 was a general-purpose day fighter, armed with three cannons, one Nudelman N-37 37mm cannon and two 23mm with 80 rounds per gun, 160 rounds total. It could also act as a fighter-bomber, but its bombload was considered light relative to other aircraft of the time, and it usually carried additional fuel tanks instead of bombs.
+
+In early 1953 the MiG-17F day fighter entered production. The "F" indicated it was fitted with the VK-1F engine with an afterburner by modifying the rear fuselage with a new convergent-divergent nozzle and fuel system. The afterburner doubled the rate of climb and greatly improved vertical maneuvers. But while the plane was not designed to be supersonic, skilled pilots could just dash to supersonic speed in a shallow dive, although the aircraft would often pitch up just short of Mach 1. This became the most popular variant of the MiG-17. The next mass-produced variant, MiG-17PF ("Fresco D") incorporated a more powerful Izumrud RP-2 radar, though they were still dependent on Ground Control Interception to find and be directed to targets. In 1956 a small series (47 aircraft) was converted to the MiG-17PM standard (also known as PFU) with four first-generation Kaliningrad K-5 (NATO reporting name AA-1 'Alkali') air-to-air missiles. A small series of MiG-17R reconnaissance aircraft were built with VK-1F engine (after first being tested with the VK-5F engine).
+
+Almost 8,000 MiG-17s were built in the USSR by 1958. Over 3,000 were built under licence in Poland, Czechoslovakia and China.
+
+SPECIFICATION: Crew: (1) || Length: 11.26 m (36 ft 11 in) || Wingspan: 9.63 m (31 ft 7 in) || Height: 3.80 m (12 ft 5 in) || Empty Weight: 3,919 kg[48] (8,640 lb) || Loaded Weight: 5,350 kg (11,770 lb) || Max Takeoff Weight: 6,069 kg (13,375 lb) || Powerplant: (1) Klimov VK-1F afterburning turbojet || Dry Thrust: 22.5 kN (5,046 lbf) || AB Thrust: 33.8 kN (7,423 lbf).
+
+PERFORMANCE: Max Speed: 1,145 km/h (618 knots, 711 mph) at 3,000 m (10,000 ft) || Range: 2,060 km (1,111 nmi, 1,280 mi) with drop tanks || Service Ceiling: 16,600 m (54,450 ft) || Rate of Climb: 65 m/s (12,800 ft/min) || Thrust/Weight: 0.63.
+
+ARMAMENT: Guns: (1) 37 mm Nudelman N-37 cannon (40 rounds total) || Guns: (2) 23 mm Nudelman-Rikhter NR-23 cannons (80 rounds per gun, 160 rounds total) || Hardpoints: Up to 500 kg (1,100 lb) of external stores on two pylons, including 100 kg (220 lb) and 250 kg (550 lb) bombs, unguided rockets or external fuel tanks. || Note: Some versions equipped with 3x NR-23 cannons and 4x K-13 missiles.
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org

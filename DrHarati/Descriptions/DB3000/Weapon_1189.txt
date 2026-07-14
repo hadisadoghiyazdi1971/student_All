@@ -1,0 +1,21 @@
+OVERVIEW: The UGM-84D or Block 1C Harpoon is an submarine launched, turbo-jet powered, solid-fuel, sea-skimming, long range, radar guided anti-ship missile equipped with a 221 kilogram warhead.
+
+DETAILS: The UGM-84 Harpoon is the primary anti-surface weapon used by many Western navies.  Unlike the surface and air launched versions of Harpoon, the submarine-launched version is deployed from a buoyant capsule.
+
+	Prior to launch, the radar is programed for a large, medium or small acquisition window.  Although a smaller acquisition window requires more precise  
+targeting data, it also minimizes target warning time. Prior to launch, the Harpoon is also programmed to one of two modes: The Range and Bearing Launch (RBL) or the Bearing Only mode. In the RBL mode, the UGM-84D Harpoon descends to a low cruise altitude immediately after launch, using its radar altimeter and inertial navigation to guide it to a preselected point near the calculated target position.  It then activates its frequency-agile, active J-band (10 to 20 GHz) radar seeker to guide it to the target.  In the Bearing Only launch mode, the Harpoon is launched down a target bearing and the radar seeker is activated shortly after launch.  If no suitable target is found, the Harpoon switches to a search pattern and self-destructs if it fails to acquire a target.
+
+	In either mode, once the seeker acquires a target, the missile enters the terminal attack phase, approaching to approximately 1.5 km from the target before executing a "pop-up" maneuver that terminates with a dive into the target.
+
+Specifications:
+
+Speed:	0.85 mach
+Range:	222 km
+Weight: 544 kg
+ 
+
+NOTES: IOC 1985. The UGM-84D features a significantly increased range over earlier models by changing its fuel from JP-6 to JP-10. It also incorporates ECCM improvements and includes a sea-skimming attack profile in addition to the pop-up attack profile.  It also allows the firing platform to program the missile to use multiple "dog legs" in its flight path, helping the firing unit to conceal its position.
+
+
+SOURCES: Friedman, Norman, "The Naval Institute Guide to World Naval Weapons Systems, 1997-1998, Annapolis, MD: Naval Institute Press, 1997, pg. 255-6 ; "RGM-84 Harpoon/SLAM - Smart Weapons." Federation Of American Scientists. Accessed August 21, 2015. http://fas.org/man/dod-101/sys/smart/RGM-84.htm ; Boeing. "Backgrounder: Harpoon Block II." Last modified March 2013. http://www.boeing.com/assets/pdf/defensespace/missiles/harpoon/docs/HarpoonBlockIIBackgrounder.pdf ; "MCDONNELL-DOUGLAS RGM-84L HARPOON and RGM-84E SLAM." Air Power Australia. Accessed August 21, 2015. http://www.ausairpower.net/TE-Harpoon.html ; "Harpoon." Weaponsystems.net. Accessed August 21, 2015. http://weaponsystems.net/weaponsystem/HH10%20-%20Harpoon.html ; "Boeing RGM/RGM/UGM-84 Harpoon." Designation-Systems.Net. Accessed August 21, 2015. "Boeing AGM/RGM/UGM-84 Harpoon." Designation-Systems.Net. Accessed August 21, 2015. http://www.designation-systems.net/dusrm/m-84.html.
+

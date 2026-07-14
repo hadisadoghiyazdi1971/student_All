@@ -1,0 +1,13 @@
+OVERVIEW: The SOVREMENNY DDG is a large, steam-turbine powered ASUW destroyer.
+
+DETAILS:   The SOVREMENNY class DDG is intended primarily for surface warfare and complements the UDALOY-class destroyer in this role. Because of this, it carries minimal ASW armament. It also is intended to provide anti-air capability for a task force.  A total of eighteen were constructed.  There were reports that several of the units built in the early 1980s suffered from poor maintenance and a structural design flaw in the high-pressure steam boiler system, limiting their ability to go to sea.  The SOVREMENNY class is used by the Soviet Union, Russia, and China.
+
+NOTES: Displacement: 6200 tons standard
+       Speed: 35 knts
+       Range: 2400 nm @ 32 knts; 10500 nm at 14 knts
+       Complement: 350 (approx.)
+       In Commission: 1980  
+
+SOURCES:  Polmar, Norman, and Siegfried Breyer. Guide to the Soviet Navy. Annapolis, Md: Naval Institute Press, 1983, 155-56 ; GlobalSecurity.org - Reliable Security Information. "Sovremenny Class - Project 956." Accessed November 16, 2013. http://www.globalsecurity.org/military/world/russia/956.htm  ; Federation of American Scientists. "Udaloy Class - Project 1155." Accessed November 12, 2013. http://www.fas.org/man/dod-101/sys/ship/row/rus/1155_1.htm
+
+

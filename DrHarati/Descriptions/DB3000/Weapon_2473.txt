@@ -1,0 +1,9 @@
+OVERVIEW: The AN/ALQ-220 Organic Airborne and Surface Influence Sweep (OASIS) is a helicopter-towed minesweeping device.
+
+DETAILS: Description: The AN/ALQ-220,  is a airborne minesweeping system tailored for rotary wing aircraft, and is designed to give carrier and amphibious battlegroup commanders  an organic capability to conduct rapid minesweeping missions. The system consists of a towed body, a magnetic/acoustic influence capability, a control/monitoring system under software control and interfaces to the helicopter Carriage, Stream, Tow, and Recovery System and the Common Console.
+
+
+NOTES: The AN/ALQ-220 is designed to provide organic, high speed magnetic/acoustic influence minesweeping capability where minehunting is not feasible, where mines are difficult to detect, and avoidance of the area is not an option. 
+ 
+
+SOURCES:  Guide to Military Equipment and Civil Aviation. "AN/ALQ-220 OASIS." Accessed October 26, 2014. http://www.deagel.com/Helicopter-Protection-Systems/ANALQ-220-OASIS_a001390001.aspx ; GlobalSecurity.org - Reliable Security Information. "AN/ALQ-220 Organic Airborne and Surface Influence Sweep." Accessed October 26, 2014. http://www.globalsecurity.org/military/systems/aircraft/systems/an-alq-220.htm.

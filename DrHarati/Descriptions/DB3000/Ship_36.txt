@@ -1,0 +1,21 @@
+OVERVIEW: The HERCULES class (Type 42 Batch 1) is a COGOG-powered guided missile destroyer (DDG).
+
+DETAILS:    The HERCULES class is an exported Type 42 Batch 1 DDG. As built, it was identical to the initial Type 42 units commissioned by the Royal Navy. The Argentine Navy upgraded the warship by enhancing her offensive capabilities with MM-38 Exocet missiles.  The Type 42 was designed to provide area air defense  for a task force. The class used a combined gas or gas  (COGOG) to power its two shafts. In this system, a high efficiency, low  output turbine is used for cruising speeds with a high output turbine being used for high-speed operations. 
+
+Specifications: 
+
+       Displacement:  3,150 tons (standard);  4,100 (full load)
+       Speed: 30 knts
+       Engineering: 2 shaft, 4 gas turbines (2 for full power, 2 for cruise)
+       Range: 4,000 nm @ 18 knts
+       Complement: 270 
+       In Commission: 1976-to date
+       Completed: 2
+
+NOTES: Units in class: HERCULES (D1, ex-28); SANTISIMA TRINADAD (D2).  Six units were also operated by the Royal Navy. Initially  
+conceived as a lighter and cheaper alternative to the Type 82, while maintaining much of the Type 82's capabilities. In 2000, the  
+HERCULES was modified to allow the embarking 238 marines, giving it an amphibious capability. The SANTISIMA TRINADAD was taken  
+out of service in 1989 and used for spare parts for the HERCULES.
+
+
+SOURCES: Moore, John Evelyn. Jane's Fighting Ships 1987-88.  London: Jane's Pub, 1987, pg. 13, 662 ;  "Type 42 Destroyer." Wikipedia, the Free Encyclopedia. Accessed May 17, 2015. http://en.wikipedia.org/wiki/Type_42_destroyer ; "ARA Hércules (B-52)." Wikipedia, the Free Encyclopedia. Accessed May 17, 2015. http://en.wikipedia.org/wiki/ARA_H%C3%A9rcules_(B-52).

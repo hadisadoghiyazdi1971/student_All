@@ -1,0 +1,19 @@
+OVERVIEW: The OBERON is a diesel-powered patrol submarine (SSK).
+
+DETAILS:  The OBERON class were heavily based on the earlier PORPOISE-class SSK, with the exception of their using a different steel and glass firre laminate in the hull to increase strength.  They are exceptionally quiet underwater, in part due to careful attention to detail in the mounting of  machinery, and advances made in propeller design to prevent cavitation. Their quietness, combined with a very effective long-range sonar suite, made them a very capable in their role patrolling chokepoints to detect transiting Soviet submarines.
+ 
+
+Specifications:
+ 
+	Displacement: 2,030 (surfaced);  2,410 tons submerged.
+	Speed: 12 knts (surfaced) 17 knts  (submerged)
+       	Engineering: 2 diesel engines; 2 -3-bladed propeller
+	Diving Depth: 800-900 feet
+	Range: 9,000 nm (surfaced)	
+      	Complement: 65       
+     	Hulls built: 3 (Canada) 
+	Period of Service: 1965-2000 (Australia and Canada) 
+
+NOTES: Units in class: OJIBWA (72); ONONDAGA (73) ; OKANAGAN (74). 
+
+SOURCES:  Moore, John Evelyn. Jane's Fighting Ships 1987-88.  London: Jane's Pub, 1987, pg. 72, 659 ; Oberon-class submarine - Wikipedia, the free encyclopedia. (n.d.). Retrieved May 4, 2015, from http://en.wikipedia.org/wiki/Oberon-class_submarine ; ; http://arl.g3w1.com/Subs/index.htm

@@ -1,0 +1,9 @@
+OVERVIEW: The CBU-103 WCMD (Wind Corrected Munitions Dispenser) is an inertially guided, free-falling cluster bomb designed for attacking area targets.
+ 
+DETAILS:  The CBU-103 WCMD  was designed to allow the accurate delivery of cluster munitions from high altitude.  It is made by mating a CBU-87 with a WCMD inertial guidance kit. The WCMD corrects for winds and adverse weather, while guiding the munitions to the target coordinates.  Inside the canister are 202 BLU-97/B Combined Effects Bomb (CEB) submunitions, capable of covering an area between 20x20 meters to 120x240 meters.
+
+NOTES: Limited IOC 1998, with first operational fielding in 2000. Used by B-1, B-52, F-15E, F-16, and F-117 aircraft.
+
+
+SOURCES: Wind Corrected Munition Dispenser (WCMD) - Smart Weapons. (n.d.). Retrieved from http://www.globalsecurity.org/military/systems/munitions/wcmd.htm ; CBU-87 Combined  
+Effects Munition - Wikipedia, the free encyclopedia. (n.d.). Retrieved April 10, 2015, from http://en.wikipedia.org/wiki/CBU-87_Combined_Effects_Munition ; Lockheed Martin WCMD. (n.d.). Retrieved from http://www.designation-systems.net/dusrm/app5/wcmd.html

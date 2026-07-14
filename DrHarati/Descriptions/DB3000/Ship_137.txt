@@ -1,0 +1,15 @@
+OVERVIEW: The ALLIGATOR class Landing Ship, Tank (LST) is a small, diesel-powered LST.
+
+DETAILS:   The ALLIGATOR class is a beachable, general-purpose LST-type design with bow and stern ramps for unloading vehicles. Approximately 24-20 APCs or 1,500 tons of cargo could be carried.  Produced in at least four different types beginning in 1966. there are numerous variations in detail between individual units.  A total of 14 vessels were completed between 1964 and 1975. 
+
+NOTES: Displacement: 3,400 tons standard
+       Speed: 18 knts
+       Range: 9,000 nm @ 16 knts; 14,000 nm @10 knts
+       Complement: 75 crew, 300 troops (approx.)
+       In Commission: 1966  
+
+SOURCES: Norman Polmar, "Guide to the Soviet Navy, 3rd ed. (Annapolis, MD: Naval Institute Press, 1983), 223 ; Black Sea Fleet Information Resource "Large Landing Ship "Nikolay Filchenkov" - Project 1171 / Alligator Class." Accessed November 16, 2013. http://flot.sevastopol.info/eng/ship/amphibious/nikolay_filchenkov.htm.
+
+
+
+

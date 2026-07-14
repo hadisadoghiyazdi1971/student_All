@@ -1,0 +1,21 @@
+OVERVIEW: The JY-9 WALL EYE is a mobile 3-D low altitude surveillance radar system operating in the E/F-band. 
+
+DETAILS: The JY-9 WALL EYE is intended for use in air defense, gap filling, airport surveillance and coastal defense. It is capable of tracking 72 contacts.  The JY-9 has high anti-jamming and anti-clutter capability due to the use of advanced techniques, including pulse to pulse frequency agility, dual channel, JATS, wide operating band, low sidelobes, automatic spectrum processing, automatic clutter map and automatic residue map.
+
+Specifications:
+
+Frequency: 		 2-4 GHz (E/F Band (NATO), S Band (IEEE))
+Power output: 		 kW(average);  200 kW (peak) 
+PRF:			  790 pps	
+Detection Accuracy:	 80 m (range),  0.3 degrees azimuth 					
+On/Off time:		 unknown
+Deploy/Stow Time	 90 minutes/ 90 minutes
+ 
+Detection Range  
+80% Pd, 2 m2 RCS target:  150 km
+
+  
+NOTES:  IOC 1989 (approx).  The JY-9 is air, rail, and sea transportable.
+ 
+
+SOURCES: Bussert, James C., and Bruce A. Elleman. People's Liberation Army Navy Combat Systems Technology, 1949-2010. Annapolis, Md: Naval Institute Press, 2011, pg. ; "JY-9 Radar." Wikipedia, the Free Encyclopedia. Accessed March 28, 2015. http://en.wikipedia.org/wiki/JY-9_Radar.

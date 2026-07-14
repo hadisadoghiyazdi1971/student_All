@@ -1,0 +1,23 @@
+OVERVIEW: The AA-2a ATOLL (R-3S) is a short-range, solid fuel, supersonic, uncooled infrared guided (IR) air-to-air missile with a 11.3 kilogram warhead.  
+
+DETAILS:  The AA-2a ATOLL (R-3S) is capable of only rear-aspect attacks. Like the AIM-9B, the AA-2a was only effective against non-manuvering targets at close range, and was ill suited to dogfighting at low level due to ground clutter.  Its seeker often locked on to the sun or clouds. The seeker also had a very long 22 second settling time.
+
+Specifications:
+Weight:			75.3 kg 
+Length: 		2.837 m 
+Diameter: 		127 mm 
+Wingspan: 		0.528 m
+Warhead:		11.3 kg, blast fragmentation, contact fuse 
+
+PERFORMANCE: 
+Operational range: 	3.0 km ; 300 m at low level, increasing to 8,000m at 18,500m altitude.
+Speed: 			2.5 mach
+Maneuverability:	Unknown g
+
+NOTES: IOC: 1962.  The original R-3 and R-3S are direct copies of the AIM-9B Sidewinder and many parts are interchangeable with the AIM-9B. Used by MiG-21PF, MiG-21bis, MiG-23S, MiG-23MS, MiG-23M, MiG-23MF, MiG-23B, MiG-27, Su-17, Su-20, Su-22.
+
+
+SOURCES: "The Sidewinder Story / The Evolution of the AIM-9 Missile." Air Power Australia. Accessed September 1, 2015. http://www.ausairpower.net/TE-Sidewinder-94.html ; "K-13 (missile)." Wikipedia, the Free Encyclopedia. Accessed September 4, 2015. http://en.wikipedia.org/wiki/K-13_(missile) ; 
+"Weapon." Weaponsystems.net. Accessed September 4, 2015. http://weaponsystems.net/weapon.php?weapon=HH07+-+AA-2+Atoll ; "AA-2 ATOLL." Federation Of American Scientists -. Accessed September 4, 2015. http://fas.org/man/dod-101/sys/missile/row/aa-2.htm
+
+

@@ -1,0 +1,7 @@
+OVERVIEW: The Type 92 is a low power, long range, phased array, L-band, 3-D air search radar. 
+
+DETAILS: The Type 92 is designed to provide long-range air detection and coverage. The  System includes a redundant architecture with computer software remote controlled and monitored operations to minimize manning requirements. 
+
+NOTES: The Type 92 is same as US AN/FPS-117 Seek Igloo. It is deployed to RAF Boulmer and RAF Benbecula. 
+
+SOURCES: Lockheed Martin. "AN/TPS-77: Long-Range Air Surveillance Radars," Accessed December 1, 2013. http://www.lockheedmartin.com/content/dam/lockheed/data/ms2/documents/TPS-77-Fact-Sheet.pdf ; Lockheed Martin.  "AN/TPS-77: Tactical Transportable Radar,". Accessed December 1, 2013. http://www.mobileradar.org/Documents/TPS_77.pdf ;  RAF - RAF Homepage. "RAF Boulmer - Radar Flight." Accessed December 1, 2013. http://www.raf.mod.uk/rafboulmer/aboutus/radarflt.cfm ; Federation of American Scientists. "AN/FPS-117 North Warning System - United States Nuclear Forces." Accessed November 24, 2013. http://www.fas.org/nuke/guide/usa/airdef/an-fps-117.htm ;  Wikipedia, the free encyclopedia. "AN/FPS-117." Accessed November 24, 2013. http://en.wikipedia.org/wiki/AN/FPS-117

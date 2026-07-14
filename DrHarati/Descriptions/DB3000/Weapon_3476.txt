@@ -1,0 +1,20 @@
+OVERVIEW: The C-802A aka YJ-83 aka CSS-N-6 is a long-range, subsonic, solid fuel, active I-Band radar, air-or-ground launched anti-ship missile with a 165 kg SAP HE warhead. 
+
+DETAILS: The C-802A is an evolution of the export-only C-802, using smaller and lighter electonics to provide space for additional fuel, increasing the missile's range.  Unlike its predecessor, the C-802 can use way-points.  After the initial boost, the missile descends and approaches the target area using inertial navigation.  At an unknown distance from the projected target position, the missile activates its I-band radar.  After acquiring a target, the missile descends to approximately 6 meters and enters the terminal attack phase. The missile is claimed to have enhanced ECCM capability over its YJ-8/8A predecessor. 
+
+
+Specifications:
+
+Weight: 		 800 kg(with booster); 555 kg (without booster) 
+Length: 		 6.392 m (with booster); 5.15 m (without booster)
+Diameter: 		 360 mm (body)  
+Wingspan: 		 1.22 m 
+Speed:			 0.9 mach 
+Range:			  97 nm (180 km)
+
+NOTES: IOC 1998. 
+
+
+
+SOURCES: Jane's Weapon Systems Vol. 3: Naval, "CSS-N-4 'Sardine' (YJ-8/YJ-8A/C-801); CSS-N-8 'Saccade' (YJ-82/YJ-83/C-802/C-802A/Noor/Ghader), 25 June 2013; "C-802 (CSS-N-8 Saccade)." "C-802 (CSS-N-8 Saccade)." 
+"China's Eagle Strike-Eight Anti-Ship Cruise Missiles: The YJ-83, C803, and the Family Tree." Defense Media Network. Accessed August 24, 2019. https://www.defensemedianetwork.com/stories/chinas-eagle-strike-eight-anti-ship-cruise-missiles-the-yj-83-c803-and-the-family-tree/ ; "C-802A and CM-802AKG Subsonic Missiles." Defense Updates. Accessed August 24, 2019. http://defenseupdates.blogspot.com/2012/11/c-802a-and-cm-802akg-subsonic-missiles.html.

@@ -1,0 +1,10 @@
+OVERVIEW: The Alamo R-27AE (NATO: Alamo E) alternatively designated R-27EA,  is a solid-fuel Beyond Visual Range (BVR) air-to-air missile equipped with an active seeker and an active radar proximity fuse and impact fuse and a 39 kilogram continuous-rod warhead.  It was never produced.
+
+DETAILS:  Both the R-27AE is guided to the target by a combination method. Initially, it is guided inertially with radio correction of trajectory in the initial flight phase.  It then transitions to homing in the terminal phase. This provides for reliable target lock-on at long ranges from the launching aircraft. The missile can be guided along special trajectories to create favorable conditions for homing head and proximity fuse operation. It is capable of going around a plume of passive jamming, of being moved out of the main lobe of the platform's radar, and of approaching a low-flying target from above at a given angle. 
+
+NOTES: The R-27AE is longer than the baseline R-27 and R-27E versions.
+  
+
+
+SOURCES: Federation of American Scientists. "AA-10 ALAMO R-27." Accessed December 1, 2013 ; Federation of American Scientists. "AA-10 ALAMO R-27." Accessed December 1, 2013. http://www.fas.org/man/dod-101/sys/missile/row/aa-10.htm ; http://military.wikia.com/wiki/Vympel_R-27_Alamo; http://defenceforumindia.com/forum/military-aviation/17393-plaaf-offensive-combat-readiness-against-india-2.html, Citing Janes.com; http://www.ausairpower.net/APA-PLA-AAM.html#mozTocId749996 
+

@@ -1,0 +1,20 @@
+OVERVIEW:  The RB-70 Bolide platoon is a short-range, air defense unit using the RBS-70 laser beam riding A/D missile.
+
+DETAILS: The RB 70 missile uses a laser beam detector mounted at the back of the missile which detects the laser guidance beam. The RB 70 uses an adaptable proximity fuse that provides all-target capability and a high kill probability against small targets such as UAVs and missiles.
+
+It can be operated independently in stand-alone mode or configured as part of an anti-aircraft battery linked with the Giraffe land mobile surveillance radar. The RBS 70 is equipped with a close loop cooled Clip-On Night Device (COND), giving the system day and night capability.
+
+
+Specifications:
+ 
+Maximum Acquisition Range: 	variable, depending on AD sensor integration.
+Maximum Tracking Range:		4 nm (laser designator)
+Engagement Envelope:		250m-8 km (range); 9-5,000 m (altitude)
+Reload time:			7 seconds 
+Mobility:			Man portable. Approx. 30 seconds deployment time  
+
+NOTES:  IOC 2005. Because of the requirement to keep the laser beam on target, troops employing the RBS 70 require considerably more training than required to operate most infrared-guided SAMs. Additionally, it is difficult to guide a SACLOS missile from a moving platform.  
+
+
+SOURCES: "RBS 70 MANPAD Portable Air Defence System." Wayback Machine. Last modified 1, 2011. https://web.archive.org/web/20110717135258/www.saabgroup.com/Air/Weapon_Systems/Ground_Based_Air_Defence_Missile_Systems/RBS_70/ ; "RBS-70." n.d. weaponsystems.net/weaponsystem/EE01%20-%20RBS-70.html ; "WebCite Query Result." WebCite. Accessed December 13, 2018. https://www.webcitation.org/6HEQc7zVL?url=www.saabgroup.com/en/Campaigns/RBS-70-New-Generation/Background/ ; 
+"RBS 70 Portable Surface to Air Missile System." Military. Accessed December 13, 2018. http://www.military.cz/sweden/RBS70/default_en.htm ; "RBS 70 Man-portable Air Defense Missile System." Pakistan Defence. Accessed December 13, 2018. https://defence.pk/pdf/threads/rbs-70-man-portable-air-defense-missile-system.480855/ ; "RBS 70 Portable Surface to Air Missile System." Military. Accessed December 13, 2018. http://www.military.cz/sweden/RBS70/default_en.htm.

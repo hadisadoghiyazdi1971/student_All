@@ -1,0 +1,21 @@
+OVERVIEW: Elli-class vessels are a group of frigates operated by the Hellenic Navy. The ships are of Dutch origin. The first two ships (the Elli and the Limnos), which had lengthened hangars and different armament were built specifically for the Hellenic Navy. The remaining ships are ex-Royal Netherlands Navy S-frigates of the Kortenaer-class transferred to the Hellenic Navy in the late 1990s and early 2000s. The Elli (F-450), for which the class is named, is itself named after two famous Greek cruisers, one of which was sunk during World War II.
+
+DETAILS: There is a midlife modernization program for six of the ten Greek ships.The program is in progress at HSY and will be completed in 2009. The Kountouriotis (F-462) and the Adrias (F-459) have been modernized. The other four ships are the Navarinon (F-461), the Limnos (F-451), the Elli (F-450), and the Aegaeon (F-460). 
+
+The main modernization works to be performed are the following: Replacement of the combat management system and installation of new sensors || Overhaul and improvement of radars || Replacement of navigation systems and upgrade of communications systems || Replacement of propulsion control system and of defined platform systems.
+
+TYPE: Frigate.
+
+SPECIFICATIONS: Displacement: 5500 tons standard (3,800 tons max) || Length: 130 m (430 ft) || Beam: 14.5 m (48 ft) || Draft: 4.4 m (14 ft 5 in) || Propulsion:	combined gas or gas (COGOG) system || (2) Rolls Royce Tyne RM1C gas turbines, 4,900 shp (3,700 kW) each || (2) Rolls Royce Olympus TM3B gas turbines, 25,700 shp (19,200 kW) each (boost) || (2) Shafts.
+
+PERFORMANCE: Max Speed: 30 knots (56 km/h) || Range: 4,700 nmi (8,700 km) at 16 knots (30 km/h).
+
+SENSORS: LW.08 2D Air Search Radar || WM.25 Radar Illuminator || ZW.06 Surface Search Radar || N/SLQ-01 Newton Gamma ESM - Offensive/Defensive ECM || Telegon 4 HF/DF || CA/SQS-505 Hull Mounted Sonar || STIR-180 Fire Control Radar - Infrared Tracking - Viual  TV Tracking || AN/VPS-2 Fire Control Radar.
+
+ARMAMENT: (2) OTO-Melara Compatto 76 mm/62 cal. gun || (2) Quad RGM-84 Harpoon SSM || (1) 8 round RIM-7M Sea Sparrow SAM launcher || (2) Mk32 Twin 324 mm Torpedo Tubes || (2) CIWS Mk15 Phalanx CIWS 20 mm.
+
+AIRCRAFT: (2) Helicopters.
+
+SHIPS BUILT: Elli (F-450) || Limnos (F-451) || Adrias (F-459) || Aigaion (F-460) || Navarinon (F-461) || Kountouriotis (F-462) || Bouboulina (F-463) || Kanaris (F-464) || Themistoklis (F-465) || Nikiforos Fokas (F-466).
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org

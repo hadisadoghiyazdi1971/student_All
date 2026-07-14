@@ -1,0 +1,5 @@
+OVERVIEW:Special-mission versions of the Tu-214 commercial transport aircraft, developed under the codename ¡®Project 141', to replace the Il-20 Coot ELINT platform.
+
+DETAILS:he aircraft are configured to carry the MRC-411 multi-intelligence payload, to include electronic intelligence (ELINT) sensors, side-looking Synthetic Aperture Radar (SAR) and other Signals Intelligence (SIGINT). In addition, the aircraft will carry multi-spectral electro-optical systems. 
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org

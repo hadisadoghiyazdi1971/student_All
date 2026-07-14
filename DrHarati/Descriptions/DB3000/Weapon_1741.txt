@@ -1,0 +1,22 @@
+OVERVIEW:  The C-601 aka YJ-6 aka CAS-1 'Kraken' is air-launched, medium range,  radar guided, liquid fuel, anti-ship missile. It has a 513 kg SAP warhead.
+
+DETAILS:  The C-601 was intended to provide the Chinese navy an effective power projection capability against large ship targets.  The missile's trajectory is preselected before launch.  After launch, the missile glides to 850 meters altitude, where the motor ignites, while the missile continues to descend to one of the pre-selected cruise altitudes (50, 70 or 100 meters).  An inertial mid-course guidance system and Doppler radar provide altitude and course corrections.  The onboard J-band (10-20 GHz) radar used for terminal guidance is activated approximately 11 km from target.
+
+ While it is too large and slow to penetrate modern defenses on warships, the missile remains strategically important. Used against transports, tankers, amphibious ships and other targets without defensive systems, the missile is highly lethal. Not only does it carry a large warhead, but the unburned hypergolic fuel produces considerable incendiary effect.
+
+
+
+Specifications:
+
+Weight: 		 2,440 kg 
+Length: 		 7.10m 
+Diameter: 		 760 mm (body)  
+Wingspan: 		 2.40 m 
+Speed:			 0.9 mach 
+Range:			 13.5-54 nm (25-100 km)
+
+NOTES: IOC 1985. The YJ-6 is derived from the P-21 (SS-N-2C) Styx.
+
+
+SOURCES: Jane's Weapon Systems Vol 1: Air-Launched, "YJ-6 (C-601) CAS-1 'Kraken',YJ-61 (C-611), 21 August 2013; 
+Dr C Kopp. "PLA Cruise Missiles / PLA Air - Surface Missiles." Air Power Australia. Accessed August 16, 2019. https://www.ausairpower.net/APA-PLA-Cruise-Missiles.html#mozTocId346239.

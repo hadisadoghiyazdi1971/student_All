@@ -1,0 +1,17 @@
+OVERVIEW: The Farragut class was the second destroyer class of the United States Navy to be named for Admiral David Glasgow Farragut. The class is sometimes referred to as the Coontz class, since Coontz was first to be designed and built as a guided missile ship, whereas the previous three ships were designed as all-gun units and converted later.
+
+Ten Farragut-class ships were ordered between 1955 and 1957. Each ship displaced 5,800 tons under full load, with a length of 512 feet (156 m), a 52-foot (16 m) beam and a top speed of 33 knots (61 km/h). Originally commissioned as guided missile frigates (DLG), they were redesignated as guided missile destroyers (DDG) under the fleet realignment in 1975. They were also the only redesignated ships to be renumbered as well under the realignment, with the first unit changing from DLG-6 to DDG-37 and all subsequent vessels being renumbered upwards in order.
+
+TYPE: Guided Missle Destroyer (DDG).
+
+SPECIFICATIONS: Displacement: 5,648 tons (full load) || Length: 512.5 ft (156.2 m) || Beam: 52.3 ft (16 m) || Draught: 17.8 ft (5.4 m) || Propulsion: (2) shaft, (2) Allis-Chalmers turbines || (4) each 1,200 Pound forced draft Babcock and Wilcox D-type super heated boilers || 85,000 shp (63,000 kW) || Complement: 360.
+
+PERFORMANCE: Speed: 32 knots (59 km/h) || Range: 5,000 nmi (9,000 km) at 20 knots (37 km/h).
+
+SENSORS: AN/SPS-10 surface search RADAR || AN/SPS-37 air search RADAR || AN/SPS-39 3D air search RADAR || AN/SPG-53 gun fire control RADAR || AN/SPG-55 Terrier fire control RADAR || AN/SQS-23 SONAR.
+
+ARMAMENT: (1) Mark 10 Launcher Terrier SAM || (1) 5in (127 mm) Gun || (1) ASROC Launcher || (6) 12.8in (324 mm) ASW TT || (8) Harpoon SSM (After third update).
+
+SHIPS BUILT: Farragut (DDG-37) || Luce (DDG-38) || Macdonough (DDG-39) || Coontz (DDG-40) || King (DDG-41) || Mahan (DDG-42) || Dahlgren (DDG-43) || William V. Pratt (DDG-44) || Dewey (DDG-45) || Preble (DDG-46).
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org

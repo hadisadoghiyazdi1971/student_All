@@ -1,0 +1,28 @@
+OVERVIEW: The DOG EAR (9S80) is an 3-D mobile, early warning surveillance and target acquisition radar operating in the F/G Band.
+
+DETAILS:    The DOG EAR (9S80) is a pulse Doppler early warning surveillance and target acquisition designed to equip tactical air defense units.  Weapon systems associated with the DOG EAR include the SA-13 GOPHER.  
+
+Specifications:
+
+Frequency: 		 F/G-Band
+Power output: 		
+PRF:			
+Range Resolution:			
+Runup time:		
+Set up time: 		
+
+Detection Ranges 	
+  	25 m altitude:			22 km
+	500 m altitude:			34 km 
+	Max Acquisition Range:		80 km
+	
+ 
+NOTES: IOC 1978.  The DOG EAR is mounted on tracked transporter.  It has been used by many Warsaw Pact nations, as well as Iraq, Jordan, Libya, Angola, Algeria and Afghanistan.
+
+
+
+SOURCES: "9K35 Strela 10 Self Propelled Air Defence System / SA-13 /Camohodny air defense systems KBtochmash 9K35 Strela- 10." Air Power Australia. Accessed March 14, 2015. http://www.ausairpower.net/APA-9K35-Strela-10.html. ; "Raketen- Und Waffentechnischer Dienst (RWD) - Aufklärungs- Und Führungsstelle 9S80 (PPRU-1M) SBORKA." RWD (Raketen- Und Waffentechnischer Dienst). Accessed March 14, 2015. http://www.rwd-mb3.de/technik_g/pages/9s80.htm.; "9K35 Strela-10." Wikipedia, the Free Encyclopedia. Accessed March 14, 2015. http://en.wikipedia.org/wiki/9K35_Strela-10.
+
+
+
+

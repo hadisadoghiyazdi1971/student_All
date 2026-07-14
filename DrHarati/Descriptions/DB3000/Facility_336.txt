@@ -1,0 +1,7 @@
+OVERVIEW: The HF-200 is a Long range, fixed, nodding height finding radar.
+
+DETAILS:  The HS-200 Mk3 was element of the Linesman system.  It provides height finding on aircraft at long, medium or short range in the UK and overseas. 
+
+NOTES: The height finding element of the Linesman system, the HF 200 succeeded the American AN/FPS-6 height finder radars used in the Rotor system. The HF 200's (along with the AN/FPS-6) were also known as "Nodding Horrors" and they spewed hydraulic oil everywhere. HF 200 Mk3's were located at the three main linesman sites at R.A.F. Boulmer, R.A.F. Staxton Wold and R.A.F. Neatishead. A Mk4 was commisioned at R.A.F Saxa Vord in the Shetland Islands in 1979.
+
+SOURCES: Radar Pages Home page. "HF200 height finder air defence search radar." Accessed December 1, 2013. http://www.radarpages.co.uk/mob/linesman/hf200.htm ; Wikipedia. "Linesman/Mediator." Accessed December 1, 2013. http://en.wikipedia.org/wiki/Linesman/Mediator

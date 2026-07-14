@@ -1,0 +1,12 @@
+OVERVIEW: The MOSKVA-class antisubmarine cruiser is a 2 shaft steam-powered hybrid helicopter carrier cruiser.
+
+DETAILS:   The MOSKVA class is a hybrid cruiser and helicopter carrier.  Designed to counter western SSBNs, the class was limited to two hulls, due to the increasing capabilities of NATO SSBNs and because of the poor sea keeping qualities of the class. 
+
+NOTES: Displacement: 14,500 tons standard
+       Speed: 31 knts
+       Range: 4,500 nm @ 29 knts; 14,000 nm at 12 knts
+       Complement: 850 (approx.)
+       In Commission: 1967-1991 
+       Hulls completed: 2
+
+SOURCES:  Polmar, Norman, and Siegfried Breyer. Guide to the Soviet Navy. Annapolis, Md: Naval Institute Press, 1983,  130-31 ; GlobalSecurity.org. "Moskva Class - Project 1123." Accessed December 28, 2013. http://www.globalsecurity.org/military/world/russia/1123.htm.

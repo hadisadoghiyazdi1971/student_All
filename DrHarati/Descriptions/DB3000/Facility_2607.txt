@@ -1,0 +1,20 @@
+OVERVIEW:  The Iron Dome SAM battery is a self-propelled, all-weather, multilayered counter rocket, artillery and mortar (C-RAM) and very short-range air defense (VSHORAD) system. 
+
+DETAILS:  The Iron Dome is intended to be part of an integrated multi-tiered missile defense system that includes the Arrow, Iron Beam and David's Sling systems.  While scanning, the detection and tracking unit radar scans a defined sector in the sky.  After target detection, the system can rapidly respond, performing target acquisition in less than a second and launching an interceptor rocket within one second. It is capable of handling multiple simultaneous threats, and can distinguish and reject targets that do not threaten populated areas.  The system has a 85% intercept rate.       
+       
+
+Specifications:
+
+Maximum Acquisition Range: 	 2-38 nm (v. rockets and mortars); 5nm (v. VSHORADs)
+Maximum Tracking Range:		 unkn nm 
+Engagement Envelope:		 32,800 feet (altitude),  unkn nm range
+Max Target Speed: 		 unkn knts (head on);  unkn knts (tail-chase)
+Reload Time:			 unkn minutes
+Mobility:			 Mobile
+
+
+NOTES: IOC: 2011   
+
+SOURCES:  IHS. "Iron Dome." Land Warfare Platforms: Artillery & Air Defence, 28 December 2016 ; 
+"15 Things You Didn't Know About the Iron Dome | ISRAEL21c." Israel21c. Accessed January 21, 2017. http://www.israel21c.org/15-things-you-didnt-know-about-the-iron-dome/ ; "Iron Dome - Wikipedia." Wikipedia, the Free Encyclopedia. Accessed January 21, 2017. https://en.wikipedia.org/wiki/Iron_Dome ; 
+"Iron Dome." GlobalSecurity.org - Reliable Security Information. Accessed January 21, 2017. http://www.globalsecurity.org/military/world/israel/iron-dome.htm ; Rafael. "Iron Dome." Accessed January 21, 2017. http://www.rafael.co.il/marketing/SIP_STORAGE/FILES/0/1190.pdf ; "Raytheon: Iron Dome Weapon System." Raytheon: Customer Success Is Our Mission. Accessed January 21, 2017. http://www.raytheon.com/capabilities/products/irondome/.

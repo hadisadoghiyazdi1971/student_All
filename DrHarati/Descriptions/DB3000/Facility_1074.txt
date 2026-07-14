@@ -1,0 +1,7 @@
+OVERVIEW: The Watchman family of medium-range radars is designed to provide terminal area/approach surveillance and ground controlled approach surveillance.
+
+DETAILS: The Tactical variant (mobile equipment) of the Watchman system allows the rapid deployment and installation of Air Traffic Services in locations where British forces are on operational duty.
+
+NOTES: The Watchman surveillance radar system provides Air Traffic Services for the vast majority of the UK Ministry of Defence operational stations in the UK and worldwide. There are currently 40 systems in service worldwide. 
+
+SOURCES: Radartutorial.eu http://www.radartutorial.eu/19.kartei/karte219.en.html

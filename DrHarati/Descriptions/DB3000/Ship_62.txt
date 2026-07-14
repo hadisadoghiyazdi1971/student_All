@@ -1,0 +1,18 @@
+OVERVIEW: The LUDA class (Type 051) is a steam-powered guided missile destroyer (DDG).
+
+DETAILS:    The LUDA class is similar to the Soviet KOTLIN class.
+
+Specifications: 
+
+       Displacement:  3250 tons (standard);  3800 (full load)
+       Speed: 32 knts
+       Engineering: 2 shafts, 2 steam turbines 
+       Range: 5000 nm @ 14 knts; 1100 nm @ 32 knts
+       Complement: 285 
+       In Commission: 1 (approx.) 
+       Completed: 1987 (approximate) 
+
+NOTES:  Units in class: JINAN (105). Refitted as a trial ship in 1987 with a twin helicopter hanger and helo deck.  Capable of foreign deployment, although C2 facilities are limited.
+
+
+SOURCES: Sharpe, Richard. Jane's Fighting Ships 1991-92.  London: Jane's Pub, 1991, pg. 112 ; 

@@ -1,0 +1,20 @@
+OVERVIEW: The Dagger is a short-range, mobile  3-D target acquisition and surveillance radar operating in the J-band.  
+
+DETAILS: The Dagger multi-beam high resolution 3D radar.  Weapon systems associated with the Dagger are the Rapier SAM.
+
+Specifications:
+
+Frequency: 		  unknown GHz (J Band)
+Power output: 		  unknown kW(average);  kW (peak) 
+PRF:			unknown pps	
+Range Resolution:	 unknown (range), unknown degrees azimuth 					
+On/Off time:		unknown
+Deploy/Stow Time	 unknown
+ 
+Detection Range:
+
+Max Range:		> 15 km.  32 km instrumented range
+
+NOTES:  The system is air, road, and helo transportable.
+
+SOURCES: The British Army http://www.armedforces.co.uk/army/listings/l0120.html ; Wikipedia: "Rapier (missile)" http://en.wikipedia.org/wiki/Rapier_%28missile%29 ; "Radar Basics." Grundlagen Der Radartechnik. Accessed March 25, 2015. http://www.radartutorial.eu/19.kartei/karte430.en.html.

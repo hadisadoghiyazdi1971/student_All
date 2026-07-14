@@ -1,0 +1,25 @@
+OVERVIEW: The P-19 radar with the Kasta 2E1 Upgrade (NATO name: FLAT FACE E) is an mobile, 2-D early warning radar operating in the "C" Band.
+
+DETAILS:    The Kasta 2E1/ FLAT FACE E is a mobile early warning radar. The system features high jamming immunity and is reportedly reliable and easy to maintain.  It also incorporates an IFF.  The Kasta 2E1 and 2E2 are  redesigned derivatives of the P-19 using a new carrier chassis and mostly digital hardware. The antenna aperture is also increased, improving range performance.  Weapon systems associated with the P-19 include the SA-2 GUIDELINE, SA-3 GOA, SA-6 GAINFUL and SA-8 GEKO, as well as the SA-60 57mm AAA gun. 
+
+Specifications:
+
+Frequency: 		825-890 Mhz (C-Band)
+Power output: 		
+PRF:			
+Range Resolution:	300 m/ 1.1 degrees azimuth		
+Runup time:		up to 3.3 minutes
+Set up time: 		up to 20 minutes
+
+Detection Ranges (14 m/50 m tower height)	
+  	100 m altitude:	32 / 53 km 
+	1000m: 95 / 105 km
+	4000 m alt.:	 150 km
+
+
+ 
+NOTES: The P-19 Kasta 2E1 system is mounted in two vehicles: an antenna mounted on a single truck and the electronic equipment contained in a second truck, which tows a generator trailer. Because of their low power-aperture ratings this family of radars is not regarded as being very effective against low-observable aircraft and drones.  
+
+
+SOURCES: Jane's Radar and Electronic Warfare Systems, "P-15/P-19 series early-warning radars", 22 October 2004;  "Radar Basics." Grundlagen Der Radartechnik. Accessed March 8, 2015 ; "P-19 Radar." Wikipedia, the Free Encyclopedia. Accessed March 8, 2015. http://en.wikipedia.org/wiki/P-19_radar ; "P-19MA/P-190U | Www.litak-tak.eu." Home | Www.litak-tak.eu. Accessed March 8, 2015. http://www.litak-tak.eu/en/products/radars/p-19ma-p-190u/ ; http://www.radartutorial.eu/19.kartei/karte910.en.html. http://www.radartutorial.eu/19.kartei/karte908.en.html ; "P-15 FLAT FACE." GlobalSecurity.org - Reliable Security Information. Accessed March 8, 2015. http://www.globalsecurity.org/military/world/russia/flat-face.htm ; http://pvo.guns.ru/rtv/p15.htm ; "Russian / PLA Low Band Surveillance Radar Systems (Counter LowObservable Technology Radars)." Air Power Australia. Accessed March 8, 2015. http://www.ausairpower.net/APA-Rus-Low-Band-Radars.html#mozTocId6430 ; Deftech Global Limited - P-19 And P-18 Radar Modernization. (n.d.). Retrieved from http://www.deftech-ltd.com/defence-products/air-defence/radars/p-19-and-p-18-radar-modernization ; 19R - Radar P - Radar - ?????? - ?? ?????. (n.d.). Retrieved from http://www.kbradar.by/text/pages-view-116.html
+

@@ -1,0 +1,15 @@
+OVERVIEW: The AGM-65F MAVERICK is a short range, IIR guided, rocket powered, air-to-ground missile with a 136 kg penetrating warhead.
+
+DETAILS: The AGM-65F Maverick is a tactical air-to-surface missile optimized to strike naval vessels. It is a fire and forget weapon. The IIR sensor overcomes the daylight-only, adverse weather limitations of the -65A/B's EO system.  
+
+Weight:		288 kg
+Length:		2.5 m
+Diameter:	0.31 m
+Wingspan:	0.72 m
+Speed:		620 kts (1,150 km/hr)
+Range:		0.05-8 nm (0.1-14 km).  
+CEP:		1.5 m
+
+NOTES: IOC 1990. The AGM-65F also features a low smoke motor. 
+
+SOURCES: Friedman, Norman, "The Naval Institute Guide to World Naval Weapons Systems, 1997-1998,  Annapolis: MD 1997, pg. 258; AGM-65 Maverick. n.d. https://fas.org/man/dod-101/sys/smart/agm-65.htm ; AGM-65A Maverick. n.d. http://www.deagel.com/Offensive-Weapons/AGM-65A-Maverick_a001167001.aspx.

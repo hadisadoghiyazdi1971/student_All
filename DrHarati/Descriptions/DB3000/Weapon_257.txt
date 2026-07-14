@@ -1,0 +1,15 @@
+OVERVIEW: The Mk82 AIR is a unguided freefall bomb with a retarder system to allow for low-level delievery.
+
+
+DETAILS:  The MK82 AIR is a 500 pound bomb modified with a BSU-49/B high drag tail assembly. The "ballute" air bag which deploys from the tail provides a high speed, low altitude delivery capability. The tail assembly consists of a low-drag canister unit containing a ballute (combination balloon and parachute), and a release lanyard assembly that opens the canister releasing the ballute. Ram air inflates the ballute, increasing drag on the bomb and allowing the aircraft to escape the blast pattern.  The weapon can be delivered in the low-drag mode (canister remains closed after release) or in the high drag mode.  In the ballute mode, it can be released at 700 knots. 
+
+
+Weight: 	 232-259 kg
+Filling Weight:	  87 kg (Tritonal, Minol or Comp H6)
+
+
+
+NOTES:  The Mk82 bomb is usually equipped with the mechanical M904 (nose) and M905 (tail) fuzes or the radar-proximity FMU-113 air-burst fuze.  It has a lethal radius of 15.8 meters against standing personnel, and 3.6 meters against personnel in foxholes.
+
+
+SOURCES:  "Mark 82 Bomb." Wikipedia, the Free Encyclopedia. Accessed December 26, 2015. https://en.wikipedia.org/wiki/Mark_82_bomb ; "MK82 - Dumb Bombs." GlobalSecurity.org - Reliable Security Information. Accessed December 26, 2015. http://www.globalsecurity.org/military/systems/munitions/mk82.htm ; Friedman, Norman. The Naval Institute Guide to World Naval Weapons Systems, 1997-1998. Annapolis, Md: Naval Institute Press, 1997, pg. 264.

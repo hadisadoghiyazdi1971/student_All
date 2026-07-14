@@ -1,0 +1,7 @@
+OVERVIEW: RAF Type 94 Plessey AR-3D. Long range, fixed, 3D radar air defence radar. 
+
+DETAILS: Can be air-transported by C-130.
+
+NOTES: Became operational 1987.
+
+SOURCES: Flightglobal http://www.flightglobal.com/pdfarchive/view/1976/1976%20-%202260.html

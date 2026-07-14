@@ -1,0 +1,14 @@
+OVERVIEW: The Berezina-class is a gas turbine-powered replenishment ship.
+
+DETAILS:   The Berezina-class oiler (Project 1833) is a class of replenishment vessel used by the Soviet and Russian navies.  The class was conceived in the 1960's to meet increasing fleet deployments to remote stations and the projected logistic requirements of refueling and rearming Soviet task forces in remote areas. The Berezina was decommissioned in 2002 and scrapped that same year. 
+
+
+NOTES: Displacement: 15,460 standard; 24,565 tons full load
+       Speed: 22 knts
+       Range: 12,000 nm @ 12 knts; 10,00 nm @ 16 knts
+       Complement: 389 crew + 178 passengers
+       In Commission: 1977
+       Vessels in class: 1
+ 
+
+SOURCES: Project 1833 "Berezina" code "Pegasus" Comprehensive supply ship. (n.d.). Retrieved from http://www.globalsecurity.org/military/world/russia/1833.htm ; Complex supply ship - Project 1833. (n.d.). Retrieved from http://russian-ships.info/eng/support/project_1833.htm ; Norman Polmar, "Guide to the Soviet Navy, 3rd ed. (Annapolis, MD: Naval Institute Press, 1983), 250

@@ -1,0 +1,23 @@
+OVERVIEW: The P-37 radar (NATO name: BAR LOCK A) is a mobile 2-D early warning and GCI radar operating in the E/F Band.
+
+DETAILS: The P-37 is a mobile, van-mounted mobile radar. It features clutter and asyncronuous jamming protection.  Weapons systems associated with the P-37 include the SA-5 GAMMON. 
+
+Specifications:
+
+Frequency: 		2.9-3.5 GHz ( E/F Band)
+Power output: 		0.7 MW (average)
+PRF:			375-550 Hz, 375 pps	
+Range Resolution:	1000 m (range) 1 degree (azimuth)					
+On/Off time:		unknown
+Deploy/Stow Time	60 minutes
+
+Detection Ranges,   1 m2 RCS target: 205 km
+	
+ 	8000m alt.:	350 km (Tu-104 sized target)
+
+
+ 
+NOTES: The Bar Lock series is one of the most widely exported Soviet era radars, and remains widely used especially in developing nations. Where low level coverage is required, they are typically supplemented by a SIDE NET radar E-band nodding height finding radar.   
+
+
+SOURCES: "Search and Acquisition Radars (S-Band, X-band)." Air Power Australia. Accessed March 15, 2015. http://www.ausairpower.net/APA-Acquisition-GCI.html#mozTocId988415 ; "P-35/37 / BAR LOCK." GlobalSecurity.org - Reliable Security Information. Accessed March 15, 2015. http://www.globalsecurity.org/military/world/russia/bar-lock.htm ; "BAR LOCK Radar - Encyclopedia Article - Citizendium." Citizendium, the Citizens' Compendium. Accessed March 15, 2015. http://en.citizendium.org/wiki/BAR_LOCK_radar ; http://www.roaf.ro/en/dotare/p37_en.php 

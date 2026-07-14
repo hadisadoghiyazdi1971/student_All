@@ -1,0 +1,12 @@
+OVERVIEW: The AS-18 KAZOO A (Kh-59M) is a two-stage, medium-range, solid fuel, sub-sonic, turbo-jet powered, air-to-surface land-attack missile. It has either a 320 kg AP HE or 280 kg cluster warhead.
+
+DETAILS: Target coordinates are fed into the missile before launch.   The missile can be programed to fly as low as 7 meters over water.  The missile initially uses inertial guidance. At approximately 10 km from the target the television guidance system is activated. An operator aboard the aircraft visually identifies the target and locks the missile onto it via a datalink.  CEP is 2-3 meters.
+
+NOTES: The AS-18 is a variant of the AS-13 KINGBOLT.  Although the original Kh-59 could be carried by the MiG-27, Su-17M3/22M4/24M/25 and Su-30 family if equipped with an APK-9 datalink pod, it was only fielded on the Su-24M in Russian service.  The Kh-59ME version was exported to numerous countries, including Algeria, China, Venezuela, Vietnam, Malaysia and Indonesia.
+ 
+SOURCES: Jane's Weapons Systems, Vol. 1: Air-Launched,  Kh-59M, Kh-59ME Ovod-M (AS-18 'Kazoo'), 15 Dec 2012 ; Federation of American Scientists. "Raduga Kh-59 (AS-13 Kingbolt) and Kh-59M (AS-18 Kazoo)." Accessed November 9, 2013. http://www.fas.org/man/dod-101/sys/missile/row/as-13.htm ; Air Power Australia. "Soviet/Russian Tactical Air - Surface Missiles." Accessed November 9, 2013. http://www.ausairpower.net/APA-Rus-ASM.html#mozTocId100114.
+
+
+
+
+

@@ -1,0 +1,19 @@
+OVERVIEW: The AGM-84K SLAM-ER (Standoff Land Attack Missile Expanded Response) is a precision-guided, medium-to-long-range, air-launched cruise missile capable of executing precision attacks from Standoff Outside of Area Defense (SOAD) ranges.
+
+DETAILS: The SLAM-ER was designed to provide all-weather, day and night, precision attack against pre-planned and Target of Opportunity targets.  The AGM-84K SLAM-ER uses the Global Positioning System (GPS) and infrared imaging for its navigation and control.  Developed from the AGM-84E, the SLAM-ER incorporates several improvements, including a modified warhead for increased penetration and an improved datalink that increases the control range by 50% over the AGM-84E, while also enhancing its resistance to jamming. The SLAM-ER can be remotely controlled while in flight, and it can be redirected to another target after launch if the original target has already been destroyed, or is no longer considered to be dangerous. The SLAM-ER is a very accurate weapon, having the best circular error probable (CEP) of any missile used by the USN (as of 2009).
+
+The AGM-84K SLAM-ER was the first weapon to feature Automatic Target Acquisition (ATA), a revolutionary technological breakthrough that helps improve target acquisition in cluttered scenes, overcomes most IR countermeasures, and mitigates the effects of environmentally degraded conditions.
+
+Specifications: 
+Weight: 674.5 kg (1,487 lb)
+Length: 4.36 m (14.3 ft)
+Diameter: 34.3 cm (13.5 in)
+Wingspan: 2.2 m (7.2 ft)
+
+PERFORMANCE: 
+Operational range: 270 kilometres (170 mi)
+Speed: 855 km/h (531 mph, 0.698 mach)
+
+NOTES: The SLAM-ER can be launched and controlled by F/A-18C/D, P-3s, and S-3 platforms. It can also be controlled by the F/A-18E/F.
+
+SOURCES: Wikipedia http://en.wikipedia.org ; Friedman, Norman, "The Naval Institute Guide to World Naval Weapons Systems, 1997-1998, Annapolis, MD: Naval Institute Press, 1997, pg. 256-57 ; "AGM-84 Harpoon/SLAM - Smart Weapons." Federation Of American Scientists. Accessed August 21, 2015. http://fas.org/man/dod-101/sys/smart/agm-84.htm ; Boeing. "Backgrounder: Harpoon Block II." Last modified March 2013. http://www.boeing.com/assets/pdf/defensespace/missiles/harpoon/docs/HarpoonBlockIIBackgrounder.pdf ; "MCDONNELL-DOUGLAS AGM-84L HARPOON and AGM-84E SLAM." Air Power Australia. Accessed August 21, 2015. http://www.ausairpower.net/TE-Harpoon.html ; "Harpoon." Weaponsystems.net. Accessed August 21, 2015. http://weaponsystems.net/weaponsystem/HH10%20-%20Harpoon.html ; "Boeing AGM/RGM/UGM-84 Harpoon." Designation-Systems.Net. Accessed August 21, 2015. http://www.designation-systems.net/dusrm/m-84.html ; "USN Fact File-Slammer Missile." Accessed August 29, 2015. http://www.navy.mil/navydata/fact_display.asp?cid=2200&tid=1100&ct=2.

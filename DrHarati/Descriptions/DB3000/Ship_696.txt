@@ -1,0 +1,20 @@
+OVERVIEW: The Type 052C destroyer (NATO code name Luyang II class, or Lanzhou class after the lead ship) is a class of destroyer built by the People's Republic of China. It features a four array AESA multi-function phased array radar for 360-degree coverage. The radar is used in conjunction with vertically launched HHQ-9 long-range air defence missiles. The Type 052C was the first warship in the People's Liberation Army Navy to have true long-range fleet air defence capability.
+
+DETAILS: The Type 052C used the same hull and propulsion as the preceding Type 052B destroyer, which had also been built by Jiangnan. While the Type 052B used a mixture of Russian and Chinese systems, the Type 052C used predominantly Chinese systems, with a few sensors being notable exceptions.
+
+The Type 052C was designed for the fleet air defence role, and mounted the Type 348 Active Electronically Scanned Array (AESA) radar, and vertically launched HQ-9 air defence missiles. It also carried YJ-62 anti-ship missiles. All three were new aboard Chinese warships.
+
+Aviation facilities included a rear hangar and flight deck for one Ka-28-A or Z-9 helicopter.
+
+TYPE: Guided Missile Destroyer (DDG).
+
+SPECIFICATION: Displacement: 7,000 tons || Length: 155.5 m || Beam: 17.2 m || Draught: 	6.1 m || Propulsion: CODOG (2) DN80 / 2 QC-280 gas turbines each generating 24 MW / 28 MW and
+2 MTU Friedrichshafen 12V 1163TB83 diesels each generating 5 MW || Complement: 280
+
+PERFORMANCE: Speed: 29 knots.
+
+SENSORS: Type 348 Radar || Anti stealth radar with Yagi antenna || MR 331 fire control radar || Type 344 Radar || LR66/TR47C radar || Type 364 Radar.
+
+ARMAMENT: HHQ-9 long-range surface-to-air missiles || C-805 anti-ship / land attack cruise missiles || HN-2 land attack cruise missiles || YJ-62 anti-ship / land attack cruise missiles || (1) Type 210 100 mm dual purpose gun || (2) 30mm Type 730 close-in weapons systems || (6) torpedo tubes || (4) 18-tube decoy rocket launcher.
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org 

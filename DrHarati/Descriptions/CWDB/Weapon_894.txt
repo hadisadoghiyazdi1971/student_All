@@ -1,0 +1,28 @@
+OVERVIEW:  The SA-8a GECKO mod 0 (9K33 Osa-M, 'Wasp') is a mobile,  short-range, low-to-medium altitude, solid fuel, single stage, surface-to-air missile system  using command guidance with terminal semi-active radar homing (SARH), primarily intended to protect front-line manuver forces.   It is equipped with a 15 kg warhead.
+
+DETAILS:  The SA-8 GECKO  was primarily intended to protect front line-armor and mechanized divisions.  A navalized version, the SA-N-8 is also in service.  Lethal radius against a F-4 Phantom target is 5 meters.
+
+
+Specifications:
+ 
+Weight: 		128 kg 
+Length: 		3.13 m 
+Diameter: 		0.208 m 
+Wingspan: 		0.65 m 
+Speed:			2.4 mach
+Range:			0.81-4.86 nm (1.5-9 km)
+Engagement Altitude:	164-16,404 ft (50-5,000 m)   
+Reload time:		XX minutes (approx.)
+Max target speed: 	816 knts (420 m/s)
+Kill probability:	0.7 (single missile v. fighter-type aircraft)
+Maneuverability:	15g	
+
+
+NOTES:  IOC:  1972. TA derivative of the Sa-8he SA-8 was the first mobile air defence missile system incorporating its own engagement radars on a single vehicle.
+
+
+
+SOURCES: IHS. "9K33 Osa." Land Warfare Platforms: Artillery & Air Defence, 17 April 2015; http://www.ausairpower.net/APA-2K12-Kvadrat.html ; US Army.; OPFOR WORLDWIDE EQUIPMENT GUIDE, Vol 2: Airspace and Air Defense Systems. TRADOC DCSINT Threat Support Directorate, December 2011, pg. 6-71 ;  
+
+
+http://www.armyrecognition.com/russia_russian_missile_system_vehicle_uk/sa-8_gecko_9k33_osa_ground-to-air_missile_system_technical_data_sheet_specifications_information_uk.html

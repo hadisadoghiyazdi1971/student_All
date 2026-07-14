@@ -1,0 +1,20 @@
+OVERVIEW: The PRV-16 THIN SKIN B (1RL132) is a mobile, medium-range nodding height finding radar operating in the G-I (NATO) or C and X (IEEE) bands.
+
+
+DETAILS: The PRV-16 is deployed as part of a ground control intercept or as part of a tactical air defense unit or mobile SAM unit. It compliments other air search and surveillance radars by providing target height information.  Associated weapons systems are the SA-4 GANEF, SA-6 GAINFUL and SA-8 GECKO SAMs.
+
+Specifications:
+
+Frequency: 		 5-9 GHz (G-I Band (NATO), C and X Bands (IEEE)))  
+Power output: 		 560 kW(average); 800 kW (peak) 
+PRF:			 400, 800 pps 	
+Range Resolution:	 700 m (range), 1.6 degrees azimuth 				 
+	
+On/Off time:		 unknown seconds
+Deploy/Stow Time	 45 min / 45 min
+Effective Range:	 300 km
+
+NOTES: IOC 1970 (approx).  The PRV-9 THIN SKIN B is transported on two trucks or trailers.  
+
+
+SOURCES: "Jane's Radar and Electronic Warfare Systems Librarum.org," page 1960-61, Librarun.org - E-book Online. Accessed August 15, 2015, http://librarun.org/book/30265/1960 ; "Radar Basics." Grundlagen Der Radartechnik.  Accessed August 15, 2015. http://www.radartutorial.eu/19.kartei/karte913.en.html ; "Russian Air Defense Radars." Federation Of American Scientists -. Accessed August 15,  2015. http://fas.org/man/dod-101/sys/missile/row/radar-rus.htm ; "SOV - PRV-16 (1RL132, "Thin Skin B" - RL Vyskomer) : SSSR / Nastupnicke Staty SSSR (SOV)." Http://forum.valka.cz. Accessed August 15, 2015. http://forum.valka.cz/topic/view/15770/SOV-PRV-16-1RL132-Thin-Skin-B-RL-vyskomer.

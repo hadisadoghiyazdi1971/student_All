@@ -1,0 +1,31 @@
+OVERVIEW: The 36D6 / 5N59 / ST-68 / ST-68U  radar (NATO name: TIN SHIELD) is a semi-mobile, 3-D air surveillance and missile control radar operating in the E/F Band.
+
+DETAILS:  The TIN SHIELD is intended to detect targets at low, medium and high altitudes.  It is reportedly highly resistant to jamming and ARMs. The antenna can be mounted either on its trailer, or on a mast to increase the radar horizon. It can process up to 127 targets simultaneously. Weapons systems associated with the TIN SHIELD include the  SA-10 GRUMBLE and SA-20 GARGOYLE. 
+
+Specifications:
+
+Frequency: 		 2-4 GHz (E/F Band)
+Power output: 		 3 kW(average);  2.5 MW (peak)
+PRF:			 750-1500 Hz	
+Range Resolution:	 250 m (range), 0.33 degrees azimuth 					
+On/Off time:		unknown
+Deploy/Stow Time	1 hour (trailer mounted antenna) or 2 hours (mast mounted antenna)
+Detection Ranges,   0.1 m2 RCS target
+
+	60 m alt:	 20-28 km (trailer mounted antenna)
+	60 m alt:	30-38 km (mast mounted antenna)
+ 	
+Detection Ranges,   1 m2 RCS target
+
+	100 m alt:	 42-45 km (trailer mounted antenna); 52 km (mast mounted antenna)
+	1000 m alt:	120 km 
+ 	8000m alt.:	165 km
+
+
+
+ 
+NOTES:
+
+
+SOURCES: Janes Radar and Electronic Warfare Systems 2002-2003 "36D6 air defence radar, 02 July 2001, pg. 1984-86 (http://librarun.org/book/30265/1984); http://www.ausairpower.net/APA-Acquisition-GCI.html#mozTocId55304
+

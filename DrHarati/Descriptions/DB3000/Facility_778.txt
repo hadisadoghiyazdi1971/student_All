@@ -1,0 +1,7 @@
+OVERVIEW: Long-range tactical radar 3D air search radar. Although designed as a fully mobile system, the radar is equally suited to static operations and can, therefore, be used as both a 'backbone' sensor.
+
+DETAILS: Type 101/AR-327 replaced Type 92 radar. Some AR-327 are fixed and some mobile versions.
+
+NOTES: The Royal Air Force (RAF) introduced the Commander radar for the first time in 1997 where it is known as the Type 101 or T101 radar. Since then, the T101 has been deployed successfully in a variety of scenarios such as Arctic Circle, Central Asia, the Middle East and Iraq. September 2013 one radar was deployed to Cyprus.
+
+SOURCES: http://www.raf.mod.uk/rafscampton/aboutus/1air_control_centre.cfm

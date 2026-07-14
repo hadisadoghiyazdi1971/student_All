@@ -1,0 +1,19 @@
+OVERVIEW: The Boeing P-8 Poseidon (formerly the Multimission Maritime Aircraft or MMA) is a military aircraft developed for the United States Navy (USN). The aircraft has been developed by Boeing Defense, Space & Security, modified from the 737-800ERX.
+
+The P-8 conducts anti-submarine warfare (ASW), anti-surface warfare (ASUW), and shipping interdiction, along with an electronic signals intelligence (ELINT) role. This involves carrying torpedoes, depth charges, SLAM-ER missiles, Harpoon anti-ship missiles, and other weapons. It is able to drop and monitor sonobuoys. It is designed to operate in conjunction with the Northrop Grumman MQ-4C Triton Broad Area Maritime Surveillance unmanned aerial vehicle. The aircraft has also been ordered by the Indian Navy as the P-8I Neptune, with the Royal Australian Air Force expected to place an order.
+
+DETAILS: The P-8 is a militarized version of the Boeing 737-800 with 737-900-based wings. The fuselage is similar to but longer than the 737-700-based C-40 Clipper transport aircraft in service with the USN. The P-8 has a strengthened fuselage and Boeing 767-400ER-style raked wingtips, instead of the blended winglets available on 737NG variants. The five operator stations (two naval flight officers plus three enlisted Aviation Warfare Operators/naval aircrewman) are mounted in a sideways row, along the port side of the cabin. None of these crew stations have windows. One observer window is located on each side of the forward cabin.
+
+The P-8 features the Raytheon APY-10 multi-mission surface search radar. The P-8I will feature an international version of the APY-10. A short bomb bay for torpedoes and other stores opens behind the wing. The aircraft also includes six additional body fuel tanks for extended range from Marshall Aerospace; three of the tanks are located in the forward cargo compartment and three in the rear. In-flight refueling is via a receptacle on top of the forward fuselage, just aft of the cockpit. This receptacle will receive a flying boom that is typically used to refuel United States Air Force aircraft, as opposed to the hose-and-drogue system used by other USN aircraft. In order to power the additional electronics, the P-8 has a 180kVA electric generator on each engine instead of the 90kVA generator found on civilian 737s. This required a redesign of the nacelles and their mountings to the wings.
+
+In U.S. service, the Poseidon will be complemented by around 40 Northrop Grumman MQ-4C Triton unmanned aerial vehicles (UAVs) for the Broad Area Maritime Surveillance system to provide continuous surveillance. Because of the cancellation of Lockheed Martin's Aerial Common Sensor project, Boeing will propose a signals intelligence variant of the P-8 to service the requirement for the USN.
+
+SPECIFICATIONS: Crew: Flight (2); Mission (7) || Length: 129 ft 5 in (39.47 m) || Wingspan: 123 ft 6 in (37.64 m) || Height: 42 ft 1 in (12.83 m) || Max. takeoff weight: 189,200 lb (85,820 kg) || Powerplant: (2) CFM56-7B turbofan || Thrust: 27,000 lbf (120 kN) each.
+
+PERFORMANCE: Maximum speed: 490 knots (907 km/h, 564 mph) || Combat radius: 1,200 nmi (2,222 km); 4 hours on station (for anti-submarine warfare mission) || Service ceiling: 41,000 ft (12,496 m).
+
+SENSORS: Raytheon APY-10 multi-mission surface search radar || Advanced Airborne Sensor surface search radar and SIGINT package to be follow on system.
+
+ARMAMENT: (5) internal and (6) external stations || AGM-84H/K SLAM-ER || AGM-84 Harpoon || Mark 54 torpedo || Missiles || Mines || Torpedoes || Bombs || High Altitude Anti-Submarine Warfare Weapon system.
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org

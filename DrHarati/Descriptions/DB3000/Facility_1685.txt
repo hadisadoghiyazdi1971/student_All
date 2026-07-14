@@ -1,0 +1,15 @@
+OVERVIEW:  The HQ-64/LY-60 platoon is a short-to-medium range, low-to-medium altitude mobile, air defense unit using the semi-active homing HQ-64/LY-60 missile.
+
+DETAILS: A typical engagment begins begins with the surveillance radar detecting the target aircraft, which relays  it to the illumnator vehicle. A battery can process up to 40 targets, track 12 targets and engage three targets simultaneously.  System reaction time is nine seconds, with a pk of between 0.6 and 0.8.
+
+Specifications:
+ 
+Maximum Acquisition Range: 	variable, depending on AD sensor integration.
+Maximum Tracking Range:		0.5-9.7 nm 
+Engagement Envelope:		0.5-9.7 nm (range); 30-12,000 m (altitude)
+Reload time:			?? seconds 
+Mobility:			Mobile  
+
+NOTES:  
+
+SOURCES: Jane's Land Warfare Platforms: Artillery & Air Defense, "Lieying-60 (HQ-64/LY60)", 26 June 2014; "CHINESE AIR DEFENSE SYSTEM HQ-64 EXPORT NAME LY-60." Pakistan Defence. Accessed April 11, 2019. https://defence.pk/pdf/threads/chinese-air-defense-system-hq-64-export-name-ly-60.393500/ ; Dr Martin Andrew. "PLA Mechanised Infantry Division Air Defence Systems / PLAPoint Defence Systems." Air Power Australia. Accessed April 11, 2019. http://www.ausairpower.net/APA-PLA-Div-ADS.html.

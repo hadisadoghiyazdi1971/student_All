@@ -1,0 +1,15 @@
+OVERVIEW: The SINT NIKLAAS (ex- USS ADJUTANT) class minesweeper is a diesel-powered powered, coastal minesweeper.
+
+DETAILS:
+
+NOTES: Displacement: 330 tons standard
+       Speed: 13.5 knts
+       Range: 2700 nm @ 10.5 knts
+       Complement: 23
+       In Commission: 1953 
+       Completed: 1953 
+
+SOURCES: Gardiner, Robert, and Norman Friedman. Conway's All the World's Fighting Ships, 1947-1982. Annapolis, Md: Naval Institute Press, 1983, pg 3.
+
+
+

@@ -1,0 +1,19 @@
+OVERVIEW: The Harbin Z-9 (NATO reporting name "Haitun") Dolphin is a Chinese military utility helicopter. It is a licensed variant of the French Eurocopter AS365 Dauphin, and is manufactured by Harbin Aircraft Manufacturing Corporation.
+
+DETAILS: The Z-9B features 11-blade Fenestron faired-in tail rotor with wider-chord, all-composite blades replacing the 13-blade in AS 365N. As a light tactical troop transport, the Z-9 has the capacity to transport 10 fully armed soldiers. Generally the Z-9 is identical to the AS 365N Dauphin, though later variants of the Z-9 incorporate more composite materials to increase structural strength and lower radar signature. The helicopter has a four-blade main rotor, with two turboshaft engines mounted side by side on top of the cabin with engine layout identical to the AS 365N. The Z-9 teardrop-shaped body features a tapered boom to the tail fin, with rounded nose and stepped-up cockpit, and retractable gear and all flat bottom.
+
+In 2002, Harbin obtained Chinese certification for the new H410A variant of the Z-9, which featured more powerful Turbomeca Arriel 2C turboshaft engines; Eurocopter issued official objections to Harbin's decision to continue production in spite of the license-production agreement having expired, leading to a period of highly sensitive international negotiations to resolve the dispute.
+
+VARIANTS: An armed variant has been fielded by the PLA since the early 1990s as the WZ-9 or Z-9W, with pylons fitted for anti-tank missiles. These helicopters lack the maneuverability and survivability of a proper attack helicopter, and merely provide a stopgap during the development of the WZ-10. The latest armed version, the Z-9W, was introduced in 2005 and has night attack capabilities, with an under-nose low-light TV and infra-red observing and tracking unit.
+
+The naval version introduced in the 1990s is known as the Z-9C. As well as SAR and ASW duties, the Z-9C can be fitted with an X-band KLC-1 surface search radar to detect surface targets beyond the range of shipborne radar systems.
+
+TYPE: Helicopter.
+
+SPECIFICATIONS: Crew: (1) || Capacity: 9 passengers or 1,900 kg (4,189 lb) payload internal, 1,600 kg (3,527 lb) payload slung || Length: 11.44 m (37 ft 6 in) || Height: 4.01 m (13 ft 2 in) || Max takeoff weight: 4,100 kg (9,039 lb) || Powerplant: (2) Zhuzhou Aeroengine Factory WZ-8A turboshaft, 632 kW (848 hp) each || Main rotor diameter: 11.93 m (39 ft 2 in).
+
+PERFORMANCE: Max Speed: 305 km/h (190 mph; 165 kn) || Endurance: 5 hours || Service ceiling: 4,500 m (14,764 ft).
+
+ARMAMENT: (2) fixed 23 mm cannon on attack variants || Pylons for rockets, gun pods, ET52 torpedo, HJ-8 anti-tank missiles, or TY-90 air-to-air missiles.
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org

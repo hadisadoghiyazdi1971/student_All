@@ -1,0 +1,24 @@
+OVERVIEW: The 1L13-3 Nebo radar (NATO name: BOX SPRING) is a mobile, 2-D early warning radar operating in the A/B Band.
+
+DETAILS:    The 1L13-3 Nebo radar ECCM features include  pulse to pulse frequency agility. It is designed to  reject chaff automatically.
+
+Specifications:
+
+Frequency: 		30-300 MHz (approx)(NATO A/B Band)(IEEE: VHF Band)
+Power output: 		120-140 kW (peak)
+PRF:			300 Hz
+Accuracy:		400 m/ 0.67 degrees azimuth		
+Runup time:		Unknown
+Set up/Stow time: 	45 minutes / 45 minutes
+
+
+Detection Ranges (Fighter-size aircraft)
+	500 m altitude:		60 km
+     10,000 m altitude:	       250 km
+     27,000 m altitude:	       350 km
+
+ 
+NOTES: IOC 1986. Capable of being used as part of a radar system to  provide a valuable early warning capability against low observable aircraft.  As part of an IADS system, the 1L13 Nebo would be used to cue the high power aperture X-band systems to a small acquisition box in which the VLO aircraft can be found.
+
+
+SOURCES: "Russian / PLA Low Band Surveillance Radar Systems (Counter LowObservable Technology Radars)." Air Power Australia. Accessed April 4, 2015. http://www.ausairpower.net/APA-Rus-Low-Band-Radars.html#mozTocId481197 ; "NNIIRT Nebo SVU / RLM-M Nebo M / Assessing Russia's FirstMobile VHF AESAs." Air Power Australia. Accessed April 4, 2015. http://www.ausairpower.net/APA-Nebo-SVU-Analysis.html.

@@ -1,0 +1,21 @@
+OVERVIEW: The AN/TPS-63 Low-Altitude Surveillance Radar (LASS) is a TPS-63 installed on a tethered balloon platform to provide stationary airborne surveillance.  It operates in the D-Band. 
+
+DETAILS: The AN/TPS-63 LASS is designed to provide stationary airborne surveillance for extended periods of time.  The AN/TPS-63 is a two-dimensional radar, which is doctrinally employed as a tactical gap-filler or as an early warning system for early deployment into the operational area.  Jamming effects are also reduced by several forms of frequency agility, including pulse-to-pulse, burst, and sector. The radar also uses a full array of clutter-reduction processing techniques and can initiate up to 600 targets automatically.  
+
+Specifications:
+
+Frequency: 		  1.250-1.350 GHz (D Band (NATO), L Band (IEEE)))  
+Power output: 		  3 kW(average); 100 kW (peak) 
+PRF:			  774 pps	
+Accuracy:		  150 m (range), 0.35 degrees azimuth 					
+On/Off time:		  unknown
+Deploy/Stow Time	  Unknown
+ 
+Detection Range:
+Pd+90%, 1m2 RCS:	207 km
+
+Max Range:		322 km
+
+NOTES: IOC 1978.  The primary aerostat mission is to provide radar data in support of other federal agencies involved in the nation's drug interdiction program.
+
+SOURCES: Federation of American Scientists. "AN/TPS-63." Accessed December 1, 2013. http://www.fas.org/man/dod-101/sys/ac/equip/an-tps-63.htm ; "AN/TPS-63." GlobalSecurity.org - Reliable Security Information. Accessed March 28, 2015. http://www.globalsecurity.org/military/systems/aircraft/systems/an-tps-63.htm ; "GROUND RADARS (Military Weapons)." What-when-how — In Depth Tutorials and Information. Accessed March 28, 2015. http://what-when-how.com/military-weapons/ground-radars-military-weapons/. ; http://www.mobileradar.org/radar_descptn_3.html ; Federation of American Scientists. "Tethered Aerostat Radar System - United States Nuclear Forces." Accessed December 1, 2013. http://www.fas.org/nuke/guide/usa/airdef/tars.htm

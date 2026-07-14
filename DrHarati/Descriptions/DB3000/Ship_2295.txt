@@ -1,0 +1,31 @@
+OVERVIEW: The Type 056 corvette (NATO codename: Jiangdao) is a new Chinese light warship that entered service with the People's Liberation Army Navy in 2012 as a replacement for the Type 037 series of patrol vessels. It has been described as a stealth missile corvette which is also armed with a 76mm main gun.
+
+DETAILS: The Type 056 has a stealthy hull design with sloped surface and a reduced superstructure clutter. There is a helipad at the stern for a light helicopter but has no organic helicopter support facilities.
+
+The main anti-ship armament consists of YJ-83 sea-skimming anti-ship cruise missiles in two twin-cell launchers. The primary anti-aircraft armament is one FL-3000N short range missile system with 8 rounds. A 76 mm main gun based on a Russian AK-176 is mounted forward. 2 triple torpedo tubes are mounted for ASW operations.
+
+Type 056 is the first Chinese warship with modular design, which makes it cover the roles from OPV to multi-role frigate. The PLAN used versions may include basic type, ASW type, ASuW type, AAW type and commander type; while the export versions can be quite differently fitted according to buyer's requirement. Specifically, the OPV version have higher bridge thus larger RCS than the corvette/multi-role frigate version, but have better vision for patrol role; OPV version also has hanger while corvette not; moreover, corvette version have less complement though with more weapon systems, which indicate the combat system for corvette is more advanced.
+
+VARIANTS: At least four variants of Type 056 have been fielded by PLAN, but their respective designations remain unknown because no such information has been released as of mid-2014.
+
+The first variant of Type 056 is the basic version including the first unit of this type that was launched in mid 2012 by Hudong-Zhonghua Shipbuilding, and a total of three were built. The visual distinction of this variant is in its chimney where the exhaust pipes are exposed. Another distinct visual identification of this variant is in its inward slanted bulwark at the bow.
+
+The second variant of Type 056 is the modification of the basic version with infrared suppression added to the chimney and the exhaust pipe covered up to improve stealth. The bulwark at the bow is also modified in that the original bulwark is replaced by a bulwark similar to the bulwark installed at the bow of Type 054A frigate. This second variant begun with the fourth unit of Type 056 that appeared in late 2012, as units built by Huangpu Shipyard of Guangzhou Shipyard International. Reportedly, the first three units of the first variant of Type 056 is later modified to the standard of this second variant.
+
+The third variant of Type 056 has further modification to superstructure improve stealth, and it first appeared at the end of 2012 when launched, and early 2013 when entered service. The platform where fire control radar is installed is redesigned to eliminate the sharp edges, which are replaced by slant angles. The chimney also has slight slant angle as well.
+
+The fourth variant of Type 056 is an ASW version and sometimes referred as Type 056A on the internet, but this designation has yet to be confirmed by official sources. This first unit of this fourth variant first appeared in late 2013. The main difference between this variant and earlier three variants is in stern, which is redesigned to house variable depth sonar and towed array sonar added.
+
+TYPE: Corvette (FFL).
+
+SPECIFICATION: Displacement: 1,440 tons (Full Load) || Length: 89m || Beam: 11.6m || Draft: 4.0m || Propulsion: (2) S.E.M.T.Pielstick 16PA6STC diesels || Complement: 60.
+
+PERFORMANCE: Speed: 28 knots || Range: 3500 nmi (6500 km) at 18 knots.
+
+SENSORS: SR64 air/surface-search radar || TR47 gun fire-control radar.
+
+ARMAMENT: (2) 2-cell YJ-83 (C-803) anti-ship missiles || (1) HQ-10 8-round SAM launcher || (1) H/PJ-26 76 mm main gun || (2) H/PJ-17 30mm RWSs || (2) triple torpedo tubes.
+
+AIRCRAFT: Helipad.
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org

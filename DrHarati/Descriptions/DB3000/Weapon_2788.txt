@@ -1,0 +1,25 @@
+OVERVIEW:  The Spike NLOS (Non Line of Sight) aka "Tamuz" is a solid fuel, "fire and forget" anti-vehicle/ground attack missile using a dual-mode electro-optical (EO)/infrared (IR) seeker. It can be equipped with a variety of warheads. 
+
+DETAILS:   The Spike NLOS can be operated in either direct attack mode or midcourse navigation mode based on target coordinates, providing the capability to engage targets at stand-off range with no line of sight.  Its dual mode seeker allows for target engagement in reduced visibility or night conditions.  The Spike-NLOS TV camera and datalink allow the operator to select a wide-angle view during its flight, giving the missile a limited reconnaissance capability.  The TV guidance and datalink also provides a "Lock-On After Launch" (LOAL) aka “Fire-and-Observe” capability, giving the operator the ability to maneuver, retarget or even abort the missile in flight. The system can also tie into a C3 network, utilizing data from other sources such as counterbattery radars and drones to direct the missile to its target.
+
+
+
+Specifications:
+ 
+Weight: 		 18 kg 
+Length: 		 1.67 m 
+Diameter: 		 ?? mm (missile body)
+Wingspan: 		  ?? m 
+Speed:			  ?? knots; 
+Range:			 25 km 
+ROF:			 2 rnds/min; 30 sec to set up; 15 sec to reload 
+Max target speed: 	N/A 
+Kill probability:	?? 
+	
+
+
+NOTES:  IOC 1981 (approx). Can be fired from land, air and naval platforms.
+ 
+
+SOURCES: 
+"Rafael Spike Fire-and-Forget Anti-Tank Guided Missile System (ATGM) - Israel." Military Factory - Global Defense Reference. Accessed January 11, 2019. https://www.militaryfactory.com/smallarms/detail.asp?smallarms_id=788 ; "Rafael Unveils Spike NLOS Modular Launcher Development | Jane's 360." Defence & Security Intelligence & Analysis | Jane's 360. Last modified July 3, 2018. https://www.janes.com/article/81500/rafael-unveils-spike-nlos-modular-launcher-development ; "Rafael, Lockheed Pitch Spike Missile For Army Helicopters." Breaking Defense. Last modified October 5, 2018. https://breakingdefense.com/2018/10/rafael-lockheed-pitch-spike-missile-for-army-helicopters/ ; "The Spike Missile: Has Israel Developed the Ultimate Weapon to Kill Tanks?" The National Interest. Last modified October 26, 2017. https://nationalinterest.org/blog/the-buzz/the-spike-missile-has-israel-developed-the-ultimate-weapon-22924 ; Rafael. "Spike NLOS Multi-Purpose, Multi-Platform Electro Optical Missile System." Accessed January 11, 2019. http://www.rafael.co.il/5752-2415-en/Marketing.aspx.

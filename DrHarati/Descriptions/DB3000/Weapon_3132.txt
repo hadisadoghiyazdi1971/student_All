@@ -1,0 +1,18 @@
+OVERVIEW: The AS-22 (Kh-38MKE) is an air-launched, supersonic, solid fuel, satellite-guided, air to surface missile.
+
+DETAILS:  The AS-22 is a modular guided missile designed for launch from fixed wing and rotary aircraft to attack a range of armored, soft, and anti-ship targets. The AS-22 famiy of missiles are modular, allowing to switch warhead and guidance packages to respond to tactical needs. The missile can be released from an altitude of 200 to 12,000 meters and an airspeed between 15 and 450 meters per second. After launch the missile can turn up to +/- 80-degree (right/left) in the horizontal plane to engage its intended target with a hit probability between 60 to 80 percent.  
+
+The Kh-38MKE varient uses intertial guidance for midcourse updated and satellite navigation for terminal homing. When used against an emitter, the inertial guidance system can continue to guide the weapon to the target, although with reduced accuracy. The Satellite navigation system is best used against fixed area targets.  The Kh-38MKE uses a cluster warhead with an impact or proximity fuze. 
+
+Specifications:
+
+Weight:		520 kg
+Wingspan: 	114 cm
+Speed:		2.2 mach/875 kt
+Range: 		1.6-40 km
+
+
+NOTES:  IOC: 2013. The Kh-38MKE is the export version of the Kh-38MK
+
+SOURCES:  Jane's Air-Launched Weapons, "Kh-38M (Kh-38ME)", 08 March 2016 ; "Kh-38ME family." Tactical Missiles Corporation JSC. Accessed October 23, 2016. http://eng.ktrv.ru/production_eng/323/513/537/ ; 
+"Kh-38MLE." Guide to Military Equipment and Civil Aviation. Accessed October 23, 2016. http://www.deagel.com/Standoff-Weapons/Kh-38MLE_a002425001.aspx ; "Air Force adopted a new high-precision missile Kh-38 "air-land"." Accessed September 25, 2016. https://topwar.ru/23146-vvs-prinyali-na-vooruzhenie-novuyu-sverhtochnuyu-raketu-h-38-klassa-vozduh-zemlya.html 

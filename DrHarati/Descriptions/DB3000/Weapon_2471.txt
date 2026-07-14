@@ -1,0 +1,14 @@
+OVERVIEW: The AN/AQS-20A is a lightweight, towed mine detection side-scan sonar with electro-optical sensors.  
+
+DETAILS: The AN/AQS-20A uses sidescan, forward-looking and gapfiller sonars to detect and classify mine-like objects from the seafloor to the near surface in a single pass.  This capability allows the system to give timely and accurate information on the location of mines to support neutralization by systems such as the Airborne Mine Neutralization System (AMNS).
+
+Specifications:
+Max Operating Depth:	450 feet    
+
+NOTES:  Low Rate Initial Production commenced in 2005.  Can be towed by helicopter or surface ships.
+ 
+
+SOURCES: Friedman, Norman. The Naval Institute Guide to World Naval Weapons Systems, 1997 
+-1998. Annapolis, Md: Naval Institute Press, 1997, pg 756 ; Jane's C4ISR & Mission Systems: Maritime, "AN/AQS-20A";  USN, "Factsheet: AN/AQS-20A Minhunting Sonar System",  http://www.secnav.navy.mil/rda/Documents/AQS-20+20110826+V2.pdf 
+  
+

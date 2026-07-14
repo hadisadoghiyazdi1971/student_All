@@ -1,0 +1,21 @@
+OVERVIEW: The AGM-84C or Block 1B Harpoon is an air launched, turbo-jet powered, solid-fuel, sea-skimming, long range, radar guided anti-ship missile equipped with a 221 kilogram warhead.
+
+DETAILS: The AGM-84 Harpoon is the primary anti-surface weapon used by many Western navies.  Although intended initially as an air launched weapon, it was quickly adapted for use by both ships and submarines. 
+
+	A typical engagement by an aircraft begins with the launching aircraft being cued to the target position either through onboard sensors, or via reporting from other targeting platforms using passive or active means.  The launching aircraft will then typically approach the target from below the radar horizon.  Prior to launch, the radar is programed for a large, medium or small acquisition window.  Although a smaller acquisition window requires more precise  
+targeting data, it also minimizes target warning time. Prior to launch, the Harpoon is also programmed to one of two modes: The Range and Bearing Launch (RBL) or the Bearing Only mode. In the RBL mode, the AGM-84C Harpoon descends to a low cruise altitude immediately after launch, using its radar altimeter and inertial navigation to guide it to a preselected point near the calculated target position.  It then activates its frequency-agile, active J-band (10 to 20 GHz) radar seeker to guide it to the target.  In the Bearing Only launch mode, the Harpoon is launched down a target bearing and the radar seeker is activated shortly after launch.  If no suitable target is found, the Harpoon switches to a search pattern and self-destructs if it fails to acquire a target.
+
+	In either mode, once the seeker acquires a target, the missile enters the terminal attack phase, attacking the target from a sea-skimming altitude.
+
+Specifications:
+
+Speed:	0.85 mach
+Range:	110 km
+Weight: 526 kg
+ 
+
+NOTES: IOC 1982. The AGM-84C differs chiefly from the AGM-84A in that it has a lower cruise and attack altitude as well as incorporates ECCM improvements and uses a sea-skimming attack profile instead of the pop-up attack profile.  It also allows the firing platform to program the missile to use a "dog leg" flight path.
+
+
+SOURCES: Friedman, Norman, "The Naval Institute Guide to World Naval Weapons Systems, 1997-1998, Annapolis, MD: Naval Institute Press, 1997, pg. 255-6 ; "RGM-84 Harpoon/SLAM - Smart Weapons." Federation Of American Scientists. Accessed August 21, 2015. http://fas.org/man/dod-101/sys/smart/RGM-84.htm ; Boeing. "Backgrounder: Harpoon Block II." Last modified March 2013. http://www.boeing.com/assets/pdf/defensespace/missiles/harpoon/docs/HarpoonBlockIIBackgrounder.pdf ; "MCDONNELL-DOUGLAS RGM-84L HARPOON and RGM-84E SLAM." Air Power Australia. Accessed August 21, 2015. http://www.ausairpower.net/TE-Harpoon.html ; "Harpoon." Weaponsystems.net. Accessed August 21, 2015. http://weaponsystems.net/weaponsystem/HH10%20-%20Harpoon.html ; "Boeing RGM/RGM/UGM-84 Harpoon." Designation-Systems.Net. Accessed August 21, 2015. "Boeing AGM/RGM/UGM-84 Harpoon." Designation-Systems.Net. Accessed August 21, 2015. http://www.designation-systems.net/dusrm/m-84.html.
+

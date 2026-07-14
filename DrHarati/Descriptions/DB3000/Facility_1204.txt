@@ -1,0 +1,7 @@
+OVERVIEW: The Giraffe-40 (sometimes named Giraffe IV) is a mobile, medium range air identification and surveillance radar.  
+
+DETAILS: The GIRAFFE is intended for operations with medium- and Short Range Air Defense (SHORAD) missile or gun systems or for use as gap-fillers in a larger air defense system. The radar gets its name from the distinctive folding mast which when deployed allows the radar to see over nearby terrain features such as trees, extending its effective range against low-level air targets.  It uses Agile Multi-Beam (AMB), which includes an integrated Command, control and communication (C3) system. This enables GIRAFFE to act as the command and control center in an air defense system; it can also be integrated into a sensor net for greater coverage. It is normally housed in a single 6m long shelter mounted on an all-terrain vehicle for high mobility. 
+
+NOTES: Developed by Saab, Sweden. Several user countries include: Finland Army 1989, Ireland Army, Latvian Army 1992, Lithuania 2006, Norway 1983, Pakistan Army 1989 and Singapore Air Force.
+
+SOURCES: Wikipedia. "GIRAFFE Radar." Accessed December 2, 2013. http://en.wikipedia.org/wiki/GIRAFFE_Radar.

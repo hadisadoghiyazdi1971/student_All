@@ -1,0 +1,17 @@
+OVERVIEW: The COUNTRY class (Batch 2) is a COSAG-powered guided missile destroyer (DDG).
+
+DETAILS:   The COUNTRY class (Batch 2) DDG used a combined steam and gas (COSAG) to power its two shafts. The class was designed as a hybrid cruiser-destroyer, with a much larger displacement orginally designed around the Sea Slug missile system. Its size gave the class capabilies as command ships, having more operations room space than later Type 42 destroyer. 
+Specifications: 
+
+       Displacement:  5,440 tons standard; 6,200 tons full load 
+       Speed: 30 knts
+       Engineering: 2 shaft, 2 steam engine, 4 gas turbine
+       Range: 3,500 nm @ 28 knts
+       Complement: 470 
+       In Commission: 1970-to date. Transferred to Chille in 1982-1987
+       Completed: 4
+
+NOTES: Units in class: PRAT (11)(ex-HMS NORFOLK); COCHRANE (12)(ex-HMS ANTRIM); LATORRE (14)(ex-HMS GLAMORGAN); BLANCO ENCALADA (15)(ex-HMS FIFE)
+   
+
+SOURCES: Sharpe, Richard. Jane's Fighting Ships 1991-92.  London: Jane's Pub, 1991, pg. 101; County-class destroyer - Wikipedia, the free encyclopedia. (n.d.). Retrieved May 4, 2015, from http://en.wikipedia.org/wiki/County-class_destroyer; COUNTY Class Destroyer." Haze Gray & Underway - Naval History and Photography. Accessed September 6, 2016. http://www.hazegray.org/navhist/rn/destroyers/county/ ; 

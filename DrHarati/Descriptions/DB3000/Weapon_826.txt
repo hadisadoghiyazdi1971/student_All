@@ -1,0 +1,21 @@
+OVERVIEW:
+The AGM-154 Joint Standoff Weapon (JSOW) is the product of a joint venture between the United States Navy and Air Force to deploy a standardized medium range precision guided weapon, especially for engagement of defended targets from outside the range of standard anti-aircraft defenses, thereby increasing aircraft survivability and minimizing friendly losses.
+
+DETAILS:
+The AGM-154 is intended to provide a low cost, highly lethal glide weapon with a standoff capability. The JSOW family of air-to-surface glide weapons are 450 kilograms (1,000 lb) class weapons that provide standoff capabilities from 28 km (15 nmi) low altitude launch and up to 110 km (60 nmi) high altitude launch. The JSOW can be used against a variety of land targets and operates from ranges outside enemy point defenses.
+
+The JSOW is a launch and leave weapon that employs a tightly coupled Global Positioning System (GPS)/Inertial Navigation System (INS), and is capable of day/night and adverse weather operations. The AGM-154C (JSOW C) uses an infra-red seeker for terminal guidance.
+
+The AGM-154C uses an Imaging Infrared (IIR) terminal seeker with autonomous guidance. The AGM-154C carries the BROACH warhead. This two stage warhead is made up from a WDU-44 shaped augmenting warhead and a WDU-45 follow through bomb. The weapon is designed to attack hardened targets. It entered service with the US Navy in February 2005.  The BROACH warhead is a multi-stage warhead.  The two stage warhead is made up from an initial shaped charge, which cuts a passage through armour, concrete, earth, etc., allowing a larger following warhead to penetrate inside the target. The weapon is designed to allow a cruise missile to achieve the degree of hard-target penetration formerly only possible by the use of laser-guided gravity bombs.
+
+SPECIFICATION: 
+Weight: 483 to 497 kg (1,065 to 1,095 lb)
+Length: 410 cm (160 in)
+Diameter: 330 mm (13 in)
+Wingspan: 270 cm (106 in)
+
+PERFORMANCE: 
+Operational range: low altitude release: 22 kilometres (12 nmi) || high altitude release: 130 kilometres (70 nmi)
+
+SOURCE: 
+Wikipedia http://en.wikipedia.org

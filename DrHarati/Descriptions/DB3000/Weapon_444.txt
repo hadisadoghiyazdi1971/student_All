@@ -1,0 +1,23 @@
+OVERVIEW: The AIM-54A Phoenix is a long-range, semi-active/active radar guided air-to-air missile with a 60.75 kilogram proximity warhead.   
+
+DETAILS:  The AIM-54A Phoenix was designed primarily to defend against Soviet bomber streams, although it has a capability against fighter aircraft and low flying missiles.  The AIM-54/AWG-9 was the first air to air weapons system with a multiple track capability, allowing tracking of up to 24 targets and launch of up to 6 Phoenixes nearly simultaneously.  To achieve its long range, the AIM-54 initially uses a semi-active radar mode, intermittently receiving mid-course updates from the F-14's AWG-9 or APG-71 radar.  During this phase, the Phoenix climbs to cruise between 24,000-30,000 meters at approximately Mach 5. This high altitude gives the missile gravitational potential energy, which is later converted into kinetic energy as the missile dives at high velocity towards its target. At approximately 7.5-9.7 nm (14-18 km) from the target, the missile activates its own radar to provide terminal guidance.  At this time the missile is completely independent of its launching aircraft, and becomes "fire-and-forget".  The missile also has a home-on-jam mode.
+
+Specifications:
+Weight:			443 kg 
+Length: 		3.96 m 
+Diameter: 		3.8 cm 
+Wingspan: 		0.92 m
+Warhead:		60.75 kg, proximity 
+
+PERFORMANCE: 
+Operational range: 	3.9-135 km (2.1-73.0 mn)
+Speed: 			+4,800 km/hr (M 4.3)
+Maneuverability:		17 g
+
+NOTES: IOC 1974. Reportedly, the column of smoke made by the AIM-54's rocket motor could provide significant warning to a target.  The AIM-54 was retired from USN service in 2004. 
+
+SOURCES: Friedman, Norman, "The Naval Institute Guide to World Naval Weapons Systems, 1997-1998, Annapolis, MD: Naval Institute Press, 1997, pg. 427 ; "Fact File: AIM-54 Phoenix missile." America's Navy. Accessed August 30, 2015.  
+http://www.navy.mil/navydata/fact_display.asp?cid=2200&tid=700&ct=2 ; "AIM-54 Phoenix Missile." Federation Of American  
+Scientists -. Accessed August 30, 2015. http://fas.org/man/dod-101/sys/missile/aim-54.htm ; "AIM-54 Phoenix." Wikipedia,  
+the Free Encyclopedia. Accessed August 30, 2015. https://en.wikipedia.org/wiki/AIM-54_Phoenix ; "Raytheon AIM-54  
+Phoenix." Designation-Systems.Net. Accessed August 30, 2015. http://www.designation-systems.net/dusrm/m-54.html ; "AIM-54 Phoenix." Wikipedia, the Free Encyclopedia. Accessed August 30, 2015. https://en.wikipedia.org/wiki/AIM-54_Phoenix.

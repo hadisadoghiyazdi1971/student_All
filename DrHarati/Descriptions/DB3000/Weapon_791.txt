@@ -1,0 +1,12 @@
+OVERVIEW: The AGM-142F Raptor HAVE NAP, is a solid fuel short-to-medium range, IIR guided, air-to-ground missile  
+designed for precision attack against large, high-value targets from stand-off ranges.  
+
+
+DETAILS: The AGM-142F Raptor uses a GPS-aided inertial guidance system that pilots the missile towards the target, switching to a imaging infrared (IIR) seeker, enabling either the launching platform or another platform to designate the target in  the terminal phase. The AGM-142F can attack its target using either a low level "pop up" or a steep dive from high altitude. The modular warhead section can be fitted with either a HE blast/fragmentation warhead or a high-penetration warhead.  
+
+
+NOTES:  The AGM-142F is also known as the "Popeye." Initially developed for Israel, the AGM-142 entered IAF service in 1985. Variants are also used by Turkey, South Korea, India and Austalia.  The seeker head is modular, and can be fitted with either an TV (AGM-142A) or an imaging infrared (IIR) seeker (AGM-142B).
+
+
+SOURCES:  Jane's Air-Launched Weapons, Popeye 1,2 (AGM Have Nap/Have Lite/Raptor), 22 October 2014 ; Wikipedia, the free encyclopedia. "Popeye (missile)." Accessed November 2, 2014. http://en.wikipedia.org/wiki/Popeye_(missile) ; GlobalSecurity.org - Reliable Security Information. "AGM-142 Raptor / Have Nap / Popeye - Smart Weapons." Accessed November 2, 2014. http://www.globalsecurity.org/military/systems/munitions/agm-142.htm.
+

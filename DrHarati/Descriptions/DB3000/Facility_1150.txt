@@ -1,0 +1,7 @@
+OVERVIEW: AN/MPS-24 in fixed height finder surface radar 
+
+DETAILS: 
+
+NOTES: The AN/FPS-6 radar was introduced into service in the late 1950s and served as the principal height finder radar for a few decades thereafter. Between 1953 and 1960, 450 units of the AN/FPS-6 and the mobile AN/MPS-14 version were produced.
+
+SOURCES: http://67.69.104.76:84/Pinetreeline/misc/equip/misc12u.html ; Radomes, Inc. - The Air Defense Radar Veterans Association. "AN/FPS-6, AN/MPS-14." Accessed December 1, 2013. http://radomes.org/museum/equip/fps-6.html

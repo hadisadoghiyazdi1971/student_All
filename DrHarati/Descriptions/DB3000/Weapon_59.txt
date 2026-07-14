@@ -1,0 +1,25 @@
+OVERVIEW: The AGM-130C is a rocket powered, command- and EO guided,  air-to-surface missile with a 906 kg warhead penetrating warhead.
+
+DETAILS: The AGM-130C is a powered air-to-surface missile designed for high- and low-altitude strikes at standoff ranges against highly
+defended hard targets. The weapon uses the same TV or IIR seeker and  command datalink used in the GBU-15 glide bomb. This provides the launch aircraft a visual presentation of the target as seen from the weapon. 
+
+The seeker can be either locked onto the target before or after launch for automatic weapon guidance, or it can be manually steered by a weapon systems officer. Manual steering is performed through the two-way data link.
+
+Unlike the AGM-130A, the C version uses a BLU-109 penetrator warhead.
+
+The AGM-130 is designed for use in the F-4, F-15, F-111, A-10 and possibly F-16 aircraft.
+
+Specifications: 
+
+Weight: 		1323 kg
+Length: 		3.9m
+Wingspan:		1.49 m
+Diameter:		0.45
+Speed:			600 knts (approx); (1111 km/hr)
+Range:			5-40 nm (9.6-75 km)
+
+NOTES:  IOC: Developed, but not put into service.
+
+ 
+SOURCES:  "AGM-130 Missile." U.S. Air Force. Last modified June 18, 2003. https://www.af.mil/About-Us/Fact-Sheets/Display/Article/104579/agm-130-missile/ ; "Boeing AGM-130 Air-to-Surface Guided Missile." Military Factory - Global Defense Reference. Accessed September 27, 2019. https://www.militaryfactory.com/munitions/detail.asp?munitions_id=Missile-AGM-130 ; Dr Carlo Kopp, AFAIAA, SMIEEE, PEng. "AGM-130, AGM-136A Tacit Rainbow." Air Power Australia. Accessed September 27, 2019. https://www.ausairpower.net/TE-AGM-130-136.html ; 
+"AGM-130." Forecast International. March 2002.  https://www.forecastinternational.com/archive/disp_old_pdf.cfm?ARC_ID=1062 ; AGM-130C (IR). n.d. http://www.deagel.com/Offensive-http://www.deagel.com/Offensive-Weapons/AGM-130C-IR_a001071008.aspx.

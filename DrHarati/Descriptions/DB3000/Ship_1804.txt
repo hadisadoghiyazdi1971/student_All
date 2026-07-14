@@ -1,0 +1,19 @@
+OVERVIEW: The MANCHESTER class (Type 42 Batch 3) is a COGOG-powered guided missile destroyer (DDG).
+
+DETAILS:    The MANCHESTER class was designed to provide area air defense for a task force. The class used a combined gas or gas  
+(COGOG) to power its two shafts. In this system, a high efficiency, low output turbine is used for cruising speeds with a high output turbine being used for high-speed operations. The main problem with this engineering plant is the extreme noise it develops, rendering the Type 42 unsuited for long, slow stalking of a quiet submarine.  The Batch 3 is a much improved design over Batch 1 and 2, drawing from experience with these earlier batches, whose survivability and update potential was compromised by their small hull. Although with identical weapons, sensors, superstructure and propulsion package, Batch 3 featured a 16.1 meter extension in hull length and a 0.61 increase in beam.  These modifications increased the sea keeping of the Batch 3 over its predecessors.  Additionally, the larger size allowed for more duplicative systems, a stronger hull and improved firing arcs for the SEA DART and gun. 
+
+Specifications: 
+
+       Displacement:  3,500 tons (standard);  4,775 (full load)
+       Speed: 30 knts
+       Engineering: 2 shaft, 4 gas turbines (2 for full power, 2 for cruise)
+       Range: 4,000 nm @ 18 knts
+       Complement: 301 
+       In Commission: 1982-2013 
+       Completed: 4
+
+NOTES: Units in class: MANCHESTER (D95); YORK (D98); GLOUCESTER (D96); EDINBURGH (D97).  The Type 42 was conceived as a lighter and cheaper alternative to the Type 82, while maintaining much of the Type 82's capabilities.  The Type 42 achieved this by using a much smaller hull than the Type 82, deleting the Ikara ASW missile and the Limbo ASW mortar, and maxizing system centralization and automation, while minimizing system duplication, and using economical living spaces.  This made it possible to fit these capabilities into a small hull.
+
+
+SOURCES: Moore, John Evelyn. Jane's Fighting Ships 1987-88.  London: Jane's Pub, 1987, pg. 662 ;  "Type 42 Destroyer." Wikipedia, the Free Encyclopedia. Accessed May 17, 2015. http://en.wikipedia.org/wiki/Type_42_destroyer ; "Type 42." GlobalSecurity.org - Reliable Security Information. Accessed May 17, 2015. http://www.globalsecurity.org/military/world/europe/type42.htm.

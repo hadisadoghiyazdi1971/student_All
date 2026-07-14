@@ -1,0 +1,14 @@
+OVERVIEW: The DELTA III (Project 667 BDR) is a nuclear powered ballistic missile submarine.
+
+DETAILS:   The DELTA III SSBN has a double hull design similar to previous Delta classes.  Externally, it differs mainly in the larger turtle back aft of its sail.  This larger structure enables the DELTA III to carry the larger SS-N-18 missile.  Unlike previous Soviet SSBNs, it could fire any number of SLBMs in a single salvo.  It remains in service with the Russian navy.
+ 
+NOTES: 
+      Displacement: 18,200 tons submerged.
+       Speed: approximately 23-24 knts submerged
+       Reactors: 2 pressurized water 
+       Complement: 130 (approx.)
+       Hulls built:  14
+       Period of Service:  1976-to date
+
+SOURCES: Norman Polmar, "Guide to the Soviet Navy, 3rd ed. (Annapolis, MD: Naval Institute Press, 1983), 84-85 ;  Federation of American Scientists. "667BDR DELTA III - Russian and Soviet Nuclear Forces." Accessed November 23, 2013. http://www.fas.org/nuke/guide/russia/slbm/667BDR.htm ; Russian strategic nuclear forces. "Strategic fleet - Russian strategic nuclear forces." Accessed November 23, 2013. http://russianforces.org/navy/
+

@@ -1,0 +1,14 @@
+OVERVIEW: The AN/ALE-43(V)4 is an external pod or internal mounted chaff dispensing system.
+
+
+DETAILS:  The AN/ALE-43 is a "chaff cutter," allowing aircrew to select, while in flight, chaff cut to the proper length for meeting changing threat frequencies.  The system is capable of creating chaff tuned to the A-K bands (approximately 0-40 GHz).
+
+
+NOTES:  The ALE-43(V)4 is currently carried by the EA-6B Prowler and is undergoing qualification for carriage on the F/A-18C/D.
+
+
+SOURCES:  Federation Of American Scientists -. "ALE-43 Chaff Cutter and Dispensing System." Accessed November 15, 2014. http://fas.org/man/dod-101/sys/ac/equip/an-ale-43.htm ; NAVAIR - U.S. Navy Naval Air Systems Command - Navy and Marine Corps Aviation Research, Development, Acquisition, Test and Evaluation. "ALE-43(V) Bulk Chaff Pod | NAVAIR - U.S. Navy Naval Air Systems Command - Navy and Marine Corps Aviation Research, Development, Acquisition, Test and Evaluation." Accessed November 15, 2014. http://www.navair.navy.mil/index.cfm?fuseaction=home.displayPlatform&key=A3B563A6-7045-4B07-AFF8-5129E73C4C22 ; Electronic Warfare Handbook 2008, available at www.groundsystems-index.com/images/2008homegsi/ewh2008.pdf
+
+
+
+

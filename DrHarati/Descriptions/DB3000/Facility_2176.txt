@@ -1,0 +1,19 @@
+OVERVIEW: The Voronezh-DM is a fixed, long-range  early-warning and surveillance  radar, operating in the UHF band, and designed to detect and track a wide range of threats such as ballistic missiles, aircraft and satellites. 
+
+DETAILS:  The Voronezh early warning system is capable of tracking up to 500 objects simultaneously.
+
+Specifications:
+
+Frequency			0.1 m (UHF Band)
+Power output: 			unk (average)
+PRF:				unk Hz
+Range Resolution:		unk m (range), unk degrees (azimuth)
+On/Off time: 			unk min. 
+Deploy/Stow time: 		N/A
+Effective Range (Pd> 0.5):	unk km 
+ 
+
+NOTES: IOC 2009. based on modular off-the-shelf radar technology.
+
+
+SOURCES: "Voronezh-DM." Guide to Military Equipment and Civil Aviation. Accessed December 1, 2018. http://www.deagel.com/Sensor-Systems/Voronezh-DM_a002354001.aspx ; "«Vostok» Radar." KB Radar. Accessed December 1, 2018. http://www.kbradar.by/en/products/radiolokatsiya/radiolokatsionnye-stantsii/81/.

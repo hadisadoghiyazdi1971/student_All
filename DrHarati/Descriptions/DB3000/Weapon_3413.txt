@@ -1,0 +1,16 @@
+OVERVIEW: PL-15 long-range air-to-air missile (LRAAM) designed to shoot down aerial tankers and airborne early warning and control aircraft (AEW&C) from as far away as 174 kilometers.
+
+DETAILS: PL-15 is outfitted with a sophisticated radar seeker and a powerful dual pulse rocket motor, a combination that makes this LRAAM a serious threat to high-value aerial targets such as tankers and AEW&C planes deep behind enemy lines.
+
+The rocket motor allows the PL-15 to fly a semi-ballistic trajectory to achieve extra long range. Chinese media said the PL-15 can reach out at a speed greater than Mach 4 (4,900 km/h). The missile's cruising altitude is about 30 km.
+
+Its advanced guidance system consists of a two-way datalink and a new active/passive dual mode AESA seeker with enhanced ECCM (electronic counter-countermeasures) capability.
+
+Before launch, PL-15 must obtain the target information via datalink from an AEW&C plane; a land-based long-range radar system or a satellite. After the initial ascent stage, the missile uses Beidou / GPS+INS+datalink guidance during mid-course cruising.
+
+At the terminal diving stage and in combination with the AESA seeker, the missile may also use an IIR (imaging infrared) seeker to increase its kill probability despite severe jamming.
+
+The missile's length (5.8 meters) means it can't be carried internally by the Chengdu J-20 "stealth" fighter. PL-15, however, can be carried externally by Generation 3.5 jets such as the Shenyang J-11 air superiority fighter and the Shenyang J-16 multi-role fighter.
+
+
+SOURCES:"New Chinese PL-15 Missile is Designed to Destroy US Air Force Aerial Tankers : Science : Chinatopix." Chinatopix. Accessed September 14, 2017. http://www.chinatopix.com/articles/113282/20170409/new-chinese-pl-15-missile-designed-destroy-air-force-aerial.htm.

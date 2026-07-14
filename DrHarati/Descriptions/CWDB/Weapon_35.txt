@@ -1,0 +1,11 @@
+OVERVIEW: The AS.37 Martel is a solid-fuel, air-to-surface, supersonic anti-radiation missile (ARM).
+
+
+DETAILS: The AS.37 Martel is an anti-radiation missile (ARM) designed for standoff attacks against air defense radars.  It used an inertial guidance system along with an anti-radiation homing for terminal phase.  It required being tuned prior to take-off to scan a preset frequency range, or to home in on a specific type of radar.  The requirement to pre-tune its search function prior to take off was a significant limitation on the system.  Unlike the relatively small warheads used in U.S. ARM systems, the Martel had a large 150 kg warhead. 
+
+NOTES:    IOC 1970. Used by United Kingdom and France.
+
+
+
+
+SOURCES:   Friedman, Norman. The Naval Institute Guide to World Naval Weapon Systems, 1997-1998 Annapolis, Md: Naval Institute Press, 1998, pg. 234 ; The International countermeasures handbook. (1987). Palo Alto, CA: EW Communications, pg. 140 ; Chant, C. (1987). A compendium of armaments and military hardware. London: Routledge & Kegan Paul, pg. 504.

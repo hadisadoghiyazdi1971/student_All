@@ -1,0 +1,23 @@
+OVERVIEW: The Sikorsky CH-53E Super Stallion is the largest and heaviest helicopter in the United States military. As the Sikorsky S-80 it was developed from the CH-53 Sea Stallion, mainly by adding a third engine, adding a seventh blade to the main rotor and canting the tail rotor 20 degrees. It was built by Sikorsky Aircraft for the United States Marine Corps. The less common MH-53E Sea Dragon fills the United States Navy's need for long range mine sweeping or Airborne Mine Countermeasures (AMCM) missions, and perform heavy-lift duties for the Navy. Under development is the CH-53K King Stallion, which will be equipped with new engines, new composite rotor blades, and a wider cabin.
+
+DETAILS: Although dimensionally similar, the three engine CH-53E Super Stallion or Sikorsky S-80 is a much more powerful aircraft than the original Sikorsky S-65 twin engined CH-53A Sea Stallion. The CH-53E also added a larger main rotor system with a seventh blade.
+
+The CH-53E can transport up to 55 troops or 30,000 lb (13,610 kg) of cargo and can carry external slung loads up to 36,000 lb (16,330 kg).[3] The Super Stallion has a cruise speed of 173 mph (278 km/h) and a range of 621 miles (1,000 km).[10] The helicopter is fitted with a forward extendable in-flight refueling probe and it can also hoist hose refuel from a surface ship while in hover mode. It can carry three machine guns: one at the starboard side crew door; one at the port window, just behind the copilot; and one at the tail ramp. The CH-53E also has chaff-flare dispensers.
+
+The MH-53E features enlarged side mounted fuel sponsons and is rigged for towing its mine sweeping "sled" from high above the dangerous naval mines. The Sea Dragon is equipped with mine countermeasures systems, including twin machine guns. Its digital flight-control system includes features specifically designed to help towing mine sweeping gear.
+
+Upgrades to the CH-53E have included the Helicopter Night Vision System (HNVS), improved .50 BMG (12.7 mm) GAU-21/A and M3P machine guns, and AAQ-29A forward looking infrared (FLIR) imager.
+
+The CH-53E and the MH-53E are the largest helicopters in the Western world, while the CH-53K now being developed will be even larger. They are fourth in the world to the Russian Mil Mi-26 and Mil V-12, which can lift more than 22 tons (20 tonnes) and 44 tons (40 tonnes), respectively and the Mi-26's predecessor Mil Mi-6, which has less payload (12 tonnes) but is bigger and has a higher MTOW at 42 tonnes.
+
+TYPE: Heavy Lift Transport Helicopter.
+
+SPECIFICATIONS: Crew: (2) pilots, (1) crew chief/right gunner, (1) left gunner, (1) tail gunner (combat crew) || Capacity: 37 troops (55 with centerline seats installed) || Payload: internal: 30,000 lb or 13,600 kg (external: 32,000 lb or 14,500 kg) || Length: 99 ft 1/2 in (30.2 m) || Rotor diameter: 79 ft (24 m) || Height: 27 ft 9 in (8.46 m) || Max. takeoff weight: 73,500 lb (33,300 kg) || Powerplant: (3) General Electric T64-GE-416/416A turboshaft, 4,380 shp[58] (3,270 kW) each || Rotor systems: 7 blades on main rotor, 4 blades on anti-torque tail rotor.
+
+PERFORMANCE: Max Speed: 170 knots (196 mph, 315 km/h) || Cruise speed: 150 kt (173 mph, 278 km/h) || Range: 540 nmi (621 mi, 1,000 km) || Ferry range: 990 nmi (1,139 mi, 1,833 km) || Service ceiling: 18,500 ft (5,640 m) || Rate of climb: 2,500 ft/min (13 m/s).
+
+SENSORS: AN/APN-217 Navigation Radar || AN/AAR-47A MAWS (Missle Approach Warning System) || Safire Infrared FLIR || AN/APR-39A Radar Warning Receiver || AN/ALQ-157A ICRM.
+
+ARMAMENT: (2) .50 BMG (12.7 x 99 mm) window-mounted GAU-15/A machine guns || (1) .50 BMG (12.7 x 99 mm) ramp mounted weapons system, GAU-21 (M3M mounted machine gun) || Chaff and flare dispensers.
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org

@@ -1,0 +1,27 @@
+OVERVIEW:  The HQ-12 SAM battery is a road-mobile, single stage  solid-fuel, medium range, medium-to-high altitude, radio command guided, surface-to-air missile (SAM) unit. 
+
+DETAILS:  The HQ-12 system was designed to replace the HQ-2/SA-2 SAM missile. It uses the H-200 3-D phased array radar, to provide target tracking, missile beacon (downlink) tracking, post launch missile capture, and missile command uplink transmission functions.  A single H-200 is capable of tracking up to 100 targets and guiding up to six missiles against up to three targets.  
+
+
+Specifications:
+
+Maximum Acquisition Range: 	 65 nm (120 km)
+Maximum Tracking Range:		 48.5 nm ( 45 km @ 8000 ft)
+Engagement Envelope, range:	3.7-27nm; 7-50 km  
+Engagement Envelope, altitude:	984-88,582 ft; 0.3-27 km
+Max target speed: 		1458 knts; 750 m/s
+Kill probability:		89% 
+Reload time:			?? minutes (approx)
+Reaction Time			?? seconds
+Deploy/Takedown Time		30min/20min 
+Mobility:			road mobile
+
+NOTES: IOC 2016
+. 
+
+
+
+SOURCES: Dr C Kopp. "PLA Area Defence Missile Systems." Air Power Australia. Accessed August 10, 2019. http://www.ausairpower.net/APA-PLA-IADS-SAMs.html ;
+"HQ-12 – Missile Defense Advocacy Alliance." Missile Defense Advocacy Alliance – Making the World a Safer Place. Accessed August 10, 2019. https://missiledefenseadvocacy.org/missile-threat-and-proliferation/todays-missile-threat/china-anti-access-area-denial-coming-soon/hq-12/. ;
+"HQ-12." Guide to Military Equipment and Civil Aviation. Accessed August 10, 2019. http://www.deagel.com/Defensive-Weapons/HQ-12_a002445001.aspx. ;
+Pike, John. "Kaishan 1." GlobalSecurity.org. Last modified 6, 2016. https://www.globalsecurity.org/military/world/china/ks-1.htm ; "KS-1A MR-SAM Scores First Export Success." TRISHUL. Accessed August 10, 2019. http://trishul-trident.blogspot.com/2014/01/ks-1a-mr-sam-scores-first-export-success.html ; Kopp, Carlo; Wise, John C. "HQ-9 and HQ-12 SAM System Battery Radars." Air Power Australia. Accessed August 16, 2019. https://www.ausairpower.net/APA-HQ-9-12-Battery-Radars.html#mozTocId300570 ; "KS-1A MR-SAM Scores First Export Success." TRISHUL. Accessed August 10, 2019. http://trishul-trident.blogspot.com/2014/01/ks-1a-mr-sam-scores-first-export-success.html ; John C Wise. "PLA Air Defence Radars." Air Power Australia. Accessed August 16, 2019. https://www.ausairpower.net/APA-PLA-IADS-Radars.html#mozTocId836246.

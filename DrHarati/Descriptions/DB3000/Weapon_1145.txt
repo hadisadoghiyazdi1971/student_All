@@ -1,0 +1,23 @@
+OVERVIEW: The SA-15 GAUNTLET aka 9M330 aka Tor is a single stage, solid-fuel, short range, medium-to-high altitude, radio command guided, surface-to-air missile (SAM).  It carries a 14.5 kg HE warhead. 
+
+DETAILS: The SA-15 GAUNTLET is a mobile rapid reaction SAM  to replace the SA-8 GECKO system.  Its targets include low flying aircraft, helicopters, cruise missiles, standoff missiles and smart bombs during their terminal flight phase.  The missile includes lateral thrust motors to improve maneuverability during the terminal engagement phase, and the solid fuel missile can have two thrust periods to shape its trajectory and/or increase terminal velocity. 
+
+Specifications:
+ 
+Weight: 		 165 kg 
+Length: 		 2.9m 
+Diameter: 		 0.23 m (missile)  
+Wingspan: 		  0.35 m 
+Speed:			  1652 knts; (850 m/s)
+Range:			  0.8-6.5 nm; (1.5-12 km)
+Engagement Altitude:	   33-29,528 ft (10-9000 m)   
+Reload time:		  unkn minutes 
+Max target speed: 	 1361 knts; (700 m/s)
+Kill probability:	 26-75% (aircraft); 50-88% (helo); 85-95% (UAV) 
+Maneuverability:	 30 g (approx.)
+ 
+
+NOTES: IOC: 1986.  The naval version is the SA-N-9.
+
+
+SOURCES:   Jane's Strategic Weapon Systems, "Tor (SA-15 'Gauntlet'), 23 July 2013;

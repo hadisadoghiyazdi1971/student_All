@@ -1,0 +1,17 @@
+OVERVIEW: The AN/FPS-67C is a fixed, 2-D early warning and ground-controlled interception radar system operating in the "D" Band.
+
+DETAILS:  The AN/FPS-67C is a modified AN/FPS-20A that incorporates an antijaming packages to the radar. Like all 2D radars height finder radar is usually used with main radar.
+
+Specifications:
+
+Frequency: 		1250 to 1350 MHz (NATO D Band)(IEEE: L Band)
+Power output: 		6 KW (average); 2.5 MW (peak)
+PRF:			 350 Hz	
+Range Resolution:	 1.85 km (range), 1 degree (azimuth) 					
+On/Off time:		unknown
+Deploy/Stow Time	N/A
+Max Range:		322 km
+
+NOTES:  The radar family started with the AN/FPS-3 in 1950.   
+
+SOURCES:  Wikipedia, the Free Encyclopedia. Accessed March 21, 2015. http://en.wikipedia.org/wiki/Bendix_AN/FPS-20 ; http://fas.org/nuke/guide/usa/airdef/an-fps-20.htm ;  Bendix Corp, "AN/FPS-20Q Radar, Oceana NAS,"  http://www.radomes.org/museum/documents/NAS%20Oceana%20%20AN-FPS20%20Description.pdf ; "Radar Basics - AN/FPS-20." Grundlagen Der Radartechnik. Accessed April 5, 2015. http://www.radartutorial.eu/19.kartei/karte814.en.html. ; "USAF Air Defense Radar Equipment." Radomes, Inc. - The Air Defense Radar Veterans Association. Accessed April 5, 2015. http://www.radomes.org/museum/equip.php ; Chuck Greenslit, "Bendix Radio Radars", http://www.bendixradiofoundation.com/documents/Bendix%20Radio%20Radar%20History.pdf ; "RADAR." Radomes, Inc. - The Air Defense Radar Veterans Association. Accessed April 5, 2015. http://www.radomes.org/museum/equip/fps3tree.html ; FAS http://www.fas.org/nuke/guide/usa/airdef/an-fps-20.htm

@@ -1,0 +1,7 @@
+OVERVIEW: The ASR-9 is an advanced Airfield Surveillance Radar
+
+DETAILS: The Northrop Grumman ASR-9 is an Airfield Surveillance Radar. Is operational at 135 U.S. locations and was the first airport surveillance radar to display weather and aircraft simultaneously.
+
+NOTES: The first installation began in 1989 and was completed in 1995. Poland had at least one radar units available starting 1993 and India had least four radar units available starting 1996.
+
+SOURCES: Grundlagen der Radartechnik. "Radar Basics." Accessed December 1, 2013. http://www.radartutorial.eu/19.kartei/karte203.en.html

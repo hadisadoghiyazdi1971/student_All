@@ -1,0 +1,9 @@
+OVERVIEW: The Chengdu J-20 is a stealth, twinjet, fifth-generation fighter aircraft developed by China's Chengdu Aerospace Corporation for the People's Liberation Army Air Force (PLAAF).
+
+DETAILS:The J-20 has a long and wide fuselage, with the chiseled nose section and a frameless canopy resembling that of the F-22 Raptor. Immediately behind the cockpit are low observable intakes. All-moving canard surfaces with pronounced dihedral are placed behind the intakes, followed by leading edge extensions merging into delta wing with forward-swept trailing edges. The aft section features twin, outward canted all-moving fins, short but deep ventral strakes, and conventional round engine exhausts.
+
+One important design criterion for the J-20 describes high instability. This requires sustained pitch authority at a high angle of attack, in which a conventional tail-plane would lose effectiveness due to stalling. On the other hand, a canard can deflect opposite to the angle of attack, avoiding stall and thereby maintaining control. A canard design is also known to provide good supersonic performance, excellent supersonic and transonic turn performance, and improved short-field landing performance compared to the conventional delta wing design.
+
+Leading edge extensions and body lift are incorporated to enhance performance in a canard layout. This combination is said by the designer to generate 1.2 times the lift of an ordinary canard delta, and 1.8 times more lift than an equivalent sized pure delta configuration. The designer claims such a combination allows the use of a smaller wing, reducing supersonic drag without compromising transonic lift-to-drag characteristics that are crucial to the aircraft's turn performance.
+
+SOURCE: Wikipedia, the Free Encyclopedia. "Chengdu J-20 - Wikipedia." n.d. Accessed September 9, 2017. https://en.wikipedia.org/wiki/Chengdu_J-20

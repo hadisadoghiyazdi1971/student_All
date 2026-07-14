@@ -1,0 +1,18 @@
+OVERVIEW: The ROVER class small tanker is a diesel-powered fleet tanker.
+
+DETAILS:   The ROVER class small tanker is designed to supply naval vessels with fuel, water and limitted dry cargo and refrigerated stores while underway.
+
+Specifications: 
+
+       Displacement:  4,400 tons (light), 11,522 tons (full load)
+       Speed: 19 knts
+       Engineering: 1 shaft, 2 diesel engines
+       Range: 15,000 nm @14 knts
+       Complement: 49 or 54 
+       In Commission: 1969-?
+       Completed: 5
+
+NOTES: Units in class: GREEN ROVER (A 268), GREY ROVER (A 269), BLUE ROVER (A 270), GOLD ROVER (A 271), BLACK ROVER (A 273)
+   
+
+SOURCES: Moore, John Evelyn. Jane's Fighting Ships 1987-88.  London: Jane's Pub, 1987, pg. 680

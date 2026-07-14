@@ -1,0 +1,16 @@
+OVERVIEW: The LS-6-500 (Lei Shi-6 "Thunder Stone - 6") is a GPS/INS guided bomb glidebomb with a 220 kg HE filler.
+
+
+DETAILS:   The LS-6 designation guidance kit that is applied to a gravity bomb to provide increased accuracy and range.  It is intended to engage fixed-position ground targets. 
+
+
+Weight: 	  	555 kg
+Filling Weight:	  	22 kg
+Range:			21nm @ 26,000ft. release; 32.3nm @32,800 ft release
+Accuracy:		15 m CEP
+
+
+
+NOTES: IOC: 2010 (approx). The performance of the LS-6-500 depends primarily on accurate satellite navigation data and the level of modern mission planning systems, as the LS-6 does not have a seeker. and may use a standard commercial GPS global positioning system. 
+
+SOURCES: "Chinese Satellites Turn 'dumb? Bombs into 'smart? Bombs." Taipei Times. Last modified January 3, 2012. http://www.taipeitimes.com/News/taiwan/archives/2012/01/03/2003522296 ; "PLA Guided Bombs." Air Power Australia. Accessed September 21, 2019. https://www.ausairpower.net/APA-PLA-GBU.html#mozTocId132067 ; Pike, John. "Military." GlobalSecurity.org. Last modified 1, 2019. https://www.globalsecurity.org/military/world/china/ls-6.htm.

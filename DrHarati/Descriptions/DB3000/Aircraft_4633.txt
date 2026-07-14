@@ -1,0 +1,18 @@
+OVERVIEW:The Chengdu J-10 is a lightweight multirole fighter aircraft capable of all-weather operation, configured with a delta wing and canard design, with fly-by-wire flight controls, and produced by the People's Republic of China's Chengdu Aircraft Corporation (CAC) for the People's Liberation Army Air Force (PLAAF).
+
+DETAILS: J-10A: Single seat multi-role variant. The export designation is F-10A.
+
+ The airframe is constructed from metal alloys and composite materials for high strength and low weight, the airframe's aerodynamic layout adopts a "tail-less canard delta" wing configuration. A large delta wing is mid-mounted towards the rear of the fuselage, while a pair of canards (or foreplanes) are mounted higher up and towards the front of the fuselage, behind and below the cockpit. This configuration provides very high agility, especially at low speeds, and also reduces stall speed, allowing for a lower airspeed during instrument approaches. A large vertical tail is present on top of the fuselage and small ventral fins underneath the fuselage provide further stability.
+
+A rectangular air intake is located underneath the fuselage, providing the air supply to the engine. Also under the fuselage and wings are 11 hardpoints, used for carrying various types of weaponry and drop-tanks containing extra fuel.
+
+The retractable undercarriage comprises a steerable pair of nose-wheels underneath the air intake and two main gear wheels towards the rear of the fuselage.
+
+The cockpit is covered by a two-piece bubble canopy providing 360 degrees of visual coverage for the pilot. The canopy lifts upwards to permit cockpit entry and exit. The Controls take the form of a conventional centre stick and a throttle stick located to the left of the pilot. These also incorporate "hands on throttle and stick" (HOTAS) controls.[citation needed] A zero-zero ejection seat is provided for the pilot, permitting safe ejection in an emergency even at zero altitude and zero speed.
+
+Due to the J-10's aerodynamically unstable design, a digital quadruplex-redundant fly-by-wire (FBW) flight control system (FCS) aids the pilot in flying the aircraft. The FCS typically monitors pilot control inputs, (similar in purpose to a high performance vehicle equipped with electronic stability control) preventing the pilot from accidentally exiting the flight envelope from applying too much control input during high performance flight situations. This is critical in canard wing aircraft, as they are capable of turning in a much tighter radius than conventional aircraft. The massive control surfaces are capable of moving so far that they can completely destroy the aircraft in flight at high airspeeds if not kept in check by the FCS.
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org
+
+
+

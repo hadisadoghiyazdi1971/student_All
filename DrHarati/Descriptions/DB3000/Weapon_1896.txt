@@ -1,0 +1,19 @@
+OVERVIEW: The AA-11 ARCHER (R-73) is an infrared-guided, air-to-air missile
+
+DETAILS:
+
+NOTES:
+
+SOURCES: Latvia Former Soviet Union Military Bases. Accessed June 15, 2015. http://sovietbases.thecelotajs.com/Sukhoi-Su-27-%255BNATO%255D-Flanker-Armament.php ; "PLA Air to Air Missiles." Air Power Australia. Accessed June 15, 2015. http://www.ausairpower.net/APA-PLA-AAM.html#mozTocId749996.
+
+
+The AA-11 ARCHER (R-73) is an infrared-guided "heat-seeking" missile with a sensitive, cryogenic cooled seeker with a substantial "off-boresight" capability: the seeker can "see" targets up to 60° off the missile's centerline. It can be targeted by a helmet-mounted sight, allowing pilots to designate targets by looking at them. Minimum engagement range is about 300 meters, with maximum aerodynamic range of nearly 30km "19 miles" at altitude.
+The R-73 is a highly maneuverable missile and mock dogfights have indicated that the high degree of "off-boresight" capability of the R-73 would make a significant difference in combat. The missile also has a mechanically simple but effective system for thrust-vectoring.introduced key design innovations, including thrust vectoring for post launch agility, canard vanes for high turn performance, a gimballed agile MK-80 seeker capable of 45 degree off boresight acquisition, and an interface to the Shchel 3U series helmet mounted sight. 
+An improved version of the R-73M, the R-74M features fully digital and re-programmable systems, and is intended for use on the MiG-35 or MiG-29K/M/M2 and Su-27SM, Su-30MK and Su-35BM. 
+The weapon is used by the MiG-29, MiG-31, Su-27, Su-34 and Su-35, and can be carried by newer versions of the MiG-21, MiG-23, Sukhoi Su-24, and Su-25 aircraft.
+
+SOURCE: ; 
+
+
+ 
+

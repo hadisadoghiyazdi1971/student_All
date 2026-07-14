@@ -1,0 +1,7 @@
+OVERVIEW: The Il-20M (ASCC name Coot A) was designed for intelligence gathering 
+
+DETAILS:its distinguishing features being the Igla-1 phased-array SLAR (Side-Looking Airborne Radar) pod under the forward fuselage, housings for A-87P LOROP cameras and the Romb 4 sigint system. Two antennas also protrude from the top of the fuselage for the Vishnaya communications intelligence gathering system. It is flown by a crew of five accompanied by eight mission specialists.
+
+Aircraft can reconnoiter large areas in a very short period of time, using diverse reconnaissance methods. For example, by flying at a certain altitude and using radio-technical means, an aircraft can reconnoiter an area 600-800 kilometers wide and 350- 400 kilometers deep. By using cameras, modern reconnaissance aircraft can reconnoiter an area as large as 250,000 square kilometers. By visual observation, accuracies of 30-100 meters can be attained, while photo reconnaissance provides accuracy identical to a large-scale topographic map. However, in the European theater visual aerial reconnaissance from an altitude from 25,000-30,000 meters is possible only 15-20 days per year. Hence, the majority of reconnaissance aircraft will be used for lowaltitude reconnaissance.
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org, "Il-20 COOT A (ILYUSHIN)." GlobalSecurity.org - Reliable Security Information. Accessed September 14, 2017. https://www.globalsecurity.org/military/world/russia/il-20a.htm.

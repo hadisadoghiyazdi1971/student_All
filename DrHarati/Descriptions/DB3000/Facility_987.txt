@@ -1,0 +1,21 @@
+OVERVIEW: The AN/SPS-48E is a fixed, long-range 3D surveillance radar operating in the E/F-band  
+
+DETAILS: The AN/SPS-48E was developed by the USN for anti-air warfare radar.  It features an automatic detection and tracking capability to detect and track multiple air targets automatically; a moving target indicator capability to distinguish moving targets from stationary targets and to improve target detection during the presence of clutter and chaff; and an anti-ship missile detection capability to provide for the early detection of anti-ship missiles launched from aircraft in heavy electronic countermeasures conditions. The AN/SPS-48E is optimized to provide sophisticated and reliable tracking performance in an intense ECM environment.  The AN/SPS-48E included a digital receiver and signal processor that could automatically detect and track very small targets, even when jammed.
+
+Specifications:
+
+Frequency: 		  2-4 GHz (E/F Band (NATO), S Band (IEEE)))  
+Power output: 		  35 kW(average);  kW (peak) 
+PRF:			 pps	
+Accuracy:	  	m (range),  0.16 degrees azimuth 					
+On/Off time:		unknown
+Deploy/Stow Time:	 N/A
+ 
+Detection Range:
+
+Max Range:		460 km
+
+  
+NOTES:  IOC 2004 (approx).  
+
+SOURCES: "AN/SPS-48." Wikipedia, the Free Encyclopedia. Accessed April 5, 2015. http://en.wikipedia.org/wiki/AN/SPS-48 ; http://fas.org/man/dod-101/sys/ship/weaps/an-sps-48.htm

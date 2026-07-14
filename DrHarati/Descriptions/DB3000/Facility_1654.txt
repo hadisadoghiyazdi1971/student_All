@@ -1,0 +1,25 @@
+OVERVIEW: The 9S18M1 radar (NATO name: SNOW DRIFT) is a 3-D acquisition radar operating in the centimetric Band.
+
+DETAILS:   The 9S18M1 SNOW DRIFT is a mobile 3-D radar that uses an electronically steered pencil beam.  The system incorporates frequency agility, giving it enhanced resistance to ECM. The SNOW DRIFT generally receives early warning from brigade-level surveillance radars such as the SPOON REST before acquiring the target.  The radar can track up to 50 targets at a time, and provide target designation on six targets. Weapon systems associated with the 9S18M1 SNOW DRIFT include the SA-11 GADFLY and the SA-17 GRIZZLY.  
+
+Specifications:
+
+Frequency: 		centimetric
+Power output: 		
+PRF:			
+Range Resolution:	150 m 					
+set up/tear down time:	5 min
+Detection Ranges	
+  Fighter size aircraft
+	30 m altitude:	10 km
+	NOE:		23 km	
+	100 m altitude:	35 km 
+ 	10000m alt.:	100 km
+
+ 
+NOTES: IOC 1982. The system is in service with Belarus, Finland, Russia, Syria and the Ukraine.  The 9S18M1-1 increases detection range to 160 km.  
+
+
+
+SOURCES: Jane's Radar and Electronic Warfare Systems, "9S18M1 target acquisition radar", 08 December 2004; "Search and Acquisition Radars (S-Band, X-band)." Air Power Australia. Accessed March 7, 2015. http://www.ausairpower.net/APA-Acquisition-GCI.html#mozTocId931783 ; "9K37M1 BUK-1M / SA-11 GADFLY / SA-N-7 GADFLY." GlobalSecurity.org - Reliable Security Information. Accessed March 7, 2015. http://www.globalsecurity.org/military/world/russia/sa-11.htm ; International Electronic Countermeasures Handbook. Norwood, MA: Horizon House Publications, 2004, pg. 121 ; http://www.gulflink.osd.mil/irfna/irfna_refs/n28en030/airdef.html#sa-11
+

@@ -1,0 +1,27 @@
+OVERVIEW: The Plessey AR-1 is a mobile, short-range 2-D approach radar operating in the E/F-Band.  
+
+DETAILS:   The AR-1 was designed to meet both military and civil airfield approach control requirements.
+
+Specifications:
+
+Frequency: 		  2.75-3.05 GHz (E/F Band (NATO), S Band (IEEE))
+Power output: 		  unknownkW(average); 650 kW (peak) 
+PRF:			  700 Hz	
+Range Accuracy:		  unknown m (range),    unknown degrees azimuth 					
+On/Off time:		  unknown
+Deploy/Stow Time	  N/A
+ 
+
+Detection Range  
+
+tgt alt. 100m:		 unknown km
+tgt alt. 18000m:	 unknown km
+Max Range:		  70+ km
+
+  
+NOTES:  IOC: 1959 (approx.).  The AR-1 was designed to meet both military and civil airfield approach control requirements with many different display configurations, utilising the new Mk.5 Fixed Coil Display. The AR- 1 radar became an international success with sales reaching 108 systems, of which 32 were to the U.K. MOD for use on RAF and Royal Naval stations in the UK and overseas.
+
+
+  
+
+SOURCES: "The Decca Legacy - Chapter 6." Wootton Bridge Historical - Historical Information for Wootton Bridge and the Isle of Wight. Accessed March 28, 2015. http://woottonbridgeiow.org.uk/decca-legacy/chapter6.php#6.6.htm.

@@ -1,0 +1,8 @@
+OVERVIEW: The AN/AAS-38A NITE (Navigation Infrared Targeting Equipment) Hawk FLIR targeting pod is pod-mounted thermal designation system used primarily by the F/A-18 aircraft to conduct night or all weather attack missions.
+
+DETAILS: The AN/AAS-38A Nite Hawk FLIR targeting pod is used primarily for attack against land targets.  It incorporates an improved laser designator and a thermal imaging FLIR and incorporates an automatic target tracker.  While primarily used for ground targets, it is capable of detecting and  tracking air targets at up to 100nm range.  It is capable of automatically tracking a target with an accuracy of .003 degrees while undergoing 5-g maneuvers.
+
+NOTES: Entered service in late 1989.  
+
+SOURCES:  Guide to Military Equipment and Civil Aviation. "AN/AAR-50." Accessed October 26, 2014. http://www.deagel.com/Navigation-and-Targeting-Systems/ANAAR-50_a000917001.aspx ; Friedman, Noman The Naval Institute Guide to World Naval Weapons Systems, 1997-1998, pg. 205-06 ; Wikipedia, the free encyclopedia. "AN/AAS-38." Accessed October 26, 2014. http://en.wikipedia.org/wiki/AN/AAS-38 ; Federation Of American Scientists -. "AAS-38A/B Nite Hawk - Smart Weapons." Accessed October 26, 2014. http://fas.org/man/dod-101/sys/smart/aas-38.htm ; Janes
+

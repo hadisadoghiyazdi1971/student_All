@@ -1,0 +1,21 @@
+OVERVIEW: The RPS-42 Tactical Air Surveillance (TASRS) radar is a transportable/mobile, pulse doppler AESA radar.  It is intended to detect, classify and track aerial objects, particularly mini- and micro-UAVs at short ranges.  The system operates in the NATO "E" or "F" bands.  
+
+DETAILS: The RPS-42 TASRS is designed for Very Short Range Air Defense (VSHORAD) against all threats, including all sizes of Unmanned Aircraft Systems (UAS).
+
+Specifications:
+
+Frequency			2-4 GHz  (E-F band (NATO),  S Band (IEEE))
+Power output: 			60W/panel (average); unknown (peak)
+PRF:				unknown pps
+Range Resolution:		50m
+On/Off time: 			unknown min. 
+Deploy/Stow time: 		N/A min
+Maximum Range:			30 km (range), 30,000 feet (altitude)
+				3.5km v. nano UAV
+	  
+ 
+
+NOTES:     The RPS-42 is capable of detecting exceptionally small, low and slow-flying UAS.  The system can be integrated into other C4I systems, and is capable of on-the-move operations. In use by Israel, USMC and South Korea.
+
+SOURCES: "2-R." RADA Electronic Industries Ltd. Accessed December 8, 2018. https://www.rada.com/images/brochures/radars/RPS-42.pdf ; "Radar Basics - RPS-42." Grundlagen Der Radartechnik. Accessed December 8, 2018. http://www.radartutorial.eu/19.kartei/05.perimeter/karte007.en.html ; "RADA’s RPS-42 Was Selected by the US Navy ONR for the G-BAD Program." RADA Electronic Industries Ltd. Accessed December 8, 2018. https://www.rada.com/corp/corporate/2-info/128-rada-s-rps-42-was-selected-by-the-us-navy-onr-for-the-g-bad-program ; "RPS-42." Accessed December 8, 2018. https://ko.wikipedia.org/wiki/RPS-42 ; Welcome to LeonardoDRS.com | Leonardo DRS. Accessed December 8, 2018. https://www.leonardodrs.com/media/4693/mhr_datasheet.pdf.
+

@@ -1,0 +1,23 @@
+OVERVIEW: The P-40 (1S12) (NATO name: LONG TRACK) is an mobile, 2-D tactical early warning radar operating in the "E" Band.
+
+DETAILS:    The P-40 LONG TRACK is a mobile early warning radar designed to equip tactical air defense units. Weapon systems associated with the P-40 include the SA-4 GANEF, SA-6 GAINFUL and SA-8 GEKO.  It is usually supported by a THIN SKIN B height finding radar.  
+
+Specifications:
+
+Frequency: 		 2.2-2.3 GHz (E-Band)
+Power output: 		up to 2 MW (peak)
+PRF:			400 / 800 pps
+Range Resolution:	92 m/ 1 degree azmuth		
+Runup time:		
+Set up time: 		
+
+Detection Ranges (2 m2 RCS 14 m/50 m tower height)	
+  	500 m altitude:			70 km 
+	6000m: 				150 km
+	12000m:				180 km
+
+ 
+NOTES: IOC 1963.  The P-40  is mounted on tracked transporter.
+
+
+SOURCES: Jane's Radar and Electronic Warfare Systems, "Long Track surveillance radar", 02 July 2001; Radar Basics. (n.d.). Retrieved from http://www.radartutorial.eu/19.kartei/karte912.en.html ; http://pvo.guns.ru/rtv/p40.htm ; "Search and Acquisition Radars (S-Band, X-band)." Air Power Australia. Accessed March 9, 2015. http://www.ausairpower.net/APA-Acquisition-GCI.html#mozTocId293095.

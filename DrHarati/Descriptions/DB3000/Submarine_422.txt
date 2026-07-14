@@ -1,0 +1,19 @@
+OVERVIEW: The Chien Lung class of submarine was manufactured in the Netherlands for the Republic of China (Taiwan) and is currently in service with its navy. They are a modified version of the Dutch Navy's Zwaardvis class submarine which is based on the US Barbel Class.
+
+DETAILS: In 2005, it was reported that the Chien Lung class submarines would be upgraded to be capable of launching the UGM-84 Harpoon anti-ship missile.
+
+In 2008, the Pentagon notified the United States Congress of the sale to Taiwan of 32 UGM-84 Harpoon Block II missiles, along with two weapon control systems, other associated equipment and services.
+
+TYPE: Diesel Electric Submarine (SS).
+
+SPECIFICATION: Displacement: 2376 t (surfaced), 2660 t (submerged) || Length: 66.9 m || Beam: 8.4 m || Draught: 6.7 m || Propulsion: (3) Bronswerk/Stork-Werkspoor RUB 215x12 diesels; 4050 hp Complement: 67 (8 officers).
+
+PERFORMANCE: Speed: 20 knots (submerged), 12 knots (surfaced).
+
+SENSORS: None listed.
+
+ARMAMENT: (6) 21" torpedo tubes || 20 torpedoes/missiles || AEG SUT (dual purpose - wire-guided, active/passive homing) || UGM-84 Harpoon (planned).
+
+SHIPS BUILT: Hai Lung (SS-793) || Hai Hu (SS-794) 
+
+SOURCE: [SCO] Wikipedia http://en.wikipedia.org

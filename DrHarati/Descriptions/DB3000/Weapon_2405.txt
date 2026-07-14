@@ -1,0 +1,14 @@
+DETAILS: The Griffin 3 NGLGB is a bolt on guidance kit for the Mk 82/83/84 series bombs.  It is intended for use against hardened, point, or mobile targets, such as command posts, bunkers, bridges, hardened shelters, SAM sites and ships. Target illumination is performed by either by a ground-based designator or by an aircraft. The NGLGB has trajectory shaping capability for use against various types of targets: the shallow approach for use against vertical walls, a basic ballistic approach for use against bunkers, and a steep approach for use against a flat roof. 
+
+Specifications (when used with Mk 82/83/84 series bombs): 
+
+Range:		6.5 nm
+CEP:		2.0 meters (estimated)	
+
+
+NOTES:  IOC: 2009 (est).  Can be equipped with an optional GPS guidance system for dual-mode guidance capability.
+
+
+ 
+
+SOURCES:   Jane's Air Launched Weapons "Griffin (NGLGB)", 03 August 2016 ; Griffin." Guide to Military Equipment and Civil Aviation. Accessed December 5, 2016. http://www.deagel.com/Bombs-and-Guidance-Kits/Griffin_a000960001.aspx ; "Laser Guided Bomb Kits." Israel Aerospace Industries. n.d. http://www.iai.co.il/2013/34290-16151-n/SystemMissileandSpace_MBTMissiles_PrecisionGuidedMunitions.aspx ; "NG-LGB." Israel Aerospace Industries. n.d. http://www.iai.co.il/sip_storage/FILES/0/35260.pdf.

@@ -1,0 +1,15 @@
+OVERVIEW: The KIROV class CGN is a 2 shaft, combination nuclear and steam powered (CONAS), multi-role battlecruiser.
+
+DETAILS:   The KIROV class CGN is the largest non-carrier warship built since the end of World War II.  It has a combination steam and nuclear plant, and is capable of being propelled by either, or both plants.  A well-balanced ship, it was the first Soviet design to be able to effectively defend a task force against aircraft.  This multi-role capability made it useful in controling sea areas near the Soviet Union to both protect Soviet SSBN deployment areas and protect Soviet territory.  The class also was equipped with a large C3I suite, making it a likely flagship.
+In June 2013, Russia announced plans to modernize and return to service the Admiral Nakhimov.
+
+NOTES: Displacement: 24,300 tons standard
+       Speed: 32 knts
+       Range: 
+       Complement: 800 (approximate)
+       In Commission: 1980-to date
+       Completed: 4	  
+
+SOURCES: Polmar, Norman, and Siegfried Breyer. Guide to the Soviet Navy. Annapolis, Md: Naval Institute Press, 1983, 133-5 ; 
+http://www.janes.com/article/22829/russia-to-return-kirov-class-vessel-to-service-by-2018
+

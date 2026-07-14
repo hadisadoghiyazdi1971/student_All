@@ -1,0 +1,15 @@
+OVERVIEW: The Herstal class minesweeper is a diesel powered powered, inshore minesweeper.
+
+DETAILS:
+
+NOTES: Displacement: 160 tons standard
+       Speed: 15 knts
+       Range: 2300 nm @ 10 knts
+       Complement: 17
+       In Commission: 1956 
+       Completed: 16 
+
+SOURCES: Gardiner, Robert, and Norman Friedman. Conway's All the World's Fighting Ships, 1947-1982. Annapolis, Md: Naval Institute Press, 1983, pg 3.
+
+
+

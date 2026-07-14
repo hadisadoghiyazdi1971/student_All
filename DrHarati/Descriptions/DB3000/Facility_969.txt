@@ -1,0 +1,21 @@
+OVERVIEW: The Martello S-711 a mobile, short to medium-range radar system used for low-level and gap-filling roles. It operates in the E/F-band.
+
+DETAILS: The S711 mast-mounted tactical radar is designed to provide low-level and gap filler capability. 
+
+Specifications:
+
+Frequency			2-4 GHz  (E/F band (NATO),  S Band (IEEE))
+Power output: 			unknown kW (average); unknown (peak)
+PRF:				unknown Hz
+Range Resolution:		unknown
+On/Off time: 			unknown min. 
+Deploy/Stow time: 		unknown min (approx)
+Maximum Range:			unknown nm (range), unknown feet (altitude)
+				
+				 
+
+NOTES: 
+
+SOURCES: Jane's Radar and Electronic Warfare Systems 2002-2003, "S711 tactical radar", Accessed December 10, 2018, ftp://york.chatterweb.net.ru/%D0%91%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0%20%D0%AD%D0%B9%D1%81%D0%B0/jane's/spravochniki/Janes%20Air%20Defence%20Radar-Land%20and%20Sea.pdf ; "Reutech to Support SAAF Radar Systems." Airforce Technology. Last modified March 30, 2011. https://www.airforce-technology.com/news/news114666-html/.
+
+

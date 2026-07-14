@@ -1,0 +1,27 @@
+OVERVIEW: The 64N6 radar (NATO name: BIG BIRD C) is a mobile, long range, 3-D early warning/GCI radar operating in the E Band.
+
+DETAILS:  The 64N6 BIG BIRD C is a mobile phased array radar.  It is capable of frequency hopping, and incorporates additional auxiliary antenna/receiver channels for suppression of sidelobe jammers. The system is capable of detecting 200 targets and tracking from 6-12 per engagement.  
+
+Specifications:
+
+Frequency: 		 2 GHz (E Band (NATO), S Band (IEEE))) 
+Power output: 		 unknown (average);  unknown MW (peak)
+PRF:			 unknown Hz	
+Range Resolution:	 200 m (range), 0.5 degrees (azimuth)					
+On/Off time:		unknown
+Deploy/Stow Time	5 minutes
+Detection Range:
+ 3m2 RCS (Mig-21) size tgt:	300 km (approx.)
+Ballistic missile size tgt:	1000 km (approx.)
+
+
+NOTES: Unlike Western phased arrays in this class, the BIG BIRD uses a reflective phased array with a front face horn feed, the horn placed at the end of the long boom which protects the waveguides to the transmitters and receivers in the cabin. The beam steering electronics are embedded inside the antenna array, which has around 2700 phase elements on either face. This Janus faced arrangement permits the Big Bird to concurrently search two 90 degree sectors, in opposite directions, using mechanical rotation to position the antenna and electronic beam steering in azimuth and elevation.
+
+
+
+SOURCES: Janes Radar and Electronic Warfare Systems 2002-2003 "5N69 early-warning radars/Ground Controlled Interception (CGI) radar, 02 July 2001, pg. 1982-84 (http://librarun.org/book/30265/1984); "Soviet/Russian SAM Site Configuration Part 2: S-300P/S-400 /SA-10/20/21, S-300V/SA-12, 2K11/SA-4, 2K12/SA-6, 9K37/317/SA-11/17." Air Power Australia. Accessed March 21, 2015. http://www.ausairpower.net/APA-Rus-SAM-Site-Configs-B.html; "Air Power Australia. "Search and Acquisition Radars (S-Band, X-band)." Accessed December 1, 2013. http://www.ausairpower.net/APA-Acquisition-GCI.html ; "SOV - 5N64 / 64N6 (prehladový Rádiolokátor)." Http://forum.valka.cz. Accessed March 21, 2015. http://forum.valka.cz/topic/view/40137 ; "64N6 TOMBSTONE." GlobalSecurity.org - Reliable Security Information. Accessed March 29, 2015. http://www.globalsecurity.org/military/world/russia/tombstone.htm ; http://legion.wplus.net/guide/army/rl/64n6.shtml
+
+
+
+
+

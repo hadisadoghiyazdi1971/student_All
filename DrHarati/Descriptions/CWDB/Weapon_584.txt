@@ -1,0 +1,11 @@
+OVERVIEW: The AS-3 KANGAROO (Kh-20M) is a liquid-fuel, turbojet-powered, air-to-surface, supersonic nuclear-armed cruise missile.
+
+DETAILS: The AS-3 KANGAROO (Kh-20M) used inertial autopilot with command guidance.  It has a CEP of 150 feet when used in an anti-ship role and a CEP of 1 to 3 nm when used against land targets. 
+
+NOTES:    IOC 1960. Used by the Soviet Union.
+
+
+
+
+
+SOURCES:   FAS-3 - Russian and Soviet Nuclear Forces. (n.d.). Retrieved from http://www.fas.org/nuke/guide/russia/bomber/as-3.htm ; CM Kh-20 (AS-3). (n.d.). Retrieved from http://www.testpilot.ru/russia/mikoyan/kh/20/kh20_e.htm ; Kh-20 / AS-3 KANGAROO. (n.d.). Retrieved from http://www.globalsecurity.org/wmd/world/russia/as-3.htm

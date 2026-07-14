@@ -1,0 +1,9 @@
+OVERVIEW: The AS-9 KYLE (Kh-28) is a supersonic, two-stage liquid-fuel rocket anti-radiation missile (ARM) with inertial and passive radar seeker guidance.  It has a 200 kg HE warhead with a proximity fuze.
+
+DETAILS: The first Soviet ARM for tactical aircraft, the AS-9 was based on the larger AS-4 and AS-6. The toxic, corrosive hypergolic fuel mix required fuelling and defueling the rounds due to its poor storage characteristics.  This required the use of chemical suits and neutralizing flushes of the fuel system.  The PRG-28 anti-radiation seeker required band specific variants to defeat specific NATO SAM systems. While the missile was fast and long ranging, it was complex and difficult to maintain and quickly superseded. 
+
+NOTES: The AS-9 KYLE entered service in 1973 and was used in the Su-17/20/22/24, Tu-16/22M and MiG-25/27 aircraft.  A nuclear warhead option was available.
+
+SOURCES: Jane's Weapons Systems, Vol. 1: Air-Launched,  "Kh-28 (AS-9 'Kyle')" 09 September 2013 ; Air Power Australia. "Soviet/Russian Tactical Air - Surface Missiles." Accessed November 5, 2013. http://www.ausairpower.net/APA-Rus-ASM.html#mozTocId700058.
+
+

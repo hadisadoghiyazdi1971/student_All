@@ -1,0 +1,15 @@
+OVERVIEW: The HMCS MACKENZIE class destroyer is a 2 shaft steam powered destroyer.
+
+DETAILS: The HMCS MACKENZIE  class destroyer was developed from the RESTIGOUCHE class destroyer.  This design improved the habitabilty over the RESTIGOUCHE class.
+
+NOTES: Displacement:   2,000  tons standard
+       Speed: 28 knts
+       Range: 
+       Complement: 228
+       In Commission:  1961-1994
+       Completed:  4
+
+SOURCES: Gardiner, Robert, and Norman Friedman. Conway's All the World's Fighting Ships, 1947-1982. Annapolis, Md: Naval Institute Press, 1983, pg 9
+
+
+
