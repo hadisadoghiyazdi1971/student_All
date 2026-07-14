@@ -1,5 +1,0 @@
-OVERVIEW:The Molniya (now Vympel) R-60 (NATO reporting name: AA-8 "Aphid") is a short-range lightweight infrared homing air-to-air missile designed for use by Soviet fighter aircraft.
-
-DETAILS: the R-60M (NATO reporting name: "Aphid-B"), using a nitrogen-cooled seeker with an expanded view angle of ¡¾20¡Æ, was introduced around 1982. Although its seeker is more sensitive than its predecessor, the R-60M has only limited all-aspect capability. Minimum engagement range was further reduced, to only 200 m (220 yd). The proximity fuzes had improved resistance to ECM, although both optical and radar fuzes remained available (radar-fuzed R-60Ms with the Kolibri-M fuze are designated R-60 km). The R-60M is 42 mm (1.7 in) longer, and has a heavier, 3.5 kg (7.7 lb) continuous-rod warhead, increasing launch weight to 45 kg (99 lb). In some versions the warhead is apparently laced with about 1.6 kg (3.5 lb) of depleted uranium to increase the penetrating power of the warhead.
-
-SOURCES:  Wikipedia, the Free Encyclopedia. "R-60 (missile) - Wikipedia." n.d. Accessed September 14, 2017. https://en.wikipedia.org/wiki/R-60_(missile). 

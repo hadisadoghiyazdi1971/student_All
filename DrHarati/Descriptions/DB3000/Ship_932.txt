@@ -1,7 +1,0 @@
-OVERVIEW: The Petya class was the NATO reporting name for a class of light frigates designed in the 1950s and built for the Soviet Navy in the 1960s.
-
-DETAILS:They were the first gas turbine powered ships in the Soviet navy. The role of these ships was anti-submarine warfare in shallow waters and they were similar to the Mirka-class frigates.
-
-A three shaft machinery layout was chosen with the central shaft powered by diesel engines for economical cruising and the two wing shafts powered by gas turbines for speed. Gun armament was two twin 76 mm (3 in) gun turrets in "A" and "Y" positions which were controlled by a single radar director. Anti-submarine armament consisted of four RBU-6000 anti-submarine rocket launchers and a launcher for 406 mm (16 in) anti-submarine torpedoes. Some of the ships designed for export replaced the 406 mm torpedo tubes with anti-shipping 533 mm (21 in) torpedo tubes. A comprehensive sonar suite including VDS was fitted.
-
-SOURCES:Wikipedia, the Free Encyclopedia. "Petya-class Frigate - Wikipedia." n.d. Accessed September 9, 2017. https://en.wikipedia.org/wiki/Petya-class_frigate. 

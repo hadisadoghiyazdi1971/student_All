@@ -1,7 +1,0 @@
-OVERVIEW: The Giraffe-100 is a mobile, medium range air identification and surveillance radar.  It is mounted on Sisu SK 242 6x6 trucks. The system can also be used as a backup system for civil air traffic control and has a dedicated secondary radar for that purpose. 
-
-DETAILS: The Giraffe is a frequency agile, low to medium altitude pulse doppler air search radar and combat control center which can be used in mobile or static short to medium range air defense applications. Giraffe is designed to detect low-altitude, low cross-section aircraft targets in conditions of severe clutter and electronic countermeasures. When equipped as an air-defense command center Giraffe provides an air picture to each firing battery using manpack radio communication. GIRAFFE uses Agile Multi-Beam (AMB), which includes an integrated Command, control and communication (C3) system. This enables GIRAFFE to act as the command and control center in an air defense system, it can also be integrated into a sensor net for greater coverage. It is normally housed in a single 6m long shelter mounted on an all-terrain vehicle for high mobility.
-
-NOTES: The system, which is locally designated LAVA (Lahivalvontatutka) or Maalinosoitustutka 95, was selected in 1991 and was taken into use between 1993 and 1995.
-
-SOURCES:  Wikipedia "User:MoRsE/Radars" http://en.wikipedia.org/wiki/User:MoRsE/Radars

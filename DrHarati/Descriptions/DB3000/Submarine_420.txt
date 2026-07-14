@@ -1,7 +1,0 @@
-OVERVIEW:The Type 214 is a diesel-electric submarine developed by Howaldtswerke-Deutsche Werft GmbH (HDW).
-
-DETAILS: It features diesel propulsion with an air-independent propulsion (AIP) system using Siemens polymer electrolyte membrane (PEM) hydrogen fuel cells. The Type 214 submarine is derived from the Type 212, but as an export variant it lacks some of the classified technologies of its smaller predecessor, the most important of which is probably the non-magnetic steel hull, which makes the Type 212 submarine difficult to detect using a magnetic anomaly detector.
-
-The South Korean Son Won-Il U214 Class Submarine is equipped with a SPHINX-D Radar System supplied by Thales Defence Deutschland GmbH. It uses an additional pulse transmitter in the top of the mast. The combination of high power pulse radar and a very low power LPI transmitter is very effective for submarines. During surface operations, the boat sails with an open pulse fingerprint for ESM systems, but within a secret mission the operator switches to LPI mode. The boat remains invisible to others. Total of 9 are planned and 4 are in active duty.
-
-SOURCES:Wikipedia, the Free Encyclopedia. "Type 214 Submarine - Wikipedia." n.d. Accessed September 9, 2017. https://en.wikipedia.org/wiki/Type_214_submarine#Republic_of_Korea. 

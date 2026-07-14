@@ -1,8 +1,0 @@
-OVERVIEW:The Shenyang J-11, with NATO reporting name Flanker B+, is a single-seat, twin-engine jet fighter, whose airframe is based on the Soviet-designed Sukhoi Su-27 air superiority fighter.
-
-DETAILS:The base J-11/A is a fourth-generation jet fighter which, like its Sukhoi brethren, is intended as a direct competitor to Western fourth generation fighters
-
-J-11B 
- Indigenously-produced version using Chinese technology, and the first J-11 variant to use the WS-10A turbofan. The airframe is slightly lighter due to greater use of composites. It has new avionics, a glass cockpit, MAWS, and onboard oxygen generator system. Upgrading to AESA radar may have been planned.
-
-SOURCE: [SCO] Wikipedia http://en.wikipedia.org

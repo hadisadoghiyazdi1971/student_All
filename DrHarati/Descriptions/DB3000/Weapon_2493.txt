@@ -1,8 +1,0 @@
-OVERVIEW: The AN/SSQ-57M LOFAR (LOw Frequency Analysis and Ranging) is a 2/3 "A-size" moored, passive, omnidirectional, calibrated sound reference sonobuoy used for gathering acoustic intelligence and calibrating ambient sea noise in shallow water.  
-
-DETAILS:  The AN/SSQ-57M is a moored version of the AN/SSQ-57A, utilizing the same omnidirectional hydrophone system. It is capable of being moored in 25-120 meter depth water, in currents up to 2 knots, and remaining operational in up to Sea State 5.  Its hydrophones can be preset to deploy to either 15, 30 or 60 meters depth. Operating life can be set for 1, 4 or 12 hours.  Its omni-directional hydrophones operate in the 4 Hz-40 kHz range.  It can be deployed at airspeeds between 45-370 knots and altitudes of 100-30,000 feet.  
-   
-NOTES:  As the AN/SSQ-57 is intended to gather intelligence, it was optimized to provide high performance stability under temperature and pressure extremes.  
-  
-
-SOURCES:  Jane's Underwater Warfare Systems, "AN/SSQ-57B", 19 October 2009 ; Federation Of American Scientists -. "AN/SSQ-57 Low Frequency Analysis and Recording (LOFAR) Sonobuoy." Accessed November 21, 2014. http://fas.org/man/dod-101/sys/ship/weaps/an-ssq-57.htm ; Friedman, Norman, and Norman Friedman. The Naval Institute Guide to World Naval Weapon Systems, 1997-1998. Annapolis, Md: Naval Institute Press, 1997, pg. 656

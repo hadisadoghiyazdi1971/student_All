@@ -1,5 +1,0 @@
-OVERVIEW:The Soryu-class submarines (16SS) are diesel-electric attack submarines.
-
-DETAILS:It is Japan's first air-independent propulsion submarine. The boats in the class are fitted with Kockums Naval Solutions Stirling engines license-built by Kawasaki Heavy Industries, allowing them to stay submerged for longer periods of time. Some recent information suggests that the last units in the series will have their air independent propulsion systems replaced with banks of Li-Ion batteries.
-
-SOURCES: Wikipedia, the Free Encyclopedia. "Soryu-class Submarine - Wikipedia." n.d. Accessed September 9, 2017. https://en.wikipedia.org/wiki/S%C5%8Dry%C5%AB-class_submarine. 

@@ -1,8 +1,0 @@
-OVERVIEW: The SNAR-10 BIG FRED radar is an artillery/mortar-locating radar.
-   
-DETAILS: The SNAR-10 radar measures the slant range and bearing of two points in the mortar bomb/artillery shell trajectory. The time taken for the bomb/projectile to travel between the two points is also measured and the onboard computer uses this information together with the pre-set elevation angles to determine the position of the enemy mortar or artillery piece. This information is then relayed to the field artillery units and the target is engaged. The radar has a range of about 20 km.
-
-NOTES:
-
-SOURCES: GulfLINK Home. "Weapons Systems of the Former USSR & Russia: Fire Support." Accessed December 1, 2013. http://www.gulflink.osd.mil/irfna/irfna_refs/n28en023/firespt.htm#snar-10.
-

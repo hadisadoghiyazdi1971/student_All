@@ -1,8 +1,0 @@
-OVERVIEW: The Chimera Chaff/Flare Seduction Round is a expendible radar/IR decoy designed for use against dual mode missiles. 
-
-DETAILS:  The Chimera Chaff/Flare Seduction Round is a seduction round designed for used against dual mode RF/IR missiles.  It is optimized for use against radars operating in the I and J bands, and is effective against mixed missile salvo attacks as well as dual mode, hotspot and imaging seekers. The device's IR payloads are effective against two-colour seekers 
-
-NOTES:  CHIMERA is suitable for vessels up to the size of light frigates and/or 'larger' low observability ('stealth') ships.
-
-SOURCES:  http://www.chemringcm.com/~/media/Files/C/Chemring-CounterMeasures-V2/documents/chimera-58679-mk4-pdf.pdf ; http://www.chemringcm.com/products/naval-products/other-products/chimera.aspx
-

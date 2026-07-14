@@ -1,9 +1,0 @@
-OVERVIEW: The AN/AAR-45 LANA (Low Altitude Night Attack) is a navigation pod, designed to improve night attack capabilities.
-
-DETAILS:  The AN/AAR-45 LANA (Low Altitude Night Attack) is a navigation pod, designed to improve night attack capabilities. 
-
-NOTES:  Accepted into service in 1979.  Used in A-6E and A-7E aircraft
-  
-
-SOURCES:  
-

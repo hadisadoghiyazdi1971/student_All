@@ -1,9 +1,0 @@
-OVERVIEW: The ADC Mk 2 Mod 1 Torpedo Decoy is a battery-powered expendable sonar countermeasure for use by surface ships and submarines to counter torpedo threats.
-
-DETAILS:   The ADC (Acoustic Device Countermeasure) hovers vertically at a pre-selected depth, using a pressure-controlled motor driving a small, shrouded propeller in the tail of the decoy.  Once deployed, it emits an acoustic signal to decoy torpedoes.
-
-NOTES:  IOC 1991.   
-
-  
-SOURCES:  Friedman, Norman, and Norman Friedman. The Naval Institute Guide to World Naval Weapon Systems. Annapolis, Md: Naval Institute Press, 2006, pg 769 ; Ultra Electronics Ocean Systems - Home. "Ultra Electronics Ocean Systems - Acoustic Countermeasures." Accessed December 13, 2014. http://www.ultra-os.com/acoustic.php.
-

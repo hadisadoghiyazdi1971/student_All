@@ -1,9 +1,0 @@
-OVERVIEW: The AN/SSQ-47B Julie is an A-size,  ranger-type active sonobuoy.
-
-DETAILS:  The AN/SSQ-47B active buoy, is used to provide an accurate range to submerged targets during the final stages of an ASW prosecution.  It automatically begins pinging upon water entry. It can be set to one of two depth settings: 60 or 800 feet. The sonic transmissions operate on one of six sonic frequencies in the 13.0-19.0 kHz band with an expected life of 30 minutes.  
-
-
-NOTES: Deployable from aircraft, helicopters, or surface ships and is compatible with all known airborne acoustic processors. 
-
-
-SOURCES:  Federation Of American Scientists -. "AN/SSQ-47Sonobuoy." Accessed November 21, 2014. http://fas.org/man/dod-101/sys/ship/weaps/an-ssq-47.htm ; Sonobuoy Tech Systems, "AN/SSQ-47B Range Only Active Sonobuoy," Available at http://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0CCEQFjAA&url=http%3A%2F%2Ftraktoria.org%2Ffiles%2Fsonar%2Fsonobuoy%2FAN_SSQ-47B_Range_Only_Sonobuoy.pdf&ei=yydvVObUG5KMyASP0IKwCA&usg=AFQjCNGhs2R3IilGp0MW-aQLli7bVawjPg

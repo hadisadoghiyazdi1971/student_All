@@ -1,5 +1,0 @@
-A license copy of the Antonov An-12 “Cub”, the Y-8 is used for many roles in Chinese service. Production started in the late 1960s and continues today; more than 125 have now been built plus additional examples for export and civilian (Y-8B & Y-8F100) use. The original design had a twin NR-23 gun in a manned tail turret; this is not included on the civilian versions, the specialized versions described below, nor recent examples of the military cargo version.
-
-This so-called "Balanced Beam Testbed" bears some resemblance to the Swedish Saab 340 AWACS aircraft with its electronically scanning phased array radar inside a large rectangular fairing carried above the fuselage. The AESA radar is the product of the 38th Institute. However the radar in "balance beam" configuration is unable to scan directly the forward and rear directions of the aircraft thus lacks the full 360° coverage. 
-
-Original Author: Jason W. Henson, http://chinese-military-aviation.blogspot.be/

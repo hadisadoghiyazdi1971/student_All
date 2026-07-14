@@ -1,7 +1,0 @@
-OVERVIEW: AN/MSQ-46 Seek Score is Bomb Scoring Radar
-
-DETAILS: 
-
-NOTES: This system replaced the antiquated AN/MSQ-46 and AN/MSQ-77 Bomb Directing Central systems used during the Vietnam conflict to guide bombers to their target.
-
-SOURCES: Federation of American Scientists. "AN/TPQ-43 SEEK SCORE." Accessed December 1, 2013. http://www.fas.org/man/dod-101/sys/ac/equip/an-tpq-43.htm

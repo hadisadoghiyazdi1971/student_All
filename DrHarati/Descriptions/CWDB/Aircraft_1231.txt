@@ -1,8 +1,0 @@
-OVERVIEW: The Blackburn Buccaneer was a British carrier-borne attack aircraft designed in the 1950s for the Royal Navy (RN). 
-
-DETAILS:The Buccaneer was originally designed in response to the Soviet Union's massive Sverdlov-class cruiser construction programme. Instead of building a new fleet of its own, the Royal Navy could use the Buccaneer to attack these ships with relative impunity by approaching at low altitudes below the ship's radar horizon. The Buccaneer could attack using a nuclear bomb, or conventional weapons, in engagements lasting less than a minute, quickly flying out of range whilst its weapons struck. It was later intended to carry short-range anti-shipping missiles to further enhance its survivability against more modern ship-based anti-aircraft weapons.
-
-Buccaneer S.2B
-    Variant of S.2 for RAF squadrons. Capable of carrying the Martel anti-radar or anti-shipping missile. Forty-six built between 1973 and 1977, plus three for Ministry of Defence weapons trials work. 
-
-SOURCE:Wikipedia, the Free Encyclopedia. "Blackburn Buccaneer - Wikipedia." n.d. Accessed September 8, 2017. https://en.wikipedia.org/wiki/Blackburn_Buccaneer#Variants. 

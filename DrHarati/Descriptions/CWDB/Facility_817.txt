@@ -1,7 +1,0 @@
-OVERVIEW: AN/FPS-93 radar is General Surveillance Radar used by the U.S.  Air Force Air Defense Command.
-
-DETAILS: Earlier version AN/FPS-20 dominated US air surveillance in the 1950's and 1960s.   The AN/FPS-93 was upgraded to 93A version in 1988.
-
-NOTES: The FPS-93 was a modified AN/FPS-20
-
-SOURCES: Radomes, Inc. - The Air Defense Radar Veterans Association. "AN/FPS-93." Accessed November 24, 2013. http://www.radomes.org/museum/equip/radarequip.php?link=fps-93.html.

@@ -1,8 +1,0 @@
-OVERVIEW: Tactical and flexible air surveillance and control system that can be used for fixed or mobile installations. Radars for the system include the RAT-31SL long-range S-band radar and the RAT-31S medium-range S-band radar. These 3D radars are mounted on trailers and erected hydraulically.
-
-DETAILS: The radar can be controlled through the local radar management console or through a remote console. The mechanical configuration is designed to facilitate
-assembly/disassembly on battlefield, to provide an increased survivability. 
-
-NOTES: User Air forces include Austria, Italy, Norway, Spain and Turkey.
-
-SOURCES: Wikipedia "Austrian Air Defence". Accessed December 2. 2013. http://en.wikipedia.org/wiki/Austrian_air_defense ; Tripod "Alenia Difesa Betting On Radar Market Growth". Accessed December 2. 2013. http://babriet.tripod.com/articles/art_aleniaradar.htm

@@ -1,7 +1,0 @@
-OVERVIEW: Long range, fixed, early warning 2D radar. Type 84 and Type 85 was core radar of UK's Linesman radar system  until the late 1970s, early 1980s.
-
-DETAILS: Linesman radars Type 84 & 85 primary radars. Height finding capability was provided by the Type 85 (one of the first 3D radars) and the HF200 Height Finders. As Linesman progressed additional systems were introduced to aid ECCM capability and communications. Each primary radar had an associated secondary radar (IFF), SSR 750, with the smaller secondary radar mounted on the main primary radar aerial.
-
-NOTES: Linesman/Mediator was the dual-purpose civil and military radar network in the United Kingdom. Against a background of the Russian H-bomb and supersonic bombers Linesman was the answer to the Cold War defence policies, replacing the earlier ROTOR and Type 80 Master Radar Stations that were the product of World War II. Linesman with a small network of only five large radar sites and an associated control centre near London was the air defence element of the project; Mediator was the civilian air traffic control element.
-
-SOURCES: Wikipedia: "Linesman/Mediator" http://en.wikipedia.org/wiki/Linesman/Mediator

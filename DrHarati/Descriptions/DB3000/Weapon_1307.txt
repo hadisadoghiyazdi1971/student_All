@@ -1,7 +1,0 @@
-OVERVIEW: The AS-17 KRYPTON D (K-31PD) is an air-launched, long-range, high-supersonic, liquid-fuel, ramjet-powered, passive anti-radiation missile (ARM).  It carries a 110 kg blast-fragmentation HE warhead. 
-
-DETAILS: After launch, the AS-17 is accelerated by its solid-fuel rocket booster to a speed of Mach 1.8. Then the booster is discarded and the interior of the missile is converted into the combustion chamber for the missile's ramjet engine, accelerating the missile to a speed of almost Mach 4.50. The AS-17 uses inertial guidance for the mid-course phase.  For terminal homing, it uses an wideband radar receiver to home in on radar emissions.   
-
-NOTES: The Kh-31PD version of the AS-17 became operational in approximately 2005.  It is a slightly lengthened version of the Kh-31P, with a larger warhead and a significant increase in range. I It is used by MiG-27/29K/29SMT, the Su-17/24M/25TM/30MK/35. 
-
-SOURCES: Jane's Weapons Systems, Vol. 1: Air-Launched, "Kh-31A, Kh-31P (AS-17 "Krypton'), YJ-91 'Kipper')" 15 Jan 2013; Federation of American Scientists. "Zvezda Kh-31 (AS-17 Krypton)." Accessed November 11, 2013. http://www.fas.org/man/dod-101/sys/missile/row/as-17.htm  ;  Air Power Australia. "Soviet/Russian Tactical Air -Surface Missiles." Accessed November 11, 2013. http://www.ausairpower.net/APA-Rus-ASM.html#mozTocId784856.

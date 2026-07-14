@@ -1,9 +1,0 @@
-OVERVIEW: The AS-12 KEGLER (Kh-25MP) is a supersonic, short-to-medium range, air-launched, solid-fuel, anti-radar (ARM) missile.  It has a 90.6 kg HE warhead with an impact fuze.
-
-DETAILS: The AS-12 is intended primarily as reactive defensive weapons for suppression of terminal and battlefield air defences.  It has the ability to attack radars that have shut down, or to switch to a emitting target if it lost its original target. The missile is programmed to climb along a logarithmic trajectory until the seeker depression angle to the target emitter is 27º, at which point the missile pitches down and dives into the target.
-
-NOTES: The AS-12 became operational in the early 1980's. 
-
-SOURCES: Jane's Weapons Systems, Vol. 1: Air-Launched,  "Kh-27PS (AS-12 'Kegler')" 09 September 2013 ; Air Power Australia. "Soviet/Russian Tactical Air - Surface Missiles." Accessed November 5, 2013. http://www.ausairpower.net/APA-Rus-ASM.html#mozTocId586246.
-
-

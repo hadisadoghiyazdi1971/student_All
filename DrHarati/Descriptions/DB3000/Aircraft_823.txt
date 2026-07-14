@@ -1,5 +1,0 @@
-OVERVIEW: The Xian H-6 is a licence-built version of the Soviet Tupolev Tu-16 twin-engine jet bomber, built for the Chinese People's Liberation Army Air Force.
-
-DETAILS:Xian HY-6U - Modified HY-6 tanker in service with the PLAAF, with PV-23 fire control system and Type 244 radar deleted, and thus a dedicated refueling aircraft Also referred as H-6U
-
-SOURCE: [SCO] Wikipedia http://en.wikipedia.org

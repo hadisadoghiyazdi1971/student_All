@@ -1,7 +1,0 @@
-OVERVIEW: Long range, fixed, Air Search Radar.
-
-DETAILS: Used with HF-200 HF radar.
-
-NOTES: 
-
-SOURCES: 

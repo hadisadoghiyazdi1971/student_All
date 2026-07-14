@@ -1,2 +1,0 @@
-This cheap, simple patrol boat class was designed for easy mass-production and economical use. They are useful for only the most basic harbour patrol and general mission duties. The machine gun turrets are not linked to any fire control system and are operated manually and locally. Electronics are limited to a 12-channel HF radio and one simple radar.
-Original Author: Jason W. Henson

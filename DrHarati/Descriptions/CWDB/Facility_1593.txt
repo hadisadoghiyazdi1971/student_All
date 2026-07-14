@@ -1,7 +1,0 @@
-OVERVIEW: Tactical 2D air radar to provide Early Warning during early stages of an emergency or cover forward deployement, and is also transportable by Wessex type helicopter.
-
-DETAILS: The S259 is a ruggedly constructed air transportable D-band radar with no height finding capability.
-
-NOTES: The Type 95/S-259 radar is a completely re-engineered version of the AN/UPS-1. The radar has an improved reliability over the AN/UPS-1. It was deployed during the Falklands War and provided Air Defence early warning in May 1982.
-
-SOURCES: http://www.radarpages.co.uk/mob/tactatc/s259_1.htm ; http://www.rafweb.org/1ACC.htm

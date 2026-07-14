@@ -1,7 +1,0 @@
-OVERVIEW: The AN/TPS-73 is Medium-Range Air Search Surveilance Radar.
-
-DETAILS: The AN/TPS-73 is mainly used as airport surveillance radar. It's part of the Marine Air Traffic Control Automatic Landing System (MATCALS).  AN/TPS-73 can be deployed quickly to airports or helicopter bases. 
-
-NOTES: The system is air-transportable and can be carried by a single C-130.
-
-SOURCES: AFCEA. "Marines Take a Chomp Out of Multiple Radars | SIGNAL Magazine." Accessed December 1, 2013. http://www.afcea.org/content/?q=node/1776

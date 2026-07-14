@@ -1,7 +1,0 @@
-OVERVIEW: The AN/ALQ-76 jammer is a pod-mounted noise jammer.
-
-DETAILS:  The AN/ALQ-76 is an E/F-Band Noise Deception Jamming Pod that uses a Ram Air Turbine (RAT)to power four independently steered directional antennas.
-
-NOTES:  Used with EA-6A/B, A-4, P-3, ERA-3B 
-
-SOURCES: Morgan, R. E. (2012). A-6 Intruder Units of the Vietnam War. Osprey Publishing, pg. 68 ; AN/ALQ to AN/ALT - Equipment Listing. (n.d.). Retrieved from http://www.designation-systems.net/usmilav/jetds/an-alq2aly.html

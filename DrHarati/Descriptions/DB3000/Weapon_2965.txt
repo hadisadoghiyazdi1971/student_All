@@ -1,8 +1,0 @@
-OVERVIEW: The AN/ALQ-184(V)9 is an external mounted, noise/deception electronic countermeasures (ECM) pod.
-
-DETAILS:  The ALQ-184(V)9 is an ALQ-119(V) modified with a kit that installs new plug-in circuit boards to replace much of the analog hardware for the upper two frequency bands.  Like the ALQ-184(V), it provides an electrically scannable antenna to replace the ALQ-119's fixed antennas.  It can operate in either two or three bands between 2-10 GHz.  Its Effective Radiated Power (ERP) output is over 10 dB greater than the earlier AN/ALQ-119.  This greater ERP and the steerable antennas allow the focusing of radiated energy, increasing jamming efficiency.  The ALQ-184(V)9 provides a 100 percent probability of detection of CW, pulse and pulse Doppler signals.   Improvements over the ALQ-184(V) include a flight line reprogrammability capablity and the addition of a modulation jamming capablity.  It also features an ALE-50(V) towed decoy capability.
-  
-
-NOTES: The AN/ALQ-184(V)5 is used by A-10A, F-15B/D and F-16A/B, as well as the F-4G.  
-
-SOURCES:  Aerospace, Defense & Power Systems - Market Research, Intelligence & Consulting. Accessed September 24, 2016. https://www.forecastinternational.com/archive/disp_old_pdf.cfm?ARC_ID=654 ; Federation Of American Scientists. Accessed September 24, 2016. http://fas.org/man/dod-101/sys/ac/equip/an-alq-184.htm ; "Raytheon: AN/ALQ-184 ECM Pod." Raytheon: Customer Success Is Our Mission. Accessed September 24, 2016. http://www.raytheon.com/capabilities/products/alq184/.

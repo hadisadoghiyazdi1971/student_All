@@ -1,7 +1,0 @@
-OVERVIEW: The radar set AN/MPS-16 is a high-power, long-range, mobile height finder.
-
-DETAILS: Like all HF radars it's usually used with main radar. Example AN/FPS-67C radar.  The components are mounted on pallets which are, in turn, mounted on 1 each M-35 trucks (Including the Indicator Group 4 each trucks)
-
-NOTES:  An antenna of the AN/MPS-16 is exhibited into the “Bayerwald” barracks in Regen (Bavaria - Germany).
-
-SOURCES:  Radartutorial "AN/MPS-16" http://www.radartutorial.eu/19.kartei/karte810.en.html

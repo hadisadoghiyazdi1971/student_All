@@ -1,7 +1,0 @@
-OVERVIEW: Joint Surveillance System is a network of long range surveillance radars, primarily operated and maintained by the Federal Aviation Administration (FAA), but providing communication and radar data to both FAA and USAF control centers.
-
-DETAILS: The Joint Surveillance System provides air defense and air traffic control for the continental United States, Guam, and Hawaii.  Forty joint radar sites were installed during the 1992-1995 period. The FAA also operates several versions of Air Route Surveillance Radars (ARSRs) for air traffic control. These radars include the ARSR-1, ARSR-2, and ARSR-3. The ARSR-4 Long Range Radar (LRR) Replacement program is designed to replace obsolete FAA air route surveillance radars (ARSR-1/2) and Air Force long range radars (FPS-20/60 series) at 39 operational joint-use facilities. 
-
-NOTES: The ARSR-4 is a joint FAA and Air Force program. 
-
-SOURCES: Federation of American Scientists. "ARSR-4 Air Route Surveillance Radar - United States Nuclear Forces." Accessed December 1, 2013. http://www.fas.org/nuke/guide/usa/airdef/arsr-4.htm

@@ -1,8 +1,0 @@
-﻿OVERVIEW: The  R-98MR  (NATO name: AA-3 Advanced ANAB E) is a single stage, solid fuel, medium-range,  semi-active  radar guidance, air-to-air missile 
- Passive infra-red guidance
-
-DETAILS: The AA-3 ANAB E is a semi-active radar homing missile operating in the I-band and J-band. It uses a 40 kg blast fragmentation warhead.
-
-NOTES: IOC 1961. Used by USSR, Bulgaria, Romaina, Poland, East Germany, Hungary, Czechoslovakia 
-
-SOURCES: http://fas.org/man/dod-101/sys/missile/row/aa-3.htm ; "K-8 (missile)." Wikipedia, the Free Encyclopedia. Accessed April 12, 2015. http://en.wikipedia.org/wiki/K-8_(missile) ; http://www.airwar.ru/weapon/avv/r98.html

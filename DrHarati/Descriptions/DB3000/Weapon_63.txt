@@ -1,7 +1,0 @@
-OVERVIEW: The AN/ASQ-173 Laser Spot Tracker/Strike CAMera (LST/SCAM)  is an airborne targeting sight designed to identify laser-designated targets.
-
-DETAILS:  The AN/ASQ-173   consists of a stabilized LST that detects a target designated by a ground or air based laser and allows target acquisition with a minimum communication between the aircraft and forward air controllers.  A gimbaled 35mm cameral located on the aft end of the pod allows for photography of the target prior and post- attack,  allowing for BDA without requiring a separate dedicated aircraft.
-
-NOTES:  Used by USN F/A-18.
-
-SOURCES:  Jane's Electro-Optic Systems 1997-98, "Lockeed MartinAN/ASQ-173," ; Friedman, Norman. The Naval Institute Guide to World Naval Weapons Systems, 1997-1998. Annapolis, Md: Naval Institute Press, 1997, pg 213

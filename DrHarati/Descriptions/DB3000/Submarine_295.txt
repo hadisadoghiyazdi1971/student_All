@@ -1,5 +1,0 @@
-OVERVIEW:The Collins class of six Australian-built diesel-electric submarines is operated by the Royal Australian Navy (RAN).
-
-DETAILS:The hull is constructed from a high-tensile micro-alloy steel, developed by Swedish steel manufacturer SSAB, and improved by BHP of Australia, which was lighter and easier to weld than the HY-80 or HY-100 nickel-alloy steel used in contemporary submarine construction projects, while providing better results in explosion bulge testing. The submarines are covered in a skin of anechoic tiles to minimise detection by sonar: Collins was retrofitted with the tiles after the standard sonar signature of the submarine had been established, while the other five boats were covered during construction. These tiles were developed by the Australian DSTO: as the United States and United Kingdom would not share their information on the tiles used on their nuclear submarines, Australian researchers had to develop the tiles from scratch. 
-
-SOURCES: Wikipedia, the Free Encyclopedia. "Collins-class Submarine - Wikipedia." n.d. Accessed September 9, 2017. https://en.wikipedia.org/wiki/Collins-class_submarine. 

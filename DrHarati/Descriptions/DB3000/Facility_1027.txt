@@ -1,8 +1,0 @@
-OVERVIEW: AN/FPR-123 is Ballistic Missile Early Warning System (BMEWS) fixed phased array radar. The primary mission of BMEWS is to provide NORAD with Tactical Warning/Attack Assessment (TW/AA) data on all ICBMs and SLBMs penetrating the site's coverage. The secondary mission is to provide NORAD with Launch and Impact (L&I) predictions for attack assessment by NORAD. 
-
-DETAILS: AN/FPR-123 BMEWS sensors consist of an AN/FPS-123 two-faced phased array radars.  The BMEWS system supplemented the Pine Tree Line, the Mid-Canada Line and the DEW Line (Distant Early Warning Line), which were designed to track bombers. 
-
-NOTES: The original system was built in 1959 and could provide long-range warning of a ballistic missile attack over the polar region of the Northern Hemisphere. The radars also provided satellite tracking data. The three installations are at Thule Air Base, Greenland; Clear Air Force Station, Alaska; and RAF Fylingdales, United Kingdom. 
-
-SOURCES: Federation of American Scientists. "PAVE PAWS (U)." Accessed November 24, 2013. http://www.fas.org/spp/military/program/nssrm/categories/pavepws.htm ;  Radomes, Inc. - The Air Defense Radar Veterans Association. "Ballistic Missile Early Warning System (BMEWS)." Accessed November 24, 2013. http://www.radomes.org/museum/documents/BMEWS.html ; Radomes, Inc. - The Air Defense Radar Veterans Association. "AN/FPS-115, AN/FPS-120, AN/FPS-123, AN/FPS-126." Accessed November 24, 2013. http://www.radomes.org/museum/equip/fps-115.html
-

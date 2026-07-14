@@ -1,7 +1,0 @@
-OVERVIEW: GLOBUS II was a radar and EO/IR/ELINT station designed for keeping an eye on Russian SLBMs and ICMBs - and also Pletesk (a Russian spaceport, located in Arkhangelsk Oblast, about 800 km north of Moscow). The project was then named CREEK MAID in US and GLOBUS in Norway.
-
-DETAILS: CREEK MAID was the overall name of the project and consisted of two landbased stations in Vardø, Norway. Located near the Russian border it is highly capable of monitoring and building a signature database of Russian missiles. In addition, Vardø is well placed for the radar to collect precision data on the warheads and decoys carried by possible Russian, future Iranian (and, formerly, Iraqi) missiles fired toward the United States
-
-NOTES: Globus II in Vardø became operational in 2001 and replaced GLOBUS I radars installed in 1965.
-
-SOURCES:  Wikipedia "Globus II" Accessed December 2. 2013. http://en.wikipedia.org/wiki/Globus_II ; 

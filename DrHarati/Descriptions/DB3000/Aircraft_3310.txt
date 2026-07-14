@@ -1,7 +1,0 @@
-OVERVIEW:The Chengdu Pterodactyl , also known as Wing Loong, is a Medium-Altitude Long-Endurance (MALE) unmanned aerial vehicle (UAV)
-
-DETAILS:  Intended for use as a surveillance and aerial reconnaissance platform, the Pterodactyl I is capable of being fitted with air-to-surface weapons for use in an unmanned combat aerial vehicle (UCAV) role. Based on official marketing material released by CADI, the Pterodactyl can carry the BA-7 air-to-ground missile, YZ-212 laser-guided bomb, YZ-102A anti-personnel bomb and 50-kilogram LS-6 miniature guided bomb.
-
- The second member of Wing Loong series is distinguished from the earlier Pterosaur I in that there is a bulge at the nose tip of the fuselage to house a satellite antenna, and this is the version most widely publicized and actively marketed as a surveillance platform. 
-
-SOURCE: [SCO] Wikipedia http://en.wikipedia.org

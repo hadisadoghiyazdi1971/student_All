@@ -1,7 +1,0 @@
-OVERVIEW: The AN/TPS-59/M34 is a Early Warning and Situational Awareness Radar System. 
-
-DETAILS: The AN/TPS-59/M34 is designed to operate with Patriot or Hawk missile batteries, and naval AEGIS systems. Its power and range even make it suitable for ballistic missile defense roles. 
-
-NOTES: IOC 1991.  The AN/TPS-59/M34 is a smaller version of the AN/TPS-59 used by the USMC,and was delivered to Egypt in 1991 to complement the air defense mission of the AN/TPS-59 radars already in the country. Because, the M/34 is smaller, it is simpler to set up and relocate than the AN/TPS-59 and is mounted on both trailers and trucks. In contrast to the AN/TPS-59, it is used strictly for early warning, situational awareness for air breathing threats. 
-
-SOURCES: Defense Industry Daily. "Bahrain Receives TPS-59 Missile Defense Radar." Accessed December 1, 2013. http://www.defenseindustrydaily.com/bahrain-receives-tps-59-missile-defense-radar-04013/ ; Wikipedia. "AN/TPS-59." Accessed December 1, 2013. http://en.wikipedia.org/wiki/AN/TPS-59; "Lockheed Martin Contract Will Refurbish Egyptian AN/TPS-59/M34 Radars." Defense-aerospace.com: the Professional Website for Aerospace, Defense and Military News and Information. Accessed April 17, 2019. http://www.defense-aerospace.com/articles-view/release/3/4986/lockheed-to-refurbish-egyptian-radars-(apr.-6).html.

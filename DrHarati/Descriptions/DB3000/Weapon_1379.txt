@@ -1,8 +1,0 @@
-OVERVIEW: The Otomat Mk1 is a short range,  turbojet-powered,  anti-ship missile equipped with an active seeker.
-
-DETAILS:  After being boosted from its launching platform by two jettisonable solid-fuel boosters, the missile descends to a cruising altitude of 20 meters, using inertial navigation system during the mid-course phase.  At a predetermined point from the target the X-band active radar performs a left-right scan search, until the target is acquired.    The missile then enters a sea-skimming attack phase.  After impact, the 210 kilogram SAP warhead explodes inside the ship with the force of the explosion directed to the bottom of the target ship.
-
-NOTES:  Entered service with the Italian navy in 1976.  The Mk 1 lacks a datalink, making it incapable in over the horizon engagements.  In service with Italy, Egypt, Kenya, Libya, and Nigeria. Later version of the Otomat featured folding wings, increasing the number of missiles that could be carried by a platform.
-  
-SOURCES: Wikipedia, the free encyclopedia. "Otomat." Accessed November 3, 2014. http://en.wikipedia.org/wiki/Otomat ; Harpoon Database, http://www.harpoondatabases.com/encyclopedia/Entry2348.aspx ; Jane's Strategic Weapon Systems, "Otomat/Teseo", dated 11 April 2014 ; GlobalSecurity.org - Reliable Security Information. "Otomat." Accessed November 3, 2014. http://www.globalsecurity.org/military/world/europe/otomat.htm.
-

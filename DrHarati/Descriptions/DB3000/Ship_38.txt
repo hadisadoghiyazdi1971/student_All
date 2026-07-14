@@ -1,8 +1,0 @@
-OVERVIEW: Following Udaloy's commissioning, designers began developing an upgrade package in 1982 to provide more balanced capabilities with a greater emphasis on anti-shipping. The Project 1155.1 Fregat II Class Large ASW Ship (NATO Codename Udaloy II) is roughly the counterpart of the Improved Spruance class
-
-DETAILS: Similar to Udaloy externally, it was a new configuration replacing the SS-N-14 with SS-N-22 "Sunburn" (Moskit) anti-ship missiles, a twin 130 mm gun, UDAV-1 anti-torpedo rockets, and gun/SAM CIWS systems. A standoff ASW capability is retained by firing SS-N-15 missiles from the torpedo tubes.
-
-Powered by a modern gas turbine engine, the Udaloy II is equipped with more capable sonars, an integrated air defense fire control system, and a number of digital electronic systems based on state-of-the-art circuitry. The original MGK-355 Polinom integrated sonar system (with NATO reporting names Horse Jaw and Horse Tail respectively for the hull mounted and towed portions) on Udaloy-I ships is replaced by its successor, a newly designed Zvezda M-2 sonar system that has a range in excess of 100 kilometres (62 mi) in the 2nd convergence zone. The Zvezda sonar system is considered by its designers to be the equivalent in terms of overall performance of the AN/SQS-53 on US destroyers, though much bulkier and heavier than its American counterpart: the length of the hull mounted portion is nearly 30 meters. The torpedo approaching warning function of the Polinom sonar system is retained and further improved by its successor.
-
-
-SOURCES:Wikipedia, the Free Encyclopedia. "Udaloy-class Destroyer - Wikipedia." n.d. Accessed September 9, 2017. https://en.wikipedia.org/wiki/Udaloy-class_destroyer#Udaloy_II. 

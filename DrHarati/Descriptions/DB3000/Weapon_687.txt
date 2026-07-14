@@ -1,8 +1,0 @@
-OVERVIEW: The Apache (Arme Propulsee Antipiste A Charges Ejectables) is a long range,  turbojet-powered,  anti-runway cruise missile utilizing GPS guidance.  
-
-DETAILS:  APACHE carries ten 52 kilogram "Kriss" runway-penetrating submunitions.  
-
-NOTES:  IOC in 2001.  Can be launched from Mirage 2000 and Rafale aircraft. 
-  
-SOURCES: WVectors. "[5.0] Modern Western Air-Launched Cruise Missiles." Accessed November 24, 2014. http://www.vectorsite.net/twcruz_5.html#m2 ; History Wars Weapons. "Apache Anti-runway Missile." Accessed November 24, 2014. http://historywarsweapons.com/apache-anti-runway-missile/
-

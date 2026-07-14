@@ -1,9 +1,0 @@
-OVERVIEW: The AA-1a Alkali RS-2U is a solid-fuel, short range Air to Air missile equipped with a beam riding homing head and a 13.0 kilogram warhead.
-
-DETAILS: The AA-1a Alkali is guided to the target by a combination method. Initially, it is guided inertially with radio correction of trajectory in the initial flight phase.  It then transitions to homing in the terminal phase. This provides for reliable target lock-on at long ranges from the launching aircraft. The missile can be guided along special trajectories to create favorable conditions for homing head and proximity fuse operation. It is capable of going around a plume of passive jamming, of being moved out of the main lobe of the platform's radar, and of approaching a low-flying target from above at a given angle.  The RS-2U differed has a larger warhead and more fuel than the earlier PC-2V version of the missile.
-
-
-NOTES: Because of the difficulty in using a short range beam riding missile against manuvering fighter, the AA-1a Alkali was primarily intended for use against bombers. 
-
-
-SOURCES: "RS-2U (AA-1A Alkali A) :: Ruslet." Ruslet. Accessed April 12, 2015. http://ruslet.webnode.cz/technika/ruska-technika/letecka-vyzbroj/protiletadlove-rs/rs-2u-aa-1a-alkali-/.

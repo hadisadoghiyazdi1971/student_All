@@ -1,7 +1,0 @@
-OVERVIEW: The AS-6 KINGFISH A (KSR-5M) is a supersonic, long-range, liquid-fuel, rocket propelled, air-to-surface missile.  It carried a 930 kg HE warhead.
-
-DETAILS: The AS-6 KINGFISH cruised at either high or low altitude.  In its low altitude profile, it flew at approximately 50 meters altitude.  For guidance it uses a preprogrammed autopilot for launch and climb, an inertial guidance system or an autopilot with radio command override for mid-course, and an active radar system for terminal dive when used in an anti-ship role.  It has a CEP of 150 ft when used in the anti-ship role, and a CEP of 1 to 2 nm when employed against land targets.
-
-NOTES: The AS-6 entered service in 1969.  It was used by the Tu-22M and Tu-16 BADGER aircraft. The AS-6 was effectively a scaled down Kh-22 with less range and launch weight, but similar performance and lethality.
-
-SOURCES: Jane's Weapons Systems, Vol. 1: Air-Launched,  AS-6 'Kingfish' (K-26 and KSR-5), 09 Jan 2006 ;  Air Power Australia. "Soviet/Russian Cruise Missiles." Accessed November 10, 2013. http://www.ausairpower.net/APA-Rus-Cruise-Missiles.html#mozTocId753021 ;  Norman Polmar, "Guide to the Soviet Navy, 3rd ed. (Annapolis, MD: Naval Institute Press, 1983), 357.

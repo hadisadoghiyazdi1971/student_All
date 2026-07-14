@@ -1,7 +1,0 @@
-OVERVIEW: Short-Range low-flying detection radar. It is a mobile radar on the 5t truck.
-
-DETAILS: Germany used TMD companies with the task was described as the " monitoring of the airspace from the ground with the help of the human sense organs for the purpose of perceiving aircraft to detect, identify, and report. ". The low-flying aircraft reporting service was in keeping with the concept of NATO air defense and closed the gap detection at low altitudes. It was due to its high mobility adaptable and less vulnerable than a fixed installation. It was used to guard HAWK and NIKE batteries.
-
-NOTES: Operation 1972. On 14 December 1990 low-flying aircraft detection and Leitdienst the German Air Force as a result of the collapse of was the Warsaw Pact released from his contract because it had lost its military function. The air monitoring system was the end of the Cold War had its day. The now almost 40 years old, but still ready to use radar stations were the Turkey and Pakistan handed over, which they use on their borders. The rest was scrapped
-
-SOURCES: http://de.wikipedia.org/wiki/Tieffliegermelde-_und_Leitdienst

@@ -1,7 +1,0 @@
-OVERVIEW: The AN/TPS-59 is a Tactical Ballistic Missile Defense, Early Warning and Situational Awareness Radar System. 
-
-DETAILS: The AN/TPS-59AN/TPS-59 is designed to operate with Patriot or Hawk missile batteries, and naval AEGIS systems. Its power and range even make it suitable for ballistic missile defense roles. 
-
-NOTES: The AN/TPS-59 was used by the US Marines from 1986-1996.
-
-SOURCES: Defense Industry Daily. "Bahrain Receives TPS-59 Missile Defense Radar." Accessed December 1, 2013. http://www.defenseindustrydaily.com/bahrain-receives-tps-59-missile-defense-radar-04013/ ; Wikipedia. "AN/TPS-59." Accessed December 1, 2013. http://en.wikipedia.org/wiki/AN/TPS-59

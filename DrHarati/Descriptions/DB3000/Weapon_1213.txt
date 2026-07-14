@@ -1,8 +1,0 @@
-OVERVIEW: The WIZARD (Wideband Zapping Anti-Radar Decoy) Naval Corner Reflector Decoy is a passive RF decoy to distrace or seduce radar guided ASMs with chaff discrimination capablities.
-
-DETAILS: The WIZARD decoys are launched from a ship, float in the air for a specified amount of time, while deflecting incoming missiles aimed at the vessel. The WIZARD remains effective even when it has come to a rest on the water's surface.
-
-
-NOTES: IOC: 2007. Available in either single or twin corner deflector configurations
-  
-SOURCES: Rafael's WIZARD Demonstrated at Nato's Naval Forces Annual T. (2007, July 16). Retrieved from http://www.asdnews.com/news-12880/rafael_s_wizard_demonstrated_at_nato_s_naval_forces_annual_trials_in_norway.htm ; Rafael's WIZARD Makes Magic for the First Time at Pacific 20. (2008, January 25). Retrieved from http://www.asdnews.com/news-14877/rafael_s_wizard_makes_magic_for_the_first_time_at_pacific_2008.htm

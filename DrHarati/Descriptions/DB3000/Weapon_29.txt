@@ -1,9 +1,0 @@
-OVERVIEW: The PL-9 is a short-range, supersonic, solid fuel, air-to-air and ground-to-air missile utilizing infrared homing and laser proximity fusing. 
-
-DETAILS: The PL-9 can be slaved to a radar system, EO director or the seeker itself can scan for targets.  The PL-9 has a cooled infra-red seeker, giving it an all-aspect capability.  The seeker also has IRCCM capabilities.
-
-NOTES: IOC 1991. It is utilized by a variety of aircraft and helicopters and ground units.  
-
-SOURCES: Jane's Weapons Systems, Vol. 3: Naval, "PL-9N" 06 Sep 2013 ; Federation of American Scientists. "PL-9." Accessed November 9, 2013. http://www.fas.org/man/dod-101/sys/missile/row/pl-9.htm ; "PL-9." Wikipedia, the Free Encyclopedia. Accessed April 26, 2015. http://en.wikipedia.org/wiki/PL-9 ; "PLA Air to Air Missiles." Air Power Australia. Accessed April 26, 2015. http://www.ausairpower.net/APA-PLA-AAM.html.
-
-

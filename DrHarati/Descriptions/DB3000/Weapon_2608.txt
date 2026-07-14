@@ -1,7 +1,0 @@
-OVERVIEW: The AN/ALQ-72 jammer is a pod-mounted I/low J band (8-12 GHz) noise jamming pod.
-
-DETAILS:
-  
-NOTES:   Used in B-52, B-57, RB-66, F-101, F-105D/F, F-4E, T-33  
-
-SOURCES: AN/ALQ to AN/ALT - Equipment Listing. (n.d.). Retrieved from http://www.designation-systems.net/usmilav/jetds/an-alq2aly.html

@@ -1,7 +1,0 @@
-OVERVIEW: The Type 80 Linesman is a Long range, fixed, early warning radar operating in the S-band. 
-
-DETAILS: 
-
-NOTES: Type 80 was easy to jam and some sites upgraded to Type 84 early 1960's.
-
-SOURCES: Wikipedia, the free encyclopedia. "ROTOR." Accessed December 1, 2013. http://en.wikipedia.org/wiki/ROTOR ;  The Radar Pages: "Rotor radar system" Radar Pages Home page. "The "Rotor" radar system." Accessed December 1, 2013. http://www.radarpages.co.uk/mob/rotor/rotorarticle1.htm

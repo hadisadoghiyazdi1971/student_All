@@ -1,7 +1,0 @@
-OVERVIEW: Type 88 Green Ginger is mobile, tactical control 2D Radar system 
-
-DETAILS: Green Ginger radar system used two radars Type 88 and Type 89 Height Finder radar. These main elements were integrated with a battery command post. 
-
-NOTES: The radar was developed in the 1960s for the VR.725 SAM system. Too big to airlift in the RAF's transport aircraft and helicopters, the system was given to the RAF for use as tactical radar.
-
-SOURCES: Skomer's Homepage. "Green Ginger radar." Accessed December 1, 2013. http://www.skomer.u-net.com/projects/greenginger.htm.

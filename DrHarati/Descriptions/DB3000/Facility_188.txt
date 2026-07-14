@@ -1,7 +1,0 @@
-OVERVIEW: The P-35/P-37 BAR LOCK is an early warning ground control radar operating in the E and F bands.
-
-DETAILS: The antenna system of the P-35 is composed of two open frame truncated parabolic antenna accomplishing both transmission and reception, with both antenna are fed by a stacked beam composed of six feed horns. Being mounted on a trailer makes it semi-mobile.
-
-NOTES:  The Bar Lock series is one of the most widely exported Soviet-era radars, and remains widely used especially in developing nations.  
-
-SOURCES: Air Power Australia. "Search and Acquisition Radars (S-Band, X-band)." Accessed December 1, 2013. http://www.ausairpower.net/APA-Acquisition-GCI.html ; Wikipedia. "P-35 radar." Accessed December 1, 2013. http://en.wikipedia.org/wiki/P-35_radar 

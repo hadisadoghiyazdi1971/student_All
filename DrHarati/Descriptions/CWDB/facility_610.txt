@@ -1,5 +1,0 @@
-The MQ-8B is an unmanned helicopter currently under joint development by the US Army and US Navy. The USN has selected it as it’s “VTUAV” (Vertical Takeoff Unmanned Aerial Vehicle) replacing the Desert Storm-vintage RQ-2 Pioneer; while the Army wants it to fulfill it’s “ISR” (Intelligence, Surveillance, Reconnaissance) UAV role. Originally, it was designated “RQ-8A”.
-The MQ-8 is based on the Schweizer 330SP civilian helicopter. It can run on Army-standard JP-5 or Navy-standard JP-8 fuel. An interchangeable sensor turret is mounted in the nose, and various weapons have been studied including Hellfire and Viper Strike missiles. A SIGINT package has also been developed for the Army. Total payload is 500lbs on the Navy model and 700lbs on the Army model.
-Alternatively, a 200lb cargo pod can deliver supplies to SEAL teams or encircled troops.
-
-Original Author: Jason W. Henson

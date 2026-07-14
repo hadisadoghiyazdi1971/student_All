@@ -1,7 +1,0 @@
-OVERVIEW: The S-723 Martello is transportable long range air defense surveillance phased array 3D radar that operates in the D-band. 
-
-DETAILS: The S-723 Martello radar is a  transportable, long range air defence 3D radar, featuring frequency agility, pulse compression and comprehensive signal processing.  It and the related S-713 both employ planar phased arrays to achieve minimum side-lobes for maximum resistance to jamming. 
-
-NOTES: One single Type 91 was built for trial.
-
-SOURCES: Skomer's Homepage. "Green Ginger radar." Accessed December 1, 2013. http://www.skomer.u-net.com/projects/greenginger.htm ; Grundlagen der Radartechnik. "Radar Basics." Accessed December 1, 2013. http://www.radartutorial.eu/19.kartei/karte112.en.html  

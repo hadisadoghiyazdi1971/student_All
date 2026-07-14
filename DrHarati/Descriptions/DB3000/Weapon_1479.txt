@@ -1,8 +1,0 @@
-OVERVIEW: The SS-N-9 SIREN (P-120 Malakhit) is a medium-range, sub-sonic solid-fuel anti-ship missile with an active J-band radar seeker and an IR seeker back up.  Various sources credit it with a conventional warhead weighing between 500-1000 kg.  It is also believed to be capable of carrying a 200 kt nuclear warhead.
-
-DETAILS: On launch from either a surface or subsurface platform, the SIREN climbs to approximately 100 meters and use INS navigation to reach the target area.  At approximately 10 km from the target area, the missile drops to approximately 50 meters and begins using its radar to identify the target.  If jammed, the missile reverts to the backup IR seeker, believed to be contained in a ventral pod located on the base of the missile.
-
-NOTES: The missile became operational in 1972.  It is used on the NANUCHKA and TARANTUL-classes, as well as the Charlie-II and PAPA class SSGNs.  In 2008, it was reportedly used by the Russians against the Georgian navy.
-
-SOURCES: Norman Polmar, "Guide to the Soviet Navy, 3rd ed. (Annapolis, MD: Naval Institute Press, 1983),366 ; Jane's Weapons Systems, Vol. 3,  "SS-N-9 'Siren' (P-120 Malakhit)" 17 July 2013 ;  Dr Carlo Kopp, "Soviet/Russian Cruise Missiles," Technical Report APA-TR-2009-0805, http://www.ausairpower.net/APA-Rus-Cruise-Missiles.html#mozTocId39941, updated April 2012 ; Wikipedia. "P-120 Malakhit." Accessed December 1, 2013. http://en.wikipedia.org/wiki/P-120_Malakhit
-

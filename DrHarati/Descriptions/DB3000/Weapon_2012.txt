@@ -1,8 +1,0 @@
-OVERVIEW: The AN/ALE-39 Counter Measure Dispenser System (CMDS) is an airborne countermeasures system designed to protect tactical aircraft and helicopters against missile and radar-directed AAA threats.
-
-DETAILS:  The AN/ALE-39 decoy dispensing system gives an aircraft the capability to dispense chaff, flares or expendable jammers such as POET or GEN-X. The AN/ALE-39 is used in conjunction with the AN/AAR-47 Missile Approach Warning System (MAWS).  The MAWS warns of missile threat and automatically initiates a flare ejection from the CMDS. The CMDS is pre-programed to deploy a fixed number (up to 20) of decoys on demand and has a capacity of 60 decoys. A manual deployment mode is also available. 
-
-NOTES: Production began in October 1973. Has been installed on A-6, AV-8B, EA-6B, ES-3A, F-14, F/A-18, S-3B and SH-2F/G aircraft. Replaced by the AN/ALE-47. 
- 
-
-SOURCES:  Federation Of American Scientists -. "ALE-39 Counter Measure Dispenser System(CMDS)." Accessed November 14, 2014. http://fas.org/man/dod-101/sys/ac/equip/an-ale-39.htm ; Wikipedia – Die freie Enzyklopadie. "AN/ALE-39 Wikipedia." Accessed November 14, 2014. http://de.wikipedia.org/wiki/AN/ALE-39 ; Welcome to Citizendium - Citizendium. "ALE-39 - encyclopedia article - Citizendium." Accessed November 14, 2014. http://en.citizendium.org/wiki/ALE-39 ; Jane's Radar and Electronic Warfare, "AN/ALE-39B countermeasures dispensing system," 02 October 2014.

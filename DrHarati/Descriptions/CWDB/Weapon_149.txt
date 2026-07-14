@@ -1,8 +1,0 @@
-OVERVIEW: The AS-2 KIPPER (K-10SD) is an air-launched, long-range, supersonic, liquid-fuel, turbojet-powered, anti-ship (ASM) missile.  It had a 200 or 500 kT nuclear warhead.
-
-DETAILS:  The AS-2 was designed primarily as an anti-ship weapon for use against large, high-value targets.  It could also be used against large land targets. The AS-2 was typically launched at high altitude. It then accelerated to approximately Mach 1.0 and cruised at about 10,000 meters using inertial navigation with an option of command correction for mid-course flight.  At approximately 60 nm from the target, it entered a shallow 15 degree dive, leveling out at approximately 1000 meters altitude and 35 nm from the target.  At approximately 10 nm from the target, the missile’s active radar activated, and guided the missile in the terminal phase.  In the terminal phase, the AS-2 accelerated to approximately Mach 2 and dived into the target vessel close to or below the waterline.
-
-NOTES: The AS-2 became operational in 1961. It was carried by the Tu-16K-10 (BADGER-C).  It had a CEP of 60 meters when used in an anti-ship role and a CEP of 1 to 2 nm when used against land targets.  
-
-SOURCES: Jane's Weapons Systems, Vol. 4: Strategic, "Kh-10S (AS-2 'Kipper')" 13 Oct 2011; GlobalSecurity.org - Reliable Security Information. "K-10S (AS-2 Kipper)." Accessed November 11, 2013.  http://www.globalsecurity.org/wmd/world/russia/as-2.htm ; Federation of American Scientists. "AS-2 - Russian and Soviet Nuclear Forces." Accessed November 11, 2013. http://www.fas.org/nuke/guide/russia/bomber/as-2.htm ; Norman Polmar, "Guide to the Soviet Navy, 3rd ed. (Annapolis, MD: Naval Institute Press, 1983), 357.
-

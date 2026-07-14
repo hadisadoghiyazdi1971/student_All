@@ -1,8 +1,0 @@
-OVERVIEW: The Ilyushin Il-38 "Dolphin" (NATO reporting name: May) is a maritime patrol aircraft and anti-submarine warfare aircraft designed in the Soviet Union. It was a development of the Ilyushin Il-18 turboprop transport.
-
-DETAILS:The airframe is based on the Il-18, with the wings moved forward 3 m (9.84 ft). Unlike the Il-18, only the forward fuselage of the Il-38 is pressurized. The tail contains a MAD, while under the forward fuselage a Berkut ("Golden Eagle") search radar (named "Wet Eye" by NATO) is housed in a bulged radome. There are two internal weapons bays, one forward of the wing, housing sonobuoys and one behind the wing housing weapons.
-
-Il-38N
-    Improved variant sometimes referred to as Il-38SD for Sea Dragon the new search and tracking system. Version for the Russian Navy is equipped with the Novella system. Il-38N is able to find air targets at ranges of up to 90 kilometers and follow the surface objects within a radius of 320 kilometers.
-
-SOURCE: [SCO] Wikipedia http://en.wikipedia.org

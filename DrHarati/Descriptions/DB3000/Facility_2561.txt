@@ -1,7 +1,0 @@
-OVERVIEW: AN/TPS-70 is 3-Dimensional long range phased array tactical mobile radar.
-
-DETAILS: The function of  TPS-70s is "tactical control and/or surveillance of  air operations from any location". The TPS-70 tactical radar provides reliability, sensitivity, and accuracy, even in the face of jamming and high-clutter conditions. 
-
-NOTES:  Used by many countries Air Forces including Switzerland, Australia, Canada, Columbia, Germany (FRG/Reunited), Iran, Israel, Jordan, Mexico, Morocco, Pakistan, South Korea, Spain, Thailand, UAE, Yugoslavia and Saudi Arabia. It entered service mid 1980's and it had been replaced by newer systems, but is still in widely use around the world.
-
-SOURCES:  FAS "AN/TPS-70" http://www.fas.org/man/dod-101/sys/ac/equip/an-tps-70.htm

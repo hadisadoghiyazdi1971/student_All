@@ -1,7 +1,0 @@
-OVERVIEW: The GM 403 is a 3D long-range radar, offering detection from very high to very low altitudes. It tracks a wide range of targets from highly maneuverable low-flying tactical aircraft to unconventional smaller targets such as UAVs, ensuring an excellent wide-area air picture. The GM 400 can be set up in one hour. When deployed on site, the GM 400 radar can be connected to operate as part of a networked air defense organization and can be controlled from a remote location. The GM 403 can also be associated with different secondary radars that provide air traffic control capabilities, and that can also integrate Tactical Ballistic Missiles detection and tracking capabilities.
-
-DETAILS: The system can be set up by a four man crew in 30 minutes and can be remotely operated. The system fits in a 20 foot shipping container and weighs less than ten tons. The system can be rapidly deployed mounted on a 6x6 or 8x8 tactical truck and can be transported by a single C-130 aircraft or a helicopter. Finnish version is transported by heavy-duty 4-axle trucks of SISU E13TP 8x8 model series.
-
-NOTES: Finnish The system, which is locally designated KEVA 2010 was selected in 2009 in a joint process involving Estonia. The system is expected to be operational from 2012. Several other user countries include Canada, Estonia and France 
-
-SOURCES: http://en.wikipedia.org/wiki/Ground_Master_400 ; http://www.armyrecognition.com/france_french_army_military_equipment_uk/ground_master_gm_400_403_406_thales_raytheon_3d_air_defense_radar_technical_data_sheet_pictures.html

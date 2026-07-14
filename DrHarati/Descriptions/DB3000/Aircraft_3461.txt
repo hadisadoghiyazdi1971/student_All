@@ -1,7 +1,0 @@
-OVERVIEW:The Beriev A-50 (NATO reporting name: Mainstay) is a Soviet airborne early warning and control (AEW) aircraft based on the Ilyushin Il-76 transport.
-
-DETAILS:The A-50 can control up to ten fighter aircraft for either air-to-air intercept or air-to-ground attack missions. The A-50 is capable of flying four hours at 1000 km from its base at a maximum takeoff weight of 190 tons. The aircraft can be refuelled by Il-78 tankers.
-
-The radar "Vega-M" is designed by MNIIP, Moscow, and produced by NPO Vega. The "Vega-M" is capable of tracking up to 150 targets simultaneously within 230 kilometers. Large targets, like surface ships, can be tracked at a distance of 400 km.
-
-SOURCE: [SCO] Wikipedia http://en.wikipedia.org

@@ -1,7 +1,0 @@
-OVERVIEW: AN/TPS-75 Radar System [ "Tipsy 75"] is a mobile, tactical radar system capable of providing radar azimuth, range, height, and Identification Friend or Foe (IFF) information. 
-
-DETAILS: AN/TPS-75 is an air-transportable radar system designed to provide long range radar data to support operations and control of tactical aircraft.  The unit can be assembled from transport mode to full operation within 90 minutes during the day or in 2.5 hours at night. 
-
-NOTES: IOC 1968  
-
-SOURCES: GlobalSecurity.org. "AN/TPS-75 Radar System." Accessed December 1, 2013. http://www.globalsecurity.org/military/systems/aircraft/systems/an-tps-75.htm

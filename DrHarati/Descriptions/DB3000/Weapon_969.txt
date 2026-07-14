@@ -1,8 +1,0 @@
-OVERVIEW: The SS-N-25 SWITCHBLADE is a medium-range, sub-sonic, surface-launched, turbo-jet powered solid-fuel anti-ship missile with an active I/J-band radar seeker.  It has a 145 kg HE warhead.
-
-DETAILS: After launch, the missile descends to approximately 15 meters, using inertial mid-course guidance.  At approximately 20 km from the target, the active radar in the nose is switched on its search mode.  After locking onto a target, the missile descends to approximately 2-5 meters and goes into the terminal phase.  In the final approach to a target, it decends to 1.5 meters.   The missile is reported to have ECCM capability, and is effective up to Sea State 5-6.
-
-NOTES: A containerized version of the missile has been demonstrated, potentially allowing the system to be deployed on merchant vessels.  An air launched version is known as the AS-20 KAYAK, and a ground-launched version is known as the SSC-6 STOOGE.
-
-SOURCES: Jane's Weapons Systems, Vol. 3: Naval,  "SS-N-25 'SWITCHBLADE' (3M24 (Kh-35) Uran)" 03 Jun 2013 ; Jane's Weapons Systems, Vol. 1: Air-Launched,  "Kh-35/3M24, Kh-35U/UE (AS-20 'Kayak'), Kh-37" 17 October 2013; Federation of American Scientists. "Zvezda Kh-35 [AS-20 Kayak / SS-N-25 Switchblade]." Accessed November 5, 2013. http://www.fas.org/man/dod-101/sys/missile/row/as-20.htm; Air Power Australia. "Soviet/Russian Cruise Missiles." Accessed November 5, 2013. http://www.ausairpower.net/APA-Rus-Cruise-Missiles.html#mozTocId501956 ; RIA Novosti. "New Containerized Missile System on Show | Defense." Accessed November 5, 2013. http://en.ria.ru/military_news/20120627/174264315.html
-

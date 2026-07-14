@@ -1,5 +1,0 @@
-OVERVIEW:The McDonnell Douglas (now Boeing) F-15K Strike Eagle is an American all-weather multirole strike fighter derived from the McDonnell Douglas F-15E Eagle. 
-
-DETAILS:The F-15K variant has several features not typically found on F-15Es, such as an AAS-42 Infra-red search and track, a customized Tactical Electronics Warfare Suite to reduce weight and increase jamming effectiveness, cockpit compatibility with night vision devices, ARC-232 U/VHF radio with Fighter Data Link system, and advanced APG-63(V)1 mechanical-scanned array radar. The APG-63(V)1 radar has common digital processing equipment with the APG-63(V)3 AESA radar, and thus is upgradable to an AESA radar via antenna replacement. The F-15K is equipped with the Joint Helmet Mounted Cueing System and weapons such as AGM-84K SLAM-ER, AGM-84H Harpoon Block II, KEPD 350.
-
-SOURCE: Wikipedia, the Free Encyclopedia. "McDonnell Douglas F-15E Strike Eagle - Wikipedia." n.d. Accessed September 9, 2017. https://en.wikipedia.org/wiki/McDonnell_Douglas_F-15E_Strike_Eagle#F-15K. 

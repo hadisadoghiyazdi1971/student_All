@@ -1,7 +1,0 @@
-The AS-16 KICKBACK (Kh-15) is an air-launched high supersonic, solid fuel missile that utilizing inertial guidance and a nuclear warhead.
-
-DETAILS: On launch, the AS-16 climbs to an altitude of about 130,000 ft and then dives in on the target, accelerating to a speed of about Mach 5.  
-
-NOTES: The AS-16 became operational approximately in 1980.  A conventional anti-ship Kh-15S) version armed with a 150 kg warhead and an active radar seeker is also available, as is a ARM version (Kh-15P). It is carried by  the Tu-95MS-6 'Bear-H', Tu-22M3 'Backfire C', and Tu-160 'Blackjack aircraft.  It is analogous to the American AGM-69 SRAM.
-
-SOURCES: Jane's Weapons Systems, Vol. 1: Air-Launched,  "Kh-15/RKV-15 (AS-16 'Kickback')" 30 April 2013 ; Federation of American Scientists. "Raduga Kh-15 (AS-16 Kickback)." Accessed November 5, 2013. http://www.fas.org/man/dod-101/sys/missile/row/as-16.htm.

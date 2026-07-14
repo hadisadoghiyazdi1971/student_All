@@ -1,9 +1,0 @@
-OVERVIEW: Surface Wave-OTH (SW-OTH) radars is an over the horizon surface and air search radar. 
-
-DETAILS:  The designation of China's SW-OTH is not known, but reliable reports suggests that there are at least two systems in operation, with one ranged over the Taiwan Straits.  
-
-The transmitter is located at 27º 46’ 58.70” North, 120º 45’ 54.41” East, whilst the receiver is approximately 3km southwest at 27º 45’ 26.88” North, 120º 45’ 04.98” East. 
-
-NOTES: IOC for the  SW-OTH is estimated to be 2003.  The absolute range of the SW-OTH is dependent upon atmospheric conditions, system power and the time of day.
-
-SOURCES: Air Power Australia. "PLA Air Defence Radars." Accessed December 1, 2013. http://www.ausairpower.net/APA-PLA-IADS-Radars.html#mozTocId88569.

@@ -1,2 +1,0 @@
-The Seafox ROV is a mine hunting remotely operated vehicule, employed by the RNlNavy onboard its Alkmaar Class Minesweepers.
-It has a hollow charge in its nose and is maneuvred to a seamine and then exploded, destroying the mine as well.

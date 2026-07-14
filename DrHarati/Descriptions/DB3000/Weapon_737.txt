@@ -1,8 +1,0 @@
-OVERVIEW: The AN/ASD-12 Shared Reconnaissance Pod (SHARP) is an external pod mounted, day/night, all-weather, high-resolution, digital tactical air reconnaissance system.
-
-DETAILS:  The AN/ASD-12 SHARP is an advanced day/night and all-weather reconnaissance pod used by the USN for tactical manned airborne reconnaissance on the F/A-18F. The SHARP pod houses a dual-band electro-optical/infrared (EO/IR) sensor that is capable of delivering very high resolution tactical reconnaissance imagery.  It also contains a synthetic aperture radar (SAR), as well as a near-real time datalink capability capable of transmitting data to both afloat and shore based Joint Service Imagery Processing System (JSIPS) stations.
-
-NOTES: The AN/ASD-12 was delivered to the USN in 2002.  Although primarily intended for use on the F/A-18 E/F, it is capable of being flown on a wide variety of aircraft.
-
-
-SOURCES:  Space Dynamics Lab. "Space Dynamics Lab." Accessed November 19, 2014. http://www.sdl.usu.edu/programs/sharp ; Raytheon: Customer Success Is Our Mission. "Raytheon: F/A-18 Air Dominance." Accessed November 19, 2014. http://www.raytheon.com/capabilities/products/apg79aesa/fa18airdom/ ; Federation Of American Scientists -. "SHAred Reconnaissance Pod (SHARP)." Accessed November 19, 2014. http://fas.org/irp/program/collect/sharp.htm ; GlobalSecurity.org - Reliable Security Information. "SHAred Reconnaissance Pod (SHARP)." Accessed November 19, 2014. http://www.globalsecurity.org/intell/systems/sharp.htm.

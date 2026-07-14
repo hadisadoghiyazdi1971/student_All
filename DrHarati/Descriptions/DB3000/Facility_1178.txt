@@ -1,7 +1,0 @@
-OVERVIEW: The COBRA Counter Battery Radar. COBRA is mounted on a cross-country mobile vehicle. 
-
-DETAILS: The COBRA mission is to locate mortars, rocket launchers and artillery batteries and to provide information for countering their effectiveness.
-
-NOTES: COBRA (COunter Battery RAdar) is a collaborative long-range battlefield radar programme between Germany, France and the United Kingdom. COBRA radar systems are in service with effect from 2005.
-
-SOURCES: Wikipedia: "Counter-battery radar" http://en.wikipedia.org/wiki/Counter-battery_radar

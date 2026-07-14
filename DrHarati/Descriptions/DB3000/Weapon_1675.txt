@@ -1,5 +1,0 @@
-The PL-8 (Python 3)  is a short-range, supersonic air to air missile utilizing infrared homing and a impact/proximity fusing.  Designed for close air to air combat, it has an all aspect and a 35 G capability. The PL-8 is a legally licensed copy of the Israeli Rafael Python 3 WVR missile. The weapon is used on a wide range of aircraft, including the J-7E Fishbed, J-8B/D Finback and J-10 and J-11B. It is roughly comparable to the AIM-9L in  performance. 
-
-Source: http://www.indiandefence.com/forums/china/10497-pla-air-air-missiles.html#ixzz2iY9rST9E; http://en.wikipedia.org/wiki/PL-8_(missile)
-
-

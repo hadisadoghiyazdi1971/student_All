@@ -1,7 +1,0 @@
-OVERVIEW: Marconi Type S.266 is powerful 2D Long-Range Air Search radar.
-
-DETAILS: Used in NATO NADGE radar network. 2D radar could not get height information, main radar had also HF radar like S-244 HF.
-
-NOTES: Used by Air Forces in Norway.
-
-SOURCES: No sources.

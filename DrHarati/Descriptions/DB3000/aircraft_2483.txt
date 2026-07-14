@@ -1,5 +1,0 @@
-A license copy of the Antonov An-12 “Cub”, the Y-8 is used for many roles in Chinese service. Production started in the late 1960s and continues today; more than 125 have now been built plus additional examples for export and civilian (Y-8B & Y-8F100) use. The original design had a twin NR-23 gun in a manned tail turret; this is not included on the civilian versions, the specialized versions described below, nor recent examples of the military cargo version.
-
-Specialized electronic warfare variant with powerful jammers, ECM equipment, and ELINT gear reverse-engineered from the US Navy EP-3 Aires which made a forced landing on Hainan island in the spring of 2001. The numerous fairings in the rudder root, wingtips, belly, nose, and former tail turret give it a distinct appearance. To date, only one example has been built, entering service in 2005.
-
-Original Author: Jason W. Henson

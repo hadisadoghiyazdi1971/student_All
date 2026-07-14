@@ -1,7 +1,0 @@
-OVERVIEW: It is a 3D radar for use in an air defense network. Operational users in Germany is the use of guide service the Air Force .
-
-DETAILS: 
-
-NOTES: The Secondary Surveillance Radar (SSR) subsystem was the version D14 of the German “Siemens 1990” until December 2006. Now the radar has been updated to the new MSSR 2000 I using the ICAO standard Mark XII. In Germany there are four devices at the locations Brockzetel , heritage head , Marie Baum and Meßstetten in use. Norway has three devices, Malaysia one. One of the HR 3000 version under the name RSRP (Radars for the Southern Region and Portugal) in the Mediterranean spreads (Turkey, Greece, Italy and Portugal). The devices used in Portugal in Fóia, Montejunto and Pilar.
-
-SOURCES: http://www.radartutorial.eu/19.kartei/karte106.en.html ; http://de.wikipedia.org/wiki/HADR_(Radar)

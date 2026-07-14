@@ -1,8 +1,0 @@
-OVERVIEW:The Sukhoi Su-30 (NATO reporting name: Flanker) is a twin-engine, two-seat supermaneuverable fighter aircraft. It is a multirole fighter for all-weather, air-to-air and air-to-surface deep interdiction missions.
-
-DETAILS:The integrated aerodynamic configuration, combined with the thrust vectoring control ability, results in high manoeuvrability and unique takeoff and landing characteristics. Equipped with a digital fly-by-wire system, the Su-30 is able to perform some very advanced manoeuvres, including the Pugachev's Cobra and the tailslide. These manoeuvers quickly decelerate the aircraft, causing a pursuing fighter to overshoot, as well as breaking a Doppler radar-lock, as the relative speed of the aircraft drops below the threshold where the signal registers to the radar.
-
-Su-30SM
-    A specialised version of the thrust-vectoring Su-30MKI and MKM variants for the Russian military, produced by the Irkut Corporation. Russia's Defence Ministry was impressed with the MKI's performance envelope and ordered 30 Su-30SMs, a localised version of Su-30MKI, for the Russian Air Force. The Su-30SM is considered as 4+ gen jet fighter. The new version has been upgraded based on Russian military requirements for radar, radio communications systems, friend-or-foe identification system, ejection seats, weapons, and other aircraft systems. The aircraft is equipped with the Bars-R radar and the wide-angle HUD.
-
-SOURCE: [SCO] Wikipedia http://en.wikipedia.org

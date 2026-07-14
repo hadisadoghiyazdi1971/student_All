@@ -1,8 +1,0 @@
-OVERVIEW: The Alamo  R-27R  (NATO: Alamo A) is a solid-fuel Air to Air missile equipped with a semiactive radar homing head and an active radar proximity fuse and impact fuse and a continuous-rod warhead.
-
-DETAILS: The Alamo  R-27R is guided to the target by a combination method. Initially, it is guided inertially with radio correction of trajectory in the initial flight phase.  It then transitions to homing in the terminal phase. This provides for reliable target lock-on at long ranges from the launching aircraft. The missile can be guided along special trajectories to create favorable conditions for homing head and proximity fuse operation. It is capable of going around a plume of passive jamming, of being moved out of the main lobe of the platform's radar, and of approaching a low-flying target from above at a given angle.
-
-NOTES: The R-27 is designed according to a modular principle and is the base for a family of missiles equipped with various types of homing heads and propulsion systems. R-27R is generally comparable to the American AIM-7M Sparrow missile,  and may surpass it in certain combat capabilities. 
-
-
-SOURCES: Federation of American Scientists. "AA-10 ALAMO R-27." Accessed December 1, 2013 ; Federation of American Scientists. "AA-10 ALAMO R-27." Accessed December 1, 2013. http://www.fas.org/man/dod-101/sys/missile/row/aa-10.htm.

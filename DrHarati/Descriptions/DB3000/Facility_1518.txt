@@ -1,7 +1,0 @@
-OVERVIEW: Height Finder Radar for VRRVI main radar.
-
-DETAILS: 
-
-NOTES: Finnish made radar, designed in 1958 by DI Jouko Pohjanpalo. The VRRVY (Viestiväline Radio Radar Valvonta Yleinen) was made to complement the VRRVI as an altitude radar. Also called "Pohjanpalo 2". The prototype was ready in 1955 and deliveries continued until 1959. Operated until 1990.
-
-SOURCES: http://en.wikipedia.org/wiki/User:MoRsE/Radars

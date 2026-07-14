@@ -1,7 +1,0 @@
-OVERVIEW: The SA-N-7 (9M38) is a ship-launched, medium-range, supersonic, solid-fuel, low-to-medium altitude capable, semi-active H/I band radar, anti-aircraft missile.  It carries a 70 kg HE warhead. 
-
-DETAILS: The GADFLY is guided using a combination of autopilot and proportional navigation.  The missile uses inertial navigation and an autopilot to fly to a predetermined point, and then uses its semi-active radar to home in on reflected radar signals.  The missile may also be able to receive command updates while in flight.  It may also have an electro-optical sighting system for use in a severe jamming environment.   
-
-NOTES: The naval variant of the 9K37 "Buk", the 3S-90 "Uragan" uses the same 9M38 missile as the 9K37 though the launcher and associated guidance radars were exchanged for naval variants.  It also carries the designation M-22. The Uragan utilizes the MR-750 Top Steer D/E band as a target acquisition radar (naval analogue of the 9S18 or 9S18M1)  and the  Front Dome H/I band tracking and engagement radar for illumination.
-
-SOURCES: Jane's Weapons Systems, Vol. 3: Naval, "SA-N-7 series; 9K-90 (M-22) 'Uragan' ('Shtil')/'Ezh' ('Shtil-1')" 23 Sep 2013; "M-22 Uragan (SA-N-7 Gadfly)". Vestnik PVO (pvo.guns.ru) (in Russian). Accessed November 14, 2013. http://pvo.guns.ru/naval/m22.htm ; Federation of American Scientists. "SA-11 GADFLY." Accessed November 14, 2013. http://www.fas.org/man/dod-101/sys/missile/row/sa-11.htm
