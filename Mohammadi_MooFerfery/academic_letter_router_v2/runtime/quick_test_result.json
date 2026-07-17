@@ -1,0 +1,20 @@
+{
+  "language": "Unknown",
+  "intent": "Request for academic collaboration and expert consultation on a research topic",
+  "email_summary": "",
+  "academic_field": "Unknown",
+  "keywords": [
+    "هوش مصنوعی",
+    "تشخیص زودهنگام",
+    "بیماری های قلبی",
+    "همکاری علمی"
+  ],
+  "research_topics": [
+    "کاربرد هوش مصنوعی در تشخیص زودهنگام بیماری های قلبی"
+  ],
+  "recommended_professor_profile": "",
+  "routing_tags": [],
+  "selected_fields": [],
+  "confidence": 0.3,
+  "analysis_method": "keybert"
+}

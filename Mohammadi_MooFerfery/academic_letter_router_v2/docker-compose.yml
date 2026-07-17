@@ -1,0 +1,40 @@
+services:
+  ollama:
+    image: ${OLLAMA_IMAGE:-ollama/ollama:latest}
+    restart: unless-stopped
+    volumes:
+      - ollama_data:/root/.ollama
+    ports:
+      - "11434:11434"
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 20s
+      timeout: 10s
+      retries: 10
+      start_period: 20s
+
+  app:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      ollama:
+        condition: service_healthy
+    environment:
+      OLLAMA_BASE_URL: http://ollama:11434
+      OLLAMA_MODEL: qwen3:8b
+      DATA_DIR: /app/data
+      TAXONOMY_DIR: /app/data/taxonomy
+      CACHE_DIR: /app/cache
+      RUNTIME_DIR: /app/runtime
+      HF_HOME: /app/cache/huggingface
+    volumes:
+      - ./data:/app/data:ro
+      - app_cache:/app/cache
+      - app_runtime:/app/runtime
+    ports:
+      - "8501:8501"
+
+volumes:
+  ollama_data:
+  app_cache:
+  app_runtime:
