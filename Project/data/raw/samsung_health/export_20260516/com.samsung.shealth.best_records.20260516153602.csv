@@ -1,0 +1,4 @@
+﻿com.samsung.shealth.best_records,6313013,3
+source_id,device_type,update_time,create_time,source_pkg_name,date,type,value,is_shown,extra_data,extra_type,deviceuuid,pkg_name,controller_id,datauuid
+,-100003,2026-05-15 20:30:01.228,2026-02-16 20:30:01.018,,1771200000000,0,6760.0,0,,-1,VfS0qUERdZ,com.sec.android.app.shealth,tracker.pedometer,03afa5df-4c9e-49f0-b639-b084be3f279c,
+,-100003,2026-05-15 20:30:01.233,2026-02-21 20:30:00.266,,1771632000000,0,13535.0,0,,-1,VfS0qUERdZ,com.sec.android.app.shealth,tracker.pedometer,8f7de36f-8b2b-452e-b5f9-b9d664c73231,

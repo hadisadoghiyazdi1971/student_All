@@ -1,0 +1,6 @@
+﻿com.samsung.shealth.service_preferences,6313013,1
+text_value,service_id,float_value,update_time,create_time,long_value,key,tag,blob_value,int_value,deviceuuid,pkg_name,double_value,datauuid
+,,,2026-02-09 20:24:39.931,2026-02-09 20:24:39.931,,oobe.completed,,,1,9D1LETwId9,com.sec.android.app.shealth,,7ad962c5-8d0c-4af5-9c9e-e1b51fb76c8c,
+,tracker.cycle,,2026-02-10 12:28:07.804,2026-02-10 12:28:07.804,,cycle.shd_consent_status,,,0,9D1LETwId9,com.sec.android.app.shealth,,cycle.shd_consent_status,
+,tracker.medication,,2026-02-10 12:28:09.097,2026-02-10 12:28:09.097,,medication.shd_consent_status,,,0,9D1LETwId9,com.sec.android.app.shealth,,medication.shd_consent_status,
+,mood,,2026-03-05 13:35:10.916,2026-03-05 13:35:10.916,,meditation_supported,,,1,9D1LETwId9,com.sec.android.app.shealth,,db71b205-322b-438f-a97b-5665a71fc576,

@@ -1,0 +1,200 @@
+[
+    {
+        "avg_heart_rate": 90.5,
+        "avg_spo2": 97.21,
+        "daily_step_count": 2021,
+        "date": "2026-02-06 00:00:00",
+        "feedback": "امروز وضعیت متوسط است؛ برای فردا قدم‌های بیشتری بگذارید (حداقل ۵۰۰۰) و آرامش قلب را تمرین کنید.",
+        "max_heart_rate": 110,
+        "max_spo2": 99,
+        "min_heart_rate": 62,
+        "min_spo2": 93
+    },
+    {
+        "avg_heart_rate": 72.76,
+        "avg_spo2": 97.27,
+        "daily_step_count": 2123,
+        "date": "2026-02-09 00:00:00",
+        "feedback": "وضعیت امروز خوب است؛ برای فردا قدم‌گذاری را به ۷۰۰۰‑۱۰۰۰۰ افزایش دهید.",
+        "max_heart_rate": 103,
+        "max_spo2": 99,
+        "min_heart_rate": 57,
+        "min_spo2": 96
+    },
+    {
+        "avg_heart_rate": 75.81,
+        "avg_spo2": 97.64,
+        "daily_step_count": 2944,
+        "date": "2026-02-10 00:00:00",
+        "feedback": "ضربان و اشباع مناسب، قدم کم؛ فردا ۵۰۰۰ قدم هدف بگذارید.",
+        "max_heart_rate": 114,
+        "max_spo2": 99,
+        "min_heart_rate": 45,
+        "min_spo2": 96
+    },
+    {
+        "avg_heart_rate": 77.41,
+        "avg_spo2": 97.65,
+        "daily_step_count": 3751,
+        "date": "2026-02-11 00:00:00",
+        "feedback": "امروز ضربان منظم بود؛ قدم‌ها کافی؛ برای فردا قدم‌برداری ۶۰۰۰ قدم و آرامش ذهنی هدف بگذار.",
+        "max_heart_rate": 163,
+        "max_spo2": 99,
+        "min_heart_rate": 50,
+        "min_spo2": 92
+    },
+    {
+        "avg_heart_rate": 77.57,
+        "avg_spo2": 97.62,
+        "daily_step_count": 2906,
+        "date": "2026-02-12 00:00:00",
+        "feedback": "قلب‌تان آرام، اکسیژن خوب؛ قدم‌ها کم. فردا یک هدف ۵۰۰۰ قدم بگذارید.",
+        "max_heart_rate": 123,
+        "max_spo2": 99,
+        "min_heart_rate": 49,
+        "min_spo2": 96
+    },
+    {
+        "avg_heart_rate": 76.37,
+        "avg_spo2": 97.79,
+        "daily_step_count": 3729,
+        "date": "2026-02-13 00:00:00",
+        "feedback": "امروز وضعیت قلب و اکسیژن‌تان مناسب است؛ فردا قدم‌زدن را به ۵۰۰۰ قدم افزایش دهید.",
+        "max_heart_rate": 131,
+        "max_spo2": 99,
+        "min_heart_rate": 48,
+        "min_spo2": 96
+    },
+    {
+        "avg_heart_rate": 81.93,
+        "avg_spo2": 97.81,
+        "daily_step_count": 4038,
+        "date": "2026-02-14 00:00:00",
+        "feedback": "امروز وضعیت قلب و اکسیژن مناسب بود؛ فردا قدم‌زنی تا ۷۰۰۰ قدم و آرامش قلبی هدف بگذارید.",
+        "max_heart_rate": 137,
+        "max_spo2": 99,
+        "min_heart_rate": 45,
+        "min_spo2": 96
+    },
+    {
+        "avg_heart_rate": 76.61,
+        "avg_spo2": 97.76,
+        "daily_step_count": 3095,
+        "date": "2026-02-15 00:00:00",
+        "feedback": "امروز ضربان‌قلب مناسب، قدم‌زنی متوسط؛ فردا هدف ۵۰۰۰ قدم بگذار و پیاده‌روی سریع‌تر.",
+        "max_heart_rate": 112,
+        "max_spo2": 99,
+        "min_heart_rate": 54,
+        "min_spo2": 96
+    },
+    {
+        "avg_heart_rate": 79.66,
+        "avg_spo2": 97.56,
+        "daily_step_count": 6760,
+        "date": "2026-02-16 00:00:00",
+        "feedback": "امروز وضعیت کلی خوب بود؛ برای فردا قدم‌ها را به ۸۰۰۰‑۱۰۰۰۰ افزایش بده و به‌خوبی استراحت کن.",
+        "max_heart_rate": 123,
+        "max_spo2": 99,
+        "min_heart_rate": 49,
+        "min_spo2": 92
+    },
+    {
+        "avg_heart_rate": 75.51,
+        "avg_spo2": 97.68,
+        "daily_step_count": 3058,
+        "date": "2026-02-17 00:00:00",
+        "feedback": "امروز وضعیت قلب و اکسیژن‌تان خوب است؛ برای فردا ۱۰ ۰۰ دقیقه پیاده‌روی آرام اضافه کنید.",
+        "max_heart_rate": 124,
+        "max_spo2": 99,
+        "min_heart_rate": 49,
+        "min_spo2": 92
+    },
+    {
+        "avg_heart_rate": 78.81,
+        "avg_spo2": 97.33,
+        "daily_step_count": 4073,
+        "date": "2026-02-18 00:00:00",
+        "feedback": "امروز قلب و اکسیژن خوب بودند؛ قدم‌ها کم بود؛ فردا حداقل 8000 قدم راه برو.",
+        "max_heart_rate": 123,
+        "max_spo2": 99,
+        "min_heart_rate": 50,
+        "min_spo2": 92
+    },
+    {
+        "avg_heart_rate": 78.32,
+        "avg_spo2": 97.63,
+        "daily_step_count": 3945,
+        "date": "2026-02-19 00:00:00",
+        "feedback": "امروز وضعیت کلی خوب بود؛ برای فردا قدم‌برداری را به حداقل ۶۰۰۰ قدم افزایش بده.",
+        "max_heart_rate": 122,
+        "max_spo2": 99,
+        "min_heart_rate": 52,
+        "min_spo2": 92
+    },
+    {
+        "avg_heart_rate": 78.13,
+        "avg_spo2": 97.73,
+        "daily_step_count": 4943,
+        "date": "2026-02-20 00:00:00",
+        "feedback": "امروز وضعیت قلب و اکسیژن خوب بود؛ فردا قدم‌زدن را به ۷۰۰۰ تا افزایش بدهید.",
+        "max_heart_rate": 121,
+        "max_spo2": 99,
+        "min_heart_rate": 52,
+        "min_spo2": 92
+    },
+    {
+        "avg_heart_rate": 86.48,
+        "avg_spo2": 97.68,
+        "daily_step_count": 13535,
+        "date": "2026-02-21 00:00:00",
+        "feedback": "ضربان و اکسیژن خوب بود، قدم‌زنی عالی؛ فردا پیاده‌روی ۸۰۰۰ قدم و استراحت کافی.",
+        "max_heart_rate": 161,
+        "max_spo2": 99,
+        "min_heart_rate": 50,
+        "min_spo2": 96
+    },
+    {
+        "avg_heart_rate": 69.26,
+        "avg_spo2": 97.49,
+        "daily_step_count": 3893,
+        "date": "2026-02-22 00:00:00",
+        "feedback": "امروز وضعیت قلب و اکسیژن خوب است؛ برای فردا قدم‌زنی ۶۰۰۰ قدم هدف بگذارید.",
+        "max_heart_rate": 121,
+        "max_spo2": 99,
+        "min_heart_rate": 48,
+        "min_spo2": 96
+    },
+    {
+        "avg_heart_rate": 65.97,
+        "avg_spo2": 97.72,
+        "daily_step_count": 3210,
+        "date": "2026-02-23 00:00:00",
+        "feedback": "امروز ضربان دل مناسب و اکسیژن خوب، قدم‌ها کم؛ فردا قدم‌زدن را به 6000 افزایش بده.",
+        "max_heart_rate": 117,
+        "max_spo2": 99,
+        "min_heart_rate": 46,
+        "min_spo2": 96
+    },
+    {
+        "avg_heart_rate": 69.57,
+        "avg_spo2": 97.64,
+        "daily_step_count": 2034,
+        "date": "2026-02-24 00:00:00",
+        "feedback": "امروز ضربان‌قلب‌تان نرمال بود، اما قدم‌ها کم؛ فردا حداقل 6000 قدم هدف بگذارید.",
+        "max_heart_rate": 115,
+        "max_spo2": 99,
+        "min_heart_rate": 49,
+        "min_spo2": 92
+    },
+    {
+        "avg_heart_rate": 75.81,
+        "avg_spo2": 97.57,
+        "daily_step_count": 5773,
+        "date": "2026-02-25 00:00:00",
+        "feedback": "امروز ضربان‌قلب‌تان پایدار بود؛ فردا هدف 8000 قدم بگذارید و هیدراته بمانید.",
+        "max_heart_rate": 122,
+        "max_spo2": 99,
+        "min_heart_rate": 53,
+        "min_spo2": 96
+    }
+]

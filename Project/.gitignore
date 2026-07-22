@@ -1,0 +1,12 @@
+.env
+.env.*
+**/.env
+.venv/
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+texput.log
+*.aux
+*.log
+*.out
+*.synctex.gz
