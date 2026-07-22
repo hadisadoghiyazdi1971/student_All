@@ -1,0 +1,49 @@
+\contentsline {section}{\numberline {1}خلاصه مدیریتی}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}خروجی مورد انتظار روز بیستم}{4}{subsection.1.1}%
+\contentsline {section}{\numberline {2}تعریف دقیق محدوده پروژه}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}موجودیت فیزیکی و دوقلوی هدف}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}تعریف سطح بلوغ}{5}{subsection.2.2}%
+\contentsline {section}{\numberline {3}نمودار بلوغ: اکنون کجا هستیم و کجا باید برسیم؟}{5}{section.3}%
+\contentsline {section}{\numberline {4}معماری هدف دوقلوی دیجیتال انسانی}{7}{section.4}%
+\contentsline {section}{\numberline {5}اصل طراحی: معماری ساده ولی درست}{9}{section.5}%
+\contentsline {section}{\numberline {6}مدل داده و زمان}{9}{section.6}%
+\contentsline {subsection}{\numberline {6.1}سه زمان اجباری}{9}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}رکورد استاندارد مشاهده}{9}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}جداول حداقلی پایگاه داده}{9}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}امتیاز کیفیت داده}{10}{subsection.6.4}%
+\contentsline {section}{\numberline {7}پروتکل جمع‌آوری داده واقعی در ۲۰ روز}{10}{section.7}%
+\contentsline {subsection}{\numberline {7.1}راهبرد دو لایه داده}{10}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}برنامه روزانه پیشنهادی}{10}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}متغیرهای خوداظهاری حداقلی}{11}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Replay داده تاریخی}{11}{subsection.7.4}%
+\contentsline {section}{\numberline {8}مدل ریاضی دوقلو}{11}{section.8}%
+\contentsline {subsection}{\numberline {8.1}مدل حالت حداقلی}{11}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}پیش‌بینی و عدم قطعیت}{12}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}سناریوهای what-if}{12}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}انتخاب توصیه با جریمه بار انسانی}{12}{subsection.8.4}%
+\contentsline {section}{\numberline {9}ادغام مدل‌های رگرسیون و یادگیری منتشرنشده}{12}{section.9}%
+\contentsline {subsection}{\numberline {9.1}اصل معماری افزونه‌ای}{12}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}حفظ مالکیت فکری}{13}{subsection.9.2}%
+\contentsline {section}{\numberline {10}تقسیم مسئولیت تیم دو نفره}{13}{section.10}%
+\contentsline {subsection}{\numberline {10.1}نقش دکتر هادی صدوقی یزدی}{13}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}نقش آقای مهدی ذوالفقاری}{13}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}وظایف مشترک روزانه}{13}{subsection.10.3}%
+\contentsline {section}{\numberline {11}ساختار پیشنهادی مخزن}{14}{section.11}%
+\contentsline {section}{\numberline {12}برنامه دقیق ۲۰ روز کاری}{14}{section.12}%
+\contentsline {section}{\numberline {13}دروازه‌های پذیرش}{17}{section.13}%
+\contentsline {subsection}{\numberline {13.1}دروازه روز ۳: داده قابل دفاع}{17}{subsection.13.1}%
+\contentsline {subsection}{\numberline {13.2}دروازه روز ۱۰: Digital Shadow واقعی}{17}{subsection.13.2}%
+\contentsline {subsection}{\numberline {13.3}دروازه روز ۱۶: انسان در حلقه}{17}{subsection.13.3}%
+\contentsline {subsection}{\numberline {13.4}دروازه روز ۲۰: نمونه دوقلو}{17}{subsection.13.4}%
+\contentsline {section}{\numberline {14}آزمایش‌های الزامی}{17}{section.14}%
+\contentsline {subsection}{\numberline {14.1}آزمایش داده و سامانه}{17}{subsection.14.1}%
+\contentsline {subsection}{\numberline {14.2}آزمایش مدل}{18}{subsection.14.2}%
+\contentsline {subsection}{\numberline {14.3}آزمایش دوقلو و Human-in-the-loop}{18}{subsection.14.3}%
+\contentsline {section}{\numberline {15}شاخص‌های موفقیت ۲۰ روزه}{18}{section.15}%
+\contentsline {section}{\numberline {16}ریسک‌ها و پاسخ عملی}{18}{section.16}%
+\contentsline {section}{\numberline {17}سناریوی نمایش نهایی}{19}{section.17}%
+\contentsline {section}{\numberline {18}تعریف پایان کار و مواردی که عمداً پایان کار نیستند}{19}{section.18}%
+\contentsline {subsection}{\numberline {18.1}پایان کار ۲۰ روزه محسوب می‌شود اگر}{19}{subsection.18.1}%
+\contentsline {subsection}{\numberline {18.2}پایان کار ۲۰ روزه محسوب نمی‌شود}{20}{subsection.18.2}%
+\contentsline {section}{\numberline {19}نقشه ادامه پس از روز بیستم}{20}{section.19}%
+\contentsline {section}{\numberline {20}جمع‌بندی تصمیم}{20}{section.20}%

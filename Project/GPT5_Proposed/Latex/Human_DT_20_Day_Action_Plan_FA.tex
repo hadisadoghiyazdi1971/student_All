@@ -1,0 +1,879 @@
+% !TeX program = xelatex
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper,margin=18mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{booktabs,longtable,tabularx,array,multirow}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,fit,backgrounds,calc,matrix}
+\usepackage{pdflscape}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{tcolorbox}
+\usepackage{fontspec}
+\usepackage{xepersian}
+
+\settextfont{Amiri}
+\setlatintextfont{DejaVu Serif}
+\setmonofont{DejaVu Sans Mono}
+\setdigitfont{Amiri}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!45!black,
+  urlcolor=blue!55!black,
+  citecolor=green!35!black,
+  pdftitle={برنامه اجرایی ۲۰ روزه برای ساخت دوقلوی دیجیتال انسانی},
+  pdfauthor={دکتر هادی صدوقی یزدی و مهندس مهدی ذوالفقاری}
+}
+
+\definecolor{dtblue}{HTML}{1F5A7A}
+\definecolor{dtgreen}{HTML}{2E7D32}
+\definecolor{dtorange}{HTML}{C96A18}
+\definecolor{dtred}{HTML}{A83232}
+\definecolor{dtgray}{HTML}{5F6B73}
+\definecolor{dtlight}{HTML}{EEF4F7}
+\definecolor{dtfuture}{HTML}{F4F4F4}
+
+\newcommand{\en}[1]{\lr{#1}}
+\newcommand{\code}[1]{\lr{\texttt{\detokenize{#1}}}}
+\newcommand{\checkmarkbox}{\(\square\)}
+\newcommand{\ownerS}{\textbf{صدوقی}}
+\newcommand{\ownerZ}{\textbf{ذوالفقاری}}
+\newcommand{\ownerB}{\textbf{مشترک}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{برنامه اجرایی دوقلوی دیجیتال انسانی}
+\lhead{نسخه ۱.۰ -- تیر ۱۴۰۵}
+\cfoot{\thepage}
+
+\setlist[itemize]{itemsep=2pt,topsep=4pt}
+\setlist[enumerate]{itemsep=2pt,topsep=4pt}
+\renewcommand{\arraystretch}{1.25}
+
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  frame=single,
+  columns=fullflexible,
+  backgroundcolor=\color{dtfuture},
+  rulecolor=\color{dtgray!40},
+  xleftmargin=3mm,
+  xrightmargin=3mm
+}
+
+\newtcolorbox{decisionbox}[1][]{
+  colback=dtlight,
+  colframe=dtblue,
+  title=#1,
+  fonttitle=\bfseries,
+  boxrule=0.8pt,
+  arc=2mm
+}
+
+\newtcolorbox{warningbox}[1][]{
+  colback=red!3,
+  colframe=dtred,
+  title=#1,
+  fonttitle=\bfseries,
+  boxrule=0.8pt,
+  arc=2mm
+}
+
+\title{\Huge\textbf{برنامه اجرایی ۲۰ روزه برای بازطراحی و ساخت\\[3mm]
+دوقلوی دیجیتال انسانی سلامت‌محور}\\[5mm]
+\Large از داده واقعی و سایه دیجیتال تا حلقه بازخورد انسان در حلقه}
+\author{
+\textbf{تیم دو نفره پژوهش و توسعه}\\[2mm]
+دکتر هادی صدوقی یزدی -- راهبر علمی، مدل‌سازی و ارزیابی\\
+آقای مهدی ذوالفقاری -- راهبر پیاده‌سازی، داده و سامانه
+}
+\date{نسخه برنامه‌ریزی: ۲۲ ژوئیه ۲۰۲۶}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\begin{decisionbox}[حکم راهبردی پروژه]
+خروجی ۲۰ روز آینده نباید با ادعای «سامانه بالینی کامل» معرفی شود. هدف واقع‌بینانه و قابل دفاع، ساخت یک
+\textbf{نمونه پژوهشی دوقلوی دیجیتال انسانی در حالت سایه‌ای/کنترل‌شده}
+است که در آن جریان داده واقعی زمان‌دار، وضعیت دیجیتال، پیش‌بینی، پیشنهاد کم‌خطر، پاسخ انسان، پیامد و ثبت کامل چرخه واقعاً در کد و پایگاه داده قابل مشاهده باشند.
+\end{decisionbox}
+
+\vfill
+\noindent\textbf{منابع مبنا برای این برنامه:}
+\begin{itemize}
+  \item کد و مستندات پروژه در مخزن عمومی \url{https://github.com/hadisadoghiyazdi1971/student_All/tree/main/Project}
+  \item گزارش فعلی پروژه با عنوان \en{Comprehensive Analysis of a 5-Factor Personalized Health Digital Twin}
+  \item مطالعه و چارچوب منتشرشده در صفحه \url{https://hadisadoghiyazdi1971.github.io/presentation/HumanDT/}
+  \item اصول همگام‌سازی، اتصال، پیش‌بینی، قابلیت اعتماد و زنجیره داده در منابع استاندارد و رسمی انتهای سند.
+\end{itemize}
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{خلاصه مدیریتی}
+
+پروژه فعلی دارای اجزای ارزشمند است: داده‌های پوشیدنی، تحلیل وضعیت بدن با بینایی ماشین، ویژگی‌های صوت، یک شاخص پنج‌عاملی، پیش‌بینی روز بعد و موتور توصیه اولیه. بااین‌حال، مطابق خود گزارش فعلی، مسیر غالب هنوز \textbf{پردازش دسته‌ای} است و اجزای تعیین‌کننده دوقلوی دیجیتال---یعنی اتصال خودکار زمان‌مند، سایه دیجیتال برخط، ثبت وضعیت نسخه‌دار، حلقه بازخورد دوطرفه، ثبت پیامد و شبیه‌سازی سناریو---به‌طور عملی کامل نشده‌اند.
+
+برنامه ۲۰ روزه بر چهار اصل استوار است:
+\begin{enumerate}
+  \item \textbf{داده قبل از مدل:} هیچ الگوریتم قوی، حتی روش‌های رگرسیون جدید و منتشرنشده، جای داده واقعی زمان‌دار، شناسنامه داده و جداسازی آموزش/آزمون را نمی‌گیرد.
+  \item \textbf{یک برش عمودی کامل به‌جای سامانه بزرگ ناقص:} یک یا دو مسیر حسگری باید از انسان تا پایگاه داده، وضعیت دوقلو، پیش‌بینی، داشبورد، بازخورد و پیامد کاملاً اجرا شوند.
+  \item \textbf{مدل اختصاصی به‌صورت افزونه:} روش‌های قوی و منتشرنشده استاد در یک لایه مستقل با رابط استاندارد وارد می‌شوند تا زیرساخت به مدل خاصی قفل نشود و مالکیت فکری حفظ شود.
+  \item \textbf{حالت سایه‌ای و ایمنی:} توصیه‌ها در این مرحله صرفاً کم‌خطر و پژوهشی‌اند؛ سیستم تشخیص پزشکی، تغییر دارو یا اقدام درمانی خودکار انجام نمی‌دهد.
+\end{enumerate}
+
+\subsection{خروجی مورد انتظار روز بیستم}
+در پایان روز بیستم باید یک نمایش زنده و قابل تکرار وجود داشته باشد که نشان دهد:
+\begin{enumerate}
+  \item داده واقعی با \en{event time} وارد می‌شود؛
+  \item داده خام بدون دست‌کاری در پایگاه داده ذخیره می‌شود؛
+  \item کیفیت، منبع، دستگاه و نسخه پردازش همراه داده ثبت می‌شود؛
+  \item وضعیت دوقلو و عدم قطعیت آن به‌روز می‌شوند؛
+  \item حداقل سه مدل پایه و مدل‌های پژوهشی خصوصی با ارزیابی زمان‌محور مقایسه می‌شوند؛
+  \item یک توصیه کم‌خطر همراه دلیل و عدم قطعیت نمایش داده می‌شود؛
+  \item فرد آن را می‌پذیرد، به تعویق می‌اندازد، رد می‌کند یا نامناسب گزارش می‌کند؛
+  \item پیامد در پنجره زمانی مشخص ثبت و به همان توصیه متصل می‌شود؛
+  \item داشبورد کل زنجیره را با زمان، نسخه و کیفیت نشان می‌دهد؛
+  \item یک موتور \en{what-if} سناریوهای کنترل‌شده را بدون ادعای علیت پزشکی مقایسه می‌کند.
+\end{enumerate}
+
+\section{تعریف دقیق محدوده پروژه}
+
+\subsection{موجودیت فیزیکی و دوقلوی هدف}
+موجودیت فیزیکی در این فاز یک فرد داوطلب بالغ است. دوقلوی هدف، «کل انسان» نیست؛ بلکه یک دوقلوی محدود سلامت و آمادگی روزانه است که دامنه آن صریحاً چنین تعریف می‌شود:
+\[
+\mathcal{H}=\{\text{فعالیت، قلب، اکسیژناسیون، وضعیت بدن، صوت، خواب/زمینه، خوداظهاری}\}.
+\]
+
+خروجی دوقلو باید یک بردار وضعیت باشد، نه فقط یک عدد مبهم:
+\begin{equation}
+\mathbf{z}_t=
+\begin{bmatrix}
+ z_t^{\mathrm{act}} &
+ z_t^{\mathrm{card}} &
+ z_t^{\mathrm{oxy}} &
+ z_t^{\mathrm{post}} &
+ z_t^{\mathrm{voice}} &
+ z_t^{\mathrm{context}} &
+ z_t^{\mathrm{self}}
+\end{bmatrix}^{\top}.
+\end{equation}
+یک شاخص کلی می‌تواند برای نمایش داشبورد ساخته شود، اما نباید جای بردار وضعیت، کیفیت داده و عدم قطعیت را بگیرد.
+
+\subsection{تعریف سطح بلوغ}
+در این پروژه چهار سطح تفکیک می‌شوند:
+\begin{description}
+  \item[مدل دیجیتال انسانی:] داده با دخالت دستی وارد می‌شود و مدل مستقل از جریان واقعی است.
+  \item[سایه دیجیتال انسانی:] داده از انسان به شیء دیجیتال به‌صورت خودکار یا شبه‌برخط جریان دارد، اما حلقه اثرگذاری و پیامد هنوز بسته نیست.
+  \item[دوقلوی دیجیتال انسانی پژوهشی:] جریان دوطرفه، توصیه/مداخله کم‌خطر، پاسخ فرد، ثبت پیامد و به‌روزرسانی کنترل‌شده وجود دارد.
+  \item[دوقلوی بالینی معتبر:] اعتبارسنجی بالینی، حاکمیت پزشکی، ایمنی، جمعیت کافی، مقررات و ارزیابی آینده‌نگر دارد؛ این سطح هدف ۲۰ روزه نیست.
+\end{description}
+
+\section{نمودار بلوغ: اکنون کجا هستیم و کجا باید برسیم؟}
+
+\begin{landscape}
+\begin{figure}[p]
+\centering
+\begin{tikzpicture}[
+  node distance=12mm and 13mm,
+  stage/.style={rounded corners=3mm,draw,very thick,minimum width=5.1cm,minimum height=3.0cm,align=center,text width=4.7cm,font=\small},
+  arr/.style={-{Latex[length=3mm]},very thick,draw=dtgray},
+  note/.style={rounded corners,draw,dashed,align=center,font=\footnotesize,text width=4.5cm,fill=white}
+]
+\node[stage,fill=orange!10,draw=dtorange] (m0) {
+\textbf{سطح ۰: مدل/پردازش دسته‌ای}\\[1mm]
+فایل‌های \en{CSV}، تصویر و صوت\\
+ادغام روزانه\\
+شاخص دست‌ساز و پیش‌بینی روز بعد\\
+توصیه قاعده‌محور
+};
+\node[stage,fill=yellow!12,draw=dtorange,right=of m0] (m1) {
+\textbf{سطح ۱: سایه دیجیتال برخط}\\[1mm]
+ورود خودکار زمان‌دار\\
+پایگاه داده تغییرناپذیر\\
+کیفیت و شناسنامه داده\\
+به‌روزرسانی وضعیت در داشبورد
+};
+\node[stage,fill=green!10,draw=dtgreen,right=of m1] (m2) {
+\textbf{سطح ۲: دوقلوی پژوهشی حلقه‌بسته}\\[1mm]
+پیش‌بینی همراه عدم قطعیت\\
+توصیه کم‌خطر و توضیح‌پذیر\\
+پذیرش/رد/تعویق انسان\\
+ثبت پیامد و بازخورد
+};
+\node[stage,fill=gray!8,draw=dtgray,right=of m2] (m3) {
+\textbf{سطح ۳: دوقلوی بالینی معتبر}\\[1mm]
+اعتبارسنجی چندفردی و آینده‌نگر\\
+نظارت متخصص\\
+ایمنی و مقررات\\
+تطبیق کنترل‌شده در عمل
+};
+
+\draw[arr] (m0) -- node[above,font=\footnotesize]{اتصال و همگام‌سازی} (m1);
+\draw[arr] (m1) -- node[above,font=\footnotesize]{بازخورد و پیامد} (m2);
+\draw[arr] (m2) -- node[above,font=\footnotesize]{اعتبار بالینی} (m3);
+
+\node[note,below=12mm of m0,draw=dtred,fill=red!3] (now) {\textbf{وضعیت فعلی پروژه}\newline نزدیک به سطح ۰ و نمونه دسته‌ای سایه دیجیتال};
+\draw[-{Latex},very thick,dtred] (now.north) -- (m0.south);
+
+\node[note,below=12mm of m1,draw=dtblue,fill=blue!3] (d10) {\textbf{دروازه روز ۱۰}\newline سایه دیجیتال خودکار برای حداقل یک مسیر داده};
+\draw[-{Latex},very thick,dtblue] (d10.north) -- (m1.south);
+
+\node[note,below=12mm of m2,draw=dtgreen,fill=green!3] (d20) {\textbf{هدف روز ۲۰}\newline دوقلوی پژوهشی در حالت \en{shadow mode}};
+\draw[-{Latex},very thick,dtgreen] (d20.north) -- (m2.south);
+
+\node[note,below=12mm of m3,draw=dtgray,fill=gray!3] (future) {\textbf{خارج از برنامه ۲۰ روزه}\newline ادعای درمان، تشخیص یا اعتبار بالینی ممنوع};
+\draw[-{Latex},very thick,dtgray] (future.north) -- (m3.south);
+\end{tikzpicture}
+\caption{نقشه بلوغ پیشنهادی پروژه. این نمودار هم‌راستا با تفکیک مدل دیجیتال، سایه دیجیتال و دوقلوی دیجیتال در مطالعه HumanDT است، ولی برای پروژه حاضر عملیاتی و مرحله‌بندی شده است.}
+\label{fig:maturity}
+\end{figure}
+\end{landscape}
+
+\section{معماری هدف دوقلوی دیجیتال انسانی}
+
+\begin{landscape}
+\begin{figure}[p]
+\centering
+\begin{tikzpicture}[
+  font=\scriptsize,
+  box/.style={rounded corners=2mm,draw=dtblue!80,thick,fill=blue!3,minimum height=11mm,align=center,text width=31mm},
+  data/.style={rounded corners=2mm,draw=dtorange!90,thick,fill=orange!5,minimum height=11mm,align=center,text width=31mm},
+  model/.style={rounded corners=2mm,draw=dtgreen!90,thick,fill=green!5,minimum height=11mm,align=center,text width=33mm},
+  human/.style={ellipse,draw=dtred,very thick,fill=red!4,minimum width=31mm,minimum height=16mm,align=center},
+  arrow/.style={-{Latex[length=2.4mm]},thick},
+  back/.style={-{Latex[length=2.4mm]},thick,dashed,draw=dtgreen!80!black}
+]
+
+\node[human] (person) at (0,0) {\textbf{انسان واقعی}\\رفتار، فیزیولوژی، زمینه};
+
+\node[data] (wear) at (4.2,2.4) {پوشیدنی/گوشی\\ضربان، گام، \en{SpO2}، خواب};
+\node[data] (img) at (4.2,0.8) {تصویر وضعیت بدن\\نماهای جلو و کنار};
+\node[data] (voice) at (4.2,-0.8) {صدای کنترل‌شده\\ویژگی‌های آکوستیک};
+\node[data] (self) at (4.2,-2.4) {خوداظهاری و زمینه\\خستگی، استرس، درد، فعالیت};
+
+\node[box] (edge) at (8.2,1.6) {لایه ادراک و لبه\\زمان، واحد، شناسه دستگاه\\اعتبارسنجی اولیه};
+\node[box] (ingest) at (8.2,-0.2) {ورود داده\\\en{FastAPI REST} / \en{MQTT}\\شناسه یکتا و جلوگیری از تکرار};
+\node[box] (quality) at (8.2,-2.0) {دروازه کیفیت و رضایت\\کیفیت، تازگی، منبع\\محدودیت استفاده};
+
+\node[data] (rawdb) at (12.4,1.9) {داده خام تغییرناپذیر\\\en{PostgreSQL/TimescaleDB}\\\en{event/ingestion time}};
+\node[data] (feature) at (12.4,0.0) {ویژگی‌های نسخه‌دار\\پنجره‌های زمانی\\ردیابی منشأ};
+\node[data] (registry) at (12.4,-1.9) {ثبت مدل و آزمایش\\نسخه، پارامتر، داده آموزش\\نتیجه و بازگشت‌پذیری};
+
+\node[model] (state) at (16.7,2.2) {برآورد وضعیت دوقلو\\$\mathbf z_t$، کیفیت و عدم قطعیت};
+\node[model] (models) at (16.7,0.5) {لایه مدل قابل تعویض\\پایه‌ها + مدل‌های خصوصی\\پیش‌بینی و بازه};
+\node[model] (whatif) at (16.7,-1.2) {شبیه‌ساز سناریو\\\en{what-if} محدود\\بدون ادعای علیت بالینی};
+\node[model] (policy) at (16.7,-2.9) {سیاست ایمنی و توصیه\\کم‌خطر، قابل توضیح\\قابل رد توسط انسان};
+
+\node[box] (dash) at (21.0,1.3) {داشبورد\\وضعیت، روند، کیفیت\\پیش‌بینی و دلیل};
+\node[box] (feedback) at (21.0,-0.6) {بازخورد انسان\\پذیرش، رد، تعویق\\مفید/نامناسب};
+\node[box] (outcome) at (21.0,-2.5) {پیامد زمان‌دار\\پایبندی، علائم، تغییر اندازه‌گیری\\پنجره پیگیری};
+
+\draw[arrow] (person) -- (wear);
+\draw[arrow] (person) -- (img);
+\draw[arrow] (person) -- (voice);
+\draw[arrow] (person) -- (self);
+\draw[arrow] (wear) -- (edge);
+\draw[arrow] (img) -- (edge);
+\draw[arrow] (voice) -- (ingest);
+\draw[arrow] (self) -- (quality);
+\draw[arrow] (edge) -- (ingest);
+\draw[arrow] (ingest) -- (quality);
+\draw[arrow] (quality) -- (rawdb);
+\draw[arrow] (rawdb) -- (feature);
+\draw[arrow] (feature) -- (state);
+\draw[arrow] (feature) -- (models);
+\draw[arrow] (registry) -- (models);
+\draw[arrow] (state) -- (models);
+\draw[arrow] (models) -- (whatif);
+\draw[arrow] (models) -- (policy);
+\draw[arrow] (whatif) -- (policy);
+\draw[arrow] (state) -- (dash);
+\draw[arrow] (models) -- (dash);
+\draw[arrow] (policy) -- (dash);
+\draw[arrow] (dash) -- (feedback);
+\draw[arrow] (feedback) -- (outcome);
+\draw[back] (outcome.west) to[bend right=18] (registry.south);
+\draw[back] (outcome.east) to[bend left=35] node[below,align=center]{بازخورد دوطرفه\\و اثر نرم بر انسان} (person.south);
+
+\begin{scope}[on background layer]
+\node[draw=dtgray,dashed,rounded corners=3mm,fit=(wear)(img)(voice)(self),inner sep=4mm,label=above:{\textbf{لایه فیزیکی و ادراک}}] {};
+\node[draw=dtgray,dashed,rounded corners=3mm,fit=(edge)(ingest)(quality),inner sep=4mm,label=above:{\textbf{اتصال و سایه دیجیتال}}] {};
+\node[draw=dtgray,dashed,rounded corners=3mm,fit=(rawdb)(feature)(registry),inner sep=4mm,label=above:{\textbf{رشته داده و حافظه دوقلو}}] {};
+\node[draw=dtgray,dashed,rounded corners=3mm,fit=(state)(models)(whatif)(policy),inner sep=4mm,label=above:{\textbf{هوش و شبیه‌سازی}}] {};
+\node[draw=dtgray,dashed,rounded corners=3mm,fit=(dash)(feedback)(outcome),inner sep=4mm,label=above:{\textbf{انسان در حلقه}}] {};
+\end{scope}
+\end{tikzpicture}
+\caption{معماری عملیاتی هدف. تفاوت اساسی با معماری فعلی، حضور واقعی زمان، پایگاه داده برخط، کیفیت و منشأ داده، بازخورد انسان و اتصال پیامد به توصیه است.}
+\label{fig:architecture}
+\end{figure}
+\end{landscape}
+
+\section{اصل طراحی: معماری ساده ولی درست}
+
+برای تیم دو نفره و افق ۲۰ روزه، معماری \en{microservice} کامل توصیه نمی‌شود. یک \textbf{تک‌سامانه ماژولار} با سرویس‌های Docker کافی است:
+\begin{itemize}
+  \item \code{api}: ورود داده، احراز هویت ساده و رابط داشبورد؛
+  \item \code{worker}: اعتبارسنجی، استخراج ویژگی، به‌روزرسانی وضعیت و پیش‌بینی؛
+  \item \code{db}: PostgreSQL با افزونه TimescaleDB در صورت امکان؛
+  \item \code{dashboard}: Streamlit یا Dash؛
+  \item \code{mqtt}: فقط در صورت نیاز واقعی اتصال حسگر؛ در غیر این صورت REST و replay کافی است؛
+  \item \code{model_registry}: ثبت فایل مدل، نسخه، هش داده و نتایج ارزیابی.
+\end{itemize}
+
+\begin{warningbox}[ممنوعیت مهندسی بیش از حد]
+در ۲۰ روز نباید زمان صرف Kubernetes، معماری چندابری، اپلیکیشن موبایل کامل، پایگاه داده توزیع‌شده یا مدل عمیق بزرگ شود. معیار موفقیت، بسته‌شدن مسیر داده و بازخورد است، نه تعداد فناوری‌های استفاده‌شده.
+\end{warningbox}
+
+\section{مدل داده و زمان}
+
+\subsection{سه زمان اجباری}
+برای هر مشاهده حداقل سه زمان ثبت می‌شود:
+\begin{equation}
+ t_{\mathrm{event}},\qquad t_{\mathrm{ingest}},\qquad t_{\mathrm{process}}.
+\end{equation}
+\begin{itemize}
+  \item $t_{\mathrm{event}}$: زمان واقعی رخداد/اندازه‌گیری در دستگاه؛
+  \item $t_{\mathrm{ingest}}$: زمان رسیدن داده به سامانه؛
+  \item $t_{\mathrm{process}}$: زمان تولید ویژگی یا وضعیت دوقلو.
+\end{itemize}
+اختلاف این زمان‌ها برای سنجش تأخیر، تازگی و ناهم‌زمانی ضروری است.
+
+\subsection{رکورد استاندارد مشاهده}
+هر مشاهده خام باید ساختاری نزدیک به رابطه زیر داشته باشد:
+\begin{equation}
+ o_i=(p,d,m,v,u,t_e,t_i,s,q,r,c,a),
+\end{equation}
+که در آن $p$ شناسه فرد، $d$ دستگاه، $m$ متریک، $v$ مقدار، $u$ واحد، $s$ منبع، $q$ کیفیت، $r$ مرجع فایل خام، $c$ زمینه و $a$ نسخه الگوریتم استخراج است.
+
+\subsection{جداول حداقلی پایگاه داده}
+\begin{longtable}{p{0.18\textwidth}p{0.28\textwidth}p{0.46\textwidth}}
+\caption{جداول لازم برای نمونه عملیاتی}\label{tab:tables}\\
+\toprule
+\textbf{جدول} & \textbf{هدف} & \textbf{فیلدهای کلیدی}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{جدول} & \textbf{هدف} & \textbf{فیلدهای کلیدی}\\
+\midrule
+\endhead
+\code{participant} & هویت پژوهشی مستعار & \code{id, pseudonym, timezone, baseline_start, status}\\
+\code{device} & شناسنامه حسگر/نرم‌افزار & \code{id, type, model, firmware, owner, calibration_date}\\
+\code{consent} & رضایت و حدود استفاده & \code{version, granted_at, expires_at, allowed_modalities, withdrawn_at}\\
+\code{observation_raw} & داده خام تغییرناپذیر & \code{event_time, ingestion_time, metric, value, unit, source, payload_hash}\\
+\code{data_quality} & کیفیت و خطا & \code{completeness, validity, freshness, provenance, quality_score, reason}\\
+\code{derived_feature} & ویژگی‌های نسخه‌دار & \code{window_start, window_end, feature_name, value, pipeline_version, lineage_id}\\
+\code{twin_state} & وضعیت دوقلو & \code{state_time, state_vector, health_index, uncertainty, state_version}\\
+\code{prediction} & پیش‌بینی & \code{horizon, y_hat, lower, upper, model_version, feature_snapshot}\\
+\code{recommendation} & پیشنهاد سیستم & \code{created_at, trigger, message, risk_class, expiry, explanation}\\
+\code{human_feedback} & تصمیم فرد & \code{delivered_at, viewed_at, response, reason, usefulness, note}\\
+\code{outcome} & پیامد & \code{followup_time, adherence, self_report_change, measured_change, adverse_flag}\\
+\code{model_registry} & حاکمیت مدل & \code{model_id, version, training_range, data_hash, metrics, status, rollback_uri}\\
+\code{audit_log} & ردگیری دسترسی و تغییر & \code{actor, action, purpose, object_id, occurred_at}\\
+\bottomrule
+\end{longtable}
+
+\subsection{امتیاز کیفیت داده}
+برای هر مدالیته $m$ و زمان $t$:
+\begin{equation}
+Q_{m,t}=w_c C_{m,t}+w_v V_{m,t}+w_f F_{m,t}+w_p P_{m,t},
+\qquad \sum_i w_i=1,
+\end{equation}
+که در آن کامل‌بودن، اعتبار دامنه، تازگی و اطمینان منشأ به‌ترتیب با $C,V,F,P$ نمایش داده می‌شوند. اگر $Q_{m,t}<\tau_m$ باشد، آن مدالیته نباید محرک یک توصیه با اثر بالا شود.
+
+\section{پروتکل جمع‌آوری داده واقعی در ۲۰ روز}
+
+\subsection{راهبرد دو لایه داده}
+\begin{enumerate}
+  \item \textbf{داده تاریخی:} مجموعه موجود ۱۰۱ روزه برای ممیزی، ساخت pipeline و replay استفاده می‌شود؛ هر مقدار باید به خام، استخراج‌شده، دستی یا imputed برچسب بخورد.
+  \item \textbf{داده آینده‌نگر ۲۰ روزه:} از روز دوم، داده با پروتکل ثابت، زمان رخداد واقعی و فرم خوداظهاری جمع می‌شود. این داده برای آزمون prospective و نمایش دوقلو ارزشمندتر از افزایش مصنوعی حجم داده است.
+\end{enumerate}
+
+\subsection{برنامه روزانه پیشنهادی}
+\begin{longtable}{p{0.15\textwidth}p{0.23\textwidth}p{0.37\textwidth}p{0.17\textwidth}}
+\caption{پروتکل روزانه ثبت داده}\label{tab:dailyprotocol}\\
+\toprule
+\textbf{پنجره} & \textbf{منبع} & \textbf{داده} & \textbf{شرط استانداردسازی}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{پنجره} & \textbf{منبع} & \textbf{داده} & \textbf{شرط استانداردسازی}\\
+\midrule
+\endhead
+پیوسته/همگام‌سازی & ساعت و گوشی & گام، ضربان، \en{SpO2}، خواب در صورت دسترسی، فعالیت & حفظ داده خام و زمان دستگاه؛ عدم تبدیل فوری به میانگین روزانه\\
+صبح، ۷ تا ۹ & خوداظهاری & خواب، خستگی، استرس، درد/ناراحتی، بیماری، دارو، کافئین & مقیاس صفر تا ده؛ قبل از فعالیت سنگین\\
+صبح، ۷ تا ۹ & صوت & آوای ثابت پنج ثانیه‌ای، سه تکرار & اتاق و فاصله میکروفون ثابت؛ ثبت نویز محیط\\
+صبح یا عصر & تصویر & نمای جلو و کنار & فاصله، نور، دوربین و وضعیت پا ثابت؛ رضایت صریح\\
+میانه روز، ۱۳ تا ۱۵ & زمینه & نوع کار، نشستن، ورزش، رویداد استرس‌زا & فرم کوتاه کمتر از یک دقیقه\\
+شب، ۲۰ تا ۲۲ & خوداظهاری/پیامد & انرژی، استرس، درد، فعالیت، پذیرش توصیه و اثر ادراک‌شده & اتصال به توصیه همان روز و پنجره پیگیری\\
+\bottomrule
+\end{longtable}
+
+\subsection{متغیرهای خوداظهاری حداقلی}
+برای اینکه سیستم فقط شاخص خودش را پیش‌بینی نکند، حداقل برچسب‌های مستقل زیر ثبت شوند:
+\begin{itemize}
+  \item خستگی ادراک‌شده: $0$ تا $10$؛
+  \item استرس ادراک‌شده: $0$ تا $10$؛
+  \item کیفیت خواب: $0$ تا $10$ و مدت خواب؛
+  \item ناراحتی عضلانی/وضعیتی: $0$ تا $10$؛
+  \item توان انجام فعالیت روزانه: $0$ تا $10$؛
+  \item بیماری، دارو، ورزش شدید یا رویداد غیرعادی به‌صورت پرچم زمینه‌ای.
+\end{itemize}
+این متغیرها تشخیص بالینی نیستند؛ نقش آن‌ها ایجاد یک مرجع مستقل برای سنجش مفیدبودن دوقلو است.
+
+\subsection{Replay داده تاریخی}
+برای آزمون سایه دیجیتال پیش از کامل‌شدن داده زنده، یک ابزار \code{replay.py} ساخته شود که رکوردهای تاریخی را با سرعت قابل تنظیم منتشر کند:
+\begin{equation}
+ t_{\mathrm{ingest}}^{(k+1)}-t_{\mathrm{ingest}}^{(k)}=\alpha
+\left(t_{\mathrm{event}}^{(k+1)}-t_{\mathrm{event}}^{(k)}\right),
+\end{equation}
+که $\alpha\ll1$ برای نمایش سریع انتخاب می‌شود. در نمایش نهایی می‌توان هر روز تاریخی را مثلاً در ۱۰ تا ۳۰ ثانیه بازپخش کرد، ولی زمان رخداد اصلی دست‌نخورده می‌ماند.
+
+\section{مدل ریاضی دوقلو}
+
+\subsection{مدل حالت حداقلی}
+رابطه حداقلی دوقلو باید اثر گذشته، مشاهده جدید، زمینه و مداخله را نگه دارد:
+\begin{align}
+\mathbf z_t &= f_{\theta}\left(\mathbf z_{t-1},\mathbf o_t,\mathbf c_t,\mathbf a_{t-1}\right)+\boldsymbol\eta_t,\\
+\mathbf y_t &= h\left(\mathbf z_t\right)+\boldsymbol\epsilon_t,
+\end{align}
+که $\mathbf a_{t-1}$ توصیه/اقدام قبلی و $\mathbf c_t$ زمینه است. در فاز ۲۰ روزه، $f_\theta$ می‌تواند رگرسیونی، درختی، فیلتر حالت یا ترکیبی باشد؛ مهم این است که قرارداد ورودی/خروجی ثابت باشد.
+
+\subsection{پیش‌بینی و عدم قطعیت}
+برای افق $h$:
+\begin{equation}
+\widehat{\mathbf z}_{t+h},\;[\mathbf L_{t+h},\mathbf U_{t+h}]
+=\mathcal M_{\theta}(\mathcal F_{1:t}),
+\end{equation}
+که $\mathcal F_{1:t}$ snapshot نسخه‌دار ویژگی‌هاست. هر مدل خصوصی نیز باید بازه یا دست‌کم تخمین عدم قطعیت قابل مقایسه تولید کند؛ در غیر این صورت با bootstrap یا conformal prediction پوشش داده شود.
+
+\subsection{سناریوهای what-if}
+برای اقدام فرضی $a$:
+\begin{equation}
+\widehat{\mathbf z}^{(a)}_{t+h}=\mathcal M_{\theta}
+\left(\mathcal F_{1:t},\operatorname{do}_{\mathrm{scenario}}(a)\right).
+\end{equation}
+در این سند عبارت $\operatorname{do}_{\mathrm{scenario}}$ صرفاً تغییر ورودی برای شبیه‌سازی است و ادعای شناسایی اثر علّی ندارد. داشبورد باید صریحاً برچسب «سناریوی اکتشافی» نمایش دهد.
+
+\subsection{انتخاب توصیه با جریمه بار انسانی}
+\begin{equation}
+a_t^*=\arg\min_{a\in\mathcal A_{\mathrm{safe}}}
+\left[
+\widehat R_{t+h}(a)+\lambda_b B(a)+\lambda_u U(a)
+\right],
+\end{equation}
+که $R$ ریسک/افت پیش‌بینی‌شده، $B$ بار و مزاحمت توصیه، و $U$ عدم قطعیت است. اگر عدم قطعیت یا کیفیت داده زیاد باشد، انتخاب مناسب می‌تواند «عدم توصیه و درخواست داده بیشتر» باشد.
+
+\section{ادغام مدل‌های رگرسیون و یادگیری منتشرنشده}
+
+\subsection{اصل معماری افزونه‌ای}
+روش‌های اختصاصی استاد نباید مستقیماً در dashboard یا notebook پراکنده شوند. یک قرارداد واحد تعریف شود:
+\begin{lstlisting}[language=Python]
+class TwinRegressorProtocol:
+    def fit(self, X_train, y_train, *, sample_weight=None): ...
+    def predict(self, X): ...
+    def predict_interval(self, X, alpha=0.10): ...
+    def explain(self, X): ...
+    def get_metadata(self) -> dict: ...
+\end{lstlisting}
+
+مدل‌های پایه و خصوصی همگی از این قرارداد پیروی کنند:
+\begin{itemize}
+  \item \code{PersistenceRegressor}: فردا تقریباً برابر امروز؛
+  \item \code{RollingMeanRegressor}: میانگین پنجره گذشته؛
+  \item \code{Linear/ElasticNet}: پایه قابل تفسیر؛
+  \item \code{RandomForest/GradientBoosting}: پایه غیرخطی؛
+  \item \code{Private-R1, Private-R2, ...}: روش‌های منتشرنشده استاد.
+\end{itemize}
+
+\subsection{حفظ مالکیت فکری}
+\begin{itemize}
+  \item کد خصوصی در شاخه private، مخزن جدا یا package نصب‌شونده نگهداری شود؛
+  \item مخزن عمومی فقط adapter و نام رمز مدل را داشته باشد؛
+  \item داده آزمون نهایی تا روز ۱۸ قفل باشد؛
+  \item نتیجه تمام مدل‌ها با یک اسکریپت و split یکسان تولید شود؛
+  \item پارامترها، هش commit و نسخه مدل در \code{model_registry} ثبت شوند؛
+  \item هیچ ادعای برتری پیش از آزمون زمان‌محور و فاصله اطمینان نوشته نشود.
+\end{itemize}
+
+\section{تقسیم مسئولیت تیم دو نفره}
+
+\subsection{نقش دکتر هادی صدوقی یزدی}
+\begin{itemize}
+  \item مالک دامنه علمی، تعریف وضعیت دوقلو و معیارهای پیامد؛
+  \item تصویب پروتکل داده، فرم رضایت و مرز ادعاهای سلامت؛
+  \item اصلاح روابط شاخص و جلوگیری از روابط خلاف جهت یا نامحدود؛
+  \item طراحی و ادغام مدل‌های رگرسیون/یادگیری خصوصی؛
+  \item طراحی ارزیابی زمان‌محور، baselineها، عدم قطعیت و آزمون ablation؛
+  \item تصمیم‌گیری در دروازه‌های روزهای ۳، ۱۰، ۱۶ و ۲۰؛
+  \item نگارش علمی، نام‌گذاری درست سطح بلوغ و جلوگیری از overclaim.
+\end{itemize}
+
+\subsection{نقش آقای مهدی ذوالفقاری}
+\begin{itemize}
+  \item ممیزی کامل مخزن فعلی و انتقال کدهای notebook به ماژول‌های قابل اجرا؛
+  \item ساخت Docker Compose، پایگاه داده، migration و seed؛
+  \item پیاده‌سازی ingestion، replay، idempotency و validation؛
+  \item اتصال پردازش تصویر، صوت و پوشیدنی به قرارداد داده مشترک؛
+  \item ساخت dashboard، فرم feedback و ثبت outcome؛
+  \item پیاده‌سازی تست واحد، تست یکپارچه، لاگ، backup و اسکریپت demo؛
+  \item مستندسازی نصب، اجرا، API و ساختار داده.
+\end{itemize}
+
+\subsection{وظایف مشترک روزانه}
+\begin{itemize}
+  \item جلسه ۱۵ دقیقه‌ای آغاز روز: خروجی دیروز، مانع، تحویل امروز؛
+  \item یک pull request برای هر قابلیت؛ merge فقط پس از تست؛
+  \item ثبت داده واقعی طبق پروتکل؛
+  \item پایان روز: اجرای smoke test و ثبت نتیجه در \code{docs/daily_log.md}؛
+  \item ممنوعیت تغییر هم‌زمان schema و مدل بدون ثبت نسخه.
+\end{itemize}
+
+\section{ساختار پیشنهادی مخزن}
+
+\begin{lstlisting}
+Project/
+├── README.md
+├── docker-compose.yml
+├── .env.example
+├── pyproject.toml
+├── configs/
+│   ├── data_contract.yaml
+│   ├── quality_rules.yaml
+│   └── safety_policy.yaml
+├── migrations/
+├── schemas/
+│   ├── observation.schema.json
+│   ├── feedback.schema.json
+│   └── outcome.schema.json
+├── src/hdt/
+│   ├── connectors/        # Samsung export, image, voice, forms
+│   ├── ingestion/         # API, replay, idempotency
+│   ├── quality/           # validation, freshness, provenance
+│   ├── features/          # versioned feature pipelines
+│   ├── twin/              # state definition and update
+│   ├── models/
+│   │   ├── baselines/
+│   │   ├── adapters/
+│   │   └── private/       # not committed publicly
+│   ├── uncertainty/
+│   ├── simulation/        # what-if scenarios
+│   ├── recommendation/    # safety policy and explanations
+│   ├── feedback/
+│   └── api/
+├── dashboard/
+├── tests/
+│   ├── unit/
+│   ├── integration/
+│   └── end_to_end/
+├── scripts/
+│   ├── replay.py
+│   ├── audit_dataset.py
+│   ├── train_models.py
+│   └── run_demo.py
+├── notebooks/             # exploration only
+├── docs/
+│   ├── architecture/
+│   ├── data_dictionary.md
+│   ├── consent_protocol.md
+│   ├── model_cards/
+│   └── daily_log.md
+└── reports/
+\end{lstlisting}
+
+\section{برنامه دقیق ۲۰ روز کاری}
+
+\begin{landscape}
+\small
+\begin{longtable}{p{0.045\textwidth}p{0.16\textwidth}p{0.27\textwidth}p{0.27\textwidth}p{0.18\textwidth}}
+\caption{تقسیم کار روزبه‌روز}\label{tab:plan20}\\
+\toprule
+\textbf{روز} & \textbf{هدف} & \textbf{کار دکتر صدوقی} & \textbf{کار آقای ذوالفقاری} & \textbf{تحویل قابل قبول}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{روز} & \textbf{هدف} & \textbf{کار دکتر صدوقی} & \textbf{کار آقای ذوالفقاری} & \textbf{تحویل قابل قبول}\\
+\midrule
+\endhead
+1 & ممیزی و توقف آشفتگی & تعیین محدوده دقیق HDT، حذف ادعای بالینی، فهرست متغیرهای هدف و خروجی‌ها & اجرای کامل پروژه فعلی، فهرست فایل‌ها، وابستگی‌ها، داده‌ها، خطاهای compile/run و نمودار جریان واقعی موجود & \code{CURRENT_STATE.md}، issue board و baseline قابل اجرا\\
+2 & قرارداد داده و شروع ثبت آینده‌نگر & تصویب پروتکل، فرم‌های خستگی/استرس/خواب/درد و رضایت & ساخت data dictionary، JSON schema، فرم ثبت و اسکریپت timestamp؛ شروع جمع‌آوری واقعی & یک رکورد واقعی کامل با event/ingestion time و provenance\\
+3 & دروازه علمی داده & بررسی جهت و دامنه روابط شاخص؛ تعیین متغیرهای مستقل پیامد & ممیزی ۱۰۱ روز، تشخیص imputation، duplicate، unit و missingness؛ گزارش کیفیت & \code{data_audit.html/csv} و تصمیم نگه‌داری/حذف هر ستون\\
+4 & زیرساخت قابل تکرار & تصویب معماری ساده و معیارهای امنیت پژوهشی & Docker Compose، PostgreSQL/TimescaleDB، migration جداول پایه و seed & بالا آمدن db و تست ایجاد/خواندن مشاهده\\
+5 & ورود داده نسخه اول & تعریف خطاهای بحرانی داده و قواعد واحد/دامنه & FastAPI endpoint، idempotency key، payload hash، authentication ساده و log & ارسال یک مشاهده و ذخیره raw immutable\\
+6 & replay و زمان واقعی & تعیین سناریوی نمایش تاریخی و معیار latency & ساخت \code{replay.py}، مدیریت late arrival و سه زمان؛ dashboard خام ورود داده & بازپخش ۷ روز بدون duplicate و با نمودار latency\\
+7 & اتصال پوشیدنی & انتخاب متریک‌های اصلی: steps، HR، SpO2، sleep در صورت وجود & connector برای export واقعی Samsung یا watcher پوشه؛ mapping به schema مشترک & ورود خودکار حداقل دو متریک واقعی\\
+8 & اتصال تصویر و صوت & تصویب پروتکل استاندارد تصویر/صوت و محدودیت تفسیر & adapter برای YOLO/voice، ذخیره فایل خام بیرون DB و ثبت URI/hash/version & رکورد ویژگی با lineage کامل تا فایل خام\\
+9 & کیفیت و منشأ & تعیین وزن‌های اولیه کیفیت و آستانه suppress & service کیفیت، flags، missing reason، imputation marker و quality dashboard & $Q_{m,t}$ برای تمام مدالیته‌ها و هشدار داده کهنه\\
+10 & \textbf{دروازه Digital Shadow} & داوری اینکه مسیر یک‌طرفه واقعاً خودکار است & یکپارچه‌سازی sensor/replay تا DB و dashboard؛ تست end-to-end & \textbf{سطح ۱: سایه دیجیتال برخط برای یک vertical slice}\\
+11 & تعریف Twin State & طراحی بردار $\mathbf z_t$ و نسخه اصلاح‌شده شاخص؛ محدودسازی امتیازها & ماژول state builder، ذخیره state version و snapshot ویژگی & وضعیت دوقلو با کیفیت و uncertainty placeholder\\
+12 & چارچوب ارزیابی & تعریف split زمانی، persistence/rolling/linear baselines و معیارها & اسکریپت training/evaluation مشترک؛ جلوگیری از leakage و ثبت نتایج & جدول baseline روی holdout زمانی، کاملاً بازتولیدپذیر\\
+13 & مدل‌های قوی خصوصی & بسته‌بندی Private-R1/R2 و تعیین hyperparameter policy & ساخت adapter و اجرای مدل‌ها بدون دیدن test نهایی؛ model registry & مقایسه validation با زمان اجرا، خطا و calibration\\
+14 & عدم قطعیت و توضیح & انتخاب bootstrap/conformal و معیار coverage & پیاده‌سازی interval، permutation/SHAP محدود و ثبت feature snapshot & پیش‌بینی با بازه و دلیل قابل نمایش\\
+15 & موتور توصیه ایمن & تعریف فقط توصیه‌های wellness کم‌خطر، ممنوعیت تشخیص/دارو، escalation text & rule/policy engine، expiry، burden، quality gate و explanation & توصیه نسخه‌دار که در کیفیت پایین suppress می‌شود\\
+16 & \textbf{دروازه Human-in-the-loop} & طراحی پاسخ‌ها و پنجره پیامد؛ معیار usefulness/adherence & فرم dashboard: accept/postpone/reject/inappropriate؛ اتصال feedback به recommendation & یک توصیه واقعی و ثبت پاسخ انسان با زمان\\
+17 & پیامد و حلقه بسته & تعریف outcome کوتاه‌مدت و قواعد عدم تطبیق خودکار & scheduler پیگیری، outcome table، before/after view و audit log & recommendation $\rightarrow$ feedback $\rightarrow$ outcome قابل ردیابی\\
+18 & what-if و آزمون تنش & تعریف سناریوهای مجاز و تأکید بر غیرعلی بودن & موتور scenario، missing sensor، delayed event، duplicate، unit error و noisy input tests & چهار سناریو و گزارش پایداری/شکست\\
+19 & freeze و نمایش آزمایشی & بازبینی علمی نتایج، قفل test، حذف overclaim و انتخاب مدل active/shadow & اجرای demo کامل، backup/restore، نصب روی سیستم تمیز، رفع باگ & release candidate و ویدیوی/اسکرین‌شات مسیر کامل\\
+20 & تحویل و تصمیم ادامه & داوری دروازه نهایی، نگارش نتیجه و نقشه ۶۰ روز بعد & tag نسخه، README، API docs، model cards، گزارش داده و script یک‌دکمه‌ای demo & \textbf{سطح ۲: نمونه HDT پژوهشی حلقه‌بسته در shadow mode}\\
+\bottomrule
+\end{longtable}
+\normalsize
+\end{landscape}
+
+\section{دروازه‌های پذیرش}
+
+\subsection{دروازه روز ۳: داده قابل دفاع}
+\begin{itemize}
+  \item \checkmarkbox{} حداقل یک نمونه خام واقعی برای هر مدالیته موجود است؛
+  \item \checkmarkbox{} زمان، واحد، منبع، دستگاه و نسخه پردازش مشخص‌اند؛
+  \item \checkmarkbox{} داده imputed از measured جداست؛
+  \item \checkmarkbox{} فرم خوداظهاری مستقل شروع شده است؛
+  \item \checkmarkbox{} رضایت و حدود استفاده مستند است.
+\end{itemize}
+
+\subsection{دروازه روز ۱۰: Digital Shadow واقعی}
+\begin{itemize}
+  \item \checkmarkbox{} یک داده بدون ویرایش دستی از connector/replay وارد API و DB می‌شود؛
+  \item \checkmarkbox{} dashboard حداکثر با تأخیر تعریف‌شده به‌روز می‌شود؛
+  \item \checkmarkbox{} duplicate، late event و missing data مدیریت می‌شوند؛
+  \item \checkmarkbox{} رکورد خام تغییرناپذیر و derived data نسخه‌دار است؛
+  \item \checkmarkbox{} خط lineage از نمودار تا فایل خام قابل پیگیری است.
+\end{itemize}
+
+\subsection{دروازه روز ۱۶: انسان در حلقه}
+\begin{itemize}
+  \item \checkmarkbox{} توصیه دارای دلیل، عدم قطعیت، زمان انقضا و کلاس ایمنی است؛
+  \item \checkmarkbox{} انسان می‌تواند آن را رد یا نامناسب اعلام کند؛
+  \item \checkmarkbox{} پاسخ به توصیه خاص و نسخه مدل متصل می‌شود؛
+  \item \checkmarkbox{} کیفیت پایین داده توصیه را متوقف می‌کند.
+\end{itemize}
+
+\subsection{دروازه روز ۲۰: نمونه دوقلو}
+\begin{itemize}
+  \item \checkmarkbox{} داده واقعی/بازپخش $\rightarrow$ state $\rightarrow$ prediction $\rightarrow$ recommendation $\rightarrow$ feedback $\rightarrow$ outcome اجرا می‌شود؛
+  \item \checkmarkbox{} مدل قوی خصوصی با baseline ساده و split یکسان مقایسه شده است؛
+  \item \checkmarkbox{} بازه پیش‌بینی و coverage گزارش می‌شود؛
+  \item \checkmarkbox{} what-if با برچسب غیرعلی اجرا می‌شود؛
+  \item \checkmarkbox{} نصب از صفر و اجرای demo مستند و آزموده شده است.
+\end{itemize}
+
+\section{آزمایش‌های الزامی}
+
+\subsection{آزمایش داده و سامانه}
+\begin{itemize}
+  \item نرخ ورود موفق، duplicate، داده دیررس، clock skew و تأخیر انتهابه‌انتها؛
+  \item درصد داده دارای provenance کامل؛
+  \item خطای واحد، مقدار خارج دامنه و فایل خراب؛
+  \item خاموش‌شدن یک حسگر و بازیابی؛
+  \item backup و restore پایگاه داده؛
+  \item تکرارپذیری state و prediction از snapshot یکسان.
+\end{itemize}
+
+\subsection{آزمایش مدل}
+\begin{itemize}
+  \item rolling-origin یا expanding-window validation؛
+  \item test آینده‌نگر قفل‌شده؛
+  \item baselineهای persistence و rolling mean؛
+  \item MAE، RMSE، MedAE و خطای نرمال‌شده؛
+  \item بازه اطمینان bootstrap برای اختلاف مدل‌ها؛
+  \item پوشش بازه پیش‌بینی و پهنای آن؛
+  \item ablation حذف صوت، تصویر، خوداظهاری و پوشیدنی؛
+  \item عملکرد برحسب کیفیت داده و رژیم فعالیت.
+\end{itemize}
+
+\subsection{آزمایش دوقلو و Human-in-the-loop}
+\begin{itemize}
+  \item state freshness و synchronization lag؛
+  \item تعداد توصیه در هفته و نرخ هشدار تکراری؛
+  \item نرخ مشاهده، پذیرش، رد، تعویق و نامناسب‌بودن؛
+  \item نرخ ثبت outcome و زمان تا outcome؛
+  \item usefulness گزارش‌شده؛
+  \item مقایسه قبل/بعد صرفاً توصیفی، نه ادعای اثر درمانی.
+\end{itemize}
+
+\section{شاخص‌های موفقیت ۲۰ روزه}
+
+\begin{longtable}{p{0.30\textwidth}p{0.26\textwidth}p{0.34\textwidth}}
+\caption{شاخص‌های مهندسی و علمی}\label{tab:kpi}\\
+\toprule
+\textbf{شاخص} & \textbf{هدف اولیه} & \textbf{توضیح}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{شاخص} & \textbf{هدف اولیه} & \textbf{توضیح}\\
+\midrule
+\endhead
+پوشش provenance & بالاتر از ۹۵ درصد & هر مشاهده منبع، زمان، دستگاه و نسخه دارد\\
+نرخ duplicate پس از idempotency & صفر در DB نهایی & duplicate باید log شود، نه ذخیره تکراری\\
+تأخیر replay تا dashboard & کمتر از ۵ ثانیه & برای نمونه پژوهشی محلی\\
+موفقیت pipeline انتهابه‌انتها & ۹۵ درصد اجراهای آزمون & از ingestion تا state/prediction\\
+پوشش outcome & بالاتر از ۸۰ درصد توصیه‌ها & توصیه بدون پیامد برای یادگیری مفید نیست\\
+baseline superiority & فقط با CI گزارش شود & برتری عددی کوچک بدون CI «معنی‌دار» نیست\\
+interval coverage & نزدیک سطح اسمی & مثلاً بازه ۹۰ درصدی باید تقریباً ۹۰ درصد پوشش دهد\\
+false/repeated alerts & کمتر از آستانه توافق‌شده & جلوگیری از خستگی هشدار\\
+نصب تمیز & کمتر از ۳۰ دقیقه & با یک README و Docker Compose\\
+\bottomrule
+\end{longtable}
+
+\section{ریسک‌ها و پاسخ عملی}
+
+\begin{longtable}{p{0.24\textwidth}p{0.30\textwidth}p{0.36\textwidth}}
+\caption{ثبت ریسک پروژه}\label{tab:risks}\\
+\toprule
+\textbf{ریسک} & \textbf{اثر} & \textbf{پاسخ}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{ریسک} & \textbf{اثر} & \textbf{پاسخ}\\
+\midrule
+\endhead
+عدم دسترسی API زنده Samsung & توقف ingestion واقعی & watcher خودکار export + replay واقعی؛ ادعای «لحظه‌ای» به «نزدیک‌برخط» محدود شود\\
+فقط ۲۰ روز داده جدید & ناتوانی آموزش مدل بزرگ & استفاده از ۱۰۱ روز تاریخی برای توسعه و ۲۰ روز آینده‌نگر برای آزمون/نمایش؛ مدل ساده و regularized\\
+کیفیت ضعیف صوت/تصویر & ویژگی ناپایدار & سه تکرار، پروتکل ثابت، quality score و امکان حذف modality در ablation\\
+افشای داده سلامت در GitHub & ریسک حریم خصوصی & داده خام در repo عمومی ممنوع؛ pseudonym، encryption، .gitignore و secrets scan\\
+مدل خصوصی بیش‌برازش کند & ادعای کاذب نوآوری & test قفل‌شده، baseline ساده، CI و گزارش تمام شکست‌ها\\
+توصیه پزشکی ناایمن & خطر انسانی و حقوقی & فقط wellness کم‌خطر، disclaimer، امکان رد، escalation به متخصص برای علائم شدید\\
+مهندسی بیش از حد & عدم تحویل در ۲۰ روز & modular monolith، یک vertical slice، توقف قابلیت‌های فرعی\\
+اختلاف بین دو عضو & merge conflict و دوباره‌کاری & مالک فایل/ماژول، PR کوچک، daily stand-up و تعریف تحویل روزانه\\
+\bottomrule
+\end{longtable}
+
+\section{سناریوی نمایش نهایی}
+
+نمایش نهایی باید حداکثر ۱۰ دقیقه و بدون دست‌کاری دستی پنهان اجرا شود:
+\begin{enumerate}
+  \item اجرای \code{docker compose up}؛
+  \item انتخاب participant پژوهشی مستعار؛
+  \item اجرای \code{python scripts/replay.py --speed 200} یا ورود یک مشاهده واقعی؛
+  \item نمایش raw event، event time، ingestion time و quality؛
+  \item به‌روزرسانی بردار وضعیت و نمودار روند؛
+  \item اجرای baseline و مدل خصوصی در shadow mode؛
+  \item نمایش پیش‌بینی همراه بازه و مدل نسخه‌دار؛
+  \item تولید یک توصیه کم‌خطر و توضیح دلیل؛
+  \item انتخاب «پذیرفتم/رد کردم/به تعویق انداختم/نامناسب بود»؛
+  \item ثبت outcome ساختاریافته و نمایش اتصال آن به recommendation؛
+  \item اجرای دو سناریوی what-if و نمایش هشدار «غیرعلی و پژوهشی»؛
+  \item بازکردن audit trail و نشان‌دادن امکان بازتولید نتیجه.
+\end{enumerate}
+
+\section{تعریف پایان کار و مواردی که عمداً پایان کار نیستند}
+
+\subsection{پایان کار ۲۰ روزه محسوب می‌شود اگر}
+\begin{itemize}
+  \item مسیر کامل داده و بازخورد با کد واقعی وجود داشته باشد؛
+  \item داده واقعی زمان‌دار و provenanceدار جمع شده باشد؛
+  \item پایگاه داده و dashboard فعال باشند؛
+  \item مدل‌ها با baseline و ارزیابی زمان‌محور مقایسه شوند؛
+  \item گزارش علمی سطح پروژه را دقیق و بدون اغراق بیان کند.
+\end{itemize}
+
+\subsection{پایان کار ۲۰ روزه محسوب نمی‌شود}
+\begin{itemize}
+  \item صرفاً افزودن مدل پیچیده‌تر به CSV فعلی؛
+  \item نوشتن معماری پیشنهادی بدون API، DB و dashboard قابل اجرا؛
+  \item استفاده از نمودارهای ساختگی یا outcome شبیه‌سازی‌شده به‌عنوان داده انسانی واقعی؛
+  \item گزارش MAE بهتر بدون persistence baseline و test آینده‌نگر؛
+  \item نام‌گذاری سامانه به‌عنوان دوقلوی بالینی یا ابزار تشخیص.
+\end{itemize}
+
+\section{نقشه ادامه پس از روز بیستم}
+پس از تحویل نمونه حلقه‌بسته، مسیر ۶۰ تا ۹۰ روزه می‌تواند شامل موارد زیر باشد:
+\begin{itemize}
+  \item افزایش طول داده آینده‌نگر و افزودن چند participant با رضایت مستقل؛
+  \item طراحی آزمایش \en{N-of-1} برای چند مداخله کم‌خطر؛
+  \item مدل‌های حالت بیزی، فیلترهای پویا و کالیبراسیون فردی؛
+  \item استفاده از مدل‌های رگرسیون اختصاصی به‌عنوان هسته مقاله؛
+  \item ارزیابی drift دستگاه و drift فرد؛
+  \item ادغام محدود با FHIR Observation/Device/Consent/Provenance؛
+  \item مطالعه رسمی usability و alarm burden؛
+  \item نگارش مقاله با ادعای دقیق: داده، معماری، مدل و حلقه انسانی هرکدام جداگانه ارزیابی شوند.
+\end{itemize}
+
+\section{جمع‌بندی تصمیم}
+
+این برنامه عمداً مدل پیش‌بینی را تنها یکی از اجزای دوقلو می‌داند. نوآوری‌های رگرسیونی و یادگیری قوی استاد می‌توانند ارزش علمی اصلی مقاله آینده باشند، ولی فقط هنگامی که بر روی یک زنجیره داده معتبر، زمان‌محور و بازتولیدپذیر قرار گیرند. اولویت ۲۰ روز آینده به ترتیب چنین است:
+\[
+\boxed{
+\text{داده واقعی و زمان}
+\rightarrow
+\text{Digital Shadow}
+\rightarrow
+\text{وضعیت نسخه‌دار}
+\rightarrow
+\text{مدل و عدم قطعیت}
+\rightarrow
+\text{بازخورد انسان}
+\rightarrow
+\text{پیامد}
+\rightarrow
+\text{شبیه‌سازی}
+}
+\]
+
+اگر در روز بیستم این زنجیره به‌طور کامل در dashboard و پایگاه داده دیده شود، پروژه از یک گزارش مدل‌محور به یک نمونه قابل دفاع Human Digital Twin پژوهشی تبدیل شده است. اگر این زنجیره وجود نداشته باشد، حتی بهترین مدل رگرسیون نیز پروژه را به دوقلوی دیجیتال تبدیل نمی‌کند.
+
+\begin{thebibliography}{99}
+\bibitem{SadoghiHDT}
+H. Sadoghi Yazdi,
+\textit{Human Digital Twin (Persian study and conceptual framework)},
+\url{https://hadisadoghiyazdi1971.github.io/presentation/HumanDT/},
+accessed 22 July 2026.
+
+\bibitem{ProjectRepo}
+H. Sadoghi Yazdi and M. Zolfaqari,
+\textit{Student Human Digital Twin Project Repository},
+\url{https://github.com/hadisadoghiyazdi1971/student_All/tree/main/Project},
+accessed 22 July 2026.
+
+\bibitem{NISTElements}
+National Institute of Standards and Technology,
+\textit{Digital Twins: Essential Elements}, 2025--2026,
+\url{https://www.nist.gov/digital-twins/essential-elements}.
+
+\bibitem{NISTIR8356}
+J. Voas, P. Mell, P. Laplante, and V. Piroumian,
+\textit{Security and Trust Considerations for Digital Twin Technology},
+NIST IR 8356, 2025,
+\url{https://doi.org/10.6028/NIST.IR.8356}.
+
+\bibitem{ISO23247}
+International Organization for Standardization,
+\textit{ISO 23247-1:2021, Automation systems and integration---Digital twin framework for manufacturing---Part 1: Overview and general principles},
+\url{https://www.iso.org/standard/75066.html}.
+
+\bibitem{MQTT5}
+OASIS,
+\textit{MQTT Version 5.0, OASIS Standard}, 2019,
+\url{https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html}.
+
+\bibitem{FHIRObservation}
+HL7 International,
+\textit{FHIR R5 Observation Resource},
+\url{https://www.hl7.org/fhir/observation.html}.
+
+\bibitem{FHIRProvenance}
+HL7 International,
+\textit{FHIR R5 Provenance Resource},
+\url{https://hl7.org/fhir/provenance.html}.
+
+\bibitem{FHIRConsent}
+HL7 International,
+\textit{FHIR R5 Consent Resource},
+\url{https://www.hl7.org/fhir/consent.html}.
+
+\bibitem{FHIRDevice}
+HL7 International,
+\textit{FHIR R5 Device Resource},
+\url{https://www.hl7.org/fhir/device.html}.
+\end{thebibliography}
+
+\end{document}
