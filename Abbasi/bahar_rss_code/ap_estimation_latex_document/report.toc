@@ -1,0 +1,19 @@
+\contentsline {section}{\numberline {1}خلاصه}{2}{section.1}%
+\contentsline {section}{\numberline {2}فایل‌های درگیر در الگوریتم}{2}{section.2}%
+\contentsline {section}{\numberline {3}داده ورودی و AP هدف}{2}{section.3}%
+\contentsline {section}{\numberline {4}مختصات محلی متری}{2}{section.4}%
+\contentsline {section}{\numberline {5}مدل ریاضی RSS}{3}{section.5}%
+\contentsline {section}{\numberline {6}بردار پارامترها}{3}{section.6}%
+\contentsline {section}{\numberline {7}تابع باقیمانده و تابع هزینه}{3}{section.7}%
+\contentsline {section}{\numberline {8}مقداردهی اولیه}{4}{section.8}%
+\contentsline {section}{\numberline {9}قیود بهینه‌سازی}{4}{section.9}%
+\contentsline {section}{\numberline {10}تبدیل جواب به عرض و طول جغرافیایی}{4}{section.10}%
+\contentsline {section}{\numberline {11}معیارهای ارزیابی}{4}{section.11}%
+\contentsline {section}{\numberline {12}نتیجه‌ی اجرای فعلی}{5}{section.12}%
+\contentsline {section}{\numberline {13}شبه‌کد الگوریتم}{5}{section.13}%
+\contentsline {section}{\numberline {14}نقشه‌ها}{6}{section.14}%
+\contentsline {section}{\numberline {15}کد کامل انتخاب AP}{6}{section.15}%
+\contentsline {section}{\numberline {16}کد کامل رسم نمونه‌های RSS}{9}{section.16}%
+\contentsline {section}{\numberline {17}کد کامل تخمین مکان AP}{11}{section.17}%
+\contentsline {section}{\numberline {18}کد کامل خواندن و رسم نقشه}{15}{section.18}%
+\contentsline {section}{\numberline {19}نکات مهم استخراج‌شده از کد}{17}{section.19}%
